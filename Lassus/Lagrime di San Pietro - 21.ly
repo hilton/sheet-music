@@ -3,7 +3,14 @@
 \header {
 	title = "Lagrime di San Pietro - XXI"
 	composer = "Orlando di Lasso"
-	copyright = "Copyright ©2012 Peter Hilton - Tallis Scholars Summer Schools 2012 edition"
+	opus = "3’25”"
+	copyright = \markup {
+			\column {
+				" "
+				" "
+				"Copyright ©2012 Peter Hilton - Tallis Scholars Summer Schools 2012 edition - based on Ausgabe Kallmeyer Nr 60 - translation from cpdl.org"
+			}
+	}
 	tagline = ##f
 }
 
@@ -16,20 +23,14 @@
 	ragged-bottom = ##f
 	ragged-last-bottom = ##f
 	top-markup-spacing = #'(
-		(padding . 20)
+		(padding . 15)
 	)
 	markup-markup-spacing = #'(
 		(padding . 10)
 	)
-	markup-system-spacing = #'(
-		(padding . 15)
-	)
 	system-system-spacing = #'(
         (stretchability . 100)
 	)
-%		(minimum-distance . 10)
-%		(padding . 0)
-%		(padding . 5)
 }
 
 \layout {
@@ -37,14 +38,13 @@
     \Score
     \remove "Bar_number_engraver"
 	\override BarLine #'transparent = ##t
-%	\override MetronomeMark #'transparent = ##t
   }
   \context {
   	\Staff
   }
 }
 
-\markup {
+\markup \fontsize #2 {
 	\fill-line {
 	    \hspace #1
 		\column {
@@ -76,7 +76,7 @@
 
 global = { 
 	\key e \minor
-	\tempo 2 = 64
+	\tempo 2 = 60
 	\set Score.proportionalNotationDuration = #(ly:make-moment 1 4)
 	\set Staff.midiInstrument = "choir aahs"
 	#(set-global-staff-size 14)
@@ -86,14 +86,14 @@ global = {
 sopranoA = \new Voice {
 	\relative c' {
 		e1. e2 gis1 b r\breve r r
-		r r1 r2 b1 b2 c1 b2. c4 d1 d r r\breve
+		r r1 \mark \default r2 b1 b2 c1 b2. c4 d1 d r r\breve
 		r1 r2 f,2. e8 d e2 d d'1 c4 b c b b a8 g b4 a a2. gis8 fis gis2 a1 r
 		r\breve r2 d1 b c2. b4 a b c g c2. b8 a b2 c1 r
 		
-		r\breve r1 b g2 c1 a2 r c1 a2 r c1 a2
-		b g d'2. d4 g,2 g r1 r\breve r r2 e1 e2
+		r\breve r1 \mark \default b g2 c1 a2 r c1 a2 r c1 a2
+		b g d'2. d4 g,2 g r1 r\breve r r2 \mark \default e1 e2
 		fis1 a b2. a4 g2 a a1. g2 g2. g4 e1 r\breve
-		r r r1 e2. e4 b'2 e, a2. a4 g1 c
+		r r r1 \mark \default e2. e4 b'2 e, a2. a4 g1 c
 		
 		r2 d b c a1 g1. g2 a e4 fis g a b1 fis2 gis b e, a
 		b1 r d2. b4 c2 b b1. fis2 gis1 a2. a4 gis\breve
@@ -105,8 +105,8 @@ sopranoA = \new Voice {
 		Vi -- _ _ _ de poe -- _ _ _ _ _ _ _ _ _ _ _ _ _ nas
 		Vi -- de cla -- _ _ _ _ _ _ _ _ _ vos
 		
-		Non est, not est, not est, not est,
-		do -- lor, not est do -- lor. Et cum
+		Non est, non est, non est, non est,
+		do -- lor, non est do -- lor. Et cum
 		sit tan -- tus __ _ _ do -- lor ex -- te -- ri -- or, 
 		Tam in -- gra -- tum, tam in -- gra -- tum,
 		
@@ -118,7 +118,7 @@ sopranoA = \new Voice {
 sopranoB = \new Voice {
 	\relative c'' {
 		r1 b1. b2 gis1 a r r\breve r
-		r r1 fis gis a g2. fis8 e a1 b r r\breve
+		r r1 fis gis a g?2. fis8 e a1 b r r\breve
 		r g2. a4 b1 fis2 g1 fis4 e fis2. e4 d2 e r\breve
 		r r1 r2 g1 e2 c1 g' g\breve r1
 		
@@ -136,26 +136,26 @@ sopranoB = \new Voice {
 		Vi -- _ _ _ de poe -- _ _ _ _ nas
 		Vi -- de cla -- _ vos
 		
-		Non est, not est, not est, do -- 
+		Non est, non est, non est, do -- 
 		_ _ _ _ lor Et 
 		cum sit tan -- tus do -- lor ex -- te -- ri -- or, 
 		Tam in -- gra -- tum, tam
 		
 		in -- gra -- tum, tam in -- gra -- tum cum te, tam in -- gra -- tum
-		cum te ex -- pe -- ri -- or, cum te ex -- pe -- ri -- or.
+		cum te ex -- pe -- ri -- or, cum te ex -- pe -- _ ri -- or.
 	}
 }
 
 altoA = \new Voice {
 	\relative c' {
 		r\breve r1 r2 b e1 a, b1. g2 g d'1 c2
-		c4 d e c d2 e1 es2 es1 r\breve r r2 d1 d2 e2. d4 c1
+		c4 d e c d2 e1 es2 es1 r\breve r r2 \mark \default d1 d2 e2. d4 c1
 		b1 a2. a4 g1 r r\breve r cis1 d2 e
 		d1. d2 b2. c4 d1 r\breve r e2. d4 cis2 d
 		
 		d2 d1 c2 b1 b c2 r4 g a1 c a2 a f'2. e8 d c2 r4 d
 		b2 c d1 r2 c g d'2. cis8 b cis2 d b b b cis d1 cis2. cis4 cis2
-		r\breve r r r1 r2 e cis cis1 d2
+		r\breve r r r1 r2 \mark \default e cis cis1 d2
 		e2 f2. e8 d e2 d e1 d2. c8 b c2 b b r1 r2 a b g2. e4 e'2
 		
 		fis2 d2. b4 a2 a1 d e\breve e2 e1 es2 e1 r
@@ -167,7 +167,7 @@ altoA = \new Voice {
 		mo -- _ ri -- or, qui -- bus af -- 
 		fi -- ci -- or; __ _ _ qui -- _ _ bus
 		
-		con -- fo -- di -- or; Non est, not est, not est, do -- lor __ _ _ _ non
+		con -- fo -- di -- or; Non est, non est, non est, do -- lor __ _ _ _ non
 		est do -- lor sic -- ut quo __ _ _ _ cru -- ci -- or, sic -- ut quo cru -- ci -- or;
 		In -- tus ta -- men		
 		dol -- or __ _ _ _ est gra -- _ _ _ _ vi -- or, Tam in -- gra -- _ _
@@ -181,8 +181,8 @@ altoB = \new Voice {
 	\relative c' {
 		r\breve e1. e2 cis1 d r\breve r
 		r r e1 a,2 e'2. fis4 g2. fis8 e fis2 g1 r r\breve
-		r1 c,\breve g2. a4 b2 e1 d4 c d2. c4 b1 e r
-		r\breve d1 b2 d e c a f'2. e4 e d8 c d1 c r
+		r1 \mark \default c,\breve g2. a4 b2 e1 d4 c d2. c4 b1 e r
+		r\breve \mark \default d1 b2 d e c a f'2. e4 e d8 c d1 c r
 		
 		r\breve r1 r2 e1 c2 e1 f\breve r2 c a r4 f'
 		d2 e4. fis8 g1 e r r\breve r r
@@ -190,7 +190,7 @@ altoB = \new Voice {
 		r r r1 r2 e1 cis2 d1. e2 c2. c4
 		
 		a2 b r r4 e cis2 d b d c\breve b1 fis'2. b,4 b1 r2 d ~
-		d b1 e2 a, d e1 es2 e!1 es2 e! e1 e, b'2 b1
+		d b1 e2 a, d e1 dis2 e1 dis2 e e1 e, b'2 b1
 	}
 	\addlyrics {
 		Vi -- de ho -- mo
@@ -221,7 +221,7 @@ tenor = \new Voice {
 		r2 d1 d2 g e1 d2 a'1 fis2 g e2. e4 e1 e2. e4 a2 a
 		c\breve b1 c2 a1 a2 gis1 r r2 d d g1 a2
 		
-		r4 fis2 d e c4 e2 d d g2. g4 g2 r e2. fis4 g a b2 b1 b2 a1
+		\mark \default r4 fis2 d e c4 e2 d d g2. g4 g2 r e2. fis4 g a b2 b1 b2 a1
 		r1 r2 a2. fis4 d2 g e fis g fis1 e2. e4 e1 ~ e\breve
 	}
 	\addlyrics {
@@ -245,11 +245,11 @@ baritone = \new Voice {
 		\clef "treble_8" 
 		r\breve r r2 e fis1 g2 d'1 c2. b8 a b2 a1
 		g1. g2 fis\breve r r r1 a c2. b8 a g2 c,
-		d2 e f1 r\breve r r1 r2 e1 e2 fis a ~ 
-		a b1 a2 g2. fis8 e d1 r\breve r g1 a
+		d2 e f1 r\breve r r1 r2 \mark \default e1 e2 fis a1 
+		 b1 a2 g2. fis8 e d1 r\breve r g1 a
 		
 		b1 a g2 fis e1 r2 e1 c2 f1 f2 r4 c' a2 f2. g4 a2
-		g\breve g1 c2 b1 a4 g b a g fis g fis8 e d2 a'2. a4 a\breve
+		g\breve \mark \default g1 c2 b1 a4 g b a g fis g fis8 e d2 a'2. a4 a\breve
 		r r r r1 r2 b a1 e2 fis
 		a1 g\breve  f1 e2. e4 e1 r2 a1 fis2 g2. fis4 e1
 		
@@ -260,7 +260,7 @@ baritone = \new Voice {
 		quae pro te, quae pro __ _ _ _ te
 		pa -- ti -- or, qui pro __ _ _ _ te
 		mo -- ri -- or, qui -- bus af -- fi -- 
-		_ _ ci -- or; __ _ _ qui -- _
+		_ ci -- or; __ _ _ _ qui -- _
 		
 		bus con -- fo -- di -- or; Non est do -- lor, non est do -- _ _
 		lor, sic -- ut quo __ _ _ _ _ _ _ _ _ _ _ cru -- ci -- or;
@@ -268,7 +268,7 @@ baritone = \new Voice {
 		dol -- or est gra -- vi -- or, Tam in -- gra -- _ _
 		
 		tum cum te ex -- pe -- _ ri -- or, tam
-		in -- gra -- tum, tam in -- gra -- tum cum te ex -- pe -- ri -- or.
+		in -- gra -- tum, tam in -- gra -- tum cum te ex -- pe -- ri -- or. __ _
 	}
 }
 
@@ -332,6 +332,6 @@ bass = \new Voice {
 			)
 		}
 	}
-%	\midi { }
+	\midi { }
 }
 
