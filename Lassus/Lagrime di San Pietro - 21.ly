@@ -52,7 +52,7 @@
 			"Ad te clamo, qui pro te morior,"
 			"Vide poenas quibus afficior;"
 			"Vide clavos quibus confodior;"
-			"Non est dolor sicut quo crucior;"
+			"Nón est dolor sicut quo crucior;"
 			"Et cum sit tantus dolor exterior, "
 			"Ingratus tamen dolor est gravior,"
 			"Tam ingratum cum te experior."
@@ -60,14 +60,14 @@
 		}
 	    \hspace #1
 		\column {
-			"See, O man, what things I endure for you;"
-			"To you I cry, I who am dying for you;"
+			"See, O man, what things I endure for you,"
+			"To you I cry, I who am dying for you,"
 			"See the pains with which I am afflicted;"
-			"See the nails with which I am pierced."
-			"There is no suffering like such pain as this."
+			"See the nails with which I am pierced;"
+			"There is no suffering like crucifixion."
 			"And though the outward suffering be so great,"
 			"Yet is the inward suffering heavier still,"
-			"When I find you to be so ungrateful!"
+			"When I find you to be so ungrateful."
 		}
 	    \hspace #1
 	}
@@ -100,18 +100,18 @@ sopranoA = \new Voice {
 		\once \override Score.BarLine #'transparent = ##f \bar "||"
 	}
 	\addlyrics {
-		Vi -- de ho -- mo
-		Ad te cla -- _ _ _ mo,
-		Vi -- _ _ _ de poe -- _ _ _ _ _ _ _ _ _ _ _ _ _ nas
-		Vi -- de cla -- _ _ _ _ _ _ _ _ _ vos
+		Ví -- de hó -- mo
+		Ad te clá -- _ _ _ mo,
+		Ví -- _ _ _ de póe -- _ _ _ _ _ _ _ _ _ _ _ _ _ nas
+		Ví -- de clá -- _ _ _ _ _ _ _ _ _ vos
 		
-		Non est, non est, non est, non est,
-		do -- lor, non est do -- lor. Et cum
-		sit tan -- tus __ _ _ do -- lor ex -- te -- ri -- or, 
-		Tam in -- gra -- tum, tam in -- gra -- tum,
+		Nón est, nón est, nón est, nón est,
+		dó -- lor, nón est dó -- lor. Et cum
+		sit tán -- tus __ _ _ dó -- lor ex -- té -- ri -- or, 
+		Tam in -- grá -- tum, tam in -- grá -- tum,
 		
-		tam in -- gra -- tum cum te ex -- pe -- _ _ _ _ ri -- or, tam in -- gra --
-		tum tam in -- gra -- tum cum te ex -- pe -- ri -- or.
+		tam in -- grá -- tum cum te ex -- pé -- _ _ _ _ ri -- or, tam in -- grá --
+		tum tam in -- grá -- tum cum te ex -- pé -- ri -- or.
 	}
 }
 
@@ -128,28 +128,28 @@ sopranoB = \new Voice {
 		r r r1 r2 b gis a fis1 r r2 a ~
 		
 		a2 fis g e r d'1 b2 c1. a2 b g r b1 gis2 a fis
-		fis1 gis2 a1 g g2 fis r4 e fis2 b b1 c2. c4 b\breve
+		fis1 gis2 a1 g? g2 fis r4 e fis2 b b1 c2. c4 b\breve
 	}
 	\addlyrics {
-		Vi -- de ho -- mo
-		Ad __ _ te cla -- _ _ _ mo,
-		Vi -- _ _ _ de poe -- _ _ _ _ nas
-		Vi -- de cla -- _ vos
+		Ví -- de hó -- mo
+		Ad __ _ te clá -- _ _ _ mo,
+		Ví -- _ _ _ de póe -- _ _ _ _ nas
+		Ví -- de clá -- _ vos
 		
-		Non est, non est, non est, do -- 
+		Nón est, nón est, nón est, dó -- 
 		_ _ _ _ lor Et 
-		cum sit tan -- tus do -- lor ex -- te -- ri -- or, 
-		Tam in -- gra -- tum, tam
+		cum sit tán -- tus dó -- lor ex -- té -- ri -- or, 
+		Tam in -- grá -- tum, tam
 		
-		in -- gra -- tum, tam in -- gra -- tum cum te, tam in -- gra -- tum
-		cum te ex -- pe -- ri -- or, cum te ex -- pe -- _ ri -- or.
+		in -- grá -- tum, tam in -- grá -- tum cum te, tam in -- grá -- tum
+		cum te ex -- pé -- ri -- or, cum te ex -- pé -- _ ri -- or.
 	}
 }
 
 altoA = \new Voice {
 	\relative c' {
 		r\breve r1 r2 b e1 a, b1. g2 g d'1 c2
-		c4 d e c d2 e1 es2 es1 r\breve r r2 \mark \default d1 d2 e2. d4 c1
+		c4 d e c d2 e1 dis2 dis1 r\breve r r2 \mark \default d1 d2 e2. d4 c1
 		b1 a2. a4 g1 r r\breve r cis1 d2 e
 		d1. d2 b2. c4 d1 r\breve r e2. d4 cis2 d
 		
@@ -158,22 +158,22 @@ altoA = \new Voice {
 		r\breve r r r1 r2 \mark \default e cis cis1 d2
 		e2 f2. e8 d e2 d e1 d2. c8 b c2 b b r1 r2 a b g2. e4 e'2
 		
-		fis2 d2. b4 a2 a1 d e\breve e2 e1 es2 e1 r
+		fis2 d2. b4 a2 a1 d e\breve e2 e1 dis2 e1 r
 		r e2 cis d b r\breve b1 gis2 b e, e' e\breve
 	}
 	\addlyrics {
-		quae pro te pa -- ti -- or, quae pro
-		te __ _ _ _ _ pa -- ti -- or. qui pro te __ _ _ 
-		mo -- _ ri -- or, qui -- bus af -- 
-		fi -- ci -- or; __ _ _ qui -- _ _ bus
+		quae pro te pá -- ti -- or, quae pro
+		te __ _ _ _ _ pá -- ti -- or. qui pro te __ _ _ 
+		mó -- _ ri -- or, quí -- bus af -- 
+		fí -- ci -- or; __ _ _ quí -- _ _ bus
 		
-		con -- fo -- di -- or; Non est, non est, non est, do -- lor __ _ _ _ non
-		est do -- lor sic -- ut quo __ _ _ _ cru -- ci -- or, sic -- ut quo cru -- ci -- or;
+		con -- fó -- di -- or; Nón est, nón est, nón est, dó -- lor __ _ _ _ nón
+		est dó -- lor síc -- ut quo __ _ _ _ crú -- ci -- or, síc -- ut quo crú -- ci -- or;
 		In -- tus ta -- men		
-		dol -- or __ _ _ _ est gra -- _ _ _ _ vi -- or, Tam in -- gra -- _ _
+		dó -- lor __ _ _ _ est grá -- _ _ _ _ vi -- or, Tam in -- grá -- _ _
 		
-		tum, tam in -- gra -- tum cum te ex -- pe -- ri -- or,
-		tam in -- gra -- tum, cum te ex -- pe -- ri -- or.
+		tum, tam in -- grá -- tum cum te ex -- pé -- ri -- or,
+		tam in -- grá -- tum, cum te ex -- pé -- ri -- or.
 	}
 }
 
@@ -193,18 +193,18 @@ altoB = \new Voice {
 		d b1 e2 a, d e1 dis2 e1 dis2 e e1 e, b'2 b1
 	}
 	\addlyrics {
-		Vi -- de ho -- mo
-		Ad te cla -- _ _ _ _ _ mo,
-		Vi -- de __ _ _ poe -- _ _ _ _ _ nas,
-		Vi -- de cla -- vos, vi -- de cla -- _ _ _ _ _ vos
+		Ví -- de hó -- mo
+		Ad te clá -- _ _ _ _ _ mo,
+		Ví -- de __ _ _ póe -- _ _ _ _ _ nas,
+		Ví -- de clá -- vos, vi -- de clá -- _ _ _ _ _ vos
 		
-		Non est do -- lor, non est, non
-		est do -- _ _ lor,
-		Et cum sit tan -- tus do -- lor ex -- te -- ri -- or, 
-		Tam in -- gra -- tum, tam in -- 
+		Nón est dó -- lor, nón est, nón
+		est dó -- _ _ lor,
+		Et cum sit tán -- tus dó -- lor ex -- té -- ri -- or, 
+		Tam in -- grá -- tum, tam in -- 
 		
-		gra -- tum, tam in -- gra -- tum cum te ex -- pe -- ri -- or, tam
-		in -- gra -- tum cum te ex -- pe -- ri -- or, ex -- pe -- ri -- or.
+		grá -- tum, tam in -- grá -- tum cum te ex -- pé -- ri -- or, tam
+		in -- grá -- tum cum te ex -- pé -- ri -- or, ex -- pé -- ri -- or.
 	}
 }
 
@@ -221,22 +221,22 @@ tenor = \new Voice {
 		r2 d1 d2 g e1 d2 a'1 fis2 g e2. e4 e1 e2. e4 a2 a
 		c\breve b1 c2 a1 a2 gis1 r r2 d d g1 a2
 		
-		\mark \default r4 fis2 d e c4 e2 d d g2. g4 g2 r e2. fis4 g a b2 b1 b2 a1
+		r4 fis2 d e c4 e2 d d g2. g4 g2 r e2. fis4 g a b2 b1 b2 a1
 		r1 r2 a2. fis4 d2 g e fis g fis1 e2. e4 e1 ~ e\breve
 	}
 	\addlyrics {
-		quae pro te pa -- _ ti -- or, quae pro te
-		pa -- ti -- or, Ad te cla -- _ mo, qui pro te mo -- _
-		_ ri -- or, qui -- bus
-		af -- fi -- ci -- or; Vi -- de cla -- _ _ _ vos qui -- bus
+		quae pro te pá -- _ ti -- or, quae pro te
+		pá -- ti -- or, Ad te clá -- _ mo, qui pro te mó -- _
+		_ ri -- or, quí -- bus
+		af -- fí -- ci -- or; Ví -- de clá -- _ _ _ vos quí -- bus
 		
-		con -- _ _ fo -- di -- or; Non est __ _ _ do -- lor, non
-		est do -- lor, sic -- ut quo __ _ _ _ cru -- _ ci -- or;
-		Et cum sit tan -- tus do -- lor ex -- te -- ri -- or, In -- tus ta -- men
-		dol -- or est gra -- vi -- or, Tam in -- gra -- tum
+		con -- _ _ fó -- di -- or; Nón est __ _ _ dó -- lor, nón
+		est dó -- lor, síc -- ut quo __ _ _ _ crú -- _ ci -- or;
+		Et cum sit tán -- tus dó -- lor ex -- té -- ri -- or, In -- tus ta -- men
+		dó -- lor est grá -- vi -- or, Tam in -- grá -- tum
 		
-		tam in -- gra -- tum cum te ex -- pe -- ri -- or, ex -- _ _ _ _ pe -- ri -- or,
-		tam in -- gra -- tum cum te ex -- pe -- _ ri -- or.
+		tam in -- grá -- tum cum te ex -- pé -- ri -- or, ex -- _ _ _ _ pé -- ri -- or,
+		tam in -- grá -- tum cum te ex -- pé -- _ ri -- or.
 	}
 }
 
@@ -258,17 +258,17 @@ baritone = \new Voice {
 	}
 	\addlyrics {
 		quae pro te, quae pro __ _ _ _ te
-		pa -- ti -- or, qui pro __ _ _ _ te
-		mo -- ri -- or, qui -- bus af -- fi -- 
-		_ ci -- or; __ _ _ _ qui -- _
+		pá -- ti -- or, qui pro __ _ _ _ te
+		mó -- ri -- or, quí -- bus af -- fí -- 
+		_ ci -- or; __ _ _ _ quí -- _
 		
-		bus con -- fo -- di -- or; Non est do -- lor, non est do -- _ _
-		lor, sic -- ut quo __ _ _ _ _ _ _ _ _ _ _ cru -- ci -- or;
+		bus con -- fó -- di -- or; Nón est dó -- lor, nón est dó -- _ _
+		lor, síc -- ut quo __ _ _ _ _ _ _ _ _ _ _ crú -- ci -- or;
 		In -- tus ta -- men		
-		dol -- or est gra -- vi -- or, Tam in -- gra -- _ _
+		dó -- lor est grá -- vi -- or, Tam in -- grá -- _ _
 		
-		tum cum te ex -- pe -- _ ri -- or, tam
-		in -- gra -- tum, tam in -- gra -- tum cum te ex -- pe -- ri -- or. __ _
+		tum cum te ex -- pé -- _ ri -- or, tam
+		in -- grá -- tum, tam in -- grá -- tum cum te ex -- pé -- ri -- or. __ _
 	}
 }
 
@@ -278,7 +278,7 @@ bass = \new Voice {
 		r\breve r a1 d g,\breve ~ g1 a
 		c2. c4 b1 ~ b\breve r r r1 d a2 c2. b4 a2
 		g2. g4 f1 r\breve r r a1 d2 cis
-		d4 c b a g2 fis g\breve r r c2. b4 a2 d
+		d4 c? b a g2 fis g\breve r r c2. b4 a2 d
 		
 		g,1 a b2. b4 e,1 c' a f\breve ~ f
 		g r2 c1 d2 e1 b2. a4 g2 b a1 ~ a\breve
@@ -289,23 +289,23 @@ bass = \new Voice {
 		b1 r2 a fis g e1 b'\breve e,2 e a2. a4 e\breve
 	}
 	\addlyrics {
-		quae pro te pa -- 
+		quae pro te pá -- 
 		_ ti -- or, qui pro te __ _ _
-		mo -- ri -- or, qui -- bus af -- 
-		fi -- _ _ _ _ ci -- or; qui -- _ _ bus
+		mó -- ri -- or, quí -- bus af -- 
+		fí -- _ _ _ _ ci -- or; quí -- _ _ bus
 		
-		con -- _ fo -- di -- or; Non est do --
-		lor sic -- ut quo cru -- _ _ ci -- or;
+		con -- _ fó -- di -- or; Nón est dó --
+		lor síc -- ut quo crú -- _ _ ci -- or;
 		In -- tus ta -- men		
-		dol -- or est gra -- vi -- or, Tam in -- gra -- tum
+		dó -- lor est grá -- vi -- or, Tam in -- grá -- tum
 		
-		tam in -- gra -- tum cum te ex -- pe -- ri -- or, tam in -- gra -- 
-		tum, tam in -- gra -- tum cum te ex -- pe -- ri -- or.
+		tam in -- grá -- tum cum te ex -- pé -- ri -- or, tam in -- grá -- 
+		tum, tam in -- grá -- tum cum te ex -- pé -- ri -- or.
 	}
 }
 
 \score {
-	\transpose e e {
+	\transpose e fis {
 		<<
 			\new Staff << \global \sopranoA >>
 			\new Staff << \global \sopranoB >>
