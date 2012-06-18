@@ -4,4 +4,4 @@ In these transcriptions, we have taken the unconventional step of removing the b
 
 Selected binaries (PDF) are available on the "Cappella Gabrieli scores":http://cappellagabrieli.nl/score_en.html page.
 
-These scores are licensed under the "Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License":http://creativecommons.org/licenses/by-nc-nd/3.0.
+These scores are licensed under the "Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License":http://creativecommons.org/licenses/by-nc-sa/3.0/.

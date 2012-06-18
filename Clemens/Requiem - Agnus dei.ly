@@ -1,12 +1,14 @@
-\version "2.10.33"
+\version "2.14.2"
 
 \header {
-	title = "Requiem"
+	title = "Missa Pro Defunctis"
 	piece = "Agnus Dei"
 	composer = "Clemens non Papa"
-	copyright = \markup \center-align \tiny { 
-		\line { Copyright ©2008 Cappella Gabrieli - \with-url #"http://cappellagabrieli.nl" http://cappellagabrieli.nl }
-		\line { Licensed under the Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License - \with-url #"http://creativecommons.org/licenses/by-nc-nd/3.0" http://creativecommons.org/licenses/by-nc-nd/3.0 }
+	copyright = \markup \tiny {
+		\column \center-align {
+			\line { Copyright ©2012 Peter Hilton - Lilypond source at \with-url #"https://github.com/hilton/sheet-music" https://github.com/hilton/sheet-music - Licensed under the }
+			\line { Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License - \with-url #"http://creativecommons.org/licenses/by-nc-sa/3.0/" http://creativecommons.org/licenses/by-nc-sa/3.0/ }
+		}
 	}
 	tagline = ##f 
 }
@@ -22,10 +24,13 @@ global= {
 }
 
 \paper {
-%	annotate-spacing = ##t
-	page-top-space = 0
-	ragged-bottom = ##t
+	annotate-spacing = ##f
 	ragged-last-bottom = ##f
+	top-margin = 15\mm
+	bottom-margin = 15\mm
+	last-bottom-spacing = #'(
+		(padding . 8)
+	)
 } 
 
 soprano = \new Voice {
@@ -112,7 +117,11 @@ bass = \new Voice {
 	>> 
 	\layout {
 		indent = #0
+	    \context {
+			\Staff
+			\override VerticalAxisGroup #'staff-staff-spacing =
+				#'((basic-distance . 0)(minimum-distance . 0)(padding . 4))
+	    }
 	}
-	\midi {
-	}
+%	\midi { }
 }
