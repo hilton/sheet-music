@@ -1,7 +1,7 @@
 \version "2.14.2"
 
 \header {
-	title = "Missa Pro Defunctis"
+	title = "Missa pro defunctis"
 	piece = "Agnus Dei"
 	composer = "Clemens non Papa"
 	copyright = \markup \tiny {
