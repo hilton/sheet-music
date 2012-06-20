@@ -2,6 +2,6 @@ A collection of renaissance choral music scores, typeset using "Lilypond":http:/
 
 In these transcriptions, we have taken the unconventional step of removing the bar lines, which were not used when this music was composed. The bar lines, added later in line with modern practice, provide false cues about rhythmic structure and undermine musical phrasing.
 
-Selected binaries (PDF) are available on the "Cappella Gabrieli scores":http://cappellagabrieli.nl/score_en.html page.
+Selected binaries (PDF) are available on the "Cappella Gabrieli scores":http://cappellagabrieli.nl/score_en.html page and the "Choral Public Domain Library (CPDL)":http://www.cpdl.org/wiki/index.php/Category:Peter_Hilton_editions.
 
 These scores are licensed under the "Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License":http://creativecommons.org/licenses/by-nc-sa/3.0/.
