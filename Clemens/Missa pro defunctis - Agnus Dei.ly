@@ -3,8 +3,8 @@
 \header {
 	title = "Missa pro defunctis"
 	piece = "Agnus Dei"
-	composer = "Clemens non Papa"
-	copyright = \markup \tiny {
+	composer = "Clemens non Papa (1510 - 1556)"
+	copyright = \markup \smaller {
 		\column \center-align {
 			\line { Copyright ©2012 Peter Hilton - Lilypond source at \with-url #"https://github.com/hilton/sheet-music" https://github.com/hilton/sheet-music - Licensed under the }
 			\line { Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License - \with-url #"http://creativecommons.org/licenses/by-nc-sa/3.0/" http://creativecommons.org/licenses/by-nc-sa/3.0/ }
@@ -117,11 +117,10 @@ bass = \new Voice {
 	>> 
 	\layout {
 		indent = #0
-	    \context {
-			\Staff
-			\override VerticalAxisGroup #'staff-staff-spacing =
-				#'((basic-distance . 0)(minimum-distance . 0)(padding . 4))
-	    }
+		\context {
+			\Score
+			\override StaffGrouper #'staff-staff-spacing #'basic-distance = #11.5
+		}
 	}
-%	\midi { }
+	\midi { }
 }
