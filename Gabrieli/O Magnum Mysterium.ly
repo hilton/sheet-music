@@ -1,17 +1,15 @@
-\version "2.13.16"
+\version "2.14.2"
 
 \header {
 	title = "O Magnum Mysterium"
-	composer = \markup \column \right-align { "Giovanni Gabrieli" "(c. 1554/1557 – 1612)" }
-	poet = "SATB-ATTB double choir"
-	copyright = \markup \small { 
-		\left-align \center-column {
-			\line { Version 2 - Copyright ©2010 Cappella Gabrieli - \with-url #"http://cappellagabrieli.nl" http://cappellagabrieli.nl - Licensed under the Creative Commons }
-			\line { Attribution-Noncommercial-No Derivative Works 3.0 License - \with-url #"http://creativecommons.org/licenses/by-nc-nd/3.0" http://creativecommons.org/licenses/by-nc-nd/3.0 }
+	composer = \markup { "Giovanni Gabrieli (c. 1553 - 1612)" }
+	copyright = \markup {
+		\column \center-align {
+			\line { This edition copyright ©2012 Peter Hilton - Lilypond source at \with-url #"https://github.com/hilton/sheet-music" https://github.com/hilton/sheet-music - Licensed under the }
+			\line { Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License - \with-url #"http://creativecommons.org/licenses/by-nc-sa/3.0/" http://creativecommons.org/licenses/by-nc-sa/3.0/ }
 		}
 	}
-	tagline = ##f
-
+	tagline = ##f 
 }
 
 global = { 
@@ -25,11 +23,16 @@ global = {
 
 \paper {
 	annotate-spacing = ##f
-	between-system-spacing = #'((space . 0) (padding . 10))
+	ragged-last-bottom = ##f
+%	between-system-spacing = #'((space . 0) (padding . 10))
+	system-system-spacing #'padding = #2
 	top-margin = 15\mm
 	bottom-margin = 10\mm
 	left-margin = 15\mm
 	right-margin = 15\mm
+	last-bottom-spacing = #'(
+		(padding . 8)
+	)
 }
 
 showBarLine = { \once \override Score.BarLine #'transparent = ##f }
@@ -324,37 +327,39 @@ bassusB = \new Voice {
 \score {
 	<<
 		\new ChoirStaff \with {
-	    	\override StaffGrouper #'after-last-staff-spacing #'space = #15
-		}
-	  	<< 
+    		\override StaffGrouper #'staffgroup-staff-spacing #'padding = #10
+	} << 
 			\set Score.proportionalNotationDuration = #(ly:make-moment 1 8)
 			\override Score.MetronomeMark #'transparent = ##t
-			\new Staff \with { instrumentName = #"CANTUS" } << \global \cantus >> 
-			\new Staff \with { instrumentName = #"ALTUS" } << \global \altus >> 
-			\new Staff \with { instrumentName = #"TENOR" } << \global \tenor >> 
-			\new Staff \with { 
-				instrumentName = #"BASSUS" 
-				\override VerticalAxisGroup #'next-staff-spacing = #'((space . 0) (padding . 7))
-			} << \global \bassus >> 
+			\new Staff \with { instrumentName = #"CANTUS" shortInstrumentName = #"C " } << \global \cantus >> 
+			\new Staff \with { instrumentName = #"ALTUS"  shortInstrumentName = #"A " } << \global \altus >> 
+			\new Staff \with { instrumentName = #"TENOR"  shortInstrumentName = #"T " } << \global \tenor >> 
+			\new Staff \with { instrumentName = #"BASSUS" shortInstrumentName = #"B " } << \global \bassus >> 
 		>> 
 		\new ChoirStaff << 
 			\set Score.proportionalNotationDuration = #(ly:make-moment 1 8)
 			\override Score.MetronomeMark #'transparent = ##t
-			\new Staff \with { instrumentName = #"CANTUS" } << \global \cantusB >> 
-			\new Staff \with { instrumentName = #"ALTUS" } << \global \altusB >> 
-			\new Staff \with { instrumentName = #"TENOR" } << \global \tenorB >> 
-			\new Staff \with { instrumentName = #"BASSUS" } << \global \bassusB >> 
+			\new Staff \with { instrumentName = #"ALTUS"  shortInstrumentName = #"A " } << \global \cantusB >> 
+			\new Staff \with {
+				instrumentName = #"TENOR"
+				shortInstrumentName = \markup { \concat { T \smaller \lower #0.6 "1 " } }
+			} << \global \altusB >> 
+			\new Staff \with {
+				instrumentName = #"TENOR"
+				shortInstrumentName = \markup { \concat { T \smaller \lower #0.6 "2 " } }
+			} << \global \tenorB >> 
+			\new Staff \with { instrumentName = #"BASSUS" shortInstrumentName = #"B " } << \global \bassusB >> 
 		>>
 	>>
 	\layout {
 		\context { 
 			\Score
 			\override BarLine #'transparent = ##t
-		} 
+		}
 		\context { 
 			\Voice 
-		} 
+			\consists "Ambitus_engraver" 
+		}
 	}
-%	\midi {
-%	}
+	\midi { }
 }
