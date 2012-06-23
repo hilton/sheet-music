@@ -24,7 +24,6 @@ global = {
 \paper {
 	annotate-spacing = ##f
 	ragged-last-bottom = ##f
-%	between-system-spacing = #'((space . 0) (padding . 10))
 	system-system-spacing #'padding = #2
 	top-margin = 15\mm
 	bottom-margin = 10\mm
