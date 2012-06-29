@@ -1,11 +1,13 @@
-\version "2.10.33"
+\version "2.14.2"
 
 \header {
-	title = "Prophetiæ Sibyllarum"
-	composer = "Orlando di Lasso"
-	copyright = \markup \center-align \tiny { 
-		\line { Copyright ©2008 Cappella Gabrieli - \with-url #"http://cappellagabrieli.nl" http://cappellagabrieli.nl }
-		\line { Licensed under the Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License - \with-url #"http://creativecommons.org/licenses/by-nc-nd/3.0" http://creativecommons.org/licenses/by-nc-nd/3.0 }
+	title = "Carmina Chromatico"
+	composer = "Orlando di Lasso (1532-1594)"
+	copyright = \markup \smaller {
+		\column \center-align {
+			\line { This edition copyright ©2012 Peter Hilton - Lilypond source at \with-url #"https://github.com/hilton/sheet-music" https://github.com/hilton/sheet-music - Licensed under the }
+			\line { Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License - \with-url #"http://creativecommons.org/licenses/by-nc-sa/3.0/" http://creativecommons.org/licenses/by-nc-sa/3.0/ }
+		}
 	}
 	tagline = ##f 
 }
@@ -17,18 +19,19 @@ global= {
 	\set Score.timing = ##f 
 	\override Score.LyricText #'font-size = #0
 	\set Staff.midiInstrument = "choir aahs"
-	#(set-global-staff-size 18) 
+	#(set-global-staff-size 17) 
 	#(set-accidental-style 'forget)
 }
 
 \paper {
-%	annotate-spacing = ##t
+	top-margin = 15\mm
+	bottom-margin = 10\mm
 	page-top-space = 0
 	head-separation = 0
-	between-system-padding = 0.3\cm 
 	ragged-bottom = ##f
 	ragged-last-bottom = ##f
-} 
+	last-bottom-spacing #'padding = #6
+}
 
 soprano = \new Voice {
 	\relative c' {
@@ -90,7 +93,9 @@ bass = \new Voice {
 }
 
 \score {
-	\new StaffGroup << 
+	\new ChoirStaff \with {
+		\override StaffGrouper #'staff-staff-spacing #'basic-distance = #12
+	} << 
 		\set Score.proportionalNotationDuration = #(ly:make-moment 1 8)
 		\override Score.MetronomeMark #'transparent = ##t
 		\new Staff << \global \soprano >> 
@@ -101,6 +106,5 @@ bass = \new Voice {
 	\layout {
 		indent = #0
 	}
-	\midi {
-	}
+	\midi { }
 }
