@@ -5,7 +5,7 @@
 	composer = "Orlando di Lasso (1532-1594)"
 	copyright = \markup \smaller {
 		\column \center-align {
-			\line { This edition copyright ©2012 Peter Hilton - Lilypond source at \with-url #"https://github.com/hilton/sheet-music" https://github.com/hilton/sheet-music - Licensed under the }
+			\line { This edition copyright ©2013 Peter Hilton - Lilypond source at \with-url #"https://github.com/hilton/sheet-music" https://github.com/hilton/sheet-music - Licensed under the }
 			\line { Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License - \with-url #"http://creativecommons.org/licenses/by-nc-sa/3.0/" http://creativecommons.org/licenses/by-nc-sa/3.0/ }
 		}
 	}
@@ -48,12 +48,11 @@ soprano = \new Voice {
 }
 
 alto = \new Voice {
-	\relative c {
+	\relative c' {
 		\override NoteHead #'style = #'baroque
-		\clef "treble_8"
 		r1 c1. b2 b1 b\breve gis1. e'2 e1 cis cis2 d1 e c2 d1 d2 c d1 \bar "" 
 		d g\breve e\breve. fis1 g d e cis dis e dis2 e1 a,2. g4 a2 b e d1 \bar "" 
-		e2 e f1 fis2 g g2. f4 f2 f2. e4 g2 gis a2. fis4g2 c1 d\breve c2 c c\breve b\longa
+		e2 e f1 fis2 g g2. f4 f2 f2. e4 g2 gis a2. fis4g2 c,1 d\breve c2 c c\breve b\longa
 	}
 	\addlyrics {
 		Car -- mi -- na Chro -- ma -- ti -- co, quæ au -- dis mo -- du -- la -- ta te -- no --
