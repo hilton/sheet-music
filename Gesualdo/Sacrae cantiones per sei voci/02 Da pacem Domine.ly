@@ -43,6 +43,8 @@ year = #(strftime "©%Y" (localtime (current-time)))
   	ragged-last = ##f
 	\context {
 		\Score
+		\override BarNumber #'self-alignment-X = #CENTER
+		\override BarNumber #'break-visibility = #'#(#f #t #t)
 		\override BarLine #'transparent = ##t
 		\remove "Metronome_mark_engraver"
 	}
@@ -70,10 +72,7 @@ ficta = { \once \set suggestAccidentals = ##t }
 
 
 cantus = \new Voice {
-	\relative c'' {
-		\override Score.BarNumber #'self-alignment-X = #CENTER
-		\override Score.BarNumber #'break-visibility = #'#(#f #t #t)
-		\set Score.barNumberVisibility = #(every-nth-bar-number-visible 1)
+	\relative c'' {	
 		R1 r2 a1 f2 a c2. d4 c2
 		bes a2. \ficta b!4 c2. c4 a2 r4 a b c2 b4 a2~
 		
@@ -304,7 +303,7 @@ bassus = {
 			\new Staff \with { instrumentName = #"TENOR"   shortInstrumentName = #"T " } << \global \tenor >>
 			\new Staff \with { instrumentName = #"BASSUS"  shortInstrumentName = #"B " } << \global \bassus >>
 		>> 
-	>>	
+	>>
 %	\midi { }
 }
 
