@@ -1,10 +1,16 @@
 \version "2.16.2"
 
+#(set-global-staff-size 16)
+#(set-accidental-style 'forget)
+
 \paper {
+	two-sided = ##t
+	inner-margin = 15\mm
+	outer-margin = 10\mm
 	annotate-spacing = ##f
 	top-markup-spacing = #'( (basic-distance . 4) )
 	markup-system-spacing = #'( (padding . 5) )
-	ragged-last-bottom=##t
+	ragged-last-bottom = ##t
 } 
 
 year = #(strftime "©%Y" (localtime (current-time)))
@@ -56,13 +62,9 @@ global= {
 	\tempo 2 = 45
 	\time 2/2
 	\set Staff.midiInstrument = "choir aahs"
-	#(set-global-staff-size 16)
-	#(set-accidental-style 'forget)
 }
 
 showBarLine = { \once \override Score.BarLine #'transparent = ##f }
-hiddenNode = { \once \override NoteHead #'transparent = ##t \once \override Stem #'transparent = ##t }
-lyricsLeft = { \once \override LyricText #'self-alignment-X = #LEFT }
 ficta = { \once \set suggestAccidentals = ##t }
 
 
