@@ -4,14 +4,10 @@
 	annotate-spacing = ##f
 	top-markup-spacing = #'( (basic-distance . 4) )
 	markup-system-spacing = #'( (padding . 5) )
-%	system-system-spacing = #'((basic-distance . 12) (minimum-distance . 8) (padding . 1) (stretchability . 60))
-%	score-system-spacing = #'((basic-distance . 14) (minimum-distance . 8) (padding . 1) (stretchability . 120))
-%	score-markup-spacing = #'((basic-distance . 12) (padding . 0.5) (stretchability . 60))
-%	markup-markup-spacing = #'((basic-distance . 1) (padding . 0.5))
-%	top-system-spacing = #'((basic-distance . 1) (minimum-distance . 0) (padding . 1))
-%	last-bottom-spacing = #'((basic-distance . 1) (minimum-distance . 0) (padding . 1) (stretchability . 30))
 	ragged-last-bottom=##t
 } 
+
+year = #(strftime "©%Y" (localtime (current-time)))
 
 \header {
 	title = \markup \override #'(font-name . "Open Sans") {
@@ -29,7 +25,7 @@
 	}
 	copyright = \markup \override #'(font-name . "Open Sans") {
 		\column \center-align {
-			\line { This edition copyright ©2013 Peter Hilton - Lilypond source at \with-url #"https://github.com/hilton/sheet-music" https://github.com/hilton/sheet-music }
+			\line { This edition copyright \year Peter Hilton - Lilypond source at \with-url #"https://github.com/hilton/sheet-music" https://github.com/hilton/sheet-music }
 			\line { Sextus & bassus copyright ©2005 Joop Voorn }
 		}
 	}
@@ -92,10 +88,10 @@ cantus = \new Voice {
 		c4 a b c d2 g,4 g b e, fis g a\breve a1 \showBarLine \bar "|."
 	}
 	\addlyrics {
-		Da __ pa -- cem Do -- mi -- ne,
+		Da pa -- cem Do -- mi -- ne,
 		da pa -- cem Do -- mi -- ne in di -- e -- bus no --
 		
-		_ stris, __ in di -- e -- bus no -- _
+		_ stris, in di -- e -- bus no -- _
 		_ _ _ _ _ _ _ _ _ _ _ stris qui -- a non est, _ _ _ _ qui -- a non
 		est a -- li -- us, __ a --
 		
@@ -129,19 +125,19 @@ sextus = \new Voice {
 	}
 	\addlyrics {
 		Da pa -- cem Do -- _ _ _ _ mi -- ne, da
-		pa -- cem Do -- _ mi -- ne in __ di -- e -- bus
+		pa -- cem Do -- _ mi -- ne in di -- e -- bus
 		
 		no -- _ _ _ stris, in di -- e -- bus, in di -- 
 		e -- bus no -- stris qui -- a non est __ _ _ a -- li -- us, a -- _ _ _ _ li -- 
 		us, qui -- a non est a -- li -- us, __ _ _ qui -- a non est a -- li -- us,
 		
-		qui pu -- gnet pro no -- _ bis, __ pro no -- _ _ 
+		qui pu -- gnet pro no -- _ bis, pro no -- _ _ 
 		bis, qui pu -- gnet, qui pu -- gnet pro no -- _ _ _ _ _ _ _ _ _ _
-		bis ni -- si tu De -- us no -- ster
+		bis ni -- si tu De -- us no -- ster,
 		
 		tu De -- us no -- _ _ _ ster, De -- 
 		us no -- _ _ _ _ _ ster, ni -- si tu De -- us no -- ster, ni -- 
-		si tu De -- us no -- ster, ni -- si __ tu De -- us __ no -- _ ster.
+		si tu De -- us no -- ster, ni -- si tu De -- us no -- _ ster.
 	}
 }
 
@@ -167,7 +163,7 @@ altus = {
 	}
 	\addlyrics {
 		Da pa -- cem Do -- mi -- ne, __ _ _ _ Do -- mi --
-		ne, __ _ _ _ da pa -- cem, __ da pa -- cem, __ da pa -- cem
+		ne, __ _ _ _ da pa -- cem, da pa -- cem, da pa -- cem
 		
 		Do -- _ _ _ mi -- ne in di -- e -- bus no -- _ _ _ stris, in di -- e -- bus
 		no -- stris qui -- a non est a --  li -- 
@@ -204,18 +200,18 @@ quintus = {
 		}
 	}
 	\addlyrics {
-		Da __ pa -- cem
+		Da pa -- cem
 		
 		Do -- mi -- ne in di -- e -- 
 		bus no -- stris
 		qui -- a non est a -- li -- us, qui -- a
 		
-		non est a -- li -- us __
+		non est a -- li -- us
 		qui pu -- gnet pro no -- 
 		bis ni -- si
 		
-		tu __ De -- us no -- ster, __
-		ni -- si tu __
+		tu De -- us no -- ster, __
+		ni -- si tu
 		De -- us no -- ster. __
 	}
 }
@@ -240,16 +236,16 @@ tenor = {
 		}
 	}
 	\addlyrics {
-		Da __ pa -- cem Do --
+		Da pa -- cem Do --
 		
 		mi -- ne in di -- e -- bus no -- stris
 		qui -- a non
 		est a -- li -- us, qui -- a non est a -- li -- us __
 		
 		qui pu -- gnet pro no -- bis
-		ni -- si __ tu __ De -- 
+		ni -- si tu De -- 
 		
-		us no -- ster, __
+		us no -- ster,
 		ni -- si tu __ De -- us
 		no -- ster, ni -- si tu De -- us no -- ster.
 	}
@@ -276,19 +272,19 @@ bassus = {
 		}
 	}
 	\addlyrics {
-		Da __ pa -- cem Do -- _ _ _ _ mi -- ne, da pa -- cem
+		Da pa -- cem Do -- _ _ _ _ mi -- ne, da pa -- cem
 		Do -- _ _ _ _ _ _ _ _ _ mi -- ne, Da pa -- cem Do -- _ mi -- ne, Do -- 
 		
-		_ _ _ _ _ _ mi -- _ ne in di -- e -- _ bus no -- stris in di -- e -- 
-		bus no -- _ _ _ _ stris qui -- a non est __ _ _ a -- _ li -- us
-		qui -- a non est a -- li -- us a -- li -- us a -- li -- 
+		_ _ _ _ _ _ mi -- _ ne in di -- e -- _ bus no -- stris, in di -- e -- 
+		bus no -- _ _ _ _ stris qui -- a non est __ _ _ a -- _ li -- us,
+		qui -- a non est a -- li -- us, a -- li -- us, a -- li -- 
 		
-		us qui pu -- gnet pro no -- bis, qui pu -- gnet pro no -- bis
-		qui pu -- gnet qui pu -- _ gnet
-		pro no -- bis ni -- si tu __ _ De -- us no -- ster ni -- si
+		us qui pu -- gnet pro no -- bis, qui pu -- gnet pro no -- bis,
+		qui pu -- gnet, qui pu -- _ gnet
+		pro no -- bis ni -- si tu __ _ De -- us no -- ster, ni -- si
 		
-		tu ni -- si tu ni -- si
-		tu tu De -- _ _ _ _ _ _ us __ _ no -- _ _ _
+		tu, ni -- si tu, ni -- si
+		tu, tu De -- _ _ _ _ _ _ us __ _ no -- _ _ _
 		ster, De -- us no -- ster, De -- us no -- ster.
 	}
 }
@@ -307,6 +303,6 @@ bassus = {
 			\new Staff \with { instrumentName = #"BASSUS"  shortInstrumentName = #"B " } << \global \bassus >>
 		>> 
 	>>	
-	\midi { }
+%	\midi { }
 }
 
