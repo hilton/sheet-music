@@ -1,5 +1,7 @@
+% Copyright ©2013 Peter Hilton
+
 \version "2.16.2"
-revision = "2"
+revision = "3"
 
 #(set-global-staff-size 16)
 #(set-accidental-style 'forget)
@@ -13,6 +15,7 @@ revision = "2"
 	annotate-spacing = ##f
 	top-markup-spacing = #'( (basic-distance . 4) )
 	markup-system-spacing = #'( (padding . 5) )
+	system-system-spacing = #'( (basic-distance . 20) (stretchability . 100) )
 	ragged-last-bottom = ##t
 } 
 
@@ -33,6 +36,7 @@ year = #(strftime "©%Y" (localtime (current-time)))
 		}
 	}
 	copyright = \markup \sans {
+		\vspace #6
 		\column \center-align {
 			\line {
 				This edition copyright \year Peter Hilton - 
@@ -54,6 +58,7 @@ year = #(strftime "©%Y" (localtime (current-time)))
 		\override BarNumber #'break-visibility = #'#(#f #t #t)
 		\override BarLine #'transparent = ##t
 		\remove "Metronome_mark_engraver"
+		\override VerticalAxisGroup #'staff-staff-spacing = #'((basic-distance . 10) (stretchability . 100))
 	}
 	\context { 
 		\StaffGroup
@@ -310,6 +315,6 @@ bassus = {
 			\new Staff \with { instrumentName = #"BASSUS"  shortInstrumentName = #"B " } << \global \bassus >>
 		>> 
 	>>
-	\midi { }
+%	\midi { }
 }
 
