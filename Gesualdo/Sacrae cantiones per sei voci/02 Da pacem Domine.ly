@@ -1,7 +1,10 @@
 \version "2.16.2"
+revision = "2"
 
 #(set-global-staff-size 16)
 #(set-accidental-style 'forget)
+#(define fonts (make-pango-font-tree "Century Schoolbook L" "Open Sans Light" "Luxi Mono" (/ 16 20)))
+
 
 \paper {
 	two-sided = ##t
@@ -16,22 +19,26 @@
 year = #(strftime "©%Y" (localtime (current-time)))
 
 \header {
-	title = \markup \override #'(font-name . "Open Sans") {
+	title = \markup \medium \sans {
 		2. Da pacem Domine
 	}
-	subtitle = \markup \override #'(font-name . "Open Sans") {
+	subtitle = \markup \medium \sans {
 		Sacræ cantiones per sei voci - liber secundus
 	}
-	composer = \markup \override #'(font-name . "Open Sans") {
+	composer = \markup \sans {
 		\vspace #2
 		\column {
 			\line { Carlo Gesualdo (1603) }
 			\line { Sextus & bassus, Joop Voorn (2005) }
 		}
 	}
-	copyright = \markup \override #'(font-name . "Open Sans") {
+	copyright = \markup \sans {
 		\column \center-align {
-			\line { This edition copyright \year Peter Hilton - Lilypond source at \with-url #"https://github.com/hilton/sheet-music" https://github.com/hilton/sheet-music }
+			\line {
+				This edition copyright \year Peter Hilton - 
+				Lilypond source at \with-url #"https://github.com/hilton/sheet-music" https://github.com/hilton/sheet-music - 
+				revision \revision 
+			}
 			\line { Sextus & bassus copyright ©2005 Joop Voorn }
 		}
 	}
@@ -60,7 +67,7 @@ year = #(strftime "©%Y" (localtime (current-time)))
 
 
 global= { 
-	\key c \major
+	\key d \major
 	\tempo 2 = 45
 	\time 2/2
 	\set Staff.midiInstrument = "choir aahs"
@@ -72,7 +79,7 @@ ficta = { \once \set suggestAccidentals = ##t }
 
 
 cantus = \new Voice {
-	\relative c'' {	
+	\transpose c d \relative c'' {	
 		R1 r2 a1 f2 a c2. d4 c2
 		bes a2. \ficta b!4 c2. c4 a2 r4 a b c2 b4 a2~
 		
@@ -107,8 +114,7 @@ cantus = \new Voice {
 }
 
 sextus = \new Voice {
-	\relative c' {
-		\clef "treble_8"
+	\transpose c d \relative c' {
 		R1 r2 d c2 d4 f4. e8 f g a2. f4 g f
 		d1 d2 e4 f2 e4 d d2 fis4 g1 f2
 		
@@ -121,7 +127,7 @@ sextus = \new Voice {
 		a e'2 d4 e2 d2. c4 g'1 f r2
 		
 		R1 e2 fis4 g a g8 f e2 e e
-		d4 c8 b a g16 a bes2 a a'4 f f e fis g2 g,4 f
+		d4 c8 b a g16 a bes2 a a'4 f f e fis g2 c,4 f
 		g e2 c b4 e2 e d4 e2 d4 f e2 d cis4 d1
 	}
 	\addlyrics {
@@ -144,7 +150,7 @@ sextus = \new Voice {
 
 altus = {
 	\new Voice = "altus" {
-		\relative c' {
+		\transpose c d \relative c' {
 			\clef "treble_8"
 			r2 a1 f2 a2. c2 d4 c d8 e f4 bes,2 a4
 			bes a8 g a4 a f2 c'1 r4 f d2. e2 e4 c d
@@ -174,15 +180,15 @@ altus = {
 		_ _ _ bis, qui pu -- gnet pro no -- bis, qui pu -- gnet pro no -- _ _
 		_ _ _ _ bis ni -- si tu De -- us no -- ster, De -- us no -- _ _ _ _ _ _ _ _ _
 		
-		ster, ni -- si tu De -- us no -- _ _ _
-		_ _ _ _ _ _ _ ster, ni -- si tu
+		_ _ _ _ ster, ni -- si tu De -- us no -- _ _ _
+		_ _ _ ster, ni -- si tu
 		De -- us no -- ster, De -- _ _ _ _ _ _ us no -- ster, De -- us no -- _ _ ster.
 	}
 }
 
 quintus = {
 	\new Voice = "quintus" {
-		\relative c' {
+		\transpose c d \relative c' {
 			\clef "treble_8"
 			R1 r r r r
 			r r r2 a1 g a2
@@ -219,7 +225,7 @@ quintus = {
 
 tenor = {
 	\new Voice = "tenor" {
-		\relative c {
+		\transpose c d \relative c {
 			\clef "bass"
 			R1 r r r r
 			r2 d1 c d2 R1 r2 r4 f4 ~
@@ -254,7 +260,7 @@ tenor = {
 
 bassus = {
 	\new Voice = "bassus" {
-		\relative c {
+		\transpose c d \relative c {
 			\clef "bass"
 			d1 c2 d f4. e8 f g a2 f4 f2. d4 e f
 			bes,8 c d e f4. g8 a4 g8 f g4 a g2 f4 d2. g4 c,4. d8 e4 f d~
@@ -274,7 +280,7 @@ bassus = {
 	}
 	\addlyrics {
 		Da pa -- cem Do -- _ _ _ _ mi -- ne, da pa -- cem
-		Do -- _ _ _ _ _ _ _ _ _ mi -- ne, Da pa -- cem Do -- _ mi -- ne, Do -- 
+		Do -- _ _ _ _ _ _ _ _ _ mi -- ne, da pa -- cem Do -- _ mi -- ne, Do -- 
 		
 		_ _ _ _ _ _ mi -- _ ne in di -- e -- _ bus no -- stris, in di -- e -- 
 		bus no -- _ _ _ _ stris qui -- a non est __ _ _ a -- _ li -- us,
@@ -298,12 +304,12 @@ bassus = {
 			\set Score.proportionalNotationDuration = #(ly:make-moment 1 8)
 			\new Staff \with { instrumentName = #"CANTUS"  shortInstrumentName = #"C " } << \global \cantus >> 
 			\new Staff \with { instrumentName = #"SEXTUS"  shortInstrumentName = #"S " } << \global \sextus >> 
-			\new Staff \with { instrumentName = #"ALTUS"   shortInstrumentName = #"A " } << \global \altus >>
 			\new Staff \with { instrumentName = #"QUINTUS" shortInstrumentName = #"Q " } << \global \quintus >>
+			\new Staff \with { instrumentName = #"ALTUS"   shortInstrumentName = #"A " } << \global \altus >>
 			\new Staff \with { instrumentName = #"TENOR"   shortInstrumentName = #"T " } << \global \tenor >>
 			\new Staff \with { instrumentName = #"BASSUS"  shortInstrumentName = #"B " } << \global \bassus >>
 		>> 
 	>>
-%	\midi { }
+	\midi { }
 }
 
