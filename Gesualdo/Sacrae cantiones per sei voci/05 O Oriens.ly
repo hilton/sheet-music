@@ -1,7 +1,7 @@
 % Copyright ©2013 Peter Hilton
 
 \version "2.16.2"
-revision = "1"
+revision = "2"
 
 #(set-global-staff-size 15.5)
 #(set-accidental-style 'forget)
@@ -27,24 +27,24 @@ year = #(strftime "©%Y" (localtime (current-time)))
 		"5. O Oriens"
 	}
 	subtitle = \markup \medium \sans {
-		"Sacræ cantiones per sei voci - liber secundus"
+		"Sacræ cantiones per sei voci - liber secundus (1603)"
 	}
 	composer = \markup \sans {
 		\vspace #2
 		\column {
-			\line { "Carlo Gesualdo (1603)" }
-			\line { "Sextus & bassus, Joop Voorn (2005)" }
+			\line { \with-url #"http://en.wikipedia.org/wiki/Carlo_Gesualdo" "Carlo Gesualdo" (1560 – 1613) }
+			\line { Sextus & bassus, \with-url #"http://en.wikipedia.org/wiki/Joop_Voorn" "Joop Voorn" (b. 1932) }
 		}
 	}
 	copyright = \markup \sans {
 		\vspace #6
 		\column \center-align {
+			\line { "Sextus & bassus copyright ©2005 Joop Voorn" }
 			\line {
 				This edition copyright \year Peter Hilton - 
 				Lilypond source at \with-url #"https://github.com/hilton/sheet-music" https://github.com/hilton/sheet-music - 
 				revision \revision
 			}
-			\line { "Sextus & bassus copyright ©2005 Joop Voorn" }
 		}
 	}
 	tagline = ##f
