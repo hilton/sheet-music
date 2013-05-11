@@ -23,7 +23,7 @@ revision = "1"
 year = #(strftime "©%Y" (localtime (current-time)))
 
 \header {
-	title = \markup \medium \fontsize #6 \override #'(font-name . "Source Sans Pro Light") \sans {
+	title = \markup \medium \fontsize #6 \override #'(font-name . "Source Sans Pro Light") {
 		"5. O Oriens"
 	}
 	subtitle = \markup \medium \sans {

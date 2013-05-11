@@ -5,10 +5,9 @@ revision = "3"
 
 #(set-global-staff-size 16)
 #(set-accidental-style 'forget)
-#(define fonts (make-pango-font-tree "Century Schoolbook L" "Source Sans Pro" "Luxi Mono" (/ 16 20)))
-
 
 \paper {
+#(define fonts (make-pango-font-tree "Century Schoolbook L" "Source Sans Pro" "Luxi Mono" (/ 16 20)))
 	two-sided = ##t
 	inner-margin = 15\mm
 	outer-margin = 10\mm
@@ -22,7 +21,7 @@ revision = "3"
 year = #(strftime "©%Y" (localtime (current-time)))
 
 \header {
-	title = \markup \medium \sans {
+	title = \markup \medium \fontsize #6 \override #'(font-name . "Source Sans Pro Light") {
 		2. Da pacem Domine
 	}
 	subtitle = \markup \medium \sans {
