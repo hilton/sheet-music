@@ -96,6 +96,10 @@ cantus = \new Voice {
 		g2 gis4 a b2 b r r4 c8 b a g f4 a a a2 a1 d2 ~  \break
 		d1 b2 r b a2 ~ a1 b2. b4 d4. d8 d2 ~  \break
 		d d b a R1 r4 d2 b a4 b2 r g4 g  \break
+		
+		a4. a8 d,2 r d' bes f ~ f1 R1 d'
+		g,2 a g g2. g4 g2. f4 g2. gis4 gis2 a r
+		R1 R r2 e'1 cis4 \ficta c c2 b ~ b1 \showBarLine \bar "|."
 	}
 	\addlyrics {
 		O O -- ri -- ens, splen -- _ _ _ _ _ _ _ dor, O O -- 
@@ -108,6 +112,10 @@ cantus = \new Voice {
 		ter -- næ, æ -- ter -- næ, lu -- _ _ _ _ cis æ -- ter -- næ: __ ve --
 		ni, ve -- ni __ et il -- lu -- mi -- na __
 		se -- den -- tes, se -- den -- _ tes, et il -- 
+		
+		lu -- mi -- na se -- den -- tes, __ se -- 
+		den -- tes in te -- ne -- bris et um -- bra mor -- tis,
+		et um -- bra mor -- tis. __
 	}
 }
 
@@ -123,6 +131,10 @@ sextus = \new Voice {
 		e2 f4. e8 e2 e c'4. b8 a4. g8 f4. e8 d2 d4 d2 d4 r a'2 f4
 		g2 d r4 g8 g d'4. d8 g,2 r R1 d4 d g4. g8 g2 r4 b8 b
 		a4. a8 a2 R1 r2 c4 c b4. g8 g2 R1 r2 r4 g ~
+		
+		g4 fis g4. g8 e4 e d2 d4 d d2. d4 d2 r c'4 c bes4. bes8 g2
+		e d es r es4 es2 es4 es d es2 es f4 e! e2 r4 e
+		a2 a r4 a c2 b c4 d d8 c b a gis4 e e c e2 e1
 	}
 	\addlyrics {
 		O O -- ri -- ens, splen -- _ _ _ _ _ _ _ _ _ _ _ _ dor, 
@@ -135,6 +147,10 @@ sextus = \new Voice {
 		ter -- næ, æ -- ter -- næ, lu -- _ _ _ _ _ cis æ -- ter -- næ, ve -- ni,
 		ve -- ni et il -- lu -- mi -- na, et il -- lu -- mi -- na, et il -- 
 		lu -- mi -- na, et il -- lu -- mi -- na, et
+		
+		il -- lu -- mi -- na se -- den -- tes in te -- ne -- bris, et il -- lu -- mi -- na
+		se -- den -- tes in te -- ne -- bris et um -- bra mor -- tis, et 
+		um -- bra, et um -- bra, um -- bra mor -- _ _ _ tis et um -- bra mor -- tis.
 	}
 }
 
@@ -153,6 +169,9 @@ altus = {
 			d g,4 g8 g d'4. d8 d2 e1 a, R b2. b4
 			fis'4. fis8 fis2 g4 e2 d4 e2 c4 c d4. d8 d2 e e4 g4. g8 d2 b4
 			
+			a2 g c bes g4 bes bes2. bes4 bes2 c4 bes2 a4 a g8 fis g2 ~
+			g d' r bes4 bes2 bes4 bes2 R1 R R
+			c2 cis4 d d2 e ~ e1 ~ e ~ e ~ e
 		}
 	}
 	\addlyrics {
@@ -166,6 +185,9 @@ altus = {
 		ve -- ni __ et il -- lu -- mi -- na, ve -- ni, ve -- 
 		ni et il -- lu -- mi -- na, ve -- ni et il -- 
 		lu -- mi -- na se -- den -- _ tes, et il -- lu -- mi -- na, et il -- lu -- mi -- na se --
+		
+		den -- tes, se -- den -- tes in te -- ne -- bris et um -- bra mor -- _ _ _
+		tis, in te -- ne -- bris, et um -- bra mor -- tis.
 	}
 }
 
@@ -183,6 +205,10 @@ quintus = {
 			e8 f g a16 b c4 c b b2 b4 r c2 e,4 a2 d, ~ d1 e2 d ~
 			d1 r2 g e1 ~ e2 e4 e g4. g8 g2. g4 g d' ~
 			d d d2 e c4 b8 a c4 g a a b4. b8 b2 c2 b1 g2
+			
+			d'2 b a4 a2 g f4 f f2 f4 f2 g4 g c4. c8 d2 r
+			r4 g, f2 es4 g g4. g8 g2. g4 bes2. b!4 b1 a
+			a2 fis4 \ficta f f2 e ~ e1 ~ e ~ e ~ e
 		}
 	}
 	\addlyrics {
@@ -191,9 +217,14 @@ quintus = {
 		dor, O O -- ri -- ens, O -- ri -- ens, splen -- _ _ _ dor, lu -- _ _ _ 
 		_ cis æ -- ter -- næ, O O -- ri -- ens, splen -- _ _ _ _ dor, O -- ri -- ens,
 		splen -- _ _ _ dor, lu -- _ _ _ _ cis æ -- ter -- _ _ _ næ, lu -- 
+		
 		_ _ _ _ _ _ _ cis æ -- ter -- næ: ve -- ni, ve -- ni, __ ve -- ni, __
 		ve -- ni __ et il -- lu -- mi -- na, et il -- lu -- 
 		mi -- na se -- den -- _ _ _ tes, et il -- lu -- mi -- na se -- den -- tes,
+		
+		se -- den -- tes, se -- den -- tes in te -- ne -- bris, et il -- lu -- mi -- na
+		se -- den -- tes in te -- ne -- bris et um -- bra mor --  tis,
+		et um -- bra mor -- tis.
 	}
 }
 
@@ -211,6 +242,10 @@ tenor = {
 			g8 a b2 a g4. f8 e d c4 e2 c' c4. b8 a g a4 a r2 e' a,4 c ~
 			c b8 a b4 b g8 g b4. b8 b2 d cis8 b cis2 cis b4 b2 d4. d8 d4 d, d
 			a'4. a8 a2 r f e2. d8 c g'1 e4 a2 g fis4 d d ~
+			
+			d4 d d2 R1 R r2 r4 d e2. f4 f e8 d d'2
+			c4 c a2 bes4 es, es4. es8 es1 R1 r2 r4 d' cis \ficta c c2
+			e,2 a ~ a1 b4 d d8 c b a g4 g8 g gis4 a a2 b ~ b1
 		}
 	}
 	\addlyrics {
@@ -224,6 +259,10 @@ tenor = {
 		_ _ _ dor lu -- _ _ _ _ cis æ -- ter -- _ _ _ _ _næ: ve -- ni, ve -- 
 		_ _ _ ni et il -- lu -- mi -- na, ve -- _ _ _ ni et il -- lu -- mi -- na, et il -- 
 		lu -- mi -- na se -- den -- _ _ _ tes, se -- den -- tes in te -- 
+		
+		ne -- bris et um -- bra mor --  _ _ _ 
+		tis, se -- den -- tes in te -- ne -- bris et um -- bra mor --  
+		tis, et um -- bra mor -- _ _ _ tis, et um -- bra mor -- tis.
 	}
 }
 
@@ -240,7 +279,11 @@ bassus = {
 			
 			e e2. f2 e r4 a,4. b8 c d16 e f4 f r f2 f4. e8 d c16 b a4 a r2
 			g1 g2 r1 a2 ~ a1 g r2 g4 b
-			d4. d8 d2 R1 r2 a g g4 g c2 e4 e4 b4. b8 b4
+			d4. d8 d2 R1 r2 a g g4 g c2 e4 e2 b4. b8 b4
+			
+			r2 g a d d bes2. bes4 bes2 r a bes2. bes4
+			c c r2 R1 R R f4. e!8 d4 c8 b a1
+			a a gis2 a4. b8 c4. d8 e4 fis8 gis a1 gis
 		}
 	}
 	\addlyrics {
@@ -253,7 +296,11 @@ bassus = {
 		
 		cis æ -- ter -- næ, lu -- _ _ _ _ _ cis æ -- ter -- _ _ _ _ _ næ,
 		ve -- ni, ve -- ni et il -- 
-		lu -- mi -- na se -- den -- tes, se -- den -- tes in te -- ne -- bris
+		lu -- mi -- na se -- den -- tes, se -- den -- tes in te -- ne -- bris,
+		
+		se -- den -- tes in te -- ne -- bris et um -- bra 
+		mor -- tis, mor -- _ _ _ _ tis,
+		et um -- bra mor -- _ tis, et um -- bra _ mor -- tis.
 	}
 }
 
