@@ -105,14 +105,14 @@ cantus = \new Voice {
 		da pa -- cem Do -- mi -- ne in di -- e -- bus no --
 		
 		_ stris, in di -- e -- bus no -- _
-		_ _ _ _ _ _ _ _ _ _ _ stris qui -- a non est, _ _ _ _ qui -- a non
+		_ _ _ _ _ _ _ _ _ _ _ stris qui -- a non est, __ _ _ _ _ qui -- a non
 		est a -- li -- us, __ a --
 		
 		li -- us, qui pu -- gnet pro no -- _ _ _ _ _ _
 		_ _ _ bis, qui pu -- gnet pro no -- bis
 		ni -- si tu De -- us no -- _ _ _ _ ster, ni -- 
 		
-		si tu, __ ni -- si tu
+		si tu, ni -- si tu
 		De -- us no -- _ ster, De -- _ _ _ _ _ _ us no -- _ _ _ _ _ _
 		_ ster, De -- us no -- ster, ni -- si tu De -- us no -- ster.
 	}
@@ -166,9 +166,9 @@ altus = {
 			
 			e4 e d2. g,4 b a8 g a4. a8 b2 d4 d2 c4 a2 c4. b8
 			c d e2 d4 c c a d, e2 e a4 a f2 d4 f2 e8 d
-			e f16 g a4 a a gis a bes2 a g4 c, c' bes2 a8 g a b c a d c16 d e4~
+			e f16 g a4 a a gis a bes2 a g?4 c, c' bes2 a8 g a b c a d c16 d e4~
 			
-			e8 d c b a2 a2. bes4 a b2 a gis4 a8 b c b
+			e8 d c b a2 a2. bes4 a b?2 a gis4 a8 b c b
 			a g a4 d,2 R1 R1 d'4 e r a,
 			e' c b e r2 c,8 d e fis g e a2 g4 f2 c4 e f a4. g8 e4 fis1
 		}
@@ -179,7 +179,7 @@ altus = {
 		
 		Do -- _ _ _ mi -- ne in di -- e -- bus no -- _ _ _ stris, in di -- e -- bus
 		no -- stris qui -- a non est a --  li -- 
-		us, _ _ _ _ _ _ _ qui -- a non __ est, qui -- 
+		us, __ _ _ _ _ _ _ _ qui -- a non __ est, qui -- 
 
 		a non __ est a -- _ _ _ li -- us, qui pu -- gnet pro no -- _
 		_ _ _ bis, qui pu -- gnet pro no -- bis, qui pu -- gnet pro no -- _ _
@@ -250,7 +250,7 @@ tenor = {
 	\addlyrics {
 		Da pa -- cem Do --
 		
-		mi -- ne in di -- e -- bus no -- stris
+		mi -- ne in di -- e -- bus no -- stris __
 		qui -- a non
 		est a -- li -- us, qui -- a non est a -- li -- us __
 		
@@ -258,7 +258,7 @@ tenor = {
 		ni -- si tu De -- 
 		
 		us no -- ster,
-		ni -- si tu __ De -- us
+		ni -- si tu De -- us
 		no -- ster, ni -- si tu De -- us no -- ster.
 	}
 }
