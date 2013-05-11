@@ -5,7 +5,7 @@ revision = "3"
 
 #(set-global-staff-size 16)
 #(set-accidental-style 'forget)
-#(define fonts (make-pango-font-tree "Century Schoolbook L" "Open Sans Light" "Luxi Mono" (/ 16 20)))
+#(define fonts (make-pango-font-tree "Century Schoolbook L" "Source Sans Pro" "Luxi Mono" (/ 16 20)))
 
 
 \paper {
