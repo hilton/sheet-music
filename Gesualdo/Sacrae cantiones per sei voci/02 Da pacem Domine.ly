@@ -1,16 +1,15 @@
 % Copyright ©2013 Peter Hilton
 
 \version "2.16.2"
-revision = "3"
+revision = "4"
 
-#(set-global-staff-size 16)
-#(set-accidental-style 'forget)
+#(set-global-staff-size 15.5)
 
 \paper {
-#(define fonts (make-pango-font-tree "Century Schoolbook L" "Source Sans Pro" "Luxi Mono" (/ 16 20)))
+#(define fonts (make-pango-font-tree "Century Schoolbook L" "Source Sans Pro" "Luxi Mono" (/ 15.5 20)))
 	two-sided = ##t
 	inner-margin = 15\mm
-	outer-margin = 12\mm
+	outer-margin = 15\mm
 	annotate-spacing = ##f
 	top-markup-spacing = #'( (basic-distance . 4) )
 	markup-system-spacing = #'( (padding . 5) )
@@ -75,6 +74,7 @@ global= {
 	\tempo 2 = 45
 	\time 2/2
 	\set Staff.midiInstrument = "choir aahs"
+	\accidentalStyle "forget"
 }
 
 showBarLine = { \once \override Score.BarLine #'transparent = ##f }
@@ -88,12 +88,12 @@ cantus = \new Voice {
 		bes a2. \ficta b!4 c2. c4 a2 r4 a b c2 b4 a2~
 		
 		a4 g a1 r2 r e4 fis g1 c4 a2 g4~
-		g8 fis16 e fis4 g8 fis g a b c d2 cis4 d4 d, a'8 a c4. b8 a g f4 a2 a4 g2
+		g8 fis16 e \ficta fis!4 g8 \ficta fis! g a b c d2 cis4 d4 d, a'8 a c4. b8 a g f4 a2 a4 g2
 		f r R1 r4 d2 f4 g1 ~ g2 r4 g~
 		
 		g b d2 R1 d2 d b a4 c2 b8 a g fis g e \break
 		a4. b8 c4 a r c c a g1 a2 a R1
-		e2 f e4 a2 g4 f8 g a b c2 ~ c1 a2 b
+		e2 f e4 a2 g4 f8 g a b c1 ~ c2 a2 b
 		
 		g a1 r2 R1 b2 c4 a \break
 		f e2 d cis4 d f8 g a b c a e'4 a, d c8 b a g a b \break
@@ -120,7 +120,7 @@ cantus = \new Voice {
 sextus = \new Voice {
 	\transpose c d \relative c' {
 		R1 r2 d c2 d4 f4. e8 f g a2. f4 g f
-		d1 d2 e4 f2 e4 d d2 fis4 g1 f2
+		d1 d2 e4 f2 e4 d d2 fis4 g1 f!2
 		
 		d2. c8 d e2 e r r4 c4 d2 e2. a,4 fis g
 		d' a e' e e2 e d c8 b a4 g a bes a8 \ficta b c a d2 cis4
@@ -130,7 +130,7 @@ sextus = \new Voice {
 		e4 c f f2 e d4 d c b c4. b8 a g a4. g16 a bes8 a a2 g4
 		a e'2 d4 e2 d2. c4 g'1 f r2
 		
-		R1 e2 fis4 g a g8 f e2 e e
+		R1 e2 fis4 g a g8 \ficta fis e2 e e
 		d4 c8 b a g16 a bes2 a a'4 f f e fis g2 c,4 f
 		g e2 c b4 e2 e d4 e2 d4 f e2 d cis4 d1
 	}
@@ -165,11 +165,11 @@ altus = {
 			
 			e4 e d2. g,4 b a8 g a4. a8 b2 d4 d2 c4 a2 c4. b8
 			c d e2 d4 c c a d, e2 e a4 a f2 d4 f2 e8 d
-			e f16 g a4 a a gis a bes2 a g?4 c, c' bes2 a8 g a b c a d c16 d e4~
+			e f16 g a4 a a gis a bes2 a g?4 c, c' bes2 a8 g a \ficta b! c a d c16 d e4~
 			
-			e8 d c b a2 a2. bes4 a b?2 a gis4 a8 b c b
+			e8 d c b a2 a2. bes4 a \ficta b?2 a gis4 a8 b c b
 			a g a4 d,2 R1 R1 d'4 e r a,
-			e' c b e r2 c,8 d e fis g e a2 g4 f2 c4 e f a4. g8 e4 fis1
+			e' c b e r2 c,8 d e fis g e a2 g4 \ficta f!2 c4 e f a4. g8 e4 fis1
 		}
 	}
 	\addlyrics {
@@ -270,7 +270,7 @@ bassus = {
 			bes,8 c d e f4. g8 a4 g8 f g4 a g2 f4 d2. g4 c,4. d8 e4 f d~
 			
 			d4 e f8 g a b c4 b8 a b4 e,2 d4 c8 b a4 g g r2 a a'4 d,4~
-			d d e4. fis8 g4 fis8 g a2 d,4 d8 e f!4 e8 d e d c4 d2 R1
+			d d e4. fis8 g4 \ficta fis!8 g a2 d,4 d8 e f!4 e8 d e d c4 d2 R1
 			R a4 a b c d4. e8 f2 r g,4 g c2 c4. d8
 			
 			e2 f4 f2 e8 e d2 d g, g' f4 e f2 e
@@ -287,7 +287,7 @@ bassus = {
 		Do -- _ _ _ _ _ _ _ _ _ mi -- ne, da pa -- cem Do -- _ mi -- ne, Do -- 
 		
 		_ _ _ _ _ _ mi -- _ ne in di -- e -- _ bus no -- stris, in di -- e -- 
-		bus no -- _ _ _ _ stris qui -- a non est __ _ _ a -- _ li -- us,
+		bus no -- _ _ _ _ stris qui -- a __ _ non est __ _ a -- _ li -- us,
 		qui -- a non est a -- li -- us, a -- li -- us, a -- li -- 
 		
 		us qui pu -- gnet pro no -- bis, qui pu -- gnet pro no -- bis,
