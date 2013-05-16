@@ -195,9 +195,9 @@ quintus = {
 		\transpose c c \relative c {
 			\clef "treble_8"
 			R1 R R R r2 e 
-			e'4. e8 d2 r4 c4. b16 c d4 g,2 r r4 d a'4. a8 f4 c4. b16 c d4
+			e'4. e8 d2 r4 c4. b16 c d4 g,2 r r4 d a'4. a8 f4 c'4. b16 c d4
 			
-			g2 r g d'4. d8 c4 e4. e8 d4 e4. d16 e f4 c2 c4. b8 a g
+			g,2 r g d'4. d8 c4 e4. e8 d4 e4. d16 e f4 c2 c4. b8 a g
 			f1 e4 e e2 e d4 d'4. d8 c4 g8 a b c d2. b4 b4. b8 a2
 			d,4. c16 d e2 e'1 r2 r4 e4. d8 c b a4 e f f2 e8 d e2 e4 c8 d
 			
