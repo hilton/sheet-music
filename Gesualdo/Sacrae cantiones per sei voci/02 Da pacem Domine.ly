@@ -10,7 +10,7 @@ revision = "3"
 #(define fonts (make-pango-font-tree "Century Schoolbook L" "Source Sans Pro" "Luxi Mono" (/ 16 20)))
 	two-sided = ##t
 	inner-margin = 15\mm
-	outer-margin = 10\mm
+	outer-margin = 12\mm
 	annotate-spacing = ##f
 	top-markup-spacing = #'( (basic-distance . 4) )
 	markup-system-spacing = #'( (padding . 5) )
