@@ -133,7 +133,7 @@ sextus = \new Voice {
 		a4. a8 a2 R1 r2 c4 c b4. g8 g2 R1 r2 r4 g ~
 		
 		g4 fis g4. g8 e4 e d2 d4 d d2. d4 d2 r c'4 c bes4. bes8 g2
-		e d es r es4 es2 es4 es d es2 es f4 e! e2 r4 e
+		e d es r es4 \ficta es2 \ficta es4 \ficta es d es2 es f4 e! e2 r4 e
 		a2 a r4 a c2 b c4 d d8 c b a gis4 e e c e2 e1
 	}
 	\addlyrics {
@@ -167,11 +167,11 @@ altus = {
 			
 			R1 r4 g'2 g, a a4 f'4. f8 f2 r d cis d ~
 			d g,4 g8 g d'4. d8 d2 e1 a, R b2. b4
-			fis'4. fis8 fis2 g4 e2 d4 e2 c4 c d4. d8 d2 e e4 g4. g8 d2 b4
+			fis'4. \ficta fis8 \ficta fis2 g4 e2 d4 e2 c4 c d4. d8 d2 e e4 g4. g8 d2 b4
 			
-			a2 g c bes g4 bes bes2. bes4 bes2 c4 bes2 a4 a g8 fis g2 ~
-			g d' r bes4 bes2 bes4 bes2 R1 R R
-			c2 cis4 d d2 e ~ e1 ~ e ~ e ~ e
+			a2 g c bes g4 bes \ficta bes2. \ficta bes4 \ficta bes2 c4 bes2 a4 a g8 fis g2 ~
+			g d' r bes4 \ficta bes2 \ficta bes4 \ficta bes2 R1 R R
+			c2 cis4 d d2 e\longa
 		}
 	}
 	\addlyrics {
