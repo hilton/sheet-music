@@ -1,7 +1,7 @@
 % Copyright ©2013 Peter Hilton
 
 \version "2.16.2"
-revision = "3"
+revision = "4"
 
 #(set-global-staff-size 16)
 #(set-accidental-style 'forget)
@@ -107,32 +107,32 @@ superius = \new Voice {
 		\set stanza = #"1. "
 		Ma -- don -- na "mia, pie" -- tà, ma -- don -- na mia, pie -- tà __ _
 		_ chiam’ ed a -- i -- ta, ta,
-		ch’io mo -- "ro e" -- sten -- "to a" tor -- "to e" pur vo -- le -- te,
+		ch’io mo -- "ro e" sten -- "to a" tor -- "to e" pur vo -- le -- te,
 		
 		\set stanza = #"1-3. "
-		io gri -- do, io gri "do e" nel sen -- te -- te, io
-		gri -- "do e" nel sen -- te -- te:
+		io gri -- do, io gri "do e" n’ol sen -- te -- te, io
+		gri -- "do e" n’ol sen -- te -- te:
 		
 		\set stanza = #"1-4. "
-		‘Ac -- qua, ma -- don -- "na, al" fo -- co, ac -- qua, ma -- don -- "na, al" 
+		“Ac -- qua, ma -- don -- "na, al" fo -- co, ac -- qua, ma -- don -- "na, al" 
 		fo -- co ch’io mi sen -- to mo -- ri -- re a po -- "co a" po -- co, ac --
-			co.’
+			co.”
 	}
 	\addlyrics {
 		\set stanza = #"2. "
 		Vo -- "stra al" -- tie -- "ra   bel" -- tà, vo -- "stra al" -- tie -- ra bel -- tà, __ _ _
-		so -- "la in" -- fi -- ni -- ta, ta.
-		É cau -- sa ch’io "me ab" -- bru -- "scia, e’l" con -- sen -- te -- te.
+		so -- "la in" -- fi -- ni -- ta, ta,
+		é cau -- sa ch’io "me ab" -- bru -- "scia, e’l" con -- sen -- te -- te.
 	}
 	\addlyrics {
 		\set stanza = #"3. "
-		Or -- mai l’e sce -- ma, Or -- mai l’e sce -- ma
+		Or -- mai l’è sce -- ma, or -- mai l’è sce -- ma
 		l’af -- _ _ fan -- na -- ta vi -- ta, ta.
 		No’l cre -- "di e" con vo -- "stri oc" -- chi lo ve -- de -- te.
 	}
 	\addlyrics {
 		\set stanza = #"4. "
-		Di chie -- der -- "vie mer" -- cé, di chie -- der -- vie mer -- 
+		Di chie -- der -- "vi mer" -- cé, di chie -- der -- vi mer -- 
 		cé, __ _ _ son qua -- si ro -- co, co.
 		Sol del -- la pe -- na mia pren -- de -- te gio -- co.
 
@@ -170,32 +170,32 @@ altus = {
 		\set stanza = #"1. "
 		Ma -- don -- na mia, pie -- tà, ma -- don -- na mia, pie -- tà
 		chiam’ ed a -- i -- ta,
-			-- ta, ch’io mo -- "ro e" -- sten -- "to a" tor -- "to e" pur vo -- le -- _ te,
+			-- ta, ch’io mo -- "ro e" sten -- "to a" tor -- "to e" pur vo -- le -- _ te,
 			
 		\set stanza = #"1-3. "
-		io gri -- do, io gri "do e" nel sen -- te -- te, io
-		gri -- "do e" nel sen -- _ te -- te:
+		io gri -- do, io gri "do e" n’ol sen -- te -- te, io
+		gri -- "do e" n’ol sen -- _ te -- te:
 		
 		\set stanza = #"1-4. "
-		‘Ac -- qua, ma -- don -- "na, al" fo -- co, ac -- qua, ma -- don -- "na, al" 
+		“Ac -- qua, ma -- don -- "na, al" fo -- co, ac -- qua, ma -- don -- "na, al" 
 		fo -- co ch’io mi sen -- to mo -- ri -- re a po -- "co a" po -- co, ac -- qua, ma --
-			co.’
+			co.”
 	}
 	\addlyrics {
 		\set stanza = #"2. "
 		Vo -- "stra al" -- tie -- ra bel -- tà, vo -- "stra al" -- tie -- ra bel -- tà,
-		so -- "la in" -- fi -- ni -- ta, ta.
-		É cau -- sa ch’io "me ab" -- bru -- "scia, e’l" con -- sen -- te -- _ te.
+		so -- "la in" -- fi -- ni -- ta, ta,
+		é cau -- sa ch’io "me ab" -- bru -- "scia, e’l" con -- sen -- te -- _ te.
 	}
 	\addlyrics {
 		\set stanza = #"3. "
-		Or -- mai l’e sce -- _ ma, or -- mai l’e sce -- ma
+		Or -- mai l’e sce -- _ ma, or -- mai l’è sce -- ma
 		l’af -- fan -- na -- ta vi -- ta, ta.
 		No’l cre -- "di e" con vo -- "stri oc" -- chi lo ve -- de -- _ te.
 	}
 	\addlyrics {
 		\set stanza = #"4. "
-		Di chie -- der -- vie mer -- cé, di chie -- der -- vie mer -- 
+		Di chie -- der -- vi mer -- cé, di chie -- der -- vi mer -- 
 		cé, son qua -- si ro -- co, co.
 		Sol del -- la pe -- na mia pren -- de -- te gio -- _ co.
 
@@ -235,32 +235,32 @@ tenor = {
 		\set stanza = #"1. "
 		Ma -- don -- na mia, pie -- tà, ma -- don -- na mia, pie -- tà
 		chiam’ ed a -- i -- ta,
-			-- ta, ch’io mo -- "ro e" -- sten -- "to a" tor -- "to e" pur vo -- le -- te, 
+			-- ta, ch’io mo -- "ro e" sten -- "to a" tor -- "to e" pur vo -- le -- te, 
 		
 		\set stanza = #"1-3. "
-		io gri -- do, io gri "do e" nel sen -- te -- te, io
-		gri -- "do e" nel sen -- te -- te: 
+		io gri -- do, io gri "do e" n’ol sen -- te -- te, io
+		gri -- "do e" n’ol sen -- te -- te: 
 		
 		\set stanza = #"1-4. "
-		‘Ac -- qua, ma -- don -- "na, al" fo -- co, al 
+		“Ac -- qua, ma -- don -- "na, al" fo -- co, al 
 		fo -- co ch’io mi sen -- to mo -- ri -- re a po -- "co a" po -- co,
-			co.’
+			co.”
 	}
 	\addlyrics {
 		\set stanza = #"2. "
 		Vo -- "stra al" -- tie -- ra bel -- tà, vo -- "stra al" -- tie -- ra bel -- tà,
-		so -- "la in" -- fi -- ni -- ta, ta.
-		É cau -- sa ch’io "me ab" -- bru -- "scia, e’l" con -- sen -- te -- te.
+		so -- "la in" -- fi -- ni -- ta, ta,
+		é cau -- sa ch’io "me ab" -- bru -- "scia, e’l" con -- sen -- te -- te.
 	}
 	\addlyrics {
 		\set stanza = #"3. "
-		Or -- mai l’e sce -- _ ma, or -- mai l’e sce -- ma
+		Or -- mai l’e sce -- _ ma, or -- mai l’è sce -- ma
 		l’af -- fan -- na -- ta vi -- ta, ta.
 		No’l cre -- "di e" con vo -- "stri oc" -- chi lo ve -- de -- te.
 	}
 	\addlyrics {
 		\set stanza = #"4. "
-		Di chie -- der -- vie mer -- cé, di chie -- der -- vie mer -- 
+		Di chie -- der -- vi mer -- cé, di chie -- der -- vi mer -- 
 		cé, son qua -- si ro -- co, co.
 		Sol del -- la pe -- na mia pren -- de -- te gio -- co.
 
@@ -299,32 +299,32 @@ bassus = {
 		\set stanza = #"1. "
 		Ma -- don -- na mia, pie -- tà, ma -- don -- na mia, pie -- tà
 		chiam’ ed a -- i -- ta,
-			-- ta, ch’io mo -- "ro e" -- sten -- "to a" tor -- "to e" pur vo -- le -- te, 
+			-- ta, ch’io mo -- "ro e" sten -- "to a" tor -- "to e" pur vo -- le -- te, 
 		
 		\set stanza = #"1-3. "
-		io gri -- do, io gri "do e" nel sen -- te -- te, io
-		gri -- "do e" nel sen -- te -- te: 
+		io gri -- do, io gri "do e" n’ol sen -- te -- te, io
+		gri -- "do e" n’ol sen -- te -- te: 
 		
 		\set stanza = #"1-4. "
-		‘Ac -- qua, ma -- don -- "na, al" fo -- co, ac -- qua, ma -- don -- "na, al" 
+		“Ac -- qua, ma -- don -- "na, al" fo -- co, ac -- qua, ma -- don -- "na, al" 
 		fo -- co ch’io mi sen -- to mo -- ri -- re a po -- "co a" po -- co, ac -- qua, ma --
-			co.’
+			co.”
 	}
 	\addlyrics {
 		\set stanza = #"2. "
 		Vo -- "stra al" -- tie -- ra bel -- tà, vo -- "stra al" -- tie -- ra bel -- tà,
-		so -- "la in" -- fi -- ni -- ta, ta.
-		É cau -- sa ch’io "me ab" -- bru -- "scia, e’l" con -- sen -- te -- te.
+		so -- "la in" -- fi -- ni -- ta, ta,
+		é cau -- sa ch’io "me ab" -- bru -- "scia, e’l" con -- sen -- te -- te.
 	}
 	\addlyrics {
 		\set stanza = #"3. "
-		Or -- mai l’e sce -- _ ma, or -- mai l’e sce -- ma
+		Or -- mai l’e sce -- _ ma, or -- mai l’è sce -- ma
 		l’af -- fan -- na -- ta vi -- ta, ta.
 		No’l cre -- "di e" con vo -- "stri oc" -- chi lo ve -- de -- te.
 	}
 	\addlyrics {
 		\set stanza = #"4. "
-		Di chie -- der -- vie mer -- cé, di chie -- der -- vie mer -- 
+		Di chie -- der -- vi mer -- cé, di chie -- der -- vi mer -- 
 		cé, son qua -- si ro -- co, co.
 		Sol del -- la pe -- na mia pren -- de -- te gio -- co.
 
