@@ -97,6 +97,9 @@ cantus = \new Voice {
 		c2. b8 a e'4. e8 a,4 r c c c a gis \ficta gis a2. b!4 bes2 a a4 d b2 b4 c ~ \break
 		c8 d e d c a c2 b8 a b c16 d e4. e8 e,4 b' c a2 a R1 \break
 		
+		r2 b4. c8 d c b4. e,8 a2 gis4 a2. b4 b e2 d4 c4. b16 a e'4 d c2 \break
+		R1 R R e,2 e e4 fis g8 f! g e a2. e4 ~ \break
+		g fis g2 r4 e'2 c e d4 c2. b8 a d\breve d1 \showBarLine \bar "|."
 	}
 	\addlyrics {
 		O sa -- crum con -- vi -- _ _ _ vi -- 
@@ -106,6 +109,9 @@ cantus = \new Voice {
 		me -- mo -- _ _ _ ri -- a pas -- si -- o -- nis e -- jus, re -- co -- li -- tur me -- 
 		mo -- _ _ _ ri -- a, pas -- si -- o -- nis, pas -- si -- o -- nis e -- jus: mens im -- ple -- tur gra -- 
 		_ _ _ _ _ _ _ _ _ _ _ _ ti -- a, mens im -- ple -- tur
+		
+		gra -- _ _ _ _ _ _ ti -- a: et fu -- tu -- ræ glo -- _ _ _ ri -- a
+		no -- bis pi -- gnus da -- _ _ _ _ _ _ tur, pi -- gnus, pi -- gnus da -- _ _ _ tur.
 	}
 }
 
@@ -118,6 +124,10 @@ sextus = \new Voice {
 		c4 d es2 d4 f a2 a fis4 fis b,2 b c cis r4 a' d4. e!8 f4 d a g8 f
 		e4 f g a b2 c4 d e2 f e4 e, e2 f g1 fis2 r4 e d2
 		g g4 a4. b8 g fis e c b4. c8 d e16 f g4. f8 g4 c d c2 g4 r2
+		
+		r4 d'4. e8 d c b4. c8 d4 e1 f4 c2 g a4 d8 c16 b a2 g4 a2.
+		R1 R c,2 d4 e2. g2 a8 g a fis e4 e e'2 f
+		c2. b4 g8 fis g e a2. a2 b4 c2 c4 b b8 a b g fis2. g2 fis4 g1
 	}
 	\addlyrics {
 		O sa -- crum con -- vi -- _ _ _ vi -- um, con -- vi --
@@ -127,6 +137,10 @@ sextus = \new Voice {
 		_ ri -- a pas -- si -- o -- nis, pas -- si -- o -- nis e -- jus, re -- co -- li -- tur me -- mor -- _ _
 		_ _ _ ri -- a pas -- si -- o -- nis, pas -- si -- o -- nis e -- jus: mens im -- 
 		ple -- tur gra -- _ _ _ _ _ _ _ _ _ _ _ ti -- a mens im -- ple -- tur
+		
+		gra -- _ _ _ _ _ ri -- a et fu -- tu -- ræ glo -- _ _ _ ri -- a
+		no -- bis pi -- gnus da -- _ _ _ _ tur, pi -- gnus,
+		pi -- gnus da -- _ _ _ _ tur, pi -- gnus, pi -- gnus da -- _ _ _ _ _ _ tur.
 	}
 }
 
@@ -141,6 +155,10 @@ altus = {
 			R1 R r2 b,4 b cis2. d4 d2 cis e4 f4. f8 bes,4 bes bes a8 g a4 ~
 			a a e'1 f4 f e8 d e4. e8 d4 b b cis d d2 d1 r2 d4 e2 g4 ~
 			g g r1 g4. e8 c4 c r r8 a' f4 f e4. f8 g f e c g' f16 e d4 ~
+			
+			d d g,2 d'8 e f f e1 c2 c4 g2 g'4 f f c2. d4 e4. d16 c
+			e8 f g2 a4 g2. c,2 c4 g' e c8 b c a b4 b c2 c a2. b4
+			d2 g, c4 c b c e2 a,4 a' g e2 d d b4 a4. b16 c d2 d1
 		}
 	}
 	\addlyrics {
@@ -151,6 +169,9 @@ altus = {
 		pas -- si -- o -- nis e -- jus, re -- co -- li -- tur me -- mo -- _ _ _
 		ri -- a, me -- mo -- _ _ _ ri -- a pas -- si -- o -- nis e -- jus: mens im -- ple -- 
 		tur, mens im -- ple -- tur, im -- ple -- tur gra -- _ _ _ _ _ _ _ _ _
+		ti -- a, gra -- _ _ ti -- a: et fu -- tu -- ræ, et fu -- tu -- ræ glo -- _ _
+		_ _ _ ri -- aæ no -- bis pi -- gnus da -- _ _ _ _ tur, no -- bis pi -- gnus
+		da -- tur, no -- bis pi -- gnus da -- tur, pi -- gnus da -- tur, pi -- gnus da -- _ _ _ tur.
 	}
 }
 
