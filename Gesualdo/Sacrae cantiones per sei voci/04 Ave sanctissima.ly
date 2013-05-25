@@ -1,7 +1,7 @@
-% Copyright ©2013 Peter Hilton
+% Copyright ©2013 Peter Hilton - https://github.com/hilton
 
 \version "2.16.2"
-revision = "2"
+revision = "3"
 
 #(set-global-staff-size 15)
 
@@ -68,6 +68,7 @@ year = #(strftime "©%Y" (localtime (current-time)))
 		\Voice 
 		\override NoteHead #'style = #'baroque
 		\consists "Horizontal_bracket_engraver"
+		\consists "Ambitus_engraver"
 	}
 }
 

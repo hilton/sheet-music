@@ -1,7 +1,7 @@
-% Copyright ©2013 Peter Hilton
+% Copyright ©2013 Peter Hilton - https://github.com/hilton
 
 \version "2.16.2"
-revision = "4"
+revision = "5"
 
 #(set-global-staff-size 15.5)
 
@@ -65,6 +65,7 @@ year = #(strftime "©%Y" (localtime (current-time)))
 	\context { 
 		\Voice 
 		\override NoteHead #'style = #'baroque
+		\consists "Ambitus_engraver"
 	}
 }
 
