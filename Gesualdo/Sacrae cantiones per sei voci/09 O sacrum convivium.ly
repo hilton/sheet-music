@@ -3,7 +3,7 @@
 % TODO Change altus to treble clef after review.
 
 \version "2.16.2"
-revision = "1"
+revision = "2"
 
 #(set-global-staff-size 15.5)
 
@@ -69,7 +69,7 @@ year = #(strftime "©%Y" (localtime (current-time)))
 		\Voice 
 		\override NoteHead #'style = #'baroque
 		\consists "Horizontal_bracket_engraver"
-%		\consists "Ambitus_engraver"
+		\consists "Ambitus_engraver"
 	}
 }
 
@@ -197,13 +197,13 @@ quintus = {
 		con -- vi -- _ _ _ vi -- um, con -- vi -- _ _ _ vi -- um, 
 		in quo Chri -- _ _ _ _ stus, in quo Chri -- stus su -- mi -- tur: re -- co -- li -- tur me -- mo --
 		
-		_ _ _ ri -- a pas -- si -- o -- nis, pas -- si -- o -- nis e -- jus, re -- co -- li -- tur me -- mo -- _ _ _ _
+		_ _ _ ri -- a pas -- si -- o -- nis, pas -- si -- o -- nis e -- jus, re -- co -- li -- tur me -- mo -- _ _ _
 		ri -- a, pas -- si -- o -- nis e -- jus: mens im -- ple -- tur, im -- ple -- 
 		tur, gra -- _ _ _ _ _ _ _ _ _ ti -- a, gra -- _ _ _ _ _ _ ti -- a,
 		
 		im -- ple -- tur gra -- _ _ _ _ _ _ ti -- a: et fu -- tu -- ræ
 		glo -- _ _ _ ri -- æ no -- bis pi -- gnus da -- tur, no -- bis pi -- gnus
-		da -- tur, no -- bis pi -- gnus da -- _ _ _ tur. __
+		da -- tur, no -- bis pi -- gnus da -- _ _ _ _ tur. __
 	}
 }
 
