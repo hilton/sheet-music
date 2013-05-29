@@ -3,7 +3,7 @@
 % TODO Change altus to treble clef after review.
 
 \version "2.16.2"
-revision = "2"
+revision = "3"
 
 #(set-global-staff-size 15.5)
 
@@ -103,7 +103,7 @@ cantus = \new Voice {
 	}
 	\addlyrics {
 		O sa -- crum con -- vi -- _ _ _ vi -- 
-		um, in quo Chri -- stus, in quo Chri -- _ _ _ _ stus su -- mi -- tur, su -- mi -- 
+		um in quo Chri -- stus, in quo Chri -- _ _ _ _ stus su -- mi -- tur, su -- mi -- 
 		tur, in quo Chri -- stus, in quo Chri -- stus su -- mi -- tur: re -- co -- li -- tur
 		
 		me -- mo -- _ _ _ ri -- a pas -- si -- o -- nis e -- jus, re -- co -- li -- tur me -- 
@@ -131,16 +131,16 @@ sextus = \new Voice {
 	}
 	\addlyrics {
 		O sa -- crum con -- vi -- _ _ _ vi -- um, con -- vi --
-		_ _ _ vi -- um, O sa -- crum con -- vi -- vi -- um in quo Chri -- stus, in quo Chri -- stus su -- mi -- 
+		_ _ _ vi -- um, o sa -- crum con -- vi -- vi -- um in quo Chri -- stus, in quo Chri -- stus su -- mi -- 
 		tur, in quo Chri -- _ _ _ _ stus su -- mi -- tur: re -- co -- li -- tur me -- mo -- _ _
 		
-		_ ri -- a pas -- si -- o -- nis, pas -- si -- o -- nis e -- jus, re -- co -- li -- tur me -- mor -- _ _
+		_ ri -- a pas -- si -- o -- nis, pas -- si -- o -- nis e -- jus, re -- co -- li -- tur me -- mo -- _ _
 		_ _ _ ri -- a pas -- si -- o -- nis, pas -- si -- o -- nis e -- jus: mens im -- 
 		ple -- tur gra -- _ _ _ _ _ _ _ _ _ _ _ ti -- a mens im -- ple -- tur
 		
-		gra -- _ _ _ _ _ ri -- a et fu -- tu -- ræ glo -- _ _ _ ri -- a
-		no -- bis pi -- gnus da -- _ _ _ _ tur, pi -- gnus,
-		pi -- gnus da -- _ _ _ _ tur, pi -- gnus, pi -- gnus da -- _ _ _ _ _ _ tur.
+		gra -- _ _ _ _ _ ri -- a et fu -- tu -- ræ glo -- _ _ _ ri -- æ
+		no -- bis pi -- gnus da -- _ _ _ _ tur, no -- _
+		bis, no -- _ _ _ _ bis pi -- gnus da -- tur, no -- _ _ _ bis pi -- gnus da -- tur.
 	}
 }
 
@@ -162,7 +162,7 @@ altus = {
 		}
 	}
 	\addlyrics {
-		O sa -- crum, O sa -- crum con -- vi -- _ _ 
+		O sa -- crum, o sa -- crum con -- vi -- _ _ 
 		_ vi -- um, con -- vi -- _ _ _ vi -- um in quo Chri -- _ _ _ _ stus, in quo Chri -- stus su -- 
 		mi -- tur, su -- mi -- tur: re -- co -- li -- tur me -- mo -- _ _ _ ri -- a
 		
@@ -170,7 +170,7 @@ altus = {
 		ri -- a, me -- mo -- _ _ _ ri -- a pas -- si -- o -- nis e -- jus: mens im -- ple -- 
 		tur, mens im -- ple -- tur, im -- ple -- tur gra -- _ _ _ _ _ _ _ _ _
 		ti -- a, gra -- _ _ ti -- a: et fu -- tu -- ræ, et fu -- tu -- ræ glo -- _ _
-		_ _ _ ri -- aæ no -- bis pi -- gnus da -- _ _ _ _ tur, no -- bis pi -- gnus
+		_ _ _ ri -- æ no -- bis pi -- gnus da -- _ _ _ _ tur, no -- bis pi -- gnus
 		da -- tur, no -- bis pi -- gnus da -- tur, pi -- gnus da -- tur, pi -- gnus da -- _ _ _ tur.
 	}
 }
@@ -194,7 +194,7 @@ quintus = {
 	}
 	\addlyrics {
 		O sa -- crum con -- vi -- _ _ _ vi -- um, 
-		con -- vi -- _ _ _ vi -- um, con -- vi -- _ _ _ vi -- um, 
+		con -- vi -- _ _ _ vi -- um, con -- vi -- _ _ _ vi -- um 
 		in quo Chri -- _ _ _ _ stus, in quo Chri -- stus su -- mi -- tur: re -- co -- li -- tur me -- mo --
 		
 		_ _ _ ri -- a pas -- si -- o -- nis, pas -- si -- o -- nis e -- jus, re -- co -- li -- tur me -- mo -- _ _ _
@@ -226,7 +226,7 @@ tenor = {
 	}
 	\addlyrics {
 		O sa -- crum con -- vi -- _ _ _ vi -- um, con -- vi -- _ _ _ 
-		vi -- um, O sa -- crum con -- vi -- vi -- um in quo Chri -- stus, in quo Chri -- stus su -- mi -- tur,
+		vi -- um, o sa -- crum con -- vi -- vi -- um in quo Chri -- stus, in quo Chri -- stus su -- mi -- tur,
 		in quo Chri -- _ _ _ _ stus su -- mi -- tur: re -- co -- li -- tur me -- mo -- _ _ _ _
 	
 		a, re -- co -- li -- tur me -- mo -- _ _
@@ -256,7 +256,7 @@ bassus = {
 		}
 	}
 	\addlyrics {
-		O sa -- crum con -- vi -- _ _ _ vi -- um, in quo Chri -- stus, 
+		O sa -- crum con -- vi -- _ _ _ vi -- um in quo Chri -- stus, 
 		in quo Chri -- stus, in quo Chri -- stus su -- mi -- tur, su -- 
 		mi -- tur, in quo __ _ Chri -- _ _ _ _ stus, re -- co -- li -- tur, re -- co -- li -- 
 		
