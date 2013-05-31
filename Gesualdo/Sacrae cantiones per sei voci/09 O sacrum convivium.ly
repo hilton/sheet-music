@@ -3,7 +3,7 @@
 % TODO Change altus to treble clef after review.
 
 \version "2.16.2"
-revision = "3"
+revision = "4"
 
 #(set-global-staff-size 15.5)
 
@@ -139,8 +139,8 @@ sextus = \new Voice {
 		ple -- tur gra -- _ _ _ _ _ _ _ _ _ _ _ ti -- a mens im -- ple -- tur
 		
 		gra -- _ _ _ _ _ ri -- a et fu -- tu -- ræ glo -- _ _ _ ri -- æ
-		no -- bis pi -- gnus da -- _ _ _ _ tur, no -- _
-		bis, no -- _ _ _ _ bis pi -- gnus da -- tur, no -- _ _ _ bis pi -- gnus da -- tur.
+		no -- bis pi -- gnus da -- _ _ _ _ tur, no --
+		bis pi -- gnus da -- _ _ _ _ tur, no -- bis pi -- gnus da -- _ _ _ _ _ _ tur.
 	}
 }
 
