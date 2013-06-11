@@ -1,14 +1,12 @@
 % Copyright ©2013 Peter Hilton - https://github.com/hilton
 
 \version "2.16.2"
-revision = "4"
+revision = "5"
 
-#(set-global-staff-size 15.5)
-#(set-accidental-style 'forget)
-
+#(set-global-staff-size 15)
 
 \paper {
-	#(define fonts (make-pango-font-tree "Century Schoolbook L" "Source Sans Pro" "Luxi Mono" (/ 15.5 20)))
+	#(define fonts (make-pango-font-tree "Century Schoolbook L" "Source Sans Pro" "Luxi Mono" (/ 15 20)))
 	annotate-spacing = ##f
 	two-sided = ##t
 	inner-margin = 15\mm
@@ -79,6 +77,7 @@ global= {
 	\tempo 2 = 90
 	\time 2/2
 	\set Staff.midiInstrument = "choir aahs"
+	\accidentalStyle "forget"
 }
 
 showBarLine = { \once \override Score.BarLine #'transparent = ##f }
@@ -88,10 +87,10 @@ ficta = { \once \set suggestAccidentals = ##t }
 cantus = \new Voice {
 	\transpose c c \relative c' {
 		e2. e'4. e8 c4 a8 b c a d4 c8 b c2 b r r4 b2 e4 ~
-		e8 e c4 d4. c16 d e2 a, r4 e b'4. b8 cis4 d4. cis16 d e4 a,2 r
+		e8 e c4 d4. c16 d e2 a, r4 e b'4. b8 cis4 d4. cis!16 d e4 a,2 r
 		
 		g8 a bes g c a \once \override HorizontalBracket #'direction = #UP d2\startGroup c\stopGroup b4 c2 r r4 c8 bes a g f4 e2. d4
-		d2. d4 e4. f8 g a b2 a g4 g2 g4 d a'4. a8 g4 d8 e fis d g2 \ficta fis4
+		d2. d4 e4. f8 g a b2 a g4 g2 g4 d a'4. a8 g4 d8 e fis d g2 \ficta fis!4
 		g1 r4 b e4. e8 a,2 r a4. b8 c a c2 a g8 f e d c4 e g \break
 		
 		g2 gis4 a b2 b r r4 c8 b a g f4 a a a2 a1 d2 ~  \break
@@ -100,7 +99,7 @@ cantus = \new Voice {
 		
 		a4. a8 d,2 r d' bes f ~ f1 R1 d'
 		g,2 a g g2. g4 g2. f4 g2. gis4 gis2 a r
-		R1 R r2 e'1 cis4 \ficta c c2 b ~ b1 \showBarLine \bar "|."
+		R1 R r2 e'1 cis4 c! \ficta c!2 b ~ b1 \showBarLine \bar "|."
 	}
 	\addlyrics {
 		O O -- ri -- ens, splen -- _ _ _ _ _ _ _ dor, O O -- 
@@ -127,14 +126,14 @@ sextus = \new Voice {
 		
 		d8 c bes4 a2 R1 r4 a8 b c a d2 c4 c8 bes a4 r a a2
 		a d,8 e f g a4 c g4. g8 e2 r r d8 c d e f2 d r a'
-		g4 f! e4. d8 c d e fis g4 g fis fis4. e16 fis g4 e2 e8 f! g e a4. g8 f e16 d e4 c'4. b8 a g16 f e8 e
+		g4 f! e4. d8 c d e fis g4 g fis fis4. e16 \ficta fis! g4 e2 e8 f! g e a4. g8 f e16 d e4 c'4. b8 a g16 f e8 e
 		
 		e2 f4. e8 e2 e c'4. b8 a4. g8 f4. e8 d2 d4 d2 d4 r a'2 f4
 		g2 d r4 g8 g d'4. d8 g,2 r R1 d4 d g4. g8 g2 r4 b8 b
 		a4. a8 a2 R1 r2 c4 c b4. g8 g2 R1 r2 r4 g ~
 		
 		g4 fis g4. g8 e4 e d2 d4 d d2. d4 d2 r c'4 c bes4. bes8 g2
-		e d es r es4 \ficta es2 \ficta es4 \ficta es d es2 es f4 e! e2 r4 e
+		e d es r es4 \ficta es2 \ficta es4 \ficta es d \ficta es2 \ficta es f4 e! \ficta e!2 r4 e
 		a2 a r4 a c2 b c4 d d8 c b a gis4 e e c e2 e1
 	}
 	\addlyrics {
@@ -209,7 +208,7 @@ quintus = {
 			
 			d'2 b a4 a2 g f4 f f2 f4 f2 g4 g c4. c8 d2 r
 			r4 g, f2 es4 g g4. g8 g2. g4 bes2. b!4 b1 a
-			a2 fis4 \ficta f f2 e ~ e1 ~ e ~ e ~ e
+			a2 fis4 f! \ficta f!2 e ~ e1 ~ e ~ e ~ e
 		}
 	}
 	\addlyrics {
@@ -236,7 +235,7 @@ tenor = {
 			R1 R r2 e e'4. e8 c2 b8 c d b e4. d16 c
 			b8 a16 b c2 b4 c2 r c,4 g'4. g8 e2 a c4. c8 a4 r d,
 			
-			d'4. d8 c4 a8 g16 a b4 e r2 r4 e,4. d16 e f4 e2 r r r4 f8 g
+			d'4. d8 c4 a8 g16 a \ficta b!4 e r2 r4 e,4. d16 e f4 e2 r r r4 f8 g
 			a b c2 b4 c b8 a g fis g2 fis8 e b'2 g4 g g2 d r r d
 			g4. g8 c,4 c'4. b16 cis d2 \ficta cis4 d2 b r e,4 e'4. e8 d4 r g,4. fis16 g a2 g4 ~
 			
@@ -245,7 +244,7 @@ tenor = {
 			a'4. a8 a2 r f e2. d8 c g'1 e4 a2 g fis4 d d ~
 			
 			d4 d d2 R1 R r2 r4 d e2. f4 f e8 d d'2
-			c4 c a2 bes4 es, es4. es8 es1 R1 r2 r4 d' cis \ficta c c2
+			c4 c a2 bes4 es, es4. es8 es1 R1 r2 r4 d' cis c! \ficta c!2
 			e,2 a ~ a1 b4 d d8 c b a g4 g8 g gis4 a a2 b ~ b1
 		}
 	}

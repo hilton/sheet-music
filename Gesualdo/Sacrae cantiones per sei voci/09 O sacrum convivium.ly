@@ -3,7 +3,7 @@
 % TODO Change altus to treble clef after review.
 
 \version "2.16.2"
-revision = "4"
+revision = "5"
 
 #(set-global-staff-size 15.5)
 
@@ -118,8 +118,8 @@ cantus = \new Voice {
 sextus = \new Voice {
 	\transpose c c \relative c' {
 		R1 R r4 fis1 ~ fis4 b,2. e r4 g fis e8 d c4 c b2 r4 c2 d4.
-		e16 f g4 b e2 e,4 fis g2 e4 a e' f e e, e ~ e e4 g2 d4 f2 e4 e2. g4
-		a2 r1 e4 c d8 e f g a4 e g2. fis4 b,2 r4 e2 f4. f8 d4 r g f e8 d
+		e16 f g4 b e2 e,4 fis g2 e4 a e' \ficta f! e e, e ~ e e4 g2 d4 f2 e4 e2. g4
+		a2 r1 e4 c d8 e f g a4 e g2. fis4 b,2 r4 e2 \ficta f!4. f8 d4 r g f e8 d
 		
 		c4 d es2 d4 f a2 a fis4 fis b,2 b c cis r4 a' d4. e!8 f4 d a g8 f
 		e4 f g a b2 c4 d e2 f e4 e, e2 f g1 fis2 r4 e d2
@@ -247,7 +247,7 @@ bassus = {
 			d2 a' e f4 g g,8 a b c d4 e2 e4 e4. e8 e2. r4 c1 c4. c8
 			
 			c4 c' bes a8 g d4 d d1 a4 a a a2. d2 a a'4 a4. bes8 g2. f4 f
-			e8 d c4. d8 e2. f4 g a a, bes d! e2. d d4 e2 a, a4 a'2 a
+			e8 d c4. d8 e2. f4 g a a, bes d! \ficta e!2. d d4 e2 a, a4 a'2 a
 			d d,4. d8 e4 e2 e4. f8 g f e d c4. d8 e2 f4. g8 c c,16 d e8 f g a
 			
 			b8 c d c b4. a8 g2 g, a4 b c8 d e4. a,8 c d e4. e8 f4 g g a2 a, r4

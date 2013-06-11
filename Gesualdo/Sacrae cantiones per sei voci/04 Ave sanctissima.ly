@@ -1,7 +1,7 @@
 % Copyright ©2013 Peter Hilton - https://github.com/hilton
 
 \version "2.16.2"
-revision = "3"
+revision = "4"
 
 #(set-global-staff-size 15)
 
@@ -88,7 +88,7 @@ ficta = { \once \set suggestAccidentals = ##t }
 cantus = \new Voice {
 	\transpose c c \relative c'' {
 		d1 d2 r4 g,2 g g4 es'4. \ficta es8 c2. c4 cis2 d r1 r2 g,2. bes4 \break
-		a4. bes8 c bes a g f1 c'2 r r4 c2 bes4 a c2 bes8 a g2. fis4 g2 r \break
+		a4. bes8 c bes a g \ficta f!1 c'2 r r4 c2 bes4 a c2 bes8 a g2. fis4 g2 r \break
 		R1 c4 a g c4. bes8 a g f2 f r1 d'2 d es4 \ficta es d2. c4 \break
 		
 		c4 c8 c d2 d c4 a d2. d4 bes8 a g f es2 c r1 r es'2 \break
@@ -160,11 +160,11 @@ altus = {
 		\transpose c c \relative c' {
 			\clef "treble_8"
 			f1 f2 r4 b,2 \ficta b2 d4 g4. g8 es2. e!4 e2 fis r1 r2 r4 g, bes g4 ~
-			g fis4 g2 d'2. f2 e4. f8 g2 f8 e f2 f es4 d2 c4 d1 f2
+			g fis4 g2 d'2. f2 e4. \ficta f!8 g2 f8 e f2 f es4 d2 c4 d1 f2
 			R1 f4 f g g e2. d8 c d4. c8 d e f2 f4 r2 d4 d8 d g4 c, f f8 f g4 es
 			
-			es4 c f f d8 e f g a2. g2 fis4 g2 r r4 a2 f g4 g f4. e8 d2 c4
-			d g e f f d8 e f2 f4 f2 e4 a,8 bes16 c d4 g, a e' e c g'2 f e4
+			es4 c f f d8 e f g a2. g2 fis4 g2 r r4 a2 f! g4 g f4. e8 d2 c4
+			d g e f f d8 e f2 f4 f2 e4 a,8 \ficta bes!16 c d4 g, a e' e c g'2 f e4
 			f8 e d c bes4 d8 d4 d8 bes4 a a a4. a8 g4 g'2 d8 bes bes4 bes c2 g' f4 d e d8 c d4 c r2
 			
 			r2 r4 g'4 c, c f2 f, f'4 e8 d g2 f r f d f4 d2 cis4 \ficta cis2
@@ -202,7 +202,7 @@ quintus = {
 			a c d g, c2 c1 cis4 d a2 a4 d2 d4 d d2 bes a4 bes2 r
 			
 			g4 g8 g d'4. c16 bes a8 g a bes c2 d1 r4 bes4 bes8 bes c4 a2 c bes4 bes2 bes4 g2 g
-			R1 d'2 c f,4. g8 a2 f4 f c'2 c4 a2 b4 c2. bes8 a
+			R1 d'2 c f,4. g8 a2 f4 f c'2 c4 a2 b4 c2. bes!8 a
 			c4 a d4. d8 d,1 a'8 bes c2 bes8 a bes2 g1 ~ g2 r a bes4 g d' c8 bes
 			
 			c4 f, bes g a4. g8 f4 bes2 a4 d,2. d4 f d e2 a4 a f2. g4 f e e2
@@ -278,14 +278,14 @@ bassus = {
 			d4 d2 d4 d2 a' R1 d,2 d4 bes2 bes4 as4. bes8 g2. f4 bes2 bes4 bes
 			
 			a2 g' f e a a d\breve bes
-			r2 bes a a8 bes a g ~ g4 f4 r d g, g a bes2 c1 d4 g,4. g8
+			r2 bes a a8 bes a g4. f4 r d g, g a bes2 c1 d4 g,4. g8
 			g1 bes8 a g2 a8 bes c2 bes1 ~ bes2 as2. g2 g4 g'2 d2. e4
 			
 			f4 bes8 a g f es2 d r r4 g2 f4 e d2 c bes1 a r4 a
 			a'2 g4 f2 d4 e2 a, r1 r b4 \ficta b8 \ficta b bes!2. bes4 g g g'2
-			g1 r r r2 g, a bes4 c d bes' g2 ~ g r4 d g, d' c a ~
+			g1 r r r2 g, a bes4 c d bes'! g2 ~ g r4 d g, d' c a2
 			
-			a4 g8 a bes2 bes r1 r r4 g c2 d
+			 g8 a bes2 bes r1 r r4 g c2 d
 			g4 a a2. g4 g8 a g f e gis,4. a4 d2 d2. g,1
 		}
 	}

@@ -1,7 +1,7 @@
 % Copyright ©2013 Peter Hilton - https://github.com/hilton
 
 \version "2.16.2"
-revision = "5"
+revision = "6"
 
 #(set-global-staff-size 15.5)
 
@@ -13,7 +13,7 @@ revision = "5"
 	annotate-spacing = ##f
 	top-markup-spacing = #'( (basic-distance . 4) )
 	markup-system-spacing = #'( (padding . 5) )
-	system-system-spacing = #'( (basic-distance . 20) (stretchability . 100) )
+	system-system-spacing = #'( (basic-distance . 15) (stretchability . 100) )
 	ragged-last-bottom = ##t
 } 
 
@@ -71,7 +71,7 @@ year = #(strftime "©%Y" (localtime (current-time)))
 
 
 global= { 
-	\key d \major
+	\key c \major
 	\tempo 2 = 45
 	\time 2/2
 	\set Staff.midiInstrument = "choir aahs"
@@ -84,7 +84,7 @@ ficta = { \once \set suggestAccidentals = ##t }
 
 
 cantus = \new Voice {
-	\transpose c d \relative c'' {	
+	\transpose c c \relative c'' {	
 		R1 r2 a1 f2 a c2. d4 c2
 		bes a2. \ficta b!4 c2. c4 a2 r4 a b c2 b4 a2~
 		
@@ -119,7 +119,7 @@ cantus = \new Voice {
 }
 
 sextus = \new Voice {
-	\transpose c d \relative c' {
+	\transpose c c \relative c' {
 		R1 r2 d c2 d4 f4. e8 f g a2. f4 g f
 		d1 d2 e4 f2 e4 d d2 fis4 g1 f!2
 		
@@ -132,7 +132,7 @@ sextus = \new Voice {
 		a e'2 d4 e2 d2. c4 g'1 f r2
 		
 		R1 e2 fis4 g a g8 \ficta fis e2 e e
-		d4 c8 b a g16 a bes2 a a'4 f f e fis g2 c,4 f
+		d4 c8 b a g16 a bes2 a a'4 f f e fis g2 c,4 f!
 		g e2 c b4 e2 e d4 e2 d4 f e2 d cis4 d1
 	}
 	\addlyrics {
@@ -155,7 +155,7 @@ sextus = \new Voice {
 
 altus = {
 	\new Voice = "altus" {
-		\transpose c d \relative c' {
+		\transpose c c \relative c' {
 			\clef "treble_8"
 			r2 a1 f2 a2. c2 d4 c d8 e f4 bes,2 a4
 			bes a8 g a4 a f2 c'1 r4 f d2. e2 e4 c d
@@ -193,7 +193,7 @@ altus = {
 
 quintus = {
 	\new Voice = "quintus" {
-		\transpose c d \relative c' {
+		\transpose c c \relative c' {
 			\clef "treble_8"
 			R1 r r r r
 			r r r2 a1 g a2
@@ -230,7 +230,7 @@ quintus = {
 
 tenor = {
 	\new Voice = "tenor" {
-		\transpose c d \relative c {
+		\transpose c c \relative c {
 			\clef "bass"
 			R1 r r r r
 			r2 d1 c d2 R1 r2 r4 f4 ~
@@ -265,7 +265,7 @@ tenor = {
 
 bassus = {
 	\new Voice = "bassus" {
-		\transpose c d \relative c {
+		\transpose c c \relative c {
 			\clef "bass"
 			d1 c2 d f4. e8 f g a2 f4 f2. d4 e f
 			bes,8 c d e f4. g8 a4 g8 f g4 a g2 f4 d2. g4 c,4. d8 e4 f d~
@@ -309,8 +309,8 @@ bassus = {
 			\set Score.proportionalNotationDuration = #(ly:make-moment 1 8)
 			\new Staff \with { instrumentName = #"CANTUS"  shortInstrumentName = #"C " } << \global \cantus >> 
 			\new Staff \with { instrumentName = #"SEXTUS"  shortInstrumentName = #"S " } << \global \sextus >> 
-			\new Staff \with { instrumentName = #"QUINTUS" shortInstrumentName = #"Q " } << \global \quintus >>
 			\new Staff \with { instrumentName = #"ALTUS"   shortInstrumentName = #"A " } << \global \altus >>
+			\new Staff \with { instrumentName = #"QUINTUS" shortInstrumentName = #"Q " } << \global \quintus >>
 			\new Staff \with { instrumentName = #"TENOR"   shortInstrumentName = #"T " } << \global \tenor >>
 			\new Staff \with { instrumentName = #"BASSUS"  shortInstrumentName = #"B " } << \global \bassus >>
 		>> 
