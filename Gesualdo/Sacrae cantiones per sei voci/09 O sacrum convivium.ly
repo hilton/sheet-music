@@ -1,7 +1,5 @@
 % Copyright ©2013 Peter Hilton - https://github.com/hilton
 
-% TODO Change altus to treble clef after review.
-
 \version "2.16.2"
 revision = "5"
 
@@ -15,7 +13,7 @@ revision = "5"
 	outer-margin = 15\mm
 	top-markup-spacing = #'( (basic-distance . 4) )
 	markup-system-spacing = #'( (padding . 5) )
-	system-system-spacing = #'( (basic-distance . 20) (stretchability . 100) )
+	system-system-spacing = #'( (basic-distance . 15) (stretchability . 100) )
   	ragged-bottom = ##f
 	ragged-last-bottom = ##t
 } 
@@ -147,7 +145,6 @@ sextus = \new Voice {
 altus = {
 	\new Voice = "altus" {
 		\transpose c c \relative c' {
-			\clef "treble_8"
 			R1 R R d2 g,1 b2 r e2 ~ e g,2 g'4 g e d8 c
 			f4 f e c d8 c16 b e2 a,4 e'2 r1 c2 b4 g8 a b c d4 g, c2 b4 a d2 e2
 			c4 d2 e4 d e2 R1 r2 e, e'4. e8 c4 a' a g8 f g4 g f1
