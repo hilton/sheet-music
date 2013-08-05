@@ -318,5 +318,6 @@ bassus = {
 			\new Staff \with { instrumentName = #"BASSUS"  shortInstrumentName = #"B " } << \global \bassus >>
 		>> 
 	>>
-%	\midi { }
+	\layout { }
+	\midi { }
 }
