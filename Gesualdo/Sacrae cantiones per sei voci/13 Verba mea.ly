@@ -1,7 +1,7 @@
 % Copyright ©2013 Peter Hilton - https://github.com/hilton
 
 \version "2.16.2"
-revision = "2"
+revision = "3"
 
 #(set-global-staff-size 15)
 
@@ -150,9 +150,9 @@ sextus = \new Voice {
 
 altus = {
 	\new Voice = "altus" {
-		\relative c {
+		\relative c' {
 			\clef "treble_8"
-			R1 r4 e2 c4 e2 g4 g2 e4 c' a d4. d8 b2
+			R1 r4 e2 c4 a2 g4 g2 e4 c' a d4. d8 b2
 			
 			c8 b a b c d e2 d4 e c2 g4 c f2 e4 c b c4. c8 b2 ~
 			b e,4. e8 g4 b8 c d c b a b4 c b e2 d8 c b4 c g' a2 a,4
