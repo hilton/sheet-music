@@ -1,7 +1,7 @@
 % Copyright ©2013 Peter Hilton - https://github.com/hilton
 
 \version "2.16.2"
-revision = "1"
+revision = "2"
 
 #(set-global-staff-size 15)
 
@@ -112,11 +112,11 @@ cantus = \new Voice {
 		ne de -- re -- lin -- quas me, Do -- mi -- ne 
 		De -- us me -- _ _ _ _ us, ne de -- 
 		
-		re -- lin -- quas me, Do -- mi -- ne De -- us De -- 
+		re -- lin -- quas me, Do -- mi -- ne De -- us, De -- 
 		us me -- us, Do -- mi -- ne De -- us me -- _ _ _ _ us, 
 		et ne di -- sces -- se -- ris, et ne di -- sces -- se -- ris a
 		
-		me, et me, et ne di -- sces -- se -- ris a me;
+		me, et ne, et ne di -- sces -- se -- ris a me;
 		in -- ten -- de in ad -- ju -- to -- ri -- um me -- um,
 		in ad -- ju -- to -- ri -- um me -- um, Do -- mi -- ne De -- 
 		
@@ -153,7 +153,7 @@ sextus = \new Voice {
 		De -- us me -- us, Do -- 
 		mi -- ne De -- us me -- us, Do -- mi -- ne De -- us me -- us, et ne di -- sces -- se -- 
 		
-		ris a me, et ne di -- sces -- se -- ris a me, a me, in --
+		ris a me, et ne di -- sces -- se -- ris a me, a me; in --
 		ten -- de, in -- ten -- de in ad -- ju -- to -- ri -- um me -- 
 		um, Do -- mi -- ne De -- us sa -- lu -- tis me -- æ, Do -- mi -- ne,
 		
@@ -238,7 +238,7 @@ quintus = {
 		um, Do -- mi -- ne De -- us sa -- lu -- tis me -- æ,
 		
 		sa -- lu -- tis me -- æ, Do -- mi -- 
-		ne, Do -- mi -- ne De -- us, sa -- lu -- tis me -- _ _ _ _ æ,
+		ne, Do -- mi -- ne De -- us sa -- lu -- tis me -- _ _ _ _ æ,
 		sa -- lu -- tis me -- æ, sa -- lu -- tis me -- æ.
 	}
 }
@@ -277,9 +277,9 @@ tenor = {
 		ten -- de, in -- ten -- de in ad -- ju -- to -- ri -- um me --	um,
 		in ad -- ju -- to -- ri -- um me -- _ _ um, Do -- mi -- ne De -- 
 		
-		us, sa -- lu -- tis, sa -- lu -- tis me -- _ _ _ _ _ _
+		us sa -- lu -- tis, sa -- lu -- tis me -- _ _ _ _ _ _
 		æ, Do -- mi -- ne, Do -- mi -- ne De -- _ _ _ _ _
-		us, sa -- lu -- tis me -- æ.
+		us sa -- lu -- tis me -- æ.
 	}
 }
 
@@ -317,8 +317,8 @@ bassus = {
 		ten -- de, in -- ten -- de in ad -- ju -- to -- 
 		ri -- um me -- _ um, Do -- mi -- ne De -- us sa -- lu -- tis me -- æ,
 		
-		Do -- mi -- ne De -- us, sa -- lu -- _ _ tis me -- _ _ æ,
-		Do -- mi -- ne De -- us, sa -- lu -- tis me -- _ _ _ _ _ 
+		Do -- mi -- ne De -- us sa -- lu -- _ _ tis me -- _ _ æ,
+		Do -- mi -- ne De -- us sa -- lu -- tis me -- _ _ _ _ _ 
 		æ, sa -- lu -- tis me -- æ.
 
 	}
