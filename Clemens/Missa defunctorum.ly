@@ -1,7 +1,8 @@
 % Copyright ©2013 Peter Hilton - https://github.com/hilton
 
 \version "2.16.2"
-revision = "1"
+\pointAndClickOff
+revision = "2"
 
 #(set-global-staff-size 15)
 
@@ -47,7 +48,6 @@ year = #(strftime "©%Y" (localtime (current-time)))
 		\override BarLine #'transparent = ##t
 		\remove "Metronome_mark_engraver"
 		\override VerticalAxisGroup #'staff-staff-spacing = #'((basic-distance . 10) (stretchability . 100))
-		\override TupletNumber #'stencil = ##f 
 	}
 	\context { 
 		\StaffGroup
@@ -61,9 +61,10 @@ year = #(strftime "©%Y" (localtime (current-time)))
 }
 
 
-global= { 
+global = { 
 	\key f \major
 	\tempo 2 = 44
+	\set Score.barNumberVisibility = #all-bar-numbers-visible
 	\set Staff.midiInstrument = "choir aahs"
 	\accidentalStyle "forget"
 }
@@ -77,14 +78,13 @@ ficta = { \once \set suggestAccidentals = ##t }
 soprano = \new Voice {
 	\relative c' {
 		\once \override Staff.TimeSignature #'stencil = ##f
-		\set Score.barNumberVisibility = #all-bar-numbers-visible
 		\cadenzaOn s1 s4 \cadenzaOff \showBarLine \bar "|" \time 2/2
 		f2. g4 a bes c4. bes8 a4 c bes a2
 		g8 f e4 d g2 f4. e8 \break d4 c d e f a4. g8 f4 e8 d f2 e4 f2 r4 f2
 		f4 e2 e4 f8 g a bes a4 ~ \break a g4 f g4. f8 f2 e8 d e2 f4 c'4. bes8 a2 g8 f
 		
 		e4 c'4. bes8 a4 g f2 e4 \break f a a c bes a a g8 f g2. f4 a g f2.
-		g4. f8 f2 e4 f2 \fermata \showBarLine \bar "|."
+		g4. f8 f2 e4 f2 \fermata \showBarLine \bar "||"
 	}
 	\addlyrics {
 		Ae -- _ _ _ _ _ _ _ ter -- _
@@ -268,6 +268,7 @@ bassB = {
 %	\midi { }
 }
 
+\markup { Repeat \italic { Requiem aeternam dona eis Domine, et lux perpetua luceat eis. }}
 
 \pageBreak
 
@@ -478,7 +479,7 @@ sopranoE = \new Voice {
 	\relative c' {
 		\set Score.currentBarNumber = #18
 		f1 g2 a a g bes1. a1 g f2 f2. a4 g f2 e4
-		f1 bes a g f2. a4 g f4. e16 d e4 f1 \showBarLine \bar "|."
+		f1 bes a g f2. a4 g f4. e16 d e4 f1 \showBarLine \bar "||"
 	}
 	\addlyrics {
 		Ky -- ri -- _ e, __ _ Ky -- _ ri -- e e -- _ _ _ lei -- 
@@ -543,4 +544,409 @@ bassE = {
 	>>
 	\layout { }
 %	\midi { }
+}
+
+
+\pageBreak
+
+
+% SANCTUS 
+
+global = { 
+	\key c \major
+	\tempo 2 = 44
+	\set Score.barNumberVisibility = #all-bar-numbers-visible
+	\set Staff.midiInstrument = "choir aahs"
+	\accidentalStyle "forget"
+}
+
+soprano = \new Voice {
+	\relative c'' {
+		\cadenzaOn s2 \cadenzaOff \showBarLine \bar "|" \time 2/2
+		\[ a2 c2. \] b8 a b4 a2 g4 a1 r4 a2 a4 f f \break
+		bes2 a2. a4 a2 a a r4 a a d2 c8 b c2 \showBarLine \bar "||" \break
+		f,1 \[ g2 a \] a2. a4 a a g2 e f2. f4 a2 g a1 \fermata \showBarLine \bar "||" \break
+		a1 bes2 g f2. f4 e1 e2 \showBarLine \bar "||"
+	}
+	\addlyrics {
+		San -- _ _ _ _ _ _ ctus San -- ctus Do -- mi -- 
+		nus De -- us Sa -- ba -- oth Sa -- ba -- oth __ _ _ _
+		Ple -- ni __ _ sunt coe -- li et ter -- ra glo -- ri -- a tu -- a
+		O -- san -- na in ex -- cel -- sis
+	}
+}
+
+alto = \new Voice {
+	\relative c' {
+		\once \override Staff.TimeSignature #'stencil = ##f
+		s2 r2 e1 \[ f2 e \] c4 e2 e4 e e f2 r4 f4 ~ 
+		f e f2 e d4 f2 f4 e e f f2 e8 d e4 f e2
+		d1 \[ d2 f \] f2. f4 f f e2 c d2. d4 e2 e f1 \fermata
+		f1 f2 e d2. d4 b1 c2
+	}
+	\addlyrics {
+		San -- ctus __ _ _  Do -- mi -- nus De -- us Do -- 
+		mi -- nus De -- _ us Sa -- _ ba -- oth Sa -- _ _ _ ba -- oth __
+		Ple -- ni __ _ sunt coe -- li et ter -- ra glo -- ri -- a tu -- a
+		O -- san -- na in ex -- cel -- sis
+	}
+}
+
+tenor = \new Voice {
+	\relative c' {
+		\clef "treble_8"
+		\once \override Staff.TimeSignature #'stencil = ##f
+		\override Stem #'transparent = ##t a4 a \override Stem #'transparent = ##f
+		a1 \[ c2 d \] b a c2. c4 c c d2 ~
+		d4 \ficta bes c d2 c4 d2 r4 d2 c4 d4. c8 a1.
+		a1 \[ b2 c \] c2. c4 d d b2 a a2. a4 c2 b d1 \fermata
+		c1 d2 c a2. f4 g a2 g4 a2 
+	}
+	\addlyrics {
+		San -- ctus
+		San -- _ _ ctus __ _ Do -- mi -- nus De -- us 
+		Sa -- _ _ ba -- oth Sa -- ba -- oth __ _ _
+		Ple -- ni __ _ sunt coe -- li et ter -- ra glo -- ri -- a tu -- a
+		O -- san -- na in ex -- cel -- _ _ sis
+	}
+}
+
+bass = \new Voice {
+	\relative c' {
+		\clef "bass"
+		\once \override Staff.TimeSignature #'stencil = ##f
+		s2 r2 a1 \[ d,2 e \] a, a'2. a4 f f \ficta bes2
+		g2 f4. g8 a4 a d,4. e8 f4 d a'2 d,1 a 
+		d \[ g2 f \] f2. f4 d d e2 a, d2. d4 a2 e' d1 \fermata 
+		f1 bes,2 c d2. d4 e1 a,2
+	}
+	\addlyrics {
+		San -- ctus __ _ _ Do -- mi -- nus De -- us 
+		Do -- mi -- _ _ nus De -- _ _ us  Sa -- ba -- oth
+		Ple -- ni __ _ sunt coe -- li et ter -- ra glo -- ri -- a tu -- a
+		O -- san -- na in ex -- cel -- sis
+	}
+}
+
+\score {
+	\new StaffGroup << 
+		\set Score.proportionalNotationDuration = #(ly:make-moment 1 8)
+		\new Staff << \global \soprano >> 
+		\new Staff << \global \alto >> 
+		\new Staff << \global \tenor >> 
+		\new Staff << \global \bass >> 
+	>> 
+	\header {
+		piece = \markup \sans { Sanctus }
+	}
+	\layout { }
+%	\midi { }
+}
+
+
+% BENEDICTUS
+
+soprano = \new Voice {
+	\relative c'' {
+		\once \override Staff.TimeSignature #'stencil = ##f
+		\skip 4*7 \showBarLine \bar "|" \time 2/2
+		a2 a4 a a1 a2. g4 f1 \fermata \break g g2. g4
+		f2 f e1 e\breve \showBarLine \bar "||"
+	}
+	\addlyrics {
+		In no -- mi -- ne Do -- mi -- ni, O -- san -- na
+		in ex -- cel -- sis. __
+	}
+}
+
+alto = \new Voice {
+	\relative c' {
+		\once \override Staff.TimeSignature #'stencil = ##f
+		\skip 4*7 
+		d2 f4 f e1 f2. d4 d1\fermata e2. d8 c d2 e
+		c d b1 c\breve 
+	}
+	\addlyrics {
+		In no -- mi -- ne Do -- mi -- ni, O -- _ _ san -- na
+		in ex -- cel -- sis. __
+	}
+}
+
+tenor = \new Voice {
+	\relative c {
+		\clef "treble_8"
+		\once \override Staff.TimeSignature #'stencil = ##f
+		\cadenzaOn
+		\override Stem #'transparent = ##t f4 g a a a a a  \override Stem #'transparent = ##f 
+		\cadenzaOff
+		a2 d4 d d c8 b c2 c2. b4 a1 \fermata c2. b8 a b2 c2 ~
+		c4 a bes a a g8 f g2 a\breve 
+	}
+	\addlyrics {
+		Be -- ne -- di -- ctus qui ve -- nit
+		In no -- mi -- ne __ _ _ _ Do -- mi -- ni, O -- _ _ san -- na
+		in __ _ ex -- cel -- _ _ _ sis. __
+	}
+}
+
+bass = \new Voice {
+	\relative c {
+		\clef "bass"
+		\once \override Staff.TimeSignature #'stencil = ##f
+		\skip 4*7 
+		d2 d4 d a'1 f2. g4 d1 \fermata c2 g'1 c,2
+		f d e1 a,\breve 
+	}
+	\addlyrics {
+		In no -- mi -- ne Do -- mi -- ni, O -- san -- na
+		in ex -- cel -- sis. __
+	}
+}
+
+\score {
+	\new StaffGroup << 
+		\set Score.proportionalNotationDuration = #(ly:make-moment 1 8)
+		\new Staff << \global \soprano >> 
+		\new Staff << \global \alto >> 
+		\new Staff << \global \tenor >> 
+		\new Staff << \global \bass >> 
+	>> 
+	\header {
+		piece = \markup \sans { Benedictus }
+	}
+	\layout { }
+%	\midi { }
+}
+
+
+% AGNUS DEI
+
+soprano = \new Voice {
+	\relative c'' {
+		\once \override Staff.TimeSignature #'stencil = ##f
+		\skip 1 \showBarLine \bar "|" \time 2/2
+		g2 g4 g a1 g4 f g2 g1\fermata g a2 a2. a4 g2. g4 g2 \showBarLine \bar "||" \break
+		\skip 1 \showBarLine \bar "|" \time 2/2
+		a2 a4 a g1 g4 e f2 g1\fermata g a2 a2. a4 a1 g a2 \showBarLine \bar "||" \break
+		\skip 1 \showBarLine \bar "|" \time 2/2
+		a2 a4 a a1 g4 f a2 a1\fermata g a b g2 g2. g4 a2 a2. a4 g1 g \showBarLine \bar "||"
+	}
+	\addlyrics {
+		Qui tol -- lis pec -- ca -- ta mun -- di, do -- na e -- is re -- qui -- em.
+		Qui tol -- lis pec -- ca -- ta mun -- di, do -- na e -- is re -- qui -- em.
+		Qui tol -- lis pec -- ca -- ta mun -- di, do -- na e -- is re -- qui -- em sem -- pi -- ter -- nam.
+	}
+}
+
+alto = \new Voice {
+	\relative c' {
+		\once \override Staff.TimeSignature #'stencil = ##f
+		s1 e2 e4 e f1 d4 d e2 e1\fermata d f2 f2. f4 d2. e4 e2
+		s1 f2 f4 f e1 e4 c d2 e1\fermata e e2 f2. e8 d \[ e2 f \] d2. d4 f2
+		s1 e2 e4 e f1 d4 d f2 e1\fermata e e g e2 e2. e4 f2 f2. f4 d1 e
+	}
+	\addlyrics {
+		Qui tol -- lis pec -- ca -- ta mun -- di, do -- na e -- is re -- qui -- em.
+		Qui tol -- lis pec -- ca -- ta mun -- di, do -- na e __ _ _ is __ _ re -- qui -- em.
+		Qui tol -- lis pec -- ca -- ta mun -- di, do -- na e -- is re -- qui -- em sem -- pi -- ter -- nam.
+	}
+}
+
+tenor = \new Voice {
+	\relative c' {
+		\clef "treble_8"
+		\once \override Staff.TimeSignature #'stencil = ##f
+		\override Stem #'transparent = ##t a4 a a a\fermata \override Stem #'transparent = ##f
+		c2 c4 c c1 b4 a c2 c1\fermata b c2 d2. c4 c b8 a b4 c4 c2
+		\override Stem #'transparent = ##t a4 a a a\fermata \override Stem #'transparent = ##f
+		c2 c4 c c1 b4 a a2 c1\fermata b c2 d2. c4 c2. b8 a b4 c2 b4 c2
+		\override Stem #'transparent = ##t a4 a a a\fermata \override Stem #'transparent = ##f
+		c2 c4 c c1 b4 a d2 c1\fermata b c d c2 c2. c4 c2 c2. c4 c b8 a b2 b1 
+	}
+	\addlyrics {
+		A -- gnus De -- i
+		Qui tol -- lis pec -- ca -- ta mun -- di, do -- na e -- is re __ _ _ _ qui -- em.
+		A -- gnus De -- i
+		Qui tol -- lis pec -- ca -- ta mun -- di, do -- na e -- is  re __ _ _ _ _ qui -- em.
+		A -- gnus De -- i
+		Qui tol -- lis pec -- ca -- ta mun -- di, do -- na e -- is re -- qui -- em sem -- pi -- ter __ _ _ _ nam.
+	}
+}
+
+bass = \new Voice {
+	\relative c {
+		\clef "bass"
+		\once \override Staff.TimeSignature #'stencil = ##f
+		s1 c2 c4 c f1 g4 d c2 c1\fermata g' f2 d2. f4 g2. c,4 c2
+		s1 f2 f4 f c1 e4 a, d2 c1\fermata e a,2 d2. a4 \[ a'2 f g2. \] g4 f2
+		s1 a2 a4 a f1 g4 d d2 a1\fermata e' a g c,2 c2. c4 f2 f2. f4 g1 e
+	}
+	\addlyrics {
+		Qui tol -- lis pec -- ca -- ta mun -- di, do -- na e -- is re -- qui -- em.
+		Qui tol -- lis pec -- ca -- ta mun -- di, do -- na e -- is re __ _ _ qui -- em.
+		Qui tol -- lis pec -- ca -- ta mun -- di, do -- na e -- is re -- qui -- em sem -- pi -- ter -- nam.
+	}
+}
+
+\score {
+	\new StaffGroup << 
+		\set Score.proportionalNotationDuration = #(ly:make-moment 1 2)
+		\new Staff << \global \soprano >> 
+		\new Staff << \global \alto >> 
+		\new Staff << \global \tenor >> 
+		\new Staff << \global \bass >> 
+	>> 
+	\header {
+		piece = \markup \sans { Agnus Dei }
+	}
+	\layout { }
+%	\midi { }
+}
+
+
+% COMMUNIO
+
+soprano = \new Voice {
+	\relative c'' {
+		\once \override Staff.TimeSignature #'stencil = ##f
+		\skip 4*7 \showBarLine \bar "|" \time 2/2
+		a1 a4 g2 a4 f a4. g8 g2 f4 g1 e4 f ~ \break
+		f e8 d c4 a' c2 b4 c a g4. f8 g4 a b2 a g4 a1 r4 a ~ \break
+		a a4 g2 g1 r4 e f g a g2 f4 g2 r8 e f4 g a2 g4 ~ \break
+		g \ficta f! g d e f g2 f8 e f g a4 g2 \ficta f!4 g2 ~ g\breve \showBarLine \bar "||"
+		
+		\once \override Staff.TimeSignature #'stencil = ##f
+		\skip 4*13 \showBarLine \bar "|" \time 2/2
+		c2 c4 c c2. c4 c2 c b4. a8 b4 c a g2 \ficta fis4 g1 \showBarLine \bar "||"
+		
+		r2 a c b4 c a g4. \ficta f!8 g4 a \ficta bes2 a g4 a1 r4 a ~
+		a a g2 g1 r4 e f g a g2 f4 g2 r8 e f4 g a2 g4 ~
+		g \ficta f! g d e f g2 f4 \ficta bes a g2 \ficta f!4 g2 ~ g\breve \showBarLine \bar "|."
+	}
+	\addlyrics {
+		Lu -- ce -- at e -- is Do -- _ _ mi -- ne, Do -- _ 
+		mi -- _ ne, cum san -- ctis tu -- is in __ _ _ ae -- ter -- _ _ num, in
+		ae -- ter -- num, qui -- a pi -- _ _ us es, qui -- _ a pi -- _ 
+		us es, qui -- a pi -- _ _ _ _ _ _ _ us es. __
+		
+		Et lux per -- pe -- tu -- a lu -- ce -- _ _ at e -- _ _ is.
+		
+		Cum san -- ctis tu -- is in __ _ _ ae -- ter -- _ _ num, in 
+		ae -- ter -- num, qui -- a pi -- _ _ us es, qui -- a pi -- _ _ 
+		us es, qui -- a pi -- _ _ _ _ _ us es.
+	}
+}
+
+alto = \new Voice {
+	\relative c' {
+		\once \override Staff.TimeSignature #'stencil = ##f
+		\skip 4*7 
+		e1 e2 e d4 e2 c4 d d b4. c8 d4 e a,2
+		r4 d f e2 f4 d e4. c8 d4 e2. f4. e8 c4 f e4. d8 c b a4 d f2
+		e4 f d e2 e4 d2 e \times 2/3 { c4 d e} a, e'2 d8 c b4 b c d e e d2 ~
+		d r4 b c d e2 d1. r4 b c d e2 d1
+		
+		\skip 4*13
+		g2 g4 g f2. f4 g2 g2. g4 g2 f4 d d1.
+		
+		d2 f e4 f d e4. c8 d4 e2. f4. e8 c4 f e4. d8 c b a4 d f2
+		e4 f d e2 e4 d2 e \times 2/3 { c4 d e } a, e'2 d8 c b4 b c d e2 d ~
+		d r4 b c d e2 d1. r4 b4 c d e2 d1
+	}
+	\addlyrics {
+		Lu -- ce -- at e -- _ _ is Do -- _ _ _ mi -- ne
+		cum san -- ctis tu -- is in __ _ _ ae -- ter -- _ _ _ _ _ _ _ num,
+		cum san -- ctis tu -- is in ae -- ter -- _ _ _ _ _ _ _ _ num,
+		qui -- _ a pi -- us es, qui -- a pi -- us es, qui -- a pi -- us es.
+		
+		Et lux per -- pe -- tu -- a lu -- ce -- at e -- _ is.
+		
+		Cum san -- ctis tu -- is in __ _ _ ae -- ter -- _ _ _ _ _ _ _ num, cum 
+		san -- ctis tu -- is in ae -- ter -- _ _ _ _ _ _ _ _ num, qui -- a pi -- us es, 
+		qui -- a pi -- us es, qui -- a pi -- us es.
+	}
+}
+
+tenor = \new Voice {
+	\relative c' {
+		\clef "treble_8"
+		\once \override Staff.TimeSignature #'stencil = ##f
+		\cadenzaOn
+		\override Stem #'transparent = ##t a4 g f g a a g \override Stem #'transparent = ##f 
+		\cadenzaOff
+		a1 c2 b4 c a c4. b8 g4 a2 g4. a8 b4 c4. b16 a a4 ~
+		a g a2 r r4 a c b c2 a4 d4. c8 a4 b2 a r4 a d c ~
+		c d b c g c2 b4 c4. b8 a4 g r b c4. d8 e4 d g,8 c4 b8 c4 e, f g
+		a a g g2 a4 b c a r8 d, f4 g a a g2 ~ g\breve
+		
+		\once \override Staff.TimeSignature #'stencil = ##f
+		\cadenzaOn
+		\override Stem #'transparent = ##t g4 a c c c c c c c c d c c \override Stem #'transparent = ##f 
+		\cadenzaOff
+		e2 e4 e a,2. a4 e'2 e2. d8 c d4 c2 b4 a2 g1
+		
+		R1 r2 r4 a c b c2 a4 d4. c8 a4 b2 a r4 a d c ~
+		c d b c g c2 b4 c4. b8 a4 g r b c4. d8 e4 d g,8 c4 b8 c4 e, f g
+		a a g g2 a4 b c a d, f g a a g2 ~ g\breve
+	}
+	\addlyrics {
+		Lux ae -- _ ter -- _ na __ _
+		Lu -- ce -- at e -- is Do -- _ _ _ _ _ _ _ _ _ _ 
+		mi -- ne cum san -- ctis tu -- is in __ _ ae -- ter -- num, cum san -- ctis 
+		tu -- is in ae -- ter -- _ _ _ _ num, qui -- _ a pi -- _ _ _ us es, qui -- _ a 
+		pi -- us es, qui -- a pi -- us es, qui -- _ a pi -- us es.
+
+		Re -- qui -- em ae -- ter -- nam do -- na e -- is Do -- mi -- ne		
+		Et lux per -- pe -- tu -- a lu -- _ _ _ ce -- at e -- is.
+		
+		Cum san -- ctis tu -- is in __ _ ae -- ter -- num, cum san -- ctis 
+		tu -- is in ae -- ter -- _ _ _ _ num, qui -- _ a pi -- _ _ _ us es, qui -- a pi -- 
+		_ us es, qui -- a pi -- us es, qui -- _ a pi -- us es.
+	}
+}
+
+bass = \new Voice {
+	\relative c {
+		\clef "bass"
+		\once \override Staff.TimeSignature #'stencil = ##f
+		\skip 4*7
+		a1 a8 b c d e4 c d a e'2 d e4 g4. f8 e d c4 d
+		b2 a R1 R r4 d f2 d4 e c f2 d4. e8 f g
+		a4 f g c, e4. f8 g2 c, r4 e f g a a g4. f8 e4 d c c d g,
+		d'2 r4 g e d g c, d d2 g,4 d'2 r4 g, c b c c g1
+		
+		\skip 4*13
+		c2 c4 c f2. f4 c2 \[ c g'2. \] e4 f g d2 g,1
+		
+		R1 R R r4 d' f2 d4 e c f2 d4. e8 f g
+		a4 f g c, e4. f8 g2 c, r4 e f g a a g4. f8 e4 d c c d g,
+		d'2 r4 g e d g c, d2. g,4 d'2 r4 g, c b c c g1
+	}
+	\addlyrics {
+		Lu -- ce -- _ _ _ _ at e -- is Do -- mi -- ne, Do -- _ _ _ _ _ 
+		mi -- ne, cum san -- ctis __ _ _ tu -- is __ _ _ _ 
+		_ in ae -- _ ter -- _ _ num, qui -- _ a pi -- us es, __ _ _ qui -- _ a pi -- us 
+		es, qui -- _ a pi -- _ _ us __ _ es, qui -- _ a pi -- us es.
+		
+		Et lux per -- pe -- tu -- a lu -- _ ce -- at __ _ e -- is.
+		
+		Cum san -- ctis __ _ _ tu -- is __ _ _ _ 
+		_ in ae -- _ ter -- _ _ num qui -- _ a pi -- us es, __ _ _ qui -- _ a pi -- us 
+		es, qui -- _ a pi -- _ _ us es, qui -- _ a pi -- us es.
+	}
+}
+
+\score {
+	\new StaffGroup << 
+		\set Score.proportionalNotationDuration = #(ly:make-moment 1 8)
+		\new Staff << \global \soprano >> 
+		\new Staff << \global \alto >> 
+		\new Staff << \global \tenor >> 
+		\new Staff << \global \bass >> 
+	>> 
+	\header {
+		piece = \markup \sans { Communio }
+	}
+	\layout { }
+	\midi { }
 }
