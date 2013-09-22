@@ -104,7 +104,7 @@ alto = {
 			a4 bes c d2 c4 d2 r4 f2 e4 d c2 bes4 c d c2 c1
 			r4 c2 c4 c2 f,4 f' ~ f e d c4. a8 d4 c1 r4 f f2 c2.
 			
-			e4 f c \tupletUp \times 1/1 { d2 c } a \tupletUp \times 1/1 { c d } c4 d e2. c4 f e d1
+			e4 f c \[ d2 c \] a \[ c d \] c4 d e2. c4 f e d1
 			c4 bes c2 a \fermata
 		}
 	}
@@ -123,10 +123,10 @@ tenor = {
 			\clef "treble_8"
 			\once \override Staff.TimeSignature #'stencil = ##f
 			\override Stem #'transparent = ##t f4 g f f2 \override Stem #'transparent = ##f 
-			R1 r2 \tupletUp \times 1/1 { f\breve g1 a2 ~ a } a1 \tupletUp \times 1/1 { f2 g } \tupletUp \times 1/1 { g f } a
-			\tupletUp \times 1/1 { a g } a a \tupletUp \times 1/1 { c4. bes8 } a4 g a bes g1 f2 a \tupletUp \times 1/1 { a
+			R1 r2 \[ f\breve g1 a2 ~ a \] a1 \[ f2 g \] \[ g f \] a
+			\[ a g \] a a \[ c4. bes8 \] a4 g a bes g1 f2 a \[ a
 			 
-			 g } a bes g f1 r2 \tupletUp \times 1/1 { a c } c \tupletUp \times 1/1 { c a }
+			 g \] a bes g f1 r2 \[ a c \] c \[ c a \]
 			 bes a4 g8 f g2 f \fermata
 		}
 	}
@@ -146,10 +146,10 @@ bass = {
 			\once \override Staff.TimeSignature #'stencil = ##f
 			s1 s4 R1 f2. g4 a2 d,1
 			c4 bes \ficta es2 d f4. e8 d4 c d1 c4 bes c2 f,4 f'2 f4
-			f2 c r4 f2 f4 f c d e f bes, c1 f,2 r4 f' \tupletUp \times 1/1 { f2
+			f2 c r4 f2 f4 f c d e f bes, c1 f,2 r4 f' \[ f2
 			
-			c } f bes, c d4 f f a g f2 e8 d c4. d8 e4 f4. e8 c4 \tupletUp \times 1/1 { d2 
-			bes } c4 d c2 f, \fermata
+			c \] f bes, c d4 f f a g f2 e8 d c4. d8 e4 f4. e8 c4 \[ d2 
+			bes \] c4 d c2 f, \fermata
 		}
 	}
 	\addlyrics {
@@ -189,9 +189,9 @@ sopranoB = \new Voice {
 		\cadenzaOn s1 s s s2 \cadenzaOff 
 		\set Score.currentBarNumber = #25
 		\showBarLine \bar "|" \time 2/2
-		f1 \tupletUp \times 1/1 { g2 a } a4 a a a a2. a4 \break
+		f1 \[ g2 a \] a4 a a a a2. a4 \break
 		bes2. bes4 a g a2 r4 f g a a2 a4 bes bes a g f g2 f \break
-		r4 a a a a2. f4 \tupletUp \times 1/1 { g2 a } g2. f4 f\breve \showBarLine \bar ":|"
+		r4 a a a a2. f4 \[ g2 a \] g2. f4 f\breve \showBarLine \bar ":|"
 	}
 	\addlyrics {
 		Et ti -- _ bi red -- de -- tur vo -- tum
@@ -204,9 +204,9 @@ altoB = {
 	\new Voice = "altus" {
 		\relative c' {
 			\once \override Staff.TimeSignature #'stencil = ##f
-			s1 s s s2 c1 \tupletUp \times 1/1 { e2 f } f4 f f f f2. f4
+			s1 s s s2 c1 \[ e2 f \] f4 f f f f2. f4
 			f2. f4 f d f2 r4 c e f f2 f4 f f4. e8 d4 d bes c d2
-			r4 c f f f4. e16 d c4 d \tupletUp \times 1/1 { e2 f2. } e8 d e4 d d2. d4 c1
+			r4 c f f f4. e16 d c4 d \[ e2 f2. \] e8 d e4 d d2. d4 c1
 		}
 	}
 	\addlyrics {
@@ -240,9 +240,9 @@ bassB = {
 		\relative c {
 			\clef "bass"
 			\once \override Staff.TimeSignature #'stencil = ##f
-			s1 s s s2 f1 \tupletUp \times 1/1 { c2 f } f4 f f f d2. d4
+			s1 s s s2 f1 \[ c2 f \] f4 f f f d2. d4
 			bes2. bes4 f' g f2 r4 f4 c f f2 f4 bes, bes f' g d \ficta es2 d
-			r4 f f f f2. d4 \tupletUp \times 1/1 { c2 f } c2. d4 \tupletUp \times 1/1 { bes1 f }
+			r4 f f f f2. d4 \[ c2 f \] c2. d4 \[ bes1 f \]
 		}
 	}
 	\addlyrics {
@@ -299,7 +299,7 @@ bassB = {
 
 sopranoC = \new Voice {
 	\relative c' {
-		f1 \tupletUp \times 1/1 { g2 a } \tupletUp \times 1/1 { a g } \tupletUp \times 1/1 { a bes } a2. bes4 a g f a
+		f1 \[ g2 a \] \[ a g \] \[ a bes \] a2. bes4 a g f a
 		g f2 e8 d e4 e f2 \fermata \showBarLine \bar "|"
 	}
 	\addlyrics {
@@ -310,7 +310,7 @@ sopranoC = \new Voice {
 altoC = {
 	\new Voice = "altus" {
 		\relative c' {
-			c1 \tupletUp \times 1/1 { e2 f } \tupletUp \times 1/1 { f e } f d4 e f2. d4 f e c2
+			c1 \[ e2 f \] \[ f e \] f d4 e f2. d4 f e c2
 			d c1 c2 \fermata
 		}
 	}
@@ -336,8 +336,8 @@ bassC = {
 	\new Voice = "bassus" {
 		\relative c {
 			\clef "bass"
-			f1 \tupletUp \times 1/1 { c2 f } \tupletUp \times 1/1 { f c } \tupletUp \times 1/1 { f g } f4 d f g d e \tupletUp \times 1/1 { f2
-			bes, c1 } f,2 \fermata
+			f1 \[ c2 f \] \[ f c \] \[ f g \] f4 d f g d e \[ f2
+			bes, c1 \] f,2 \fermata
 		}
 	}
 	\addlyrics {
@@ -388,7 +388,7 @@ bassC = {
 sopranoD = \new Voice {
 	\relative c' {
 		\set Score.currentBarNumber = #9
-		bes'1 \tupletUp \times 1/1 { a2 g } \tupletUp \times 1/1 { a bes } bes1 a2 g4 f
+		bes'1 \[ a2 g \] \[ a bes \] bes1 a2 g4 f
 		g2 f bes2. a4 g2 f1. \fermata
 	}
 	\addlyrics {
@@ -399,8 +399,8 @@ sopranoD = \new Voice {
 altoD = {
 	\new Voice = "altus" {
 		\relative c' {
-			f1 \tupletUp \times 1/1 { f2 d } f1 g4 f2 e4 f2 e4 d2 
-			c4 d2 f1 d4 e \tupletUp \times 1/1 { d2 c } d2 \fermata
+			f1 \[ f2 d \] f1 g4 f2 e4 f2 e4 d2 
+			c4 d2 f1 d4 e \[ d2 c \] d2 \fermata
 		}
 	}
 	\addlyrics {
@@ -412,7 +412,7 @@ tenorD = {
 	\new Voice = "tenor" {
 		\relative c {
 			\clef "treble_8"
-			d'1 \tupletUp \times 1/1 { c2 bes } \tupletUp \times 1/1 { c d } g,4 c2 bes4 c2. f,4
+			d'1 \[ c2 bes \] \[ c d \] g,4 c2 bes4 c2. f,4
 			bes g a2 d2. c4 bes c4. bes8 bes2 a4 bes \fermata
 		}
 	}
@@ -425,8 +425,8 @@ bassD = {
 	\new Voice = "bassus" {
 		\relative c {
 			\clef "bass"
-			bes1 \tupletUp \times 1/1 { f'2 g } f bes,4 bes'2 a4 g2 f4. e8 c4 d
-			\ficta es2 d \tupletUp \times 1/1 { bes f' } g4 c, d4. e8 f2 bes, \fermata
+			bes1 \[ f'2 g \] f bes,4 bes'2 a4 g2 f4. e8 c4 d
+			\ficta es2 d \[ bes f' \] g4 c, d4. e8 f2 bes, \fermata
 		}
 	}
 	\addlyrics {
@@ -489,8 +489,8 @@ sopranoE = \new Voice {
 altoE = {
 	\new Voice = "altus" {
 		\relative c' {
-			d1 bes2 f' f e f2. f4 g2 e f \tupletUp \times 1/1 { d es } c4 c d2. c4 \tupletUp \times 1/1 { d2 c }
-			d d4. e8 f g f2 e4 f2 e4 f e d2 c4 d2 c \tupletUp \times 1/1 { d c } c1
+			d1 bes2 f' f e f2. f4 g2 e f \[ d es \] c4 c d2. c4 \[ d2 c \]
+			d d4. e8 f g f2 e4 f2 e4 f e d2 c4 d2 c \[ d c \] c1
 		}
 	}
 	\addlyrics {
@@ -504,7 +504,7 @@ tenorE = {
 		\relative c {
 			\clef "treble_8"
 			bes'1 g2 d' c1 d2. d4 \ficta es d2 c4 d2. bes4 c bes2 a4 bes2 r4 a bes2 g
-			bes bes4. c8 d2. bes4 c2. d4 bes2. g4 a bes2 a4 \tupletUp \times 1/1 { bes2 g } f1
+			bes bes4. c8 d2. bes4 c2. d4 bes2. g4 a bes2 a4 \[ bes2 g \] f1
 		}
 	}
 	\addlyrics {
@@ -519,7 +519,7 @@ bassE = {
 		\relative c {
 			\clef "bass"
 			bes1 es2 d4. \ficta es8 f2 c bes bes' g4 g a2 d, g es4 \ficta es f2 bes, f' bes,4 bes c2
-			bes2 bes4 bes'4. a8 g f g2 f4. g8 a4 f \tupletUp \times 1/1 { g2 es } d4. \ficta e!8 f2 \tupletUp \times 1/1 { bes, c } f,1
+			bes2 bes4 bes'4. a8 g f g2 f4. g8 a4 f \[ g2 es \] d4. \ficta e!8 f2 \[ bes, c \] f,1
 		}
 	}
 	\addlyrics {
