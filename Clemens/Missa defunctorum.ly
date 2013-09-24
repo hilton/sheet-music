@@ -2,7 +2,7 @@
 
 \version "2.16.2"
 \pointAndClickOff
-revision = "3"
+revision = "4"
 
 #(set-global-staff-size 15)
 
@@ -283,7 +283,7 @@ bassB = {
 			\relative c {
 				\clef "treble_8"
 				\cadenzaOn
-				\override Stem #'transparent = ##t f4 g a bes a a2 g s_"*" a4 g f e f g f f2 \showBarLine\bar ":|"
+				\override Stem #'transparent = ##t f4 g a bes a a2 g s_"*" a4 g f e f g f f2 \showBarLine\bar "|"
 				\cadenzaOff
 			}
 		}
@@ -373,7 +373,7 @@ bassC = {
 			\relative c {
 				\clef "treble_8"
 				\cadenzaOn
-				\override Stem #'transparent = ##t f4 g a bes a a2 g s2_\markup "*" a4 g f e f g f f2 \showBarLine\bar ":|"
+				\override Stem #'transparent = ##t f4 g a bes a a2 g s2_\markup "*" a4 g f e f g f f2 \showBarLine\bar "|"
 				\cadenzaOff
 			}
 		}
@@ -564,9 +564,9 @@ global = {
 soprano = \new Voice {
 	\relative c'' {
 		\cadenzaOn s2 \cadenzaOff \showBarLine \bar "|" \time 2/2
-		\[ a2 c2. \] b8 a b4 a2 g4 a1 r4 a2 a4 f f \break
+		\[ a2 c2. \] \ficta b!8 a b4 a2 g4 a1 r4 a2 a4 f f
 		bes2 a2. a4 a2 a a r4 a a d2 c8 b c2 \showBarLine \bar "||" \break
-		f,1 \[ g2 a \] a2. a4 a a g2 e f2. f4 a2 g a1 \fermata \showBarLine \bar "||" \break
+		f,1 \[ g2 a \] a2. a4 a a g2 e f2. f4 a2 g a1 \fermata \showBarLine \bar "||"
 		a1 bes2 g f2. f4 e1 e2 \showBarLine \bar "||"
 	}
 	\addlyrics {
@@ -598,7 +598,7 @@ tenor = \new Voice {
 		\clef "treble_8"
 		\once \override Staff.TimeSignature #'stencil = ##f
 		\override Stem #'transparent = ##t a4 a \override Stem #'transparent = ##f
-		a1 \[ c2 d \] b a c2. c4 c c d2 ~
+		a1 \[ c2 d \] \ficta b! a c2. c4 c c d2 ~
 		d4 \ficta bes c d2 c4 d2 r4 d2 c4 d4. c8 a1.
 		a1 \[ b2 c \] c2. c4 d d b2 a a2. a4 c2 b d1 \fermata
 		c1 d2 c a2. f4 g a2 g4 a2 
@@ -639,7 +639,7 @@ bass = \new Voice {
 	>> 
 	\header {
 		piece = \markup \larger \sans { Sanctus }
-	}
+		}
 	\layout { }
 %	\midi { }
 }
@@ -713,7 +713,10 @@ bass = \new Voice {
 		\new Staff << \global \bass >> 
 	>> 
 	\header {
-		piece = \markup \larger \sans { Benedictus }
+		piece = \markup \larger \sans {
+			\vspace #30 
+			Benedictus
+		}
 	}
 	\layout { }
 %	\midi { }
