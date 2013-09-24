@@ -2,7 +2,7 @@
 
 \version "2.16.2"
 \pointAndClickOff
-revision = "2"
+revision = "3"
 
 #(set-global-staff-size 15)
 
@@ -13,6 +13,7 @@ revision = "2"
 	inner-margin = 15\mm
 	outer-margin = 15\mm
 	markup-system-spacing = #'( (padding . 4) )
+	system-system-spacing = #'( (basic-distance . 20) )
 	indent = 0
   	ragged-bottom = ##f
 	ragged-last-bottom = ##t
@@ -175,7 +176,7 @@ bass = {
 		>> 
 	>>
 	\header {
-		piece = \markup \sans { Introitus }
+		piece = \markup \larger \sans { Introitus }
 	}
 	\layout { }
 %	\midi { }
@@ -191,7 +192,7 @@ sopranoB = \new Voice {
 		\showBarLine \bar "|" \time 2/2
 		f1 \[ g2 a \] a4 a a a a2. a4 \break
 		bes2. bes4 a g a2 r4 f g a a2 a4 bes bes a g f g2 f \break
-		r4 a a a a2. f4 \[ g2 a \] g2. f4 f\breve \showBarLine \bar ":|"
+		r4 a a a a2. f4 \[ g2 a \] g2. f4 f\breve \showBarLine \bar "||"
 	}
 	\addlyrics {
 		Et ti -- _ bi red -- de -- tur vo -- tum
@@ -291,7 +292,7 @@ bassB = {
 		}
 	>>
 	\header {
-		piece = \markup \sans { Kyrie }
+		piece = \markup \larger \sans { Kyrie }
 	}
 	\layout {
 		ragged-right = ##t
@@ -637,7 +638,7 @@ bass = \new Voice {
 		\new Staff << \global \bass >> 
 	>> 
 	\header {
-		piece = \markup \sans { Sanctus }
+		piece = \markup \larger \sans { Sanctus }
 	}
 	\layout { }
 %	\midi { }
@@ -712,11 +713,13 @@ bass = \new Voice {
 		\new Staff << \global \bass >> 
 	>> 
 	\header {
-		piece = \markup \sans { Benedictus }
+		piece = \markup \larger \sans { Benedictus }
 	}
 	\layout { }
 %	\midi { }
 }
+
+\pageBreak
 
 
 % AGNUS DEI
@@ -797,7 +800,7 @@ bass = \new Voice {
 		\new Staff << \global \bass >> 
 	>> 
 	\header {
-		piece = \markup \sans { Agnus Dei }
+		piece = \markup \larger \sans { Agnus Dei }
 	}
 	\layout { }
 %	\midi { }
@@ -811,13 +814,13 @@ soprano = \new Voice {
 		\once \override Staff.TimeSignature #'stencil = ##f
 		\skip 4*7 \showBarLine \bar "|" \time 2/2
 		a1 a4 g2 a4 f a4. g8 g2 f4 g1 e4 f ~ \break
-		f e8 d c4 a' c2 b4 c a g4. f8 g4 a b2 a g4 a1 r4 a ~ \break
+		f e8 d c4 a' c2 b4 c a g4. f8 g4 a bes2 a g4 a1 r4 a ~ \break
 		a a4 g2 g1 r4 e f g a g2 f4 g2 r8 e f4 g a2 g4 ~ \break
 		g \ficta f! g d e f g2 f8 e f g a4 g2 \ficta f!4 g2 ~ g\breve \showBarLine \bar "||"
 		
 		\once \override Staff.TimeSignature #'stencil = ##f
 		\skip 4*13 \showBarLine \bar "|" \time 2/2
-		c2 c4 c c2. c4 c2 c b4. a8 b4 c a g2 \ficta fis4 g1 \showBarLine \bar "||"
+		c2 c4 c c2. c4 c2 c b4. a8 b4 c a g2 \ficta fis4 g1 \showBarLine \bar "||" \break
 		
 		r2 a c b4 c a g4. \ficta f!8 g4 a \ficta bes2 a g4 a1 r4 a ~
 		a a g2 g1 r4 e f g a g2 f4 g2 r8 e f4 g a2 g4 ~
@@ -945,8 +948,8 @@ bass = \new Voice {
 		\new Staff << \global \bass >> 
 	>> 
 	\header {
-		piece = \markup \sans { Communio }
+		piece = \markup \larger \sans { Communio }
 	}
 	\layout { }
-	\midi { }
+%	\midi { }
 }
