@@ -9,9 +9,9 @@ revision = "1"
 	#(define fonts (make-pango-font-tree "Century Schoolbook L" "Source Sans Pro" "Luxi Mono" (/ 15 20)))
 	annotate-spacing = ##f
 	two-sided = ##t
+	top-margin = 15\mm
 	inner-margin = 15\mm
 	outer-margin = 15\mm
-	top-markup-spacing = #'( (basic-distance . 8) )
 	markup-system-spacing = #'( (padding . 8) )
   	ragged-bottom = ##f
 	ragged-last-bottom = ##t
@@ -50,13 +50,14 @@ year = #(strftime "©%Y" (localtime (current-time)))
 
 \layout {
   	ragged-right = ##f
-  	ragged-last = ##f
+  	ragged-last = ##t
 	\context {
 		\Score
 		\override BarNumber #'self-alignment-X = #CENTER
 		\override BarNumber #'break-visibility = #'#(#f #t #t)
 		\override BarLine #'transparent = ##t
 		\remove "Metronome_mark_engraver"
+		\override VerticalAxisGroup #'staff-staff-spacing = #'((basic-distance . 10))
 	}
 	\context { 
 		\StaffGroup
@@ -110,9 +111,21 @@ cantus = \new Voice {
 		b4. c8 d4 g, g g8 a b c d b c b e2 d4 \break e4 e4. a,8 d4.
 		
 		c8 b4 b2 a b4 b8 a g2 r d'1 \break
-		a1. e'1 e1. \showBarLine \bar "|."
+		a1. e'1 e1. \fermata \showBarLine \bar "|."
 	}
 	\addlyrics {
+		Il -- lu -- mi -- na nos,
+		mi -- se -- ri -- cor -- di -- a -- rum De -- _ _ _ _ us,
+		il -- lu -- mi -- na nos, mi -- se -- ri -- cor -- di -- a -- _ _ _ 
+		rum De -- _ _ _ _ us, mi -- se -- ri -- cor -- di -- a -- _ rum 
+		De -- _ _ _ _ _ _ _ _ us, mi -- se -- ri -- cor -- di -- a -- _ rum De -- _ _ _ _ _ _ _ us, 
+		De -- _ _ _ _ us, sep -- ti -- for -- mi Pa -- ra -- cli -- ti gra -- _ _ _ ti -- a, gra -- _ _ _ ti -- a,
+		ut per e -- am a de -- lic -- to -- rum, 
+		a de -- lic -- to -- rum te -- ne -- bris li -- be -- ra -- 
+		ti, li -- be -- ra -- ti, li -- be -- ra -- ti,
+		vi -- tæ glo -- ri -- a per -- fru -- 
+		a -- mur, vi -- tæ glo -- ri -- a per -- fru -- a -- _ _ _ _ _ _ _ _ _ mur, per -- fru -- a -- 
+		_ _ mur, vi -- tæ glo -- ri -- a per -- fru -- a -- mur.
 	}
 }
 
@@ -137,8 +150,33 @@ sextus = \new Voice {
 		a2. a4 f4. g8 a2 b8 a g2 fis4 g4. f!8 e f g a
 		b8 c d2 c4 b2 a ~ a8 g f2 d4 r2 r4 a'
 		d, b'4. b8 e,4 d d g2 g c4 b8 a a4 e a4. d,8
+		
+		d4. fis16 e d4 d r a'2 g4 g8 fis e4 c' c8 c b a g4 d'4. c16 b!
+		c4 a4. g8 f g a4. g16 f e1 e1. \fermata
 	}
 	\addlyrics {
+		Il -- lu -- mi -- na nos, mi -- se -- ri -- cor -- di -- a -- 
+		rum De -- _ _ _ _ _ us, mi -- se -- ri -- cor -- di -- 
+		a -- _ _ _ _ rum De -- _ _ _ _ us, il -- 
+		lu -- mi -- na nos, mi -- se -- ri -- cor -- _ di -- a -- rum De -- _ _ _ 
+		
+		_ us, il -- lu -- mi -- na nos, mi -- se -- ri -- cor -- di -- 
+		a -- rum, mi -- se -- ri -- cor -- di -- a -- 
+		rum De -- _ _ _ _ _ us, mi -- _ se -- ri -- _ _ cor -- di -- a -- _ rum 
+		De -- _ _ _ us, De -- _ us, De -- _ _ _ us,
+		
+		De -- _ _ us, sep -- ti -- for -- _ _ _ _ mi Pa -- ra -- cli -- 
+		ti gra -- _ _ _ ti -- a, gra -- ti -- a,
+		ut per e -- am a de -- lic -- to -- 
+		rum, a de -- lic -- to -- rum te -- ne -- bris, te -- ne -- bris li -- 
+		
+		be -- ra -- ti, li -- be -- ra -- ti, li -- be -- ra -- ti, li -- be -- ra -- ti,
+		vi -- tæ glo -- ri -- a per -- _ _ fru -- a -- _ _ _ _ _ 
+		_ _ _ _ mur, per -- fru -- a -- mur, vi -- 
+		tæ glo -- ri -- a per -- fru -- a -- mur, per -- fru -- _ a -- mur, per -- fru -- 
+		
+		a -- _ _ _ mur, vi -- tæ glo -- ri -- a, vi -- tæ glo -- _ ri -- a per -- _ _ 
+		_ fru -- _ _ _ _ _ _ a -- mur.
 	}
 }
 
@@ -164,9 +202,33 @@ altus = {
 			f4 r2 f2. e4 fis4 g d4. c8 b c d4 e2.
 			d4 e4. fis8 g4 g d f ~ f d r2 e fis1 
 			r2 r r4 d e e8 g a4 a e a4. g16 fis g4
+			
+			g2 fis e r r4 g e8 e4 fis8 g2 f!8 g a4
+			r2 a, a4 a8 b c d e fis gis e a2 g8 fis gis2 a \fermata
 		}
 	}
 	\addlyrics {
+		Il -- lu -- mi -- na nos, mi -- se -- ri -- cor -- di -- 
+		a -- rum mi -- se -- ri -- cor -- di -- a -- _ _ _ _ _ _ 
+		rum De -- _ _ _ _ us, 
+		
+		il -- lu -- mi -- na nos, mi -- se -- 
+		ri -- cor -- di -- a -- rum 
+		mi -- se -- ri -- cor -- di -- a -- rum, mi -- se -- ri -- 
+		cor -- di -- a -- _ _ _ _ _ _ _ rum De -- _ _ _ _ _ _ 
+		
+		_ us, sep -- ti -- for -- mi 
+		Pa -- ra -- cli -- ti gra -- _ _ _ _ _ _ ti -- a,
+		ut per e -- am a de -- lic -- to -- rum te -- ne -- 
+		bris li -- be -- 
+		
+		ra -- ti, li -- be -- ra -- ti, li -- be -- ra -- _ _ _ _ _ _ _ 
+		ti, vi -- tæ, vi -- tæ glo -- ri -- a, __ _ _ vi -- 
+		tæ glo -- ri -- a per -- fru -- a -- mur, vi -- tæ, 
+		vi -- tæ glo -- ri -- a per -- fru -- a -- _ _ _ 
+		
+		mur, vi -- tæ, vi -- tæ glo -- ri -- a, glo -- ri -- a
+		per -- fru -- a -- _ _ _ _ _ _ _ _ _ _ _ mur.
 	}
 }
 
@@ -192,10 +254,34 @@ quintus = {
 			e4 e d d' d4. d8 d,4 d g2 g1 c2
 			c4 c2 a4 R1 R r2 c,4 e
 			g4. f8 e2 d d4 d8 e f g a b cis a d2 cis4 d2
-			d4 d, g2 g1 e2 f c'4. b8 a g4.
+			d4 d, g2 g1 e2 f c'4. b8 a4 g4.
+			
+			a8 b4 d2 c r4 e,2 g4 g8 fis e4 d bes' a4. g8
+			f2 r a2. cis,4 e1. e2 \fermata
 		}
 	}
 	\addlyrics {
+		Il -- 
+		lu -- mi -- na nos,
+		il -- 	lu -- mi -- na nos, mi -- se -- ri -- cor -- di -- a -- rum De -- 
+		
+		_ _ _ _ us, il -- 
+		lu -- mi -- na nos, mi -- se -- ri -- cor -- di -- a -- rum De -- _ 
+		_ _ _ us, mi -- se -- ri -- cor -- di -- 
+		a -- rum De -- _ _ _ _ us,
+		
+		sep -- ti -- for -- mi 
+		Pa -- ra -- cli -- ti gra -- _ _ _ ti -- a, ut per 
+		e -- _ am, ut per e -- am a de -- lic -- to -- 
+		rum te -- ne -- bris, te -- ne -- bris li -- 
+		
+		be -- ra -- ti, li -- be -- ra -- ti, li -- be -- ra -- 
+		ti, vi -- tæ, vi -- tæ 
+		glo -- ri -- a per -- fru -- a -- _ _ _ _ _ _ _ _ _ mur, 
+		per -- fru -- a -- mur, vi -- tæ glo -- ri -- a, glo -- 
+		
+		ri -- a, vi -- tæ, vi -- tæ glo -- ri -- a, vi -- tæ glo -- ri -- 
+		a per -- fru -- a -- mur.
 	}
 }
 
@@ -222,9 +308,34 @@ tenor = {
 			r4 f2 e4 a4. b8 c2 b a r c4 b2
 			b c4 d4. e8 f2 c4 f, a2 g a
 			fis r r r4 g4. b8 c4 r2 R1
+			
+			g4 d d8 e fis g a8. b16 c4 b2 e,4 e e8 fis g a b c d4. c16 b? a4 ~
+			a8 g8 f e d e f4 e1 e'4 a, b4. c16 d e2 e, \fermata
 		}
 	}
 	\addlyrics {
+		Il -- lu -- 
+		mi -- na nos, mi -- se -- ri -- cor -- di -- a -- rum 
+		De -- _ _ _ _ _ _ _ us, 
+		De -- _ _ _ _ us, il -- lu -- mi -- na 
+		
+		nos, mi -- se -- ri -- cor -- di -- a -- rum,
+		mi -- se -- ri -- cor -- di -- 
+		a -- rum De -- _ _ _ _ _ _ _ us, 
+		De -- _ _ _ _ _ _ us, 
+		
+		sep -- ti -- for -- _ _ _ _ _ mi 
+		Pa -- ra -- cli -- ti gra -- _ _ _ ti -- a, ut per e -- am, 
+		ut per e -- _ am a de -- lic -- to -- rum, a de -- 
+		lic -- to -- rum te -- ne -- bris, li -- be -- 
+		
+		ra -- ti, li -- be -- ra -- ti, li -- be -- ra -- ti,
+		vi -- tæ glo -- ri -- a, vi -- tæ, vi -- tæ,
+		vi -- tæ glo -- ri -- a per -- fru -- a -- mur, vi -- 
+		tæ glo -- ri -- a 
+		
+		per -- fru -- a -- _ _ _ _ _ _ mur, per -- fru -- a -- _ _ _ _ _ _ _ _ _ 
+		_ _ _ _ _ _ mur, per -- fru -- a -- _ _ _ mur.
 	}
 }
 
@@ -251,9 +362,34 @@ baritone = {
 			r2 a4 c c4. b8 a2 d2. a4 d8 c b4. a8 g2
 			d4 r2 g a R1 b4 g r8 d'4 c8
 			b8 c d2 c b4 d8 c b4 r2 a4 a a8 b c d e c d b
+			
+			e4 d b2 e,1 b'8 a16 b c2 c4 d g,8 d'4 e8 f4 ~
+			f8 e8 d cis d2 e4 c?8 d e e4 a,8 c b c d e4 d8 c b2 a \fermata
 		}
 	}
 	\addlyrics {
+		Il -- lu -- mi -- na 
+		nos, il -- lu -- mi -- na nos, mi -- se -- ri -- 
+		cor -- di -- a -- rum De -- _ _ _ _ us, il -- lu -- mi -- na 
+		nos, mi -- se -- ri -- cor -- di -- a -- rum De -- _ _ _ _ us,
+		
+		mi -- se -- ri -- cor -- di -- a -- rum De -- _ _ _ _ us,
+		il -- lu -- mi -- na nos, mi -- se -- ri -- cor -- 
+		di -- a -- _ _ _ rum 
+		De -- _ _ _ _ us, De -- _ _ _ _ _ _ _ us,
+		
+		sep -- ti -- for -- mi Pa -- ra -- cli -- ti 
+		gra -- _ _ _ ti -- a, ut 
+		per e -- _ _ _ am a de -- lic -- to -- rum te -- ne -- 
+		bris, te -- ne -- bris li -- 
+		
+		be -- ra -- ti, li -- be -- ra -- ti, li -- be -- ra -- ti,
+		vi -- tæ glo -- ri -- a per -- fru -- a -- _ _ _ _ 
+		mur, vi -- tæ, vi -- tæ glo -- ri -- 
+		a, __ _ _ vi -- tæ glo -- ri -- a per -- fru -- a -- _ _ _ _ _ _ _ 
+		
+		_ _ mur, per -- fru -- _ _ a -- mur, per -- fru -- a -- _ _ 
+		_ _ _ _ mur, glo -- ri -- a per -- fru -- a -- _ _ _ _ _ _ _ mur.
 	}
 }
 
@@ -280,9 +416,34 @@ bassus = {
 			f,4. g8 a2 R1 b4. c8 d2 g, g'
 			g,4. g8 g'2 g,4. g8 d'2 r4 a'4. g8 f d e2 d2.
 			b2 c4 g4. g8 g'2 R1 a,4. b8 c a b4
+			
+			b4. a8 b2 c8 d e4 e2 r4 g8 fis e2 g,8 a bes c d4 d
+			a1 a2 a4 a' e1. a,2 \fermata
 		}
 	}
 	\addlyrics {
+		Il -- lu -- mi -- na nos, mi -- se -- ri -- cor -- di -- a -- rum 
+		De -- _ _ _ _ us, mi -- se -- ri -- 
+		cor -- di -- a -- rum De -- _ _ _ _ _ _ _ us, De -- _ 
+		_ us, De -- _ _ _ _ _ us, il -- 
+		
+		lu -- mi -- na nos, mi -- se -- ri -- _ cor -- di -- a -- rum 
+		De -- _ us, mi -- se -- _ ri -- 
+		cor -- di -- a -- rum De -- _ _ _ us, De -- 
+		_ _ _ _ us, De -- _ _ _ _ _ us,
+		
+		sep -- ti -- for -- _ _ _ _ _ mi 
+		Pa -- ra -- cli -- ti gra -- _ _ _ ti -- a, gra -- _ _ ti -- a, ut per e -- am,
+		ut per e -- am a 
+		de -- lic -- to -- rum te -- ne -- bris, te -- ne -- bris 
+		
+		li -- be -- ra -- ti, li -- be -- ra -- ti, vi -- tæ 
+		glo -- ri -- a, glo -- ri -- a, vi -- tæ 
+		glo -- ri -- a, glo -- ri -- a per -- _ _ fru -- a -- mur,
+		vi -- tæ glo -- ri -- a per -- _ _ _ fru -- 
+		
+		a -- _ mur, vi -- _ _ tæ glo -- ri -- a per -- _ _ _ _ fru -- 
+		a -- mur, per -- fru -- a -- mur.
 	}
 }
 
@@ -291,7 +452,7 @@ bassus = {
 	<<
 		\new StaffGroup
 	  	<< 
-			\set Score.proportionalNotationDuration = #(ly:make-moment 1 8)
+			\set Score.proportionalNotationDuration = #(ly:make-moment 1 12)
 			\new Staff << \global \cantus >> 
 			\new Staff << \global \sextus >> 
 			\new Staff << \global \altus >>
@@ -305,5 +466,5 @@ bassus = {
 		>>
 	>>
 	\layout { }
-%	\midi { }
+	\midi { }
 }
