@@ -1,8 +1,9 @@
 % Copyright ©2013 Peter Hilton - https://github.com/hilton
 
 \version "2.16.2"
-revision = "1"
+revision = "2"
 
+\pointAndClickOff
 #(set-global-staff-size 15)
 
 \paper {
@@ -50,7 +51,7 @@ year = #(strftime "©%Y" (localtime (current-time)))
 
 \layout {
   	ragged-right = ##f
-  	ragged-last = ##t
+  	ragged-last = ##f
 	\context {
 		\Score
 		\override BarNumber #'self-alignment-X = #CENTER
@@ -93,15 +94,15 @@ cantus = \new Voice {
 		R1 r2 r4 e a2. a8 a b4 b c a
 		c c e2 ~ \break e1 d2 e4. d8 c b c4 b2 R1
 		R \break R r2 e, e'4 e8 e c2.
-			b4 c e, f1 \break f2 a2. g8 f g2
+			b4 c e, \break f1 f2 a2. g8 f g2
 		
-		f2 r R1 R \break d'4. c8 b a b4
-		a2 r b4 d2 cis4 d d e2 ~ e8 d ~ d4. c4. \break
-		b8 a g d a' g a b c2 c, r gis'4 a f2 fis8 \ficta fis g2
-			fis4 g2 ~ \break g r r e'8 d c a b4 a8 g c4 c
+		f2 r R1 \break R d'4. c8 b a b4
+		a2 r b4 d2 cis4 d d e2 ~ \break e8 d ~ d4. c4.
+		b8 a g d a' g a b c2 c, r gis'4 a \break f2 fis8 \ficta fis g2
+			fis4 g1 r2 r e'8 d c a b4 a8 g c4 c \break
 			
-		d8 c b a c2 b c \break c4 e2 a,4 r2 r4 e'
-		c8 c a4 d8 c16 b e8 e a,2 b4. a16 g a4. a8 d,2 \break R1
+		d8 c b a c2 b c c4 e2 a,4 r2 r4 e' \break 
+		c8 c a4 d8 c16 b e8 e a,2 b4. a16 g a4. a8 d,2 R1 \break 
 		g2 d' c a r2 r4 d d d2 b4 ~ \break b b4 r2
 		r g g4 g2 e e e4. e8 e4 e'8 e a,4 ~ \break
 		
@@ -110,7 +111,7 @@ cantus = \new Voice {
 		d'2. a4 f1 g2 r
 		b4. c8 d4 g, g g8 a b c d b c b e2 d4 \break e4 e4. a,8 d4.
 		
-		c8 b4 b2 a b4 b8 a g2 r d'1 \break
+		c8 b4 b2 a b4 b8 a g2 r \break d'1
 		a1. e'1 e1. \fermata \showBarLine \bar "|."
 	}
 	\addlyrics {
@@ -139,9 +140,9 @@ sextus = \new Voice {
 		c4 f r2 d4 a'2 a8 a c2. b4 g b b g
 		c2 b1 a g2 a4 f8 g a2
 		d,4 b'8 a g d d2 c4 c2 f8 g a4 e8 d c e d4 f8 e d2
-		r e' ~ e8 d c b c2 c4. b8 a2 d4 c8 b a4 g2
+		r e' ~ e8 d c b c2 c4. b8 a2 d4 c8 b a4 g ~ g
 		
-		a g8 \ficta f! g2 c,4 g' c4. b8 a4 b8 c b2 b4 gis8 \ficta gis
+		a2 g8 \ficta f! g2 c,4 g' c4. b8 a4 b8 c b2 b4 gis8 \ficta gis
 		e4 fis8 e16 d g8 g c,2 r d' d4 b2 R1
 		R r2 c,4 c' b2 a r r4 b b b d2
 		d e c4 c g2 g4 e4. e8 e4 c4. c8 a4 a' ~
@@ -183,6 +184,7 @@ sextus = \new Voice {
 altus = {
 	\new Voice = "altus" {
 		\relative c' {
+			\clef "treble_8"
 			R1 R R R
 			r2 r4 a4 e'2. e8 e g!2 e f4 e g1 g2
 			a1 g2 fis4 g2 fis4 g g e8 d c b a g a4
@@ -191,7 +193,7 @@ altus = {
 			R1 r4 a d d8 d g1 r2 e4 g2 
 			fis4 g g e1 d2 r R1
 			fis4 g2 \ficta fis4 g g a f?2 d4 e2 d1
-			a'4 a e8 fis g \ficta fis e2. d8 c d2 e g8 f e d f e e2
+			a'4 a e8 fis g \ficta fis e2. d8 c d2 e g8 f e d f e e4 ~ e
 			
 			d4 e1 g4 g a2. e4 R1
 			a2 g8 g e4 r2 fis8 e16 d g4. fis16 e \ficta fis8 \ficta fis g2 R1
@@ -242,13 +244,13 @@ quintus = {
 			r2 g c4 c8 c d4 a c a c c d2 b4 c4.
 			
 			bes8 a g a4 d, R1 R r2 e
-			a4 a8 a g2 gis a fis4 g g a2 d,4 a'4. g8
-			gis d \ficta gis4 a2 R1 a2 b4 a2 bes b!4
-			d2 g,2 ~ g c8 b a g a2 a, R1
+			a4 a8 a g2 gis a fis4 g g a4 ~ a d,4 a'4. g8
+			gis d \ficta gis4 a2 R1 a2 b4 a4 ~ a bes2 b!4
+			d2 g,1 c8 b a g a2 a, R1
 			
 			R1 r2 g'4 g e1 b'
-			r4 fis g4. g8 a4 a4. g16 fis d'4. d8 d,4 r2 r d4 d'2
-			c b4 c e,2 a4 d,1. b4 e e e fis2
+			r4 fis g4. g8 a4 a4. g16 fis d'4. d8 d,4 r2 r d4 d' ~ d
+			c2 b4 c e,2 a4 d,1. b4 e e e fis2
 			fis g4. g8 g2 r r e4. e8 e2 e ~
 			
 			e4 e d d' d4. d8 d,4 d g2 g1 c2
@@ -288,7 +290,7 @@ quintus = {
 tenor = {
 	\new Voice = "tenor" {
 		\relative c {
-			\clef "bass"
+			\clef "treble_8"
 			R1 R R r4 e a2. 
 			a8 a c2 ~ c4 gis4 a \ficta gis b b c1 g? r2
 			R1 r2 r4 e'8 d c b c4 b8 a g4 c,2 r
@@ -342,15 +344,15 @@ tenor = {
 baritone = {
 	\new Voice = "baritone" {
 		\relative c {
-			\clef "bass"
+			\clef "treble_8"
 			R1 R R e4 e'2 e8 e
 			f2 r R1 r2 r4 e, a a8 a b4 b2 c b4
 			d d e d ~ d e4. d8 c b c2 g g c4 c8 c
 			d4 d e c f, f a2 f4 f'4. e8 d c d4 g,2 r4
 			
 			r2 a4 bes2 a c4 c e b? d8 c b a b4 g r
-			c d d8 d b2 r4 r2 r4 e2 f e d4 ~
-			d2 d4 e4. d16 e f2 f, r4 r2 R1
+			c d d8 d b2 r4 r2 r4 e2 f4 ~ f e2 d2.
+			 d4 e4. d16 e f2 f, r4 r2 R1
 			d'8 c b a b4 b c8 b a g a2. g8 f e4 e R1
 			
 			R1 r2 c'4 c a1 g4 fis gis8 \ficta gis b4
@@ -452,19 +454,19 @@ bassus = {
 	<<
 		\new StaffGroup
 	  	<< 
-			\set Score.proportionalNotationDuration = #(ly:make-moment 1 12)
+			\set Score.proportionalNotationDuration = #(ly:make-moment 1 8)
 			\new Staff << \global \cantus >> 
 			\new Staff << \global \sextus >> 
 			\new Staff << \global \altus >>
 		>>
 		\new StaffGroup
 	  	<< 
-			\new Staff << \global \quintus >>
 			\new Staff << \global \tenor >>
 			\new Staff << \global \baritone >>
+			\new Staff << \global \quintus >>
 			\new Staff << \global \bassus >>
 		>>
 	>>
 	\layout { }
-	\midi { }
+%	\midi { }
 }
