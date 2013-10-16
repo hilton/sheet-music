@@ -1,7 +1,7 @@
 % Copyright ©2013 Peter Hilton - https://github.com/hilton
 
 \version "2.16.2"
-revision = "2"
+revision = "3"
 
 \pointAndClickOff
 #(set-global-staff-size 15)
@@ -341,8 +341,8 @@ tenor = {
 	}
 }
 
-baritone = {
-	\new Voice = "baritone" {
+septus = {
+	\new Voice = "septus" {
 		\relative c {
 			\clef "treble_8"
 			R1 R R e4 e'2 e8 e
@@ -461,8 +461,8 @@ bassus = {
 		>>
 		\new StaffGroup
 	  	<< 
+			\new Staff << \global \septus >>
 			\new Staff << \global \tenor >>
-			\new Staff << \global \baritone >>
 			\new Staff << \global \quintus >>
 			\new Staff << \global \bassus >>
 		>>
