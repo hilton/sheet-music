@@ -107,6 +107,19 @@ cantus = \new Voice {
 		r2 f'4 f8. g16 a g f e d4. c8 b8. cis16 d2 d \showBarLine \bar "|."
 	}
 	\addlyrics {
+		Ve -- ni Cre -- a -- tor, ve -- ni 
+		Cre -- a -- tor spi -- 
+		ri -- tus, re -- ple tu -- o -- rum, re -- ple tu -- 
+		
+		o -- rum cor -- da fi -- de -- li -- um, re -- ple tu -- o -- rum cor -- da 
+		fi -- de -- li -- um: et tu -- i a -- mo -- 
+		ris, et tu -- i a -- mo -- ris in 
+		
+		e -- is i -- gnem, in e -- is i -- gnem ac -- cen -- de,
+		et tu -- i a -- mo -- ris in 
+		e -- is i -- gnem ac -- cen -- de,
+		
+		ac -- cen -- de.
 	}
 }
 
@@ -127,6 +140,19 @@ sextus = \new Voice {
 		e8. d16 c b a g f g a8 c d4 e8 fis4 g d1
 	}
 	\addlyrics {
+		Ve -- ni Cre -- a -- tor, ve -- 
+		ni Cre -- a -- tor, ve -- ni 
+		spi -- ri -- tus Cre -- a -- tor, re -- ple tu -- o -- rum 
+		
+		cor -- da fi -- de -- li -- um, re -- ple tu -- o -- 
+		rum cor -- da fi -- de -- li -- um: et tu -- 
+		i, et tu -- i a -- mo -- ris in 
+		
+		e -- is i -- gnem, in e -- is i -- gnem ac -- cen -- 
+		de, ac -- cen -- de, et tu -- i a -- mo -- ris in e -- 
+		is i -- gnem ac -- cen -- de, in e -- is i -- gnem ac -- 
+		
+		cen -- de, ac -- cen -- de.
 	}
 }
 
@@ -147,6 +173,19 @@ altus = \new Voice {
 		a4. a8. b16 c8. b16 a g f8. g16 a4. g8 g2 fis4 g2
 	}
 	\addlyrics {
+		Ve -- ni Cre -- a -- tor spi -- ri -- tus, spi -- 
+		ri -- tus, ve -- ni Cre -- a -- tor spi -- 
+		ri -- tus, re -- ple tu -- o -- rum cor -- da fi -- de -- li -- um, ve -- ni Cre -- a -- 
+		
+		tor spi -- ri -- tus, re -- ple tu -- o -- rum cor -- da, cor -- da, tu -- o -- rum cor -- da fi -- 
+		de -- li -- um: et tu -- i a -- mo -- ris, et tu -- i, et tu -- i a -- 
+		mo -- ris, et tu -- i a -- mo -- ris, et tu -- i a -- mo -- ris
+		
+		in e -- is i -- gnem, i -- gnem ac -- cen -- 
+		de, et tu -- i a -- mo -- ris in e -- is i -- 
+		gnem ac -- cen -- de, ac -- cen -- de, i -- 
+		
+		gnem ac -- cen -- de.
 	}
 }
 
@@ -168,6 +207,19 @@ quintus = \new Voice {
 		c b a g f g a4 a8 a2 a8. g16 fis8 g16 a b a b g a2 g
 	}
 	\addlyrics {
+		Ve -- 
+		ni Cre -- a -- tor, Cre -- a -- tor, ve -- ni, 
+		ve -- ni Cre -- a -- tor spi -- ri -- tus, spi -- ri -- 
+		
+		tus, re -- ple tu -- o -- rum cor -- da fi -- de -- li -- um, tu -- o -- rum cor -- da fi -- de -- li -- um, fi -- de -- li -- 
+		um, fi -- de -- li -- um: et tu -- i, et tu -- i a -- mo -- 
+		ris, a -- mo -- ris, et tu -- i a -- mo -- ris, 
+		
+		et tu -- i a -- mo -- ris in e -- is i -- gnem ac -- 
+		cen -- de, in e -- is i -- gnem, i -- gnem ac -- cen -- 
+		de, ac -- cen -- de, i -- gnem ac -- cen -- 
+		
+		de, ac -- cen -- de.
 	}
 }
 
@@ -189,6 +241,19 @@ tenor = \new Voice {
 		f8. e16 d e f g a1 d,1. |
 	}
 	\addlyrics {
+		Ve -- ni Cre -- 
+		a -- tor spi -- ri -- tus, ve -- ni Cre -- a -- 
+		tor spi -- ri -- tus, re -- ple tu -- o -- rum cor -- da, tu -- o -- rum cor -- 
+		
+		da fi -- de -- li -- um, re -- ple tu -- o -- rum cor -- da fi -- 
+		de -- li -- um: et tu -- i a -- mo -- ris, et tu -- i a -- mo -- ris,
+		et tu -- i, et tu -- i a -- mo -- ris, et tu -- i a -- mo -- 
+		
+		ris in e -- is i -- gnem ac -- cen -- de, et tu -- i a -- mo -- 
+		ris, et tu -- i a -- mo -- ris, a -- mo -- ris in 
+		e -- is i -- gnem ac -- cen -- de, i -- gnem ac -- 
+		
+		cen -- de.
 	}
 }
 
@@ -210,6 +275,18 @@ bassus = \new Voice {
 		e8 f g4 d2 d2. g4 ~ g1
 	}
 	\addlyrics {
+		Ve -- ni 
+		Cre -- a -- tor spi -- ri -- tus, spi -- ri -- tus,
+		Cre -- a -- tor spi -- ri -- tus, spi -- ri -- tus, re -- 
+		
+		ple tu -- o -- rum cor -- da fi -- de -- li -- um, re -- ple 
+		tu -- o -- rum cor -- da fi -- de -- li -- um, fi -- de -- li -- um: et tu -- i a -- 
+		mo -- ris, a -- mo -- ris, et tu -- i a -- mo -- 
+		
+		ris in e -- is i -- gnem ac -- cen -- de, et tu -- i 
+		a -- mo -- ris, et tu -- i a -- mo -- ris, a -- 
+		mo -- ris in e -- is i -- gnem ac -- cen -- 
+		de, ac -- cen -- de.
 	}
 }
 
