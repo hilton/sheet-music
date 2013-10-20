@@ -1,11 +1,45 @@
+% Copyright ©2013 Peter Hilton - https://github.com/hilton
+% CPDL #30373
+% http://www.cpdl.org/wiki/index.php/Prophetiae_Sibyllarum_-_X._Sibylla_Tiburtina_(Orlando_di_Lasso)
+
 \version "2.10.33"
+\pointAndClickOff
+
+#(set-global-staff-size 15)
+
+\paper { 
+	#(define fonts (make-pango-font-tree "Century Schoolbook L" "Source Sans Pro" "Luxi Mono" (/ 15 20)))
+	top-margin = 15\mm
+	left-margin = 15\mm
+	right-margin = 15\mm
+	system-system-spacing = #'( (padding . 10) (basic-distance . 20) (stretchability . 100) )
+	ragged-bottom = ##f
+	ragged-last-bottom = ##t 
+} 
+
+year = #(strftime "©%Y" (localtime (current-time)))
 
 \header {
-	title = "10. Sibylla Tiburtina"
-	composer = "Orlando di Lasso"
-	copyright = \markup \center-align \tiny { 
-		\line { Copyright ©2008 Cappella Gabrieli - \with-url #"http://cappellagabrieli.nl" http://cappellagabrieli.nl }
-		\line { Licensed under the Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License - \with-url #"http://creativecommons.org/licenses/by-nc-nd/3.0" http://creativecommons.org/licenses/by-nc-nd/3.0 }
+	title = \markup \medium \fontsize #6 \override #'(font-name . "Source Sans Pro Light") {
+		"10. Sibylla Tiburtina"
+	}
+	subtitle = \markup \medium \sans {
+		"Prophetiæ Sibyllarum"
+	}
+	composer = \markup \sans {
+		"Orlando di Lasso"
+	}
+	copyright = \markup \tiny \sans {
+		\vspace #6
+		\column \center-align {
+			\line {
+				This edition copyright \year Peter Hilton - 
+				Lilypond source at \with-url #"https://github.com/hilton/sheet-music" https://github.com/hilton/sheet-music
+			}
+			\line {
+				Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License - \with-url #"http://creativecommons.org/licenses/by-nc-sa/3.0/" http://creativecommons.org/licenses/by-nc-sa/3.0/
+			}
+		}
 	}
 	tagline = ##f 
 }
@@ -14,34 +48,25 @@ global= {
 	\key es \major
 	\time 4/2
 	\tempo 2 = 100
-	\set Score.timing = ##f 
-	\override Score.LyricText #'font-size = #0
 	\set Staff.midiInstrument = "choir aahs"
-	#(set-global-staff-size 18) 
-	#(set-accidental-style 'forget)
+	\accidentalStyle "forget"
 }
 
-\paper { 
-	% annotate-spacing = ##t
-	page-top-space = 0
-	between-system-padding = 0.3\cm 
-	ragged-bottom = ##f
-	ragged-last-bottom = ##t 
-} 
+showBarLine = { \once \override Score.BarLine #'transparent = ##f }
 
 soprano = \new Voice { \transpose c es {
 	\relative c' {
 		\override NoteHead #'style = #'baroque
-		cis\breve d1 g1. g1 f1. e\breve f1 f2 f1 fis g2 g2. e4 \bar "" \break
-		e1 d b r2 c1 c2 a a cis1 d dis1. dis2 e e e1 f2 e e1 \bar "" \break
+		cis\breve d1 g1. g1 f1. e\breve f1 f2 f1 fis g2 g2. e4
+		e1 d b r2 c1 c2 a a cis1 d dis1. dis2 e e e1 f2 e e1
 		e2 a, b2. b4 c2 e1 d2 d1. d2 f1 e2 e1 e2 e1 
 			\set Score.proportionalNotationDuration = #(ly:make-moment 1 1)
-			\time 3/1 e\breve a,1 b c c\breve \bar "" \break
+			\time 3/1 e\breve a,1 b c c\breve
 		b1 a\breve b1 d e f1. e2 e1 d e g fis\breve 
 			\set Score.proportionalNotationDuration = #(ly:make-moment 1 2)
-			\time 4/2 g d e1. e2 \bar "" \break
-		f\breve d cis1 e fis1. a2 g1. g2 f1 e cis r \bar "" \break
-		r e \break d2 e f1 e2 f d1 cis2 d b1. b2 b1 c\breve b\longa \bar "||"
+			\time 4/2 g d e1. e2
+		f\breve d cis1 e fis1. a2 g1. g2 f1 e cis r
+		r e \break d2 e f1 e2 f d1 cis2 d b1. b2 b1 c\breve b\longa \showBarLine \bar "||"
 	}
 	\addlyrics {
 		Ver -- rax ip -- se De -- us __ de -- dit hæc mi -- hi mu -- ni -- 
@@ -116,6 +141,21 @@ bass = \new Voice { \transpose c es {
 	}
 }}
 
+\layout {
+	indent = #0
+	\context {
+		\Score
+		\override BarNumber #'self-alignment-X = #CENTER
+		\override BarNumber #'break-visibility = #'#(#f #t #t)
+		\override BarLine #'transparent = ##t
+		\override VerticalAxisGroup #'staff-staff-spacing = #'((basic-distance . 15) (stretchability . 100))
+	}
+	\context { 
+		\StaffGroup
+		\remove "Span_bar_engraver"	
+	}
+}
+
 \score {
 	\new StaffGroup << 
 		\set Score.proportionalNotationDuration = #(ly:make-moment 1 8)
@@ -125,9 +165,6 @@ bass = \new Voice { \transpose c es {
 		\new Staff << \global \tenor >> 
 		\new Staff << \global \bass >> 
 	>> 
-	\layout {
-		indent = #0
-	}
-	\midi {
-	}
+	\layout { }
+	\midi { }
 }

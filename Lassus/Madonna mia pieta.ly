@@ -1,7 +1,10 @@
+% CPDL #30371
+% http://www.cpdl.org/wiki/index.php/Madonna_mia,_pietà_(Orlando_di_Lasso)
 % Copyright ©2013 Peter Hilton
 
 \version "2.16.2"
 revision = "4"
+\pointAndClickOff
 
 #(set-global-staff-size 16)
 #(set-accidental-style 'forget)

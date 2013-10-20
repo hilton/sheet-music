@@ -1,4 +1,5 @@
 \version "2.13.16"
+\pointAndClickOff
 
 \header {
 	title = "Veni dilecte mi"

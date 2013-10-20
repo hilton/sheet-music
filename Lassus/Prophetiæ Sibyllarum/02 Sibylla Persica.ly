@@ -1,4 +1,5 @@
 \version "2.10.33"
+\pointAndClickOff
 
 \header {
 	title = "Sibylla Persica"

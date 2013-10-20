@@ -1,11 +1,46 @@
-\version "2.10.33"
+% Copyright ©2013 Peter Hilton - https://github.com/hilton
+% CPDL #30372
+% http://www.cpdl.org/wiki/index.php/Prophetiae_Sibyllarum_-_IX._Sibylla_Europaea_(Orlando_di_Lasso)
+
+\version "2.16.2"
+\pointAndClickOff
+
+#(set-global-staff-size 16)
+
+\paper { 
+	% annotate-spacing = ##t
+	#(define fonts (make-pango-font-tree "Century Schoolbook L" "Source Sans Pro" "Luxi Mono" (/ 16 20)))
+	top-margin = 15\mm
+	left-margin = 15\mm
+	right-margin = 15\mm
+	system-system-spacing = #'( (padding . 10) (basic-distance . 20) (stretchability . 100) )
+	ragged-bottom = ##f
+	ragged-last-bottom = ##t 
+} 
+
+year = #(strftime "©%Y" (localtime (current-time)))
 
 \header {
-	title = "9. Sibylla Europæa"
-	composer = "Orlando di Lasso"
-	copyright = \markup \center-align \tiny { 
-		\line { Copyright ©2008 Cappella Gabrieli - \with-url #"http://cappellagabrieli.nl" http://cappellagabrieli.nl }
-		\line { Licensed under the Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License - \with-url #"http://creativecommons.org/licenses/by-nc-nd/3.0" http://creativecommons.org/licenses/by-nc-nd/3.0 }
+	title = \markup \medium \fontsize #6 \override #'(font-name . "Source Sans Pro Light") {
+		"9. Sibylla Europæa"
+	}
+	subtitle = \markup \medium \sans {
+		"Prophetiæ Sibyllarum"
+	}
+	composer = \markup \sans {
+		"Orlando di Lasso"
+	}
+	copyright = \markup \tiny \sans {
+		\vspace #6
+		\column \center-align {
+			\line {
+				This edition copyright \year Peter Hilton - 
+				Lilypond source at \with-url #"https://github.com/hilton/sheet-music" https://github.com/hilton/sheet-music
+			}
+			\line {
+				Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License - \with-url #"http://creativecommons.org/licenses/by-nc-sa/3.0/" http://creativecommons.org/licenses/by-nc-sa/3.0/
+			}
+		}
 	}
 	tagline = ##f 
 }
@@ -17,18 +52,8 @@ global= {
 	\set Score.timing = ##f 
 	\override Score.LyricText #'font-size = #0
 	\set Staff.midiInstrument = "choir aahs"
-	#(set-global-staff-size 18) 
-	#(set-accidental-style 'forget)
+	\accidentalStyle "forget"
 }
-
-\paper { 
-	% annotate-spacing = ##t
-	page-top-space = 0
-	between-system-padding = 0.2\cm 
-	ragged-bottom = ##f
-	ragged-last-bottom = ##t 
-	bottom-margin = 0.5\cm 
-} 
 
 soprano = \new Voice { \transpose c es {
 	\relative c' {
@@ -105,6 +130,14 @@ bass = \new Voice { \transpose c es {
 	}
 }}
 
+\layout {
+	indent = #0
+	\context {
+		\Score
+		\override VerticalAxisGroup #'staff-staff-spacing = #'((basic-distance . 15) (stretchability . 100))
+	}
+}
+
 \score {
 	\new StaffGroup << 
 		\set Score.proportionalNotationDuration = #(ly:make-moment 1 8)
@@ -114,9 +147,6 @@ bass = \new Voice { \transpose c es {
 		\new Staff << \global \tenor >> 
 		\new Staff << \global \bass >> 
 	>> 
-	\layout {
-		indent = #0
-	}
-	\midi {
-	}
+	\layout {	}
+%	\midi {	}
 }

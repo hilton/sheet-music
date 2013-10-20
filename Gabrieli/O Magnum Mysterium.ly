@@ -1,3 +1,5 @@
+% CPDL #26580
+% http://www.cpdl.org/wiki/index.php/O_magnum_mysterium_(Giovanni_Gabrieli)
 \version "2.14.2"
 
 \header {

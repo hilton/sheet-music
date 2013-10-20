@@ -1,3 +1,5 @@
+% CPDL #26630
+% http://www.cpdl.org/wiki/index.php/Prophetiae_Sibyllarum_-_Carmina_Chromatico_(Orlando_di_Lasso)
 \version "2.14.2"
 
 \header {

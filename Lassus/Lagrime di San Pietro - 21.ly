@@ -1,4 +1,7 @@
+% CPDL #30370
+% http://www.cpdl.org/wiki/index.php/Vide_homo_(Orlando_di_Lasso)
 \version "2.14.2"
+\pointAndClickOff
 
 \header {
 	title = "Lagrime di San Pietro - XXI"
