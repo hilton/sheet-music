@@ -2,6 +2,7 @@
 
 \version "2.16.2"
 revision = "4"
+\pointAndClickOff
 
 #(set-global-staff-size 15)
 

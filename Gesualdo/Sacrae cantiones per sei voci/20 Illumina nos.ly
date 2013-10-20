@@ -2,8 +2,8 @@
 
 \version "2.16.2"
 revision = "3"
-
 \pointAndClickOff
+
 #(set-global-staff-size 15)
 
 \paper {
