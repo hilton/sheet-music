@@ -13,7 +13,7 @@ revision = "1"
 	outer-margin = 15\mm
 	top-markup-spacing = #'( (basic-distance . 8) )
 	markup-system-spacing = #'( (padding . 8) )
-	system-system-spacing = #'( (basic-distance . 20) (stretchability . 100) )
+	system-system-spacing = #'( (padding . 10) (basic-distance . 20) (stretchability . 100) )
   	ragged-bottom = ##f
 	ragged-last-bottom = ##t
 } 
@@ -57,7 +57,7 @@ year = #(strftime "©%Y" (localtime (current-time)))
 		\override BarNumber #'break-visibility = #'#(#f #t #t)
 		\override BarLine #'transparent = ##t
 		\remove "Metronome_mark_engraver"
-		\override VerticalAxisGroup #'staff-staff-spacing = #'((basic-distance . 10) (stretchability . 100))
+		\override VerticalAxisGroup #'staff-staff-spacing = #'((basic-distance . 15) (stretchability . 100))
 		proportionalNotationDuration = #(ly:make-moment 1 16)
 		\override SpacingSpanner #'uniform-stretching = ##t
 	}
@@ -107,19 +107,19 @@ cantus = \new Voice {
 		r2 f'4 f8. g16 a g f e d4. c8 b8. cis16 d2 d \showBarLine \bar "|."
 	}
 	\addlyrics {
-		Ve -- ni Cre -- a -- tor, ve -- ni 
-		Cre -- a -- tor spi -- 
-		ri -- tus, re -- ple tu -- o -- rum, re -- ple tu -- 
+		Ve -- ni Cre -- a -- _ _ _ _ _ _ tor, ve -- ni 
+		Cre -- a -- _ _ _ _ _ _ _ _ tor spi -- _ 
+		_ ri -- tus, re -- ple tu -- o -- rum, re -- ple tu -- 
 		
 		o -- rum cor -- da fi -- de -- li -- um, re -- ple tu -- o -- rum cor -- da 
-		fi -- de -- li -- um: et tu -- i a -- mo -- 
+		fi -- de -- li -- um: et tu -- i a -- mo -- _ _ _ _ _ 
 		ris, et tu -- i a -- mo -- ris in 
 		
-		e -- is i -- gnem, in e -- is i -- gnem ac -- cen -- de,
-		et tu -- i a -- mo -- ris in 
-		e -- is i -- gnem ac -- cen -- de,
+		e -- is i -- gnem, in e -- is i -- gnem ac -- cen -- _ _ _ _ _ _ de,
+		et tu -- i a -- mo -- _ _ _ _ _ _ ris in 
+		e -- is i -- gnem ac -- cen -- _ _ _ _ _ _ de,
 		
-		ac -- cen -- de.
+		ac -- cen -- _ _ _ _ _ _ _ _ _ _ de.
 	}
 }
 
@@ -140,19 +140,19 @@ sextus = \new Voice {
 		e8. d16 c b a g f g a8 c d4 e8 fis4 g d1
 	}
 	\addlyrics {
-		Ve -- ni Cre -- a -- tor, ve -- 
-		ni Cre -- a -- tor, ve -- ni 
-		spi -- ri -- tus Cre -- a -- tor, re -- ple tu -- o -- rum 
+		Ve -- ni Cre -- a -- _ _ _ _ _ _ tor, ve -- 
+		ni Cre -- a -- _ _ _ _ _ _ tor, ve -- ni 
+		spi -- ri -- tus Cre -- a -- _ _ _ _ _ _ _ _ _ _ tor, re -- ple tu -- o -- rum 
 		
-		cor -- da fi -- de -- li -- um, re -- ple tu -- o -- 
-		rum cor -- da fi -- de -- li -- um: et tu -- 
-		i, et tu -- i a -- mo -- ris in 
+		cor -- da tu fi -- de -- _ _ li -- _ um, re -- ple tu -- o -- 
+		rum cor -- da fi -- de -- _ li -- _ um: et tu -- i a -- mo -- ris, et tu --
+		i, et tu -- _ i a -- mo -- _ _ _ _ _ ris in 
 		
-		e -- is i -- gnem, in e -- is i -- gnem ac -- cen -- 
-		de, ac -- cen -- de, et tu -- i a -- mo -- ris in e -- 
-		is i -- gnem ac -- cen -- de, in e -- is i -- gnem ac -- 
+		e -- is i -- gnem, in e -- is i -- gnem ac -- cen -- _ _ _ _ _ 
+		_ de, ac -- cen -- _ _ _ _ _ _ _ de, et __ _ _ _ tu -- i a -- mo -- ris in e -- _ 
+		is __ _ i -- gnem ac -- cen -- _ _ _ _ de, in e -- is i -- gnem ac -- 
 		
-		cen -- de, ac -- cen -- de.
+		cen -- _ _ _ _ _ _ _ _ _ de, ac -- cen -- _ de.
 	}
 }
 
@@ -173,19 +173,19 @@ altus = \new Voice {
 		a4. a8. b16 c8. b16 a g f8. g16 a4. g8 g2 fis4 g2
 	}
 	\addlyrics {
-		Ve -- ni Cre -- a -- tor spi -- ri -- tus, spi -- 
-		ri -- tus, ve -- ni Cre -- a -- tor spi -- 
-		ri -- tus, re -- ple tu -- o -- rum cor -- da fi -- de -- li -- um, ve -- ni Cre -- a -- 
+		Ve -- ni Cre -- a -- _ _ _ _ _ _ tor spi -- _ _ ri -- tus, spi -- 
+		_ _ ri -- tus, ve -- ni Cre -- a -- _ _ _ _ _ _ tor spi -- _ 
+		_ ri -- tus, re -- ple tu -- o -- rum cor -- da fi -- de -- li -- um, ve -- ni Cre -- a -- _ _ _ _ _ _ 
 		
-		tor spi -- ri -- tus, re -- ple tu -- o -- rum cor -- da, cor -- da, tu -- o -- rum cor -- da fi -- 
+		tor spi -- _ _ ri -- tus, re -- ple tu -- o -- rum cor -- _ _ _ _ da, cor -- da, tu -- o -- rum cor -- da fi -- 
 		de -- li -- um: et tu -- i a -- mo -- ris, et tu -- i, et tu -- i a -- 
-		mo -- ris, et tu -- i a -- mo -- ris, et tu -- i a -- mo -- ris
+		mo -- _ _ _ _ _ ris, et tu -- i a -- mo -- _ _ _ _ ris, et tu -- i a -- mo -- _ ris
 		
-		in e -- is i -- gnem, i -- gnem ac -- cen -- 
-		de, et tu -- i a -- mo -- ris in e -- is i -- 
-		gnem ac -- cen -- de, ac -- cen -- de, i -- 
+		in e -- is i -- gnem, i -- gnem ac -- cen -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+		de, et tu -- i a -- mo -- _ _ _ _ _ _ _ _ ris in e -- is i -- 
+		gnem ac -- cen -- _ _ _ _ _ _ de, ac -- cen -- _ _ _ _ _ _ _ de, i -- 
 		
-		gnem ac -- cen -- de.
+		gnem ac -- _ cen -- _ _ _ _ _ _ _ _ _ de.
 	}
 }
 
@@ -208,18 +208,18 @@ quintus = \new Voice {
 	}
 	\addlyrics {
 		Ve -- 
-		ni Cre -- a -- tor, Cre -- a -- tor, ve -- ni, 
-		ve -- ni Cre -- a -- tor spi -- ri -- tus, spi -- ri -- 
+		ni Cre -- _ _ _ _ _ _ a -- tor, Cre -- a -- _ _ _ _ tor, ve -- ni, 
+		ve -- ni Cre -- a -- _ _ _ _ _ _ tor spi -- _ _ ri -- tus, spi -- _ _ ri -- 
 		
 		tus, re -- ple tu -- o -- rum cor -- da fi -- de -- li -- um, tu -- o -- rum cor -- da fi -- de -- li -- um, fi -- de -- li -- 
-		um, fi -- de -- li -- um: et tu -- i, et tu -- i a -- mo -- 
-		ris, a -- mo -- ris, et tu -- i a -- mo -- ris, 
+		um, fi -- de -- li -- um: et tu -- i, et tu -- i a -- mo -- _ 
+		_ _ _ _ _ _ _ ris, a -- mo -- _ _ _ _ ris, et tu -- i a -- mo -- ris, 
 		
 		et tu -- i a -- mo -- ris in e -- is i -- gnem ac -- 
-		cen -- de, in e -- is i -- gnem, i -- gnem ac -- cen -- 
-		de, ac -- cen -- de, i -- gnem ac -- cen -- 
+		cen -- _ _ _ _ _ _ _ _ _ _ de, in e -- is i -- gnem, i -- gnem ac -- cen -- _ 
+		_ _ _ _ _ _ _ de, ac -- cen -- _ _ _ _ _ _ de, i -- gnem ac -- cen -- _ 
 		
-		de, ac -- cen -- de.
+		_ _ _ _ _ _ _ de, ac -- cen -- _ _ _ _ _ _ _ _ _ de.
 	}
 }
 
@@ -242,18 +242,18 @@ tenor = \new Voice {
 	}
 	\addlyrics {
 		Ve -- ni Cre -- 
-		a -- tor spi -- ri -- tus, ve -- ni Cre -- a -- 
-		tor spi -- ri -- tus, re -- ple tu -- o -- rum cor -- da, tu -- o -- rum cor -- 
+		a -- _ _ _ _ _ _ tor spi -- _ _ ri -- tus, ve -- ni Cre -- a -- 
+		_ _ _ _ tor spi -- _ _ ri -- tus, re -- ple tu -- o -- rum cor -- da, tu -- o -- rum cor -- 
 		
 		da fi -- de -- li -- um, re -- ple tu -- o -- rum cor -- da fi -- 
-		de -- li -- um: et tu -- i a -- mo -- ris, et tu -- i a -- mo -- ris,
-		et tu -- i, et tu -- i a -- mo -- ris, et tu -- i a -- mo -- 
+		de -- li -- um: et tu -- i a -- mo -- _ _ _ _ ris, et tu -- i a -- mo -- _ _ _ _ _ _ _ ris,
+		et tu -- i, et tu -- i a -- mo -- _ _ _ _ ris, et tu -- i a -- mo -- _ 
 		
-		ris in e -- is i -- gnem ac -- cen -- de, et tu -- i a -- mo -- 
-		ris, et tu -- i a -- mo -- ris, a -- mo -- ris in 
-		e -- is i -- gnem ac -- cen -- de, i -- gnem ac -- 
+		_ _ _ ris in e -- is i -- gnem ac -- cen -- _ _ _ _ _ _ de, et tu -- i a -- mo -- _ _ _ _ 
+		ris, et tu -- i a -- mo -- _ _ _ _ ris, a -- mo -- _ _ _ _ ris in 
+		e -- is i -- gnem ac -- cen -- _ _ _ _ _ _ _ _ de, i -- gnem ac -- 
 		
-		cen -- de.
+		cen -- _ _ _ _ _ _ de.
 	}
 }
 
@@ -276,17 +276,18 @@ bassus = \new Voice {
 	}
 	\addlyrics {
 		Ve -- ni 
-		Cre -- a -- tor spi -- ri -- tus, spi -- ri -- tus,
-		Cre -- a -- tor spi -- ri -- tus, spi -- ri -- tus, re -- 
+		Cre -- _ a -- _ _ _ _ _ _ tor spi -- _ _ ri -- tus, spi -- ri -- tus,
+		Cre -- _ _ a -- _ _ _ _ _ tor spi -- _ _ _ _ ri -- tus, re -- 
 		
-		ple tu -- o -- rum cor -- da fi -- de -- li -- um, re -- ple 
+		ple tu -- o -- rum cor -- da fi -- de -- _ li -- um, re -- ple 
 		tu -- o -- rum cor -- da fi -- de -- li -- um, fi -- de -- li -- um: et tu -- i a -- 
-		mo -- ris, a -- mo -- ris, et tu -- i a -- mo -- 
+		mo -- _ _ _ _ _ _ _ _ ris, a -- mo -- ris, et tu -- i a -- mo -- 
 		
-		ris in e -- is i -- gnem ac -- cen -- de, et tu -- i 
-		a -- mo -- ris, et tu -- i a -- mo -- ris, a -- 
-		mo -- ris in e -- is i -- gnem ac -- cen -- 
-		de, ac -- cen -- de.
+		_ _ _ _ ris in e -- is i -- _ gnem ac -- cen -- _ _ _ _ _ de, __ _ et __ _ tu -- i 
+		a -- mo -- _ _ _ _ ris, et tu -- _ i a -- mo -- _ _ _ _ ris, a -- 
+		mo -- _ _ _ _ ris in e -- is i -- gnem ac -- cen -- _ _ _ _ _ _ _ 
+
+		_ de, __ _ ac -- cen -- de.
 	}
 }
 
@@ -304,5 +305,5 @@ bassus = \new Voice {
 		>> 
 	>>
 	\layout { }
-%	\midi { }
+	\midi { }
 }
