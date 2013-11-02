@@ -1,7 +1,7 @@
 % Copyright ©2013 Peter Hilton - https://github.com/hilton
 
 \version "2.16.2"
-revision = "1"
+revision = "2"
 
 #(set-global-staff-size 15)
 
@@ -96,9 +96,9 @@ cantus = \new Voice {
 		
 		c'4 c2 d c4 a2 f r r r4 c'4 es d c2 \break f, r
 		R1 d'2 bes1 es,1 c'2 \break bes a1 r2 b4 c2 bes!4 a2 a
-		r2 d4. d8 bes1 \break r4 c a g4. a8 bes c d2 d r r a ~
+		r2 d4. d8 bes1 \break r4 c a g4. a8 bes c d2 d r1 a
 		
-		a f \break r4 c' bes8 c d2 c bes4 g8 a bes c d2 c d g, r \break
+		 f2 \break r4 c' bes8 c d2 c bes4 g8 a bes c d2 c d g, r \break
 		r r4 d4. d8 a'4 a2. f2 es d8 e! f4 d
 		f1 ~ \break f2 a2 R1 r4 d g,2 es'1 d \showBarLine \bar "|."
 	}
@@ -156,9 +156,9 @@ altus = {
 			
 			g4 g a f e8 f16 g a8 g f e d4. e8 f2 e4 f2 f bes,4. g8 c2 d4 f2 e4
 			d2 d R1 d1. es2 g fis1 d4 f!2 es4 d2. a4 r2
-			r4 a'4. a8 g4 g f d8 e f g a2 a,4 e' d8 d g4 r2 r4 a f d8 e f g a4 a,2 ~
+			r4 a'4. a8 g4 g f d8 e f g a2 a,4 e' d8 d g4 r2 r4 a f d8 e f g a4 a,2.
 			
-			a4 a2 f'4 ~ f es4 d2 g,4. g8 c4 f d d2 a'4 f4. f8 a4 f ~ f es d4. e!8
+			 a2 f'4 ~ f es4 d2 g,4. g8 c4 f d d2 a'4 f4. f8 a4 f2 es4 d4. e!8
 			f e16 d g4 f2. d4 e e4. e8 d4 r2 R1
 			r2 r4 f d d4. e8 f g a4 g2 fis4 g1 ~ g\breve
 		}
@@ -191,8 +191,8 @@ quintus = {
 			e2 d d4. d8 f2 f2. e4 g4. a8 bes c d2 a4 r2 f4. f8 e2
 			
 			r a4. a8 c4 g4. g8 bes4 es2. d4 d,8 \ficta e!16 f g4 f f c' a4. a8 d,4 g2 f4 f ~
-			f es4 d4. e!8 f g a4 a2 r4 d,4. d8 es4 f2 d ~
-			d r4 a'4 f d8 e f g a4 a2 a g d' g,\breve
+			f es4 d4. e!8 f g a4 a2 r4 d,4. d8 es4 f2 d1
+			 r4 a'4 f d8 e f g a4 a2 a g d' g,\breve
 		}
 	}
 	\addlyrics {
