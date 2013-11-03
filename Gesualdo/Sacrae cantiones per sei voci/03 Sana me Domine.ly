@@ -1,7 +1,7 @@
 % Copyright ©2013 Peter Hilton - https://github.com/hilton
 
 \version "2.16.2"
-revision = "2"
+revision = "3"
 
 #(set-global-staff-size 15)
 
@@ -104,7 +104,7 @@ cantus = \new Voice {
 	}
 	\addlyrics {
 		Do -- _ _ _ mi -- ne,
-		Sa -- na me Do -- _ _ _ _ _ _ _ _ mi -- ne
+		sa -- na me Do -- _ _ _ _ _ _ _ _ mi -- ne
 		et sa -- na -- bor: sal -- vum me
 
 		fac et sal -- vus e -- ro, et sal -- vus e -- ro,
@@ -132,8 +132,8 @@ sextus = \new Voice {
 		bes4. a8 a4 g4 ~ g e2 a8 g16 f e2 e'4 a, g f2 r4 r2 f d1
 	}
 	\addlyrics {
-		Do -- _ _ _ mi -- _ ne, sa -- na -- bor, __ _ Sa -- 
-		na me Do -- mi -- ne, Sa -- _ na me,
+		Do -- _ _ _ mi -- _ ne, sa -- na -- bor, __ _ sa -- 
+		na me Do -- mi -- ne, sa -- _ na me,
 		et sa -- na -- bor, et sa -- _ na -- bor: sal -- vum
 		
 		me -- _ a fac et sal -- vus e -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ ro
@@ -164,8 +164,8 @@ altus = {
 		}
 	}
 	\addlyrics {
-		Do -- mi -- _ _ _ ne et sa -- na -- bor, Sa -- na 
-		me Do -- _ _ _ mi -- ne, Sa -- na me, Sa -- na 
+		Do -- mi -- _ _ _ ne et sa -- na -- bor, sa -- na 
+		me Do -- _ _ _ mi -- ne, sa -- na me, sa -- na 
 		me Do -- _ _ _ mi -- ne et sa -- na -- bor: sal -- vum me fac __ _ _ _ 
 		
 		_ et sal -- vus e -- _ _ _ _ _ _ _ _ _ _ ro, sal -- vum me fac et sal -- vus 
@@ -196,7 +196,7 @@ quintus = {
 		}
 	}
 	\addlyrics {
-		Sa -- na me Do -- _ _ _ mi -- ne, Do -- _ _ _ mi -- ne, Sa -- na me 
+		Sa -- na me Do -- _ _ _ mi -- ne, Do -- _ _ _ mi -- ne, sa -- na me 
 		Do -- _ _ _ mi -- ne et sa -- na -- bor, et 
 		sa -- na -- _ _ _ bor, et sa -- na -- bor: sal -- vum me fac et sal -- vus 
 		
@@ -228,8 +228,8 @@ tenor = {
 		}
 	}
 	\addlyrics {
-		Sa -- na me Do -- _ _ _ mi -- ne, Sa -- na me Do -- _ _ _ mi -- 
-		ne et sa -- na -- _ _ _ bor, Sa -- na me Do -- _ _ _ _ _ 
+		Sa -- na me Do -- _ _ _ mi -- ne, sa -- na me Do -- _ _ _ mi -- 
+		ne et sa -- na -- _ _ _ bor, sa -- na me Do -- _ _ _ _ _ 
 		_ _ _ _ _ mi -- ne et sa -- na -- bor: sal -- vum me fac __ _ _ et sal -- 
 		
 		vus, et sal -- vus e -- ro, et sal -- vus e -- _ _ _ ro, et sal -- vus e -- 

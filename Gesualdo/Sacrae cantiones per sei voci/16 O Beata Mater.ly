@@ -1,7 +1,7 @@
 % Copyright ©2013 Peter Hilton - https://github.com/hilton
 
 \version "2.16.2"
-revision = "1"
+revision = "2"
 \pointAndClickOff
 
 #(set-global-staff-size 15)
@@ -104,9 +104,9 @@ cantus = \new Voice {
 		d4 d2 c4 b b b a8 gis a4 c c1 b8 a b g g'4 e r g2 f e4 f1 \showBarLine \bar "|."
 	}
 	\addlyrics {
-		O Be -- a -- ta Ma -- ter et in -- ta -- cta Vir -- _ _ _ go, O Be -- a -- ta Ma -- ter, O -- 
+		O Be -- a -- ta Ma -- ter et in -- ta -- cta Vir -- _ _ _ go, o Be -- a -- ta Ma -- ter, O -- 
 		Be -- a -- ta Ma -- ter et in -- ta -- cta Vir -- _ _ _ go, glo -- ri -- o -- _ _ _ _ _ _ 
-		_ sa, O Be -- a -- ta Ma -- ter, O Be -- a -- ta Ma -- ter, Ma -- ter
+		_ sa, o Be -- a -- ta Ma -- ter, o Be -- a -- ta Ma -- ter, Ma -- ter
 		
 		et in -- ta -- _ _ _ _ _ _ cta Vir -- _ _ _ go, Vir --
 		_ _ _ go, glo -- ri -- o -- _ _ _ _ _ _ _ _ sa Re --
@@ -133,13 +133,13 @@ sextus = \new Voice {
 		a4 b2 | e r4 c c4. d8 e4 g e8 d c b16 c d2 c4 c e4. d8 c\breve |
 	}
 	\addlyrics {
-		O Be -- a -- ta Ma -- ter et in -- ta -- cta Vir -- _ _ _ go, O Be -- 
+		O Be -- a -- ta Ma -- ter et in -- ta -- cta Vir -- _ _ _ go, o Be -- 
 		a -- ta Ma -- ter et in -- ta -- cta Vir -- _ _ _ go, glo -- ri -- o -- _ _ _ _ _ _ _ 
-		sa, O Be -- a -- ta Ma -- ter, Ma -- ter et in -- ta -- _ _ _ _ _ _ _ cta
+		sa, o Be -- a -- ta Ma -- ter, Ma -- ter et in -- ta -- _ _ _ _ _ _ _ cta
 		
 		Vir -- _ _ _ go, glo -- ri -- o -- _ _ _ _ _ sa, 
 		Vir -- _ _ _ go, glo -- ri -- o -- _ _ _ _ sa, Vir -- _ _ 
-		_ go, glo -- ri -- o -- _ _ _ _ _ _ sa, Re -- gi -- na mun -- di, Re -- gi -- na mun -- di, 
+		_ go, glo -- ri -- o -- _ _ _ _ _ _ sa Re -- gi -- na mun -- di, Re -- gi -- na mun -- di, 
 		
 		in -- ter -- ce -- de, in -- ter -- ce -- de pro no -- _ _  
 		_ _ _ _ bis, in -- ter -- ce -- de pro no -- _ _ _ _ _ bis, in -- 
@@ -192,9 +192,9 @@ quintus = \new Voice {
 		d2 b4 e | e e4. d8 c b a4 g2 g4 g'1. e2 a, g4. g8 f1
 	}
 	\addlyrics {
-		O Be -- a -- ta, O Be -- 
-		a -- ta, O Be -- a -- ta Ma -- ter, Ma -- ter et in -- ta -- cta Vir -- _ _ 
-		_ go, glo -- ri -- o -- _ _ _ _ _ _ sa, O Be -- a -- 
+		O Be -- a -- ta, o Be -- 
+		a -- ta, o Be -- a -- ta Ma -- ter, Ma -- ter et in -- ta -- cta Vir -- _ _ 
+		_ go, glo -- ri -- o -- _ _ _ _ _ _ sa, o Be -- a -- 
 		
 		ta Ma -- ter et in -- ta -- cta Vir -- _ _ _ go, 
 		Vir -- _ _ _ _ _ go, glo -- ri -- o -- _ _ _ _ _ _ sa Re -- gi -- 
@@ -222,13 +222,13 @@ tenor = \new Voice {
 		a4. a8 g2 | g4 b4. b8 e4 r e, e'8 d c b16 a g2 b4 b g2. g4 c\breve |
 	}
 	\addlyrics {
-		O Be -- a -- ta
-		Ma -- ter et in -- ta -- cta Vir -- _ _ _ go glo -- ri -- o -- _ _ _ _ _ _ _ _ _ _ _ sa, O 
-		Be -- a -- ta Ma -- ter, O Be -- a -- ta Ma -- ter, Ma -- ter, et
+		o Be -- a -- ta
+		Ma -- ter et in -- ta -- cta Vir -- _ _ _ go, glo -- ri -- o -- _ _ _ _ _ _ _ _ _ _ _ sa, O 
+		Be -- a -- ta Ma -- ter, o Be -- a -- ta Ma -- ter, Ma -- ter, et
 		
 		in -- ta -- _ _ _ _ _ _ _ _ _ _ _ _ _ cta, et in -- ta -- _ _ _ cta Vir -- _ _ 
 		_ go, Vir -- _ _ _ go, glo -- ri -- 
-		o -- _ _ _ _ _ _ sa, Re -- gi -- na, Re -- gi -- na mun -- di, Re -- gi -- na mun -- di, 
+		o -- _ _ _ _ _ _ sa Re -- gi -- na, Re -- gi -- na mun -- di, Re -- gi -- na mun -- di, 
 		
 		in -- ter -- ce -- de, in -- ter -- ce -- de pro no -- _ _ _ _ bis, in -- ter -- ce -- de pro no -- bis 
 		ad Do -- mi -- num, in -- ter -- ce -- de pro no -- bis, pro no -- bis ad 
@@ -254,10 +254,10 @@ bassus = \new Voice {
 	\addlyrics {
 		O Be -- a -- ta Ma -- ter et in -- 
 		ta -- cta, in -- ta -- cta Vir -- _ _ _ go, __ _ _ glo -- ri -- o -- _ _ _ _ _ 
-		_ _ _ _ _ sa, O Be -- a -- ta Ma -- ter, Ma -- _ _ ter, in -- ta -- _ _ _
+		_ _ _ _ _ sa, o Be -- a -- ta Ma -- ter, Ma -- _ _ ter, in -- ta -- _ _ _
 		
 		_ _ _ _ _ _ _ _ cta, et in -- ta -- _ _ _ _ _ _ _ cta Vir -- _ 
-		go, Vir -- _ _ _ go glo -- ri -- o -- _ _ _ _ _ sa, 
+		go, Vir -- _ _ _ go, glo -- ri -- o -- _ _ _ _ _ sa
 		Re -- gi -- na mun -- di, Re -- gi -- na mun -- di, Re -- gi -- na mun -- di, 
 		
 		in -- ter -- ce -- de, in -- ter -- ce -- de pro no -- bis ad Do -- mi -- num, in -- ter -- ce -- 

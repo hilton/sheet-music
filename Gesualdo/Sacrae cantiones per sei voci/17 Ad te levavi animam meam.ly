@@ -1,7 +1,7 @@
 % Copyright ©2013 Peter Hilton - https://github.com/hilton
 
 \version "2.16.2"
-revision = "1"
+revision = "2"
 \pointAndClickOff
 
 #(set-global-staff-size 15)
@@ -99,20 +99,20 @@ cantus = \new Voice {
 		R R R e'4 d8 d b a b c | \break d c b c c d e f g2 e4 f f2. e2 
 		d cis4 d1 R | \break r4 d d2 r4 e e2 c b a1 |
 		
-		r2 c4 d8 e | \break f2 e4 g4. fis8 fis e16 fis g1 g,4 a a2. g4 g'2. f4 | \break e2 a,
+		r2 c4 d8 e | \break f2 e4 g4. fis8 \ficta fis e16 \ficta fis g1 g,4 a a2. g4 g'2. f4 | \break e2 a,
 		R1 e'2. a,4 b b b2 e,1. r2 | \break
 		e'2 f4 d2 d4 d2 dis e fis4 \ficta fis \ficta fis2 f!\breve \showBarLine \bar "|."
 	}
 	\addlyrics {
 		Ad te le -- va -- vi a -- ni -- mam 
 		me -- am, ad te le -- va -- vi 
-		a -- ni -- mam me -- _ _ _ _ _ am, Do -- mi -- ne De -- us me -- _ _ us ad
+		a -- ni -- mam me -- _ _ _ _ _ am, Do -- mi -- ne De -- us me -- _ _ us, ad
 		
 		te le -- va -- vi 
-		a -- ni -- mam me -- _ _ _ _ _ _ _ _ _ _ _ _ am: in te con -- 
-		fi -- _ do, in te, in te con -- fi -- do 
+		a -- ni -- mam me -- _ _ _ _ _ _ _ _ _ _ _ _ am, in te con -- 
+		fi -- _ do, in te, in te con -- fi -- do, 
 		
-		Do -- mi -- ne De -- us me -- _ _ _ _ _ us in te, in te con -- fi -- do
+		Do -- mi -- ne De -- us me -- _ _ _ _ _ us in te, in te con -- fi -- do,
 		non, non e -- ru -- be -- scam,
 		non, non e -- ru -- be -- scam, non e -- ru -- be -- scam.
 	}
@@ -135,13 +135,13 @@ sextus = \new Voice {
 	\addlyrics {
 		Ad te le -- va -- vi a -- ni -- mam me -- _ _ _ _ _ _ _ 
 		_ _ am, ad te le -- va -- _ _ vi,
-		ad te le -- va -- vi a -- ni -- mam me -- _ _ am
+		ad te le -- va -- vi a -- ni -- mam me -- _ _ am,
 		
 		Do -- mi -- ne De -- us, in te con -- fi -- do,
 		in te, in te con -- fi -- do, in 
-		te, in te con -- fi -- do __ _ Do -- mi -- ne
+		te, in te con -- fi -- do, __ _ Do -- mi -- ne
 		
-		De -- us me -- _ _ _ _ _ _ us in te con -- fi -- do,
+		De -- us me -- _ _ _ _ _ _ us, in te con -- fi -- do,
 		in te con -- fi -- do, non,
 		non e -- ru -- be -- scam, non e -- ru -- be -- scam.
 	}
@@ -166,11 +166,11 @@ altus = \new Voice {
 		a -- ni -- mam me -- _ _ _ _ _ _ _ _ _ am, a -- ni -- mam me -- am, ad 
 		te le -- va -- vi a -- ni -- mam me -- _ _ _ _ _ am, Do -- mi -- ne De -- us
 		
-		me -- _ _ _ us ad te, ad te le -- va -- _ _ _ vi a -- ni -- mam me -- 
-		am: Do -- mi -- ne De -- us me -- _ _ _ us in te con -- fi -- do, in te, in te
+		me -- _ _ _ us, ad te, ad te le -- va -- _ _ _ vi a -- ni -- mam me -- 
+		am, Do -- mi -- ne De -- us me -- _ _ _ us, in te con -- fi -- do, in te, in te
 		con -- fi -- do, Do -- mi -- ne De -- us me -- _ _ _ _ _ _ _ _ us,
 		
-		De -- us me -- _ _ _ _ _ _ _ us in te con -- fi -- _ _ _ _ _ do, in te con -- fi -- do,
+		De -- us me -- _ _ _ _ _ _ _ us, in te con -- fi -- _ _ _ _ _ do, in te con -- fi -- do,
 		in te con -- fi -- do, non e -- ru -- be -- scam, non,
 		non e -- ru -- be -- scam, non, non e -- ru -- be -- scam.
 	}
@@ -196,11 +196,11 @@ quintus = \new Voice {
 		va -- _ _ vi, ad te le -- va -- vi a -- ni -- mam me -- _ _ 
 		_ _ _ am, ad te le -- va -- vi, ad te le -- 
 		
-		va -- vi a -- ni -- mam me -- _ _ _ am, a -- ni -- mam me -- am:
+		va -- vi a -- ni -- mam me -- _ _ _ am, a -- ni -- mam me -- am,
 		Do -- mi -- ne De -- us me -- _ us, Do -- mi -- ne De -- us,
-		De -- us me -- us in te con -- fi -- do, con -- 
+		De -- us me -- us, in te con -- fi -- do, con -- 
 		
-		fi -- do, Do -- mi -- ne De -- us me -- us in 
+		fi -- do, Do -- mi -- ne De -- us me -- us, in 
 		te, in te con -- fi -- do, non e -- ru -- be -- 
 		scam, non e -- ru -- be -- scam, non e -- ru -- be -- scam.
 	}
@@ -226,11 +226,11 @@ tenor = \new Voice {
 		_ vi, ad te le -- va -- vi, ad te 
 		le -- va -- _ _ _ _ vi a -- ni -- mam me -- am, ad te le -- va -- 
 		
-		vi a -- ni -- mam me -- am, a -- ni -- mam me -- am: Do -- mi -- ne De -- us me -- _ _ 
-		_ us in te con -- fi -- do, in te,
+		vi a -- ni -- mam me -- am, a -- ni -- mam me -- am, Do -- mi -- ne De -- us me -- _ _ 
+		_ us, in te con -- fi -- do, in te,
 		in te con -- fi -- do, Do -- mi -- ne De -- _ _ _ _ us me -- _ _ _ 
 		
-		us, Do -- mi -- ne De -- us me -- us 
+		us, Do -- mi -- ne De -- us me -- us,
 		in te con -- fi -- _ _ _ _ do, in te con -- fi -- do,
 		non e -- ru -- be -- scam, e -- ru -- be -- scam.
 	}
@@ -256,11 +256,11 @@ bassus = \new Voice {
 		ad te le -- va -- vi a -- ni -- mam me -- _ _ _ _ _ am,
 		ad te le -- va -- vi a -- ni -- mam me -- _ _ am, Do -- mi -- ne 
 		
-		De -- us me -- _ _ _ us in te con -- fi -- 
+		De -- us me -- _ _ _ us, in te con -- fi -- 
 		do, in te con -- fi -- do, in te 
 		con -- fi -- do, Do -- mi -- ne De -- us me -- _ _ _ _ _ us, me --
 		
-		us in te con -- fi -- do,
+		us, in te con -- fi -- do,
 		in te con -- fi -- do, in te con -- fi -- do,
 		non e -- ru -- be -- scam, non, non e -- ru -- be -- scam.
 	}
@@ -281,5 +281,5 @@ bassus = \new Voice {
 		>> 
 	>>
 	\layout { }
-%	\midi { }
+	\midi { }
 }
