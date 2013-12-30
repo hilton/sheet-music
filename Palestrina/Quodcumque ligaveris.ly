@@ -1,7 +1,7 @@
 % Copyright ©2013 Peter Hilton - https://github.com/hilton
 
 \version "2.16.2"
-revision = "2"
+revision = "3"
 \pointAndClickOff
 
 #(set-global-staff-size 15)
@@ -10,10 +10,11 @@ revision = "2"
 	#(define fonts (make-pango-font-tree "Century Schoolbook L" "Source Sans Pro" "Luxi Mono" (/ 15 20)))
 	annotate-spacing = ##f
 	two-sided = ##t
+	top-margin = 5\mm
 	inner-margin = 15\mm
-	outer-margin = 30\mm
+	outer-margin = 20\mm
 	top-markup-spacing = #'( (basic-distance . 8) )
-	markup-system-spacing = #'( (padding . 8) )
+	markup-system-spacing = #'( (padding . 4) )
 	system-system-spacing = #'( (basic-distance . 20) (stretchability . 100) )
   	ragged-bottom = ##f
 	ragged-last-bottom = ##t
@@ -22,15 +23,12 @@ revision = "2"
 year = #(strftime "©%Y" (localtime (current-time)))
 
 \header {
-	title = \markup \medium \fontsize #6 \override #'(font-name . "Source Sans Pro Light") {
-		"Quodcumque ligaveris"
-	}
 	poet = \markup \medium \sans {
-		"Tu es Petrus - secunda pars"
+		"Secunda pars (Tu es Petrus)"
 	}
 	composer = \markup \sans \column \right-align { "Giovanni Pierluigi da Palestrina (1525-1594)" }
 	copyright = \markup \sans {
-		\vspace #6
+		\vspace #2
 		\column \center-align {
 			\line {
 				This edition copyright \year Peter Hilton - 
@@ -84,23 +82,23 @@ squareBracket = {  }
 
 cantus = \new Voice {
 	\relative c'' {
-		R1 R r2 g1 c2 b b \break c4. a8 a4 b |
+		R1 R r2 g1 c2 b b c4. a8 a4 b | \break 
 		
-		d4 e4. d8 c b a4 g a2 b1 R \break R R |
-		R R r4 g g a ~ \break a b2 c e g4 fis2 g |
-		R1 r2 r4 c, ~ \break c b d2 d4 d2 d4 e2 d4 b2 b4 c2 |
+		d4 e4. d8 c b a4 g a2 b1 R R R | \break 
+		R R r4 g g a2 b c e g4 fis2 g | \break 
+		R1 r2 r4 c,2 b4 d2 d4 d2 d4 e2 d4 b2 b4 c2 |
 		
 		b4 d2 d4 \break e2 d c4. c8 b4 a2 g4 f2 e4 c'2 e4 c2 c |
-		a4. a8 a2 \break R1 r4 a b c d2 c R1 r4 e d e |
-		f2 e4 g8 f \break e d c b a4 d2 \ficta cis4 d2 r4 c b c d2 g,4 c2 e4 f8 e d c |
+		a4. a8 a2 R1 \break r4 a b c d2 c R1 r4 e d e |
+		f2 e4 g8 f e d c b a4 d2 \ficta cis4 d2 \break r4 c b c d2 g,4 c2 e4 f8 e d c |
 		
-		b4 g r d' \break b e4. d8 c2 b8 a b2 c1 R r2 r4 g |
-		b2. b4 \break c2 b4 d2 d4 e2 d4 b c8 b c d e f g4. \ficta fis16 e \ficta fis4 g1 |
-		R \break R r2 r4 g, d'2 b4. c8 d4 e2 d8 c b2 r4 a |
+		b4 g r d' b e4. d8 c2 b8 a b2 \break c1 R r2 r4 g |
+		b2. b4 c2 b4 d2 d4 e2 d4 b c8 b c d \break e f g4. \ficta fis16 e \ficta fis4 g1 |
+		R R r2 r4 g, d'2 b4. c8 \break d4 e2 d8 c b2 r4 a |
 		
-		d d b \ficta cis \break d1 R r4 d e2. e4 f2 e4 c2 c4 |
-		c2 c \break R1 r2 r4 e2 e4 f2 d4 e f e4. d8 b c d2 |
-		r4 b2 b4 \break c2 b4 g a8 b c d e f g e \ficta fis4 g2 \ficta fis4 g2 r4 d g8 f e d e2 d1 \showBarLine \bar "|." |
+		d d b \ficta cis d1 R r4 d e2. e4 f2 \break e4 c2 c4 | 
+		c2 c R1 r2 r4 e2 e4 f2 d4 e f e4. d8 b c d2 | \break
+		r4 b2 b4 c2 b4 g a8 b c d e f g e \ficta fis4 g2 \ficta fis4 g2 r4 d g8 f e d e2 d1 \showBarLine \bar "|." |
 	}
 	\addlyrics {
 		Quod -- cúm -- que li -- gá -- ve -- ris su --
@@ -125,14 +123,14 @@ cantus = \new Voice {
 
 quintus = \new Voice {
 	\relative c'' {
-		R1 R d e d4 d2 e4 ~ e8 c8 c4 d2 |
+		R1 R d e d4 d2 e4. c8 c4 d2 |
 		
 		b4 c4. b8 a g f4 g4. f16 e f4 g1 R R R |
-		R R r4 b c c ~ c d2 e c b4 d2 b4 g |
-		g a2 b c e4 ~ e g fis2 g r1 r4 d2 d4 e2 |
+		R R r4 b c c2 d e c b4 d2 b4 g |
+		g a2 b c e g4 fis2 g r1 r4 d2 d4 e2 |
 		
 		d2 r R1 R R r4 e2 e4 f2 e |
-		d4. d8 c4 a ~ a g f2 e r1 r4 a b c d2 c r |
+		d4. d8 c4 a2 g4 f2 e r1 r4 a b c d2 c r |
 		R1 R R r4 e d e f2 e4 g8 f e d c b a4 d2
 		
 		 \ficta cis4 d2 r4 b c2 d1 e4 c e2. e4 f2 e1 |
@@ -179,7 +177,7 @@ altus = \new Voice {
 		
 		g2 a g4 g2 g4 g1 g2 r4 g c c a b c b8 a g2 |
 		r4 g g g e \ficta fis g g2 g4 c,2 g'4 g f4. e16 d c8 d e4 d2 g r |
-		r4 c, d e f2 e4 c d2 b r4 d2 g g4 a2 g4 g a2.
+		r4 c, d e f2 e4 c d2 b r4 d2 g4 ~ g g4 a2 g4 g a2.
 		
 		 f4 g2 a r4 d, g g e \ficta fis g2 r R1 r4 g2 g4 |
 		a2 g4 e a2. g4. f8 d4 e g2 g4 a2 g4 b c4. b8 a4 g a2 |
@@ -212,20 +210,20 @@ tenor = \new Voice {
 		d1 e d R R R
 		
 		R R r2 d2 e1 d4 d2 e4. c8 c4 d2 |
-		b4 c4. b8 a g \ficta fis4 g a2 g4 d' e e ~ e g2 g g g4 a2 g |
-		r4 c,2 d e g4 ~ g g4 a2 g1. r4 g2 g4 g2 |
+		b4 c4. b8 a g \ficta fis4 g a2 g4 d' e e2 g g g g4 a2 g |
+		r4 c,2 d e g g4 a2 g1. r4 g2 g4 g2 |
 		
 		g1 ~ g e4. e8 e4 c2 c4 a b c c2 c4 a2 c |
-		f4. f8 e4 c ~ c c a2 a4 e' g a d,2 e4 c d f f g a e g g |
+		f4. f8 e4 c2 c4 a2 a4 e' g a d,2 e4 c d f f g a e g g |
 		f2 g8 f e d e2 r4 f g2 a g r4 g, a b c8 d e f g4 g f a4. 
 
 		 g8 g2 \ficta fis4 g e2 e4 d1 c2 r4 e g a f2 g e |
 		d4. c8 b4 g c a b2 R1 R R r4 d2 d4 |
 		e2 d4 b c8 b c d e f g2 \ficta fis4 g1 r2 R1 r4 d f d8 e |
 		 
-		f g a2 g4 ~ g \ficta fis4 g2 R1 r4 g g2. a4 f2 g4 e2 e4 |
+		f g a2 g \ficta fis4 g2 R1 r4 g g2. a4 f2 g4 e2 e4 |
 		c2 e4 g f2. e4 d2 c R1 R R |
-		r4 d2 g,4 ~ g c d b c2 c2. b4 a d4. b8 e4 d2 e c d1 |
+		r4 d2 g, c4 d b c2 c2. b4 a d4. b8 e4 d2 e c d1 |
 	}
 	\addlyrics {
 		Quod -- cúm -- que,
@@ -254,7 +252,7 @@ sextus = \new Voice {
 		r2 g1 c2 b1 R R R
 		
 		R R r2 g1 c2 b b c4. a8 a4 b  |
-		d e4. d8 c b a4 g2 \ficta fis4 g g c a ~ a g2 c, c' e4 d2 g, |
+		d e4. d8 c b a4 g2 \ficta fis4 g g c a2 g c, c' e4 d2 g, |
 		R1 R R r4 g2 g4 c2 g R1 |
 		
 		r4 g2 g4 c2 g | a4. a8 e4 f2 c4 d2 | c r R1 |
@@ -297,7 +295,7 @@ bassus = \new Voice {
 		
 		R1 R r2 g c,1 g'2 g a4. f8 f4 g |
 		g8 f e d c2 d4 e d2 g r R1 R r2 r4 g |
-		c a2 g c, c'4 ~ c g d'2 g, r1 r4 g2 g4 c2 |
+		c a2 g c, c' g4 d'2 g, r1 r4 g2 g4 c2 |
 		
 		g2 r R1 R R r4 c,2 c4 f2 e |
 		d4. d8 a'2 f4 c d2 | a r1 r4 a'4 | g f \ficta bes2 a r |
@@ -347,5 +345,5 @@ bassus = \new Voice {
 		>> 
 	>>
 	\layout { }
-	\midi { }
+%	\midi { }
 }
