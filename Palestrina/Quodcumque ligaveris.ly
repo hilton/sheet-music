@@ -1,7 +1,7 @@
 % Copyright ©2013 Peter Hilton - https://github.com/hilton
 
 \version "2.16.2"
-revision = "3"
+revision = "4"
 \pointAndClickOff
 
 #(set-global-staff-size 15)
@@ -146,8 +146,8 @@ quintus = \new Voice {
 		Quod -- cúm -- que li -- gá -- ve -- ris su --
 
 		per ter -- _ _ _ _ _ _ _ _ ram,
-		e -- rit li -- gá -- tum et in cœ -- lis: e -- 
-		rit li -- gá -- tum et in cœ -- lis, et quod -- cúm -- 
+		e -- rit li -- gá -- tum et in cœ -- lis, e -- 
+		rit li -- gá -- tum et in cœ -- lis: et quod -- cúm -- 
 		
 		que, et quod -- cúm -- que 
 		sól -- ve -- ris su -- per ter -- ram, e -- rit so -- lú -- tum,
