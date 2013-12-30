@@ -1,7 +1,7 @@
 % Copyright ©2013 Peter Hilton - https://github.com/hilton
 
 \version "2.16.2"
-revision = "1"
+revision = "2"
 \pointAndClickOff
 
 #(set-global-staff-size 15)
@@ -106,7 +106,7 @@ cantus = \new Voice {
 		Quod -- cúm -- que li -- gá -- ve -- ris su --
 		
 		per ter -- _ _ _ _ _ _ ram,
-		e -- rit li -- gá tum et in cœ -- lis,
+		e -- rit li -- gá -- tum et in cœ -- lis,
 		et in cœ -- lis: et quod -- cúm -- que, et quod -- cúm -- 
 		
 		que, et quod -- cúm -- que sól -- ve -- ris su -- per ter -- ram, et quod -- cúm -- que
@@ -148,8 +148,8 @@ quintus = \new Voice {
 		Quod -- cúm -- que li -- gá -- ve -- ris su --
 
 		per ter -- _ _ _ _ _ _ _ _ ram,
-		e -- rit li -- gá tum et in cœ -- lis, e -- 
-		rit li -- gá tum et in cœ -- lis, et quod -- cúm -- 
+		e -- rit li -- gá -- tum et in cœ -- lis: e -- 
+		rit li -- gá -- tum et in cœ -- lis, et quod -- cúm -- 
 		
 		que, et quod -- cúm -- que 
 		sól -- ve -- ris su -- per ter -- ram, e -- rit so -- lú -- tum,
@@ -190,7 +190,7 @@ altus = \new Voice {
 
 		per __ _ _ _ _  ter -- _ _ ram, quod -- cúm -- _ _ _ _ que li -- gá -- ve -- ris su --
 		per __ _ _ ter -- _ _ ram, e -- 
-		rit li -- gá tum __ _ _ _ _ et in cœ -- lis: et quod -- cúm -- que,
+		rit li -- gá -- tum __ _ _ _ _ et in cœ -- lis: et quod -- cúm -- que,
 		
 		et quod -- cúm -- que sól -- ve -- ris su -- per ter -- ram, et quod -- cúm -- que sól -- 
 		ve -- ris su -- per ter -- ram, e -- rit so -- lú -- _ tum, e -- rit so -- lú -- tum, e -- 
@@ -200,7 +200,7 @@ altus = \new Voice {
 		et ti -- bi da -- _ bo cla -- ves re -- gni cœ -- ló -- _ _ _ _ _ _ rum,
 		re -- gni cœ -- ló -- _ _ _ rum, et ti -- bi da -- bo, et ti -- 
 		
-		bi da -- bo et ti -- bi da -- _ bo cla -- ves 
+		bi da -- bo, et ti -- bi da -- _ bo cla -- ves 
 		re -- gni cœ -- ló -- _ _ _ rum, cla -- ves re -- gni cœ -- ló -- _ _ _ _ 
 		rum, cla -- ves re -- gni cœ -- ló -- _ _ _ _ rum.
 	}
@@ -230,9 +230,9 @@ tenor = \new Voice {
 	\addlyrics {
 		Quod -- cúm -- que,
 
-		quod -- cúm -- que, li -- gá -- ve -- ris su -- 
-		per ter -- _ _ _ _ _ _ ram, e -- rit li -- gá tum et in cœ -- lis,
-		li -- gá tum et in cœ -- lis: et quod -- cúm -- 
+		quod -- cúm -- que li -- gá -- ve -- ris su -- 
+		per ter -- _ _ _ _ _ _ ram, e -- rit li -- gá -- tum et in cœ -- lis,
+		li -- gá -- tum et in cœ -- lis: et quod -- cúm -- 
 		
 		que sól -- ve -- ris su -- per ter -- _ ram, et quod -- cúm -- que 
 		sól -- ve -- ris su -- per ter -- ram, e -- rit so -- lú -- tum, e -- rit so -- lú -- _ tum, e -- rit so -- 
@@ -272,8 +272,8 @@ sextus = \new Voice {
 	\addlyrics {
 		Quod -- cúm -- que,
 
-		quod -- cúm -- que, li -- gá -- ve -- ris su -- 
-		per ter -- _ _ _ _ _ _ ram, e -- rit li -- gá tum et in cœ -- lis,
+		quod -- cúm -- que li -- gá -- ve -- ris su -- 
+		per ter -- _ _ _ _ _ _ ram, e -- rit li -- gá -- tum et in cœ -- lis,
 		et quod -- cúm -- que,
 
 		et quod -- cúm -- que sól -- ve -- ris su -- per ter -- ram,
@@ -314,9 +314,9 @@ bassus = \new Voice {
 	\addlyrics {
 		Quod -- cúm -- que,
 
-		quod -- cúm -- que, li -- gá -- ve -- ris su -- 
+		quod -- cúm -- que li -- gá -- ve -- ris su -- 
 		per __ _ _ _ _ ter -- _ _ ram, e -- 
-		rit li -- gá tum et in cœ -- lis: et quod -- cúm -- 
+		rit li -- gá -- tum et in cœ -- lis: et quod -- cúm -- 
 		
 		que, et quod -- cúm -- que 
 		sól -- ve -- ris su -- per ter -- ram, e -- rit so -- lú -- tum,
