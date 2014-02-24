@@ -1,14 +1,65 @@
-\version "2.12.2"
+% Copyright ©2014 Peter Hilton - https://github.com/hilton
+
+\version "2.18.0"
+revision = "2"
+\pointAndClickOff
+
+#(set-global-staff-size 15.5)
+
+\paper {
+	#(define fonts (make-pango-font-tree "Century Schoolbook L" "Source Sans Pro" "Luxi Mono" (/ 15.5 20)))
+	annotate-spacing = ##f
+	two-sided = ##t
+	top-margin = 5\mm
+	inner-margin = 15\mm
+	outer-margin = 15\mm
+	top-markup-spacing = #'( (basic-distance . 8) )
+	markup-system-spacing = #'( (padding . 4) )
+	system-system-spacing = #'( (basic-distance . 20) (stretchability . 100) )
+  	ragged-bottom = ##f
+	ragged-last-bottom = ##t
+} 
+
+year = #(strftime "©%Y" (localtime (current-time)))
 
 \header {
-	title = "Sitivit anima mea"
-	composer = "G P da Palestrina"
-	poet = "SECUNDA PARS"
-	tagline = \markup \small { 
+	poet = \markup \medium \sans {
+		"SECUNDA PARS - Sicut cervus"
+	}
+	copyright = \markup \sans {
+		\vspace #2
 		\column \center-align {
-			\line { Version 2. Copyright ©2009 Cappella Gabrieli - \with-url #"http://cappellagabrieli.nl" http://cappellagabrieli.nl }
-			\line { Licensed under the Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License - \with-url #"http://creativecommons.org/licenses/by-nc-nd/3.0" http://creativecommons.org/licenses/by-nc-nd/3.0 }
+			\line {
+				This edition copyright \year Peter Hilton - 
+				Lilypond source at \with-url #"https://github.com/hilton/sheet-music" https://github.com/hilton/sheet-music - 
+				revision \revision 
+			}
 		}
+	}
+	tagline = ##f
+}
+
+\layout {
+	indent = #0
+  	ragged-right = ##f
+  	ragged-last = ##t
+	\context {
+		\Score
+		\override BarNumber #'self-alignment-X = #CENTER
+		\override BarNumber #'break-visibility = #'#(#f #t #t)
+		\override BarLine #'transparent = ##t
+		\remove "Metronome_mark_engraver"
+		\override VerticalAxisGroup #'staff-staff-spacing = #'((basic-distance . 10) (stretchability . 100))
+	}
+	\context { 
+		\StaffGroup
+		\remove "Span_bar_engraver"	
+	}
+	\context { 
+		\Voice 
+		\override NoteHead #'style = #'baroque
+		\consists "Horizontal_bracket_engraver"
+		\consists "Ambitus_engraver"
 	}
 }
 
@@ -17,35 +68,25 @@ global= {
 	\time 2/2
 	\tempo 2 = 55
 	\set Staff.midiInstrument = "choir aahs"
-	\set Score.timing = ##f 
-%	\override Score.LyricText #'font-size = #-1
-	#(set-global-staff-size 15) 
-	#(set-accidental-style 'forget)
-}
-
-\paper {
-%	annotate-spacing = ##t
-	page-top-space = 0
-	ragged-bottom = ##t 
-%	bottom-margin = 5\mm
+	\accidentalStyle "forget"
 }
 
 ficta = { \once \set suggestAccidentals = ##t }
 fictaParenthesized = { \once \set suggestAccidentals = ##t \override AccidentalSuggestion #'parenthesized = ##t }
+showBarLine = { \once \override Score.BarLine #'transparent = ##f }
 
 cantus = \new Voice	{
 	\relative c' {
-		\override NoteHead #'style = #'baroque
-		r2 f a c4 c4. c8 c4 bes2 a2. g4 a bes c2 ~ \bar "" \break
-		c4 a g2 g r4 f8 g a bes c4 a f g2 f2. e4 f g a f g2 \bar "" \break
-		a r2. \mark \default g4 a bes c a g2 f4 g4. f8 f2 e8 d e2 f r4 f ~ \bar "" \break
-		f g a4. bes8 c4 a2 bes4 c a4. g8 a f g2 f4 d2 e4 f4. g8 a4 f g a \bar "" \break
-		f2 e4 \mark \default g a c4. bes8 a4 g f8 e f e e d16 c d2 c4 e f a4. g8 f4 e8 f g e f2 \bar "" \break
-		f1 ~ f r4 f a a c2 g1 r1. \bar "" \break
-		d'2. c4 c4. bes8 a4 g f2 e a1 g4 g e f g4. f16 e d2 \bar "" \break
-		e4 \mark \default g2 a4. a8 a4 bes2 a4 f g4. g8 a2 r2. \mark \default d4. c8 bes4 a g f g ~ \bar "" \break
-		g8 f f2 e4 f1 r r r4 \mark \default g a4. a8 a2 bes \bar "" \break
-		a f g4 a d, d'4. c8 bes4 a g f g4. f8 f2 e8 d e2 f\breve \bar "|."
+		r2 f a c4 c4. c8 c4 bes2 a2. g4 a bes c2 ~ | \break
+		c4 a g2 g r4 f8 g a bes c4 a f g2 f2. e4 f g | \break a f g2
+		a r2. g4 a bes c a g2 f4 g4. f8 f4 | \break d e8 d e2 f r4 f2
+		 g4 a4. bes8 c4 a2 bes4 c a4. g8 a f | \break g2 f4 d2 e4 f4. g8 a4 f g a
+		f2 e4 g a c4. bes8 a4 g f8 e f e e d16 c d2 c4 e f a4. g8 f4 e8 f g e f2
+		f1 ~ | \break f r4 f a a c2 g1 r2 R1 | \break
+		d'2. c4 c4. bes8 a4 g f2 e a1 g4 g e f | \break g4. f16 e d2
+		e4 g2 a4. a8 a4 bes2 a4 f g4. g8 a2 r2 | \break r4 d4. c8 bes4 a g f g4.
+		 f8 f2 e4 f1 r r r4 g a4. a8 a2 bes
+		a f g4 a d, d'4 ~ | \break d8 c8 bes4 a g f g4. f8 f2 e8 d e2 \set Timing.timing = ##f f\breve \showBarLine \bar "|."
 	}
 	\addlyrics {
 		Si -- tí -- vit á -- ni -- ma me -- a ad De -- um fon -- 
@@ -64,14 +105,13 @@ cantus = \new Voice	{
 
 altus = \new Voice {
 	\relative c {
-		\override NoteHead #'style = #'baroque
 		c'2 d f4 f4. f8 f4 e2 d2. c4 d e f d c8 bes a g
 		f4 f'2 e8 d e2 f4 d c a8 bes c a d4. c8 c4 d2 g, r c d 
-		f4 f4. f8 f4 e2 d r4 c d e f e8 d c4 bes c1 a4 \mark \default bes2 c4
-		d4. e8 f4 d e f d2 c4. d8 e4 f2 e4 f4. e8 d4 c8 bes a4 d c d c c
+		f4 f4. f8 f4 e2 d r4 c d e f e8 d c4 bes c1 a4 bes2 c4
+		d4. e8 f4 d e f d2 c4. d8 e4 f4 ~ f e4 f4. e8 d4 c8 bes a4 d c d c c
 		f,2 g r4 c e f e d4. c8 c2 bes4 a g f4. g8 a2 r4 c d f ~
-		f8 e d4 c2 d4 \mark \default bes d d f2 c1 es2. d4 d2. c4 bes a ~
-		a g a2 r f1 g4 c c8 bes a g f4 f' e d4. c8 c2 \ficta b8 a b2
+		f8 e d4 c2 d4 bes d d f2 c1 es2. d4 d2. c4 bes a ~
+		a g a2 r f1 g4 c c8 bes a g f4 f' e d4. c8 c4 ~ c \ficta b8 a b2
 		c4 e2 f4. f8 f4 f2 f4 c d e f d c4. c8 d2 r4 f4. e8 d4 c bes
 		c d2 c8 bes a4. g8 f2 r4 d'4. c8 bes4 a g a bes g2 f4 c' f4. f8 f2
 		f c4 d c c f4. e8 d2 r4 d4. d8 c4 c d c1 c\breve
@@ -92,7 +132,6 @@ altus = \new Voice {
 
 tenor = \new Voice {
 	\relative c {
-		\override NoteHead #'style = #'baroque
 		\clef "treble_8"
 		r1 r r r r2 f
 		a c4 c4. c8 c4 bes2 a1 r4 g a bes c2 bes a8 bes c a bes c d4 ~
@@ -121,18 +160,17 @@ tenor = \new Voice {
 
 bassus = \new Voice {
 	\relative c {
-		\override NoteHead #'style = #'baroque
 		\clef bass
 		r1 r r r r
-		r c2 d f4 f4. f8 f4 e2 d c d4 e f a g2 ~
+		r c2 d f4 f4. f8 f4 e2 d c d4 e f a g2
 		f4. e8 d2 c r1 r4 c d e f d c1 f,4 bes2 a4 
 		bes g d'2 r1 r r2. bes2 c4 d4. e8 f4 d e f
-		d2 c4. bes8 a2 r1 r r4 c4 d f4. e8 d4 c2 bes8 c d e
+		d2 c4. bes8 a2 r2 R1 r2 r4 c4 d f4. e8 d4 c2 bes8 c d e
 		f1 r2 bes,2 d4 d f2 f r g2. f4 f4. e8 d4 c
 		bes2 a1 d c2 f1 g2 a g1
 		c,4 c2 f4. f8 f4 bes,2 f' r2. d4 \ficta es f bes,1 r
 		r4 bes bes c d d4. c8 bes4 a g f g d' es d bes c2 r4 f d4. d8 bes2
-		f'2 f4 d \ficta es f bes, bes'4. a8 g4 fis g d e f bes, c1 f,\breve
+		f'2 f4 d \ficta es f bes, bes'4 ~ bes8 a8 g4 fis g d e f bes, c1 f,\breve
 	}
 	\addlyrics {	
 		Si -- tí -- vit á -- ni -- ma me -- a ad De -- um fon -- tem vi -- 
@@ -158,13 +196,7 @@ bassus = \new Voice {
 			\new Staff << \global \bassus >> 
 		>> 
 	}
-	\layout {
-		indent = #0
-		\context { 
-\Voice 
-\consists "Ambitus_engraver" 
-} 
-	}
-	\midi {	}
+	\layout { }
+%	\midi {	}
 }
 
