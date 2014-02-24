@@ -1,7 +1,7 @@
 % Copyright ©2013 Peter Hilton - https://github.com/hilton
 
-\version "2.16.2"
-revision = "4"
+\version "2.18.0"
+revision = "5"
 \pointAndClickOff
 
 #(set-global-staff-size 15)
@@ -12,7 +12,7 @@ revision = "4"
 	two-sided = ##t
 	top-margin = 5\mm
 	inner-margin = 15\mm
-	outer-margin = 20\mm
+	outer-margin = 15\mm
 	top-markup-spacing = #'( (basic-distance . 8) )
 	markup-system-spacing = #'( (padding . 4) )
 	system-system-spacing = #'( (basic-distance . 20) (stretchability . 100) )
@@ -57,6 +57,7 @@ year = #(strftime "©%Y" (localtime (current-time)))
 	}
 	\context {
 		\Staff
+		\override TimeSignature.style = #'default \time 2/2
 	}
 	\context { 
 		\Voice 
@@ -69,8 +70,8 @@ year = #(strftime "©%Y" (localtime (current-time)))
 
 global= { 
 	\key c\major
-	\tempo 2 = 44
-	\time 2/2
+	\tempo 1 = 60
+	\time 2/1
 	\set Staff.midiInstrument = "choir aahs"
 	\accidentalStyle "forget"
 }
@@ -82,23 +83,23 @@ squareBracket = {  }
 
 cantus = \new Voice {
 	\relative c'' {
-		R1 R r2 g1 c2 b b c4. a8 a4 b | \break 
+		R\breve R r1 g\breve c1 b b c2. a4 a2 b | \break 
 		
-		d4 e4. d8 c b a4 g a2 b1 R R R | \break 
-		R R r4 g g a2 b c e g4 fis2 g | \break 
-		R1 r2 r4 c,2 b4 d2 d4 d2 d4 e2 d4 b2 b4 c2 |
+		d2 e2. d4 c b a2 g a1 b\breve R R R | \break 
+		R R r2 g g a1 b c e g2 fis1 g | \break 
+		R\breve r1 r2 c,1 b2 d1 d2 d1 d2 e1 d2 b1 b2 c1 |
 		
-		b4 d2 d4 \break e2 d c4. c8 b4 a2 g4 f2 e4 c'2 e4 c2 c |
-		a4. a8 a2 R1 \break r4 a b c d2 c R1 r4 e d e |
-		f2 e4 g8 f e d c b a4 d2 \ficta cis4 d2 \break r4 c b c d2 g,4 c2 e4 f8 e d c |
+		b2 d1 d2 \break e1 d c2. c4 b2 a1 g2 f1 e2 c'1 e2 c1 c |
+		a2. a4 a1 R\breve \break r2 a b c d1 c R\breve r2 e d e |
+		f1 e2 g4 f e d c b a2 d d \ficta cis d1 \break r2 c b c d1 g,2 c1 e2 f4 e d c |
 		
-		b4 g r d' b e4. d8 c2 b8 a b2 \break c1 R r2 r4 g |
-		b2. b4 c2 b4 d2 d4 e2 d4 b c8 b c d \break e f g4. \ficta fis16 e \ficta fis4 g1 |
-		R R r2 r4 g, d'2 b4. c8 \break d4 e2 d8 c b2 r4 a |
+		b2 g r d' b e2. d4 c1 b4 a b1 \break c\breve R r1 r2 g |
+		b1. b2 c1 b2 d1 d2 e1 d2 b c4 b c d \break e f g2. \ficta fis8 e \ficta fis2 g\breve |
+		R R r1 r2 g, d'1 b2. c4 \break d2 e1 d4 c b1 r2 a |
 		
-		d d b \ficta cis d1 R r4 d e2. e4 f2 \break e4 c2 c4 | 
-		c2 c R1 r2 r4 e2 e4 f2 d4 e f e4. d8 b c d2 | \break
-		r4 b2 b4 c2 b4 g a8 b c d e f g e \ficta fis4 g2 \ficta fis4 g2 r4 d g8 f e d e2 d1 \showBarLine \bar "|." |
+		d d b c d\breve R r2 d e1. e2 f1 \break e2 c1 c2 | 
+		c1 c R\breve r1 r2 e1 e2 f1 d2 e f e2. d4 b c d1 | \break
+		r2 b1 b2 c1 b2 g a4 b c d e f g e \ficta fis2 g1 \ficta fis2 g1 r2 d g4 f e d e1 d\breve \showBarLine \bar "|." |
 	}
 	\addlyrics {
 		Quod -- cúm -- que li -- gá -- ve -- ris su --
@@ -109,7 +110,7 @@ cantus = \new Voice {
 		
 		que, et quod -- cúm -- que sól -- ve -- ris su -- per ter -- ram, et quod -- cúm -- que
 		sól -- ve -- ris e -- rit so -- lú -- tum, e -- rit so -- 
-		lú -- tum et __ _ _ _ _ _ _ in cœ -- lis, e -- rit so -- lú -- tum et in cœ -- _ _ _
+		lú -- tum et __ _ _ _ _ _ _ in cœ -- _ lis, e -- rit so -- lú -- tum et in cœ -- _ _ _
 		
 		 _ lis, et in cœ -- _ _ _ _ _ lis, et
 		ti -- bi da -- bo cla -- ves re -- gni cœ -- ló -- _ _ _ _ _ _ _ _ _ rum,
@@ -123,23 +124,23 @@ cantus = \new Voice {
 
 quintus = \new Voice {
 	\relative c'' {
-		R1 R d e d4 d2 e4. c8 c4 d2 |
+		R\breve R d e d2 d1 e2. c4 c2 d1 |
 		
-		b4 c4. b8 a g f4 g4. f16 e f4 g1 R R R |
-		R R r4 b c c2 d e c b4 d2 b4 g |
-		g a2 b c e g4 fis2 g r1 r4 d2 d4 e2 |
+		b2 c2. b4 a g \ficta fis2 g2. \ficta fis8 e \ficta fis2 g\breve R R R |
+		R R r2 b c c1 d e c b2 d1 b2 g |
+		g a1 b c e g2 fis1 g r\breve r2 d1 d2 e1 |
 		
-		d2 r R1 R R r4 e2 e4 f2 e |
-		d4. d8 c4 a2 g4 f2 e r1 r4 a b c d2 c r |
-		R1 R R r4 e d e f2 e4 g8 f e d c b a4 d2
+		d1 r R\breve R R r2 e1 e2 f1 e |
+		d2. d4 c2 a1 g2 f1 e r\breve r2 a b c d1 c r |
+		R\breve R R r2 e d e f1 e2 g4 f e d c b a2 d d
 		
-		 \ficta cis4 d2 r4 b c2 d1 e4 c e2. e4 f2 e1 |
-		R1 r2 r4 b2 b4 c2 b4 g a8 g a b c b b a16 g a2 g\breve |
-		R1 R r4 g d'2 b c d1 |
+		 \ficta cis2 d1 r2 b c1 d\breve e2 c e1. e2 f1 e\breve |
+		R\breve r1 r2 b1 b2 c1 b2 g a4 g a b c b b a8 g a1 g\breve ~ g\breve |
+		R\breve R r2 g d'1 b c d\breve |
 		
-		R1 r4 a b2. b4 c2 b r4 g c c a b c e2 e4 |
-		f2 e d4 c4. d8 e f g2 e4 c2 c4 c2 b4 g a8 b c d e f g2 \ficta fis4 |
-		g4 d2 d4 e2 d4 e f2 e d1 r4 g, g'4. f8 e d c b c2 b1 |
+		R\breve r2 a b1. b2 c1 b r2 g c c a b c e1 e2 |
+		f1 e d2 c2. d4 e f g1 e2 c1 c2 c1 b2 g a4 b c d e f g1 \ficta fis2 |
+		g2 d1 d2 e1 d2 e f1 e d\breve r2 g, g'2. f4 e d c b c1 b\breve |
 		
 	}
 	\addlyrics {
@@ -153,7 +154,7 @@ quintus = \new Voice {
 		sól -- ve -- ris su -- per ter -- ram, e -- rit so -- lú -- tum,
 		e -- rit so -- lú -- tum et __ _ _ _ _ _ _ in
 		
-		cœ -- lis, et in cœ -- lis, et ti -- bi da -- bo 
+		cœ -- _ lis, et in cœ -- lis, et ti -- bi da -- bo 
 		cla -- ves re -- gni cœ -- ló -- _ _ _ _ _ _ _ _ _ rum,
 		et ti -- bi da -- bo, 
 		
@@ -165,23 +166,23 @@ quintus = \new Voice {
 
 altus = \new Voice {
 	\relative c'' {
-		R1 R g c, g'2 g a4. f8 f4 g |
+		R\breve R g c, g'1 g a2. f4 f2 g |
 		
-		g8 f e d c2 d4 e d2 g, b c8 d e f g2 g r4 g e4. a8 a4 g |
-		g4. f8 e2 d4 c d2 b r R1 R r2 r4 d |
-		e e2 g g4. f8 e d e4 d4. d8 a'4 b b2 b4 c2 b R1 |
+		g4 f e d c1 d2 e d1 g, b c4 d e f g1 g r2 g e2. a4 a2 g |
+		g2. f4 e1 d2 c d1 b r R\breve R r1 r2 d |
+		e e1 g g2. f4 e d e2 d2. d4 a'2 b b1 b2 c1 b R\breve |
 		
-		r4 b2 b4 c2 b a4. a8 g4 f2 e4 d2 g,4 g'2 g4 a2 g4 a2
-		 d,4 e2 f4 e d2 c4 c d f f g a e g a d,2 e r4 c' |
-		a b c g c8 b a g f4 a2 g \ficta fis4 g e g g \ficta f!8 e d4 e1 r4 f |
+		r2 b1 b2 c1 b a2. a4 g2 f1 e2 d1 g,2 g'1 g2 a1 g2 a1
+		 d,2 e1 f2 e d1 c2 c d f f g a e g a d,1 e r2 c' |
+		a b c g c4 b a g f2 a1 g \ficta fis2 g e g g \ficta f!4 e d2 e\breve r2 f |
 		
-		g2 a g4 g2 g4 g1 g2 r4 g c c a b c b8 a g2 |
-		r4 g g g e \ficta fis g g2 g4 c,2 g'4 g f4. e16 d c8 d e4 d2 g r |
-		r4 c, d e f2 e4 c d2 b r4 d2 g4 ~ g g4 a2 g4 g a2.
+		g1 a g2 g1 g2 g\breve g1 r2 g c c a b c b4 a g1 |
+		r2 g g g e \ficta fis g g1 g2 c,1 g'2 g f2. e8 d c4 d e2 d1 g r |
+		r2 c, d e f1 e2 c d1 b r2 d1 g2 ~ g g2 a1 g2 g a1.
 		
-		 f4 g2 a r4 d, g g e \ficta fis g2 r R1 r4 g2 g4 |
-		a2 g4 e a2. g4. f8 d4 e g2 g4 a2 g4 b c4. b8 a4 g a2 |
-		g4 g2 g4 g2 g r4 a c4. b8 a4 g a2 g\breve ~ g1 |
+		 f2 g1 a r2 d, g g e \ficta fis g1 r R\breve r2 g1 g2 |
+		a1 g2 e a1. g2. f4 d2 e g1 g2 a1 g2 b c2. b4 a2 g a1 |
+		g2 g1 g2 g1 g r2 a c2. b4 a2 g a1 g\longa |
 	}
 	\addlyrics {
 		Quod -- cúm -- que li -- gá -- ve -- ris su --
@@ -207,23 +208,23 @@ altus = \new Voice {
 tenor = \new Voice {
 	\relative c' {
 		\clef "treble_8"
-		d1 e d R R R
+		d\breve e d R R R
 		
-		R R r2 d2 e1 d4 d2 e4. c8 c4 d2 |
-		b4 c4. b8 a g \ficta fis4 g a2 g4 d' e e2 g g g g4 a2 g |
-		r4 c,2 d e g g4 a2 g1. r4 g2 g4 g2 |
+		R R r1 d1 e\breve d2 d1 e2. c4 c2 d1 |
+		b2 c2. b4 a g \ficta fis2 g a1 g2 d' e e1 g g g g2 a1 g |
+		r2 c,1 d e g g2 a1 g\breve ~ g1 r2 g1 g2 g1 |
 		
-		g1 ~ g e4. e8 e4 c2 c4 a b c c2 c4 a2 c |
-		f4. f8 e4 c2 c4 a2 a4 e' g a d,2 e4 c d f f g a e g g |
-		f2 g8 f e d e2 r4 f g2 a g r4 g, a b c8 d e f g4 g f a4. 
+		g\breve ~ g e2. e4 e2 c1 c2 a b c c1 c2 a1 c |
+		f2. f4 e2 c1 c2 a1 a2 e' g a d,1 e2 c d f f g a e g g |
+		f1 g4 f e d e1 r2 f g1 a g r2 g, a b c4 d e f g2 g f a2. 
 
-		 g8 g2 \ficta fis4 g e2 e4 d1 c2 r4 e g a f2 g e |
-		d4. c8 b4 g c a b2 R1 R R r4 d2 d4 |
-		e2 d4 b c8 b c d e f g2 \ficta fis4 g1 r2 R1 r4 d f d8 e |
+		 g4 g1 \ficta fis2 g e1 e2 d\breve c1 r2 e g a f1 g e |
+		d2. c4 b2 g c a b1 R\breve R R r2 d1 d2 |
+		e1 d2 b c4 b c d e f g1 \ficta fis2 g\breve r1 R\breve r2 d f d4 e |
 		 
-		f g a2 g \ficta fis4 g2 R1 r4 g g2. a4 f2 g4 e2 e4 |
-		c2 e4 g f2. e4 d2 c R1 R R |
-		r4 d2 g, c4 d b c2 c2. b4 a d4. b8 e4 d2 e c d1 |
+		f g a1 g \ficta fis2 g1 R\breve r2 g g1. a2 f1 g2 e1 e2 |
+		c1 e2 g f1. e2 d1 c R\breve R R |
+		r2 d1 g, c2 d b c1 c1. b2 a d2. b4 e2 d1 e c d\breve |
 	}
 	\addlyrics {
 		Quod -- cúm -- que,
@@ -249,23 +250,23 @@ tenor = \new Voice {
 sextus = \new Voice {
 	\relative c' {
 		\clef "bass"
-		r2 g1 c2 b1 R R R
+		r1 g\breve c1 b\breve R R R
 		
-		R R r2 g1 c2 b b c4. a8 a4 b  |
-		d e4. d8 c b a4 g2 \ficta fis4 g g c a2 g c, c' e4 d2 g, |
-		R1 R R r4 g2 g4 c2 g R1 |
+		R R r1 g\breve c1 b b c2. a4 a2 b  |
+		d e2. d4 c b a2 g1 \ficta fis2 g g c a1 g c, c' e2 d1 g, |
+		R\breve R R r2 g1 g2 c1 g R\breve |
 		
-		r4 g2 g4 c2 g | a4. a8 e4 f2 c4 d2 | c r R1 |
-		R R r4 a' g f \ficta bes2 a R1 r4 a b c |
-		d2 c c d e d g, r R1 c2 d |
+		r2 g1 g2 c1 g | a2. a4 e2 f1 c2 d1 | c r R\breve |
+		R R r2 a' g f \ficta bes1 a R\breve r2 a \ficta b! c |
+		d1 c c d e d g, r R\breve c1 d |
 		
-		e d g,1. r2 | r4 g4 c2. c4 d2 c1 |
-		r4 b d d c2 d8 c b a g2 r R1 R r4 b2 b4 |
-		c2 b4 g a8 g a b c b a g | a2 g R1 R r4 g d'2.
+		e d g,\breve ~ g1 r1 | r2 g2 c1. c2 d1 c\breve |
+		r2 b d d c1 d4 c b a g1 r R\breve R r2 b1 b2 |
+		c1 b2 g a4 g a b c b a g | a1 g R\breve R r2 g d'1.
 		
-		 d4 e2 d r4 b d e c2 d4 g, c2. c4 d2 c4 c2 c4 |
-		 a2 c4 c f,8 g a b c2 g r4 c2 c4 f,2 g4 g f8 g a b c d e4 d2 |
-		 g,4 b2 d4 c g2 b4 a2 g r4 d'4. c8 a4 b c2 b4 c2 g1. |
+		 d2 e1 d r2 b d e c1 d2 g, c1. c2 d1 c2 c1 c2 |
+		 a1 c2 c f,4 g a b c1 g r2 c1 c2 f,1 g2 g f4 g a b c d e2 d1 |
+		 g,2 b1 d2 c g1 b2 a1 g r2 d'2. c4 a2 b c1 b2 c1 g1 ~ g\breve |
 	}
 	\addlyrics {
 		Quod -- cúm -- que,
@@ -276,7 +277,7 @@ sextus = \new Voice {
 
 		et quod -- cúm -- que sól -- ve -- ris su -- per ter -- ram,
 		e -- rit so -- lú -- tum, e -- rit so -- 
-		lú -- tum et in cœ -- lis, __ _ et in 
+		lú -- tum et in cœ -- _ lis, et in 
 		
 		cœ -- _ lis, et ti -- bi da -- bo,
 		et ti -- bi da -- bo __ _ _ _ _ cla -- ves 
@@ -291,23 +292,23 @@ sextus = \new Voice {
 bassus = \new Voice {
 	\relative c' {
 		\clef "bass"
-		g1 c, g' R R R
+		g\breve c, g' R R R
 		
-		R1 R r2 g c,1 g'2 g a4. f8 f4 g |
-		g8 f e d c2 d4 e d2 g r R1 R r2 r4 g |
-		c a2 g c, c' g4 d'2 g, r1 r4 g2 g4 c2 |
+		R\breve R r1 g c,\breve g'1 g a2. f4 f2 g |
+		g4 f e d c1 d2 e d1 g r R\breve R r1 r2 g |
+		c a1 g c, c' g2 d'1 g, r\breve r2 g1 g2 c1 |
 		
-		g2 r R1 R R r4 c,2 c4 f2 e |
-		d4. d8 a'2 f4 c d2 | a r1 r4 a'4 | g f \ficta bes2 a r |
-		R1 R R r4 c, g' e d2 c1 r2 |
+		g1 r R\breve R R r2 c,1 c2 f1 e |
+		d2. d4 a'1 f2 c d1 | a r\breve r2 a'2 | g f \ficta bes1 a r |
+		R\breve R R r2 c, g' e d1 c\breve r1 |
 		
-		r2 d e c g'1 c, R r2 c |
-		g'2. g4 a2 g R1 R R r4 g2 g4 |
-		c,2 g'4 g f4. e16 d c8 d e4 d2 g1. R1 R |
+		r1 d e c g'\breve c, R r1 c |
+		g'1. g2 a1 g R\breve R R r2 g1 g2 |
+		c,1 g'2 g f2. e8 d c4 d e2 d1 g1 ~ g\breve R\breve R |
 		
-		R r4 d g2. g4 a2 g r R1 r4 c,2 c4 |
-		f2 c4 c d8 e f g a b c2 b4 c2 R1 R R |
-		r4 g2 g4 c,2 g'4 g f2 c d1 g c g |
+		R r2 d g1. g2 a1 g r R\breve r2 c,1 c2 |
+		f1 c2 c d4 e f g a b c1 b2 c1 R\breve R R |
+		r2 g1 g2 c,1 g'2 g f1 c d\breve g c g |
 	}
 	\addlyrics {
 		Quod -- cúm -- que,
@@ -335,7 +336,7 @@ bassus = \new Voice {
 	<<
 		\new StaffGroup
 	  	<< 
-			\set Score.proportionalNotationDuration = #(ly:make-moment 1 8)
+			\set Score.proportionalNotationDuration = #(ly:make-moment 1 3)
 			\new Staff \with { instrumentName = #"CANTUS"  shortInstrumentName = #"C " } << \global \cantus >> 
 			\new Staff \with { instrumentName = #"QUINTUS" shortInstrumentName = #"Q " } << \global \quintus >>
 			\new Staff \with { instrumentName = #"ALTUS"   shortInstrumentName = #"A " } << \global \altus >>
@@ -345,5 +346,5 @@ bassus = \new Voice {
 		>> 
 	>>
 	\layout { }
-%	\midi { }
+	\midi { }
 }
