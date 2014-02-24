@@ -1,7 +1,7 @@
 % Copyright ©2014 Peter Hilton - https://github.com/hilton
 
 \version "2.18.0"
-revision = "2"
+revision = "3"
 \pointAndClickOff
 
 #(set-global-staff-size 15.5)
@@ -115,7 +115,7 @@ altus = \new Voice {
 		 r2 c1 bes2 a4. bes8 c4 d2 \fictaParenthesized cis4 d2. c8 bes c2( bes)
 		r f'2. e4 e2 d c1 bes4. c8 d4 c c2 c r4 f2
 		 e4 e2 d c bes4. c8 d4 c2 f e4 d1. bes4. c8
-		d2 bes4 d2 c4 c2 r4 c d f4 ~ f8 e8 d c bes4 c d1 c\breve
+		d2 bes4 d2 c4 c2 r4 c d f4 ~ f8 e8 d c bes4 c d1 \set Timing.timing = ##f c\breve
 	}
 	\addlyrics {
 		Sic -- ut cer -- vus de -- sí -- de -- 
