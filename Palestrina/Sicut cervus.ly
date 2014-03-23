@@ -2,7 +2,7 @@
 % Copyright ©2014 Peter Hilton - https://github.com/hilton
 
 \version "2.18.0"
-revision = "4"
+revision = "5"
 \pointAndClickOff
 
 #(set-global-staff-size 15.5)
@@ -208,7 +208,7 @@ cantus = \new Voice	{
 	\relative c' {
 		r2 f a c4 c4. c8 c4 bes2 a2. g4 a bes c2 ~ | \break
 		c4 a g2 g r4 f8 g a bes c4 a f g2 f2. e4 f g | \break a f g2
-		a r2. g4 a bes c a g2 f4 g4. f8 f4 | \break d e8 d e2 f r4 f2
+		a r2. g4 a bes c a g2 f4 g4. f8 f4 ~ | \break f e8 d e2 f r4 f2
 		 g4 a4. bes8 c4 a2 bes4 c a4. g8 a f | \break g2 f4 d2 e4 f4. g8 a4 f g a
 		f2 e4 g a c4. bes8 a4 g f8 e f e e d16 c d2 c4 e f a4. g8 f4 e8 f g e f2
 		f1 ~ | \break f r4 f a a c2 g1 r2 R1 | \break
