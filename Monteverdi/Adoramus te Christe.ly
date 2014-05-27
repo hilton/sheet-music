@@ -1,13 +1,13 @@
-% Copyright ©2013 Peter Hilton - https://github.com/hilton
+% Copyright ©2014 Peter Hilton - https://github.com/hilton
 
 \version "2.16.2"
-revision = "3"
+revision = "4"
 \pointAndClickOff
 
-#(set-global-staff-size 14)
+#(set-global-staff-size 15)
 
 \paper {
-	#(define fonts (make-pango-font-tree "Century Schoolbook L" "Source Sans Pro" "Luxi Mono" (/ 14 20)))
+	#(define fonts (make-pango-font-tree "Century Schoolbook L" "Source Sans Pro" "Luxi Mono" (/ 15 20)))
 	annotate-spacing = ##f
 	two-sided = ##t
 	top-margin = 15\mm
@@ -48,18 +48,15 @@ year = #(strftime "©%Y" (localtime (current-time)))
 
 \layout {
   	ragged-right = ##f
-  	ragged-last = ##f
+  	ragged-last = ##t
 	\context {
 		\Score
 		\override BarNumber #'self-alignment-X = #CENTER
 		\override BarNumber #'break-visibility = #'#(#f #t #t)
+		\override SpanBar #'transparent = ##t
 		\override BarLine #'transparent = ##t
 		\remove "Metronome_mark_engraver"
 		\override VerticalAxisGroup #'staff-staff-spacing = #'((basic-distance . 10) (stretchability . 100))
-	}
-	\context { 
-		\StaffGroup
-		\remove "Span_bar_engraver"	
 	}
 	\context {
 		\Staff
@@ -86,23 +83,25 @@ global= {
 	\accidentalStyle "forget"
 }
 
-showBarLine = { \once \override Score.BarLine #'transparent = ##f }
+showBarLine = {
+	\once \override Score.BarLine #'transparent = ##f
+	\once \override Score.SpanBar #'transparent = ##f 
+}
 ficta = { \once \set suggestAccidentals = ##t }
-squareBracket = {  }
 
 
 cantoA = \new Voice {
 	\relative c'' {
-		a1. a2 a1 g r2 b1 b2 b b a e'2 ~ | \break e1 cis8 \ficta cis d2 \ficta cis4 
-		d d8 d d1 c4 c b1 a2 c | \break c4 b a4. a8 g2 a a4 g f4. f8 e2 e'
+		a1. a2 a1 g r2 b1 b2 | \break b b a e'1. cis8 \ficta cis d2 \ficta cis4 
+		d d8 d d1 c4 c | \break b1 a2 c | c4 b a4. a8 g2 a a4 g f4. f8 e2 e' | \break
 		
-		e4 d c4. c8 e1 | \break d c \showBarLine \bar "|" r2 d2. c8 b a4 a8 b | \break c b c a b4 b e2. d8 c
-		b4 b8 b c b c a b1 | \break a r1 R\breve | \break d2. c8 b
+		e4 d c4. c8 e1 | d c \showBarLine \bar "|" \break r2 d2. c8 b a4 a8 b | c b c a b4 b e2. d8 c | \break 
+		b4 b8 b c b c a b1 | a r1 \break R\breve | d2. c8 b
 		
-		a4 a8 a b a b g a1 g4 b2 a8 g | \break fis4 \ficta fis8 \ficta fis a2. g8 \ficta f! e4 e8 e
+		a4 a8 a b a b g | \break a1 g4 b2 a8 g | fis4 \ficta fis8 \ficta fis a2. g8 \ficta f! e4 e8 e | \break
 		g4 g b2. a8 g fis4 \ficta fis8 g a g a a gis1 \ficta gis2 c b
 		
-		b4 b a1 gis2 a1 \showBarLine \bar "|" | \break g1. fis2 g1 g1. d'1 c2 d1 b | \break d2. d4 
+		b4 b a1 gis2 a1 \showBarLine \bar "|" | \break g1. fis2 g1 g1. d'1 c2 d1 b | d2. d4 
 		d2 c b1 a g2. g4 g2 f e1 fis \fermata \showBarLine \bar "|."
 	}
 	\addlyrics {
@@ -119,11 +118,11 @@ cantoA = \new Voice {
 
 cantoB = \new Voice {
 	\relative c' {
-		f1. e2 fis1 g r2 g g a1 gis2 a1 a2. b8 b a1
-		a2. a8 a gis4. \ficta gis8 a4 a2 gis8 fis \ficta gis2 a a a4 g f4. f8 e2 c' c4 b a4. a8 g2 c
+		f1. e2 fis1 g r2 g g a ~ a gis2 a1 a2. b8 b a1
+		a2. a8 a gis4. \ficta gis8 a4 a ~ a gis8 fis \ficta gis2 a a a4 g f4. f8 e2 c' c4 b a4. a8 g2 c
 		
-		c4 b a4. a8 c2 c ~ c b2 c1 b2. a8 g fis2. \ficta fis8 g a g a fis g4 g c2. b8 a
-		g4 g8 g a g a fis gis4 a2 \ficta gis4 a1 r1 r\breve b2. a8 g
+		c4 b a4. a8 c2 c1 b2 c1 b2. a8 g fis2. \ficta fis8 g a g a fis g4 g c2. b8 a
+		g4 g8 g a g a fis gis4 a2 \ficta gis4 a1 r1 R\breve b2. a8 g
 		
 		fis4 \ficta fis8 \ficta fis g \ficta fis g g \ficta fis4 g2 \ficta fis4 g d'2 c8 b a4 a8 a c2. b8 a g4 g8 g
 		b4 b d2. c8 b a4 a8 b c b c a b1 b2 e d
@@ -154,10 +153,10 @@ alto = \new Voice {
 		g4 g e4. e8 g1 g g g2. f8 e d2. c8 b a a a a e'4 e c2 d
 		e a, e' e r1 e2. f4 g2 g g1 g
 		
-		r1 r\breve r1 r2 g2. 
+		r1 R\breve r1 r2 g2 ~ g4 
 		f8 e d2 d4 d d d e e e1 e2 g f
 		
-		e2 e e1 e c c2 c1 b2 c1 d g2 g1 fis2 g1 g2. g4
+		e2 e e1 e c c2 c1 b2 c1 d g2 g ~ g fis2 g1 g2. g4
 		g2 e e1 e c2. c4 c2 a a1 a \fermata
 	}
 	\addlyrics {
@@ -177,12 +176,12 @@ tenoreA = \new Voice {
 	\relative c' {
 		\clef "treble_8"
 		a1. a2 a1 b r2 b1 b2 b b c1 c2 e4 e a,1
-		d2. d8 d b4. b8 c4 e2 d8 c b2 cis c! c4 g a f g2 c c4 g a f g2 r4 c,
+		d2. d8 d b4. b8 c4 e ~ e d8 c b2 cis c! c4 g a f g2 c c4 g a f g2 r4 c,
 		
 		c' d a4. a8 c2 e8 d e c d1 e R\breve R
-		R r1 r2 e2. d8 c b4 b8 c d c d b c4 c g2 g
+		R r1 r2 e2 ~ e4 d8 c b4 b8 c d c d b c4 c g2 g
 		
-		d'2 b d1 d2 r4 d ~ d c8 b a4 a8 a c2. b8 a
+		d'2 b d1 d2 r4 d2 c8 b a4 a8 a c2. b8 a
 		g4 g8 g g2 d' a2 ~ a4 c4 b1 b2 c b
 		
 		g e e1 e e c g' g R\breve r1 d'2. d4 d4. c8 b4. a8
@@ -210,7 +209,7 @@ tenoreB = \new Voice {
 		c4 g a4. a8 e1 g c, R\breve R 
 		R r1 c'2. b8 a g2. g8 a b a b d c4 c r1
 		
-		r2 d2. c8 b a4 a8 a b a b g d'2 d, r r1
+		r2 d2 ~ d4 c8 b a4 a8 a b a b g d'2 d, r r1
 		b'2. a8 g fis2. e8 d a' a a a e1 e2 e b'
 		
 		b c8 b c a b1 cis R\breve R b1 g d' d b2. b4
