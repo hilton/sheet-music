@@ -2,7 +2,7 @@
 % Copyright ©2014 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "1"
+revision = "2"
 \pointAndClickOff
 
 #(set-global-staff-size 15.0)
@@ -72,6 +72,7 @@ year = #(strftime "©%Y" (localtime (current-time)))
 global = { 
 	\key bes \major
 	\time 3/1
+	\partial 1.
 	\tempo 2 = 72
 	\set Staff.midiInstrument = "Choir Aahs"
 	\accidentalStyle "forget"
@@ -83,9 +84,9 @@ fictaParenthesized = { \once \set suggestAccidentals = ##t \override AccidentalS
 
 superius = \new Voice	{
 	\relative c'' {
-		d2 es c d1. a2 bes g a1 e'2 f d e1 c2 d \break
-		bes a1 g r2 d' c a bes1. bes2 a a g2. f4 g a bes2 c c \break d1. bes2 c c d1 r2
-		f es c d1. d2 c a bes1. a2 g e a1. d2 d cis d1 r2 \break
+		d2 es c \bar "" d1. a2 bes g a1 e'2 f d e1 c2 d \bar "" \break
+		bes a1 g r2 d' c a bes1. bes2 a a g2. f4 g a \bar "" \break bes2 c c d1. bes2 c c d1 r2
+		f es c \bar "" \break d1. d2 c a bes1. a2 g e a1. d2 d cis d1 r2 
 		\showBarLine 
 		\repeat volta 2 {
 			a a g a1. a2 a g a1. d2 a bes a1 g2 g1 fis2 g1 \fermata
@@ -175,7 +176,8 @@ bassus = \new Voice {
 	\transpose c c {
 		\new StaffGroup << 
 			\set Score.proportionalNotationDuration = #(ly:make-moment 5 12)
-			\new Staff << \key f \major \global \superius >> 
+			\set Score.barNumberVisibility = #all-bar-numbers-visible
+			\new Staff << \global \superius >> 
 			\new Staff << \global \discantus >> 
 			\new Staff << \global \contraTenor >> 
 			\new Staff << \global \tenor >> 
