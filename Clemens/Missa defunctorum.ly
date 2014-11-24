@@ -1,4 +1,6 @@
-% Copyright ©2013 Peter Hilton - https://github.com/hilton
+% CPDL #33472
+% http://www.cpdl.org/wiki/index.php/Missa_pro_defunctis_(Jacobus_Clemens_non_Papa)#Music_files
+% Copyright ©2014 Peter Hilton - https://github.com/hilton
 
 \version "2.16.2"
 \pointAndClickOff
@@ -174,7 +176,7 @@ bass = \new Voice {
 		piece = \markup \larger \sans { Introitus }
 	}
 	\layout { }
-%	\midi { }
+	\midi { }
 }
 
 
@@ -255,7 +257,7 @@ bass = \new Voice {
 		>> 
 	>>
 	\layout { }
-%	\midi { }
+	\midi { }
 }
 
 \markup { Repeat \italic { Requiem aeternam dona eis Domine, et lux perpetua luceat eis. }}
@@ -344,7 +346,7 @@ bass = \new Voice {
 		>> 
 	>>
 	\layout { }
-%	\midi { }
+	\midi { }
 }
 
 
@@ -426,7 +428,7 @@ bass = \new Voice {
 		>> 
 	>>
 	\layout { }
-%	\midi { }
+	\midi { }
 }
 
 
@@ -515,7 +517,7 @@ bass = \new Voice {
 		>> 
 	>>
 	\layout { }
-%	\midi { }
+	\midi { }
 }
 
 
@@ -813,7 +815,7 @@ bass = \new Voice {
 		piece = \markup \larger \sans { Offertorium }
 	}
 	\layout { }
-%	\midi { }
+	\midi { }
 }
 
 
@@ -948,7 +950,7 @@ bass = \new Voice {
 		>> 
 	>>
 	\layout { }
-%	\midi { }
+	\midi { }
 }
 
 
@@ -1042,7 +1044,7 @@ bass = \new Voice {
 		piece = \markup \larger \sans { Sanctus }
 		}
 	\layout { }
-%	\midi { }
+	\midi { }
 }
 
 
@@ -1120,7 +1122,7 @@ bass = \new Voice {
 		}
 	}
 	\layout { }
-%	\midi { }
+	\midi { }
 }
 
 \pageBreak
@@ -1207,7 +1209,7 @@ bass = \new Voice {
 		piece = \markup \larger \sans { Agnus Dei }
 	}
 	\layout { }
-%	\midi { }
+	\midi { }
 }
 
 
