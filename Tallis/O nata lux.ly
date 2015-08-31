@@ -2,7 +2,7 @@
 % Copyright ©2014 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "2"
+revision = "3"
 \pointAndClickOff
 
 #(set-global-staff-size 15.0)
@@ -131,7 +131,7 @@ contraTenor = \new Voice {
 	\addlyrics {
 		O na -- ta lux __ _ _ de lu -- mi -- ne, __ _ _ Je -- su red -- em -- ptor se -- 
 		cu -- li, di -- gna -- re cle -- mens sup -- pli -- cum __ _ _ lau -- des pre -- ces -- que su -- me -- re,
-		qui car -- ne quon -- dam __ _ con -- te -- gi di -- gna -- tus es pro per -- di -- tis,
+		qui car -- ne quon -- dam __ _ con -- _ te -- gi di -- gna -- tus es pro per -- di -- tis,
 		nos mem -- bra con -- fer ef -- fi -- ci tu -- i be -- a -- ti __ _ cor -- _ po -- ris.
 	}
 }
