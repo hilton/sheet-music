@@ -1,0 +1,286 @@
+% CPDL #31402
+% Copyright ©2014 Peter Hilton - https://github.com/hilton
+
+\version "2.18.2"
+revision = "1"
+\pointAndClickOff
+
+#(set-global-staff-size 16.0)
+
+\paper {
+	#(define fonts (make-pango-font-tree "Century Schoolbook L" "Source Sans Pro" "Luxi Mono" (/ 16 20)))
+	annotate-spacing = ##f
+	two-sided = ##t
+	top-margin = 10\mm
+	inner-margin = 15\mm
+	outer-margin = 15\mm
+	top-markup-spacing = #'( (basic-distance . 8) )
+	markup-system-spacing = #'( (padding . 8) )
+	system-system-spacing = #'( (basic-distance . 20) (stretchability . 100) )
+  	ragged-bottom = ##f
+	ragged-last-bottom = ##t
+} 
+
+year = #(strftime "©%Y" (localtime (current-time)))
+
+\header {
+	title = \markup \medium \fontsize #7 \override #'(font-name . "Source Sans Pro Light") {
+		\center-column {
+			"Missa Pro Defunctis - Introitus"
+			\vspace #2
+		}
+	}
+	composer = \markup \sans \column \right-align { "Manuel Cardoso (c1566-1650)" }
+	poet = \markup \sans { "Liber primus missarum, Lisbon (1625)" }
+	copyright = \markup \sans {
+		\vspace #2
+		\column \center-align {
+			\line {
+				This edition copyright \year Peter Hilton - 
+				Lilypond source at \with-url #"https://github.com/hilton/sheet-music" https://github.com/hilton/sheet-music - 
+				revision \revision 
+			}
+		}
+	}
+	tagline = ##f
+}
+
+\layout {
+	indent = #0
+  	ragged-right = ##f
+  	ragged-last = ##t
+	\context {
+		\Score
+		\override BarNumber #'self-alignment-X = #CENTER
+		\override BarNumber #'break-visibility = #'#(#f #t #t)
+		\override BarLine #'transparent = ##t
+		\remove "Metronome_mark_engraver"
+		\override VerticalAxisGroup #'staff-staff-spacing = #'((basic-distance . 10) (stretchability . 100))
+	}
+	\context { 
+		\Staff
+		\remove "Time_signature_engraver"
+	}
+	\context { 
+		\StaffGroup
+		\remove "Span_bar_engraver"	
+	}
+	\context { 
+		\Voice 
+		\override NoteHead #'style = #'baroque
+		\consists "Horizontal_bracket_engraver"
+		\consists "Ambitus_engraver"
+	}
+}
+
+global = { 
+	\key f \major
+	\time 4/2
+	\tempo 2 = 44
+	\set Staff.midiInstrument = "Choir Aahs"
+	\accidentalStyle "forget"
+}
+
+showBarLine = { \once \override Score.BarLine #'transparent = ##f }
+ficta = { \once \set suggestAccidentals = ##t \override AccidentalSuggestion #'parenthesized = ##f }
+fictaParenthesized = { \once \set suggestAccidentals = ##t \override AccidentalSuggestion #'parenthesized = ##t }
+
+sopranoA = \new Voice	{
+	\relative c' {
+		r1 f g a\breve a1 g a c a \break 
+		g a bes a g f f g a g \break 
+		f a a g f a g a g f \break
+		a g a c a g a bes \break a g
+		f g \time 6/2 a g\breve f\breve \fermata \time 4/2 \showBarLine \bar "|." 
+		\once \override Score.RehearsalMark.break-visibility = #end-of-line-visible
+		\once \override Score.RehearsalMark.self-alignment-X = #RIGHT
+		\mark Fine 
+		\break
+
+		f1 g a a
+		a a a a2 a \break a1 a a g \time 6/2 bes a1. 
+		g2 \time 4/2 a\longa \showBarLine \bar "||" \break r\breve r1 f g a
+		a2 a a a a a a1 a2 a a a
+		f g a1 g2 f1 e2 f\breve \fermata \showBarLine \bar "|."
+		\once \override Score.RehearsalMark.break-visibility = #end-of-line-visible
+		\once \override Score.RehearsalMark.self-alignment-X = #RIGHT
+		\mark "D.C. al Fine"
+	}
+	\addlyrics {
+		Do -- _ _ na e -- _ _ _ _ _ _ _ _ is Do -- _ _ mi -- ne:
+		et lux per -- pe -- _ _ _ tu -- a
+		lu -- ce -- at __ _ _ _ _ e -- _ _ _ _ _ _ is.
+		Et ti -- _ _ 
+		bi red -- de -- _ tur vo -- tum in Ie -- _ ru -- 
+		sa -- lem. __ Ex -- au -- _
+		di o -- ra -- ti -- o -- nem me -- am, ad __ _ te
+		om -- nis ca -- ro ve -- ni -- et.
+	}
+}
+
+sopranoB = \new Voice {
+	\relative c'' {
+		a2. b4 cis2 d b c!2. bes!4 a g f g a2. d,4 d'2
+		d c2. bes4 a2 g1 f r r2 d'1 bes2 c d
+		d c4 bes a g a2. g4 f2 f e f c'1 c2 a1 r
+		r4 c c a bes2 bes a4 d d a cis2 d d c1 c2
+		bes1 a2 f f1 r r\breve r1 r2 c'2. 
+		bes4 a g f2 f f4 g a bes c2 bes a4 g a bes c1.
+		a2 d1 c a\breve \fermata a1 bes2 d2 ~ d4 cis8 b cis2 d1
+		r1 r2 d, a' c2. bes4 a g f d d'2 c c c1 c2 bes2.
+		a4 g2 f f bes bes a d1 cis4 b cis\breve
+		f,1 g a a2 a bes bes c d2. a4 d2 cis d1
+		cis2 d d, e f e f1
+		e2 f c'2. bes4 a2 g c c\breve
+	}
+	\addlyrics {
+		Do -- _ _ _ na e -- _ _ _ _ _ _ _ _ 
+		is Do -- _ _ mi -- ne, do -- _ _ _ 
+		na e -- _ _ _ _ _ _ _ _ is Do -- mi -- ne:
+		et lux per -- pe -- tu -- a, et lux per -- pe -- tu -- a lu -- ce -- 
+		at e -- _ is, lu --
+		_ _ _ _ ce -- at __ _ _ _ _ _ e -- _ _ _ _ 
+		is, e -- _ is. Et ti -- _ _ _ _ bi 
+		et ti -- _ _ _ _ _ _ _ bi red -- de -- tur vo -- 
+		_ _ tum in Ie -- ru -- sa -- lem. __ _ _ _
+		Ex -- au -- _ di o -- ra -- ti -- o -- _ _ _ nem me -- 
+		_ am, ad te om -- nis ca -- ro ve -- _ _ _ _ ni -- et.
+	}
+}
+
+alto = \new Voice {
+	\relative c' {
+		\clef "treble_8"
+		r2 f2. e4 d c d2 e f1. e2 d a bes g c1 ~
+		c\breve r2 g'1 fis2 g1 c,2 f1 e2 f1 r2 c1 g2
+		c c c2. c4 f,2 f' f4 e2 d c8 bes a4 f g g' g d2 
+		f d4 e2 d r1 r4 c c a bes2 d d1 c1. d2
+		d1 e2 f c f1 e2 f f2. e4 d2 ~ d c2. g4 bes2
+		f1 r2 c'1 c2 bes1 g2 c c\breve \fermata d1 d2. e4
+		f2 e f f f f, a1 a r2 a d f e c1
+		f2 e g g d2. e4 f2 d1 f2 f e1 ~ e\breve
+		d2 f1 e4 d e2 f2. e4 d c bes2 g r d' d d e f
+		e a, a f' e d e a,
+		r bes c f e c2. bes8 a g2 a\breve \fermata
+	}
+	\addlyrics {
+		Do -- _ _ _ _ _ _ na e -- is Do -- mi -- ne,
+		do -- na e -- is Do -- mi -- ne, do -- na 
+		e -- is Do -- mi -- ne: et lux per -- pe -- _ _ _ tu -- a, et lux per -- 
+		pe -- tu -- a, __ _ et lux per -- pe -- tu -- a lu -- ce -- 
+		at e -- _ is, lu -- ce -- at e -- _ _ _ _ _ 
+		is, lu -- ce -- at e -- _ is. Et ti -- _ 
+		_ _ bi red -- de -- tur vo -- tum, et ti -- _ bi red -- 
+		de -- tur vo -- tum in __ _ _ Ie -- ru -- sa -- lem.
+		Ex -- au -- _ _ _ _ _ _ _ _ di o -- ra -- ti -- o -- _ 
+		nem me -- am, ad te __ _ om -- nis
+		ca -- ro __ _ ve -- _ ni -- _ _ et.
+	}
+}
+
+tenorA = \new Voice {
+	\relative c' {
+		\clef "treble_8"
+		r\breve r1 c d2 e f1. e2 f f,
+		g1 a2 f'2 ~ f e4 d c2 a d1 f2. e4 d2 g, d'1
+		c r2 c1 f e2 f1 r2 r4 f f e e d d2 g,
+		a1 r2 f' f e f f d1 r2 a2 ~ a4 bes4 c d e f g1 fis2 
+		g2 c, f2. e4 d2 c4 bes a2 c d1 r2 f e d
+		d4 e f d e f g2. f4 f1 e4 d e1 f\breve \fermata r\breve
+		r1 a, d2 f e f f e4 d e2 f2 ~ f d2 e e
+		f c1 d2 bes1 r2 d bes d1 a2 a1 ~ a\breve
+		a1 d cis2 d d d d1 f1. f2 e d
+		e1 d2 a2 ~ a a2 a a
+		d, g c\breve c1 c\breve \fermata
+	}
+	\addlyrics {
+		Do -- na __ _ e -- is Do -- _ 
+		mi -- ne, do -- _ _ _ _ na e -- _ _ _ _ 
+		is Do -- _ mi -- ne: et lux per -- pe -- tu -- a, __ _
+		_ et lux per -- pe -- tu -- a lu -- _ _ _ _ _ _ 
+		ce -- at __ _ e -- _ _ _ _ _ _ is, lu -- ce -- at 
+		e -- _ _ _ _ _ _ _ _ _ _ _ is.
+		Et ti -- _ bi red -- de -- _ _ _ tur vo -- tum in 
+		Ie -- ru -- sa -- lem, in Ie -- ru -- sa -- lem.
+		Ex -- au -- di o -- ra -- ti -- o -- _ nem me -- _ 
+		_ am, ad te om -- nis
+		ca -- ro ve -- ni -- et.
+	}
+}
+
+tenorB = \new Voice {
+	\relative c {
+		\clef "treble_8"
+		f2. a4 a2 bes g c1 f,2 a2. g4 f2 d g1 f
+		c2 c'1 a2 c1 a g a2 f g1 r2 f2. 
+		g4 a2 g1 f g r2 d' d4 a c d a1 r
+		r2 r4 a a e f2 g2. g4 f1 r2 d2. e4 f2 ~ f4 g4 a bes c2 bes
+		a d c4 bes a g f1 g f f f g a2 d, g e f1 g g2 c, f\breve \fermata d1 g2 bes
+		a a f d d a'2. g4 f e f g a bes c2 d a a1 a2
+		a f g4 a bes c d1 r2 d,1 g2 f d e1 ~ e\breve
+		r1 d a' f2 a g bes a a f d a'\breve r2 d cis d1 cis2
+		d bes a f g a4 f g2. g4 f\breve \fermata
+	}
+	\addlyrics {
+		Do -- _ _ _ na e -- is Do -- _ _ _ _ mi -- 
+		ne, do -- na e -- is __ _ Do -- mi -- ne, Do -- 
+		_ _ mi -- ne: __ _ et lux per -- pe -- tu -- a,
+		et lux per -- pe -- _ tu -- a lu -- _ _ _ _ _ _ _ 
+		ce -- at e -- _ _ _ _ _ is, __ _ lu -- _ 
+		ce -- at e -- _ _ _ _ _ is. Et ti -- _ 
+		bi red -- de -- _ tur vo -- _ _ _ _ _ _ _ _ _ tum in Ie -- 
+		ru -- sa -- lem, __ _ _ _ _ in Ie -- ru -- sa -- lem.
+		Ex -- au -- di o -- ra -- ti -- o -- nem me -- _ am, 
+		ad te om -- nis
+		ca -- _ ro __ _ ve -- _ _ _ ni -- et.
+	}
+}
+
+bass = \new Voice {
+	\relative c {
+		\clef bass
+		r\breve r1 f2. e4 d2 cis d2. c4 bes2 c f, f'1
+		e2 f1 c2. bes4 c2 d g, g' f4 e d c bes2 c d2. e4
+		f1 c f, c' d r2 r4 d d a c d g,1
+		d' a2 d b c f, f g4 a bes! c d2. e4 f2 f c g
+		d'1 r2 f2. e4 d c b2 c f,1 bes!2. c4 d e f2 c g
+		d'1 c2. bes4 a2 f bes1 c f,\breve \fermata r\breve
+		a1 d2 f2. e4 d2 cis d d c!4 bes a2 d d1 a
+		f c'2 g2. a4 bes c d1 g, d' a ~ a\breve
+		d1 bes a2 d d d g, g' f4 e d c d1 a\breve 
+		d1 a a2 a bes g f1 c'2 f, c'2. c4 f,\breve \fermata
+	}
+	\addlyrics {
+		Do -- _ _ na e -- _ _ _ is Do -- 
+		mi -- ne, do -- na e -- _ is, do -- _ _ _ _ _ _ na __ _ 
+		e -- is Do -- mi -- ne: et lux per -- pe -- tu -- a,
+		et lux per -- pe -- _ tu -- a lu -- _ _ _ _ _ _ ce -- at e -- 
+		is, lu -- _ _ _ _ ce -- at e -- _ _ _ _ is, lu -- 
+		ce -- at __ _ _ _ e -- _ is.
+		Et ti -- _ _ _ bi red -- de -- _ _ _ tur vo -- tum 
+		in Ie -- ru -- _ _ _ _ sa -- _ lem.
+		Ex -- au -- di o -- ra -- ti -- o -- nem me -- _ _ _ _ am, 
+		ad te om -- nis ca -- _ ro ve -- _ _ ni -- et.
+	}
+}
+
+\score {
+	\transpose c c {
+		\new StaffGroup << 
+			\set Score.proportionalNotationDuration = #(ly:make-moment 1 4)
+			\set Score.barNumberVisibility = #all-bar-numbers-visible
+			\new Staff << \global \sopranoA >> 
+			\new Staff << \global \sopranoB >> 
+			\new Staff << \global \alto >> 
+			\new Staff << \global \tenorA >> 
+			\new Staff << \global \tenorB >> 
+			\new Staff << \global \bass >> 
+		>> 
+	}
+	\header {
+		piece = ""
+	}
+	\layout { }
+	\midi {	}
+}
+
