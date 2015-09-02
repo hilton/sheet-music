@@ -2,7 +2,7 @@
 % Copyright ©2014 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "1"
+revision = "2"
 \pointAndClickOff
 
 #(set-global-staff-size 16.0)
@@ -48,7 +48,7 @@ year = #(strftime "©%Y" (localtime (current-time)))
 \layout {
 	indent = #0
   	ragged-right = ##f
-  	ragged-last = ##t
+  	ragged-last = ##f
 	\context {
 		\Score
 		\override BarNumber #'self-alignment-X = #CENTER
@@ -87,10 +87,10 @@ fictaParenthesized = { \once \set suggestAccidentals = ##t \override AccidentalS
 
 sopranoA = \new Voice	{
 	\relative c' {
-		r1 f g a\breve a1 g a c a \break 
-		g a bes a g f f g a g \break 
-		f a a g f a g a g f \break
-		a g a c a g a bes \break a g
+		r1 f g a\breve a1 g a \break c a 
+		g a bes a g f \break f g a g 
+		f a a g \break f a g a g f 
+		a g \break a c a g a bes a g \break
 		f g \time 6/2 a g\breve f\breve \fermata \time 4/2 \showBarLine \bar "|." 
 		\once \override Score.RehearsalMark.break-visibility = #end-of-line-visible
 		\once \override Score.RehearsalMark.self-alignment-X = #RIGHT
@@ -98,8 +98,8 @@ sopranoA = \new Voice	{
 		\break
 
 		f1 g a a
-		a a a a2 a \break a1 a a g \time 6/2 bes a1. 
-		g2 \time 4/2 a\longa \showBarLine \bar "||" \break r\breve r1 f g a
+		a a \break a a2 a a1 a a g \break \time 6/2 bes a1. 
+		g2 \time 4/2 a\longa \showBarLine \bar "||" r\breve \break r1 f g a
 		a2 a a a a a a1 a2 a a a
 		f g a1 g2 f1 e2 f\breve \fermata \showBarLine \bar "|."
 		\once \override Score.RehearsalMark.break-visibility = #end-of-line-visible
@@ -122,12 +122,12 @@ sopranoB = \new Voice {
 	\relative c'' {
 		a2. b4 cis2 d b c!2. bes!4 a g f g a2. d,4 d'2
 		d c2. bes4 a2 g1 f r r2 d'1 bes2 c d
-		d c4 bes a g a2. g4 f2 f e f c'1 c2 a1 r
+		d c4 bes a g a2 ~ a4 g4 f2 f e f c'1 c2 a1 r
 		r4 c c a bes2 bes a4 d d a cis2 d d c1 c2
 		bes1 a2 f f1 r r\breve r1 r2 c'2. 
 		bes4 a g f2 f f4 g a bes c2 bes a4 g a bes c1.
-		a2 d1 c a\breve \fermata a1 bes2 d2 ~ d4 cis8 b cis2 d1
-		r1 r2 d, a' c2. bes4 a g f d d'2 c c c1 c2 bes2.
+		a2 d1 c a\breve \fermata a1 bes2 d2. cis8 b cis2 d1
+		r1 r2 d, a' c2. bes4 a g f d d'2 c c c1 c2 bes2 ~ bes4
 		a4 g2 f f bes bes a d1 cis4 b cis\breve
 		f,1 g a a2 a bes bes c d2. a4 d2 cis d1
 		cis2 d d, e f e f1
@@ -153,9 +153,9 @@ alto = \new Voice {
 		\clef "treble_8"
 		r2 f2. e4 d c d2 e f1. e2 d a bes g c1 ~
 		c\breve r2 g'1 fis2 g1 c,2 f1 e2 f1 r2 c1 g2
-		c c c2. c4 f,2 f' f4 e2 d c8 bes a4 f g g' g d2 
-		f d4 e2 d r1 r4 c c a bes2 d d1 c1. d2
-		d1 e2 f c f1 e2 f f2. e4 d2 ~ d c2. g4 bes2
+		c c c2. c4 f,2 f' f4 e2 d2 c8 bes a4 f g g' g d4 ~ d
+		f2 d4 e2 d r1 r4 c c a bes2 d d1 c1. d2
+		d1 e2 f c f1 e2 f f2. e4 d1 c2. g4 bes2
 		f1 r2 c'1 c2 bes1 g2 c c\breve \fermata d1 d2. e4
 		f2 e f f f f, a1 a r2 a d f e c1
 		f2 e g g d2. e4 f2 d1 f2 f e1 ~ e\breve
@@ -182,12 +182,12 @@ tenorA = \new Voice {
 	\relative c' {
 		\clef "treble_8"
 		r\breve r1 c d2 e f1. e2 f f,
-		g1 a2 f'2 ~ f e4 d c2 a d1 f2. e4 d2 g, d'1
+		g1 a2 f'1 e4 d c2 a d1 f2. e4 d2 g, d'1
 		c r2 c1 f e2 f1 r2 r4 f f e e d d2 g,
-		a1 r2 f' f e f f d1 r2 a2 ~ a4 bes4 c d e f g1 fis2 
-		g2 c, f2. e4 d2 c4 bes a2 c d1 r2 f e d
+		a1 r2 f' f e f f d1 r2 a2. bes4 c d e f g2 ~ g 
+		fis2 g2 c, f2. e4 d2 c4 bes a2 c d1 r2 f e d
 		d4 e f d e f g2. f4 f1 e4 d e1 f\breve \fermata r\breve
-		r1 a, d2 f e f f e4 d e2 f2 ~ f d2 e e
+		r1 a, d2 f e f f e4 d e2 f1 d2 e e
 		f c1 d2 bes1 r2 d bes d1 a2 a1 ~ a\breve
 		a1 d cis2 d d d d1 f1. f2 e d
 		e1 d2 a2 ~ a a2 a a
@@ -211,10 +211,10 @@ tenorA = \new Voice {
 tenorB = \new Voice {
 	\relative c {
 		\clef "treble_8"
-		f2. a4 a2 bes g c1 f,2 a2. g4 f2 d g1 f
-		c2 c'1 a2 c1 a g a2 f g1 r2 f2. 
+		f2. g4 a2 bes g c1 f,2 a2. g4 f2 d g1 f
+		c2 c'1 a2 c1 a g a2 f g1 r2 f2 ~ f4
 		g4 a2 g1 f g r2 d' d4 a c d a1 r
-		r2 r4 a a e f2 g2. g4 f1 r2 d2. e4 f2 ~ f4 g4 a bes c2 bes
+		r2 r4 a a e f2 g2. g4 f1 r2 d2. e4 f2. g4 a bes c2 bes
 		a d c4 bes a g f1 g f f f g a2 d, g e f1 g g2 c, f\breve \fermata d1 g2 bes
 		a a f d d a'2. g4 f e f g a bes c2 d a a1 a2
 		a f g4 a bes c d1 r2 d,1 g2 f d e1 ~ e\breve
@@ -239,14 +239,14 @@ tenorB = \new Voice {
 bass = \new Voice {
 	\relative c {
 		\clef bass
-		r\breve r1 f2. e4 d2 cis d2. c4 bes2 c f, f'1
+		r\breve r1 f2. e4 d2 cis d2. c4 bes2 c f, f'2 ~ f
 		e2 f1 c2. bes4 c2 d g, g' f4 e d c bes2 c d2. e4
 		f1 c f, c' d r2 r4 d d a c d g,1
 		d' a2 d b c f, f g4 a bes! c d2. e4 f2 f c g
 		d'1 r2 f2. e4 d c b2 c f,1 bes!2. c4 d e f2 c g
 		d'1 c2. bes4 a2 f bes1 c f,\breve \fermata r\breve
 		a1 d2 f2. e4 d2 cis d d c!4 bes a2 d d1 a
-		f c'2 g2. a4 bes c d1 g, d' a ~ a\breve
+		f c'2 g2 ~ g4 a4 bes c d1 g, d' a ~ a\breve
 		d1 bes a2 d d d g, g' f4 e d c d1 a\breve 
 		d1 a a2 a bes g f1 c'2 f, c'2. c4 f,\breve \fermata
 	}
