@@ -1,7 +1,8 @@
+% CPDL #36843
 % Copyright ©2015 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "2"
+revision = "3"
 \pointAndClickOff
 
 #(set! paper-alist (cons '("custom" . (cons (* 21 cm) (* 7.425 cm))) paper-alist))
@@ -91,8 +92,9 @@ soprano = \new Voice	{
 }
 
 \markup \tiny {
-	Copyright \year \with-url #"http://hilton.org.uk" "Peter Hilton" •
-	\with-url #"http://creativecommons.org/licenses/by-nc-sa/3.0/" "CC BY-NC-SA 3.0" •
-	Lilypond source at \with-url #"https://github.com/hilton/sheet-music" https://github.com/hilton/sheet-music •
-	Revision \revision 
+	\year \with-url #"http://hilton.org.uk" "Peter Hilton" -
+	\with-url #"http://creativecommons.org/licenses/by-nc-sa/3.0/" "CC BY-NC-SA 3.0" -
+	Lilypond source at \with-url #"https://github.com/hilton/sheet-music" https://github.com/hilton/sheet-music -
+	\with-url #"http://www.cpdl.org/wiki/index.php/Da_pacem,_Domine_(Melchior_Franck)" "CPDL #36843" -
+	revision \revision 
 }
