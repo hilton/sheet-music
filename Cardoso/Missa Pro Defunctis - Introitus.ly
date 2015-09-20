@@ -1,8 +1,8 @@
-% CPDL #31402
-% Copyright ©2014 Peter Hilton - https://github.com/hilton
+% CPDL #36844
+% Copyright ©2015 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "2"
+revision = "3"
 \pointAndClickOff
 
 #(set-global-staff-size 16.0)
@@ -36,7 +36,9 @@ year = #(strftime "©%Y" (localtime (current-time)))
 		\vspace #2
 		\column \center-align {
 			\line {
-				This edition copyright \year Peter Hilton - 
+				Copyright \year \with-url #"http://hilton.org.uk" "Peter Hilton" -
+				\with-url #"http://creativecommons.org/licenses/by-nc-sa/3.0/" "CC BY-NC-SA 3.0" -
+				\with-url #"http://www.cpdl.org/wiki/index.php/Missa_Pro_Defunctis_(Manuel_Cardoso)" "CPDL #36844" -
 				Lilypond source at \with-url #"https://github.com/hilton/sheet-music" https://github.com/hilton/sheet-music - 
 				revision \revision 
 			}
@@ -150,7 +152,6 @@ sopranoB = \new Voice {
 
 alto = \new Voice {
 	\relative c' {
-		\clef "treble_8"
 		r2 f2. e4 d c d2 e f1. e2 d a bes g c1 ~
 		c\breve r2 g'1 fis2 g1 c,2 f1 e2 f1 r2 c1 g2
 		c c c2. c4 f,2 f' f4 e2 d2 c8 bes a4 f g g' g d4 ~ d
@@ -269,12 +270,12 @@ bass = \new Voice {
 		\new StaffGroup << 
 			\set Score.proportionalNotationDuration = #(ly:make-moment 1 4)
 			\set Score.barNumberVisibility = #all-bar-numbers-visible
-			\new Staff << \global \sopranoA >> 
-			\new Staff << \global \sopranoB >> 
-			\new Staff << \global \alto >> 
-			\new Staff << \global \tenorA >> 
-			\new Staff << \global \tenorB >> 
-			\new Staff << \global \bass >> 
+			\new Staff << \global \sopranoA \set Staff.instrumentName = #"S1" \set Staff.shortInstrumentName = #"S1" >> 
+			\new Staff << \global \sopranoB \set Staff.instrumentName = #"S2" \set Staff.shortInstrumentName = #"S2" >> 
+			\new Staff << \global \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >> 
+			\new Staff << \global \tenorA \set Staff.instrumentName = #"T1" \set Staff.shortInstrumentName = #"T1" >> 
+			\new Staff << \global \tenorB \set Staff.instrumentName = #"T2" \set Staff.shortInstrumentName = #"T2" >> 
+			\new Staff << \global \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >> 
 		>> 
 	}
 	\header {
