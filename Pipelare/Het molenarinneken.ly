@@ -1,7 +1,7 @@
 % Copyright ©2015 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "1"
+revision = "2"
 \pointAndClickOff
 
 #(set-global-staff-size 16.0)
@@ -13,8 +13,8 @@ revision = "1"
 	top-margin = 10\mm
 	inner-margin = 15\mm
 	outer-margin = 15\mm
-	top-markup-spacing = #'( (basic-distance . 8) )
-	markup-system-spacing = #'( (padding . 8) )
+	top-markup-spacing = #'( (basic-distance . 4) )
+	markup-system-spacing = #'( (padding . 4) )
 	system-system-spacing = #'( (basic-distance . 20) (stretchability . 100) )
   	ragged-bottom = ##f
 	ragged-last-bottom = ##t
@@ -26,7 +26,7 @@ year = #(strftime "©%Y" (localtime (current-time)))
 	title = \markup \medium \fontsize #7 \override #'(font-name . "Source Sans Pro Light") {
 		\center-column {
 			"Het molenarinneken"
-			\vspace #2
+			\vspace #1
 		}
 	}
 	composer = \markup \sans \column \right-align { "Mattheus Pipelare (1450-1515)" }
@@ -213,7 +213,7 @@ bass = \new Voice {
 		Ick weedt een mo -- le -- na -- rin -- _ _ ne -- ken
 		Van her -- _ _ ten al -- _ so fijn. __ _ _ _ _
 		In al -- le de -- ze lan -- _ _ _ den
-		En __ _ _ _ mach _ _ _ gheen __ _ _ _ _ schoon -- der zijn, __ _
+		En __ _ _ _ mach __ _ _ gheen __ _ _ _ _ schoon -- der zijn, __ _
 		En mach __ _ _ gheen __ _ schoon -- der zijn:
 		Rijk God __ _ _ _ mocht zij __ _ _ mij ma -- len,
 		Goed co -- ren soud ick __ _ haer __ _ ha -- len,
@@ -225,7 +225,7 @@ bass = \new Voice {
 }
 
 \score {
-	\transpose c es {
+	\transpose c d {
 		\new StaffGroup << 
 			\set Score.proportionalNotationDuration = #(ly:make-moment 1 4)
 			\set Score.barNumberVisibility = #all-bar-numbers-visible
