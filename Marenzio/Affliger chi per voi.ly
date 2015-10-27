@@ -1,7 +1,7 @@
 % Copyright ©2015 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "2"
+revision = "3"
 \pointAndClickOff
 
 #(set-global-staff-size 16.0)
@@ -143,7 +143,7 @@ soprano = \new Voice	{
 		Man -- chi per du -- ra via d’as -- pre mon -- ta -- gne,
 		Man -- chi per du -- ra via d’as -- pre mon -- ta -- _ _ _ _ gne,
 
-		Nul -- la da voi find qui mi ve -- "ne a" -- i -- _ _ ta.
+		Nul -- la da voi fin qui mi ve -- "ne a" -- i -- _ _ ta.
 		Nè pur per en -- "tro I’ll" vo -- "stro a" -- cer -- "bo or" -- go -- _ _ _ glio
 		Men fa -- ti -- co -- so cal -- "le ha’l" pen -- sier mi -- o.
 		As -- pro co -- stum’ è in bel -- la don -- "na e" ri -- o,
@@ -214,7 +214,7 @@ alto = \new Voice {
 		Man -- chi per du -- ra via d’as -- pre mon -- ta -- gne,
 		Man -- chi per du -- ra via d’as -- pre mon -- ta -- gne,
 
-		Nul -- la da voi find qui mi ve -- "ne a" -- i -- _ ta,
+		Nul -- la da voi fin qui mi ve -- "ne a" -- i -- _ ta,
 		mi ve -- "ne a" -- i -- _ _ _ _ ta.
 		Nè pur per en -- "tro I’ll" vo -- "stro a" -- cer -- "bo or" -- go -- glio,
 		Nè pur per en -- "tro I’ll" vo -- "stro a" -- cer -- "bo or" -- go -- _ _ _ glio
@@ -289,7 +289,7 @@ tenor = \new Voice {
 		d’as -- pre mon -- ta -- gne,
 		Man -- chi per du -- ra via d’as -- pre mon -- ta -- gne,
 
-		Nul -- la da voi find qui mi ve -- "ne a" -- i -- _ _ ta.
+		Nul -- la da voi fin qui mi ve -- "ne a" -- i -- _ _ ta.
 		Nè pur per en -- "tro I’ll" vo -- "stro a" -- cer -- _ _ _ _ "bo or" -- go -- glio
 		Nè pur per en -- "tro I’ll" vo -- "stro a" -- cer -- "bo or" -- go -- glio
 		Men fa -- ti -- co -- so cal -- le ha’l pen -- sier mi -- o.
@@ -359,7 +359,7 @@ bass = \new Voice {
 		Man -- chi per du -- ra via d’as -- pre mon -- ta -- gne,
 		Man -- chi per du -- ra via d’as -- pre mon -- ta -- gne,
 
-		Nul -- la da voi find qui mi ve -- "ne a" -- i -- _ _ ta,
+		Nul -- la da voi fin qui mi ve -- "ne a" -- i -- _ _ ta,
 		mi ve -- "ne a" -- i -- _ _ ta.
 		Nè pur per en -- "tro I’ll" vo -- "stro a" -- cer -- "bo or" -- go -- glio
 		Men fa -- ti -- co -- so cal -- "le ha’l" pen -- sier mi -- o.
