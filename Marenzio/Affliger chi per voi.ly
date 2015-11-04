@@ -1,7 +1,7 @@
 % Copyright ©2015 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "3"
+revision = "4"
 \pointAndClickOff
 
 #(set-global-staff-size 16.0)
@@ -295,9 +295,9 @@ tenor = \new Voice {
 		Men fa -- ti -- co -- so cal -- le ha’l pen -- sier mi -- o.
 		As -- pro co -- stum’ __ _ è in bel -- la don -- "na e" ri -- o,
 		in bel -- la don -- "na e" ri -- _ _ _ _ o,
-		Dis de -- "gno ar" -- mar -- "si, e" rom -- per l’al -- trui vi -- ta
+		Di sde -- "gno ar" -- mar -- "si, e" rom -- per l’al -- trui vi -- ta
 		A mez -- "zo il" cor -- so, a mez -- "zo il" cor -- so co -- me du -- ro sco -- glio,
-		Dis de -- "gno ar" -- mar -- "si, e" rom -- per l’al -- trui vi -- ta
+		Di sde -- "gno ar" -- mar -- "si, e" rom -- per l’al -- trui vi -- ta
 		A mez -- "zo il" cor -- so, a mez -- "zo il" cor -- so co -- me du -- ro sco -- glio.
 	}
 }
@@ -312,7 +312,7 @@ bass = \new Voice {
 		e d c b4 a2 g
 		a1 d R1
 		r4 d d d e e fis2 g r
-		r4 d g4. f8 e2 d r4 g, c4. b8
+		r4 d g4. \ficta f!8 e2 d r4 g, c4. b8
 
 		a2 g r4 c f4. e8 d2 c
 		r4 c f g a2 e4 e2 f d
@@ -328,7 +328,7 @@ bass = \new Voice {
 		g2 ~ g1 r4 f2 e d4
 		c b a b c d e\breve ~ e1 a,\fermata a'2 a4 a
 
-		g2. fis4 g e f g a4. g8 f2
+		g2. fis4 g e \ficta f! g a4. g8 f2
 		e r r4 c d e f4. e8 d2
 		c r g' f4 d d e f4. f8
 		fis4 g a2 a,4 r r2 R1
@@ -364,9 +364,9 @@ bass = \new Voice {
 		Nè pur per en -- "tro I’ll" vo -- "stro a" -- cer -- "bo or" -- go -- glio
 		Men fa -- ti -- co -- so cal -- "le ha’l" pen -- sier mi -- o.
 		As -- pro co -- stum’ "è, as" -- pro co -- stum’ è in bel -- la don -- "na e" ri -- o,
-		Dis de -- "gno ar" -- mar -- "si, e" rom -- per l’al -- trui vi -- ta
+		Di sde -- "gno ar" -- mar -- "si, e" rom -- per l’al -- trui vi -- ta
 		A mez -- "zo il" cor -- so co -- me du -- ro sco -- _ _ glio,
-		Dis de -- "gno ar" -- mar -- "si, e" rom -- per l’al -- trui vi -- ta
+		Di sde -- "gno ar" -- mar -- "si, e" rom -- per l’al -- trui vi -- ta
 		A mez -- "zo il" cor -- so co -- me du -- ro sco -- _ _ glio.
 	}
 }
