@@ -1,3 +1,4 @@
 *.pdf
 *.midi
 .DS_Store
+temp.ly

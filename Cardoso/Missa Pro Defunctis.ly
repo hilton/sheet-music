@@ -2,7 +2,7 @@
 % Copyright ©2015 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "4"
+revision = "5"
 \pointAndClickOff
 
 #(set-global-staff-size 16.0)
@@ -11,13 +11,14 @@ revision = "4"
 	#(define fonts (make-pango-font-tree "Century Schoolbook L" "Source Sans Pro" "Luxi Mono" (/ 16 20)))
 	annotate-spacing = ##f
 	two-sided = ##t
-	top-margin = 10\mm
+	top-margin = 5\mm
+	bottom-margin = 5\mm
 	inner-margin = 15\mm
 	outer-margin = 15\mm
 	top-markup-spacing = #'( (basic-distance . 8) )
 	markup-system-spacing = #'( (padding . 8) )
-	system-system-spacing = #'( (basic-distance . 20) (stretchability . 100) )
-  	ragged-bottom = ##f
+	system-system-spacing = #'( (basic-distance . 10) (stretchability . 100) )
+	ragged-bottom = ##f	
 	ragged-last-bottom = ##t
 } 
 
@@ -57,7 +58,7 @@ year = #(strftime "©%Y" (localtime (current-time)))
 		\override BarNumber #'break-visibility = #'#(#f #t #t)
 		\override BarLine #'transparent = ##t
 		\remove "Metronome_mark_engraver"
-		\override VerticalAxisGroup #'staff-staff-spacing = #'((basic-distance . 10) (stretchability . 100))
+		\override VerticalAxisGroup #'staff-staff-spacing = #'((basic-distance . 5) (stretchability . 100))
 	}
 	\context { 
 		\Staff
@@ -76,12 +77,22 @@ year = #(strftime "©%Y" (localtime (current-time)))
 }
 
 global = { 
-	\key f \major
 	\time 4/2
 	\tempo 2 = 44
 	\set Staff.midiInstrument = "Choir Aahs"
 	\accidentalStyle "forget"
 }
+
+globalF = {
+	\global
+	\key f \major
+}
+
+globalAs = {
+	\global
+	\key as \major
+}
+
 
 showBarLine = { \once \override Score.BarLine #'transparent = ##f }
 ficta = { \once \set suggestAccidentals = ##t \override AccidentalSuggestion #'parenthesized = ##f }
@@ -231,12 +242,12 @@ bass = \new Voice {
 		\new StaffGroup << 
 			\set Score.proportionalNotationDuration = #(ly:make-moment 1 4)
 			\set Score.barNumberVisibility = #all-bar-numbers-visible
-			\new Staff << \global \sopranoB \set Staff.instrumentName = #"S1" \set Staff.shortInstrumentName = #"S1" >> 
-			\new Staff << \global \sopranoA \set Staff.instrumentName = #"S2" \set Staff.shortInstrumentName = #"S2" >> 
-			\new Staff << \global \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >> 
-			\new Staff << \global \tenorA \set Staff.instrumentName = #"T1" \set Staff.shortInstrumentName = #"T1" >> 
-			\new Staff << \global \tenorB \set Staff.instrumentName = #"T2" \set Staff.shortInstrumentName = #"T2" >> 
-			\new Staff << \global \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >> 
+			\new Staff << \globalF \sopranoB \set Staff.instrumentName = #"S1" \set Staff.shortInstrumentName = #"S1" >> 
+			\new Staff << \globalF \sopranoA \set Staff.instrumentName = #"S2" \set Staff.shortInstrumentName = #"S2" >> 
+			\new Staff << \globalF \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >> 
+			\new Staff << \globalF \tenorA \set Staff.instrumentName = #"T1" \set Staff.shortInstrumentName = #"T1" >> 
+			\new Staff << \globalF \tenorB \set Staff.instrumentName = #"T2" \set Staff.shortInstrumentName = #"T2" >> 
+			\new Staff << \globalF \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >> 
 		>> 
 	}
 	\header {
@@ -384,16 +395,114 @@ bass = \new Voice {
 		\new StaffGroup << 
 			\set Score.proportionalNotationDuration = #(ly:make-moment 1 4)
 			\set Score.barNumberVisibility = #all-bar-numbers-visible
-			\new Staff << \global \sopranoB \set Staff.instrumentName = #"S1" \set Staff.shortInstrumentName = #"S1" >> 
-			\new Staff << \global \sopranoA \set Staff.instrumentName = #"S2" \set Staff.shortInstrumentName = #"S2" >> 
-			\new Staff << \global \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >> 
-			\new Staff << \global \tenorA \set Staff.instrumentName = #"T1" \set Staff.shortInstrumentName = #"T1" >> 
-			\new Staff << \global \tenorB \set Staff.instrumentName = #"T2" \set Staff.shortInstrumentName = #"T2" >> 
-			\new Staff << \global \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >> 
+			\new Staff << \globalF \sopranoB \set Staff.instrumentName = #"S1" \set Staff.shortInstrumentName = #"S1" >> 
+			\new Staff << \globalF \sopranoA \set Staff.instrumentName = #"S2" \set Staff.shortInstrumentName = #"S2" >> 
+			\new Staff << \globalF \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >> 
+			\new Staff << \globalF \tenorA \set Staff.instrumentName = #"T1" \set Staff.shortInstrumentName = #"T1" >> 
+			\new Staff << \globalF \tenorB \set Staff.instrumentName = #"T2" \set Staff.shortInstrumentName = #"T2" >> 
+			\new Staff << \globalF \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >> 
 		>> 
 	}
 	\header {
 		piece = ""
+	}
+	\layout { }
+%	\midi {	}
+}
+
+
+% KYRIE 1
+
+sopranoA = \new Voice {
+	\relative c'' {
+		R1 R as\breve bes1
+		c c bes1 ~ \break bes d1 c
+		as g bes as1. g2 a\breve \fermata \showBarLine\bar "||"
+	}
+	\addlyrics {
+		Ky -- _ ri -- e e -- _ _ _ _ _ lé -- i -- son.
+	}
+}
+
+sopranoB = \new Voice {
+	\relative c'' {
+		as1 bes c1. d!2 es es2.
+		des4 c2. bes4 as1 g2 f des'2. c8 bes as2. bes4 c1 
+		d!2 es bes2. c4 des es f2 es1 es2 es\breve \fermata
+	}
+	\addlyrics {
+		Ky -- _ ri -- e e -- lé -- _ _ _ _ i -- son,
+		Ky -- ri -- _ _ _ _ _ e e -- _ lé -- _ _ _ i -- son.
+	}
+}
+
+alto = \new Voice {
+	\relative c'' {
+		r2 as1 g2 as es f as1 g2
+		as2. g8 f es2 f1 bes,2 bes bes'2. as8 g f4 g as1.
+		as,2 es'1 f2 des1 c2 bes es c\breve \fermata
+	}
+	\addlyrics {
+			Ky -- ri -- e __ _ e -- lé -- i -- son, __ _ _ _
+			Ky -- ri -- e e -- _ _ _ _ lé -- _ _ i -- son,
+			e -- lé -- i -- son.
+	}
+}
+
+tenorA = \new Voice {
+	\relative c' {
+		\clef "treble_8"
+		es1 es2. des4 c bes as1 as2 es'1
+		es as2. g4 f2 es des1. des2 as\breve
+		r2 es' des f2. des4 es2 es1 es\breve \fermata
+	}
+	\addlyrics {
+		Ky -- ri -- _ _ _ _ e e -- lé -- _ _ _ _ _ i -- son,
+		e -- lé -- _ _ _ i -- son.
+	}
+}
+
+tenorB = \new Voice {
+	\relative c' {
+		\clef "treble_8"
+		c1 bes2 es2. des4 c bes as2 f bes1
+		as as bes2. c4 des es f2 des f1 es4 des
+		es2 f bes,1. bes2 f as bes1 as\breve \fermata
+	}
+	\addlyrics {
+		Ky -- ri -- e __ _ _ _ _ e -- lé -- i -- son,
+		Ky -- _ _ _ _ ri -- e e -- _ _ _ _ lé -- _ _ i -- son.
+	}
+}
+
+bass = \new Voice {
+	\relative c' {
+		\clef bass
+		as1 es as2. g4 f1 es
+		as,2 as'2. g4 f es d!2 es bes bes2. c4 des es f g as2.
+		g4 f2 es1 bes2. c4 des2 as es' es as,\breve \fermata
+	}
+	\addlyrics {
+		Ky -- ri -- e __ _ e -- _ _ lé -- _ _ _ _ i -- son,
+		Ky -- _ _ _ _ ri -- e __ _ _ e -- lé -- _ _ _ _ i -- son.
+	}
+}
+
+\score {
+	\transpose c a, {
+		\new StaffGroup << 
+			\set Score.proportionalNotationDuration = #(ly:make-moment 1 4)
+			\set Score.barNumberVisibility = #all-bar-numbers-visible
+			\new Staff << \globalAs \sopranoB \set Staff.instrumentName = #"S1" \set Staff.shortInstrumentName = #"S1" >> 
+			\new Staff << \globalAs \sopranoA \set Staff.instrumentName = #"S2" \set Staff.shortInstrumentName = #"S2" >> 
+			\new Staff << \globalAs \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >> 
+			\new Staff << \globalAs \tenorA \set Staff.instrumentName = #"T1" \set Staff.shortInstrumentName = #"T1" >> 
+			\new Staff << \globalAs \tenorB \set Staff.instrumentName = #"T2" \set Staff.shortInstrumentName = #"T2" >> 
+			\new Staff << \globalAs \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >> 
+		>> 
+	}
+	\header {
+		piece = ##f
 	}
 	\layout { }
 %	\midi {	}
