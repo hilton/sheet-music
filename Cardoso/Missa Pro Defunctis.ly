@@ -19,7 +19,7 @@ revision = "5"
 	markup-system-spacing = #'( (padding . 8) )
 	system-system-spacing = #'( (basic-distance . 10) (stretchability . 100) )
 	ragged-bottom = ##f	
-	ragged-last-bottom = ##t
+	ragged-last-bottom = ##f
 } 
 
 year = #(strftime "©%Y" (localtime (current-time)))
@@ -270,7 +270,7 @@ bass = \new Voice {
 			}
 		}
 		\addlyrics {
-			Te __ _ de -- _ cet __ _ hym -- nus, De -- us, in Sí -- on;
+			Te __ _ dé -- _ cet __ _ hým -- nus, Dé -- us, in Sí -- on;
 		}
 	>>
 	\layout {
@@ -290,11 +290,11 @@ sopranoA = \new Voice {
 		\mark "D.C. al Fine"
 	}
 	\addlyrics {
-		Et ti -- _ _ 
-		bi red -- dé -- _ tur vo -- tum in Ie -- _ rú -- 
-		sa -- lem. __ Ex -- au -- _
-		di o -- ra -- ti -- ó -- nem me -- am, ad __ _ te
-		om -- nis ca -- ro vé -- ni -- et.
+		Et tí -- _ _ 
+		bi red -- dé -- _ tur vo -- tum in Je -- _ rú -- 
+		sa -- lem. __ Ex -- áu -- _
+		di o -- ra -- ti -- ó -- nem mé -- am, ad __ _ te
+		óm -- nis cá -- ro vé -- ni -- et.
 	}
 }
 
@@ -308,11 +308,11 @@ sopranoB = \new Voice {
 		e2 f c'2. bes4 a2 g c c\breve
 	}
 	\addlyrics {
-		Et ti -- _ _ _ _ bi 
-		et ti -- _ _ _ _ _ _ _ bi red -- dé -- tur vo -- 
-		_ _ tum in Ie -- rú -- sa -- lem. __ _ _ _
-		Ex -- au -- _ di o -- ra -- ti -- ó -- _ _ _ nem me -- 
-		_ am, ad te om -- nis ca -- ro vé -- _ _ _ _ ni -- et.
+		Et tí -- _ _ _ _ bi 
+		et tí -- _ _ _ _ _ _ _ bi red -- dé -- tur vo -- 
+		_ _ tum in Je -- rú -- sa -- lem. __ _ _ _
+		Ex -- áu -- _ di o -- ra -- ti -- ó -- _ _ _ nem mé -- 
+		_ am, ad te óm -- nis cá -- ro vé -- _ _ _ _ ni -- et.
 	}
 }
 
@@ -326,12 +326,12 @@ alto = \new Voice {
 		r bes c f e c2. bes8 a g2 a\breve \fermata
 	}
 	\addlyrics {
-		Et ti -- _ 
-		_ _ bi red -- dé -- tur vo -- tum, et ti -- _ bi red -- 
-		dé -- tur vo -- tum in __ _ _ Ie -- rú -- sa -- lem.
-		Ex -- au -- _ _ _ _ _ _ _ _ di o -- ra -- ti -- ó -- _ 
-		nem me -- am, ad te __ _ om -- nis
-		ca -- ro __ _ vé -- _ ni -- _ _ et.
+		Et tí -- _ 
+		_ _ bi red -- dé -- tur vo -- tum, et tí -- _ bi red -- 
+		dé -- tur vo -- tum in __ _ _ Je -- rú -- sa -- lem.
+		Ex -- áu -- _ _ _ _ _ _ _ _ di o -- ra -- ti -- ó -- _ 
+		nem mé -- am, ad te __ _ óm -- nis
+		cá -- ro __ _ vé -- _ ni -- _ _ et.
 	}
 }
 
@@ -346,11 +346,11 @@ tenorA = \new Voice {
 		d, g c\breve c1 c\breve \fermata
 	}
 	\addlyrics {
-		Et ti -- _ bi red -- dé -- _ _ _ tur vo -- tum in 
-		Ie -- rú -- sa -- lem, in Ie -- rú -- sa -- lem.
-		Ex -- au -- di o -- ra -- ti -- ó -- _ nem me -- _ 
-		_ am, ad te om -- nis
-		ca -- ro vé -- ni -- et.
+		Et tí -- _ bi red -- dé -- _ _ _ tur vo -- tum in 
+		Je -- rú -- sa -- lem, in Je -- rú -- sa -- lem.
+		Ex -- áu -- di o -- ra -- ti -- ó -- _ nem mé -- _ 
+		_ am, ad te óm -- nis
+		cá -- ro vé -- ni -- et.
 	}
 }
 
@@ -364,12 +364,12 @@ tenorB = \new Voice {
 		d bes a f g a4 f g2. g4 f\breve \fermata
 	}
 	\addlyrics {
-		Et ti -- _ 
-		bi red -- dé -- _ tur vo -- _ _ _ _ _ _ _ _ _ tum in Ie -- 
-		rú -- sa -- lem, __ _ _ _ _ in Ie -- rú -- sa -- lem.
-		Ex -- au -- di o -- ra -- ti -- ó -- nem me -- _ am, 
-		ad te om -- nis
-		ca -- _ ro __ _ vé -- _ _ _ ni -- et.
+		Et tí -- _ 
+		bi red -- dé -- _ tur vo -- _ _ _ _ _ _ _ _ _ tum in Je -- 
+		rú -- sa -- lem, __ _ _ _ _ in Je -- rú -- sa -- lem.
+		Ex -- áu -- di o -- ra -- ti -- ó -- nem mé -- _ am, 
+		ad te óm -- nis
+		cá -- _ ro __ _ vé -- _ _ _ ni -- et.
 	}
 }
 
@@ -383,10 +383,10 @@ bass = \new Voice {
 		d1 a a2 a bes g f1 c'2 f, c'2. c4 f,\breve \fermata
 	}
 	\addlyrics {
-		Et ti -- _ _ _ bi red -- dé -- _ _ _ tur vo -- tum 
-		in Ie -- rú -- _ _ _ _ sa -- _ lem.
-		Ex -- au -- di o -- ra -- ti -- ó -- nem me -- _ _ _ _ am, 
-		ad te om -- nis ca -- _ ro vé -- _ _ ni -- et.
+		Et tí -- _ _ _ bi red -- dé -- _ _ _ tur vo -- tum 
+		in Je -- rú -- _ _ _ _ sa -- _ lem.
+		Ex -- áu -- di o -- ra -- ti -- ó -- nem mé -- _ _ _ _ am, 
+		ad te óm -- nis cá -- _ ro vé -- _ _ ni -- et.
 	}
 }
 
@@ -420,7 +420,7 @@ sopranoA = \new Voice {
 		as g bes as1. g2 a\breve \fermata \showBarLine\bar "||"
 	}
 	\addlyrics {
-		Ky -- _ ri -- e e -- _ _ _ _ _ lé -- i -- son.
+		Ký -- _ ri -- e e -- _ _ _ _ _ lé -- i -- son.
 	}
 }
 
@@ -431,8 +431,8 @@ sopranoB = \new Voice {
 		d!2 es bes2. c4 des es f2 es1 es2 es\breve \fermata
 	}
 	\addlyrics {
-		Ky -- _ ri -- e e -- lé -- _ _ _ _ i -- son,
-		Ky -- ri -- _ _ _ _ _ e e -- _ lé -- _ _ _ i -- son.
+		Ký -- _ ri -- e e -- lé -- _ _ _ _ i -- son,
+		Ký -- ri -- _ _ _ _ _ e e -- _ lé -- _ _ _ i -- son.
 	}
 }
 
@@ -443,8 +443,8 @@ alto = \new Voice {
 		as,2 es'1 f2 des1 c2 bes es c\breve \fermata
 	}
 	\addlyrics {
-			Ky -- ri -- e __ _ e -- lé -- i -- son, __ _ _ _
-			Ky -- ri -- e e -- _ _ _ _ lé -- _ _ i -- son,
+			Ký -- ri -- e __ _ e -- lé -- i -- son, __ _ _ _
+			Ký -- ri -- e e -- _ _ _ _ lé -- _ _ i -- son,
 			e -- lé -- i -- son.
 	}
 }
@@ -457,7 +457,7 @@ tenorA = \new Voice {
 		r2 es' des f2. des4 es2 es1 es\breve \fermata
 	}
 	\addlyrics {
-		Ky -- ri -- _ _ _ _ e e -- lé -- _ _ _ _ _ i -- son,
+		Ký -- ri -- _ _ _ _ e e -- lé -- _ _ _ _ _ i -- son,
 		e -- lé -- _ _ _ i -- son.
 	}
 }
@@ -470,8 +470,8 @@ tenorB = \new Voice {
 		es2 f bes,1. bes2 f as bes1 as\breve \fermata
 	}
 	\addlyrics {
-		Ky -- ri -- e __ _ _ _ _ e -- lé -- i -- son,
-		Ky -- _ _ _ _ ri -- e e -- _ _ _ _ lé -- _ _ i -- son.
+		Ký -- ri -- e __ _ _ _ _ e -- lé -- i -- son,
+		Ký -- _ _ _ _ ri -- e e -- _ _ _ _ lé -- _ _ i -- son.
 	}
 }
 
@@ -483,8 +483,8 @@ bass = \new Voice {
 		g4 f2 es1 bes2. c4 des2 as es' es as,\breve \fermata
 	}
 	\addlyrics {
-		Ky -- ri -- e __ _ e -- _ _ lé -- _ _ _ _ i -- son,
-		Ky -- _ _ _ _ ri -- e __ _ _ e -- lé -- _ _ _ _ i -- son.
+		Ký -- ri -- e __ _ e -- _ _ lé -- _ _ _ _ i -- son,
+		Ký -- _ _ _ _ ri -- e __ _ _ e -- lé -- _ _ _ _ i -- son.
 	}
 }
 
@@ -503,6 +503,94 @@ bass = \new Voice {
 	}
 	\header {
 		piece = ##f
+	}
+	\layout { }
+%	\midi {	}
+}
+
+% CHRISTE 1
+
+sopranoA = \new Voice {
+	\relative c'' {
+		\set Score.currentBarNumber = #10
+		es1 c bes c2 des bes1 c2. c4 bes1
+		r r2 es es f d! es2. \ficta des!4 c bes c2 bes1 as g2
+		r as a! bes bes a! bes1 r2 c c des bes es es1
+		r es c bes2 c des1. c2 bes1 c\breve \fermata \showBarLine \bar "||"
+	}
+	\addlyrics {
+		Chrí -- ste e -- lé -- _ _ _ i -- son,
+		Chrí -- ste e -- lé -- _ _ _ _ _ _ i -- son,
+		Chrí -- ste e -- lé -- i -- son,
+		Chrí -- ste e -- lé -- i -- son,
+		Chrí -- ste e -- _ _ lé -- i -- son.
+	}
+}
+
+sopranoB = \new Voice {
+	\relative c'' {
+		R\breve R r2 es es f d! es1
+		d!2 es c1 bes4 as bes2 bes c1 es c bes 
+		c des c2. c4 des2 c4 bes c1 R\breve r2 c
+		c des bes c as es'1 es2 f1 es1. es2 es\breve \fermata
+	}
+	\addlyrics {
+		Chrí -- ste e -- lé -- _ i -- son,
+		e -- lé -- _ _ i -- son,
+		Chrí -- _ ste __ _ _ e -- lé -- _ i -- _ son,
+		Chrí -- ste e -- lé -- i -- son,
+		Chrí -- ste e -- lé -- i -- son.
+	}
+}
+
+alto = \new Voice {
+	\relative c' {
+		r2 es es f d! es as, as'1 g2 as as1 g2
+		f bes ~ bes as2 g as1 g2 as1. g4 f g2 f r es
+		es f ~ f des2 es f bes, bes'1 as4 g as2 f g1 r2 as
+		a! bes g as2. g8 f es4 f g2 as1 bes2. as4 as1 g2 as\breve \fermata
+	}
+	\addlyrics {
+		Chrí -- ste e -- lé -- i -- son,
+		Chrí -- ste e -- lé -- i -- son,
+		Chrí -- ste e -- lé -- _ _ i -- _ son, __ _
+		Chrí -- ste e -- lé -- _ i -- son,
+		e -- lé -- _ _ i -- son,
+		Chrí -- ste e -- lé -- _ _ _ _ _ _ _ _ _ _ i -- son.
+	}
+}
+
+tenorA = \new Voice {
+	\relative c' {
+		\clef "treble_8"
+		R\breve r2 es es f d! es as, f bes1.
+		bes2 c2. des4 es2 des4 c bes2 es, as1 r2 es' es f d! es
+		as,1 r r2 f' f ges es f f bes, es4 des c bes as2. g4 
+		f2 bes es, as2. bes4 c des es2 as, des1 es1. es2 as,\breve \fermata
+	}
+	\addlyrics {
+		Chrí -- ste e -- lé -- i -- son,
+		Chrí -- ste e -- lé -- _ _ _ _ _ i -- son,
+		Chrí -- ste e -- lé -- i -- son,
+		Chrí -- ste e -- lé -- i -- son,
+		Chrí -- ste __ _ _ _ _ _ _ _ e -- lé -- _ _ _ _ _ _ _ i -- son.
+
+	}
+}
+
+\score {
+	\transpose c a, {
+		\new StaffGroup << 
+			\set Score.proportionalNotationDuration = #(ly:make-moment 1 4)
+			\set Score.barNumberVisibility = #all-bar-numbers-visible
+			\new Staff << \global \sopranoA \set Staff.instrumentName = #"S1" \set Staff.shortInstrumentName = #"S1" >> 
+			\new Staff << \global \sopranoB \set Staff.instrumentName = #"S2" \set Staff.shortInstrumentName = #"S2" >> 
+			\new Staff << \global \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >> 
+			\new Staff << \global \tenorA \set Staff.instrumentName = #"T1" \set Staff.shortInstrumentName = #"T1" >> 
+		>> 
+	}
+	\header {
+		piece = ""
 	}
 	\layout { }
 %	\midi {	}
