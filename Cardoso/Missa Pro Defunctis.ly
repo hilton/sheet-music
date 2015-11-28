@@ -11,8 +11,8 @@ revision = "6"
 	#(define fonts (make-pango-font-tree "Century Schoolbook L" "Source Sans Pro" "Luxi Mono" (/ 16 20)))
 	annotate-spacing = ##f
 	two-sided = ##t
-	top-margin = 10\mm
-	bottom-margin = 10\mm
+	top-margin = 5\mm
+	bottom-margin = 5\mm
 	inner-margin = 15\mm
 	outer-margin = 15\mm
 	top-markup-spacing = #'( (basic-distance . 8) )
@@ -91,6 +91,11 @@ globalF = {
 globalAs = {
 	\global
 	\key as \major
+}
+
+globalC = {
+	\global
+	\key es \major
 }
 
 
@@ -783,6 +788,241 @@ bass = \new Voice {
 	}
 	\header {
 		piece = "Kyrie 2"
+	}
+	\layout { }
+%	\midi {	}
+}
+
+
+% GRADUALE
+
+\score {
+	\new Staff <<
+		\key f \major
+		\new Voice {
+			\once \override AmbitusNoteHead #'transparent = ##t
+			\relative c'' {
+				\cadenzaOn
+				\override Stem #'transparent = ##t 
+				g4 bes a a s a a c a g bes g a bes a a-- \showBarLine\bar "||"
+				\cadenzaOff
+			}
+		}
+		\addlyrics {
+			Re -- _ qui -- em æ -- tér -- _ _ _ _ _ _ _ _ nam _
+		}
+	>>
+	\header {
+		piece = "Graduale"
+	}
+	\layout {
+		ragged-right = ##t
+	}
+}
+
+sopranoA = \new Voice {
+	\relative c'' {
+		R\breve r1 as bes2 c1 
+		a2 bes bes c1 \break r2 g a bes1 a2
+		
+		bes bes c1 r r2 c1 bes2 ~ \break bes as2
+		g es'1 es2 es1 f1. es4 d c d es2
+		c d \break b c1 b2 c1 r2 c d d
+		
+		es2. d4 c d es c d es f2 ~ \break f4 es4 es1 d2 | es1
+		r2 as, bes bes c bes bes as1 as2 \break g as1 
+		g2 as\breve | r2 es'2. d4 c2 bes bes
+		
+		as4 f c'2 ~ \break \pageBreak c4 bes4 bes1 a2 | bes\breve r1
+		r2 es2. d4 c2. bes4 as2 \break g g as2. bes4 | c1
+		c r2 d es c b c1 b2 c\breve \fermata \showBarLine \bar "|."
+	}
+	\addlyrics {
+		Dó -- na é -- is Dó -- mi -- ne,
+		dó -- na é -- is Dó -- mi -- ne,
+		dó -- na é -- is Dó -- mi -- ne,
+		dó -- _ _ _ _ _ na é -- is Dó -- mi -- ne:
+		et lux per -- pé -- _ _ _ _ _ _ _ _ _ _ tu -- a,
+		et lux per -- pé -- tu -- a
+		lú -- ce -- at é -- _ is,
+		lú -- _ _ ce -- at é -- _ _ _ _ _ is,
+		lú -- _ _ _ _ ce -- at é -- _ _ is,
+		lú -- ce -- at é -- _ _ is.
+	}
+}
+
+sopranoB = \new Voice {
+	\relative c'' {
+		R\breve r2 es c d es1.
+		c2 d4 es f2. es8 d es2 ~ es bes f'\breve
+
+		r1 r2 c1 bes2 as4 f f'2. es4 d2 c1
+		bes2 as c1 r r2 c2. bes8 as g2 as bes
+		r1 r r2 d e! \ficta e f1. bes,2
+		
+		bes es2. d4 c2 bes bes as g r1 bes1
+		c2 c d4 es f1 d2 es4 d c bes c1 r
+		r2 es2. d4 c bes c2 d es1 r2 es1 d2
+		
+		c2. d4 es2 bes es1 r2 f2. es4 d2 c c
+		c1 c r r2 c2. bes4 as2 g es 
+		as4 bes c2. b8 \ficta a \ficta b2 c c d es d1 e\breve \fermata
+	}
+	\addlyrics {
+		Dó -- na __ _ é -- is Dó -- _ _ _ _ _ mi -- ne,
+		dó -- na é -- _ _ _ _ is Dó -- mi -- ne,
+		Dó -- _ _ _ mi -- ne:
+		et lux per -- pé -- tu -- a
+		lú -- _ _ ce -- at é -- is,
+		et lux per -- pé -- _ _ tu -- a __ _ _ _ _
+		lú -- _ _ _ _ ce -- at,
+		lú -- ce -- at __ _ _ é -- is,
+		lú -- _ _ ce -- at é -- is,
+		lú -- _ _ ce -- at é -- _ _ _ _ _ is,
+		lú -- ce -- at é -- is.
+	}
+}
+
+alto = \new Voice {
+	\relative c' {
+		es1 c es f g
+		es d c bes des c
+		
+		bes as c c as2 bes c1
+		es c bes c\breve es1
+		f2. es4 d2 c d2. d4 c\breve r1
+		
+		es es d es f g
+		es d f es c es
+		bes as\breve R r1
+
+		as bes c2 es1 d4 c d2 bes c\breve
+		es1 c es f es
+		f g es d2 c d1 c\breve \fermata
+	}
+	\addlyrics {
+		Dó -- _ _ _ _ _ _ _ _ _ _ _ _ _ na é -- _ is Dó -- mi -- ne, __ _
+		Dó -- _ _ _ _ _ mi -- ne:
+		et lux per -- pé -- _ _ _ _ _ _ _ _ tu -- a
+		lú -- ce -- at é -- _ _ _ _ is,
+		lú -- ce -- at é -- _ _ _ _ _ _ _ is.
+	}
+}
+
+tenorA = \new Voice {
+	\relative c' {
+		\clef "treble_8"
+		R\breve R es1
+		c2 es f2. g4 as2 g g g f1 r2 f1
+		
+		g2 as es es1 | f f r
+		r2 c2. d4 es f g as bes1 as2 g es2. f4 g es
+		as2 as | g\breve g1 a2 \ficta a bes2. \ficta as!4
+		
+		g as bes g as2 as f1 r2 es bes'1. g2
+		as es f1 r2 f g es es f | g es2.
+		d8 c bes2 c2. d4 es2 f | g\breve r1
+		
+		r2 as g f es c f1 r2 bes1 as2
+		g2. f4 | g2 as es f g4 f es d c1 c\breve
+		r2 g'2. f4 es2 g g g1 g\breve \fermata
+	}
+	\addlyrics {
+		Dó -- na __ _ é -- _ _ is Dó -- mi -- ne,
+		dó -- na é -- is Dó -- mi -- ne,
+		é -- _ _ _ _ _ _ is Dó -- _ _ _ _ _ mi -- ne:
+		et lux per -- pé -- _ _ _ _ _ _ tu -- a,
+		et lux per -- pé -- tu -- a,
+		et lux per -- pé -- tu -- a
+		lú -- _ _ _ ce -- at é -- _ is,
+		lú -- ce -- at é -- _ is,
+		lú -- _ _ ce -- at __ _ é -- _ _ _ _ _ _ is,
+		lú -- _ _ ce -- at é -- is.
+	}
+}
+
+tenorB = \new Voice {
+	\relative c' {
+		\clef "treble_8"
+		r1 as | bes2 c2. bes4 as2 | g1.
+		c2 f,1. g2 | g1 r r2 c
+		
+		d es2. \ficta des4 c bes as2 bes c f, c' d e f
+		bes, c as4 bes c d es2 bes | f' f, c'2. bes4 as2 g
+		f f' ~ f es2 d g, | c1. f,1 bes1
+		
+		es,2 as1 r r r2 bes es1. 
+		c2 f d c d bes c1 as2 bes c4 d
+		es1 es r2 as, | bes bes c4 d es f g2 f
+		
+		f1 R\breve R r2 f1
+		es4 d c2. bes4 as bes c as bes2 c1 f,2 g a
+		f f' es d c g'2. f4 es d8 c g'2 g, g\breve \fermata
+	}
+	\addlyrics {
+		Dó -- na __ _ _ _ é -- is Dó -- mi -- ne,
+		dó -- _ _ _ _ na é -- is Dó -- mi -- ne,
+		dó -- na __ _ é -- is Dó -- _ _ _ _ mi -- ne,
+		dó -- na __ _ _ é -- is Dó -- mi -- ne:
+		et lux per -- pé -- tu -- a,
+		et lux per -- pé -- tu -- a __ _
+		lú -- ce -- at é -- _ _ _ is,
+		et lux per -- pé -- _ _ _ _ tu -- a
+		lú -- _ _ _ _ _ _ _ _ _ ce -- at é -- _ is,
+		lú -- ce -- at é -- _ _ _ _ _ _ _ is.
+	}
+}
+
+bass = \new Voice {
+	\relative c' {
+		\clef bass
+		r2 as1 f2 g as2. g4 f2 | es c1
+		c2 bes1 f'2 c es1 f | f
+		
+		bes,2 es as, as'1 g2 | f1 r r2 f
+		g as1 as2 es g | f1 r2 c'1 bes2
+		as f | g c, g'1 r2 c, f1 bes,
+		
+		es2 es as, as' bes bes c2. c4 bes1 r2 es,
+		as c bes2. bes4 a2 bes g as2. g4 f2 | es\breve
+		as,2 as'2. g4 f2 | es1 c2. d4 es2 bes
+		
+		f' f es d c1 | bes\breve f'1
+		r2 c'2. bes4 as2. g4 f2 es c f1 c2 c'2.
+		bes4 as2 | g1 c, g'\breve c,\breve \fermata
+	}
+	\addlyrics {
+		Dó -- na é -- _ _ _ is Dó -- mi -- ne,
+		dó -- _ na é -- is Dó -- mi -- ne,
+		Dó -- mi -- ne,
+		dó -- na é -- is Dó -- mi -- ne,
+		dó -- na é -- is Dó -- mi -- ne:
+		et lux per -- pé -- tu -- a,
+		et lux per -- pé -- tu -- a,
+		et lux per -- pé -- tu -- a
+		lú -- ce -- at __ _ _ é -- is,
+		et __ _ _ lux per -- _ pé -- tu -- a
+		lú -- ce -- at é -- _ is,
+		lú -- _ _ _ _ ce -- at é -- is,
+		lú -- _ _ ce -- at é -- is.
+	}
+}
+
+\score {
+	\transpose c a, {
+		\new StaffGroup << 
+			\set Score.proportionalNotationDuration = #(ly:make-moment 1 4)
+			\set Score.barNumberVisibility = #all-bar-numbers-visible
+			\new Staff << \globalC \sopranoA \set Staff.instrumentName = #"S1" \set Staff.shortInstrumentName = #"S1" >> 
+			\new Staff << \globalC \sopranoB \set Staff.instrumentName = #"S2" \set Staff.shortInstrumentName = #"S2" >> 
+			\new Staff << \globalC \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >> 
+			\new Staff << \globalC \tenorA \set Staff.instrumentName = #"T1" \set Staff.shortInstrumentName = #"T1" >> 
+			\new Staff << \globalC \tenorB \set Staff.instrumentName = #"T2" \set Staff.shortInstrumentName = #"T2" >> 
+			\new Staff << \globalC \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >> 
+		>> 
+	}
+	\header {
+		piece = ##f
 	}
 	\layout { }
 %	\midi {	}
