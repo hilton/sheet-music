@@ -733,7 +733,7 @@ alto = \new Voice {
 }
 
 tenorA = \new Voice {
-	\relative c' {
+	\relative c'' {
 		\clef "treble_8"
 		r2 as2. g4 f es f g as1 g4 f es1 as,2 bes 
 		c as'1 f2 as1 r2 f2 ~ f4 g4 as2 f bes1
