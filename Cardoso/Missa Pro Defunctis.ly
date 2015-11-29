@@ -2,7 +2,7 @@
 % Copyright ©2015 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "6"
+revision = "7"
 \pointAndClickOff
 
 #(set-global-staff-size 16.0)
@@ -27,7 +27,7 @@ year = #(strftime "©%Y" (localtime (current-time)))
 \header {
 	title = \markup \medium \fontsize #7 \override #'(font-name . "Source Sans Pro Light") {
 		\center-column {
-			"Missa Pro Defunctis - Introitus"
+			"Missa Pro Defunctis"
 			\vspace #2
 		}
 	}
