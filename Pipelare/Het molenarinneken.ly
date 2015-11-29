@@ -75,7 +75,7 @@ year = #(strftime "©%Y" (localtime (current-time)))
 global = { 
 	\key bes \major
 	\time 4/2
-	\tempo 2 = 60
+	\tempo 2 = 100
 	\set Staff.midiInstrument = "Choir Aahs"
 	\accidentalStyle "forget"
 }
