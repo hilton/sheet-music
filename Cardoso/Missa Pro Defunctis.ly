@@ -2,7 +2,7 @@
 % Copyright ©2015 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "7"
+revision = "8"
 \pointAndClickOff
 
 #(set-global-staff-size 16.0)
@@ -44,9 +44,12 @@ year = #(strftime "©%Y" (localtime (current-time)))
 				revision \revision 
 			}
 		}
+		\vspace #2
 	}
 	tagline = ##f
 }
+
+\markup { \vspace #4 }
 
 \layout {
 	indent = #0
@@ -108,13 +111,14 @@ fictaParenthesized = { \once \set suggestAccidentals = ##t \override AccidentalS
 
 \score {
 	\new Staff <<
+		\set Staff.instrumentName = #"S"
 		\key f \major
 		\new Voice {
 			\once \override AmbitusNoteHead #'transparent = ##t
 			\relative c' {
 				\cadenzaOn
 				\override Stem #'transparent = ##t 
-				f4^"solo" f g s f s f s f^"tutti" g a s a g f g s g-- f-- \showBarLine\bar "||"
+				f4 f g s f s f s f g a s a g f g s g-- f-- \showBarLine\bar "|"
 				\cadenzaOff
 			}
 		}
@@ -122,9 +126,7 @@ fictaParenthesized = { \once \set suggestAccidentals = ##t \override AccidentalS
 			Re -- _ _ qui -- em æ -- _ _ tér -- _ _ _ nam _
 		}
 	>>
-	\layout {
-		ragged-right = ##t
-	}
+	\layout { ragged-right = ##t }
 }
 
 sopranoA = \new Voice {
@@ -136,7 +138,6 @@ sopranoA = \new Voice {
 		f g \time 6/2 a g\breve f\breve \fermata \time 4/2 \showBarLine \bar "|." 
 		\once \override Score.RehearsalMark.break-visibility = #end-of-line-visible
 		\once \override Score.RehearsalMark.self-alignment-X = #RIGHT
-		\mark Fine 
 		\break
 	}
 	\addlyrics {
@@ -262,20 +263,33 @@ bass = \new Voice {
 %	\midi {	}
 }
 
+\markup {
+	\column {
+		\fill-line {
+			\line { }
+			\line { }
+			\line \right-align { Repeat \italic "Requiem æternam dona eis Domine: et lux perpetua luceat eis" }
+		}
+		\vspace #4
+	}
+}
+
+
 \score {
 	\new Staff <<
+		\set Staff.instrumentName = #"S"
 		\key f \major
 		\new Voice {
 			\once \override AmbitusNoteHead #'transparent = ##t
 			\relative c' {
 				\cadenzaOn
 				\override Stem #'transparent = ##t 
-				f4 g s g f s g a s a a s a a s a s g a-- \showBarLine \bar "|"
+				f4 g s g f s g a s a a s a a s a s g g-- a-- \showBarLine \bar "|"
 				\cadenzaOff
 			}
 		}
 		\addlyrics {
-			Te __ _ dé -- _ cet __ _ hým -- nus, Dé -- us, in Sí -- on;
+			Te __ _ dé -- _ cet __ _ hým -- nus, Dé -- us, in Sí -- on __ _
 		}
 	>>
 	\layout {
@@ -285,6 +299,7 @@ bass = \new Voice {
 
 sopranoA = \new Voice {
 	\relative c' {
+		\set Score.currentBarNumber = #25
 		f1 g a a
 		a a \break a a2 a a1 a a g \break \time 6/2 bes a1. 
 		g2 \time 4/2 a\longa \showBarLine \bar "||" r\breve \break r1 f g a
@@ -292,7 +307,7 @@ sopranoA = \new Voice {
 		f g a1 g2 f1 e2 f\breve \fermata \showBarLine \bar "|."
 		\once \override Score.RehearsalMark.break-visibility = #end-of-line-visible
 		\once \override Score.RehearsalMark.self-alignment-X = #RIGHT
-		\mark "D.C. al Fine" \noPageBreak
+		\noPageBreak
 	}
 	\addlyrics {
 		Et tí -- _ _ 
@@ -798,18 +813,19 @@ bass = \new Voice {
 
 \score {
 	\new Staff <<
+		\set Staff.instrumentName = #"S"
 		\key f \major
 		\new Voice {
 			\once \override AmbitusNoteHead #'transparent = ##t
 			\relative c'' {
 				\cadenzaOn
 				\override Stem #'transparent = ##t 
-				g4 bes a a s a a c a g bes g a bes a a-- \showBarLine\bar "||"
+				g4 bes a a s a a c a g bes g a bes a-- a-- \showBarLine\bar "|"
 				\cadenzaOff
 			}
 		}
 		\addlyrics {
-			Re -- _ qui -- em æ -- tér -- _ _ _ _ _ _ _ _ nam _
+			Re -- _ qui -- em æ -- tér -- _ _ _ _ _ _ _ _ nam
 		}
 	>>
 	\header {
@@ -1028,3 +1044,124 @@ bass = \new Voice {
 %	\midi {	}
 }
 
+% GRADUALE 2
+
+sopranoA = \new Voice {
+	\relative c'' {
+		\set Score.currentBarNumber = #34
+		R\breve g2. g4 b2 c2.
+		c4 c es2 d8 c d4 bes4 ~ | \break bes as8 g as2. g4 f f'2 es4 d4. d8
+		c2. bes4. a16 g a4 bes4. \ficta as!8 g f g4 f f'4 ~ | f \break es8 d c2 bes r c a4 b2
+		c4. f,8 c'2 b4 c1 r4 f \break d2 e f4. \ficta es!8 d c d4 c es2 d8 c
+		
+		d2 c b4 c4. b16 \ficta a \ficta b4 c2 es2 ~ | es4 \break d4 c bes as g c bes
+		bes2 as4 des c2 r4 f4. es8 d4 c1 f,4. g8 | \break as bes c2 \ficta b4 c es4. d8 c4
+		bes1 r4 c2 bes4 a bes2 a4 bes f'4. es8 d4 | \break \time 3/2 c d4. c8 c2 b4 \time 4/2 c\breve \fermata \showBarLine \bar "|."
+	}
+	\addlyrics {
+		In me -- mó -- _ ri -- a æ -- _ _ _ tér -- _ _ _ _ na,
+		in me -- mó -- ri -- a æ -- _ _ _ tér -- _ _ _ _ na,
+		æ -- tér -- _ _ na
+		é -- rit jú -- _ _ _ _ stus,
+		é -- rit jú -- _ _ _ _ _ stus
+		é -- _ _ _ _ rit jú -- _ _ _ stus:
+		ab au -- di -- ti -- ó -- ne má -- la 
+		non ti -- mé -- bit,
+		non __ _ _ ti -- mé -- _ _ _ _ _ bit,
+		má -- _ _ la,
+		má -- la non ti -- mé -- bit,
+		non __ _ _ ti -- mé -- _ _ _ bit.
+	}
+}
+
+sopranoB = \new Voice {
+	\relative c'' {
+		R\breve R |
+		r2 g2. g4 bes2 | c2. c4 c c b2 | c4 g bes4. as8
+		g f g4 f f'2 es4 d4. d8 c2 b | c4. d8 e4 f2 e8 d \ficta e2 | f r1
+		r4 f2 d4 e2 f4. \ficta es!8 d c c4 ~ | c b4 r c a c2 b4 | c2 c
+		
+		bes4. as8 g f g2 g4 g1 g2 ~ g r1 r4 es'2
+		d4 c bes as g c bes | bes2 as4 g8 f g4 a bes f'4 ~ | f es4 d2 c4 c4. bes8 as2
+		g4 f g as2. g4 | f2 r4 f'4. es8 d4 c bes ~ bes as4 g1 ~ g\breve \fermata
+	}
+	\addlyrics {
+		In me -- mó -- _ ri -- a æ -- tér -- na, æ -- tér -- _ _ _ _ na,
+		in me -- mó -- ri -- a æ -- _ _ _ tér -- _ _ _ na
+		é -- rit jú -- _ _ _ _ _ stus,
+		é -- rit jú -- _ stus
+		é -- _ _ _ _ _ rit jú -- stus:
+		ab au -- di -- ti -- ó -- ne má -- la non ti -- _ _ _ mé -- bit,
+		non ti -- mé -- bit,
+		má -- _ _ la non ti -- mé -- _ bit,
+		non __ _ _ ti -- mé -- _ bit.
+	}
+}
+
+alto = \new Voice {
+	\relative c' {
+		R\breve R |
+		c2. c4 es2 f2 ~ | f4 f4 f1 f2 | g2. f2
+		es4. d8 d c16 bes | c2 bes c f | g2. as4 g1 | f2 r1
+		as2 | f g as1 | g f2 g | es4 g f1
+		
+		es2. d8 c d2 c r | es2. es4 es es es2 |
+		f2. f4 es2. d8 c | bes2 c4. d8 es2 d | f g es c4. d8 |
+		es2 bes as4 as8 bes c d es2 d4 c2 d f2 ~ | f4 f4 es2 d c\breve \fermata
+	}
+	\addlyrics {
+		In me -- mó -- _ ri -- a æ -- _ tér -- _ _ _ _ _ _ _ na,
+		æ -- _ tér -- _ na
+		é -- rit __ _ jú -- _ stus, __ _
+		é -- rit jú -- _ _ _ _ stus:
+		ab au -- di -- ti -- ó -- _ ne má -- _ _ _ _ _ _ _ la, __ _
+		má -- _ _ _ _ la non __ _ _ _ _ ti -- mé -- bit,
+		non ti -- mé -- _ bit.
+	}
+}
+
+tenorA = \new Voice {
+	\relative c' {
+		\clef "treble_8"
+		g2. g4 b2 c2. c4 c2 d4 es4. c8 f2 
+		es8 d es4. d8 c bes c4 bes2 | f r4 f'2 es4 d4. d8 | c2 bes
+		c4. bes8 a4 bes | f2 r4 f'2 es4 d4. d8 | c2. as4 bes2 c | f,4 f'2 d4
+		e2 f4. \ficta es8 | d c d4 c2 f,2. f4 | g2 c r1 | c2 a 
+		
+		bes c | g1 r4 es'2 d4 | c bes as g c4. bes8 as4 es |
+		bes'2 r4 bes c4. bes8 a4 bes8 c | d es f2 es8 d c bes c4 bes2 | r1 c4. bes8 as2 |
+		es4 es'2 d4 c4. bes8 as4 es f1 bes2 f f g1 c\breve \fermata
+	}
+	\addlyrics {
+		In me -- mó -- _ ri -- a æ -- tér -- _ _ _ _ _ _ _ _ _ na, __ _
+		in me -- mó -- ri -- a æ -- _ _ _ tér -- na,
+		in me -- mó -- ri -- a æ -- tér -- _ na
+		é -- rit jú -- _ _ _ _ _ stus,
+		é -- rit jú -- stus,
+		é -- rit jú -- _ stus:
+		ab au -- di -- ti -- ó -- ne má -- _ _ _ la 
+		non ti -- _ _ mé -- _ _ _ _ _ _ _ _ _ bit,
+		má -- _ _ la, má -- la non __ _ _ ti -- mé -- bit,
+		non ti -- mé -- bit.
+	}
+}
+
+\score {
+	\transpose c a, {
+		\new StaffGroup << 
+			\set Score.proportionalNotationDuration = #(ly:make-moment 1 8)
+			\set Score.barNumberVisibility = #all-bar-numbers-visible
+			\new Staff << \globalC \sopranoA \set Staff.instrumentName = #"S1" \set Staff.shortInstrumentName = #"S1" >> 
+			\new Staff << \globalC \sopranoB \set Staff.instrumentName = #"S2" \set Staff.shortInstrumentName = #"S2" >> 
+			\new Staff << \globalC \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >> 
+			\new Staff << \globalC \tenorA \set Staff.instrumentName = #"T1" \set Staff.shortInstrumentName = #"T1" >> 
+		>> 
+	}
+	\header {
+		piece = ##f
+	}
+	\layout {
+	  	ragged-last = ##t
+	}
+%	\midi {	}
+}
