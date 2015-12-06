@@ -2,7 +2,7 @@
 % Copyright ©2015 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "8"
+revision = "10"
 \pointAndClickOff
 
 #(set-global-staff-size 16.0)
@@ -436,8 +436,8 @@ bass = \new Voice {
 sopranoA = \new Voice {
 	\relative c'' {
 		R1 R as\breve bes1
-		c c bes1 ~ \break bes d1 c
-		as g bes as1. g2 a\breve \fermata \showBarLine\bar "||"
+		c c bes1 ~ \break bes des1 c
+		as g bes as1. g2 as\breve \fermata \showBarLine\bar "||"
 	}
 	\addlyrics {
 		Ký -- _ ri -- e e -- _ _ _ _ _ lé -- i -- son.
