@@ -2,7 +2,7 @@
 % Copyright ©2015 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "10"
+revision = "11"
 \pointAndClickOff
 
 #(set-global-staff-size 16.0)
@@ -814,13 +814,13 @@ bass = \new Voice {
 \score {
 	\new Staff <<
 		\set Staff.instrumentName = #"S"
-		\key f \major
+		\key c \major
 		\new Voice {
 			\once \override AmbitusNoteHead #'transparent = ##t
 			\relative c'' {
 				\cadenzaOn
 				\override Stem #'transparent = ##t 
-				g4 bes a a s a a c a g bes g a bes a-- a-- \showBarLine\bar "|"
+				g4 b a a s a a c a g s8 b4 g s8 a4 b a-- a-- \showBarLine\bar "|"
 				\cadenzaOff
 			}
 		}
