@@ -1274,3 +1274,103 @@ tenorA = \new Voice {
 	}
 }
 
+sopranoA = \new Voice {
+	\relative c'' {
+		c1 a2 bes bes1 bes |
+		c2. c4 bes1 bes2 c2. bes4 bes bes c2 bes bes bes |
+		
+		des c des bes \break c bes bes as bes bes bes c |
+		des2. c8 bes as bes c4. bes8 bes4 ~ \break bes a8 g \ficta as2 r1 R\breve |
+		bes2 as bes des ~ \break des c1 bes2 as c as bes |
+	}
+	\addlyrics {
+	}
+}
+
+sopranoB = \new Voice {
+	\relative c'' {
+		r2 c2. c4 des f2 es d8 c d2 es4. es8 |
+		f1 r2 r4 es ~ \break es des4 c f es2 f2. f4 d es2 d4 es bes2
+		
+		as4. bes8 c4 as des4. c8 bes4 ~ bes a4 bes2 r r4 f' d es2 \ficta d4 es2. as,4 |
+		bes2 r r1 r4 c c d es2. c4 des2 c r4 bes bes c |
+		des2 c4 f des es f2 r4 f es c es as,2 \ficta ges4 f2 r r1 |
+	}
+	\addlyrics {
+	}
+}
+
+alto = \new Voice {
+	\relative c' {
+		R\breve r2 r4 f2 f4 g bes2
+		a8 g \ficta a4 a bes2 r r4 bes2 \ficta as! g4 f f as4. g8 f4 es f bes4. as8 g4 |
+		
+		f4. g8 as2. f4 des ges \ficta ges f2 es8 des es2 f | r r4 f ges es r f2
+		des4 es es f1 f r4 g g as bes bes, f'2 f r |
+		r r4 f f g as des,8 es f g as2 es f4 r2 r4 as2 g4 f es f g |
+	}
+	\addlyrics {
+	}
+}
+
+tenorA = \new Voice {
+	\relative c' {
+%		\clef "treble_8"
+		r1 f2 f4 des f ges f2 r1 |
+		r4 c2 c4 des f2 bes,4 bes2 r r1 r4 as'2 g4 f f g4. as8 |
+		
+		bes4 f2 es4 f2 r r1 r2 r4 f2 ges4 f bes, es4. des8 c2 |
+		bes bes des4 c des2 c f, c' r4 f f g as2. f4 ges2 |
+		f1 r2 r4 bes as f as as as4. \ficta ges8 f4 es8 des c4 as r2 r4 as'2 g4 |
+	}
+	\addlyrics {
+	}
+}
+
+tenorB = \new Voice {
+	\relative c' {
+		\clef "treble_8"
+		r2 f f4 f bes,4. c8 d4 es bes1 es,4 ges |
+		f2 r4 f' f des f ges f1 r4 es2 des4 c as bes4. bes8 bes4 bes2 es4 |
+		
+		des2 as des2. des4 c f, bes2 r4 bes des c bes es, bes'2 es, as |
+		R\breve r2 r4 f' es c es f bes,2 f4 c' c d es2 |
+		des4 bes c2 bes r2 r\breve r4 f'2 c4 des c bes es |
+	}
+	\addlyrics {
+	}
+}
+
+bass = \new Voice {
+	\relative c {
+		\clef bass
+		R\breve R |
+		f4 f f f bes,4. c8 d4 es bes2 f'4. g8 as4 es bes'2 f bes bes, es4 es |
+		
+		bes8 c des es f g as4 des,2 ges4. f8 es4 f ges1 f2 r r4 bes2 \ficta g!4 as f |
+		bes4. as8 ges2 f1 ~ f r1 r4 bes as f as bes es,2 |
+		bes f' r4 es des bes des2 as4 as'4. \ficta ges8 f es des4 es f2 r r1 |
+	}
+	\addlyrics {
+	}
+}
+
+\score {
+	\transpose c c {
+		\new StaffGroup << 
+			\set Score.proportionalNotationDuration = #(ly:make-moment 1 8)
+			\set Score.barNumberVisibility = #all-bar-numbers-visible
+			\new Staff << \globalAs \sopranoA \set Staff.instrumentName = #"S1" \set Staff.shortInstrumentName = #"S1" >> 
+			\new Staff << \globalAs \sopranoB \set Staff.instrumentName = #"S2" \set Staff.shortInstrumentName = #"S2" >> 
+			\new Staff << \globalAs \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >> 
+			\new Staff << \globalAs \tenorA \set Staff.instrumentName = #"T1" \set Staff.shortInstrumentName = #"T1" >> 
+			\new Staff << \globalAs \tenorB \set Staff.instrumentName = #"T2" \set Staff.shortInstrumentName = #"T2" >> 
+			\new Staff << \globalAs \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >> 
+		>> 
+	}
+	\header {
+		piece = ##f
+	}
+	\layout { }
+%	\midi {	}
+}
