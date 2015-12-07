@@ -2,7 +2,7 @@
 % Copyright ©2015 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "11"
+revision = "12"
 \pointAndClickOff
 
 #(set-global-staff-size 16.0)
@@ -114,7 +114,6 @@ fictaParenthesized = { \once \set suggestAccidentals = ##t \override AccidentalS
 		\set Staff.instrumentName = #"S"
 		\key f \major
 		\new Voice {
-			\once \override AmbitusNoteHead #'transparent = ##t
 			\relative c' {
 				\cadenzaOn
 				\override Stem #'transparent = ##t 
@@ -126,7 +125,13 @@ fictaParenthesized = { \once \set suggestAccidentals = ##t \override AccidentalS
 			Re -- _ _ qui -- em æ -- _ _ tér -- _ _ _ nam _
 		}
 	>>
-	\layout { ragged-right = ##t }
+	\layout {
+		ragged-right = ##t
+		\context { 
+			\Voice 
+			\remove "Ambitus_engraver"
+		}
+	}
 }
 
 sopranoA = \new Voice {
@@ -263,24 +268,11 @@ bass = \new Voice {
 %	\midi {	}
 }
 
-\markup {
-	\column {
-		\fill-line {
-			\line { }
-			\line { }
-			\line \right-align { Repeat \italic "Requiem æternam dona eis Domine: et lux perpetua luceat eis" }
-		}
-		\vspace #4
-	}
-}
-
-
 \score {
 	\new Staff <<
 		\set Staff.instrumentName = #"S"
 		\key f \major
 		\new Voice {
-			\once \override AmbitusNoteHead #'transparent = ##t
 			\relative c' {
 				\cadenzaOn
 				\override Stem #'transparent = ##t 
@@ -294,6 +286,10 @@ bass = \new Voice {
 	>>
 	\layout {
 		ragged-right = ##t
+		\context { 
+			\Voice 
+			\remove "Ambitus_engraver"
+		}
 	}
 }
 
@@ -431,7 +427,49 @@ bass = \new Voice {
 }
 
 
+\markup {
+	\column {
+		\fill-line {
+			\line { }
+			\line { }
+			\line \right-align { Repeat \italic "Requiem æternam dona eis Domine: et lux perpetua luceat eis" }
+		}
+		\vspace #4
+	}
+}
+
+
 % KYRIE 1
+
+kyrieChant = \new Voice {
+	\relative c' {
+		\cadenzaOn \override Stem #'transparent = ##t \repeat volta 2 {
+			f4 g a bes s8 a4 s8 a4-- g-- s a g f e s8 f4 s g s f s f-- \showBarLine \bar "|"
+		}
+		\cadenzaOff
+	}
+}
+\addlyrics {
+	Ký -- _ _ _ ri -- e __ _ e -- _ _ _ _ lé -- i -- son.
+}
+
+\score {
+	\new Staff <<
+		\set Staff.instrumentName = #"S"
+		\key f \major
+		\kyrieChant
+	>>
+	\header {
+		piece = "Kyrie 1"
+	}
+	\layout {
+		ragged-right = ##t
+		\context { 
+			\Voice 
+			\remove "Ambitus_engraver"
+		}
+	}
+}
 
 sopranoA = \new Voice {
 	\relative c'' {
@@ -521,14 +559,38 @@ bass = \new Voice {
 			\new Staff << \globalAs \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >> 
 		>> 
 	}
-	\header {
-		piece = "Kyrie 1"
-	}
 	\layout { }
 %	\midi {	}
 }
 
 % CHRISTE 1
+
+\score {
+	\new Staff <<
+		\set Staff.instrumentName = #"S"
+		\key f \major
+		\new Voice {
+			\relative c' {
+				\cadenzaOn \override Stem #'transparent = ##t
+				f4 g a bes s8 a4-- g-- s a g f e s8 f4 s g s f s f-- \showBarLine \bar "|"
+				\cadenzaOff
+			}
+		}
+		\addlyrics {
+			Chrí -- _ _ _ ste __ _ e -- _ _ _ _ lé -- i -- son.
+		}
+	>>
+	\header {
+		piece = "Christe 1"
+	}
+	\layout {
+		ragged-right = ##t
+		\context { 
+			\Voice 
+			\remove "Ambitus_engraver"
+		}
+	}
+}
 
 sopranoA = \new Voice {
 	\relative c'' {
@@ -608,9 +670,6 @@ tenorA = \new Voice {
 			\new Staff << \global \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >> 
 			\new Staff << \global \tenorA \set Staff.instrumentName = #"T1" \set Staff.shortInstrumentName = #"T1" >> 
 		>> 
-	}
-	\header {
-		piece = " Christe 1"
 	}
 	\layout { }
 %	\midi {	}
@@ -711,6 +770,24 @@ bass = \new Voice {
 
 % KYRIE 2
 
+\score {
+	\new Staff <<
+		\set Staff.instrumentName = #"S"
+		\key f \major
+		\kyrieChant
+	>>
+	\header {
+		piece = "Kyrie 2"
+	}
+	\layout {
+		ragged-right = ##t
+		\context { 
+			\Voice 
+			\remove "Ambitus_engraver"
+		}
+	}
+}
+
 sopranoA = \new Voice {
 	\relative c'' {
 		es1. as,2 as1 es' ~ es\breve
@@ -801,9 +878,6 @@ bass = \new Voice {
 			\new Staff << \global \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >> 
 		>> 
 	}
-	\header {
-		piece = "Kyrie 2"
-	}
 	\layout { }
 %	\midi {	}
 }
@@ -816,11 +890,10 @@ bass = \new Voice {
 		\set Staff.instrumentName = #"S"
 		\key c \major
 		\new Voice {
-			\once \override AmbitusNoteHead #'transparent = ##t
 			\relative c'' {
 				\cadenzaOn
 				\override Stem #'transparent = ##t 
-				g4 b a a s a a c a g s8 b4 g s8 a4 b a-- a-- \showBarLine\bar "|"
+				g4 b a a s a s8 a4 c a g s8 b4 g s8 a4 b s8 a4-- s8 a4-- \showBarLine \bar "|"
 				\cadenzaOff
 			}
 		}
@@ -833,6 +906,10 @@ bass = \new Voice {
 	}
 	\layout {
 		ragged-right = ##t
+		\context { 
+			\Voice 
+			\remove "Ambitus_engraver"
+		}
 	}
 }
 
