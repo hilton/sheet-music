@@ -1203,7 +1203,7 @@ tenorA = \new Voice {
 		g2. g4 b2 c2. c4 c2 d4 es4. c8 f2 
 		es8 d es4. d8 c bes c4 bes2 | f r4 f'2 es4 d4. d8 | c2 bes
 		c4. bes8 a4 bes | f2 r4 f'2 es4 d4. d8 | c2. as4 bes2 c | f,4 f'2 d4
-		e2 f4. \ficta es8 | d c d4 c2 f,2. f4 | g2 c r1 | c2 a 
+		e2 f4. \ficta es!8 | d c d4 c2 f,2. f4 | g2 c r1 | c2 a 
 		
 		bes c | g1 r4 es'2 d4 | c bes as g c4. bes8 as4 es |
 		bes'2 r4 bes c4. bes8 a4 bes8 c | d es f2 es8 d c bes c4 bes2 | r1 c4. bes8 as2 |
@@ -1242,3 +1242,35 @@ tenorA = \new Voice {
 	}
 %	\midi {	}
 }
+
+
+% OFFERTORIUM
+
+\score {
+	\new Staff <<
+		\set Staff.instrumentName = #"S"
+		\key f \major
+		\new Voice {
+			\relative c'' {
+				\cadenzaOn \override Stem #'transparent = ##t
+				g4 s8 f4 g s8 g4 s  g s8 g4 f s g s8 g4 bes g s8 g4-- s8 f4-- s \breathe
+				bes-- s8 a4 bes c s  a g bes-- s8 a4 bes s8 g4 s8 a4 g s8 f4 g s8 g4 bes g s8 g4-- s8 f4-- \showBarLine \bar "|"
+				\cadenzaOff
+			}
+		}
+		\addlyrics {
+			Dó -- mi -- _ ne Jé -- su __ _ Chrí -- ste __ _ _ _ _ Rex __ _ _ _ gló -- _ _ _ _ _ _ _ ri -- _ æ. __ _ _ _ _
+		}
+	>>
+	\header {
+		piece = "Offertorium"
+	}
+	\layout {
+		ragged-right = ##t
+		\context { 
+			\Voice 
+			\remove "Ambitus_engraver"
+		}
+	}
+}
+
