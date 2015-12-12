@@ -5,10 +5,10 @@
 revision = "12"
 \pointAndClickOff
 
-#(set-global-staff-size 16.0)
+#(set-global-staff-size 15)
 
 \paper {
-	#(define fonts (make-pango-font-tree "Century Schoolbook L" "Source Sans Pro" "Luxi Mono" (/ 16 20)))
+	#(define fonts (make-pango-font-tree "Century Schoolbook L" "Source Sans Pro" "Luxi Mono" (/ 15 20)))
 	annotate-spacing = ##f
 	two-sided = ##t
 	top-margin = 5\mm
@@ -16,8 +16,8 @@ revision = "12"
 	inner-margin = 15\mm
 	outer-margin = 15\mm
 	top-markup-spacing = #'( (basic-distance . 8) )
-	markup-system-spacing = #'( (padding . 8) )
-	system-system-spacing = #'( (basic-distance . 10) (stretchability . 100) )
+	markup-system-spacing = #'( (padding . 6) )
+	system-system-spacing = #'( (basic-distance . 20) (stretchability . 100) )
 	ragged-bottom = ##f	
 	ragged-last-bottom = ##t
 } 
@@ -158,7 +158,7 @@ sopranoB = \new Voice {
 		d c2. bes4 a2 g1 f r r2 d'1 bes2 c d
 		d c4 bes a g a2 ~ a4 g4 f2 f e f c'1 c2 a1 r
 		r4 c c a bes2 bes a4 d d a cis2 d d c1 c2
-		bes1 a2 f f1 r \noPageBreak R\breve r1 r2 c'2. 
+		bes1 a2 f f1 r R\breve r1 r2 c'2. 
 		bes4 a g f2 f f4 g a bes c2 bes a4 g a bes c1.
 		a2 d1 c a\breve \fermata
 	}
@@ -303,7 +303,6 @@ sopranoA = \new Voice {
 		f g a1 g2 f1 e2 f\breve \fermata \showBarLine \bar "|."
 		\once \override Score.RehearsalMark.break-visibility = #end-of-line-visible
 		\once \override Score.RehearsalMark.self-alignment-X = #RIGHT
-		\noPageBreak
 	}
 	\addlyrics {
 		Et tí -- _ _ 
@@ -397,6 +396,7 @@ bass = \new Voice {
 		f c'2 g2 ~ g4 a4 bes c d1 g, d' a ~ a\breve
 		d1 bes a2 d d d g, g' f4 e d c d1 a\breve 
 		d1 a a2 a bes g f1 c'2 f, c'2. c4 f,\breve \fermata
+		\noPageBreak
 	}
 	\addlyrics {
 		Et tí -- _ _ _ bi red -- dé -- _ _ _ tur vo -- tum 
@@ -460,7 +460,7 @@ kyrieChant = \new Voice {
 		\kyrieChant
 	>>
 	\header {
-		piece = "Kyrie 1"
+		piece = "Kyrie"
 	}
 	\layout {
 		ragged-right = ##t
@@ -581,7 +581,7 @@ bass = \new Voice {
 		}
 	>>
 	\header {
-		piece = "Christe 1"
+		piece = " "
 	}
 	\layout {
 		ragged-right = ##t
@@ -679,6 +679,7 @@ tenorA = \new Voice {
 
 sopranoA = \new Voice {
 	\relative c'' {
+		\set Score.currentBarNumber = #26
 		R\breve R es1 c bes c
 		des c as bes bes as1. g2 as1 \fermata \showBarLine \bar "||"
 	}
@@ -760,9 +761,6 @@ bass = \new Voice {
 			\new Staff << \global \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >> 
 		>> 
 	}
-	\header {
-		piece = "Christe 2"
-	}
 	\layout { }
 %	\midi {	}
 }
@@ -777,7 +775,7 @@ bass = \new Voice {
 		\kyrieChant
 	>>
 	\header {
-		piece = "Kyrie 2"
+		piece = " "
 	}
 	\layout {
 		ragged-right = ##t
@@ -790,6 +788,7 @@ bass = \new Voice {
 
 sopranoA = \new Voice {
 	\relative c'' {
+		\set Score.currentBarNumber = #34
 		es1. as,2 as1 es' ~ es\breve
 		f\breve es1 des c bes\breve
 		as1 bes c bes2 as1 g2 as\breve \fermata \showBarLine \bar "|."
@@ -926,7 +925,7 @@ sopranoA = \new Voice {
 		r2 as, bes bes c bes bes as1 as2 \break g as1 
 		g2 as\breve | r2 es'2. d4 c2 bes bes
 		
-		as4 f c'2 ~ \break \pageBreak c4 bes4 bes1 a2 | bes\breve r1
+		as4 f c'2 ~ \break c4 bes4 bes1 a2 | bes\breve r1
 		r2 es2. d4 c2. bes4 as2 \break g g as2. bes4 | c1
 		c r2 d es c b c1 b2 c\breve \fermata \showBarLine \bar "|."
 	}
@@ -1282,8 +1281,30 @@ sopranoA = \new Voice {
 		des c des bes \break c bes bes as bes bes bes c |
 		des2. c8 bes as bes c4. bes8 bes4 ~ \break bes a8 g \ficta as2 r1 R\breve |
 		bes2 as bes des ~ \break des c1 bes2 as c as bes |
+		
+		des2. c2 bes a4 \break bes2 es es4. des8 c4 bes8 as bes4 c des2 c r as bes2.
+		des2 c4 ~ \break c8 bes8 bes2 a4 bes2 c4 des2 c4. bes8 bes2 a8 g \ficta a4 \ficta a bes1. r4 bes | \break
+		bes2 as f as bes c c bes des1 c | \break
+
+		bes2 bes c d es2. \ficta des!4 c bes a2 bes des c bes | \break
+		bes c des es es4. des8 c4 bes8 as bes4. c8 des1 c4 as2 c c4 | \break
+		bes4. as8 bes c des4. c8 bes2 a8 g \time 3/2 a2 bes r | \showBarLine \bar "|"
+		\time 5/2 bes1 bes2 as f \break \time 4/2
+		
+		as2 bes c2. c4 bes2. des2 des4 c2 bes c1 bes2 | as des
+		es c \break bes2. bes4 as2 f as4. bes8 c4 des c2 bes\breve \fermata \showBarLine \bar "|."
 	}
 	\addlyrics {
+		Lí -- be -- _ ra á -- _ ni -- mas óm -- _ ni -- um fi -- dé -- _ li -- um
+		de -- fun -- _ ctó -- _ rum de poé -- _ nis in -- fér -- _ _ _ _ _ _ _ _ _ _ ni
+		et de pro -- fún -- do lá -- cu:
+		lí -- be -- ra é -- as de ó -- re le -- ó -- _ _ _ _ _ _ nis, __ _
+		ne ab -- sór -- _ _ _ be -- at é -- as tár -- _ _ _ _ _ ta -- rus,
+		ne cá -- _ dant in ob -- _ scú -- _ _ _ rum:
+		sed __ _ sí -- _ gni -- fer sán -- ctus Mí -- cha -- el
+		re -- præ -- sén -- _ tet é -- _ _ _ _ _ _ _ as in lú -- cem sán -- _ _ _ _ _ _ _ _ _ ctam.
+		Quam o -- _ lim Á -- _ _ bra -- hæ pro -- mi -- sí -- _ _ sti __ _
+		et __ _ sé -- _ mi -- ni é -- _ _ _ _ _ ius.
 	}
 }
 
@@ -1295,8 +1316,30 @@ sopranoB = \new Voice {
 		as4. bes8 c4 as des4. c8 bes4 ~ bes a4 bes2 r r4 f' d es2 \ficta d4 es2. as,4 |
 		bes2 r r1 r4 c c d es2. c4 des2 c r4 bes bes c |
 		des2 c4 f des es f2 r4 f es c es as,2 \ficta ges4 f2 r r1 |
+		
+		r2 f' c4 es des c des8 c bes as bes4 c c4. bes8 as2 g4 as bes2. as8 g as2 | r\breve
+		r4 bes c es2 d4 es f2 es4 \ficta des ges f1 r4 f f2 des bes4 es |
+		es2 c as4 as4. as8 des4. c8 bes4 as2 r r4 bes2 f as4. bes8 c des es2 ~
+		
+		es4 d4 es1 r2 r4 bes es2. \ficta des4 c f4. es8 des c bes2 as4 f f es |
+		r f g as2 bes4 c2 bes as4 es'2 es4 as, as bes2 as4 c f2 es2 ~
+		es4 bes4 des8 c bes as bes c des4 c f4. es16 des c4 d2 r d es \ficta des! c4 f4. es8 des4 |
+		
+		c4 es es1 r4 f2 es4 des8 c bes as bes2 r1 r4 f'2 es4 es4. des8 | c4 des bes2
+		r4 es2 f4 ~ f8 es8 des c bes4 g c2. bes4 \time 5/2 c2 r4 f4. es16 \ficta d c4 d2 es \time 2/2 d1\fermata |
 	}
 	\addlyrics {
+		Lí -- be -- ra á -- _ _ _ _ _ ni -- mas óm -- ni -- um fi -- dé -- _ li -- um
+		de -- fun -- ctó -- rum, de -- _ _ fun -- ctó -- _ _ _ rum de poé -- nis in -- fér -- _ ni
+		et de pro -- fún -- do lá -- cu, et de pro -- fún -- do lá -- _ _ cu, et de pro -- fún -- do lá -- cu:
+		lí -- be -- ra é -- as de __ _ _ _ _ ó -- re __ _ _ le -- ó -- _ _ _ nis,
+		ne ab -- sór -- be -- at é -- as tár -- ta -- rus,
+		ne cá -- _ dant, ne cá -- _ dant in ob -- scú -- _ _ rum, in ob -- scú -- _ _ _ _ _ rum:
+		sed sí -- gni -- fer sán -- _ _ _ _ ctus Mí -- cha -- el
+		re -- præ -- sén -- tet é -- _ as, re -- præ -- sén -- tet é -- as 
+		in lú -- cem, in lú -- _ _ _ _ _ _ cem sán -- _ _ _ ctam.
+		Quam o -- _ lim Á -- _ _ _ bra -- hæ pro -- mi -- sí -- _ _ _ sti, pro -- mi -- sí -- _ _ _ sti
+		et sé -- _ _ _ _ mi -- ni é -- ius, é -- _ _ _ _ _ ius.
 	}
 }
 
@@ -1308,22 +1351,67 @@ alto = \new Voice {
 		f4. g8 as2. f4 des ges \ficta ges f2 es8 des es2 f | r r4 f ges es r f2
 		des4 es es f1 f r4 g g as bes bes, f'2 f r |
 		r r4 f f g as des,8 es f g as2 es f4 r2 r4 as2 g4 f es f g |
+		
+		as4 bes f as4. g8 es4 f2 des4 es es1 r2 r1 r2 r4 f | es as2 g4
+		f bes2 as4 f g es2 r\breve r4 f f2 des bes4 f' f2 ges2 ~ 
+		ges4 es4. des8 c4. bes8 as' g f4 f2 f4 f2 c4 es2 bes des4. des8 f4 es1 |
+		
+		r4 f g2 as2. as,4 | es' es2 bes4 f'4. f8 f2 | r4 f2 g4 as2. g8 f |
+		g as bes2 as8 g f2 es r4 es2 es4 es2 f f4 bes, c2 r4 as' as2 |
+		ges4 es f8 es des c bes2 c1 bes2 r f' es4 bes bes4. bes8 c4 as'4. g8 f4 |
+		
+		es4 as2 g4 as2 as4. g8 f4 bes, des4. es8 f2 es r4 bes'2 as4 g as2 g4 | as2 r4 bes
+		g as as4. g8 f4 bes, bes2 r4 as'2 bes4 as f f1 f2 r4 bes, bes1\fermata |
 	}
 	\addlyrics {
+		Lí -- be -- ra á -- _ _ _ ni -- mas óm -- _ ni -- um fi -- dé -- _ _ li -- um
+		de -- _ _ fun -- _ _ ctó -- rum, de -- fun -- ctó -- _ _ _ rum de poé -- nis,
+		de poé -- nis in -- fér -- ni et de pro -- fún -- do lá -- cu,
+		et de pro -- fún -- do __ _ _ _ _ lá -- cu:
+		lí -- be -- ra é -- as de ó -- re le -- ó -- _ _ nis, le -- ó -- nis,
+		ne ab -- sór -- be -- at é -- as tár -- ta -- rus,
+		ne cá -- _ dant, ne cá -- _ dant __ _ _ _ _ _ _ in ob -- scú -- rum, in ob -- scú -- _ _ rum:
+		sed sí -- _ gni -- fer sán -- ctus Mí -- cha -- el
+		re -- præ -- sén -- _ _ _ _ _ _ _ _ tet, 
+		re -- præ -- sén -- _ tet é -- as in lú -- cem sán -- ctam, __ _ _ _ _ sán -- ctam.
+		Quam o -- lim Á -- bra -- hæ pro -- _ _ mi -- sí -- _ sti,
+		pro -- _ _ mi -- sí -- _ _ sti, pro -- mi -- sí -- _ _ sti,
+		et sé -- mi -- ni __ _ _ é -- ius, et sé -- mi -- ni é -- ius, é -- ius.
 	}
 }
 
 tenorA = \new Voice {
 	\relative c' {
-%		\clef "treble_8"
+		\clef "treble_8"
 		r1 f2 f4 des f ges f2 r1 |
 		r4 c2 c4 des f2 bes,4 bes2 r r1 r4 as'2 g4 f f g4. as8 |
 		
 		bes4 f2 es4 f2 r r1 r2 r4 f2 ges4 f bes, es4. des8 c2 |
 		bes bes des4 c des2 c f, c' r4 f f g as2. f4 ges2 |
 		f1 r2 r4 bes as f as as as4. \ficta ges8 f4 es8 des c4 as r2 r4 as'2 g4 |
+		
+		f4 des4. es8 f4 es2 r4 f ~ f g2 as g8 f es2 es f f f | r\breve |
+		r2 r4 es f2 as | as4 as f es des c8 bes c4 c | bes1 r4 bes' bes2
+		ges4. f8 es4 f r f f2 des c4 as'2 es4 g4. as8 bes4. as16 g f4. g8 as1 |
+		
+		f2 r r4 es as2. g8 f g4 g as f2 c4 des4. es8 f4 bes, c2 r |
+		r1 r4 f g as2 g4 as2 g f r4 f f2 as2. es4 ~
+		es4 ges4 f f des f f1 f2 r f | ges f f2. as4 ~ |
+		
+		as es4 es es4. des8 c bes as4 as'2 g4 f2. bes2 as4 g f f2 r r4 es2 f4. es8 des4
+		c as r as' | bes4. as8 g4 g f2 r4 f | f4. g8 a4 bes2 a4 bes4. \ficta as!8 ges4 es f1\fermata |
 	}
 	\addlyrics {
+		Lí -- be -- ra á -- ni -- mas, lí -- be -- ra á -- ni -- mas óm -- ni -- um fi -- dé -- _ _ _ li -- um
+		de poé -- nis in -- fér -- _ _ ni, de poé -- nis in -- fér -- _ ni
+		et de pro -- fún -- do lá -- cu, et de pro -- fún -- do lá -- _ _ _ _ _ cu:
+		lí -- be -- ra é -- _ _ as de ó -- _ _ _ _ re le -- ó -- nis,
+		ne ab -- sór -- be -- at é -- as tár -- _ _ _ ta -- rus,
+		ne cá -- _ _ _ dant, ne cá -- _ dant in ob -- scú -- _ _ _ _ _ _ _ rum:
+		sed sí -- _ _ _ gni -- fer sán -- ctus Mí -- _ _ cha -- el
+		re -- præ -- sén -- tet é -- _ as in lú -- _ cem sán -- ctam, in lú -- cem sán -- ctam.
+		Quam o -- _ lim Á -- bra -- hæ pro -- _ _ _ _ mi -- sí -- sti, pro -- mi -- sí -- _ sti
+		et sé -- mi -- ni é -- ius, et sé -- mi -- ni é -- ius, et sé -- _ _ mi -- ni é -- _ _ _ ius.
 	}
 }
 
@@ -1336,8 +1424,32 @@ tenorB = \new Voice {
 		des2 as des2. des4 c f, bes2 r4 bes des c bes es, bes'2 es, as |
 		R\breve r2 r4 f' es c es f bes,2 f4 c' c d es2 |
 		des4 bes c2 bes r2 r\breve r4 f'2 c4 des c bes es |
+		
+		des4. c8 bes4 as2 bes4 r f bes2 g4 es as4. bes8 c des es2 as,4 des2 r4 c as des2 c4 bes es2
+		des8 c bes4 c | des es c2 bes r r1 r2 r4 f'4 f2 des bes es, |
+		bes'4 es, as2 r1 r4 bes4 f2 as g f1 r |
+		
+		r4 bes es2. c4 as2 bes bes as4 bes c2 bes r r4 c d es ~ |
+		es d es f4. es8 \ficta des!4 c as es'2 as, es4 es' des4. c8 bes as bes4 f2 r4 c' c2 |
+		es des f2. c2 f,4 f2 r bes bes4. c8 des es f4. es16 des c4 des as ~ | 
+		
+		as8 bes c4 bes2 as4 as2 as4 bes1 bes2 r4 es2 des4 c f, c'4. des8 es2 | as,4 des4. es8 f4		
+		es4 c c2 r4 des es4. des8 c4 as des2 c f, r4 f2 bes4. as8 ges4 f1\fermata |
 	}
 	\addlyrics {
+		Lí -- be -- ra á -- _ _ ni -- mas, á -- ni -- mas, lí -- be -- ra á -- ni -- mas
+		óm -- ni -- um fi -- dé -- li -- um de -- fun -- ctó -- rum,
+		de -- fun -- ctó -- _ rum de poé -- nis in -- _ fér -- _ ni
+		et de pro -- fún -- do lá -- cu, et de pro -- fún -- do lá -- _ cu:
+		lí -- be -- ra é -- as de ó -- re le -- ó -- nis, de ó -- re le -- ó -- _ _ _ _ _ nis,
+		ne ab -- sór -- be -- at é -- _ _ _ as tár -- ta -- rus, __ _
+		ne cá -- _ dant, ne cá -- _ dant in ob -- scú -- _ rum:
+		sed sí -- gni -- fer sán -- ctus Mí -- cha -- el __ _
+		re -- præ -- sén -- tet é -- _ _ _ as, re -- præ -- sén -- tet é -- _ _ _ _ _ as
+		in lú -- _ cem sán -- ctam, sán -- ctam.
+		Quam o -- _ _ _ _ _ _ _ lim Á -- _ _ bra -- hæ pro -- mi -- sí -- sti,
+		pro -- mi -- sí -- sti, pro -- mi -- sí -- sti
+		et __ _ _ sé -- mi -- ni, et sé -- mi -- ni é -- _ _ ius, é -- _ _ _ ius.
 	}
 }
 
@@ -1345,18 +1457,39 @@ bass = \new Voice {
 	\relative c {
 		\clef bass
 		R\breve R |
-		f4 f f f bes,4. c8 d4 es bes2 f'4. g8 as4 es bes'2 f bes bes, es4 es |
+		r4 f f f bes,4. c8 d4 es bes2 f'4. g8 as4 es bes'2 f bes bes, es4 es |
 		
 		bes8 c des es f g as4 des,2 ges4. f8 es4 f ges1 f2 r r4 bes2 \ficta g!4 as f |
 		bes4. as8 ges2 f1 ~ f r1 r4 bes as f as bes es,2 |
 		bes f' r4 es des bes des2 as4 as'4. \ficta ges8 f es des4 es f2 r r1 |
+		
+		r4 bes2 f4 as g f2 | bes,4 es4. des8 c bes as4 as'2 g8 f | es4 des8 c bes c des es f2. des4 | as'2 es
+		bes r r1 r4 bes' as des4. des8 as4 bes es, f2. f4 bes,2 r4 bes'4 bes2 ges |
+		es r4 f4 f2 des bes r4 f'2 c4 es4. des8 bes4. c8 des2 as1 |
+		
+		bes2 r4 es4 as4. g8 f4 f es2 es f f bes, bes f' r |
+		r\breve r r2 r4 f4 f2 as |
+		 es bes1 f' bes,2 r bes es bes f' des |
+		 
+		as2 es' as4. g8 f es f4 d es bes2 r4 bes c4. des8 es4 bes f'2 r1 | r2 bes
+		c4. bes8 as4 f bes2 es, f4. es8 des4 bes f'2. bes,4 f'4. f8 bes,2 es bes1\fermata |
 	}
 	\addlyrics {
+		Lí -- be -- ra á -- _ _ ni -- mas óm -- _ _ ni -- um fi -- dé -- li -- um
+		de -- fun -- _ _ _ _ _ _ ctó -- _ _ _ _ _ rum de poé -- nis in -- fér -- _ _ ni
+		et de pro -- fún -- do lá -- _ cu, et de pro -- fún -- do lá -- _ _ _ _ _ cu:
+		lí -- be -- ra é -- as de ó -- _ _ _ re le -- _ _ ó -- _ _ _ _ _ _ nis, le -- ó -- _ nis,
+		ne ab -- sór -- be -- at é -- as tár -- ta -- rus,
+		ne cá -- _ dant, ne cá -- _ dant in ob -- scú -- _ _ _ _ _ rum:
+		sed sí -- _ _ gni -- fer sán -- _ ctus Mí -- cha -- el
+		in lú -- _ cem sán -- _ ctam.
+		Quam o -- _ lim Á -- bra -- hæ pro -- _ _ _ _ mi -- sí -- sti, pro -- mi -- _ _ sí -- sti
+		et sé -- mi -- ni é -- ius, et sé -- mi -- ni é -- ius, et sé -- mi -- ni é -- ius.
 	}
 }
 
 \score {
-	\transpose c c {
+	\transpose c a, {
 		\new StaffGroup << 
 			\set Score.proportionalNotationDuration = #(ly:make-moment 1 8)
 			\set Score.barNumberVisibility = #all-bar-numbers-visible
@@ -1373,4 +1506,120 @@ bass = \new Voice {
 	}
 	\layout { }
 %	\midi {	}
+}
+
+soprano = \new Voice {
+	\relative c'' {
+		as2 bes des2. des4 c c bes1 bes2 | as bes
+		des c4. c8 \break bes4 c2 bes4 as2 bes bes as2. as4 bes2 |
+		bes4. c8 des es f4. es8 des2 c4 ~ \break c bes4 c2 bes1 | bes
+		as2 bes des c1 bes2 ~ \break bes as2 es' des | es f4. es8
+		des4 c bes2 bes bes a bes \break des2. c8 bes c4 bes as1 bes2
+		
+		c as | f as bes2. bes4 \break | bes2 des c bes | as c
+		d es \ficta des! c bes c \break | \time 6/2 des c bes\breve\fermata \showBarLine \bar "|."
+	}
+	\addlyrics {
+		Hó -- _ _ sti -- as et pré -- ces tí -- bi
+		Dó -- _ mi -- ne láu -- dis of -- _ fé -- _ ri -- mus:
+		tu __ _ _ _ _ _ _ sú -- sci -- pe pro a -- ni -- má -- _ bus íl -- lis,
+		quá -- _ rum hó -- _ _ di -- e me -- mó -- ri -- am fá -- _ _ _ ci -- mus:
+		fac __ _ e -- as Dó -- _ mi -- ne de mór -- _ te trans -- _ í -- _ re __ _ ad ví -- _ tam.
+	}
+}
+
+alto = \new Voice {
+	\relative c' {
+		f2 g4. g8 f2 f as g4 f8 es f2 r4 es es f4. f8 g4
+		a8 g16 \ficta a bes4. bes8 \ficta as!4 g f8 es f4. f8 es4 f ges2. f4 es2 r r4 f2
+		bes as8 g f4. es8 des4 f f2 r4 f d es bes8 c des es f es16 f ges4 f f4.
+		\ficta g!8 as2 g4 f2 r4 es4. f16 g as2 g8 f g2 as r r4 as2 g4 f8 es des es
+		f g as2 g4 f2 es f ges4. \ficta ges8 f4 f2 es8 des es4 es f2 r4 f f g
+		
+		as4. g8 f es f2 des4 es as2 g4 f2 | r4 es des8 es f g as4 as2 g4 f2 f1 
+		r2 r4 bes g a bes g as2 | f4. g8 as2. g4 f2 f1\fermata
+	}
+	\addlyrics {
+		Hó -- _ sti -- as et pré -- ces __ _ _ _ tí -- bi
+		Dó -- mi -- ne láu -- _ _ _ dis of -- fé -- _ _ _ ri -- mus, of -- fé -- ri -- mus:
+		tu sú -- _ _ _ _ _ sci -- pe pro a -- ni -- má -- _ _ _ _ _ _ _ bus íl -- _ _ _ lis, íl -- _ _ _ _ _ _ lis,
+		quá -- rum hó -- _ _ _ _ _ _ di -- e me -- mó -- _ ri -- am fá -- _ _ _ ci -- mus:
+		fac e -- as Dó -- _ _ _ _ mi -- ne de mór -- te trans -- í -- _ _ _ _ re ad ví -- tam,
+		de mór -- te trans -- í -- re __ _ _ _ ad ví -- tam.
+	}
+}
+
+tenor = \new Voice {
+	\relative c' {
+		\clef "treble_8"
+		c2 es4. es8 des4 bes8 c des es f des es4 f4. es8 es4. d16 c \ficta d4 es bes | c \ficta des!4. des8 es4
+		f ges es f4 ~ f8 es8 es2 d4 es \ficta des!2 es4. des8 des2 c8 bes c des es2 d8 c |
+		d4 es f2 r4 bes, f'4. es8 des4 des c2 r r4 f | d es bes8 c des es
+		f2. es4 des as4. bes8 c des es1 | r4 es4. des8 c bes c4 bes as2 bes4. c8 des es f2
+		es4 es es2 des c8 bes c4 c es2 | as,4 as as2 r r4 c | c c d es
+		
+		as,2. f4 bes8 c des bes c des16 es f4. es8 es2 d4 es2 r4 bes as8 bes c des es4 es c c2 bes8 as
+		bes2 r r r4 f' d es2 f4 ~ f des4 es f d8 c16 \ficta d es2 \ficta d8 c d1\fermata
+	}
+	\addlyrics {
+		Hó -- _ sti -- as et __ _ _ _ _ _ _ pré -- _ _ _ _ _ ces tí -- bi
+		Dó -- mi -- ne láu -- dis of -- fé -- _ _ ri -- mus, of -- fé -- _ _ _ _ _ _ _ _ _ _ ri -- mus:
+		tu sú -- _ _ sci -- pe pro a -- ni -- má -- _ _ _ _ bus íl -- lis, __ _ _ _ _
+		quá -- _ _ _ _ rum hó -- _ _ _ _ _ di -- e me -- mó -- _ _ _ ri -- am fá -- ci -- mus:
+		fac e -- as Dó -- mi -- ne de mór -- _ _ _ _ _ _ _ _ _ _ te trans -- í -- _ _ _ _ re ad ví -- _ _ tam,
+		de mór -- te trans -- í -- re ad ví -- _ _ _ _ _ tam.
+	}
+}
+
+bass = \new Voice {
+	\relative c {
+		\clef bass
+		f2 es bes'2. bes4 as2 bes bes es, r1
+		r2 r4 f | g as4. as8 bes4 c des ges,1 as2. ces4 bes2
+		r2 r4 f bes2. as4 | bes2 f r\breve
+		r4 f d es bes8 c des es f g as2 as,4 es'2 ~ | es as,4 as'2 g4 f2 es des2.
+		as4 es'2 bes' ges f es4 es | des4. es8 f g as2 g4 f1 r2
+		
+		r4 c' c c des bes as f bes2 bes4 bes, es8 f g as bes4 bes, f' as es2 f1
+		r4 bes g a bes8 as ges f es4 f bes, es as f bes2 as bes4 es, bes'2 bes,1\fermata
+	}
+	\addlyrics {
+		Hó -- _ _ sti -- as et pré -- ces tí -- bi
+		Dó -- mi -- ne láu -- dis of -- fé -- ri -- mus:
+		tu sú -- sci -- pe __ _ pro a -- ni -- má -- _ _ _ _ _ _ bus íl -- lis,
+		quá -- rum hó -- _ _ di -- e me -- mó -- _ ri -- am fá -- _ _ _ _ ci -- mus:
+		fac e -- as Dó -- mi -- ne de mór -- te trans -- í -- _ _ _ _ re ad ví -- _ tam,
+		de mór -- te trans -- _ _ _ _ í -- re, de mór -- te trans -- í -- re ad ví -- tam.
+	}
+}
+
+\score {
+	\transpose c a, {
+		\new StaffGroup << 
+			\set Score.proportionalNotationDuration = #(ly:make-moment 1 8)
+			\set Score.barNumberVisibility = #all-bar-numbers-visible
+			\new Staff << \globalAs \soprano \set Staff.instrumentName = #"S" \set Staff.shortInstrumentName = #"S" >> 
+			\new Staff << \globalAs \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >> 
+			\new Staff << \globalAs \tenor \set Staff.instrumentName = #"T" \set Staff.shortInstrumentName = #"T" >> 
+			\new Staff << \globalAs \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >> 
+		>> 
+	}
+	\header {
+		piece = ##f
+	}
+	\layout {
+	  	ragged-last = ##t
+	}
+%	\midi {	}
+}
+
+\markup {
+	\column {
+		\fill-line {
+			\line { }
+			\line { }
+			\line \right-align { Repeat \italic "Quam olim Abrahæ promisisti et semini eius." }
+		}
+		\vspace #4
+	}
 }
