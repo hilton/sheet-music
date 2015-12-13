@@ -2,7 +2,7 @@
 % Copyright ©2015 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "12"
+revision = "13"
 \pointAndClickOff
 
 #(set-global-staff-size 15)
@@ -1396,7 +1396,7 @@ tenorA = \new Voice {
 		
 		f2 r r4 es as2. g8 f g4 g as f2 c4 des4. es8 f4 bes, c2 r |
 		r1 r4 f g as2 g4 as2 g f r4 f f2 as2. es4 ~
-		es4 ges4 f f des f f1 f2 r f | ges f f2. as4 ~ |
+		es4 ges4 f f des f f1 f2 r f ges f f2. as4 ~ |
 		
 		as es4 es es4. des8 c bes as4 as'2 g4 f2. bes2 as4 g f f2 r r4 es2 f4. es8 des4
 		c as r as' | bes4. as8 g4 g f2 r4 f | f4. g8 a4 bes2 a4 bes4. \ficta as!8 ges4 es f1\fermata |
@@ -1493,8 +1493,8 @@ bass = \new Voice {
 		\new StaffGroup << 
 			\set Score.proportionalNotationDuration = #(ly:make-moment 1 8)
 			\set Score.barNumberVisibility = #all-bar-numbers-visible
-			\new Staff << \globalAs \sopranoA \set Staff.instrumentName = #"S1" \set Staff.shortInstrumentName = #"S1" >> 
-			\new Staff << \globalAs \sopranoB \set Staff.instrumentName = #"S2" \set Staff.shortInstrumentName = #"S2" >> 
+			\new Staff << \globalAs \sopranoB \set Staff.instrumentName = #"S1" \set Staff.shortInstrumentName = #"S1" >> 
+			\new Staff << \globalAs \sopranoA \set Staff.instrumentName = #"S2" \set Staff.shortInstrumentName = #"S2" >> 
 			\new Staff << \globalAs \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >> 
 			\new Staff << \globalAs \tenorA \set Staff.instrumentName = #"T1" \set Staff.shortInstrumentName = #"T1" >> 
 			\new Staff << \globalAs \tenorB \set Staff.instrumentName = #"T2" \set Staff.shortInstrumentName = #"T2" >> 
