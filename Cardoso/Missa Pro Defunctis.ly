@@ -2,7 +2,7 @@
 % Copyright ©2015 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "13"
+revision = "14"
 \pointAndClickOff
 
 #(set-global-staff-size 15)
@@ -1620,6 +1620,168 @@ bass = \new Voice {
 			\line { }
 			\line \right-align { Repeat \italic "Quam olim Abrahæ promisisti et semini eius." }
 		}
-		\vspace #4
+%		\vspace #4
 	}
+}
+
+
+% SANCTUS
+
+\score {
+	\new Staff <<
+		\set Staff.instrumentName = #"S1"
+		\key c \major
+		\new Voice {
+			\relative c'' {
+				\cadenzaOn \override Stem #'transparent = ##t
+				a s8 a4-- g4-- \showBarLine \bar "|"
+				\cadenzaOff
+%				\noPageBreak
+			}
+		}
+		\addlyrics {
+			Sán -- ctus _
+		}
+	>>
+	\layout {
+		ragged-right = ##t
+		\context { 
+			\Voice 
+			\remove "Ambitus_engraver"
+		}
+	}
+}
+
+sopranoA = \new Voice {
+	\relative c'' {
+		c\breve ~ c1 c1 \time 2/2 b \showBarLine \bar "||" \time 4/2 \break
+
+		a1 bes c\breve c c1 c \break
+		c c\breve bes1 bes c1. c2 c1 \showBarLine \bar "||" \break
+		as1 as2 as bes1 c c2 c c1 bes des | \break
+		
+		c1 c\breve bes1 as as bes c | \break
+		c\breve  c1 bes bes c\breve c1\fermata \showBarLine \bar "||" |
+	}
+	\addlyrics {
+		Sán -- ctus. __ _ Sán -- _ _ ctus Dó -- mi -- nus De -- us Sá -- _ ba -- oth.
+		Ple -- ni sunt cæ -- _ li et ter -- ra gló -- ri -- a tu -- a.
+		O -- sán -- _ na in ex -- cél -- _ sis.
+	}
+}
+
+sopranoB = \new Voice {
+	\relative c'' {
+		e1 f\breve \ficta es1 d
+		
+		f2. es4 d c bes2. as4 as g8 f g1 f2 f'1 es2 es1 r2 c2 ~
+		c4 bes4 as g as2. bes4 c d es2. d8 c d2 es es2. d4 c bes as2 as g1 |
+		r2 c1 c2 d f1 f2 f1 e2 f2. \ficta es!4 des c bes2 as |
+		
+		g1 f r\breve r2 f'1 es2 d es es1 |
+		r\breve r2 es1 d2 d bes1 as4 g as2 f g1\fermata
+	}
+	\addlyrics {
+		Sán -- _ ctus. __ _ Sán -- _ _ _ _ _ _ _ _ _ ctus Dó -- mi -- nus 
+		De -- _ _ _ _ _ _ _ _ _ _ _ us Sá -- _ _ _ _ ba -- oth.
+		Ple -- ni sunt cæ -- li et ter -- _ _ _ _ _ _ _ ra gló -- ri -- a tu -- a.
+		O -- sán -- na in ex -- _ _ cél -- sis.
+	}
+}
+
+alto = \new Voice {
+	\relative c' {
+		r2 c1 f2. es8 d c4 d es2 c d1
+	
+		f1 f\breve r2 g as as g1 es2 es1 f2
+		f2 f1 f2 es1 r2 bes'1 g2 as as2. g4 f2 e1 |
+		r f2. es4 d c d2 c1 as2 f' c c des bes r1 |
+		
+		r2 c2. bes4 as g as bes c d es f g2 f f1 as2. g8 f g2 as1 ~ |
+		as r2 as1 g2 g f2. es4 d2 c1 c c\fermata |
+	}
+	\addlyrics {
+		Sán -- _ _ _ _ _ _ _ ctus. Sán -- ctus Dó -- mi -- nus De -- us Sá -- ba -- oth,
+		Sá -- ba -- oth, De -- us Sá -- ba -- _ _ oth.
+		Ple -- _ _ _ _ ni sunt cæ -- li et ter -- ra gló -- _ _ _ _ _ _ _ _ _ _ ri -- a tu -- _ _ _ a.
+		O -- sán -- na in __ _ _ ex -- cél -- sis.
+	}
+}
+
+tenorA = \new Voice {
+	\relative c'' {
+		\clef "treble_8"
+		g1 as1. f2 g\breve
+		
+		c,2 f2. es4 d2 c f, c'\breve r2 g'1 as2 as1 ~
+		as r2 as1 as2 f1 g es f2 c c1 |
+		f c2 f f1 as1. as2 g f1 g2. f4 f2 ~ |
+		
+		f4 e8 d \ficta e2 f as as as g es r\breve r |
+		r2 as1 f2 es2. f4 g as bes2 f1. f2 f1 e1\fermata |
+	}
+	\addlyrics {
+		Sán -- _ _ ctus. Sán -- _ _ _ _ _ ctus Dó -- mi -- nus, Dó -- mi -- nus De -- us Sá -- ba -- oth.
+		Ple -- ni sunt cæ -- _ li et ter -- _ _ _ _ _ _ ra gló -- ri -- a tu -- a.
+		O -- sán -- na __ _ _ _ _ in ex -- cél -- sis.
+	}
+}
+
+tenorB = \new Voice {
+	\relative c' {
+		\clef "treble_8"
+		c1 f,2. g4 as1 g\breve
+		
+		f1 bes f2 f'2. e8 d \ficta e2 f f, c'1 r2 c2. bes4 as g
+		as2 f c'\breve r1 bes as2 c1 f,2 g1 |
+		c1. c2 bes1 as f2 c'1 as2 bes1. f2 |
+		
+		c'1 f,2 f'1 es2 es2. d4 c2 f, as1 r2 es'1 c2 |
+		c f1 c2 c1 r2 bes1 f c'2. bes4 as2 g1\fermata |
+	}
+	\addlyrics {
+		Sán -- _ _ _ ctus. Sán -- _ ctus, Sán -- _ _ _ ctus, Sán -- ctus
+		Dó -- _ _ _ _ mi -- nus De -- us Sá -- ba -- oth.
+		Ple -- ni sunt cæ -- li et ter -- ra, et ter -- ra gló -- ri -- a __ _ _ tu -- a.
+		O -- sán -- na, O -- sán -- na in ex -- cél -- _ _ sis.
+	}
+}
+
+bass = \new Voice {
+	\relative c {
+		\clef bass
+		r\breve f1 c g'
+		
+		r\breve r1 c,1 f c2 c'2. bes4 as g as2 f
+		f1 f2. g4 as1 bes es, as f c |
+		f1. f2 bes,1 f'\breve c2 f bes,\breve |
+		
+		c1 r2 f2. g4 as2 es1 f2. es4 des2 c bes es as, as' ~ |
+		as f f1 c2. d4 es2 bes bes1 f'\breve c1\fermata |
+	}
+	\addlyrics {
+		Sán -- ctus. __ _ Sán -- _ ctus Dó -- _ _ _ _ mi -- nus De -- _ _ _ us Sá -- ba -- oth.
+		Ple -- ni sunt cæ -- li et ter -- ra gló -- _ _ ri -- a __ _ tu -- _ _ _ a.
+		O -- sán -- na in __ _ _ ex -- cél -- _ sis.
+	}
+}
+
+\score {
+	\transpose c a, {
+		\new StaffGroup << 
+			\set Score.proportionalNotationDuration = #(ly:make-moment 1 8)
+			\set Score.barNumberVisibility = #all-bar-numbers-visible
+			\new Staff << \globalC \sopranoA \set Staff.instrumentName = #"S1" \set Staff.shortInstrumentName = #"S1" >> 
+			\new Staff << \globalC \sopranoB \set Staff.instrumentName = #"S2" \set Staff.shortInstrumentName = #"S2" >> 
+			\new Staff << \globalC \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >> 
+			\new Staff << \globalC \tenorA \set Staff.instrumentName = #"T1" \set Staff.shortInstrumentName = #"T1" >> 
+			\new Staff << \globalC \tenorB \set Staff.instrumentName = #"T2" \set Staff.shortInstrumentName = #"T2" >> 
+			\new Staff << \globalC \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >> 
+		>> 
+	}
+	\header {
+		piece = ##f
+	}
+	\layout { }
+%	\midi {	}
 }
