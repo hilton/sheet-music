@@ -1664,8 +1664,8 @@ sopranoA = \new Voice {
 		c\breve  c1 bes bes c\breve c1\fermata \showBarLine \bar "||" |
 	}
 	\addlyrics {
-		Sán -- ctus. __ _ Sán -- _ _ ctus Dó -- mi -- nus De -- us Sá -- _ ba -- oth.
-		Ple -- ni sunt cæ -- _ li et ter -- ra gló -- ri -- a tu -- a.
+		Sán -- ctus. __ _ Sán -- _ _ ctus Dó -- mi -- nus Dé -- us Sá -- _ ba -- oth.
+		Plé -- ni sunt caé -- _ li et tér -- ra gló -- ri -- a tú -- a.
 		O -- sán -- _ na in ex -- cél -- _ sis.
 	}
 }
@@ -1683,8 +1683,8 @@ sopranoB = \new Voice {
 	}
 	\addlyrics {
 		Sán -- _ ctus. __ _ Sán -- _ _ _ _ _ _ _ _ _ ctus Dó -- mi -- nus 
-		De -- _ _ _ _ _ _ _ _ _ _ _ us Sá -- _ _ _ _ ba -- oth.
-		Ple -- ni sunt cæ -- li et ter -- _ _ _ _ _ _ _ ra gló -- ri -- a tu -- a.
+		Dé -- _ _ _ _ _ _ _ _ _ _ _ us Sá -- _ _ _ _ ba -- oth.
+		Plé -- ni sunt caé -- li et tér -- _ _ _ _ _ _ _ ra gló -- ri -- a tú -- a.
 		O -- sán -- na in ex -- _ _ cél -- sis.
 	}
 }
@@ -1701,9 +1701,9 @@ alto = \new Voice {
 		as r2 as1 g2 g f2. es4 d2 c1 c c\fermata |
 	}
 	\addlyrics {
-		Sán -- _ _ _ _ _ _ _ ctus. Sán -- ctus Dó -- mi -- nus De -- us Sá -- ba -- oth,
-		Sá -- ba -- oth, De -- us Sá -- ba -- _ _ oth.
-		Ple -- _ _ _ _ ni sunt cæ -- li et ter -- ra gló -- _ _ _ _ _ _ _ _ _ _ ri -- a tu -- _ _ _ a.
+		Sán -- _ _ _ _ _ _ _ ctus. Sán -- ctus Dó -- mi -- nus Dé -- us Sá -- ba -- oth,
+		Sá -- ba -- oth, Dé -- us Sá -- ba -- _ _ oth.
+		Plé -- _ _ _ _ ni sunt caé -- li et tér -- ra gló -- _ _ _ _ _ _ _ _ _ _ ri -- a tú -- _ _ _ a.
 		O -- sán -- na in __ _ _ ex -- cél -- sis.
 	}
 }
@@ -1721,8 +1721,8 @@ tenorA = \new Voice {
 		r2 as1 f2 es2. f4 g as bes2 f1. f2 f1 e1\fermata |
 	}
 	\addlyrics {
-		Sán -- _ _ ctus. Sán -- _ _ _ _ _ ctus Dó -- mi -- nus, Dó -- mi -- nus De -- us Sá -- ba -- oth.
-		Ple -- ni sunt cæ -- _ li et ter -- _ _ _ _ _ _ ra gló -- ri -- a tu -- a.
+		Sán -- _ _ ctus. Sán -- _ _ _ _ _ ctus Dó -- mi -- nus, Dó -- mi -- nus Dé -- us Sá -- ba -- oth.
+		Plé -- ni sunt caé -- _ li et tér -- _ _ _ _ _ _ ra gló -- ri -- a tú -- a.
 		O -- sán -- na __ _ _ _ _ in ex -- cél -- sis.
 	}
 }
@@ -1741,8 +1741,8 @@ tenorB = \new Voice {
 	}
 	\addlyrics {
 		Sán -- _ _ _ ctus. Sán -- _ ctus, Sán -- _ _ _ ctus, Sán -- ctus
-		Dó -- _ _ _ _ mi -- nus De -- us Sá -- ba -- oth.
-		Ple -- ni sunt cæ -- li et ter -- ra, et ter -- ra gló -- ri -- a __ _ _ tu -- a.
+		Dó -- _ _ _ _ mi -- nus Dé -- us Sá -- ba -- oth.
+		Plé -- ni sunt caé -- li et tér -- ra, et tér -- ra gló -- ri -- a __ _ _ tú -- a.
 		O -- sán -- na, O -- sán -- na in ex -- cél -- _ _ sis.
 	}
 }
@@ -1760,8 +1760,8 @@ bass = \new Voice {
 		as f f1 c2. d4 es2 bes bes1 f'\breve c1\fermata |
 	}
 	\addlyrics {
-		Sán -- ctus. __ _ Sán -- _ ctus Dó -- _ _ _ _ mi -- nus De -- _ _ _ us Sá -- ba -- oth.
-		Ple -- ni sunt cæ -- li et ter -- ra gló -- _ _ ri -- a __ _ tu -- _ _ _ a.
+		Sán -- ctus. __ _ Sán -- _ ctus Dó -- _ _ _ _ mi -- nus Dé -- _ _ _ us Sá -- ba -- oth.
+		Plé -- ni sunt caé -- li et tér -- ra gló -- _ _ ri -- a __ _ tú -- _ _ _ a.
 		O -- sán -- na in __ _ _ ex -- cél -- _ sis.
 	}
 }
@@ -1769,7 +1769,7 @@ bass = \new Voice {
 \score {
 	\transpose c a, {
 		\new StaffGroup << 
-			\set Score.proportionalNotationDuration = #(ly:make-moment 1 8)
+			\set Score.proportionalNotationDuration = #(ly:make-moment 1 4)
 			\set Score.barNumberVisibility = #all-bar-numbers-visible
 			\new Staff << \globalC \sopranoA \set Staff.instrumentName = #"S1" \set Staff.shortInstrumentName = #"S1" >> 
 			\new Staff << \globalC \sopranoB \set Staff.instrumentName = #"S2" \set Staff.shortInstrumentName = #"S2" >> 
@@ -1783,5 +1783,129 @@ bass = \new Voice {
 		piece = ##f
 	}
 	\layout { }
+%	\midi {	}
+}
+
+
+% BENEDICTUS
+
+\score {
+	\new Staff <<
+		\set Staff.instrumentName = #"S1"
+		\key c \major
+		\new Voice {
+			\relative c' {
+				\cadenzaOn \override Stem #'transparent = ##t
+				f4 s8 f s8 g a s8 a4-- \showBarLine \bar "|"
+				\cadenzaOff
+			}
+		}
+		\addlyrics {
+			Be -- ne -- dí -- ctus _
+		}
+	>>
+	\layout {
+		ragged-right = ##t
+		\context { 
+			\Voice 
+			\remove "Ambitus_engraver"
+		}
+	}
+}
+
+sopranoA = \new Voice {
+	\relative c'' {
+		c1 c\breve c1 |
+		bes des c c \break bes\breve as1 as |
+		f as bes bes \break c bes a2 bes1 a2 bes\breve\fermata \showBarLine \bar "|."
+	}
+	\addlyrics {
+		qui vé -- nit in nó -- mi -- ne Dó -- mi -- ni.
+		O -- sán -- _ na in __ _ ex -- cél -- _ sis.
+	}
+}
+
+sopranoB = \new Voice {
+	\relative c'' {
+		e1 f\breve \ficta es1 |
+		r2 bes1 f2. g4 as bes c d es c d es f1 e2 f1 c2. c4 |
+		bes1 r2 es1 d2 es1 ~ es es1 c2 bes c f f\breve\fermata |
+	}
+	\addlyrics {
+		qui vé -- nit in nó -- _ _ _ _ _ _ _ _ _ _ mi -- ne Dó -- mi -- ni.
+		O -- sán -- na in ex -- _ cél -- _ sis.
+	}
+}
+
+alto = \new Voice {
+	\relative c' {
+		r1 r2 f1 c2. d4 es f |
+		g1 f as as2 g f1 g2. g4 c,1 r2 f1 
+		d2 es1 f g es2 es1 bes2 r f' f c d\breve\fermata |
+	}
+	\addlyrics {
+		qui vé -- _ _ _ _ nit in nó -- mi -- ne Dó -- mi -- ni.
+		O -- sán -- na __ _ in ex -- cél -- sis, in ex -- cél -- sis.
+	}
+}
+
+tenorA = \new Voice {
+	\relative c'' {
+		\clef "treble_8"
+		g1 as\breve g1 |
+		r\breve r2 f f es d1 bes f' f2 f |
+		d d c1 r2 bes'1 g2 as as1 g2 f\breve f\fermata |
+	}
+	\addlyrics {
+		qui vé -- nit in nó -- mi -- ne, in nó -- mi -- ne Dó -- mi -- ni.
+		O -- sán -- na in ex -- cél -- sis.
+	}
+}
+
+tenorB = \new Voice {
+	\relative c' {
+		\clef "treble_8"
+		c1 f,2. g4 as g as bes c1 |
+		g2 bes bes4 c des es f2 c c1 r2 bes1 g2 as c1 as2 |
+		bes1 c r r2 es ~ es c2 es es1 d2 c1 bes\breve\fermata |
+	}
+	\addlyrics {
+		qui vé -- _ _ _ _ _ _ nit in nó -- _ _ _ _ mi -- ne Dó -- mi -- ni.
+		O -- sán -- na __ _ in ex -- cél -- sis.
+	}
+}
+
+bass = \new Voice {
+	\relative c {
+		\clef bass
+		r\breve f1 c2. d4 |
+		es f g as bes1 f2 f as1 bes2 bes g2. g4 f\breve |
+		r2 bes as c bes1 es, as es f\breve bes,\breve\fermata |
+	}
+	\addlyrics {
+		qui vé -- _ _ _ _ _ _ nit in nó -- mi -- ne Dó -- mi -- ni.
+		O -- sán -- na in ex -- cél -- _ _ sis.
+	}
+}
+
+\score {
+	\transpose c a, {
+		\new StaffGroup << 
+			\set Score.proportionalNotationDuration = #(ly:make-moment 1 4)
+			\set Score.barNumberVisibility = #all-bar-numbers-visible
+			\new Staff << \globalC \sopranoA \set Staff.instrumentName = #"S1" \set Staff.shortInstrumentName = #"S1" >> 
+			\new Staff << \globalC \sopranoB \set Staff.instrumentName = #"S2" \set Staff.shortInstrumentName = #"S2" >> 
+			\new Staff << \globalC \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >> 
+			\new Staff << \globalC \tenorA \set Staff.instrumentName = #"T1" \set Staff.shortInstrumentName = #"T1" >> 
+			\new Staff << \globalC \tenorB \set Staff.instrumentName = #"T2" \set Staff.shortInstrumentName = #"T2" >> 
+			\new Staff << \globalC \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >> 
+		>> 
+	}
+	\header {
+		piece = ##f
+	}
+	\layout {
+	  	ragged-last = ##t
+	}
 %	\midi {	}
 }
