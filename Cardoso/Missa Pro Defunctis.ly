@@ -2,7 +2,7 @@
 % Copyright ©2015 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "16"
+revision = "17"
 \pointAndClickOff
 
 #(set-global-staff-size 15)
@@ -1113,9 +1113,6 @@ bass = \new Voice {
 			\new Staff << \globalC \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >> 
 		>> 
 	}
-	\header {
-		piece = ##f
-	}
 	\layout { }
 %	\midi {	}
 }
@@ -1232,9 +1229,6 @@ tenorA = \new Voice {
 			\new Staff << \globalC \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >> 
 			\new Staff << \globalC \tenorA \set Staff.instrumentName = #"T1" \set Staff.shortInstrumentName = #"T1" >> 
 		>> 
-	}
-	\header {
-		piece = ##f
 	}
 	\layout {
 	  	ragged-last = ##t
@@ -1488,6 +1482,8 @@ bass = \new Voice {
 	}
 }
 
+% HOSTIAS
+
 \score {
 	\transpose c a, {
 		\new StaffGroup << 
@@ -1500,9 +1496,6 @@ bass = \new Voice {
 			\new Staff << \globalAs \tenorB \set Staff.instrumentName = #"T2" \set Staff.shortInstrumentName = #"T2" >> 
 			\new Staff << \globalAs \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >> 
 		>> 
-	}
-	\header {
-		piece = ##f
 	}
 	\layout { }
 %	\midi {	}
@@ -1604,9 +1597,6 @@ bass = \new Voice {
 			\new Staff << \globalAs \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >> 
 		>> 
 	}
-	\header {
-		piece = ##f
-	}
 	\layout {
 	  	ragged-last = ##t
 	}
@@ -1634,7 +1624,7 @@ bass = \new Voice {
 		\new Voice {
 			\relative c'' {
 				\cadenzaOn \override Stem #'transparent = ##t
-				a s8 a4-- g4-- \showBarLine \bar "|"
+				a4 s8 a4-- g4-- \showBarLine \bar "|"
 				\cadenzaOff
 %				\noPageBreak
 			}
@@ -1779,9 +1769,6 @@ bass = \new Voice {
 			\new Staff << \globalC \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >> 
 		>> 
 	}
-	\header {
-		piece = ##f
-	}
 	\layout { }
 %	\midi {	}
 }
@@ -1902,11 +1889,369 @@ bass = \new Voice {
 			\new Staff << \globalC \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >> 
 		>> 
 	}
-	\header {
-		piece = ##f
-	}
 	\layout {
 	  	ragged-last = ##t
+	}
+%	\midi {	}
+}
+
+
+% AGNUS DEI 1
+
+\score {
+	\new Staff <<
+		\set Staff.instrumentName = #"S1"
+		\key c \major
+		\new Voice {
+			\relative c'' {
+				\cadenzaOn \override Stem #'transparent = ##t
+				g4 s8 g s8 g a s8 a4-- \showBarLine \bar "|"
+				\cadenzaOff
+			}
+		}
+		\addlyrics {
+			Ag -- nus Dé -- _ i
+		}
+	>>
+	\layout {
+		ragged-right = ##t
+		\context { 
+			\Voice 
+			\remove "Ambitus_engraver"
+		}
+	}
+}
+
+sopranoA = \new Voice {
+	\relative c'' {
+	 c1 c c
+	 b c1. as2 bes1 c c b
+	 c d bes c\breve c1 b\breve \showBarLine \bar "||"
+	}
+	\addlyrics {
+		qui tól -- lis pec -- cá -- ta mún -- _ di,
+		dó -- na é -- is ré -- qui -- em.
+	}
+}
+
+sopranoB = \new Voice {
+	\relative c'' {
+		r\breve r1
+		r2 d2 es1 c2 c d e f1 \ficta e r1
+		r r2 d1 e2 f1 \ficta es!2 es1 es2 d\breve
+	}
+	\addlyrics {
+		qui tól -- lis pec -- cá -- ta mún -- di,
+		dó -- na é -- is ré -- qui -- em.
+	}
+}
+
+alto = \new Voice {
+	\relative c' {
+		e1 f e
+		r2 g g es f2. es4 d2 g c,\breve r1
+		r f g as g2 g1 g2 g\breve
+	}
+	\addlyrics {
+		qui tól -- lis pec -- cá -- ta mún -- _ _ _ di,
+		dó -- na é -- is ré -- qui -- em.
+	}
+}
+
+tenorA = \new Voice {
+	\relative c'' {
+		\clef "treble_8"
+		g1 as g2 g
+		g2. f4 es2 g as1 f2 bes2. as8 g as2 g1 g2. f4
+		es2 f2. es4 d c d2 bes r c2. d4 es2 c1 d\breve
+	}
+	\addlyrics {
+		qui tól -- lis pec -- cá -- _ _ ta mún -- di,
+		dó -- _ _ _ na é -- _ _ _ _ _ _ _ is ré -- _ _ qui -- em.
+	}
+}
+
+tenorB = \new Voice {
+	\relative c' {
+		\clef "treble_8"
+		c1 f, c'2 c
+		es d c\breve bes1 r r2 c d es ~
+		es4 d c2 bes1 bes as2. bes4 c1. g2 g\breve
+	}
+	\addlyrics {
+		qui tól -- lis pec -- cá -- ta mún -- di,
+		dó -- na é -- _ _ is ré -- _ _ _ qui -- em.
+	}
+}
+
+bass = \new Voice {
+	\relative c' {
+		\clef bass
+		r\breve r1
+		g c, f2 f bes g f1 c g'
+		as bes2. as4 g f g2 f1 c1. c2 g'\breve
+	}
+	\addlyrics {
+		qui tól -- lis pec -- cá -- ta mún -- di,
+		dó -- na é -- _ _ _ _ is ré -- qui -- em.
+	}
+}
+
+\score {
+	\transpose c a, {
+		\new StaffGroup << 
+			\set Score.proportionalNotationDuration = #(ly:make-moment 1 4)
+			\set Score.barNumberVisibility = #all-bar-numbers-visible
+			\new Staff << \globalC \sopranoB \set Staff.instrumentName = #"S1" \set Staff.shortInstrumentName = #"S1" >> 
+			\new Staff << \globalC \sopranoA \set Staff.instrumentName = #"S2" \set Staff.shortInstrumentName = #"S2" >> 
+			\new Staff << \globalC \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >> 
+			\new Staff << \globalC \tenorA \set Staff.instrumentName = #"T1" \set Staff.shortInstrumentName = #"T1" >> 
+			\new Staff << \globalC \tenorB \set Staff.instrumentName = #"T2" \set Staff.shortInstrumentName = #"T2" >> 
+			\new Staff << \globalC \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >> 
+		>> 
+	}
+	\layout { }
+%	\midi {	}
+}
+
+% AGNUS DEI 2
+
+\score {
+	\new Staff <<
+		\set Staff.instrumentName = #"S1"
+		\key c \major
+		\new Voice {
+			\relative c'' {
+				\cadenzaOn \override Stem #'transparent = ##t
+				g4 s8 g s8 g a s8 a4-- \showBarLine \bar "|"
+				\cadenzaOff
+			}
+		}
+		\addlyrics {
+			Ag -- nus Dé -- _ i
+		}
+	>>
+	\layout {
+		ragged-right = ##t
+		\context { 
+			\Voice 
+			\remove "Ambitus_engraver"
+		}
+	}
+}
+
+sopranoA = \new Voice {
+	\relative c'' {
+		\set Score.currentBarNumber = #10
+		c1 c\breve c1 b c1.
+		as2 bes1 \break c c b c d bes
+		c\breve c1 \time 6/2 b\breve \showBarLine \bar "||"
+	}
+	\addlyrics {
+		qui tól -- lis pec -- cá -- ta mún -- _ di,
+		dó -- na é -- is ré -- qui -- em.
+	}
+}
+
+sopranoB = \new Voice {
+	\relative c'' {
+		r1 r2 c2 es1. c2 d1 es
+		c d2 es2 ~ es4 d4 c bes as2 g r2 d'2 e f2. \ficta es!4 d2. c4 bes1
+		as2 g es'1 es2 d\breve
+	}
+	\addlyrics {
+		qui tól -- lis pec -- cá -- _ ta mún -- _ _ _ _ di,
+		dó -- na __ _ _ _ _ _ é -- is ré -- qui -- em.
+	}
+}
+
+alto = \new Voice {
+	\relative c'' {
+		g1 as g2 es g as g1 es2 c4 d
+		es c f1 es4 d c1 c r\breve f2. es4 d2 d
+		c2. d4 es2 c c c d\breve
+	}
+	\addlyrics {
+		qui tól -- lis pec -- cá -- ta mún -- di, mún -- _ _ _ _ _ _ _ di,
+		dó -- _ _ na é -- _ _ is ré -- qui -- em.
+	}
+}
+
+tenorA = \new Voice {
+	\relative c'' {
+		\clef "treble_8"
+		r\breve r r1 g
+		as f2 g as es f g g g1 a2 bes f1 g
+		f2 g g1 g2 g\breve
+	}
+	\addlyrics {
+		qui tól -- lis pec -- cá -- ta mún -- _ di,
+		dó -- na é -- is ré -- qui -- em, ré -- qui -- em.
+	}
+}
+
+tenorB = \new Voice {
+	\relative c' {
+		\clef "treble_8"
+		c1 f es2 c es f d1 c\breve
+		r1 r2 c2. d4 es2 d1 c bes bes2. as4
+		g2 c c2. bes8 as g1 ~ g\breve
+	}
+	\addlyrics {
+		qui tól -- lis pec -- cá -- ta mún -- di,
+		dó -- _ _ na é -- is ré -- _ _ qui -- em. __ _ _ _
+	}
+}
+
+bass = \new Voice {
+	\relative c' {
+		\clef bass
+		r\breve r g1 c
+		as2 f bes es, as2. g4 f2 c g' g c, f bes, bes'2. as4 g f
+		es2 f c1 c g'\breve
+	}
+	\addlyrics {
+		qui tól -- lis pec -- cá -- ta mún -- _ _ _ di,
+		dó -- na é -- is ré -- _ _ _ _ _ _ qui -- em.
+	}
+}
+
+\score {
+	\transpose c a, {
+		\new StaffGroup << 
+			\set Score.proportionalNotationDuration = #(ly:make-moment 1 4)
+			\set Score.barNumberVisibility = #all-bar-numbers-visible
+			\new Staff << \globalC \sopranoB \set Staff.instrumentName = #"S1" \set Staff.shortInstrumentName = #"S1" >> 
+			\new Staff << \globalC \sopranoA \set Staff.instrumentName = #"S2" \set Staff.shortInstrumentName = #"S2" >> 
+			\new Staff << \globalC \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >> 
+			\new Staff << \globalC \tenorA \set Staff.instrumentName = #"T1" \set Staff.shortInstrumentName = #"T1" >> 
+			\new Staff << \globalC \tenorB \set Staff.instrumentName = #"T2" \set Staff.shortInstrumentName = #"T2" >> 
+			\new Staff << \globalC \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >> 
+		>> 
+	}
+	\layout {
+	  	ragged-last = ##f
+	}
+%	\midi {	}
+}
+
+% AGNUS DEI 3
+
+\score {
+	\new Staff <<
+		\set Staff.instrumentName = #"S1"
+		\key c \major
+		\new Voice {
+			\relative c'' {
+				\cadenzaOn \override Stem #'transparent = ##t
+				g4 s8 g s8 g a s8 a4-- \showBarLine \bar "|"
+				\cadenzaOff
+			}
+		}
+		\addlyrics {
+			Ag -- nus Dé -- _ i
+		}
+	>>
+	\layout {
+		ragged-right = ##t
+		\context { 
+			\Voice 
+			\remove "Ambitus_engraver"
+		}
+	}
+}
+
+sopranoA = \new Voice {
+	\relative c'' {
+		\set Score.currentBarNumber = #19
+		c1 c c
+		1 b c1. as2 bes1 c \break c b c
+		d bes c1. c2 b1 \break \ficta b1. \ficta b2 \time 6/2 c1 b\breve \showBarLine \bar "|."
+	}
+	\addlyrics {
+		qui tól -- lis pec -- cá -- ta mún -- _ di,
+		dó -- na é -- is ré -- qui -- em sem -- pi -- tér -- nam.
+	}
+}
+
+sopranoB = \new Voice {
+	\relative c'' {
+		e1 f f2 g
+		g1  e f d r2 c2 ~ c4 d4 es2 d d c1
+		r r2 es1 f es2 d1 d1. d2 es1 d\breve
+	}
+	\addlyrics {
+		qui tól -- lis pec -- cá -- ta mún -- di,
+		dó -- _ _ na é -- is ré -- _ qui -- em sem -- pi -- tér -- nam.
+	}
+}
+
+alto = \new Voice {
+	\relative c'' {
+		g1 f f2 es
+		d1 c2 g' f4 c f2. es4 d2 c1 ~ c r2 g'1 a2
+		bes1. g2 es4 d c bes c2 c d1 d1. d2 c1 d\breve
+	}
+	\addlyrics {
+		qui tól -- lis pec -- cá -- ta __ _ mún -- _ _ _ _ di,
+		dó -- na é -- is ré -- _ _ _ _ qui -- em sem -- pi -- tér -- nam.
+	}
+}
+
+tenorA = \new Voice {
+	\relative c'' {
+		\clef "treble_8"
+		g1 as as2 g
+		g\breve as1 f2. g4 as1 g\breve r1
+		r2 f g1 as2 as as g g1 g1. g2 g1 g\breve
+	}
+	\addlyrics {
+		qui tól -- lis pec -- cá -- ta mún -- _ _ di,
+		dó -- na é -- is ré -- qui -- em sem -- pi -- tér -- nam.
+	}
+}
+
+tenorB = \new Voice {
+	\relative c' {
+		\clef "treble_8"
+		c1 c2 f, c'1
+		d2 g,1 c2 c f,1 bes2 as f g c d1 e
+		f es2. d4 c2 f,1 g2 g1 g1. g2 g1 g\breve
+	}
+	\addlyrics {
+		qui tól -- lis pec -- cá -- ta mún -- di, pec -- cá -- ta mún -- di,
+		dó -- na é -- _ is __ _ _ ré -- qui -- em sem -- pi -- tér -- nam.
+	}
+}
+
+bass = \new Voice {
+	\relative c {
+		\clef bass
+		c1  f f2 c 
+		g'1 c, f bes, f' c g' c
+		bes es, as2. g4 f2 c g'1 g1. g2 c,1 g'\breve
+	}
+	\addlyrics {
+		qui tól -- lis pec -- cá -- ta __ _ mún -- _ di,
+		dó -- na é -- is ré -- _ _ qui -- em sem -- pi -- tér -- nam.
+	}
+}
+
+\score {
+	\transpose c a, {
+		\new StaffGroup << 
+			\set Score.proportionalNotationDuration = #(ly:make-moment 1 6)
+			\set Score.barNumberVisibility = #all-bar-numbers-visible
+			\new Staff << \globalC \sopranoB \set Staff.instrumentName = #"S1" \set Staff.shortInstrumentName = #"S1" >> 
+			\new Staff << \globalC \sopranoA \set Staff.instrumentName = #"S2" \set Staff.shortInstrumentName = #"S2" >> 
+			\new Staff << \globalC \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >> 
+			\new Staff << \globalC \tenorA \set Staff.instrumentName = #"T1" \set Staff.shortInstrumentName = #"T1" >> 
+			\new Staff << \globalC \tenorB \set Staff.instrumentName = #"T2" \set Staff.shortInstrumentName = #"T2" >> 
+			\new Staff << \globalC \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >> 
+		>> 
+	}
+	\layout {
+		ragged-last = ##t
 	}
 %	\midi {	}
 }
