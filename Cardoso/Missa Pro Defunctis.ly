@@ -61,7 +61,7 @@ year = #(strftime "©%Y" (localtime (current-time)))
 		\override BarNumber #'break-visibility = #'#(#f #t #t)
 		\override BarLine #'transparent = ##t
 		\remove "Metronome_mark_engraver"
-		\override VerticalAxisGroup #'staff-staff-spacing = #'((basic-distance . 5) (stretchability . 100))
+		\override VerticalAxisGroup #'staff-staff-spacing = #'((basic-distance . 5) (stretchability . 50))
 	}
 	\context { 
 		\Staff
@@ -75,7 +75,6 @@ year = #(strftime "©%Y" (localtime (current-time)))
 		\Voice 
 		\override NoteHead #'style = #'baroque
 		\consists "Horizontal_bracket_engraver"
-		\consists "Ambitus_engraver"
 	}
 }
 
@@ -127,10 +126,6 @@ fictaParenthesized = { \once \set suggestAccidentals = ##t \override AccidentalS
 	>>
 	\layout {
 		ragged-right = ##t
-		\context { 
-			\Voice 
-			\remove "Ambitus_engraver"
-		}
 	}
 }
 
@@ -286,10 +281,6 @@ bass = \new Voice {
 	>>
 	\layout {
 		ragged-right = ##t
-		\context { 
-			\Voice 
-			\remove "Ambitus_engraver"
-		}
 	}
 }
 
@@ -464,10 +455,6 @@ kyrieChant = \new Voice {
 	}
 	\layout {
 		ragged-right = ##t
-		\context { 
-			\Voice 
-			\remove "Ambitus_engraver"
-		}
 	}
 }
 
@@ -585,10 +572,6 @@ bass = \new Voice {
 	}
 	\layout {
 		ragged-right = ##t
-		\context { 
-			\Voice 
-			\remove "Ambitus_engraver"
-		}
 	}
 }
 
@@ -596,7 +579,7 @@ sopranoA = \new Voice {
 	\relative c'' {
 		\set Score.currentBarNumber = #10
 		es1 c bes c2 des bes1 c2. c4 bes1
-		r r2 es es f d! es2. \ficta des!4 c bes c2 bes1 as g2
+		r \pageBreak r2 es es f d! es2. \ficta des!4 c bes c2 bes1 as g2
 		r as a! bes bes a! bes1 r2 c c des bes es es1
 		r es c bes2 c des1. c2 bes1 c\breve \fermata \showBarLine \bar "||"
 	}
@@ -774,15 +757,8 @@ bass = \new Voice {
 		\key f \major
 		\kyrieChant
 	>>
-	\header {
-		piece = " "
-	}
 	\layout {
 		ragged-right = ##t
-		\context { 
-			\Voice 
-			\remove "Ambitus_engraver"
-		}
 	}
 }
 
@@ -905,10 +881,6 @@ bass = \new Voice {
 	}
 	\layout {
 		ragged-right = ##t
-		\context { 
-			\Voice 
-			\remove "Ambitus_engraver"
-		}
 	}
 }
 
@@ -1260,10 +1232,6 @@ tenorA = \new Voice {
 	}
 	\layout {
 		ragged-right = ##t
-		\context { 
-			\Voice 
-			\remove "Ambitus_engraver"
-		}
 	}
 }
 
@@ -1635,10 +1603,6 @@ bass = \new Voice {
 	>>
 	\layout {
 		ragged-right = ##t
-		\context { 
-			\Voice 
-			\remove "Ambitus_engraver"
-		}
 	}
 }
 
@@ -1793,10 +1757,6 @@ bass = \new Voice {
 	>>
 	\layout {
 		ragged-right = ##t
-		\context { 
-			\Voice 
-			\remove "Ambitus_engraver"
-		}
 	}
 }
 
@@ -1915,10 +1875,6 @@ bass = \new Voice {
 	>>
 	\layout {
 		ragged-right = ##t
-		\context { 
-			\Voice 
-			\remove "Ambitus_engraver"
-		}
 	}
 }
 
@@ -2033,10 +1989,6 @@ bass = \new Voice {
 	>>
 	\layout {
 		ragged-right = ##t
-		\context { 
-			\Voice 
-			\remove "Ambitus_engraver"
-		}
 	}
 }
 
@@ -2154,10 +2106,6 @@ bass = \new Voice {
 	>>
 	\layout {
 		ragged-right = ##t
-		\context { 
-			\Voice 
-			\remove "Ambitus_engraver"
-		}
 	}
 }
 
@@ -2276,10 +2224,6 @@ bass = \new Voice {
 	>>
 	\layout {
 		ragged-right = ##t
-		\context { 
-			\Voice 
-			\remove "Ambitus_engraver"
-		}
 	}
 }
 
@@ -2376,6 +2320,225 @@ bass = \new Voice {
 		lú -- ce -- at é -- _ _ _ _ is Dó -- _ _ _ mi -- ne, __ _
 		cum sán -- ctis tú -- _ _ _ _ _ _ is in æ -- tér -- num, in æ -- tér -- _ _ _ num,
 		qui -- a pí -- _ _ _ _ us es.
+	}
+}
+
+\score {
+	\transpose c a, {
+		\new StaffGroup << 
+			\set Score.proportionalNotationDuration = #(ly:make-moment 1 8)
+			\set Score.barNumberVisibility = #all-bar-numbers-visible
+			\new Staff << \globalC \sopranoB \set Staff.instrumentName = #"S1" \set Staff.shortInstrumentName = #"S1" >> 
+			\new Staff << \globalC \sopranoA \set Staff.instrumentName = #"S2" \set Staff.shortInstrumentName = #"S2" >> 
+			\new Staff << \globalC \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >> 
+			\new Staff << \globalC \tenorA \set Staff.instrumentName = #"T1" \set Staff.shortInstrumentName = #"T1" >> 
+			\new Staff << \globalC \tenorB \set Staff.instrumentName = #"T2" \set Staff.shortInstrumentName = #"T2" >> 
+			\new Staff << \globalC \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >> 
+		>> 
+	}
+	\header {
+		piece = ##f
+	}
+	\layout { }
+%	\midi {	}
+}
+
+
+% CPDL #36844
+% Copyright ©2015 Peter Hilton - https://github.com/hilton
+
+\version "2.18.2"
+revision = "8"
+\pointAndClickOff
+
+#(set-global-staff-size 15.0)
+
+\paper {
+	#(define fonts (make-pango-font-tree "Century Schoolbook L" "Source Sans Pro" "Luxi Mono" (/ 15 20)))
+	annotate-spacing = ##f
+	two-sided = ##t
+	top-margin = 5\mm
+	bottom-margin = 5\mm
+	inner-margin = 15\mm
+	outer-margin = 15\mm
+	top-markup-spacing = #'( (basic-distance . 8) )
+	markup-system-spacing = #'( (padding . 8) )
+	system-system-spacing = #'( (basic-distance . 10) (stretchability . 100) )
+	ragged-bottom = ##f	
+	ragged-last-bottom = ##t
+} 
+
+year = #(strftime "©%Y" (localtime (current-time)))
+
+\header {
+	tagline = ##f
+}
+
+\layout {
+	indent = #0
+  	ragged-right = ##f
+  	ragged-last = ##f
+	\context {
+		\Score
+		\override BarNumber #'self-alignment-X = #CENTER
+		\override BarNumber #'break-visibility = #'#(#f #t #t)
+		\override BarLine #'transparent = ##t
+		\remove "Metronome_mark_engraver"
+		\override VerticalAxisGroup #'staff-staff-spacing = #'((basic-distance . 5) (stretchability . 100))
+	}
+	\context { 
+		\Staff
+		\remove "Time_signature_engraver"
+	}
+	\context { 
+		\StaffGroup
+		\remove "Span_bar_engraver"	
+	}
+	\context { 
+		\Voice 
+		\override NoteHead #'style = #'baroque
+		\consists "Horizontal_bracket_engraver"
+		\consists "Ambitus_engraver"
+	}
+}
+
+global = { 
+	\time 4/2
+	\tempo 2 = 44
+	\set Staff.midiInstrument = "Choir Aahs"
+	\accidentalStyle "forget"
+}
+
+globalF = {
+	\global
+	\key f \major
+}
+
+globalAs = {
+	\global
+	\key as \major
+}
+
+globalC = {
+	\global
+	\key es \major
+}
+
+
+showBarLine = { \once \override Score.BarLine #'transparent = ##f }
+ficta = { \once \set suggestAccidentals = ##t \override AccidentalSuggestion #'parenthesized = ##f }
+fictaParenthesized = { \once \set suggestAccidentals = ##t \override AccidentalSuggestion #'parenthesized = ##t }
+
+
+% COMMUNIO
+
+\score {
+	\new Staff <<
+		\set Staff.instrumentName = #"S1"
+		\key c \major
+		\new Voice {
+			\relative c'' {
+				\cadenzaOn \override Stem #'transparent = ##t
+				g4 a c s8 c4 s8 c4 s8 c4 s8 c4 s8 c4 s8 c4 s8 c4 s8 d4 d s8 c4 c-- \showBarLine \bar "|"
+				\cadenzaOff
+			}
+		}
+		\addlyrics {
+			Ré -- qui -- em æ -- tér -- nam dó -- na é -- is Dó -- _ mi -- ne.
+		}
+	>>
+	\layout {
+		ragged-right = ##t
+	}
+}
+
+sopranoA = \new Voice {
+	\relative c'' {
+		\set Score.currentBarNumber = #13
+		es2 es es es1 es2 es1 es d2 es \break |
+		c1 bes2 r r1 c es
+		d | \break es1. c1 d es2 c bes
+		c1 | \break bes g2 as bes4 c4. bes8 bes2 a8 g \ficta a4 \ficta a bes\breve | \showBarLine \bar "|."
+	}
+	\addlyrics {
+		et lux per -- pé -- tu -- a lú -- ce -- at é -- is.
+		Cum sán -- ctis tú -- is in æ -- tér -- _ _ num,
+		qui -- _ a pí -- _ _ _ _ _ us es.
+	}
+}
+
+sopranoB = \new Voice {
+	\relative c'' {
+		c2 c bes c2. c4 bes2 c c4 bes bes2 c r1 |
+		r2 f d4 bes c2 c as4 f as1 g4 c bes g
+		bes4. c8 d es f4 | bes, c bes1 f' f2 r4 bes, g c4. d8 es4 es2
+		r2 r4 es | f es2 d4 c1 es2 f4 g f2. f4 d\breve |
+	}
+	\addlyrics {
+		et lux per -- pé -- tu -- a lú -- ce -- at é -- is.
+		Cum sán -- ctis tú -- is in æ -- tér -- num,
+		cum sán -- ctis tú -- _ _ _ _ is in æ -- tér -- num, in æ -- tér -- _ _ num,
+		qui -- a pí -- us es, qui -- a pí -- _ us es.
+	}
+}
+
+alto = \new Voice {
+	\relative c' {
+		es2 es es c4. d8 es4 es es2 c4. d8 es4. f8 g as bes2 a4 bes2 g |
+		f f1 r4 f es c2 des4 c1. r1
+		f2 | es4 c es4. f8 g as bes2 a8 g a2 bes1 r4 g as as4. g16 f g4
+		as2. as4 | f g4. f8 f2 e4 f2 r4 as2 g4 as8 g f es f4 f f\breve
+	}
+	\addlyrics {
+		et lux per -- pé -- _ _ tu -- a lú -- _ _ _ _ _ _ ce -- at é -- _ is.
+		Cum sán -- ctis tú -- is, cum sán -- ctis tú -- _ _ _ _ _ _ _ is in æ -- tér -- _ _ _ num,
+		qui -- a pí -- _ _ us es, qui -- a pí -- _ _ _ _ us es.
+	}
+}
+
+tenorA = \new Voice {
+	\relative c'' {
+		\clef "treble_8"
+		g2 g2. g4 as2. as4 g2 as g2. f4 es2 f es4 bes' ~ |
+		bes a8 g \ficta a4 \ficta a bes4 f4. g8 as4. g16 f es4 f2 r4 f es c r g'4. as8 bes4. 
+		as16 g f4. g8 as4 | g es g2. g4 f2 f d g4. f8 es4 c r c es2
+		es es | r1 r2 r4 as g c,4. d8 es4 c1 bes\breve |
+	}
+	\addlyrics {
+		et lux per -- pé -- tu -- a lú -- _ ce -- at é -- is,  lú -- _ _ _ ce -- at é -- _ _ _ _ _ is.
+		Cum sán -- ctis tú -- _ _ _ _ _ _ _ is in æ -- tér -- num, in æ -- tér -- _ _ num, in æ -- tér -- num,
+		qui -- a pí -- _ _ us es.
+	}
+}
+
+tenorB = \new Voice {
+	\relative c' {
+		\clef "treble_8"
+		c2 c4 g4. as8 bes4 as4. bes8 c4 as bes2 as4. bes8 c d es2 d4 c2 bes es, |
+		f1 bes2 r1 r4 bes as f as4. bes8 c d es4. d16 c bes4
+		bes2 r | r\breve r4 f'2 d g4. f8 es d es4 as, bes2
+		as r4 c | d es4. d16 c bes4 c4. c8 f,4 f' es2 c1 f,2 f\breve |
+	}
+	\addlyrics {
+		et lux per -- _ _ pé -- _ _ tu -- a lú -- _ _ _ _ ce -- at é -- _ _ is.
+		Cum sán -- ctis tú -- _ _ _ _ _ _ _ is in æ -- tér -- _ _ _ _ _ _ num,
+		qui -- a pí -- _ _ _ _ us es, qui -- a pí -- us es.
+	}
+}
+
+bass = \new Voice {
+	\relative c {
+		\clef bass
+		c2 c es as, as' es r1 r\breve |
+		r1 r4 bes' as f as4. g8 f4 bes, f'2 r4 f es c es4. f8
+		g as bes4. as8 f4 | g as es1 f bes,4 bes'2 g4 c4. bes8 as2 es
+		as,1 | r r2 r4 f' g as4. g16 f es4 f2. f4 bes,\breve |
+	}
+	\addlyrics {
+		et lux per -- pé -- tu -- a
+		Cum sán -- ctis tú -- _ _ _ is, cum sán -- ctis tú -- _ _ _ _ _ _ is
+		in æ -- tér -- _ _ _ num, in æ -- tér -- num,
+		qui -- a pí -- _ _ _ _ _ us es.
 	}
 }
 
