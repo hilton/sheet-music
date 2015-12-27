@@ -2255,3 +2255,146 @@ bass = \new Voice {
 	}
 %	\midi {	}
 }
+
+
+% COMMUNIO
+
+\score {
+	\new Staff <<
+		\set Staff.instrumentName = #"S1"
+		\key c \major
+		\new Voice {
+			\relative c'' {
+				\cadenzaOn \override Stem #'transparent = ##t
+				a4 s8 g4 f s8 g a s8 g-- \showBarLine \bar "|"
+				\cadenzaOff
+			}
+		}
+		\addlyrics {
+			Lux æ -- _ tér -- _ na
+		}
+	>>
+	\layout {
+		ragged-right = ##t
+		\context { 
+			\Voice 
+			\remove "Ambitus_engraver"
+		}
+	}
+}
+
+sopranoA = \new Voice {
+	\relative c'' {
+		c1 es d1. es1
+		c1. ~ \break c2 bes1 a1 bes1
+		c1. es1 \break d es1.
+		c1 d es2 c bes \break c1
+		bes1 | g2 as bes4 c4. bes8 bes2 a8 g \ficta a4 \ficta a bes1 \fermata \showBarLine \bar "||"
+	}
+	\addlyrics {
+		lú -- ce -- at é -- is Dó -- mi -- ne,
+		cum sán -- ctis tú -- is in æ -- tér -- _ _ num,
+		qui -- _ a pí -- _ _ _ _ _ us es.
+	}
+}
+
+sopranoB = \new Voice {
+	\relative c'' {
+		r1 r4 c bes g bes4. c8 d es f4. es8 d4 c c2 
+		bes4 as2 g r4 c es es es2. d4 c c | c f4. es8 d c
+		bes4 es4. d8 c4. bes8 as2 as4 g c bes g bes4. c8 d es f4 bes, c bes1 
+		f' f2 r4 bes, g c4. d8 es4 es2 r r4 es
+		f4 es2 d4 | c1 es2 f4 g f2. f4 d1\fermata |
+	}
+	\addlyrics {
+		lú -- ce -- at é -- _ _ _ _ _ _ is Dó -- mi -- ne, __ _
+		lú -- ce -- at é -- is Dó -- mi -- ne, Dó -- _ _ _ _ _ _ _ _ _ mi -- ne,
+		cum sán -- ctis tú -- _ _ _ _ is in æ -- tér -- num, in æ -- tér -- _ _ num,
+		qui -- a pí -- us es, qui -- a pí -- _ us es.
+	}
+}
+
+alto = \new Voice {
+	\relative c' {
+		r2 f es4 c es4. f8 g as bes2 as8 g f4 bes, c4. d8 |
+		es8 f g4. f8 f2 e4 f2 | r4 g4. f8 es d16 c bes8 c d es f1 f2
+		g c, r4 f es c r g'4. as8 bes4 ~ bes8 as8 f4. g8 as4 g es g2. 
+		g4 f2 f d g4. f8 es4 c r c es2 es es
+		r1 | r2 r4 as g c,4. d8 es4 c1 bes1\fermata |
+	}
+	\addlyrics {
+		lú -- ce -- at é -- _ _ _ _ _ _ _ is Dó -- _ _ _ _ _ _ mi -- ne, Dó -- _ _ _ _ _ _ _ _ _ mi -- ne, __ _
+		cum sán -- ctis tú -- _ _ _ _ _ _ is in æ -- tér -- num, in æ -- tér -- _ _ num, in æ -- tér -- num,
+		qui -- a pí -- _ _ us es.
+	}
+}
+
+tenorA = \new Voice {
+	\relative c'' {
+		\clef "treble_8"
+		r\breve r |
+		r1 r2 r4 as | g es g2 g4 f2 es8 d | c4. c8 bes4 bes'4.
+		as8 g f es2 f c1 r2 r f2 es4 c es4. f8 |
+		g as bes2 a8 g a2 bes1 r4 g as as4. g16 f g4 | as2. as4
+		f4 g4. f8 f2 e4 f2 r4 as2 g4 | as8 g f es f4 f f1\fermata |
+	}
+	\addlyrics {
+		lú -- ce -- at é -- is Dó -- _ _ _ mi -- ne, Dó -- _ _ _ _ mi -- ne,
+		cum sán -- ctis tú -- _ _ _ _ _ _ _ is in æ -- tér -- _ _ _ num,
+		qui -- a pí -- _ _ us es, qui -- a pí -- _ _ _ _ us es.
+		
+	}
+}
+
+tenorB = \new Voice {
+	\relative c' {
+		\clef "treble_8"
+		r1 r2 r4 c bes g bes4. c8 d es f bes, es d c bes |
+		as4 g as4. bes8 c4. bes8 as4 f g2 r4 bes2 bes4 c c2 c4 d d
+		es2 r4 c as f as4. bes8 c d es4. d16 c bes4 bes2 r r\breve
+		r4 f'2 d g4. f8 es d es4 as, bes2 | as r4 c
+		d4 es4. d16 c bes4 | c4. c8 f,4 f' es2 c1 f,2 f1\fermata |
+	}
+	\addlyrics {
+		lú -- ce -- at é -- _ _ _ _ _ _ _ _ _ _ is Dó -- _ _ _ _ mi -- ne,
+		lú -- ce -- at é -- is Dó -- mi -- ne,
+		cum sán -- ctis tú -- _ _ _ _ _ _ _ is in æ -- tér -- _ _ _ _ _ _ num,
+		qui -- a pí -- _ _ _ _ us es, qui -- a pí -- us es.
+	}
+}
+
+bass = \new Voice {
+	\relative c {
+		\clef bass
+		r\breve r
+		r1 r2 f es4 c es4. f8 g as bes4 f2 | f bes4. as8
+		g4 es as2 f r4 f es c es4. f8 | g as bes4. as8 f4 g as es1
+		f bes,4 bes'2 g4 c4. bes8 as2 es | as,1
+		r1 | r2 r4 f' g as4. g16 f es4 f2. f4 bes,1\fermata |
+	}
+	\addlyrics {
+		lú -- ce -- at é -- _ _ _ _ is Dó -- _ _ _ mi -- ne, __ _
+		cum sán -- ctis tú -- _ _ _ _ _ _ is in æ -- tér -- num, in æ -- tér -- _ _ _ num,
+		qui -- a pí -- _ _ _ _ us es.
+	}
+}
+
+\score {
+	\transpose c a, {
+		\new StaffGroup << 
+			\set Score.proportionalNotationDuration = #(ly:make-moment 1 8)
+			\set Score.barNumberVisibility = #all-bar-numbers-visible
+			\new Staff << \globalC \sopranoB \set Staff.instrumentName = #"S1" \set Staff.shortInstrumentName = #"S1" >> 
+			\new Staff << \globalC \sopranoA \set Staff.instrumentName = #"S2" \set Staff.shortInstrumentName = #"S2" >> 
+			\new Staff << \globalC \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >> 
+			\new Staff << \globalC \tenorA \set Staff.instrumentName = #"T1" \set Staff.shortInstrumentName = #"T1" >> 
+			\new Staff << \globalC \tenorB \set Staff.instrumentName = #"T2" \set Staff.shortInstrumentName = #"T2" >> 
+			\new Staff << \globalC \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >> 
+		>> 
+	}
+	\header {
+		piece = ##f
+	}
+	\layout { }
+%	\midi {	}
+}
