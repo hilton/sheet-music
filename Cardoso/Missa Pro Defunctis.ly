@@ -1675,7 +1675,7 @@ sopranoB = \new Voice {
 		Sán -- _ ctus. __ _ Sán -- _ _ _ _ _ _ _ _ _ ctus Dó -- mi -- nus 
 		Dé -- _ _ _ _ _ _ _ _ _ _ _ us Sá -- _ _ _ _ ba -- oth.
 		Plé -- ni sunt caé -- li et tér -- _ _ _ _ _ _ _ ra gló -- ri -- a tú -- a.
-		O -- sán -- na in ex -- _ _ cél -- sis.
+		O -- sán -- na in ex -- _ cél -- _ sis.
 	}
 }
 
@@ -1859,7 +1859,7 @@ tenorB = \new Voice {
 	}
 	\addlyrics {
 		qui vé -- _ _ _ _ _ _ nit in nó -- _ _ _ _ mi -- ne Dó -- mi -- ni.
-		O -- sán -- na __ _ in ex -- cél -- sis.
+		O -- sán -- na, __ _ O -- sán -- na in ex -- cél -- sis.
 	}
 }
 
