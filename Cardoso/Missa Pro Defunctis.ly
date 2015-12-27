@@ -1525,12 +1525,12 @@ alto = \new Voice {
 	\relative c' {
 		f2 g4. g8 f2 f as g4 f8 es f2 r4 es es f4. f8 g4
 		a8 g16 \ficta a bes4. bes8 \ficta as!4 g f8 es f4. f8 es4 f ges2. f4 es2 r r4 f2
-		bes as8 g f4. es8 des4 f f2 r4 f d es bes8 c des es f es16 f ges4 f f4.
+		bes as8 g f4. es8 des4 f f2 r4 f d es bes8 c \ficta des! es f es16 f ges4 f f4.
 		\ficta g!8 as2 g4 f2 r4 es4. f16 g as2 g8 f g2 as r r4 as2 g4 f8 es des es
 		f g as2 g4 f2 es f ges4. \ficta ges8 f4 f2 es8 des es4 es f2 r4 f f g
 		
 		as4. g8 f es f2 des4 es as2 g4 f2 | r4 es des8 es f g as4 as2 g4 f2 f1 
-		r2 r4 bes g a bes g as2 | f4. g8 as2. g4 f2 f1\fermata
+		r2 r4 bes g a bes g \ficta as!2 | f4. g8 as2. g4 f2 f1\fermata
 	}
 	\addlyrics {
 		Hó -- _ sti -- as et pré -- ces __ _ _ _ tí -- bi
@@ -1547,7 +1547,7 @@ tenor = \new Voice {
 		\clef "treble_8"
 		c2 es4. es8 des4 bes8 c des es f des es4 f4. es8 es4. d16 c \ficta d4 es bes | c \ficta des!4. des8 es4
 		f ges es f4 ~ f8 es8 es2 d4 es \ficta des!2 es4. des8 des2 c8 bes c des es2 d8 c |
-		d4 es f2 r4 bes, f'4. es8 des4 des c2 r r4 f | d es bes8 c des es
+		d4 es f2 r4 bes, f'4. es8 des4 des c2 r r4 f | d es bes8 c \ficta des! es
 		f2. es4 des as4. bes8 c des es1 | r4 es4. des8 c bes c4 bes as2 bes4. c8 des es f2
 		es4 es es2 des c8 bes c4 c es2 | as,4 as as2 r r4 c | c c d es
 		
@@ -1570,11 +1570,11 @@ bass = \new Voice {
 		f2 es bes'2. bes4 as2 bes bes es, r1
 		r2 r4 f | g as4. as8 bes4 c des ges,1 as2. ces4 bes2
 		r2 r4 f bes2. as4 | bes2 f r\breve
-		r4 f d es bes8 c des es f g as2 as,4 es'2 ~ | es as,4 as'2 g4 f2 es des2.
+		r4 f d es bes8 c \ficta des! es f g as2 as,4 es'2 ~ | es as,4 as'2 g4 f2 es des2.
 		as4 es'2 bes' ges f es4 es | des4. es8 f g as2 g4 f1 r2
 		
 		r4 c' c c des bes as f bes2 bes4 bes, es8 f g as bes4 bes, f' as es2 f1
-		r4 bes g a bes8 as ges f es4 f bes, es as f bes2 as bes4 es, bes'2 bes,1\fermata
+		r4 bes g a bes8 \ficta as! ges f es4 f bes, es as f bes2 as bes4 es, bes'2 bes,1\fermata
 	}
 	\addlyrics {
 		Hó -- _ _ sti -- as et pré -- ces tí -- bi
