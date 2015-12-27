@@ -2,7 +2,7 @@
 % Copyright ©2015 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "17"
+revision = "18"
 \pointAndClickOff
 
 #(set-global-staff-size 15)
@@ -158,7 +158,7 @@ sopranoB = \new Voice {
 		d c2. bes4 a2 g1 f r r2 d'1 bes2 c d
 		d c4 bes a g a2 ~ a4 g4 f2 f e f c'1 c2 a1 r
 		r4 c c a bes2 bes a4 d d a cis2 d d c1 c2
-		bes1 a2 f f1 r R\breve r1 r2 c'2. 
+		bes1 a2 f f1 r r\breve r1 r2 c'2. 
 		bes4 a g f2 f f4 g a bes c2 bes a4 g a bes c1.
 		a2 d1 c a\breve \fermata
 	}
@@ -473,7 +473,7 @@ kyrieChant = \new Voice {
 
 sopranoA = \new Voice {
 	\relative c'' {
-		R1 R as\breve bes1
+		r1 r as\breve bes1
 		c c bes1 ~ \break bes des1 c
 		as g bes as1. g2 as\breve \fermata \showBarLine\bar "||"
 	}
@@ -611,9 +611,9 @@ sopranoA = \new Voice {
 
 sopranoB = \new Voice {
 	\relative c'' {
-		R\breve R r2 es es f d! es1
+		r\breve r r2 es es f d! es1
 		d!2 es c1 bes4 as bes2 bes c1 es c bes 
-		c des c2. c4 des2 c4 bes c1 R\breve r2 c
+		c des c2. c4 des2 c4 bes c1 r\breve r2 c
 		c des bes c as es'1 es2 f1 es1. es2 es\breve \fermata
 	}
 	\addlyrics {
@@ -645,7 +645,7 @@ alto = \new Voice {
 tenorA = \new Voice {
 	\relative c' {
 		\clef "treble_8"
-		R\breve r2 es es f d! es as, f bes1.
+		r\breve r2 es es f d! es as, f bes1.
 		bes2 c2. des4 es2 des4 c bes2 es, as1 r2 es' es f d! es
 		as,1 r r2 f' f ges es f f bes, es4 des c bes as2. g4 
 		f2 bes es, as2. bes4 c des es2 as, des1 es1. es2 as,\breve \fermata
@@ -680,7 +680,7 @@ tenorA = \new Voice {
 sopranoA = \new Voice {
 	\relative c'' {
 		\set Score.currentBarNumber = #26
-		R\breve R es1 c bes c
+		r\breve r es1 c bes c
 		des c as bes bes as1. g2 as1 \fermata \showBarLine \bar "||"
 	}
 	\addlyrics {
@@ -690,7 +690,7 @@ sopranoA = \new Voice {
 
 sopranoB = \new Voice {
 	\relative c'' {
-		es1 c bes as as2 bes r1 R\breve
+		es1 c bes as as2 bes r1 r\breve
 		r2 bes c es1 d!2 es1 des1. c2 bes1 c1 \fermata
 	}
 	\addlyrics {
@@ -701,7 +701,7 @@ sopranoB = \new Voice {
 
 alto = \new Voice {
 	\relative c' {
-		R\breve R  r2 es f as1 g2 as2. g4
+		r\breve r r2 es f as1 g2 as2. g4
 		f2 des es1 r2 f bes,1 des2. es4 f2 f1 es2 c1 \fermata
 	}
 	\addlyrics {
@@ -727,7 +727,7 @@ tenorA = \new Voice {
 tenorB = \new Voice {
 	\relative c' {
 		\clef "treble_8"
-		R\breve es1 c1. bes2 as1 bes as
+		r\breve es1 c1. bes2 as1 bes as
 		bes as\breve r2 bes1 des2. c8 bes as2 bes1 as1 \fermata
 	}
 	\addlyrics {
@@ -739,7 +739,7 @@ tenorB = \new Voice {
 bass = \new Voice {
 	\relative c {
 		\clef bass
-		R\breve r2 es f as1 g2 f2. es4 d!2 es as,1
+		r\breve r2 es f as1 g2 f2. es4 d!2 es as,1
 		r r2 as' f1 es bes2. c4 des es f2 des es as,1 \fermata
 	}
 	\addlyrics {
@@ -854,7 +854,7 @@ tenorB = \new Voice {
 bass = \new Voice {
 	\relative c {
 		\clef bass
-		R\breve r1 es2. f4 g2 as1 g2
+		r\breve r1 es2. f4 g2 as1 g2
 		f1. des2 as1 des2 bes f'2. es4 d2 es
 		bes1 f' ges2. f4 es2 f des1 es2. es4 as,\breve \fermata
 	}
@@ -914,7 +914,7 @@ bass = \new Voice {
 
 sopranoA = \new Voice {
 	\relative c'' {
-		R\breve r1 as bes2 c1 
+		r\breve r1 as bes2 c1 
 		a2 bes bes c1 \break r2 g a bes1 a2
 		
 		bes bes c1 r r2 c1 bes2 ~ \break bes as2
@@ -945,7 +945,7 @@ sopranoA = \new Voice {
 
 sopranoB = \new Voice {
 	\relative c'' {
-		R\breve r2 es c d es1.
+		r\breve r2 es c d es1.
 		c2 d4 es f2. es8 d es2 ~ es bes f'\breve
 
 		r1 r2 c1 bes2 as4 f f'2. es4 d2 c1
@@ -986,7 +986,7 @@ alto = \new Voice {
 		
 		es es d es f g
 		es d f es c es
-		bes as\breve R r1
+		bes as\breve r r1
 
 		as bes c2 es1 d4 c d2 bes c\breve
 		es1 c es f es
@@ -1004,7 +1004,7 @@ alto = \new Voice {
 tenorA = \new Voice {
 	\relative c' {
 		\clef "treble_8"
-		R\breve R es1
+		r\breve r es1
 		c2 es f2. g4 as2 g g g f1 r2 f1
 		
 		g2 as es es1 | f f r
@@ -1047,7 +1047,7 @@ tenorB = \new Voice {
 		c2 f d c d bes c1 as2 bes c4 d
 		es1 es r2 as, | bes bes c4 d es f g2 f
 		
-		f1 R\breve R r2 f1
+		f1 r\breve r r2 f1
 		es4 d c2. bes4 as bes c as bes2 c1 f,2 g a
 		f f' es d c g'2. f4 es d8 c g'2 g, g\breve \fermata
 	}
@@ -1122,7 +1122,7 @@ bass = \new Voice {
 sopranoA = \new Voice {
 	\relative c'' {
 		\set Score.currentBarNumber = #34
-		R\breve g2. g4 b2 c2.
+		r\breve g2. g4 b2 c2.
 		c4 c es2 d8 c d4 bes4 ~ | \break bes as8 g as2. g4 f f'2 es4 d4. d8
 		c2. bes4. a16 g a4 bes4. \ficta as!8 g f g4 f f'4 ~ | f \break es8 d c2 bes r c a4 b2
 		c4. f,8 c'2 b4 c1 r4 f \break d2 e f4. \ficta es!8 d c d4 c es2 d8 c
@@ -1149,7 +1149,7 @@ sopranoA = \new Voice {
 
 sopranoB = \new Voice {
 	\relative c'' {
-		R\breve R |
+		r\breve r |
 		r2 g2. g4 bes2 | c2. c4 c c b2 | c4 g bes4. as8
 		g f g4 f f'2 es4 d4. d8 c2 b | c4. d8 e4 f2 e8 d \ficta e2 | f r1
 		r4 f2 d4 e2 f4. \ficta es!8 d c c4 ~ | c b4 r c a c2 b4 | c2 c
@@ -1173,7 +1173,7 @@ sopranoB = \new Voice {
 
 alto = \new Voice {
 	\relative c' {
-		R\breve R |
+		r\breve r |
 		c2. c4 es2 f2 ~ | f4 f4 f1 f2 | g2. f2
 		es4. d8 d c16 bes | c2 bes c f | g2. as4 g1 | f2 r1
 		as2 | f g as1 | g f2 g | es4 g f1
@@ -1273,7 +1273,7 @@ sopranoA = \new Voice {
 		c2. c4 bes1 bes2 c2. bes4 bes bes c2 bes bes bes |
 		
 		des c des bes \break c bes bes as bes bes bes c |
-		des2. c8 bes as bes c4. bes8 bes4 ~ \break bes a8 g \ficta as2 r1 R\breve |
+		des2. c8 bes as bes c4. bes8 bes4 ~ \break bes a8 g \ficta as2 r1 r\breve |
 		bes2 as bes des ~ \break des c1 bes2 as c as bes |
 		
 		des2. c2 bes a4 \break bes2 es es4. des8 c4 bes8 as bes4 c des2 c r as bes2.
@@ -1339,7 +1339,7 @@ sopranoB = \new Voice {
 
 alto = \new Voice {
 	\relative c' {
-		R\breve r2 r4 f2 f4 g bes2
+		r\breve r2 r4 f2 f4 g bes2
 		a8 g \ficta a4 a bes2 r r4 bes2 \ficta as! g4 f f as4. g8 f4 es f bes4. as8 g4 |
 		
 		f4. g8 as2. f4 des ges \ficta ges f2 es8 des es2 f | r r4 f ges es r f2
@@ -1416,7 +1416,7 @@ tenorB = \new Voice {
 		f2 r4 f' f des f ges f1 r4 es2 des4 c as bes4. bes8 bes4 bes2 es4 |
 		
 		des2 as des2. des4 c f, bes2 r4 bes des c bes es, bes'2 es, as |
-		R\breve r2 r4 f' es c es f bes,2 f4 c' c d es2 |
+		r\breve r2 r4 f' es c es f bes,2 f4 c' c d es2 |
 		des4 bes c2 bes r2 r\breve r4 f'2 c4 des c bes es |
 		
 		des4. c8 bes4 as2 bes4 r f bes2 g4 es as4. bes8 c des es2 as,4 des2 r4 c as des2 c4 bes es2
@@ -1450,7 +1450,7 @@ tenorB = \new Voice {
 bass = \new Voice {
 	\relative c {
 		\clef bass
-		R\breve R |
+		r\breve r |
 		r4 f f f bes,4. c8 d4 es bes2 f'4. g8 as4 es bes'2 f bes bes, es4 es |
 		
 		bes8 c des es f g as4 des,2 ges4. f8 es4 f ges1 f2 r r4 bes2 \ficta g!4 as f |
