@@ -2,7 +2,7 @@
 % Copyright ©2015 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "18"
+revision = "19"
 \pointAndClickOff
 
 #(set-global-staff-size 15)
@@ -2398,7 +2398,6 @@ year = #(strftime "©%Y" (localtime (current-time)))
 		\Voice 
 		\override NoteHead #'style = #'baroque
 		\consists "Horizontal_bracket_engraver"
-		\consists "Ambitus_engraver"
 	}
 }
 
@@ -2538,7 +2537,7 @@ bass = \new Voice {
 		et lux per -- pé -- tu -- a
 		Cum sán -- ctis tú -- _ _ _ is, cum sán -- ctis tú -- _ _ _ _ _ _ is
 		in æ -- tér -- _ _ _ num, in æ -- tér -- num,
-		qui -- a pí -- _ _ _ _ _ us es.
+		qui -- a pí -- _ _ _ _ us es.
 	}
 }
 
@@ -2560,4 +2559,29 @@ bass = \new Voice {
 	}
 	\layout { }
 %	\midi {	}
+}
+
+\score {
+	\new Staff <<
+		\set Staff.instrumentName = #"S"
+		\key c \major
+		\new Voice {
+			\relative c'' {
+				\cadenzaOn \override Stem #'transparent = ##t
+				g4 s8 a s8 a s8 g s8 a s8 a g s8 g-- s8 \showBarLine \bar "|"
+				s8 g s8 g-- a-- s8 \showBarLine \bar "|"
+				\cadenzaOff
+			}
+		}
+		\addlyrics {
+			Re -- qui -- és -- cant in pá -- _ ce. A -- men. _
+		}
+	>>
+	\layout {
+		ragged-right = ##t
+		\context { 
+			\Voice 
+			\remove "Ambitus_engraver"
+		}
+	}
 }
