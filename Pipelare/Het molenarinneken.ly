@@ -1,7 +1,8 @@
-% Copyright ©2015 Peter Hilton - https://github.com/hilton
+% CPDL #38059
+% Copyright ©2016 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "2"
+revision = "3"
 \pointAndClickOff
 
 #(set-global-staff-size 16.0)
@@ -11,6 +12,7 @@ revision = "2"
 	annotate-spacing = ##f
 	two-sided = ##t
 	top-margin = 10\mm
+	bottom-margin = 10\mm
 	inner-margin = 15\mm
 	outer-margin = 15\mm
 	top-markup-spacing = #'( (basic-distance . 4) )
@@ -36,12 +38,19 @@ year = #(strftime "©%Y" (localtime (current-time)))
 			\line {
 				Copyright \year \with-url #"http://hilton.org.uk" "Peter Hilton" -
 				\with-url #"http://creativecommons.org/licenses/by-nc-sa/3.0/" "CC BY-NC-SA 3.0" -
-				Lilypond source at \with-url #"https://github.com/hilton/sheet-music" https://github.com/hilton/sheet-music - 
-				revision \revision 
+				Lilypond source \with-url #"https://github.com/hilton/sheet-music" https://github.com/hilton/sheet-music - 
+				Translation Mick Swithinbank -
+				rev \revision 
 			}
 		}
 	}
-	tagline = ##f
+	tagline = \markup { 
+		\vspace #2
+		\column {
+			\line { I know a miller’s daughter, charming as can be: in all these parts there is none more beautiful. }
+			\line { Mighty God, if she would grind me, I would bring her fine grain, if only she would be my miller. }
+		}
+	}
 }
 
 \layout {
@@ -86,19 +95,19 @@ fictaParenthesized = { \once \set suggestAccidentals = ##t \override AccidentalS
 
 superius = \new Voice	{
 	\relative c'' {
-		R\breve R R a1 bes1.
+		r\breve r r a1 bes1.
 		bes2 a1 g\breve c1 bes a2 g2. f4 es d
 		es2 d1 c2 d1 r2 a' bes a bes g f1 d1.
 
-		c2 d1 R\breve R r2 a' bes2. a4
+		c2 d1 r\breve r r2 a' bes2. a4
 		bes2 g f1 d g f2. es4 d2 c4 bes
 		c1 r2 bes d2. es4 f2 g4 es f2. es4 d1 r r2 f
-		f2. g4 a2 bes1 a4 g f2 g1 f2 g1 R\breve
+		f2. g4 a2 bes1 a4 g f2 g1 f2 g1 r\breve
 
-		R R R r1 g
+		r r r r1 g
 		f2 f g a2. bes4 c a bes1 a g2 c2. bes4 a1 g2
 		a2. g4 f e d2 r c d2. e4 f2 g g f g\breve
-		R R R R
+		r r r r
 
 		r1 g f2 f g a2. bes4 c a bes1 a g2 c2.
 		bes4 a1 g2 a2. g4 f e d2 r c d2. e4 f2 g4 g g2 fis g\breve \showBarLine \bar "|."
@@ -125,8 +134,8 @@ counterTenor = \new Voice {
 		c a2. g4 a2 f d r d' d c d bes a1 r
 
 		r1 r2 a2 bes d2. c4 bes2 a d d bes1 c2 d2. c4
-		bes1 a R\breve d,1 g
-		f g R\breve r2 bes bes2. c4 d2 es d\breve
+		bes1 a r\breve d,1 g
+		f g r\breve r2 bes bes2. c4 d2 es d\breve
 		c2 bes f'2. es4 d2 c d1 bes r c
 		
 		bes2 bes c d2. es4 f d es1 d2 f es f2. es4 d1 c2
@@ -157,12 +166,12 @@ counterTenor = \new Voice {
 tenor = \new Voice {
 	\relative c' {
 		\clef "treble_8"
-		R\breve R R R
+		r\breve r r r
 		r1 a1 bes1. bes2 a1 g c bes2 g1
-		f2 e1 d\breve R r2 a' bes a
+		f2 e1 d\breve r r2 a' bes a
 
 		bes g f1 d g f d2 es1 c bes2. 
-		c4 d es f1 R\breve R
+		c4 d es f1 r\breve r
 		r1 r2 bes bes2. c4 d2 es d1 g,2. a4 bes2 c bes1
 		r2 bes a f bes1 a2 g a1 g2 bes2. a4 g1 fis2
 
@@ -192,28 +201,28 @@ tenor = \new Voice {
 bass = \new Voice {
 	\relative c {
 		\clef bass
-		R\breve r1 a bes1. bes2 a1 g2. a4
+		r\breve r1 a bes1. bes2 a1 g2. a4
 		bes g g'1 f2 g\breve r1 r2 g f es2. d4 es2
-		c d a1 a'2. g4 f e d2 R\breve r2 d g f
+		c d a1 a'2. g4 f e d2 r\breve r2 d g f
 
-		g es d2. c4 bes2. a4 g1 R\breve r1 r2 g2. 
-		a4 bes c d2. es4 f2 g2. a4 bes c a d2 c4 bes1 |
-		a2 a bes2. a4 g2 f4 es d2 c bes1 r R\breve |
+		g es d2. c4 bes2. a4 g1 r\breve r1 r2 g2. 
+		a4 bes c d2. es4 f2 g2. a4 bes c a d2 c4 bes2 bes |
+		a2 a bes2. a4 g2 f4 es d2 c bes1 r r\breve |
 		r1 r2 bes bes2. c4 d2 es d1 g,2. a4 bes2 c a1 |
 
 		g r r c bes2 bes c d2. es4 f d es1 |
-		d r R\breve r2 d e f2. g4 a f g1 |
+		d r r\breve r2 d e f2. g4 a f g1 |
 		d d2. c4 bes2 a g g' f e d1 r2 g, g2. a4 |
 		bes2 c a1 g r r a bes2 bes c d2. 
 		
-		es4 f d es1 d r R\breve r2 d e f2. 
+		es4 f d es1 d r r\breve r2 d e f2. 
 		g4 a f g1 d d2. c4 bes2 a g g' f es d1 g,\breve
 	}
 	\addlyrics {
 		Ick weedt een mo -- le -- na -- rin -- _ _ ne -- ken
 		Van her -- _ _ ten al -- _ so fijn. __ _ _ _ _
 		In al -- le de -- ze lan -- _ _ _ den
-		En __ _ _ _ mach __ _ _ gheen __ _ _ _ _ schoon -- der zijn, __ _
+		En __ _ _ _ mach __ _ _ _ _ _ _ _ _ gheen schoon -- der zijn,
 		En mach __ _ _ gheen __ _ schoon -- der zijn:
 		Rijk God __ _ _ _ mocht zij __ _ _ mij ma -- len,
 		Goed co -- ren soud ick __ _ haer __ _ ha -- len,
@@ -227,7 +236,7 @@ bass = \new Voice {
 \score {
 	\transpose c d {
 		\new StaffGroup << 
-			\set Score.proportionalNotationDuration = #(ly:make-moment 1 4)
+			\set Score.proportionalNotationDuration = #(ly:make-moment 1 6)
 			\set Score.barNumberVisibility = #all-bar-numbers-visible
 			\new Staff << \global \superius \set Staff.instrumentName = #"S" \set Staff.shortInstrumentName = #"S" >> 
 			\new Staff << \global \counterTenor \set Staff.instrumentName = #"CT" \set Staff.shortInstrumentName = #"CT" >> 
@@ -235,10 +244,6 @@ bass = \new Voice {
 			\new Staff << \global \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >> 
 		>> 
 	}
-	\header {
-		piece = ""
-	}
 	\layout { }
 	\midi {	}
 }
-
