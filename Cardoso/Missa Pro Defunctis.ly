@@ -1,5 +1,5 @@
 % CPDL #36844
-% Copyright ©2015 Peter Hilton - https://github.com/hilton
+% Copyright ©2016 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
 revision = "19"
