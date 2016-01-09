@@ -1,9 +1,9 @@
 % Copyright ©2016 Peter Hilton - https://github.com/hilton
 
-\version "2.18.2"
-revision = "20"
-\pointAndClickOff
+revision = "21"
 
+\version "2.18.2"
+\pointAndClickOff
 #(set-global-staff-size 15)
 
 \paper {
@@ -16,7 +16,7 @@ revision = "20"
 	outer-margin = 15\mm
 	top-markup-spacing = #'( (basic-distance . 8) )
 	markup-system-spacing = #'( (padding . 4) )
-	system-system-spacing = #'( (basic-distance . 20) (stretchability . 100) )
+	system-system-spacing = #'( (basic-distance . 15) (stretchability . 100) )
 	ragged-bottom = ##f	
 	ragged-last-bottom = ##t
 } 
@@ -83,6 +83,7 @@ year = #(strftime "©%Y" (localtime (current-time)))
 }
 
 global = { 
+	\set Score.barNumberVisibility = #(every-nth-bar-number-visible 2)
 	\time 2/2
 	\tempo 2 = 44
 	\set Staff.midiInstrument = "Choir Aahs"
@@ -138,7 +139,7 @@ sopranoA = \new Voice {
 		g a bes a g f \break f g a g 
 		f a a g \break f a g a g f 
 		a g \break a c a g a bes a g \break
-		f g \time 3/2 a g\breve f\breve \fermata \time 2/2 \showBarLine \bar "|." 
+		f g a g\breve f\breve \showBarLine \bar "|." 
 		\once \override Score.RehearsalMark.break-visibility = #end-of-line-visible
 		\once \override Score.RehearsalMark.self-alignment-X = #RIGHT
 		\break
@@ -158,7 +159,7 @@ sopranoB = \new Voice {
 		r4 c c a bes2 bes a4 d d a cis2 d d c1 c2
 		bes1 a2 f f1 R R1 R1 R1 r2 c'2. 
 		bes4 a g f2 f f4 g a bes c2 bes a4 g a bes c1.
-		a2 d1 c a\breve \fermata
+		a2 d1 c a\breve
 	}
 	\addlyrics {
 		Do -- _ _ _ na e -- _ _ _ _ _ _ _ _ 
@@ -178,7 +179,7 @@ altoA = \new Voice {
 		c c c2. c4 f,2 f' f4 e2 d2 c8 bes a4 f g g' g d4 ~ d
 		f2 d4 e2 d R1 r4 c c a bes2 d d1 c1. d2
 		d1 e2 f c f1 e2 f f2. e4 d1 c2. g4 bes2
-		f1 r2 c'1 c2 bes1 g2 c c\breve \fermata
+		f1 r2 c'1 c2 bes1 g2 c c\breve
 	}
 	\addlyrics {
 		Do -- _ _ _ _ _ _ na e -- is Dó -- mi -- ne,
@@ -197,7 +198,8 @@ altoB = \new Voice {
 		c r2 c1 f e2 f1 r2 r4 f f e e d d2 g,
 		a1 r2 f' f e f f d1 r2 a2. bes4 c d e f g2 ~ g 
 		fis2 g2 c, f2. e4 d2 c4 bes a2 c d1 r2 f e d
-		d4 e f d e f g2. f4 f1 e4 d e1 f\breve \fermata	}
+		d4 e f d e f g2. f4 f1 e4 d e1 f\breve
+	}
 	\addlyrics {
 		Do -- na __ _ e -- is Dó -- _ 
 		mi -- ne, do -- _ _ _ _ na e -- _ _ _ _ 
@@ -215,7 +217,8 @@ tenor = \new Voice {
 		c2 c'1 a2 c1 a g a2 f g1 r2 f2 ~ f4
 		g4 a2 g1 f g r2 d' d4 a c d a1 R
 		r2 r4 a a e f2 g2. g4 f1 r2 d2. e4 f2. g4 a bes c2 bes
-		a d c4 bes a g f1 g f f f g a2 d, g e f1 g g2 c, f\breve \fermata	}
+		a d c4 bes a g f1 g f f f g a2 d, g e f1 g g2 c, f\breve
+	}
 	\addlyrics {
 		Do -- _ _ _ na e -- is Dó -- _ _ _ _ mi -- 
 		ne, do -- na e -- is __ _ Dó -- mi -- ne, Dó -- 
@@ -234,7 +237,8 @@ bass = \new Voice {
 		f1 c f, c' d r2 r4 d d a c d g,1
 		d' a2 d b c f, f g4 a bes! c d2. e4 f2 f c g
 		d'1 r2 f2. e4 d c b2 c f,1 bes!2. c4 d e f2 c g
-		d'1 c2. bes4 a2 f bes1 c f,\breve \fermata	}
+		d'1 c2. bes4 a2 f bes1 c f,\breve
+	}
 	\addlyrics {
 		Do -- _ _ na e -- _ _ _ is Dó -- 
 		mi -- ne, do -- na e -- _ is, do -- _ _ _ _ _ _ na __ _ 
@@ -249,7 +253,6 @@ bass = \new Voice {
 	\transpose c d {
 		\new StaffGroup << 
 			\set Score.proportionalNotationDuration = #(ly:make-moment 1 4)
-			\set Score.barNumberVisibility = #all-bar-numbers-visible
 			\new Staff << \globalF \sopranoB \set Staff.instrumentName = #"S1" \set Staff.shortInstrumentName = #"S1" >> 
 			\new Staff << \globalF \sopranoA \set Staff.instrumentName = #"S2" \set Staff.shortInstrumentName = #"S2" >> 
 			\new Staff << \globalF \altoA \set Staff.instrumentName = #"A1" \set Staff.shortInstrumentName = #"A1" >> 
@@ -293,7 +296,7 @@ sopranoA = \new Voice {
 		a a \break a a2 a a1 a a g \break \time 3/2 bes a1. 
 		g2 \time 2/2 a\longa \showBarLine \bar "||" R1 R1 \break R1 f g a
 		a2 a a a a a a1 a2 a a a
-		f g a1 g2 f1 e2 f\breve \fermata \showBarLine \bar "|."
+		f g a1 g2 f1 e2 f\breve \showBarLine \bar "|."
 		\once \override Score.RehearsalMark.break-visibility = #end-of-line-visible
 		\once \override Score.RehearsalMark.self-alignment-X = #RIGHT
 	}
@@ -331,7 +334,7 @@ altoA = \new Voice {
 		f2 e g g d2. e4 f2 d1 f2 f e1 ~ e\breve
 		d2 f1 e4 d e2 f2. e4 d c bes2 g r d' d d e f
 		e a, a f' e d e a,
-		r bes c f e c2. bes8 a g2 a\breve \fermata
+		r bes c f e c2. bes8 a g2 a\breve
 	}
 	\addlyrics {
 		Et tí -- _ 
@@ -350,7 +353,7 @@ altoB = \new Voice {
 		f c1 d2 bes1 r2 d bes d1 a2 a1 ~ a\breve
 		a1 d cis2 d d d d1 f1. f2 e d
 		e1 d2 a2 ~ a a2 a a
-		d, g c\breve c1 c\breve \fermata
+		d, g c\breve c1 c\breve
 	}
 	\addlyrics {
 		Et tí -- _ bi red -- dé -- _ _ _ tur vo -- tum in 
@@ -368,7 +371,7 @@ tenor = \new Voice {
 		a a f d d a'2. g4 f e f g a bes c2 d a a1 a2
 		a f g4 a bes c d1 r2 d,1 g2 f d e1 ~ e\breve
 		R1 d a' f2 a g bes a a f d a'\breve r2 d cis d1 cis2
-		d bes a f g a4 f g2. g4 f\breve \fermata
+		d bes a f g a4 f g2. g4 f\breve
 	}
 	\addlyrics {
 		Et tí -- _ 
@@ -387,7 +390,7 @@ bass = \new Voice {
 		a1 d2 f2. e4 d2 cis d d c!4 bes a2 d d1 a
 		f c'2 g2 ~ g4 a4 bes c d1 g, d' a ~ a\breve
 		d1 bes a2 d d d g, g' f4 e d c d1 a\breve 
-		d1 a a2 a bes g f1 c'2 f, c'2. c4 f,\breve \fermata
+		d1 a a2 a bes g f1 c'2 f, c'2. c4 f,\breve
 		\noPageBreak
 	}
 	\addlyrics {
@@ -402,7 +405,6 @@ bass = \new Voice {
 	\transpose c d {
 		\new StaffGroup << 
 			\set Score.proportionalNotationDuration = #(ly:make-moment 1 4)
-			\set Score.barNumberVisibility = #all-bar-numbers-visible
 			\new Staff << \globalF \sopranoB \set Staff.instrumentName = #"S1" \set Staff.shortInstrumentName = #"S1" >> 
 			\new Staff << \globalF \sopranoA \set Staff.instrumentName = #"S2" \set Staff.shortInstrumentName = #"S2" >> 
 			\new Staff << \globalF \altoA \set Staff.instrumentName = #"A1" \set Staff.shortInstrumentName = #"A1" >> 
@@ -462,7 +464,7 @@ sopranoA = \new Voice {
 	\relative c'' {
 		R1 R as\breve bes1
 		c c bes1 ~ \break bes des1 c
-		as g bes as1. g2 as\breve \fermata \showBarLine\bar "||"
+		as g bes as1. g2 as\breve \showBarLine\bar "||"
 	}
 	\addlyrics {
 		Ký -- _ ri -- e e -- _ _ _ _ _ lé -- i -- son.
@@ -473,7 +475,7 @@ sopranoB = \new Voice {
 	\relative c'' {
 		as1 bes c1. d!2 es es2.
 		des4 c2. bes4 as1 g2 f des'2. c8 bes as2. bes4 c1 
-		d!2 es bes2. c4 des es f2 es1 es2 es\breve \fermata
+		d!2 es bes2. c4 des es f2 es1 es2 es\breve
 	}
 	\addlyrics {
 		Ký -- _ ri -- e e -- lé -- _ _ _ _ i -- son,
@@ -485,7 +487,7 @@ altoA = \new Voice {
 	\relative c'' {
 		r2 as1 g2 as es f as1 g2
 		as2. g8 f es2 f1 bes,2 bes bes'2. as8 g f4 g as1.
-		as,2 es'1 f2 des1 c2 bes es c\breve \fermata
+		as,2 es'1 f2 des1 c2 bes es c\breve
 	}
 	\addlyrics {
 			Ký -- ri -- e __ _ e -- lé -- i -- son, __ _ _ _
@@ -498,7 +500,7 @@ altoB = \new Voice {
 	\relative c' {
 		es1 es2. des4 c bes as1 as2 es'1
 		es as2. g4 f2 es des1. des2 as\breve
-		r2 es' des f2. des4 es2 es1 es\breve \fermata
+		r2 es' des f2. des4 es2 es1 es\breve
 	}
 	\addlyrics {
 		Ký -- ri -- _ _ _ _ e e -- lé -- _ _ _ _ _ i -- son,
@@ -511,7 +513,7 @@ tenor = \new Voice {
 		\clef "treble_8"
 		c1 bes2 es2. des4 c bes as2 f bes1
 		as as bes2. c4 des es f2 des f1 es4 des
-		es2 f bes,1. bes2 f as bes1 as\breve \fermata
+		es2 f bes,1. bes2 f as bes1 as\breve
 	}
 	\addlyrics {
 		Ký -- ri -- e __ _ _ _ _ e -- lé -- i -- son,
@@ -524,7 +526,7 @@ bass = \new Voice {
 		\clef bass
 		as1 es as2. g4 f1 es
 		as,2 as'2. g4 f es d!2 es bes bes2. c4 des es f g as2.
-		g4 f2 es1 bes2. c4 des2 as es' es as,\breve \fermata
+		g4 f2 es1 bes2. c4 des2 as es' es as,\breve
 	}
 	\addlyrics {
 		Ký -- ri -- e __ _ e -- _ _ lé -- _ _ _ _ i -- son,
@@ -536,7 +538,6 @@ bass = \new Voice {
 	\transpose c b, {
 		\new StaffGroup << 
 			\set Score.proportionalNotationDuration = #(ly:make-moment 1 4)
-			\set Score.barNumberVisibility = #all-bar-numbers-visible
 			\new Staff << \globalAs \sopranoB \set Staff.instrumentName = #"S1" \set Staff.shortInstrumentName = #"S1" >> 
 			\new Staff << \globalAs \sopranoA \set Staff.instrumentName = #"S2" \set Staff.shortInstrumentName = #"S2" >> 
 			\new Staff << \globalAs \altoA \set Staff.instrumentName = #"A1" \set Staff.shortInstrumentName = #"A1" >> 
@@ -577,7 +578,7 @@ sopranoA = \new Voice {
 		es1 c bes c2 des bes1 c2. c4 bes1
 		r \pageBreak r2 es es f d! es2. \ficta des!4 c bes c2 bes1 as g2
 		r as a! bes bes a! bes1 r2 c c des bes es es1
-		r es c bes2 c des1. c2 bes1 c\breve \fermata \showBarLine \bar "||"
+		r es c bes2 c des1. c2 bes1 c\breve \showBarLine \bar "||"
 	}
 	\addlyrics {
 		Chrí -- ste e -- lé -- _ _ _ i -- son,
@@ -593,7 +594,7 @@ sopranoB = \new Voice {
 		R1 R R R r2 es es f d! es1
 		d!2 es c1 bes4 as bes2 bes c1 es c bes 
 		c des c2. c4 des2 c4 bes c1 R1 R1 r2 c
-		c des bes c as es'1 es2 f1 es1. es2 es\breve \fermata
+		c des bes c as es'1 es2 f1 es1. es2 es\breve
 	}
 	\addlyrics {
 		Chrí -- ste e -- lé -- _ i -- son,
@@ -609,7 +610,7 @@ alto = \new Voice {
 		r2 es es f d! es as, as'1 g2 as as1 g2
 		f bes ~ bes as2 g as1 g2 as1. g4 f g2 f r es
 		es f ~ f des2 es f bes, bes'1 as4 g as2 f g1 r2 as
-		a! bes g as2. g8 f es4 f g2 as1 bes2. as4 as1 g2 as\breve \fermata
+		a! bes g as2. g8 f es4 f g2 as1 bes2. as4 as1 g2 as\breve
 	}
 	\addlyrics {
 		Chrí -- ste e -- lé -- i -- son,
@@ -627,7 +628,7 @@ tenor = \new Voice {
 		R1 R r2 es es f d! es as, f bes1.
 		bes2 c2. des4 es2 des4 c bes2 es, as1 r2 es' es f d! es
 		as,1 R r2 f' f ges es f f bes, es4 des c bes as2. g4 
-		f2 bes es, as2. bes4 c des es2 as, des1 es1. es2 as,\breve \fermata
+		f2 bes es, as2. bes4 c des es2 as, des1 es1. es2 as,\breve
 	}
 	\addlyrics {
 		Chrí -- ste e -- lé -- i -- son,
@@ -643,7 +644,6 @@ tenor = \new Voice {
 	\transpose c b, {
 		\new StaffGroup << 
 			\set Score.proportionalNotationDuration = #(ly:make-moment 1 4)
-			\set Score.barNumberVisibility = #all-bar-numbers-visible
 			\new Staff << \global \sopranoA \set Staff.instrumentName = #"S1" \set Staff.shortInstrumentName = #"S1" >> 
 			\new Staff << \global \sopranoB \set Staff.instrumentName = #"S2" \set Staff.shortInstrumentName = #"S2" >> 
 			\new Staff << \global \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >> 
@@ -660,7 +660,7 @@ sopranoA = \new Voice {
 	\relative c'' {
 		\set Score.currentBarNumber = #26
 		R1 R R R es1 c bes c
-		des c as bes bes as1. g2 as1 \fermata \showBarLine \bar "||"
+		des c as bes bes as1. g2 as\breve \showBarLine \bar "||"
 	}
 	\addlyrics {
 		Chrí -- ste __ _ _ _ _ _ _ e -- lé -- i -- son.
@@ -670,7 +670,7 @@ sopranoA = \new Voice {
 sopranoB = \new Voice {
 	\relative c'' {
 		es1 c bes as as2 bes R1 R1 R1
-		r2 bes c es1 d!2 es1 des1. c2 bes1 c1 \fermata
+		r2 bes c es1 d!2 es1 des1. c2 bes1 c\breve
 	}
 	\addlyrics {
 		Chrí -- ste e -- lé -- i -- son,
@@ -681,7 +681,7 @@ sopranoB = \new Voice {
 altoA = \new Voice {
 	\relative c' {
 		R1 R R R r2 es f as1 g2 as2. g4
-		f2 des es1 r2 f bes,1 des2. es4 f2 f1 es2 c1 \fermata
+		f2 des es1 r2 f bes,1 des2. es4 f2 f1 es2 c\breve
 	}
 	\addlyrics {
 		Chrí -- ste e -- _ _ _ lé -- i -- son,
@@ -692,7 +692,7 @@ altoA = \new Voice {
 altoB = \new Voice {
 	\relative c' {
 		es1 f2 as1 g2 f es4 des es1 r2 f1 es2 es as ~
-		as g2 as es f as1 g2 f f1 c2 des bes es1 \fermata
+		as g2 as es f as1 g2 f f1 c2 des bes es\breve
 	}
 	\addlyrics {
 		Chrí -- ste e -- lé -- i -- son, __ _ _
@@ -706,7 +706,7 @@ tenor = \new Voice {
 	\relative c' {
 		\clef "treble_8"
 		R1 R1 es1 c1. bes2 as1 bes as
-		bes as\breve r2 bes1 des2. c8 bes as2 bes1 as1 \fermata
+		bes as\breve r2 bes1 des2. c8 bes as2 bes1 as\breve
 	}
 	\addlyrics {
 		Chrí -- ste __ _ e -- _ lé -- i -- son,
@@ -718,7 +718,7 @@ bass = \new Voice {
 	\relative c {
 		\clef bass
 		R1 R1 r2 es f as1 g2 f2. es4 d!2 es as,1
-		r r2 as' f1 es bes2. c4 des es f2 des es as,1 \fermata
+		r r2 as' f1 es bes2. c4 des es f2 des es as,\breve
 	}
 	\addlyrics {
 		Chrí -- ste e -- _ lé -- _ _ i -- son,
@@ -730,7 +730,6 @@ bass = \new Voice {
 	\transpose c b, {
 		\new StaffGroup << 
 			\set Score.proportionalNotationDuration = #(ly:make-moment 1 4)
-			\set Score.barNumberVisibility = #all-bar-numbers-visible
 			\new Staff << \global \sopranoA \set Staff.instrumentName = #"S1" \set Staff.shortInstrumentName = #"S1" >> 
 			\new Staff << \global \sopranoB \set Staff.instrumentName = #"S2" \set Staff.shortInstrumentName = #"S2" >> 
 			\new Staff << \global \altoA \set Staff.instrumentName = #"A1" \set Staff.shortInstrumentName = #"A1" >> 
@@ -762,7 +761,7 @@ sopranoA = \new Voice {
 		\set Score.currentBarNumber = #34
 		es1. as,2 as1 es' ~ es\breve
 		f\breve es1 des c bes\breve
-		as1 bes c bes2 as1 g2 as\breve \fermata \showBarLine \bar "|."
+		as1 bes c bes2 as1 g2 as\breve \showBarLine \bar "|."
 	}
 	\addlyrics {
 		Ký -- ri -- e e -- _ _ _ _ _ _ _ _ _ lé -- i -- son.
@@ -773,7 +772,7 @@ sopranoB = \new Voice {
 	\relative c'' {
 		R1 R R R R R 
 		as2. bes4 c2 des1 c2. bes4 bes2 ~ \break bes as1 g2
-		f f'1 f2 des1 es2 c des1 bes c\breve \fermata
+		f f'1 f2 des1 es2 c des1 bes c\breve
 	}
 	\addlyrics {
 		Ký -- _ _ ri -- e __ _ e -- lé -- i -- son,
@@ -785,7 +784,7 @@ altoA = \new Voice {
 	\relative c' {
 		R1 R1 R1 r2 es2. des4 c bes c des es2
 		es des c as'2. g8 f es2 f1 r2 f1 es2
-		des bes c f bes, bes'1 as2. g4 f2 es1 c\breve \fermata
+		des bes c f bes, bes'1 as2. g4 f2 es1 c\breve
 	}
 	\addlyrics {
 		Ký -- _ _ _ _ _ _ ri -- e e -- lé -- _ _ i -- son,
@@ -798,7 +797,7 @@ altoB = \new Voice {
 	\relative c'' {
 		r2 as2. g4 f es f g as1 g4 f es1 as,2 bes 
 		c as'1 f2 as1 r2 f2 ~ f4 g4 as2 f bes1
-		f2 f1 r2 des ges! f f1 bes,2 es es\breve \fermata
+		f2 f1 r2 des ges! f f1 bes,2 es es\breve
 	}
 	\addlyrics {
 		Ký -- _ _ _ _ _ _ _ _ _ ri -- e e -- lé -- i -- son,
@@ -812,7 +811,7 @@ tenor = \new Voice {
 		\clef "treble_8"
 		as2. bes4 c2 des1 c2 bes1 bes2 as es'2. es4
 		as,\breve r2 as1 bes2 c as bes bes2. 
-		c4 des2 c des2. c4 bes as ges2 as bes1. bes2 as\breve \fermata
+		c4 des2 c des2. c4 bes as ges2 as bes1. bes2 as\breve
 	}
 	\addlyrics {
 		Ký -- _ _ ri -- e e -- lé -- _ _ i -- son,
@@ -826,7 +825,7 @@ bass = \new Voice {
 		\clef bass
 		R1 R1 R1 es2. f4 g2 as1 g2
 		f1. des2 as1 des2 bes f'2. es4 d2 es
-		bes1 f' ges2. f4 es2 f des1 es2. es4 as,\breve \fermata
+		bes1 f' ges2. f4 es2 f des1 es2. es4 as,\breve
 	}
 	\addlyrics {
 		Ký -- _ _ ri -- e e -- lé -- i -- son,
@@ -838,7 +837,6 @@ bass = \new Voice {
 	\transpose c b, {
 		\new StaffGroup << 
 			\set Score.proportionalNotationDuration = #(ly:make-moment 1 4)
-			\set Score.barNumberVisibility = #all-bar-numbers-visible
 			\new Staff << \global \sopranoA \set Staff.instrumentName = #"S1" \set Staff.shortInstrumentName = #"S1" >> 
 			\new Staff << \global \sopranoB \set Staff.instrumentName = #"S2" \set Staff.shortInstrumentName = #"S2" >> 
 			\new Staff << \global \altoA \set Staff.instrumentName = #"A1" \set Staff.shortInstrumentName = #"A1" >> 
@@ -893,7 +891,7 @@ sopranoA = \new Voice {
 		
 		as4 f c'2 ~ \break c4 bes4 bes1 a2 | bes\breve R1
 		r2 es2. d4 c2. bes4 as2 \break g g as2. bes4 | c1
-		c r2 d es c b c1 b2 c\breve \fermata \showBarLine \bar "|."
+		c r2 d es c b c1 b2 c\breve \showBarLine \bar "|."
 	}
 	\addlyrics {
 		Dó -- na é -- is Dó -- mi -- ne,
@@ -924,7 +922,7 @@ sopranoB = \new Voice {
 		
 		c2. d4 es2 bes es1 r2 f2. es4 d2 c c
 		c1 c R r2 c2. bes4 as2 g es 
-		as4 bes c2. b8 \ficta a \ficta b2 c c d es d1 e\breve \fermata
+		as4 bes c2. b8 \ficta a \ficta b2 c c d es d1 e\breve
 	}
 	\addlyrics {
 		Dó -- na __ _ é -- is Dó -- _ _ _ _ _ mi -- ne,
@@ -956,7 +954,7 @@ altoA = \new Voice {
 
 		as bes c2 es1 d4 c d2 bes c\breve
 		es1 c es f es
-		f g es d2 c d1 c\breve \fermata
+		f g es d2 c d1 c\breve
 	}
 	\addlyrics {
 		Dó -- _ _ _ _ _ _ _ _ _ _ _ _ _ na é -- _ is Dó -- mi -- ne, __ _
@@ -982,7 +980,7 @@ altoB = \new Voice {
 		
 		r2 as g f es c f1 r2 bes1 as2
 		g2. f4 | g2 as es f g4 f es d c1 c\breve
-		r2 g'2. f4 es2 g g g1 g\breve \fermata
+		r2 g'2. f4 es2 g g g1 g\breve
 	}
 	\addlyrics {
 		Dó -- na __ _ é -- _ _ is Dó -- mi -- ne,
@@ -1014,7 +1012,7 @@ tenor = \new Voice {
 		
 		f1 R1 R1 R r2 f1
 		es4 d c2. bes4 as bes c as bes2 c1 f,2 g a
-		f f' es d c g'2. f4 es d8 c g'2 g, g\breve \fermata
+		f f' es d c g'2. f4 es d8 c g'2 g, g\breve
 	}
 	\addlyrics {
 		Dó -- na __ _ _ _ é -- is Dó -- mi -- ne,
@@ -1046,7 +1044,7 @@ bass = \new Voice {
 		
 		f' f es d c1 | bes\breve f'1
 		r2 c'2. bes4 as2. g4 f2 es c f1 c2 c'2.
-		bes4 as2 | g1 c, g'\breve c,\breve \fermata
+		bes4 as2 | g1 c, g'\breve c,\breve
 	}
 	\addlyrics {
 		Dó -- na é -- _ _ _ is Dó -- mi -- ne,
@@ -1069,7 +1067,6 @@ bass = \new Voice {
 	\transpose c b, {
 		\new StaffGroup << 
 			\set Score.proportionalNotationDuration = #(ly:make-moment 1 4)
-			\set Score.barNumberVisibility = #all-bar-numbers-visible
 			\new Staff << \globalC \sopranoA \set Staff.instrumentName = #"S1" \set Staff.shortInstrumentName = #"S1" >> 
 			\new Staff << \globalC \sopranoB \set Staff.instrumentName = #"S2" \set Staff.shortInstrumentName = #"S2" >> 
 			\new Staff << \globalC \altoA \set Staff.instrumentName = #"A1" \set Staff.shortInstrumentName = #"A1" >> 
@@ -1094,7 +1091,7 @@ sopranoA = \new Voice {
 		
 		d2 c b4 c4. b16 \ficta a \ficta b4 c2 es2 ~ | es4 \break d4 c bes as g c bes
 		bes2 as4 des c2 r4 f4. es8 d4 c1 f,4. g8 | \break as bes c2 \ficta b4 c es4. d8 c4
-		bes1 r4 c2 bes4 a bes2 a4 bes f'4. es8 d4 | \break \time 3/2 c d4. c8 c2 b4 \time 2/2 c\breve \fermata \showBarLine \bar "|."
+		bes1 r4 c2 bes4 a bes2 a4 bes f'4. es8 d4 | \break \time 3/2 c d4. c8 c2 b4 \time 2/2 c\breve \showBarLine \bar "|."
 	}
 	\addlyrics {
 		In me -- mó -- _ ri -- a æ -- _ _ _ tér -- _ _ _ _ na,
@@ -1121,7 +1118,7 @@ sopranoB = \new Voice {
 		
 		bes4. as8 g f g2 g4 g1 g2 ~ g r1 r4 es'2
 		d4 c bes as g c bes | bes2 as4 g8 f g4 a bes f'4 ~ | f es4 d2 c4 c4. bes8 as2
-		g4 f g as2. g4 | f2 r4 f'4. es8 d4 c bes ~ bes as4 g1 ~ g\breve \fermata
+		g4 f g as2. g4 | f2 r4 f'4. es8 d4 c bes ~ bes as4 g1 ~ g\breve
 	}
 	\addlyrics {
 		In me -- mó -- _ ri -- a æ -- tér -- na, æ -- tér -- _ _ _ _ na,
@@ -1145,7 +1142,7 @@ alto = \new Voice {
 		
 		es2. d8 c d2 c r | es2. es4 es es es2 |
 		f2. f4 es2. d8 c | bes2 c4. d8 es2 d | f g es c4. d8 |
-		es2 bes as4 as8 bes c d es2 d4 c2 d f2 ~ | f4 f4 es2 d c\breve \fermata
+		es2 bes as4 as8 bes c d es2 d4 c2 d f2 ~ | f4 f4 es2 d c\breve
 	}
 	\addlyrics {
 		In me -- mó -- _ ri -- a æ -- _ tér -- _ _ _ _ _ _ _ na,
@@ -1168,7 +1165,7 @@ tenor = \new Voice {
 		
 		bes c | g1 r4 es'2 d4 | c bes as g c4. bes8 as4 es |
 		bes'2 r4 bes c4. bes8 a4 bes8 c | d es f2 es8 d c bes c4 bes2 | R1 c4. bes8 as2 |
-		es4 es'2 d4 c4. bes8 as4 es f1 bes2 f f g1 c\breve \fermata
+		es4 es'2 d4 c4. bes8 as4 es f1 bes2 f f g1 c\breve
 	}
 	\addlyrics {
 		In me -- mó -- _ ri -- a æ -- tér -- _ _ _ _ _ _ _ _ _ na, __ _
@@ -1188,7 +1185,6 @@ tenor = \new Voice {
 	\transpose c b, {
 		\new StaffGroup << 
 			\set Score.proportionalNotationDuration = #(ly:make-moment 1 8)
-			\set Score.barNumberVisibility = #all-bar-numbers-visible
 			\new Staff << \globalC \sopranoA \set Staff.instrumentName = #"S1" \set Staff.shortInstrumentName = #"S1" >> 
 			\new Staff << \globalC \sopranoB \set Staff.instrumentName = #"S2" \set Staff.shortInstrumentName = #"S2" >> 
 			\new Staff << \globalC \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >> 
@@ -1247,7 +1243,7 @@ sopranoA = \new Voice {
 		\time 5/2 bes1 bes2 as f \break \time 2/2
 		
 		as2 bes c2. c4 bes2. des2 des4 c2 bes c1 bes2 | as des
-		es c \break bes2. bes4 as2 f as4. bes8 c4 des c2 bes\breve \fermata \showBarLine \bar "|."
+		es c \break bes2. bes4 as2 f as4. bes8 c4 des c2 bes1 ~ bes\breve \showBarLine \bar "|."
 	}
 	\addlyrics {
 		Lí -- be -- _ ra á -- _ ni -- mas óm -- _ ni -- um fi -- dé -- _ li -- um
@@ -1281,7 +1277,7 @@ sopranoB = \new Voice {
 		es4 bes4 des8 c bes as bes c des4 c f4. es16 des c4 d2 r d es \ficta des! c4 f4. es8 des4 |
 		
 		c4 es es1 r4 f2 es4 des8 c bes as bes2 r1 r4 f'2 es4 es4. des8 | c4 des bes2
-		r4 es2 f4 ~ f8 es8 des c bes4 g c2. bes4 \time 5/2 c2 r4 f4. es16 \ficta d c4 d2 es \time 2/2 d1\fermata |
+		r4 es2 f4 ~ f8 es8 des c bes4 g c2. bes4 \time 5/2 c2 r4 f4. es16 \ficta d c4 d2 es \time 2/2 d\breve |
 	}
 	\addlyrics {
 		Lí -- be -- ra á -- _ _ _ _ _ ni -- mas óm -- ni -- um fi -- dé -- _ li -- um
@@ -1316,7 +1312,7 @@ altoA = \new Voice {
 		ges4 es f8 es des c bes2 c1 bes2 r f' es4 bes bes4. bes8 c4 as'4. g8 f4 |
 		
 		es4 as2 g4 as2 as4. g8 f4 bes, des4. es8 f2 es r4 bes'2 as4 g as2 g4 | as2 r4 bes
-		g as as4. g8 f4 bes, bes2 r4 as'2 bes4 as f f1 f2 r4 bes, bes1\fermata |
+		g as as4. g8 f4 bes, bes2 r4 as'2 bes4 as f f1 f2 r4 bes, bes\breve |
 	}
 	\addlyrics {
 		Lí -- be -- ra á -- _ _ _ ni -- mas óm -- _ ni -- um fi -- dé -- _ _ li -- um
@@ -1353,7 +1349,7 @@ altoB = \new Voice {
 		es4 ges4 f f des f f1 f2 r f ges f f2. as4 ~ |
 		
 		as es4 es es4. des8 c bes as4 as'2 g4 f2. bes2 as4 g f f2 r r4 es2 f4. es8 des4
-		c as r as' | bes4. as8 g4 g f2 r4 f | f4. g8 a4 bes2 a4 bes4. \ficta as!8 ges4 es f1\fermata |
+		c as r as' | bes4. as8 g4 g f2 r4 f | f4. g8 a4 bes2 a4 bes4. \ficta as!8 ges4 es f\breve |
 	}
 	\addlyrics {
 		Lí -- be -- ra á -- ni -- mas, lí -- be -- ra á -- ni -- mas óm -- ni -- um fi -- dé -- _ _ _ li -- um
@@ -1388,7 +1384,7 @@ tenor = \new Voice {
 		es des f2. c2 f,4 f2 r bes bes4. c8 des es f4. es16 des c4 des as ~ | 
 		
 		as8 bes c4 bes2 as4 as2 as4 bes1 bes2 r4 es2 des4 c f, c'4. des8 es2 | as,4 des4. es8 f4		
-		es4 c c2 r4 des es4. des8 c4 as des2 c f, r4 f2 bes4. as8 ges4 f1\fermata |
+		es4 c c2 r4 des es4. des8 c4 as des2 c f, r4 f2 bes4. as8 ges4 f\breve |
 	}
 	\addlyrics {
 		Lí -- be -- ra á -- _ _ ni -- mas, á -- ni -- mas, lí -- be -- ra á -- ni -- mas
@@ -1426,7 +1422,7 @@ bass = \new Voice {
 		 es bes1 f' bes,2 r bes es bes f' des |
 		 
 		as2 es' as4. g8 f es f4 d es bes2 r4 bes c4. des8 es4 bes f'2 R1 | r2 bes
-		c4. bes8 as4 f bes2 es, f4. es8 des4 bes f'2. bes,4 f'4. f8 bes,2 es bes1\fermata |
+		c4. bes8 as4 f bes2 es, f4. es8 des4 bes f'2. bes,4 f'4. f8 bes,2 es bes\breve |
 	}
 	\addlyrics {
 		Lí -- be -- ra á -- _ _ ni -- mas óm -- _ _ ni -- um fi -- dé -- li -- um
@@ -1448,7 +1444,6 @@ bass = \new Voice {
 	\transpose c b, {
 		\new StaffGroup << 
 			\set Score.proportionalNotationDuration = #(ly:make-moment 1 8)
-			\set Score.barNumberVisibility = #all-bar-numbers-visible
 			\new Staff << \globalAs \sopranoB \set Staff.instrumentName = #"S1" \set Staff.shortInstrumentName = #"S1" >> 
 			\new Staff << \globalAs \sopranoA \set Staff.instrumentName = #"S2" \set Staff.shortInstrumentName = #"S2" >> 
 			\new Staff << \globalAs \altoA \set Staff.instrumentName = #"A1" \set Staff.shortInstrumentName = #"A1" >> 
@@ -1470,7 +1465,7 @@ soprano = \new Voice {
 		des4 c bes2 bes bes a bes \break des2. c8 bes c4 bes as1 bes2
 		
 		c as | f as bes2. bes4 \break | bes2 des c bes | as c
-		d es \ficta des! c bes c \break | \time 3/2 des c bes\breve\fermata \showBarLine \bar "|."
+		d es \ficta des! c bes c \break | des c bes1 ~ bes\breve \showBarLine \bar "|."
 	}
 	\addlyrics {
 		Hó -- _ _ sti -- as et pré -- ces tí -- bi
@@ -1490,7 +1485,7 @@ altoA = \new Voice {
 		f g as2 g4 f2 es f ges4. \ficta ges8 f4 f2 es8 des es4 es f2 r4 f f g
 		
 		as4. g8 f es f2 des4 es as2 g4 f2 | r4 es des8 es f g as4 as2 g4 f2 f1 
-		r2 r4 bes g a bes g \ficta as!2 | f4. g8 as2. g4 f2 f1\fermata
+		r2 r4 bes g a bes g \ficta as!2 | f4. g8 as2. g4 f2 f\breve
 	}
 	\addlyrics {
 		Hó -- _ sti -- as et pré -- ces __ _ _ _ tí -- bi
@@ -1512,7 +1507,7 @@ tenor = \new Voice {
 		es4 es es2 des c8 bes c4 c es2 | as,4 as as2 r r4 c | c c d es
 		
 		as,2. f4 bes8 c des bes c des16 es f4. es8 es2 d4 es2 r4 bes as8 bes c des es4 es c c2 bes8 as
-		bes2 r r r4 f' d es2 f4 ~ f des4 es f d8 c16 \ficta d es2 \ficta d8 c d1\fermata
+		bes2 r r r4 f' d es2 f4 ~ f des4 es f d8 c16 \ficta d es2 \ficta d8 c d\breve
 	}
 	\addlyrics {
 		Hó -- _ sti -- as et __ _ _ _ _ _ _ pré -- _ _ _ _ _ ces tí -- bi
@@ -1534,7 +1529,7 @@ bass = \new Voice {
 		as4 es'2 bes' ges f es4 es | des4. es8 f g as2 g4 f1 r2
 		
 		r4 c' c c des bes as f bes2 bes4 bes, es8 f g as bes4 bes, f' as es2 f1
-		r4 bes g a bes8 \ficta as! ges f es4 f bes, es as f bes2 as bes4 es, bes'2 bes,1\fermata
+		r4 bes g a bes8 \ficta as! ges f es4 f bes, es as f bes2 as bes4 es, bes'2 bes,\breve
 	}
 	\addlyrics {
 		Hó -- _ _ sti -- as et pré -- ces tí -- bi
@@ -1550,7 +1545,6 @@ bass = \new Voice {
 	\transpose c b, {
 		\new StaffGroup << 
 			\set Score.proportionalNotationDuration = #(ly:make-moment 1 8)
-			\set Score.barNumberVisibility = #all-bar-numbers-visible
 			\new Staff << \globalAs \soprano \set Staff.instrumentName = #"S" \set Staff.shortInstrumentName = #"S" >> 
 			\new Staff << \globalAs \altoA \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >> 
 			\new Staff << \globalAs \tenor \set Staff.instrumentName = #"T" \set Staff.shortInstrumentName = #"T" >> 
@@ -1608,7 +1602,7 @@ sopranoA = \new Voice {
 		as1 as2 as bes1 c c2 c c1 bes des |
 		
 		c1 c\breve bes1 as as bes c |
-		c\breve  c1 bes bes c\breve c1\fermata \showBarLine \bar "||" |
+		c\breve  c1 bes bes c\breve c \showBarLine \bar "||" |
 	}
 	\addlyrics {
 		Sán -- ctus. __ _ Sán -- _ _ ctus Dó -- mi -- nus Dé -- us Sá -- _ ba -- oth.
@@ -1626,7 +1620,7 @@ sopranoB = \new Voice {
 		r2 c1 c2 d f1 f2 f1 e2 f2. \ficta es!4 des c bes2 as |
 		
 		g1 f R1 R1 r2 f'1 es2 d es es1 |
-		R1 R1 r2 es1 d2 d bes1 as4 g as2 f g1\fermata
+		R1 R1 r2 es1 d2 d bes1 as4 g as2 f g\breve
 	}
 	\addlyrics {
 		Sán -- _ ctus. __ _ Sán -- _ _ _ _ _ _ _ _ _ ctus Dó -- mi -- nus 
@@ -1645,7 +1639,7 @@ altoA = \new Voice {
 		r f2. es4 d c d2 c1 as2 f' c c des bes R1 |
 		
 		r2 c2. bes4 as g as bes c d es f g2 f f1 as2. g8 f g2 as1 ~ |
-		as r2 as1 g2 g f2. es4 d2 c1 c c\fermata |
+		as r2 as1 g2 g f2. es4 d2 c1 c c\breve |
 	}
 	\addlyrics {
 		Sán -- _ _ _ _ _ _ _ ctus. Sán -- ctus Dó -- mi -- nus Dé -- us Sá -- ba -- oth,
@@ -1664,7 +1658,7 @@ altoB = \new Voice {
 		f c2 f f1 as1. as2 g f1 g2. f4 f2 ~ |
 		
 		f4 e8 d \ficta e2 f as as as g es R1 R R R |
-		r2 as1 f2 es2. f4 g as bes2 f1. f2 f1 e1\fermata |
+		r2 as1 f2 es2. f4 g as bes2 f1. f2 f1 e\breve |
 	}
 	\addlyrics {
 		Sán -- _ _ ctus. Sán -- _ _ _ _ _ ctus Dó -- mi -- nus, Dó -- mi -- nus Dé -- us Sá -- ba -- oth.
@@ -1683,7 +1677,7 @@ tenor = \new Voice {
 		c1. c2 bes1 as f2 c'1 as2 bes1. f2 |
 		
 		c'1 f,2 f'1 es2 es2. d4 c2 f, as1 r2 es'1 c2 |
-		c f1 c2 c1 r2 bes1 f c'2. bes4 as2 g1\fermata |
+		c f1 c2 c1 r2 bes1 f c'2. bes4 as2 g\breve |
 	}
 	\addlyrics {
 		Sán -- _ _ _ ctus. Sán -- _ ctus, Sán -- _ _ _ ctus, Sán -- ctus
@@ -1703,7 +1697,7 @@ bass = \new Voice {
 		f1. f2 bes,1 f'\breve c2 f bes,\breve |
 		
 		c1 r2 f2. g4 as2 es1 f2. es4 des2 c bes es as, as' ~ |
-		as f f1 c2. d4 es2 bes bes1 f'\breve c1\fermata |
+		as f f1 c2. d4 es2 bes bes1 f'\breve c |
 	}
 	\addlyrics {
 		Sán -- ctus. __ _ Sán -- _ ctus Dó -- _ _ _ _ mi -- nus Dé -- _ _ _ us Sá -- ba -- oth.
@@ -1716,7 +1710,6 @@ bass = \new Voice {
 	\transpose c b, {
 		\new StaffGroup << 
 			\set Score.proportionalNotationDuration = #(ly:make-moment 1 8)
-			\set Score.barNumberVisibility = #all-bar-numbers-visible
 			\new Staff << \globalC \sopranoB \set Staff.instrumentName = #"S1" \set Staff.shortInstrumentName = #"S1" >> 
 			\new Staff << \globalC \sopranoA \set Staff.instrumentName = #"S2" \set Staff.shortInstrumentName = #"S2" >> 
 			\new Staff << \globalC \altoA \set Staff.instrumentName = #"A1" \set Staff.shortInstrumentName = #"A1" >> 
@@ -1756,8 +1749,8 @@ sopranoA = \new Voice {
 	\relative c'' {
 		\set Score.currentBarNumber = #24
 		c1 c\breve c1 |
-		bes des c c \break bes\breve as1 as |
-		f as bes bes \break c bes a2 bes1 a2 bes\breve\fermata \showBarLine \bar "|."
+		bes des c c bes\breve as1 as |
+		f as bes bes c bes a2 bes1 a2 bes\breve \showBarLine \bar "|."
 	}
 	\addlyrics {
 		qui vé -- nit in nó -- mi -- ne Dó -- mi -- ni.
@@ -1769,7 +1762,7 @@ sopranoB = \new Voice {
 	\relative c'' {
 		e1 f\breve \ficta es1 |
 		r2 bes1 f2. g4 as bes c d es c d es f1 e2 f1 c2. c4 |
-		bes1 r2 es1 d2 es1 ~ es es1 c2 bes c f f\breve\fermata |
+		bes1 r2 es1 d2 es1 ~ es es1 c2 bes c f f\breve |
 	}
 	\addlyrics {
 		qui vé -- nit in nó -- _ _ _ _ _ _ _ _ _ _ mi -- ne Dó -- mi -- ni.
@@ -1781,7 +1774,7 @@ altoA = \new Voice {
 	\relative c' {
 		R1 r2 f1 c2. d4 es f |
 		g1 f as as2 g f1 g2. g4 c,1 r2 f1 
-		d2 es1 f g es2 es1 bes2 r f' f c d\breve\fermata |
+		d2 es1 f g es2 es1 bes2 r f' f c d\breve |
 	}
 	\addlyrics {
 		qui vé -- _ _ _ _ nit in nó -- mi -- ne Dó -- mi -- ni.
@@ -1793,7 +1786,7 @@ altoB = \new Voice {
 	\relative c'' {
 		g1 as\breve g1 |
 		R1 R1 r2 f f es d1 bes f' f2 f |
-		d d c1 r2 bes'1 g2 as as1 g2 f\breve f\fermata |
+		d d c1 r2 bes'1 g2 as as1 g2 f\breve f |
 	}
 	\addlyrics {
 		qui vé -- nit in nó -- mi -- ne, in nó -- mi -- ne Dó -- mi -- ni.
@@ -1806,7 +1799,7 @@ tenor = \new Voice {
 		\clef "treble_8"
 		c1 f,2. g4 as g as bes c1 |
 		g2 bes bes4 c des es f2 c c1 r2 bes1 g2 as c1 as2 |
-		bes1 c r r2 es ~ es c2 es es1 d2 c1 bes\breve\fermata |
+		bes1 c r r2 es ~ es c2 es es1 d2 c1 bes\breve |
 	}
 	\addlyrics {
 		qui vé -- _ _ _ _ _ _ nit in nó -- _ _ _ _ mi -- ne Dó -- mi -- ni.
@@ -1819,7 +1812,7 @@ bass = \new Voice {
 		\clef bass
 		R1 R1 f1 c2. d4 |
 		es f g as bes1 f2 f as1 bes2 bes g2. g4 f\breve |
-		r2 bes as c bes1 es, as es f\breve bes,\breve\fermata |
+		r2 bes as c bes1 es, as es f\breve bes,\breve |
 	}
 	\addlyrics {
 		qui vé -- _ _ _ _ _ _ nit in nó -- mi -- ne Dó -- mi -- ni.
@@ -1831,7 +1824,6 @@ bass = \new Voice {
 	\transpose c b, {
 		\new StaffGroup << 
 			\set Score.proportionalNotationDuration = #(ly:make-moment 1 4)
-			\set Score.barNumberVisibility = #all-bar-numbers-visible
 			\new Staff << \globalC \sopranoB \set Staff.instrumentName = #"S1" \set Staff.shortInstrumentName = #"S1" >> 
 			\new Staff << \globalC \sopranoA \set Staff.instrumentName = #"S2" \set Staff.shortInstrumentName = #"S2" >> 
 			\new Staff << \globalC \altoA \set Staff.instrumentName = #"A1" \set Staff.shortInstrumentName = #"A1" >> 
@@ -1840,9 +1832,7 @@ bass = \new Voice {
 			\new Staff << \globalC \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >> 
 		>> 
 	}
-	\layout {
-	  	ragged-last = ##t
-	}
+	\layout { }
 %	\midi {	}
 }
 
@@ -1947,7 +1937,6 @@ bass = \new Voice {
 	\transpose c b, {
 		\new StaffGroup << 
 			\set Score.proportionalNotationDuration = #(ly:make-moment 1 4)
-			\set Score.barNumberVisibility = #all-bar-numbers-visible
 			\new Staff << \globalC \sopranoB \set Staff.instrumentName = #"S1" \set Staff.shortInstrumentName = #"S1" >> 
 			\new Staff << \globalC \sopranoA \set Staff.instrumentName = #"S2" \set Staff.shortInstrumentName = #"S2" >> 
 			\new Staff << \globalC \altoA \set Staff.instrumentName = #"A1" \set Staff.shortInstrumentName = #"A1" >> 
@@ -1987,7 +1976,7 @@ sopranoA = \new Voice {
 		\set Score.currentBarNumber = #10
 		c1 c\breve c1 b c1.
 		as2 bes1 \break c c b c d bes
-		c\breve c1 \time 3/2 b\breve \showBarLine \bar "||"
+		c\breve c1 b\breve \showBarLine \bar "||"
 	}
 	\addlyrics {
 		qui tól -- lis pec -- cá -- ta mún -- _ di,
@@ -2061,7 +2050,6 @@ bass = \new Voice {
 	\transpose c b, {
 		\new StaffGroup << 
 			\set Score.proportionalNotationDuration = #(ly:make-moment 1 4)
-			\set Score.barNumberVisibility = #all-bar-numbers-visible
 			\new Staff << \globalC \sopranoB \set Staff.instrumentName = #"S1" \set Staff.shortInstrumentName = #"S1" >> 
 			\new Staff << \globalC \sopranoA \set Staff.instrumentName = #"S2" \set Staff.shortInstrumentName = #"S2" >> 
 			\new Staff << \globalC \altoA \set Staff.instrumentName = #"A1" \set Staff.shortInstrumentName = #"A1" >> 
@@ -2103,7 +2091,7 @@ sopranoA = \new Voice {
 		\set Score.currentBarNumber = #19
 		c1 c c
 		1 b c1. as2 bes1 c \break c b c
-		d bes c1. c2 b1 \break \ficta b1. \ficta b2 \time 3/2 c1 b\breve \showBarLine \bar "|."
+		d bes c1. c2 b1 \break \ficta b1. \ficta b2 c1 b\breve \showBarLine \bar "|."
 	}
 	\addlyrics {
 		qui tól -- lis pec -- cá -- ta mún -- _ di,
@@ -2177,7 +2165,6 @@ bass = \new Voice {
 	\transpose c b, {
 		\new StaffGroup << 
 			\set Score.proportionalNotationDuration = #(ly:make-moment 1 6)
-			\set Score.barNumberVisibility = #all-bar-numbers-visible
 			\new Staff << \globalC \sopranoB \set Staff.instrumentName = #"S1" \set Staff.shortInstrumentName = #"S1" >> 
 			\new Staff << \globalC \sopranoA \set Staff.instrumentName = #"S2" \set Staff.shortInstrumentName = #"S2" >> 
 			\new Staff << \globalC \altoA \set Staff.instrumentName = #"A1" \set Staff.shortInstrumentName = #"A1" >> 
@@ -2224,7 +2211,7 @@ sopranoA = \new Voice {
 		c1. ~ \break c2 bes1 a1 bes1
 		c1. es1 \break d es1.
 		c1 d es2 c bes \break c1
-		bes1 | g2 as bes4 c4. bes8 bes2 a8 g \ficta a4 \ficta a bes1 \fermata \showBarLine \bar "||"
+		bes1 | g2 as bes4 c4. bes8 bes2 a8 g \ficta a4 \ficta a bes\breve \showBarLine \bar "||"
 	}
 	\addlyrics {
 		lú -- ce -- at é -- is Dó -- mi -- ne,
@@ -2239,7 +2226,7 @@ sopranoB = \new Voice {
 		bes4 as2 g r4 c es es es2. d4 c c | c f4. es8 d c
 		bes4 es4. d8 c4. bes8 as2 as4 g c bes g bes4. c8 d es f4 bes, c bes1 
 		f' f2 r4 bes, g c4. d8 es4 es2 r r4 es
-		f4 es2 d4 | c1 es2 f4 g f2. f4 d1\fermata |
+		f4 es2 d4 | c1 es2 f4 g f2. f4 d\breve |
 	}
 	\addlyrics {
 		lú -- ce -- at é -- _ _ _ _ _ _ is Dó -- mi -- ne, __ _
@@ -2255,7 +2242,7 @@ altoA = \new Voice {
 		es8 f g4. f8 f2 e4 f2 | r4 g4. f8 es d16 c bes8 c d es f1 f2
 		g c, r4 f es c r g'4. as8 bes4 ~ bes8 as8 f4. g8 as4 g es g2. 
 		g4 f2 f d g4. f8 es4 c r c es2 es es
-		R1 | r2 r4 as g c,4. d8 es4 c1 bes1\fermata |
+		R1 | r2 r4 as g c,4. d8 es4 c1 bes\breve |
 	}
 	\addlyrics {
 		lú -- ce -- at é -- _ _ _ _ _ _ _ is Dó -- _ _ _ _ _ _ mi -- ne, Dó -- _ _ _ _ _ _ _ _ _ mi -- ne, __ _
@@ -2270,7 +2257,7 @@ altoB = \new Voice {
 		R1 r2 r4 as | g es g2 g4 f2 es8 d | c4. c8 bes4 bes'4.
 		as8 g f es2 f c1 r2 r f2 es4 c es4. f8 |
 		g as bes2 a8 g a2 bes1 r4 g as as4. g16 f g4 | as2. as4
-		f4 g4. f8 f2 e4 f2 r4 as2 g4 | as8 g f es f4 f f1\fermata |
+		f4 g4. f8 f2 e4 f2 r4 as2 g4 | as8 g f es f4 f f\breve |
 	}
 	\addlyrics {
 		lú -- ce -- at é -- is Dó -- _ _ _ mi -- ne, Dó -- _ _ _ _ mi -- ne,
@@ -2287,7 +2274,7 @@ tenor = \new Voice {
 		as4 g as4. bes8 c4. bes8 as4 f g2 r4 bes2 bes4 c c2 c4 d d
 		es2 r4 c as f as4. bes8 c d es4. d16 c bes4 bes2 r R1 R1
 		r4 f'2 d g4. f8 es d es4 as, bes2 | as r4 c
-		d4 es4. d16 c bes4 | c4. c8 f,4 f' es2 c1 f,2 f1\fermata |
+		d4 es4. d16 c bes4 | c4. c8 f,4 f' es2 c1 f,2 f\breve |
 	}
 	\addlyrics {
 		lú -- ce -- at é -- _ _ _ _ _ _ _ _ _ _ is Dó -- _ _ _ _ mi -- ne,
@@ -2304,7 +2291,7 @@ bass = \new Voice {
 		R1 r2 f es4 c es4. f8 g as bes4 f2 | f bes4. as8
 		g4 es as2 f r4 f es c es4. f8 | g as bes4. as8 f4 g as es1
 		f bes,4 bes'2 g4 c4. bes8 as2 es | as,1
-		R1 | r2 r4 f' g as4. g16 f es4 f2. f4 bes,1\fermata |
+		R1 | r2 r4 f' g as4. g16 f es4 f2. f4 bes,\breve |
 	}
 	\addlyrics {
 		lú -- ce -- at é -- _ _ _ _ is Dó -- _ _ _ mi -- ne, __ _
@@ -2317,7 +2304,6 @@ bass = \new Voice {
 	\transpose c b, {
 		\new StaffGroup << 
 			\set Score.proportionalNotationDuration = #(ly:make-moment 1 8)
-			\set Score.barNumberVisibility = #all-bar-numbers-visible
 			\new Staff << \globalC \sopranoB \set Staff.instrumentName = #"S1" \set Staff.shortInstrumentName = #"S1" >> 
 			\new Staff << \globalC \sopranoA \set Staff.instrumentName = #"S2" \set Staff.shortInstrumentName = #"S2" >> 
 			\new Staff << \globalC \altoA \set Staff.instrumentName = #"A1" \set Staff.shortInstrumentName = #"A1" >> 
@@ -2447,7 +2433,6 @@ bass = \new Voice {
 	\transpose c b, {
 		\new StaffGroup << 
 			\set Score.proportionalNotationDuration = #(ly:make-moment 1 8)
-			\set Score.barNumberVisibility = #all-bar-numbers-visible
 			\new Staff << \globalC \sopranoB \set Staff.instrumentName = #"S1" \set Staff.shortInstrumentName = #"S1" >> 
 			\new Staff << \globalC \sopranoA \set Staff.instrumentName = #"S2" \set Staff.shortInstrumentName = #"S2" >> 
 			\new Staff << \globalC \altoA \set Staff.instrumentName = #"A1" \set Staff.shortInstrumentName = #"A1" >> 
