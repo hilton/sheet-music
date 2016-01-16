@@ -1,7 +1,7 @@
 % Copyright ©2015 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "1"
+revision = "2"
 \pointAndClickOff
 
 #(set-global-staff-size 15.0)
@@ -42,6 +42,7 @@ year = #(strftime "©%Y" (localtime (current-time)))
 		}
 	}
 	tagline = ##f
+	}
 }
 
 \layout {
@@ -97,7 +98,7 @@ superius = \new Voice	{
 		f4 g d e f g a bes | c f, g a bes a4. g8 g2 \ficta fis8 e \ficta fis2 g1 \showBarLine \bar "|."
 	}
 	\addlyrics {
-		Een vroue -- _ lic __ _ _ _ we -- _ sen mijn __ _ _ oog -- skins __ _ sa -- _ _ _ _ _ _ _ _ _ ghen,
+		Een vrou -- e -- lic __ _ _ _ we -- _ sen mijn __ _ _ oog -- skins __ _ sa -- _ _ _ _ _ _ _ _ _ ghen,
 		Wien ic ghe -- trauw -- ich -- eijt moet thoe -- _ _ _ scri -- _ _ _ _ _ _ _ ven.
 		Al wilt __ _ mij haer jonst uut lief -- den dri -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ ven,
 		Naer de -- se gheen __ _ an -- der om __ _ _ _ mij __ _ te be -- _ _ ha -- _ _ ghen,
@@ -118,7 +119,7 @@ counterTenor = \new Voice {
 		r2 d c4 bes | a2 r4 a g f'4. \ficta es8 d2 c4 d2 d1 |
 	}
 	\addlyrics {
-		Een __ _ vroue -- _ lic, vroue -- _ lic we -- _ sen mijn oog -- skins __ _ _ _ _ _ sa -- _ _ _ _ ghen,
+		Een __ _ vrou -- e -- lic, vrou -- e -- lic we -- _ sen mijn oog -- skins __ _ _ _ _ _ sa -- _ _ _ _ ghen,
 		Wien ic __ _ _ _ _ ghe -- _ trauw -- ich -- eijt moet thoe -- _ _ _ scri -- _ _ _ _ _ _ _ _ _ _ _ ven,
 		haer jonst uut __ _ _ _ lief -- _ _ _ den dri -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ ven, __ _ _ _
 		Naer de -- se __ _ gheen an -- _ der om __ _ _ _ _ _ _ mij __ _ te be -- _ _ _ ha -- _ _ ghen,
@@ -140,7 +141,7 @@ tenor = \new Voice {
 		a4 bes4. a8 g4 f bes c d | c bes8 a g4 c bes d c bes g2 a g1 |
 	}
 	\addlyrics {
-		Een __ _ vroue -- _ lic, een vroue -- _ lic we -- sen mijn oog -- skins __ _ sa -- _ _ _ _ _ _ _ _ _ _ _ _ _ ghen,
+		Een __ _ vrou -- e -- lic, een vrou -- e -- lic we -- sen mijn oog -- skins __ _ sa -- _ _ _ _ _ _ _ _ _ _ _ _ _ ghen,
 		Wien __ _ _ _ _ _ _ ic ghe -- trauw -- ich -- eijt moet thoe -- _ _ scri -- _ _ _ ven.
 		Al wilt __ _ _ _ mij __ _ haer __ _ _ jonst uut __ _ _ _ _ lief -- den dri -- ven,
 		dri -- _ _ _ _ _ _ _ _ _ _ _ _ _ ven,
@@ -163,7 +164,7 @@ bass = \new Voice {
 		d4 g, bes c d c8 bes a4 g | r d' e f g d f g | es2 d g,1 |
 	}
 	\addlyrics {
-		Een __ _ vroue -- _ lic we -- sen mijn oog -- skins __ _ sa -- _ _ _ _ _ _ _ _ _ ghen,
+		Een __ _ vrou -- e -- lic we -- sen mijn oog -- skins __ _ sa -- _ _ _ _ _ _ _ _ _ ghen,
 		ghe -- trauw -- ich -- eijt moet thoe -- _ _ scri -- _ _ _ ven.
 		Al wilt __ _ mij haer jonst uut __ _ lief -- den dri -- ven,
 		Naer __ _ _ _ _ de -- se gheen __ _ an -- _ _ _ _ _ der om __ _ mij __ _ te be -- ha -- _ _ _ _ _ ghen,
