@@ -36,7 +36,7 @@ year = #(strftime "©%Y" (localtime (current-time)))
 		\vspace #2
 		\column \center-align {
 			\line {
-				\with-url #"http://www.cpdl.org/wiki/index.php/Missa_Pro_Defunctis_(Manuel_Cardoso)" "CPDL #38059" -
+				\with-url #"http://www.cpdl.org/wiki/index.php/Het_Molenarinneken_(Matthaeus_Pipelare)" "CPDL #38059" -
 				Copyright \year \with-url #"http://hilton.org.uk" "Peter Hilton" -
 				\with-url #"http://creativecommons.org/licenses/by-nc-sa/3.0/" "CC BY-NC-SA 3.0" -
 				Lilypond source \with-url #"https://github.com/hilton/sheet-music" https://github.com/hilton/sheet-music - 
