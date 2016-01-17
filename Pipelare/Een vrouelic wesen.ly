@@ -1,7 +1,8 @@
+% CPDL #38204
 % Copyright ©2015 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "2"
+revision = "4"
 \pointAndClickOff
 
 #(set-global-staff-size 15.0)
@@ -11,6 +12,7 @@ revision = "2"
 	annotate-spacing = ##f
 	two-sided = ##t
 	top-margin = 10\mm
+	bottom-margin = 10\mm
 	inner-margin = 15\mm
 	outer-margin = 15\mm
 	top-markup-spacing = #'( (basic-distance . 4) )
@@ -34,14 +36,33 @@ year = #(strftime "©%Y" (localtime (current-time)))
 		\vspace #2
 		\column \center-align {
 			\line {
-				Copyright \year \with-url #"http://hilton.org.uk" "Peter Hilton" -
+				\with-url #"http://www.cpdl.org/wiki/index.php/Missa_Pro_Defunctis_(Manuel_Cardoso)" "CPDL #38204" -
+				Transcription & IPA copyright \year \with-url #"http://hilton.org.uk" "Peter Hilton" -
 				\with-url #"http://creativecommons.org/licenses/by-nc-sa/3.0/" "CC BY-NC-SA 3.0" -
 				Lilypond source at \with-url #"https://github.com/hilton/sheet-music" https://github.com/hilton/sheet-music - 
 				revision \revision 
 			}
 		}
 	}
-	tagline = ##f
+	tagline = \markup \larger { 
+		\vspace #2
+		\fill-line {
+			\hspace #1
+			\column {
+				\line { Een vrouelic wesen mijn oogskins saghen, }
+				\line { Wien ic ghetrauwicheijt moet thoescriven. }
+				\line { Al wilt mij haer jonst uut liefden driven, }
+				\line { Naer dese gheen ander om mij te behaghen. }
+			}
+			\hspace #1
+			\column \sans {
+				\line { ən 'vrɑuwələk 'wezən min 'oɣ̟skəns 'saɣ̟ən }
+				\line { win ɪk ɣ̟ə'trɑuwəkhɛit mut 'tuskriven }
+				\line { ɑl wɪlt mi har jɔnst yt 'lifdən 'drivən }
+				\line { nar dezə ɣ̟en 'ɑndər ɔm mi tə bə'haɣ̟ən }
+			}
+			\hspace #1
+		}
 	}
 }
 
@@ -187,6 +208,6 @@ bass = \new Voice {
 		piece = ""
 	}
 	\layout { }
-	\midi {	}
+%	\midi {	}
 }
 
