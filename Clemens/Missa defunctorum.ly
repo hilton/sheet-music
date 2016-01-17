@@ -4,7 +4,7 @@
 
 \version "2.16.2"
 \pointAndClickOff
-revision = "5"
+revision = "6"
 
 #(set-global-staff-size 16)
 
@@ -32,7 +32,9 @@ year = #(strftime "©%Y" (localtime (current-time)))
 		\vspace #2
 		\column \center-align {
 			\line {
-				This edition copyright \year Peter Hilton - 
+				Copyright \year Peter Hilton - 
+				\with-url #"http://creativecommons.org/licenses/by-nc-sa/3.0/" "CC BY-NC-SA 3.0" -
+				\with-url #"http://www.cpdl.org/wiki/index.php/Missa_pro_defunctis_(Jacobus_Clemens_non_Papa)" "CPDL #33472" -
 				Lilypond source at \with-url #"https://github.com/hilton/sheet-music" https://github.com/hilton/sheet-music - 
 				revision \revision 
 			}
@@ -176,7 +178,7 @@ bass = \new Voice {
 		piece = \markup \larger \sans { Introitus }
 	}
 	\layout { }
-	\midi { }
+%	\midi { }
 }
 
 
@@ -257,7 +259,7 @@ bass = \new Voice {
 		>> 
 	>>
 	\layout { }
-	\midi { }
+%	\midi { }
 }
 
 \markup { Repeat \italic { Requiem aeternam dona eis Domine, et lux perpetua luceat eis. }}
@@ -346,7 +348,7 @@ bass = \new Voice {
 		>> 
 	>>
 	\layout { }
-	\midi { }
+%	\midi { }
 }
 
 
@@ -428,7 +430,7 @@ bass = \new Voice {
 		>> 
 	>>
 	\layout { }
-	\midi { }
+%	\midi { }
 }
 
 
@@ -517,7 +519,7 @@ bass = \new Voice {
 		>> 
 	>>
 	\layout { }
-	\midi { }
+%	\midi { }
 }
 
 
@@ -657,7 +659,7 @@ bass = \new Voice {
 		piece = \markup \larger \sans { Tractus }
 	}
 	\layout { }
-	\midi { }
+%	\midi { }
 }
 
 
@@ -815,7 +817,7 @@ bass = \new Voice {
 		piece = \markup \larger \sans { Offertorium }
 	}
 	\layout { }
-	\midi { }
+%	\midi { }
 }
 
 
@@ -908,7 +910,7 @@ tenor = \new Voice {
 		ho -- _ di -- e me -- mo -- ri -- am fa -- _ _ _ _ ci -- mus, fac
 
 		e -- as de mor -- te trans -- i -- re ad vi -- _ _ _ tam. Quam o -- 
-		lim A -- bra -- hæ __ _ _ _ pro -- mi -- si -- _ _ _ _ sti
+		lim __ _ A -- bra -- hæ __ _ _ _ pro -- mi -- si -- _ _ _ _ sti
 		et se -- mi -- ni __ _ _ _ e -- _ ius.
 	}
 }
@@ -950,7 +952,7 @@ bass = \new Voice {
 		>> 
 	>>
 	\layout { }
-	\midi { }
+%	\midi { }
 }
 
 
@@ -1044,7 +1046,7 @@ bass = \new Voice {
 		piece = \markup \larger \sans { Sanctus }
 		}
 	\layout { }
-	\midi { }
+%	\midi { }
 }
 
 
@@ -1122,7 +1124,7 @@ bass = \new Voice {
 		}
 	}
 	\layout { }
-	\midi { }
+%	\midi { }
 }
 
 \pageBreak
@@ -1209,7 +1211,7 @@ bass = \new Voice {
 		piece = \markup \larger \sans { Agnus Dei }
 	}
 	\layout { }
-	\midi { }
+%	\midi { }
 }
 
 
@@ -1362,5 +1364,5 @@ bass = \new Voice {
 		piece = \markup \larger \sans { Communio }
 	}
 	\layout { }
-	\midi { }
+%	\midi { }
 }
