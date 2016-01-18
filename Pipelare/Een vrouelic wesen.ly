@@ -57,7 +57,7 @@ year = #(strftime "©%Y" (localtime (current-time)))
 			\hspace #1
 			\column \sans {
 				\line { ən 'vrɑuwələk 'wezən min 'oɣ̟skəns 'saɣ̟ən }
-				\line { win ɪk ɣ̟ə'trɑuwəkhɛit mut 'tuskriven }
+				\line { win ɪk ɣ̟ə'trɑuwəɣ̟hɛit mut 'tuskrivən }
 				\line { ɑl wɪlt mi har jɔnst yt 'lifdən 'drivən }
 				\line { nar dezə ɣ̟en 'ɑndər ɔm mi tə bə'haɣ̟ən }
 			}
