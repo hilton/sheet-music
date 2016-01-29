@@ -2,7 +2,7 @@
 % Copyright ©2016 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "19"
+revision = "26"
 \pointAndClickOff
 
 #(set-global-staff-size 15)
@@ -1316,7 +1316,7 @@ alto = \new Voice {
 		
 		as4 bes f as4. g8 es4 f2 des4 es es1 r2 r1 r2 r4 f | es as2 g4
 		f bes2 as4 f g es2 r\breve r4 f f2 des bes4 f' f2 ges2 ~ 
-		ges4 es4. des8 c4. bes8 as' g f4 f2 f4 f2 c4 es2 bes des4. des8 f4 es1 |
+		ges4 es4. des8 c4. bes8 as' g f4 f2 f4 f2 c4 es2 bes des4. es8 f4 es1 |
 		
 		r4 f g2 as2. as,4 | es' es2 bes4 f'4. f8 f2 | r4 f2 g4 as2. g8 f |
 		g as bes2 as8 g f2 es r4 es2 es4 es2 f f4 bes, c2 r4 as' as2 |
