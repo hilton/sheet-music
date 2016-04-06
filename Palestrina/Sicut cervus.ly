@@ -1,8 +1,8 @@
 % CPDL #31402
-% Copyright ©2014 Peter Hilton - https://github.com/hilton
+% Copyright ©2016 Peter Hilton - https://github.com/hilton
 
 \version "2.18.0"
-revision = "5"
+revision = "6"
 \pointAndClickOff
 
 #(set-global-staff-size 15.5)
@@ -303,7 +303,7 @@ bassus = \new Voice {
 	}
 	\addlyrics {	
 		Si -- tí -- vit á -- ni -- ma me -- a ad De -- um fon -- tem vi -- 
-		_ _ vum, ad De -- um fon -- tem vi -- vum: quan -- do 
+		_ _ _ vum, ad De -- um fon -- tem vi -- vum: quan -- do 
 		vé -- ni -- am, quan -- do vé -- ni -- am et ap -- pa -- 
 		ré -- bo __ _ _ an -- te fá -- ci -- em De -- i? __ _ _ _
 		_ Fu -- é -- runt mi -- hi lá -- cry -- mæ __ _ _ _
