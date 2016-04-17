@@ -1,10 +1,10 @@
 % CPDL #33472
 % http://www.cpdl.org/wiki/index.php/Missa_pro_defunctis_(Jacobus_Clemens_non_Papa)
-% Copyright ©2014 Peter Hilton - https://github.com/hilton
+% Copyright ©2016 Peter Hilton - https://github.com/hilton
 
 \version "2.16.2"
 \pointAndClickOff
-revision = "7"
+revision = "8"
 
 #(set-global-staff-size 15)
 
@@ -289,7 +289,7 @@ bass = \new Voice {
 			\relative c {
 				\clef "treble_8"
 				\cadenzaOn
-				\override Stem #'transparent = ##t f4 g a bes a a-- g-- s8 s2_"*" a4 g f e f g f f-- \showBarLine\bar "||"
+				\override Stem #'transparent = ##t f4 g a bes a a-- g-- s8 s2_"*" a4 g f e f g f f-- \showBarLine\bar ":|."
 				\cadenzaOff
 			}
 		}
@@ -375,7 +375,7 @@ bass = \new Voice {
 			\relative c {
 				\clef "treble_8"
 				\cadenzaOn
-				\override Stem #'transparent = ##t f4 g a bes a a-- g-- s8 s2_"*" a4 g f e f g f f-- \showBarLine\bar "|"
+				\override Stem #'transparent = ##t f4 g a bes a a-- g-- s8 s2_"*" a4 g f e f g f f-- \showBarLine \bar ":|."
 				\cadenzaOff
 			}
 		}
@@ -414,7 +414,7 @@ tenor = \new Voice {
 	\relative c {
 		\clef "treble_8"
 		d'1 c2 bes c d g,4 c2 bes4 c2. f,4
-		bes g a2 d2. c4 bes c4. bes8 bes2 a4 bes \fermata
+		bes g a2 d2. c4 bes c4. bes8 bes2 a4 bes2 \fermata
 	}
 	\addlyrics {
 		Chri -- ste __ _ _ _ e -- lei -- _ son, Chri -- ste __ _ _ e -- _ lei -- _ _ _ _ son.
@@ -704,7 +704,7 @@ soprano = \new Voice {
 		
 		fun -- cto -- _ _ rum, de pœ -- _ nis in -- _ fer -- _ _ _
 		_ ni et de pro -- fun -- do la -- cu, li -- be -- ra e -- 
-		as de o -- re le -- _ _ o -- nis, ne ab -- so -- be -- at
+		as de o -- re le -- _ _ o -- nis, ne ab -- sor -- be -- at
 		e -- as tar -- ta -- rus, ne ca -- dant in ob -- scu -- 
 
 		ra te -- ne -- bra -- rum lo -- ca,  sed sig -- ni -- fer san -- ctus
@@ -736,7 +736,7 @@ alto = \new Voice {
 		
 		fun -- cto -- _ rum, de pœ -- _ nis in -- fer -- _ _ _ _ _ _ _
 		_ _ _ ni et de pro -- fun -- do la -- cu, li -- be -- ra e -- 
-		as de o -- re le -- o -- _ _ nis, ne ab -- so -- be -- at
+		as de o -- re le -- o -- _ _ nis, ne ab -- sor -- be -- at
 		e -- as tar -- ta -- _ _ _ _ rus, ne ca -- dant in ob -- scu -- 
 
 		ra te -- ne -- bra -- rum lo -- ca,  sed sig -- ni -- fer san -- ctus
@@ -771,7 +771,7 @@ tenor = \new Voice {
 		
 		fun -- cto -- rum, de pœ -- _ nis in -- fer -- _ ni, in -- _
 		fer -- _ _ ni et de pro -- fun -- do la -- cu, li -- be -- ra e -- _
-		as de o -- re le -- o -- _ _ nis, ne ab -- so -- be -- at
+		as de o -- re le -- o -- _ _ nis, ne ab -- sor -- be -- at
 		e -- _ as tar -- ta -- _ _ _ rus, ne ca -- dant in ob -- scu -- 
 
 		ra te -- ne -- bra -- rum __ _ _ lo -- ca,  sed sig -- ni -- fer san -- ctus
@@ -805,7 +805,7 @@ bass = \new Voice {
 		
 		fun -- cto -- rum, de pœ -- _ nis in -- fer -- _ _ _ _ _ 
 		_ _ _ ni et de pro -- fun -- do la -- cu, li -- be -- ra e --
-		as de o -- re le -- o -- _ _ nis, ne ab -- so -- be -- at
+		as de o -- re le -- o -- _ _ nis, ne ab -- sor -- be -- at
 		e -- as tar -- _ ta -- rus, ne ca -- dant in ob -- scu -- 
 
 		ra te -- ne -- bra -- rum lo -- ca,  sed sig -- ni -- fer san -- ctus
