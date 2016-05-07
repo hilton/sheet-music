@@ -1,7 +1,7 @@
-% Copyright ©2015 Peter Hilton - https://github.com/hilton
+% Copyright ©2016 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "1"
+revision = "2"
 \pointAndClickOff
 
 #(set-global-staff-size 15.0)
@@ -16,8 +16,7 @@ revision = "1"
 	outer-margin = 15\mm
 	top-markup-spacing = #'( (basic-distance . 4) )
 	markup-system-spacing = #'( (padding . 4) )
-	system-system-spacing = #'( (basic-distance . 20) (stretchability . 100) )
-  	ragged-bottom = ##f
+ 	ragged-bottom = ##f
 	ragged-last-bottom = ##t
 } 
 
@@ -53,7 +52,6 @@ year = #(strftime "©%Y" (localtime (current-time)))
 		\Score
 		\override BarLine #'transparent = ##t
 		\remove "Metronome_mark_engraver"
-		\override VerticalAxisGroup #'staff-staff-spacing = #'((basic-distance . 10) (stretchability . 100))
 	}
 	\context { 
 		\Staff
@@ -74,8 +72,8 @@ year = #(strftime "©%Y" (localtime (current-time)))
 global = { 
 	\key c \major
 	\time 4/2
-	\tempo 2 = 65
-	\set Staff.midiInstrument = "Choir Aahs"
+	\tempo 2 = 80
+	\set Staff.midiInstrument = "acoustic guitar (nylon)"
 	\accidentalStyle "forget"
 }
 
@@ -223,7 +221,7 @@ bass = \new Voice	{
 }
 
 \score {
-	\transpose c c {
+	\transpose c d {
 		\new StaffGroup << 
 			\set Score.proportionalNotationDuration = #(ly:make-moment 1 4)
 			\new Staff << \global \soprano \set Staff.instrumentName = #"S" \set Staff.shortInstrumentName = #"S" >> 
