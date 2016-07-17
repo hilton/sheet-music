@@ -1,4 +1,5 @@
 % Copyright ©2016 Peter Hilton - https://github.com/hilton
+% Based on CPDL #30531
 
 \version "2.18.2"
 revision = "1"
@@ -10,8 +11,8 @@ revision = "1"
 	#(define fonts (make-pango-font-tree "Century Schoolbook L" "Source Sans Pro" "Luxi Mono" (/ 15 20)))
 	annotate-spacing = ##f
 	two-sided = ##t
-	top-margin = 5\mm
-	bottom-margin = 5\mm
+	top-margin = 10\mm
+	bottom-margin = 10\mm
 	inner-margin = 15\mm
 	outer-margin = 15\mm
 	top-markup-spacing = #'( (basic-distance . 4) )
@@ -24,7 +25,12 @@ revision = "1"
 year = #(strftime "©%Y" (localtime (current-time)))
 
 \header {
-	poet = \markup \sans "Ave decus virginale"
+	title = \markup \medium \fontsize #7 \override #'(font-name . "Source Sans Pro Light") {
+		\center-column {
+			"Ave decus virginale"
+			\vspace #1
+		}
+	}
 	composer = \markup \sans \column \right-align { "Johannes Martini (1440 - 1497)" }
 	copyright = \markup \sans {
 		\vspace #2
@@ -50,11 +56,11 @@ year = #(strftime "©%Y" (localtime (current-time)))
 		\override BarNumber #'break-visibility = #'#(#f #t #t)
 		\override BarLine #'transparent = ##t
 		\remove "Metronome_mark_engraver"
-%		\override VerticalAxisGroup #'staff-staff-spacing = #'((basic-distance . 10) (stretchability . 100))
+		\override VerticalAxisGroup #'staff-staff-spacing = #'((basic-distance . 10) (stretchability . 100))
 	}
 	\context { 
 		\Staff
-		\remove "Time_signature_engraver"
+%		\remove "Time_signature_engraver"
 	}
 	\context { 
 		\StaffGroup
@@ -86,9 +92,20 @@ soprano = \new Voice	{
 		g2 r g a1 f2 g c d bes1 a2 bes r g a bes1 a2 d1 c2 d4 bes4. a8 a2
 		g8 f g2 a bes4 a2 g8 f e2 d r bes' a g c bes4 a4. g8 g2 f4 g2 r1 | r
 		
-		r | \time 3/2 r1. g2 g a
+		r | \time 3/2 r1. g2 g a bes1 a2 d1 c2 d bes c f, g a1 g f e2 |
+		f1 g2 a2. g4 bes2. a4 c2. bes4 bes1 a2 bes1 r2 g1 a2 bes1 a2 g d f1 e |
+		d r2 bes'1 a2 g c1 bes2 a1 g2 r f g bes a bes a2. g4 g1 f2 g1. | \showBarLine \bar "|."
 	}
 	\addlyrics {
+		A -- _ _ ve __ _ _ _ _ de -- cus vir -- gi -- _ na -- _ _ _ _ _ _ _ _ _ _ _ le__ _ _
+		tem -- plum de -- i spe -- ci -- a -- _ le 
+		per te fi -- at ve -- _ _ _ _ ni -- _ _ _ _ _ a -- _ _ _ le
+		om -- ne quod com -- _ mit -- _ ti -- _ mus.
+		Tu no -- bis es sin -- gu -- _ la -- _ _ _ _ _ ris
+		tu nos du -- cas stel -- _ _ _ la __ _ ma -- _ ris
+		tu nos sem -- per tu -- _ e -- a -- ris
+		en ad te con -- fu -- gi -- mus,
+		con -- _ fu -- _ _ _ _ gi -- _ mus.
 	}
 }
 
@@ -98,9 +115,20 @@ alto = \new Voice {
 		g4. a8 bes4. c8 d4. e8 f2 c d e1 d2 f1 f2 d bes c2. bes8 a g2 g' f d4 g2 f4 e2 d f |
 		d e d1 r2 a a2. bes c2 bes4 d2 c4 d e4. d8 d2 c4 d2 c bes | g 
 	
-		r2 r1 |	g2 g a bes1 a2
+		r2 r1 |	g2 g a bes1 a2 d1 c2 d4 e f g e2 d1 c2 d bes c f, g2. f4 a1. |
+		bes1 f' f2 d e f d2. e4 f1 d c2 d2. e4 f2 g1 f2 d2. c4 d2 a2. g4 a2 |
+		f1 f'2 g1 f4 e d2 e f d c a bes4 c d1 d d2 d1 d2 e d1 d1. |
 	}
 	\addlyrics {
+		A -- ve de -- _ _ cus vir -- gi -- na -- _ _ _ _ le
+		tem -- _ _ _ _ _ plum de -- _ i spe -- ci -- a -- _ le 
+		per __ _ _ te fi -- at __ _ ve -- _ ni -- _ a -- _ _ le
+		om -- ne quod com -- _ _ _ _ _ _ mit -- _ _ ti -- _ mus.
+		Tu no -- bis es __ _ sin -- gu -- la -- _ _ _ _ _ _ _ _ _ ris
+		tu __ _ nos du -- cas stel -- _ la __ _ ma -- _ ris
+		tu __ _ nos __ _ _ sem -- per tu -- _ _ e -- _ _ a -- ris
+		en __ _ _ ad __ _ _ te __ _ ad te __ _ con -- fu -- gi -- mus,
+		con -- fu -- gi -- mus.
 	}
 }
 
@@ -111,10 +139,20 @@ tenor = \new Voice {
 		d2. d4 d2 c1 bes a2 bes d c1 bes r r r r g2 a |
 		bes1 a2 d c1 d d2 r r1 r r2 bes a g | c
 		
-		bes4 a2 g f4 | g1 a2 r1. 
+		bes4 a2 g f4 | g1 r2 r1. r r g2 g a bes1 a2 d c2. bes4 d1 r2 |
+		d1 d2 c1 bes a2 bes d c1 bes r2 r1. g1 a2 bes1 a2 d1 c2 |
+		d1 d2 r1. bes1 a2 g c1 bes2 a2. g4 g1 f2 g a bes c a1 g1. |
 		
 	}
 	\addlyrics {
+		A -- ve de -- cus vir -- gi -- na -- le
+		tem -- plum de -- i spe -- ci -- a -- _ _ le 
+		per te fi -- at ve -- ni -- a -- le
+		om -- ne quod com -- _ mit -- ti -- _ mus.
+		Tu no -- bis es __ _ sin -- gu -- la -- ris
+		tu nos du -- cas stel -- la ma -- _ ris
+		tu nos sem -- per tu -- e -- a -- ris
+		en ad te con -- _ fu -- _ gi -- _ mus. __ _ _ _ _ _
 	}
 }
 
@@ -125,9 +163,19 @@ bass = \new Voice {
 		g2. a4 bes2 f1 d2 c1 bes f' g c, g'2. f8 e d2 g, g'2 a bes f |
 		g1 d a' d,2. bes f'2 g4 bes a2 g4 c2 bes4 a2 g4 g2 f4 g e2 c4
 		
-		d2 c4 bes a2 | g1 r2 r1. 
+		d2 c4 bes a2 | g1 r2 r1. r g2 g a bes1 a2 d g f d e1 d1. |
+		bes1 bes2 f'1 g f2 g bes f1 g2 g a bes1 a2 g e f g1 d a |
+		bes1. g1 d'2 g1 f2 g a f g d1 g, d'2 g f g c, d1 g,1. |
 	}
 	\addlyrics {
+		A -- ve de -- cus __ _ vir -- gi -- _ na -- _ _ _ _ _ _ _ _ le __ _ _ _ _
+		tem -- _ _ plum __ _ de -- i spe -- _ ci -- a -- _ _ le 
+		per te __ _ fi -- at ve -- ni -- _ a -- le
+		om -- _ _ ne __ _ quod __ _ com -- _ mit -- _ _ ti -- _ _ _ _ _ mus.
+		Tu no -- bis es __ _ sin -- _ gu -- _ la -- ris
+		tu nos du -- cas stel -- _ _ la ma -- ris
+		tu nos __ _ sem -- _ _ per tu -- e -- a -- ris
+		en ad __ _ te __ _ con -- fu -- _ gi -- _ mus. __ _ _ _ _ _
 	}
 }
 
