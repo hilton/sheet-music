@@ -2,7 +2,7 @@
 % Based on CPDL #30531
 
 \version "2.18.2"
-revision = "2"
+revision = "3"
 \pointAndClickOff
 
 #(set-global-staff-size 15.0)
@@ -39,15 +39,15 @@ year = #(strftime "©%Y" (localtime (current-time)))
 				Copyright \year \with-url #"http://hilton.org.uk" "Peter Hilton" -
 				\with-url #"http://creativecommons.org/licenses/by-nc-sa/3.0/" "CC BY-NC-SA 3.0" -
 				Lilypond source \with-url #"https://github.com/hilton/sheet-music" https://github.com/hilton/sheet-music - 
-				rev \revision 
+				revision \revision 
 			}
 		}
 	}
 	tagline = \markup { 
 		\vspace #2
 		\column {
-			\line { Hail, virginal honour, individual temple of God, through you may all the sins that we commit be pardoned. }
-			\line { You are remarkable to us, may you lead us, star of the sea, may you always watch over us, behold, we take refuge in you. }
+			\line { Hail, virginal honour, special temple of God, through you may all the sins we commit be pardoned. }
+			\line { You are extraordinary to us, may you lead us, star of the sea, may you always watch over us, look, we take refuge in you. }
 		}
 	}
 }
@@ -105,15 +105,15 @@ soprano = \new Voice	{
 		d r2 bes'1 a2 g c1 bes2 a1 g2 r f g bes a bes a2. g4 g1 f2 g1. | \showBarLine \bar "|."
 	}
 	\addlyrics {
-		A -- _ _ ve __ _ _ _ _ de -- cus vir -- gi -- _ na -- _ _ _ _ _ _ _ _ _ _ _ le__ _ _
-		tem -- plum de -- i spe -- ci -- a -- _ le 
+		A -- _ _ ve __ _ _ _ _ de -- cus vir -- gi -- _ ná -- _ _ _ _ _ _ _ _ _ _ _ le, __ _ _
+		tem -- plum Dé -- i spe -- ci -- a -- _ le, 
 		per te fi -- at ve -- _ _ _ _ ni -- _ _ _ _ _ a -- _ _ _ le
-		om -- ne quod com -- _ mit -- _ ti -- _ mus.
-		Tu no -- bis es sin -- gu -- _ la -- _ _ _ _ _ ris
-		tu nos du -- cas stel -- _ _ _ la __ _ ma -- _ ris
-		tu nos sem -- per tu -- _ e -- a -- ris
-		en ad te con -- fu -- gi -- mus,
-		con -- _ fu -- _ _ _ _ gi -- _ mus.
+		om -- ne quod com -- _ mít -- _ ti -- _ mus.
+		Tu no -- bis es sin -- gu -- _ lá -- _ _ _ _ _ ris,
+		tu nos dú -- cas, stel -- _ _ _ la __ _ ma -- _ ris,
+		tu nos sem -- per tu -- _ e -- á -- ris,
+		en, ad te con -- fú -- gi -- mus,
+		con -- _ fú -- _ _ _ _ gi -- _ mus.
 	}
 }
 
@@ -129,15 +129,15 @@ alto = \new Voice {
 		f1 f'2 g1 f4 e d2 e f d c a bes4 c d1 d d2 d1 d2 e d1 d1. |
 	}
 	\addlyrics {
-		A -- ve de -- _ _ cus vir -- gi -- na -- _ _ _ _ le
-		tem -- _ _ _ _ _ plum de -- _ i spe -- ci -- a -- _ le 
+		A -- ve de -- _ _ cus vir -- gi -- ná -- _ _ _ _ le,
+		tem -- _ _ _ _ _ plum Dé -- _ i spe -- ci -- a -- _ le,
 		per __ _ _ te fi -- at __ _ ve -- _ ni -- _ a -- _ _ le
-		om -- ne quod com -- _ _ _ _ _ _ mit -- _ _ ti -- _ mus.
-		Tu no -- bis es __ _ sin -- gu -- la -- _ _ _ _ _ _ _ _ _ ris
-		tu __ _ nos du -- cas stel -- _ la __ _ ma -- _ ris
-		tu __ _ nos __ _ _ sem -- per tu -- _ _ e -- _ _ a -- ris
-		en __ _ _ ad __ _ _ te __ _ ad te __ _ con -- fu -- gi -- mus,
-		con -- fu -- gi -- mus.
+		om -- ne quod com -- _ _ _ _ _ _ mít -- _ _ ti -- _ mus.
+		Tu no -- bis es __ _ sin -- gu -- lá -- _ _ _ _ _ _ _ _ _ ris,
+		tu __ _ nos dú -- cas, stel -- _ la __ _ ma -- _ ris,
+		tu __ _ nos __ _ _ sem -- per tu -- _ _ e -- _ _ á -- ris,
+		en, __ _ _ ad __ _ _ te __ _ ad te __ _ con -- fú -- gi -- mus,
+		con -- fú -- gi -- mus.
 	}
 }
 
@@ -155,14 +155,14 @@ tenor = \new Voice {
 		
 	}
 	\addlyrics {
-		A -- ve de -- cus vir -- gi -- na -- le
-		tem -- plum de -- i spe -- ci -- a -- _ _ le 
+		A -- ve de -- cus vir -- gi -- ná -- le,
+		tem -- plum Dé -- i spe -- ci -- a -- _ _ le,
 		per te fi -- at ve -- ni -- a -- le
-		om -- ne quod com -- _ mit -- ti -- _ mus.
-		Tu no -- bis es __ _ sin -- gu -- la -- ris
-		tu nos du -- cas stel -- la ma -- _ ris
-		tu nos sem -- per tu -- e -- a -- ris
-		en ad te con -- _ fu -- _ gi -- _ mus. __ _ _ _ _ _
+		om -- ne quod com -- _ mít -- ti -- _ mus.
+		Tu no -- bis es __ _ sin -- gu -- lá -- ris,
+		tu nos dú -- cas, stel -- la ma -- _ ris,
+		tu nos sem -- per tu -- e -- á -- ris,
+		en, ad te con -- _ fú -- _ gi -- _ mus. __ _ _ _ _ _
 	}
 }
 
@@ -179,14 +179,14 @@ bass = \new Voice {
 		bes1. g1 d'2 g1 f2 g a f g d1 g, d'2 g f g c, d1 g,1. |
 	}
 	\addlyrics {
-		A -- ve de -- cus __ _ vir -- gi -- _ na -- _ _ _ _ _ _ _ _ le __ _ _ _ _
-		tem -- _ _ plum __ _ de -- i spe -- _ ci -- a -- _ _ le 
+		A -- ve de -- cus __ _ vir -- gi -- _ ná -- _ _ _ _ _ _ _ _ le, __ _ _ _ _
+		tem -- _ _ plum __ _ Dé -- i spe -- _ ci -- a -- _ _ le,
 		per te __ _ fi -- at ve -- ni -- _ a -- le
-		om -- _ _ ne __ _ quod __ _ com -- _ mit -- _ _ ti -- _ _ _ _ _ mus.
-		Tu no -- bis es __ _ sin -- _ gu -- _ la -- ris
-		tu nos du -- cas stel -- _ _ la ma -- ris
-		tu nos __ _ sem -- _ _ per tu -- e -- a -- ris
-		en ad __ _ te __ _ con -- fu -- _ gi -- _ mus. __ _ _ _ _ _
+		om -- _ _ ne __ _ quod __ _ com -- _ mít -- _ _ ti -- _ _ _ _ _ mus.
+		Tu no -- bis es __ _ sin -- _ gu -- _ lá -- ris,
+		tu nos dú -- cas, stel -- _ _ la ma -- ris,
+		tu nos __ _ sem -- _ _ per tu -- e -- á -- ris,
+		en, ad __ _ te __ _ con -- fú -- _ gi -- _ mus. __ _ _ _ _ _
 	}
 }
 
