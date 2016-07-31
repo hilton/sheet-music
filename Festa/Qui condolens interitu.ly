@@ -16,7 +16,6 @@ revision = "2"
 	outer-margin = 15\mm
 	top-markup-spacing = #'( (basic-distance . 4) )
 	markup-system-spacing = #'( (padding . 4) )
-%	system-system-spacing = #'( (basic-distance . 20) (stretchability . 100) )
   	ragged-bottom = ##f
 	ragged-last-bottom = ##f
 } 
@@ -38,7 +37,7 @@ year = #(strftime "©%Y" (localtime (current-time)))
 				Copyright \year \with-url #"http://hilton.org.uk" "Peter Hilton" -
 				\with-url #"http://creativecommons.org/licenses/by-nc-sa/3.0/" "CC BY-NC-SA 3.0" -
 				Lilypond source \with-url #"https://github.com/hilton/sheet-music" https://github.com/hilton/sheet-music - 
-				Translation "Silvia Reseghetti -
+				Translation Silvia Reseghetti -
 				rev \revision 
 			}
 		}
@@ -61,7 +60,6 @@ year = #(strftime "©%Y" (localtime (current-time)))
 		\override BarNumber #'break-visibility = #'#(#f #t #t)
 		\override BarLine #'transparent = ##t
 		\remove "Metronome_mark_engraver"
-%		\override VerticalAxisGroup #'staff-staff-spacing = #'((basic-distance . 10) (stretchability . 100))
 	}
 	\context { 
 		\Staff
@@ -82,16 +80,15 @@ year = #(strftime "©%Y" (localtime (current-time)))
 global = { 
 	\key c \major
 	\time 3/2
-	\tempo 2 = 40
+	\tempo 2 = 50
 	\set Staff.midiInstrument = "Choir Aahs"
 	\accidentalStyle "forget"
 }
 
 showBarLine = { \once \override Score.BarLine #'transparent = ##f }
 ficta = { \once \set suggestAccidentals = ##t \override AccidentalSuggestion #'parenthesized = ##f }
-fictaParenthesized = { \once \set suggestAccidentals = ##t \override AccidentalSuggestion #'parenthesized = ##t }
 
-soprano = \new Voice	{
+soprano = \new Voice {
 	\relative c' {
 		r1. r e2. d8 c d2 c e g
 		e4. d16 e f4 e4. c8 c'2 b a4 g f e a2 g4. f16 e f e d c b4 c2 b4 c1
@@ -181,12 +178,12 @@ bass = \new Voice {
 		\new StaffGroup << 
 			\set Score.proportionalNotationDuration = #(ly:make-moment 1 12)
 			\set Score.barNumberVisibility = #all-bar-numbers-visible
-			\new Staff << \global \soprano \set Staff.instrumentName = #"S" \set Staff.shortInstrumentName = #"S" >> 
-			\new Staff << \global \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >> 
-			\new Staff << \global \tenor \set Staff.instrumentName = #"T" \set Staff.shortInstrumentName = #"T" >> 
-			\new Staff << \global \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >> 
+			\new Staff << \global \soprano \set Staff.instrumentName = #"S" \set Staff.shortInstrumentName = #"S" >>
+			\new Staff << \global \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >>
+			\new Staff << \global \tenor \set Staff.instrumentName = #"T" \set Staff.shortInstrumentName = #"T" >>
+			\new Staff << \global \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >>
 		>> 
 	}
 	\layout { }
-%	\midi {	}
+%	\midi { }
 }
