@@ -2,7 +2,7 @@
 % Based on CPDL #30531
 
 \version "2.18.2"
-revision = "3"
+revision = "4"
 \pointAndClickOff
 
 #(set-global-staff-size 15.0)
@@ -106,8 +106,8 @@ soprano = \new Voice	{
 	}
 	\addlyrics {
 		A -- _ _ ve __ _ _ _ _ de -- cus vir -- gi -- _ ná -- _ _ _ _ _ _ _ _ _ _ _ le, __ _ _
-		tem -- plum Dé -- i spe -- ci -- a -- _ le, 
-		per te fi -- at ve -- _ _ _ _ ni -- _ _ _ _ _ a -- _ _ _ le
+		tem -- plum Dé -- i spe -- ci -- á -- _ le, 
+		per te fi -- at ve -- _ _ _ _ ni -- _ _ _ _ _ á -- _ _ _ le
 		om -- ne quod com -- _ mít -- _ ti -- _ mus.
 		Tu no -- bis es sin -- gu -- _ lá -- _ _ _ _ _ ris,
 		tu nos dú -- cas, stel -- _ _ _ la __ _ ma -- _ ris,
@@ -130,8 +130,8 @@ alto = \new Voice {
 	}
 	\addlyrics {
 		A -- ve de -- _ _ cus vir -- gi -- ná -- _ _ _ _ le,
-		tem -- _ _ _ _ _ plum Dé -- _ i spe -- ci -- a -- _ le,
-		per __ _ _ te fi -- at __ _ ve -- _ ni -- _ a -- _ _ le
+		tem -- _ _ _ _ _ plum Dé -- _ i spe -- ci -- á -- _ le,
+		per __ _ _ te fi -- at __ _ ve -- _ ni -- _ á -- _ _ le
 		om -- ne quod com -- _ _ _ _ _ _ mít -- _ _ ti -- _ mus.
 		Tu no -- bis es __ _ sin -- gu -- lá -- _ _ _ _ _ _ _ _ _ ris,
 		tu __ _ nos dú -- cas, stel -- _ la __ _ ma -- _ ris,
@@ -156,8 +156,8 @@ tenor = \new Voice {
 	}
 	\addlyrics {
 		A -- ve de -- cus vir -- gi -- ná -- le,
-		tem -- plum Dé -- i spe -- ci -- a -- _ _ le,
-		per te fi -- at ve -- ni -- a -- le
+		tem -- plum Dé -- i spe -- ci -- á -- _ _ le,
+		per te fi -- at ve -- ni -- á -- le
 		om -- ne quod com -- _ mít -- ti -- _ mus.
 		Tu no -- bis es __ _ sin -- gu -- lá -- ris,
 		tu nos dú -- cas, stel -- la ma -- _ ris,
@@ -180,8 +180,8 @@ bass = \new Voice {
 	}
 	\addlyrics {
 		A -- ve de -- cus __ _ vir -- gi -- _ ná -- _ _ _ _ _ _ _ _ le, __ _ _ _ _
-		tem -- _ _ plum __ _ Dé -- i spe -- _ ci -- a -- _ _ le,
-		per te __ _ fi -- at ve -- ni -- _ a -- le
+		tem -- _ _ plum __ _ Dé -- i spe -- _ ci -- á -- _ _ le,
+		per te __ _ fi -- at ve -- ni -- _ á -- le
 		om -- _ _ ne __ _ quod __ _ com -- _ mít -- _ _ ti -- _ _ _ _ _ mus.
 		Tu no -- bis es __ _ sin -- _ gu -- _ lá -- ris,
 		tu nos dú -- cas, stel -- _ _ la ma -- ris,
