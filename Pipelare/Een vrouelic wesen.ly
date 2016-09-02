@@ -18,7 +18,7 @@ revision = "4"
 	top-markup-spacing = #'( (basic-distance . 4) )
 	markup-system-spacing = #'( (padding . 4) )
 	system-system-spacing = #'( (basic-distance . 20) (stretchability . 100) )
-  	ragged-bottom = ##f
+	ragged-bottom = ##f
 	ragged-last-bottom = ##t
 } 
 
