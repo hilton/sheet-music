@@ -1,3 +1,6 @@
+% CPDL #33475
+% Copyright ©2013 Peter Hilton - https://github.com/hilton
+
 \version "2.14.2"
 
 \header {
