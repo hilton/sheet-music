@@ -66,10 +66,6 @@ year = #(strftime "©%Y" (localtime (current-time)))
 		\override VerticalAxisGroup #'staff-staff-spacing = #'((basic-distance . 10) (stretchability . 100))
 	}
 	\context { 
-		\Staff
-%		\remove "Time_signature_engraver"
-	}
-	\context { 
 		\StaffGroup
 		\remove "Span_bar_engraver"	
 	}
@@ -91,7 +87,6 @@ global = {
 
 showBarLine = { \once \override Score.BarLine #'transparent = ##f }
 ficta = { \once \set suggestAccidentals = ##t \override AccidentalSuggestion #'parenthesized = ##f }
-fictaParenthesized = { \once \set suggestAccidentals = ##t \override AccidentalSuggestion #'parenthesized = ##t }
 singleDigitTime = { \override Staff.TimeSignature.style = #'single-digit }
 
 soprano = \new Voice	{
