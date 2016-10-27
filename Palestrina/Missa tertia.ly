@@ -1,7 +1,7 @@
 % Copyright ©2016 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "1"
+revision = "2"
 \pointAndClickOff
 
 #(set-global-staff-size 15.0)
@@ -16,7 +16,7 @@ revision = "1"
 	outer-margin = 15\mm
 	top-markup-spacing = #'( (basic-distance . 4) )
 	markup-system-spacing = #'( (padding . 4) )
-	system-system-spacing = #'( (basic-distance . 20) (stretchability . 100) )
+	system-system-spacing = #'( (basic-distance . 20) (padding . 4) (stretchability . 100) )
 	ragged-bottom = ##f
 	ragged-last-bottom = ##f
 } 
@@ -55,7 +55,7 @@ year = #(strftime "©%Y" (localtime (current-time)))
 		\override BarNumber #'break-visibility = #'#(#f #t #t)
 		\override BarLine #'transparent = ##t
 		\remove "Metronome_mark_engraver"
-		\override VerticalAxisGroup #'staff-staff-spacing = #'((basic-distance . 15) (stretchability . 100))
+		\override VerticalAxisGroup #'staff-staff-spacing = #'((basic-distance . 15) (padding . 6) (stretchability . 100))
 	}
 	\context { 
 		\Staff
