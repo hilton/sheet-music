@@ -1,7 +1,7 @@
 % Copyright ©2016 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "2"
+revision = "3"
 \pointAndClickOff
 
 #(set-global-staff-size 15.0)
@@ -18,19 +18,19 @@ revision = "2"
 	markup-system-spacing = #'( (padding . 4) )
 	system-system-spacing = #'( (basic-distance . 20) (padding . 4) (stretchability . 100) )
 	ragged-bottom = ##f
-	ragged-last-bottom = ##f
+	ragged-last-bottom = ##t
 } 
 
 year = #(strftime "©%Y" (localtime (current-time)))
 
 \header {
-	title = \markup \medium \fontsize #7 \override #'(font-name . "Source Sans Pro Light") {
-		\center-column {
-			"Missa tertia (O magnum mysterium)"
-			\vspace #1
-		}
-	}
-	composer = \markup \sans \column \right-align { "Giovanni Pierluigi da Palestrina (1525-1594)" }
+%	title = \markup \medium \fontsize #7 \override #'(font-name . "Source Sans Pro Light") {
+%		\center-column {
+%			"Missa tertia (O magnum mysterium)"
+%			\vspace #1
+%		}
+%	}
+%	composer = \markup \sans \column \right-align { "Giovanni Pierluigi da Palestrina (1525-1594)" }
 	copyright = \markup \sans {
 		\vspace #2
 		\column \center-align {
@@ -55,7 +55,7 @@ year = #(strftime "©%Y" (localtime (current-time)))
 		\override BarNumber #'break-visibility = #'#(#f #t #t)
 		\override BarLine #'transparent = ##t
 		\remove "Metronome_mark_engraver"
-		\override VerticalAxisGroup #'staff-staff-spacing = #'((basic-distance . 15) (padding . 6) (stretchability . 100))
+		\override VerticalAxisGroup #'staff-staff-spacing = #'((basic-distance . 10) (padding . 6) (stretchability . 100))
 	}
 	\context { 
 		\Staff
@@ -100,6 +100,7 @@ cantus = \new Voice	{
 		c as bes c2 bes4 as2 as g g4. as8 bes4 c8 d es c d4
 		c2 r4 es2 d4 c2 b4 c4 as4. g8 g2 f4 g c d
 		es c d es c2 d2. ~ \time 4/4 d1 \showBarLine \bar "|."
+		\pageBreak
 	}
 }
 
@@ -202,7 +203,7 @@ cantus = \new Voice	{
 altusA = \new Voice {
 	\relative c' {
 		bes'2 bes4 as2 g4 g2 f4 g2 r4 R2. R
-		bes2 as4 g2 f4 es'4. f8 g4 as2 g4 f2 r4 R2. as2 g4
+		bes2 as4 g2 f4 es4. f8 g4 as2 g4 f2 r4 R2. as2 g4
 		
 		f es f d4. es8 c4 es4 d c d es2 r4 f es d2 c4 bes2 c4
 		bes bes'2 bes r4 as2 g4 f2 e4 f2 d4 c g' f es4. c8 d4
