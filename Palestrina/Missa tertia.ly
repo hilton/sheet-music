@@ -1,7 +1,7 @@
 % Copyright ©2016 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "3"
+revision = "4"
 \pointAndClickOff
 
 #(set-global-staff-size 15.0)
@@ -16,7 +16,7 @@ revision = "3"
 	outer-margin = 15\mm
 	top-markup-spacing = #'( (basic-distance . 4) )
 	markup-system-spacing = #'( (padding . 4) )
-	system-system-spacing = #'( (basic-distance . 20) (padding . 4) (stretchability . 100) )
+	system-system-spacing = #'( (basic-distance . 20) (stretchability . 100) )
 	ragged-bottom = ##f
 	ragged-last-bottom = ##t
 } 
@@ -55,7 +55,7 @@ year = #(strftime "©%Y" (localtime (current-time)))
 		\override BarNumber #'break-visibility = #'#(#f #t #t)
 		\override BarLine #'transparent = ##t
 		\remove "Metronome_mark_engraver"
-		\override VerticalAxisGroup #'staff-staff-spacing = #'((basic-distance . 10) (padding . 6) (stretchability . 100))
+		\override VerticalAxisGroup #'staff-staff-spacing = #'((basic-distance . 10) (stretchability . 100))
 	}
 	\context { 
 		\Staff
@@ -90,7 +90,7 @@ fictaParenthesized = { \once \set suggestAccidentals = ##t \override AccidentalS
 
 cantus = \new Voice	{
 	\relative c'' {
-		R2. R R es2 d4 c2 bes4
+		R2. R R es4 es d4 c2 bes4
 		bes2 a4 bes2 f'4 bes, es d es2 r4 es2 d4
 		
 		c2 b4 c2 as4 g bes2 as4 g2 as4 g2
@@ -102,27 +102,45 @@ cantus = \new Voice	{
 		es c d es c2 d2. ~ \time 4/4 d1 \showBarLine \bar "|."
 		\pageBreak
 	}
+	\addlyrics {
+		O san -- na in ex -- cel -- _ 
+		sis, O san -- _ _ na, O __ _ _ _ san -- _ 
+		na in __ _ ex -- _ cel -- _ sis,
+		
+		O __ _ san -- na in ex -- cel -- _ _ _ _ _ _ _ _ sis, O __ _ san -- _ na 
+		in ex -- cel -- sis, O san -- _ _ _ _ _ _ _ na, O __ _ san -- _ 
+		na in ex -- cel -- _ sis, in ex -- cel -- _ sis, ex -- cel -- sis.
+	}
 }
 
 altusA = \new Voice {
 	\relative c' {
-		es2 d4 c2 bes4 c2 as4 bes4 bes'4. as8 g4 as f
+		es4 es d4 c2 bes4 c2 as4 bes4 bes'4. as8 g4 as f
 		g2 f4 d4. d8 c4 es4 bes' as g2 f4 es8 f g as bes4
 		
 		as4 g4. f8 es2 d4 es g f es r r r es d
 		c2 b4 c4 f g as bes g as2 g4 g2 r4
-		as2 g4 f es f g2 f4 es4. f8 g4 as g2
+		as as g4 f es f g2 f4 es4. f8 g4 as g2
 		
 		es4 f g c,1. R2. r4 bes'2 as4 g2
 		as4 g f g4. es8 f4 es c r r r d es c2 c b4
 		c4 g'2 g g4 g2. g1
 	}
+	\addlyrics {
+		O san -- na in ex -- cel -- _ sis, O __ _ san -- _ na in ex -- 
+		cel -- sis, O san -- _ _ na, O san -- _ _ _ _ na in ex -- cel -- _ 
+		_ _ _ sis, O __ _ san -- _ na in ex -- cel -- sis, O san -- _ 
+		
+		na, O san -- na in __ _ ex -- cel -- sis, in __ _ ex -- cel -- _ sis, ex -- cel -- 
+		sis, O __ _ _ _ san -- na in __ _ ex -- cel -- sis,
+		O __ _ san -- na in ex -- cel -- sis, ex -- cel -- sis.
+	}
 }
 
 altusB = \new Voice {
 	\relative c' {
-		g'2 g4 f2 es4 es2 d4 es2 r4 R2.
-		R r4 bes' as g2 f4 es8 f g as bes4 as g4. f8
+		g'4 g g4 f2 es4 es2 d4 es2 r4 R2.
+		R r4 bes' as g g f4 es8 f g as bes4 as g4. f8
 		
 		es4. d16 c d4 c d f bes,2. c2 d4 es r r
 		R2. as2 g4 f2 e4 f2 d4 es c d
@@ -132,12 +150,21 @@ altusB = \new Voice {
 		es2 c4 bes bes' bes g2 g4 es f d c2 r4 es2 d4
 		c2 b4 c es2 d2. ~ d1
 	}
+	\addlyrics {
+		O san -- na in ex -- cel -- _ sis,
+		in ex -- cel -- sis, O san -- _ _ _ _ na in ex -- cel -- _ _ _ sis, in ex -- 
+		cel -- _ _ sis, O __ _ _ _ san --  _
+		
+		na, O __ _ san -- _ na in __ _ ex -- _ cel -- _ _ sis, in __ _ ex -- cel -- sis,
+		O __ _ _ _ san -- _ na, O __ _ san -- _ _ _ na in ex -- cel -- sis, 
+		O san -- _ na in __ _ ex -- _ cel -- _ sis.
+	}
 }
 
 tenor = \new Voice {
 	\relative c' {
 		\clef "treble_8"
-		R2. R R g'2 f4 es2 d4
+		R2. R R g'4 g f4 es2 d4
 		es2 c4 bes g as bes2 r4 es2 d4 c2 bes4
 		
 		c4. bes8 g4 as4. g8 f4 es r r es'2 d4 c2 b4
@@ -148,13 +175,22 @@ tenor = \new Voice {
 		c2 as4 g2 r4 es'2 d4 c2 b4 c as2 g2.
 		es'2 d4 c2. b2. ~ b1
 	}
+	\addlyrics {
+		O san -- na in ex -- cel -- _
+		_ _ _ sis, O __ _ san -- na in __ _ ex -- cel -- _ _
+		sis, O __ _ san -- _ na in ex -- cel -- sis, in __ _ ex -- cel -- _ _
+
+		sis, O __ _ san -- _ na, O san -- na in __ _
+		ex -- _ cel -- _ _ _ sis, O __ _ _ _ san -- _ na in __ _
+		ex -- _ cel -- _ sis, in ex -- cel -- sis.
+	}
 }
 
 
 bassus = \new Voice {
 	\relative c' {
 		\clef bass
-		c2 bes4 as2 g4 as2 f4 es8 f g as bes4 c as bes
+		c4 c bes4 as2 g4 as2 f4 es8 f g as bes4 c as bes
 		es,2 f4 g4. es8 f4 es2 r4 R2. R 
 		
 		R R es2 d4 c2 b4 c8 d es f g4
@@ -164,6 +200,15 @@ bassus = \new Voice {
 		as2 g4 f2 e4 f4. g8 as bes c2 b4 c r r R2. 
 		R es,2 bes'4 c2 g4 as f g c, f2 c g'4
 		c,4 c g' c, c2 g'2. ~ g1
+	}
+	\addlyrics {
+		O san -- na in ex -- cel -- sis, in __ _ _ _ ex -- cel -- _ _ sis, ex -- 
+		cel -- _ _ sis,
+		O __ _ san -- na in __ _ _ _ ex -- cel -- _ _ _ sis, in ex -- cel -- _ 
+		
+		sis, O __ _ san -- na, O san -- _ _ na, O __ _
+		san -- na in __ _ ex -- _ cel -- _ sis, O __ _ san -- na 
+		in __ _ ex -- _ cel -- sis, O san -- na in ex -- cel -- sis.
 	}
 }
 
@@ -191,46 +236,78 @@ bassus = \new Voice {
 
 cantus = \new Voice	{
 	\relative c'' {
-		R2. R R es2 d4 c2 b4 c2 as4
-		g2 c4 bes4. as8 bes4 c2 r4 R2. R es2 d4 c2 bes4
+		R2. R R es4 es d4 c2 b4 c2 as4
+		g2 c4 bes4. as8 bes4 c2 r4 R2. R es4 es d4 c2 bes4
 				
 		c2 as4 g2 c4 bes4. as8 c4 bes2 a4 bes2. ~ bes2 r4 R2.
 		R es2 d4 c2 b4 c as g c2 b4 c2 r4 es2 d4
-		c2 c4 bes2 r4 es2 d4 c2 b4 c2 c4 \time 4/4 d1 \showBarLine \bar "|."
+		c2. bes2 r4 es2 d4 c2 b4 c2. \time 4/4 d1 \showBarLine \bar "|."
+	}
+	\addlyrics {
+		O san -- na in ex -- cel -- _
+		sis, O san -- _ _ na, O san -- na in ex -- 
+		cel -- _ sis, O san -- _ _ _ _ na,
+		
+		O __ _ san -- _ na in ex -- cel -- _ sis, O __ _
+		san -- na in __ _ ex -- _ cel -- sis.
 	}
 }
 
 altusA = \new Voice {
 	\relative c' {
-		bes'2 bes4 as2 g4 g2 f4 g2 r4 R2. R
+		bes'4 bes bes4 as2 g4 g2 f4 g2 r4 R2. R
 		bes2 as4 g2 f4 es4. f8 g4 as2 g4 f2 r4 R2. as2 g4
 		
 		f es f d4. es8 c4 es4 d c d es2 r4 f es d2 c4 bes2 c4
 		bes bes'2 bes r4 as2 g4 f2 e4 f2 d4 c g' f es4. c8 d4
-		es2 c4 r es d c2 b4 c2 d4 es2 es4 d1
+		es2 c4 r es d c2 b4 c2 d4 es2. d1
+	}
+	\addlyrics {
+		O san -- na in ex -- cel -- _ sis,
+		O __ _ san -- na in __ _ ex -- cel -- _ sis, O __ _
+		san -- _ na in __ _ ex -- _ cel -- _ _ sis, O __ _ san -- na in ex -- 
+		
+		cel -- _ sis, O __ _ san -- na in ex -- cel -- _ _ _ _ _
+		_ sis, in __ _ _ _ ex -- _ cel -- sis.
 	}
 }
 
 altusB = \new Voice {
 	\relative c' {
-		g'2 f4 es2 d4 es2 c4 bes bes' bes g2 g4 es2 f4
+		g'4 g f4 es2 d4 es2 c4 bes bes' bes g2 g4 es2 f4
 		bes,2 r4 es2 d4 c2 bes4 f'2 g4 as2 f4 as g4. f8 es d es4. d8
 
 		c bes c2 bes4 bes' as g2 f4 g2 es4 d4. es16 f g4 f2 r4 bes2 as4
 		g2 f4 g2. es4 f d c c'4. bes8 as2 g4 g r bes as g2
-		as4 g8 es f4 g g f es g2 g g4 g2. ~ g1
+		as4 g8 es f4 g g f es g2 g2. g2. ~ g1
+	}
+	\addlyrics {
+		O san -- na in ex -- cel -- _ sis, in ex -- cel -- sis, __ _ _
+		_ O __ _ san -- na in ex -- cel -- _ sis, O __ _ _ _ san -- _
+		_ _ _ na in ex -- cel -- _ _ _ _ _ _ _ sis, in ex -- 
+		
+		cel -- _ sis, O san -- _ na in ex -- cel -- _ sis, O __ _ san -- 
+		na in __ _ _ ex -- cel -- _ sis, ex -- cel -- sis.
 	}
 }
 
 tenor = \new Voice {
 	\relative c' {
 		\clef "treble_8"
-		es2 d4 c2 b4 c2 as4 g g' f es2 d4 c as8 bes c d
+		es4 es d4 c2 b4 c2 as4 g g' f es2 d4 c as8 bes c d
 		es2 as,4 es2 r4 r es'2 d4 c2 c4 as bes c c b c4. d8 es4
 
 		as,2 f4 g2 as4 es g as g c2 bes r4 r f'2 es4 d f
 		es4. d16 c d4 es4. d8 bes4 c2 r4 R2. R es2 d4 c2 b4
 		c2 as4 g4. as8 bes4 g2 r4 es'2 d4 c2. b1
+	}
+	\addlyrics {
+		O san -- na in ex -- cel -- _ sis, in ex -- cel -- _ sis, O __ _ _ _
+		san -- _ na, O san -- na, O san -- _ na in ex -- cel -- _ _
+		_ _ sis, O san -- _ _ _ _ na, O san -- _ na 
+		
+		in __ _ _ ex -- cel -- _ _ sis, O __ _ san -- na 
+		in ex -- cel -- _ _ sis, in ex -- cel -- sis.
 	}
 }
 
@@ -238,12 +315,20 @@ tenor = \new Voice {
 bassus = \new Voice {
 	\relative c {
 		\clef bass
-		R2. R R es2 bes'4 c2 g4 as2 f4
+		R2. R R es4 es bes'4 c2 g4 as2 f4
 		es2 r4 R2. as2 g4 f2 e4 f2 des4 c8 \ficta d! es f g4 as2 es4
 		
 		R2. R R R R bes'2 as4 g2 f4
 		g es bes' es,4. f8 g4 as4 f g as f c' f,2 g4 c,2 r4 R2.
-		R es2 bes4 c8 d es f g4 c,2 g'4 c,2 c4 g'1
+		R es2 bes4 c8 d es f g4 c,2 g'4 c,2. g'1
+	}
+	\addlyrics {
+		O san -- na in ex -- cel -- _
+		sis, O __ _ san -- na in ex -- cel -- _ _ _ _ _ sis,
+		O __ _ san -- na
+
+		in __ _ ex -- cel -- _ _ _ _ _ _ _ _ _ _ sis,
+		in ex -- cel -- _ _ _ sis, in ex -- cel -- sis.
 	}
 }
 
