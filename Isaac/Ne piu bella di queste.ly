@@ -1,7 +1,7 @@
 % Copyright ©2016 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "2"
+revision = "3"
 \pointAndClickOff
 
 #(set-global-staff-size 16.0)
@@ -124,7 +124,7 @@ soprano = \new Voice	{
 		E per ma -- "re e" per ter -- _ ra
 		O di ma -- "no o" d’in -- ge -- _ _ gno.
 		Fe -- li -- "ce in" og -- ni __ _ par -- _ _ te,
-		Toc -- can -- do il ciel col -- la su -- per -- ba chio -- _ _ ma,
+		Toc -- can -- do il ciel col -- la su -- per -- ba chi -- o -- ma,
 		Fio -- ren -- za bel -- la fig -- _ _ liuo -- la __ _ di Ro -- _ _ ma.
 	}
 	\addlyrics {
@@ -183,7 +183,7 @@ alto = \new Voice {
 		O di ma -- "no o" d’in -- ge -- _ _ _ gno.
 		So -- la pas -- se -- "rai el" __ _ se -- _ _ gno
 		Fe -- li -- "ce in" og -- ni __ _ par -- _ _ te,
-		Toc -- can -- do il ciel col -- la su -- per -- ba chio -- _ _ ma,
+		Toc -- can -- do il ciel col -- la su -- per -- ba chi -- o -- ma,
 		Fio -- ren -- za bel -- la fig -- _ liuo -- _ la __ _ di Ro -- _ ma.
 	}
 	\addlyrics {
@@ -243,7 +243,7 @@ tenor = \new Voice {
 		In tut -- te le buo -- _ "ne ar" -- _ te
 		O di ma -- "no o" d’in -- ge -- _ _ _ gno.
 		So -- la pas -- se -- "rai el" __ _ se -- _ _ _ _ gno
-		gno -- "do el" cie -- lo col -- _ la su -- per -- ba chio -- _ _ ma,
+		Toc -- can -- do il ciel col -- la su -- per -- ba chi -- o -- _ _ ma,
 		Fio -- ren -- za bel -- la fig -- _ liuo -- la __ _ di Ro -- _ _ ma.
 	}
 	\addlyrics {
@@ -304,7 +304,7 @@ bass = \new Voice {
 		In tut -- te le buo -- _ _ ne ar -- te
 		O di ma -- "no o" d’in -- ge -- _ _ _ gno.
 		Fe -- li -- "ce in" og -- ni __ _ par -- _ _ te,
-		Toc -- can -- do il ciel con la su -- per -- ba chio -- _ _ ma,
+		Toc -- can -- do il ciel con la su -- per -- ba chi -- o -- ma,
 		Fio -- ren -- za bel -- la fig -- _ liuo -- la di Ro -- _ _ ma.
 	}
 	\addlyrics {
