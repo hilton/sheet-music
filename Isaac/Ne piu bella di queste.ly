@@ -1,7 +1,7 @@
 % Copyright ©2016 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "3"
+revision = "4"
 \pointAndClickOff
 
 #(set-global-staff-size 16.0)
@@ -92,7 +92,7 @@ soprano = \new Voice	{
 		f1 \fermata r r r r g2 g4 g a2 g4 a g c2 \ficta b4 c1 \fermata \showBarLine \bar "|"
 		\singleDigitTime \time 3/2 \tempo 1. = 50 a2 a a
 		bes1 bes2 a1 a2 g \[ f g a \] f1 e1 r2 \showBarLine \bar "|"
-		\time 2/2 \tempo 1 = 50 e2 e4 e d2 d c4. d8 e4 f g bes! a g2 f e4 f1 \showBarLine \bar "|."
+		\time 2/2 \tempo 1 = 50 e2 e4 e d2 d c4. d8 e4 f g bes! a g g f2 e4 f1 \showBarLine \bar "|."
 	}
 	\addlyrics {
 		\set stanza = #"1. "
@@ -103,7 +103,7 @@ soprano = \new Voice	{
 		Ve -- de -- te qui Mi -- ner -- _ _ va,
 		E’l mar -- ti -- al fu -- _ ro -- _ _ re,
 		Do -- ma con l’a -- re -- "te et" con la sa -- pien -- _ _ za,
-		Ve -- nu -- "te in" -- sie -- "me ad" a -- _ _ bi -- tar __ _ Fio -- ren -- _ _ za.
+		Ve -- nu -- "te in" -- sie -- "me ad" a -- _ _ bi -- tar __ _ Fi -- o -- ren -- _ _ za.
 	}
 	\addlyrics {
 		\set stanza = #"2. "
@@ -114,18 +114,18 @@ soprano = \new Voice	{
 		Te -- ner don -- ne e ma -- ri -- _ ti
 		Ter -- rà sen -- za dis -- _ cor -- _ di -- a,
 		Fa -- "rà il" po -- pol fio -- rir fuor d’o -- "gni u" -- san -- _ _ za
-		Sa -- "no e" ga -- gliar -- "do e" sem -- _ _ "pre in" ab -- _ bon -- dan -- _ _ za.
+		Sa -- "no e" ga -- gliar -- "do e" sem -- _ _ "pre in" ab -- _ bon -- _ dan -- _ _ za.
 	}
 	\addlyrics {
 		\set stanza = #"3. "
 		Mi -- ner -- va sag -- gia ci da -- rà vit -- to -- _ _ _ _ ria
 		Con -- "tro à" ni -- mi -- "ci in" guer -- _ ra,
-		Fa -- rac -- ci trion -- far con som -- ma __ _ glo -- _ _ _ _ ria
+		Fa -- rac -- ci tri -- on -- far con som -- ma glo -- ri -- _ _ _ a
 		E per ma -- "re e" per ter -- _ ra
 		O di ma -- "no o" d’in -- ge -- _ _ gno.
 		Fe -- li -- "ce in" og -- ni __ _ par -- _ _ te,
 		Toc -- can -- do il ciel col -- la su -- per -- ba chi -- o -- ma,
-		Fio -- ren -- za bel -- la fig -- _ _ liuo -- la __ _ di Ro -- _ _ ma.
+		Fio -- ren -- za bel -- la fig -- _ _ liuo -- la __ _ di __ _ Ro -- _ _ ma.
 	}
 	\addlyrics {
 		\set stanza = #"4. "
@@ -133,10 +133,10 @@ soprano = \new Voice	{
 		In bal -- "li e’n" no -- "ze e’n" mo -- _ stre,
 		In va -- rie fog -- "gie e’n" nuo -- ve so -- pra -- ve -- _ _ _ _ ste,
 		In tor -- nia -- men -- "ti e’n" gio -- _ stre
-		Tut -- te don -- "ne et" don -- zel -- _ _ le.
-		Fa -- rà dol -- ce con -- qui -- sta _ _ _
+		Tut -- te __ _ don -- ne et don -- zel -- le.
+		Fa -- rà dol -- ce con -- _ qui -- _ _ sta
 		Ter -- rà sem -- pre Fio -- ren -- "za in" can -- "to e" ri -- _ _ so
-		Et di -- ras -- si Fio -- ren -- _ _ "za è’l" pa -- _ ra -- di -- _ _ so.
+		Et di -- ras -- si Fio -- ren -- _ _ "za è’l" pa -- _ ra -- _ di -- _ _ so.
 	}
 }
 
@@ -160,11 +160,11 @@ alto = \new Voice {
 		Che gl’in -- ge -- gni con -- _ ser -- _ _ va,
 		E’l mar -- ti -- al fu -- _ ro -- _ _ re,
 		Do -- ma con l’a -- re -- "te et" col -- la sa -- pien -- _ _ za
-		Ve -- nu -- "te in" -- sie -- "me ad" a -- _ bi -- _ tar __ _ Fio -- ren -- _ za.
+		Ve -- nu -- "te in" -- sie -- "me ad" a -- _ bi -- _ tar __ Fi -- o -- ren -- _ za.
 	}
 	\addlyrics {
 		\set stanza = #"2. "
-		Fi -- o -- ren -- za, tu sa -- rai la più fa -- mo -- _ _ sa
+		Fi -- o -- ren -- za, tu sa -- rai la più fa -- _ mo -- _ sa
 		Cit -- tà che ve -- "ga il" so -- _ le;
 		Di lor pre -- sen -- za sa -- rai glo -- ri -- o -- _ _ _ sa.
 		Ju -- non tuo sta -- to vuo -- _ le
@@ -172,19 +172,19 @@ alto = \new Voice {
 		E cit -- ta -- di -- ni __ _ u -- _ ni -- ti
 		Ter -- rà sen -- za dis -- _ cor -- _ di -- a,
 		Fa -- "rà il" po -- pol fio -- rir fuor d’o -- "gni u" -- san -- _ _ za
-		Sa -- "no e" ga -- gliar -- "do e" sem -- _ "pre in" _ ab -- _ bon -- dan -- _ za.
+		Sa -- "no e" ga -- gliar -- "do e" sem -- _ "pre in" _ ab -- bon -- _ dan -- _ za.
 	}
 	\addlyrics {
 		\set stanza = #"3. "
 		Mi -- ner -- va sag -- gia ci da -- rà vit -- to -- _ _ _ ria
 		Con -- "tro à" ni -- mi -- "ci in" guer -- _ ra,
-		Fa -- rac -- ci trion -- far con som -- ma __ _ glo -- _ _ _ ria
+		Fa -- rac -- ci tri -- on -- far con som -- ma glo -- _ ri -- _ a
 		E per ma -- "re e" per ter -- _ ra
 		O di ma -- "no o" d’in -- ge -- _ _ _ gno.
 		So -- la pas -- se -- "rai el" __ _ se -- _ _ gno
 		Fe -- li -- "ce in" og -- ni __ _ par -- _ _ te,
 		Toc -- can -- do il ciel col -- la su -- per -- ba chi -- o -- ma,
-		Fio -- ren -- za bel -- la fig -- _ liuo -- _ la __ _ di Ro -- _ ma.
+		Fio -- ren -- za bel -- la fig -- _ liuo -- _ la di __ _ Ro -- _ ma.
 	}
 	\addlyrics {
 		\set stanza = #"4. "
@@ -192,11 +192,11 @@ alto = \new Voice {
 		In bal -- "li e’n" no -- "ze e’n" mo -- _ stre,
 		In va -- rie fog -- "gie e’n" nuo -- ve so -- pra -- ve -- _ _ _ ste,
 		In tor -- nia -- men -- "ti e’n" gio -- _ stre
-		Tut -- te don -- "ne et" don -- zel -- _ _ _ le.
+		Tut -- te __ _ don -- ne et don -- _ zel -- le.
 		Con a -- mo -- ro -- sa __ _ vi -- _ _ sta
-		Fa -- rà dol -- ce con -- qui -- sta _ _ _
+		Fa -- rà dol -- ce con -- _ qui -- _ _ sta
 		Ter -- rà sem -- pre Fio -- ren -- "za in" can -- "to e" ri -- _ _ so
-		Et di -- ras -- si Fio -- ren -- _ "za è’l" _ pa -- _ ra -- di -- _ so.
+		Et di -- ras -- si Fio -- ren -- _ "za è’l" _ pa -- ra -- _ di -- _ so.
 	}
 }
 
@@ -209,7 +209,7 @@ tenor = \new Voice {
 		}
 		\ficta e!2 e4 e f2 e4 d2 c \ficta b4 c2 r f2 f4 f f2 e4. d8 c4 d c2
 		c r a a4 a bes2 a4 c bes8 a g f g2 f1 r r r r \singleDigitTime f2 f f
-		bes2. c4 d e f1 f2 e f \[ e c d1 \] g, r2 g g4 g f2 f f' e4 d c g a c2 \ficta b4 c2 c1
+		bes2. c4 d e f1 f2 e f \[ e c d1 \] g, r2 g g4 g f2 f f' e4 d c g a c c \ficta b4 c2 c1
 	}
 	\addlyrics {
 		Né più bel -- la di que -- ste, ne più de -- _ _ _ gna
@@ -220,7 +220,7 @@ tenor = \new Voice {
 		Ve -- de -- te qui Mi -- _ ner -- _ _ va,
 		Che gl’in -- ge -- gni con -- _ ser -- _ _ _ _ va,
 		Do -- ma con l’a -- _ re -- _ "te et" con la sa -- pien -- _ _ za,
-		Ve -- nu -- "te in" -- sie -- "me ad" a -- _ bi -- tar __ _ Fio -- ren -- _ _ za.
+		Ve -- nu -- "te in" -- sie -- "me ad" a -- _ bi -- tar __ _ Fi -- o -- ren -- _ _ za.
 	}
 	\addlyrics {
 		\set stanza = #"2. "
@@ -232,19 +232,19 @@ tenor = \new Voice {
 		Te -- ner don -- ne e ma -- _ ri -- _ ti
 		E cit -- ta -- di -- ni __ _ u -- _ _ _ ni -- ti
 		Fa -- "rà il" po -- pol __ _ fru -- _ ire fuor d’o -- "gni u" -- san -- _ _ za
-		Sa -- "no e" ga -- gliar -- "do e" sem -- _ "pre in" ab -- _ bon -- dan -- _ _ za.
+		Sa -- "no e" ga -- gliar -- "do e" sem -- _ "pre in" ab -- _ bon -- _ dan -- _ _ za.
 	}
 	\addlyrics {
 		\set stanza = #"3. "
 		Mi -- ner -- va sag -- gia ci da -- rà vit -- to -- _ _ _ ria
 		Con -- "tro à" ni -- mi -- "ci in" guer -- ra,
-		Fa -- rac -- ci trion -- far con som -- ma __ _ glo -- _ _ _ ria
+		Fa -- rac -- ci tri -- on -- far con som -- ma glo -- ri -- _ _ a
 		E per ma -- "re e" per ter -- ra
 		In tut -- te le buo -- _ "ne ar" -- _ te
 		O di ma -- "no o" d’in -- ge -- _ _ _ gno.
 		So -- la pas -- se -- "rai el" __ _ se -- _ _ _ _ gno
 		Toc -- can -- do il ciel col -- la su -- per -- ba chi -- o -- _ _ ma,
-		Fio -- ren -- za bel -- la fig -- _ liuo -- la __ _ di Ro -- _ _ ma.
+		Fio -- ren -- za bel -- la fig -- _ liuo -- la __ _ di __ _ Ro -- _ _ ma.
 	}
 	\addlyrics {
 		\set stanza = #"4. "
@@ -253,10 +253,10 @@ tenor = \new Voice {
 		In va -- rie fog -- "gie e’n" nuo -- ve so -- pra -- ve -- _ _ _ ste,
 		In tor -- nia -- men -- "ti e’n" gio -- stre
 		Fa -- ra ga -- lan -- te et bel -- _ le
-		Tut -- te don -- "ne et" don -- zel -- _ _ _ le.
+		Tut -- te __ _ don -- ne et don -- _ zel -- le.
 		Con a -- mo -- ro -- sa __ _ vi -- _ _ _ _ sta
 		Ter -- rà sem -- pre __ _ Fio -- _ ren -- "za in" can -- "to e" ri -- _ _ so
-		Et di -- ras -- si Fio -- ren -- _ "za è’l" pa -- _ ra -- di -- _ _ so.
+		Et di -- ras -- si Fio -- ren -- _ "za è’l" pa -- _ ra -- _ di -- _ _ so.
 	}
 }
 
@@ -281,7 +281,7 @@ bass = \new Voice {
 		Ve -- de -- te qui Mi -- ner -- _ _ _ va,
 		E’l mar -- ti -- al fu -- _ ro -- _ _ re,
 		Do -- ma con l’a -- re -- "te et" con la sa -- pien -- _ _ za,
-		Ve -- nu -- "te in" -- sie -- "me ad" a -- _ bi -- tar Fio -- ren -- _ _ za.
+		Ve -- nu -- "te in" -- sie -- "me ad" a -- _ bi -- tar Fi -- o -- ren -- _ za.
 	}
 	\addlyrics {
 		\set stanza = #"2. "
@@ -293,19 +293,19 @@ bass = \new Voice {
 		Te -- ner don -- ne e ma -- _ ri -- _ ti
 		Ter -- rà sen -- za dis -- _ cor -- _ di -- a,
 		Fa -- "rà il" po -- pol fio -- rir fuor d’o -- "gni u" -- san -- _ _ za
-		Sa -- "no e" ga -- gliar -- "do e" sem -- _ "pre in" ab -- bon -- dan -- _ _ za.
+		Sa -- "no e" ga -- gliar -- "do e" sem -- _ "pre in" ab -- bon -- _ dan -- _ za.
 	}
 	\addlyrics {
 		\set stanza = #"3. "
 		Mi -- ner -- va sag -- gia ci da -- rà vit -- to -- _ _ ria
 		Con -- "tro à" ni -- mi -- "ci in" guer -- _ ra,
-		Fa -- rac -- ci trion -- far con som -- ma __ _ glo -- _ _ ria
+		Fa -- rac -- ci tri -- on -- far con som -- ma glo -- ri -- _ a
 		E per ma -- "re e" per ter -- _ ra
 		In tut -- te le buo -- _ _ ne ar -- te
 		O di ma -- "no o" d’in -- ge -- _ _ _ gno.
 		Fe -- li -- "ce in" og -- ni __ _ par -- _ _ te,
 		Toc -- can -- do il ciel con la su -- per -- ba chi -- o -- ma,
-		Fio -- ren -- za bel -- la fig -- _ liuo -- la di Ro -- _ _ ma.
+		Fio -- ren -- za bel -- la fig -- _ liuo -- la di __ _ Ro -- _ ma.
 	}
 	\addlyrics {
 		\set stanza = #"4. "
@@ -314,10 +314,10 @@ bass = \new Voice {
 		In va -- rie fog -- "gie e’n" nuo -- ve so -- pra -- ve -- _ _ ste,
 		In tor -- nia -- men -- "ti e’n" gio -- _ stre
 		Fa -- ra ga -- lan -- te et __ _ bel -- _ le
-		Tut -- te don -- "ne et" don -- zel -- _ _ _ le.
-		Fa -- rà dol -- ce con -- qui -- sta _ _ _
+		Tut -- te __ _ don -- ne et don -- _ zel -- le.
+		Fa -- rà dol -- ce con -- _ qui -- _ _ sta
 		Ter -- rà sem -- pre Fio -- ren -- "za in" can -- "to e" ri -- _ _ so
-		Et di -- ras -- si Fio -- ren -- _ "za è’l" pa -- ra -- di -- _ _ so.
+		Et di -- ras -- si Fio -- ren -- _ "za è’l" pa -- ra -- _ di -- _ so.
 	}
 }
 
