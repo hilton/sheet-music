@@ -1,7 +1,7 @@
 % Copyright ©2016 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "4"
+revision = "5"
 \pointAndClickOff
 
 #(set-global-staff-size 16.0)
@@ -26,7 +26,7 @@ year = #(strftime "©%Y" (localtime (current-time)))
 \header {
 	title = \markup \medium \fontsize #7 \override #'(font-name . "Source Sans Pro Light") {
 		\center-column {
-			"Ne piu bella di queste"
+			"Ne più bella di queste"
 			\vspace #1
 		}
 	}
@@ -84,15 +84,17 @@ singleDigitTime = { \once \override Staff.TimeSignature.style = #'single-digit }
 
 soprano = \new Voice	{
 	\relative c' {
-		\repeat unfold 2 {
-			f1 f2 f g g a1 g c c2 bes1 a2. g8 f g2 a1 r2 a
-			a a bes2. a4 g2 f e1 \showBarLine \bar "|"
+		\repeat unfold 4 {
+			\repeat unfold 2 {
+				f1 f2 f g g a1 g c c2 bes1 a2. g8 f g2 a1 r2 a
+				a a bes2. a4 g2 f e1 \showBarLine \bar "|"
+			}
+			r1 r r r a2 a4 a bes2 a4 g2 f e4
+			f1 \fermata r r r r g2 g4 g a2 g4 a g c2 \ficta b4 c1 \fermata \showBarLine \bar "|"
+			\singleDigitTime \time 3/2 \tempo 1. = 50 a2 a a
+			bes1 bes2 a1 a2 g \[ f g a \] f1 e1 r2 \showBarLine \bar "|"
+			\time 2/2 \tempo 1 = 50 e2 e4 e d2 d c4. d8 e4 f g bes! a g g f2 e4 f1 \showBarLine \bar "||" \break
 		}
-		r1 r r r a2 a4 a bes2 a4 g2 f e4
-		f1 \fermata r r r r g2 g4 g a2 g4 a g c2 \ficta b4 c1 \fermata \showBarLine \bar "|"
-		\singleDigitTime \time 3/2 \tempo 1. = 50 a2 a a
-		bes1 bes2 a1 a2 g \[ f g a \] f1 e1 r2 \showBarLine \bar "|"
-		\time 2/2 \tempo 1 = 50 e2 e4 e d2 d c4. d8 e4 f g bes! a g g f2 e4 f1 \showBarLine \bar "|."
 	}
 	\addlyrics {
 		\set stanza = #"1. "
@@ -104,8 +106,7 @@ soprano = \new Voice	{
 		E’l mar -- ti -- al fu -- _ ro -- _ _ re,
 		Do -- ma con l’a -- re -- "te et" con la sa -- pien -- _ _ za,
 		Ve -- nu -- "te in" -- sie -- "me ad" a -- _ _ bi -- tar __ _ Fi -- o -- ren -- _ _ za.
-	}
-	\addlyrics {
+
 		\set stanza = #"2. "
 		Fi -- o -- ren -- za, tu sa -- rai la piu fa -- mo -- _ _ _ sa
 		Cit -- tà che ve -- "ga il" so -- _ le;
@@ -115,8 +116,7 @@ soprano = \new Voice	{
 		Ter -- rà sen -- za dis -- _ cor -- _ di -- a,
 		Fa -- "rà il" po -- pol fio -- rir fuor d’o -- "gni u" -- san -- _ _ za
 		Sa -- "no e" ga -- gliar -- "do e" sem -- _ _ "pre in" ab -- _ bon -- _ dan -- _ _ za.
-	}
-	\addlyrics {
+
 		\set stanza = #"3. "
 		Mi -- ner -- va sag -- gia ci da -- rà vit -- to -- _ _ _ _ ria
 		Con -- "tro à" ni -- mi -- "ci in" guer -- _ ra,
@@ -126,8 +126,7 @@ soprano = \new Voice	{
 		Fe -- li -- "ce in" og -- ni __ _ par -- _ _ te,
 		Toc -- can -- do il ciel col -- la su -- per -- ba chi -- o -- ma,
 		Fio -- ren -- za bel -- la fig -- _ _ liuo -- la __ _ di __ _ Ro -- _ _ ma.
-	}
-	\addlyrics {
+
 		\set stanza = #"4. "
 		Ma Ve -- ner bel -- la sem -- "pre in" can -- "ti e’n" fe -- _ _ _ _ ste,
 		In bal -- "li e’n" no -- "ze e’n" mo -- _ stre,
@@ -142,13 +141,15 @@ soprano = \new Voice	{
 
 alto = \new Voice {
 	\relative c' {
-		\repeat unfold 2 {
-			f1 c2 d e e f1 e c c2 d2. g,4 c2 bes1 a r2 c
-			c c d2. c4 bes2 a g1
+		\repeat unfold 4 {
+			\repeat unfold 2 {
+				f1 c2 d e e f1 e c c2 d2. g,4 c2 bes1 a r2 c
+				c c d2. c4 bes2 a g1
+			}
+			r1 r r r c2 c4 c d2 c4 bes a bes g2
+			f r c' c4 c d2 c4. d8 e4 f2 e4 f2 r e e4 e f2 e4 f e c d2 c1 \singleDigitTime c2 c c
+			d1 bes2 c1 d2 e d2. c4 c1 \ficta b2 c1 r2 c c4 c bes2 bes a4 c2 bes8 a g2 f4 e f2 g f1
 		}
-		r1 r r r c2 c4 c d2 c4 bes a bes g2
-		f r c' c4 c d2 c4. d8 e4 f2 e4 f2 r e e4 e f2 e4 f e c d2 c1 \singleDigitTime c2 c c
-		d1 bes2 c1 d2 e d2. c4 c1 \ficta b2 c1 r2 c c4 c bes2 bes a4 c2 bes8 a g2 f4 e f2 g f1
 	}
 	\addlyrics {
 		\set stanza = #"1. "
@@ -161,8 +162,7 @@ alto = \new Voice {
 		E’l mar -- ti -- al fu -- _ ro -- _ _ re,
 		Do -- ma con l’a -- re -- "te et" col -- la sa -- pien -- _ _ za
 		Ve -- nu -- "te in" -- sie -- "me ad" a -- _ bi -- _ tar __ Fi -- o -- ren -- _ za.
-	}
-	\addlyrics {
+
 		\set stanza = #"2. "
 		Fi -- o -- ren -- za, tu sa -- rai la più fa -- _ mo -- _ sa
 		Cit -- tà che ve -- "ga il" so -- _ le;
@@ -173,8 +173,7 @@ alto = \new Voice {
 		Ter -- rà sen -- za dis -- _ cor -- _ di -- a,
 		Fa -- "rà il" po -- pol fio -- rir fuor d’o -- "gni u" -- san -- _ _ za
 		Sa -- "no e" ga -- gliar -- "do e" sem -- _ "pre in" _ ab -- bon -- _ dan -- _ za.
-	}
-	\addlyrics {
+
 		\set stanza = #"3. "
 		Mi -- ner -- va sag -- gia ci da -- rà vit -- to -- _ _ _ ria
 		Con -- "tro à" ni -- mi -- "ci in" guer -- _ ra,
@@ -185,8 +184,7 @@ alto = \new Voice {
 		Fe -- li -- "ce in" og -- ni __ _ par -- _ _ te,
 		Toc -- can -- do il ciel col -- la su -- per -- ba chi -- o -- ma,
 		Fio -- ren -- za bel -- la fig -- _ liuo -- _ la di __ _ Ro -- _ ma.
-	}
-	\addlyrics {
+
 		\set stanza = #"4. "
 		Ma Ve -- ner bel -- la sem -- "pre in" can -- "ti e’n" fe -- _ _ _ ste,
 		In bal -- "li e’n" no -- "ze e’n" mo -- _ stre,
@@ -203,13 +201,15 @@ alto = \new Voice {
 tenor = \new Voice {
 	\relative c' {
 		\clef "treble_8"
-		\repeat unfold 2 {
-			c1 a2. bes4 c2 c c1 c g c2 bes1 f'2 d e d1 r2 f
-			f f f1 es2 d c1
+		\repeat unfold 4 {
+			\repeat unfold 2 {
+				c1 a2. bes4 c2 c c1 c g c2 bes1 f'2 d e d1 r2 f
+				f f f1 es2 d c1
+			}
+			\ficta e!2 e4 e f2 e4 d2 c \ficta b4 c2 r f2 f4 f f2 e4. d8 c4 d c2
+			c r a a4 a bes2 a4 c bes8 a g f g2 f1 r r r r \singleDigitTime f2 f f
+			bes2. c4 d e f1 f2 e f \[ e c d1 \] g, r2 g g4 g f2 f f' e4 d c g a c c \ficta b4 c2 c1
 		}
-		\ficta e!2 e4 e f2 e4 d2 c \ficta b4 c2 r f2 f4 f f2 e4. d8 c4 d c2
-		c r a a4 a bes2 a4 c bes8 a g f g2 f1 r r r r \singleDigitTime f2 f f
-		bes2. c4 d e f1 f2 e f \[ e c d1 \] g, r2 g g4 g f2 f f' e4 d c g a c c \ficta b4 c2 c1
 	}
 	\addlyrics {
 		Né più bel -- la di que -- ste, ne più de -- _ _ _ gna
@@ -221,8 +221,7 @@ tenor = \new Voice {
 		Che gl’in -- ge -- gni con -- _ ser -- _ _ _ _ va,
 		Do -- ma con l’a -- _ re -- _ "te et" con la sa -- pien -- _ _ za,
 		Ve -- nu -- "te in" -- sie -- "me ad" a -- _ bi -- tar __ _ Fi -- o -- ren -- _ _ za.
-	}
-	\addlyrics {
+
 		\set stanza = #"2. "
 		Fi -- o -- ren -- za, tu sa -- rai la più fa -- mo -- _ _ sa
 		Cit -- tà che ve -- "ga il" so -- le;
@@ -233,8 +232,7 @@ tenor = \new Voice {
 		E cit -- ta -- di -- ni __ _ u -- _ _ _ ni -- ti
 		Fa -- "rà il" po -- pol __ _ fru -- _ ire fuor d’o -- "gni u" -- san -- _ _ za
 		Sa -- "no e" ga -- gliar -- "do e" sem -- _ "pre in" ab -- _ bon -- _ dan -- _ _ za.
-	}
-	\addlyrics {
+
 		\set stanza = #"3. "
 		Mi -- ner -- va sag -- gia ci da -- rà vit -- to -- _ _ _ ria
 		Con -- "tro à" ni -- mi -- "ci in" guer -- ra,
@@ -245,8 +243,7 @@ tenor = \new Voice {
 		So -- la pas -- se -- "rai el" __ _ se -- _ _ _ _ gno
 		Toc -- can -- do il ciel col -- la su -- per -- ba chi -- o -- _ _ ma,
 		Fio -- ren -- za bel -- la fig -- _ liuo -- la __ _ di __ _ Ro -- _ _ ma.
-	}
-	\addlyrics {
+
 		\set stanza = #"4. "
 		Ma Ve -- ner bel -- la sem -- "pre in" can -- "ti e’n" fe -- _ _ _ ste,
 		In bal -- "li e’n" no -- "ze e’n" mo -- stre,
@@ -264,13 +261,15 @@ tenor = \new Voice {
 bass = \new Voice {
 	\relative c {
 		\clef bass
-		\repeat unfold 2 {
-			f1 f2 f c c f1 c c c2 g'1 f2 g1 d r2 f
-			f f bes, bes es f c1
+		\repeat unfold 4 {
+			\repeat unfold 2 {
+				f1 f2 f c c f1 c c c2 g'1 f2 g1 d r2 f
+				f f bes, bes es f c1
+			}
+			g'2 g4 g a2 g4 f e f d2 c r f f4 f bes,!2 c4 e f bes, c2
+			f1 r r r r c2 c4 c f2 c4 f g a g2 c,1 \singleDigitTime a'2 a a
+			g1 g2 f1 f2 \[ c2 d \] e f d1 c r2 c c4 c d2 bes f' c4 d e2 f4 c d2 c f1
 		}
-		g'2 g4 g a2 g4 f e f d2 c r f f4 f bes,!2 c4 e f bes, c2
-		f1 r r r r c2 c4 c f2 c4 f g a g2 c,1 \singleDigitTime a'2 a a
-		g1 g2 f1 f2 \[ c2 d \] e f d1 c r2 c c4 c d2 bes f' c4 d e2 f4 c d2 c f1
 	}
 	\addlyrics {
 		Né più bel -- la di que -- ste, ne più de -- _ _ gna
@@ -282,8 +281,7 @@ bass = \new Voice {
 		E’l mar -- ti -- al fu -- _ ro -- _ _ re,
 		Do -- ma con l’a -- re -- "te et" con la sa -- pien -- _ _ za,
 		Ve -- nu -- "te in" -- sie -- "me ad" a -- _ bi -- tar Fi -- o -- ren -- _ za.
-	}
-	\addlyrics {
+
 		\set stanza = #"2. "
 		Fi -- o -- ren -- za, tu sa -- rai la più fa -- mo -- _ sa
 		Cit -- tà che ve -- "ga il" so -- _ le;
@@ -294,8 +292,7 @@ bass = \new Voice {
 		Ter -- rà sen -- za dis -- _ cor -- _ di -- a,
 		Fa -- "rà il" po -- pol fio -- rir fuor d’o -- "gni u" -- san -- _ _ za
 		Sa -- "no e" ga -- gliar -- "do e" sem -- _ "pre in" ab -- bon -- _ dan -- _ za.
-	}
-	\addlyrics {
+
 		\set stanza = #"3. "
 		Mi -- ner -- va sag -- gia ci da -- rà vit -- to -- _ _ ria
 		Con -- "tro à" ni -- mi -- "ci in" guer -- _ ra,
@@ -306,8 +303,7 @@ bass = \new Voice {
 		Fe -- li -- "ce in" og -- ni __ _ par -- _ _ te,
 		Toc -- can -- do il ciel con la su -- per -- ba chi -- o -- ma,
 		Fio -- ren -- za bel -- la fig -- _ liuo -- la di __ _ Ro -- _ ma.
-	}
-	\addlyrics {
+
 		\set stanza = #"4. "
 		Ma Ve -- ner bel -- la sem -- "pre in" can -- "ti e’n" fe -- _ _ ste,
 		In bal -- "li e’n" no -- "ze e’n" mo -- _ stre,
@@ -324,7 +320,7 @@ bass = \new Voice {
 \score {
 	\transpose c c {
 		\new StaffGroup <<
-			\set Score.proportionalNotationDuration = #(ly:make-moment 1 5)
+			\set Score.proportionalNotationDuration = #(ly:make-moment 1 4)
 			\set Score.barNumberVisibility = #all-bar-numbers-visible
 			\new Staff << \global \soprano \set Staff.instrumentName = #"S" \set Staff.shortInstrumentName = #"S" >>
 			\new Staff << \global \alto \set Staff.instrumentName = #"CT" \set Staff.shortInstrumentName = #"A" >>
