@@ -26,7 +26,7 @@ year = #(strftime "©%Y" (localtime (current-time)))
 \header {
 	title = \markup \medium \fontsize #7 \override #'(font-name . "Source Sans Pro Light") {
 		\center-column {
-			"Ne più bella di queste"
+			"Né più bella di queste"
 			\vspace #1
 		}
 	}
@@ -98,22 +98,22 @@ soprano = \new Voice	{
 	}
 	\addlyrics {
 		\set stanza = #"1. "
-		Né più bel -- la di que -- ste, ne più de -- _ _ _ _ gna
+		Né più bel -- la di que -- ste, né più de -- _ _ _ _ gna
 		Si tro -- "va al" -- cu -- na -- de -- _ a,
 		Ju -- non ve -- de -- te che nel ciel su re -- _ _ _ _ gna.
 		Ve -- de -- te Ci -- te -- re -- _ a,
 		Ve -- de -- te qui Mi -- ner -- _ _ va,
 		E’l mar -- ti -- al fu -- _ ro -- _ _ re,
-		Do -- ma con l’a -- re -- "te et" con la sa -- pien -- _ _ za,
+		Do -- ma con l’ar -- "te et" con la sa -- pien -- _ _ _ za,
 		Ve -- nu -- "te in" -- sie -- "me ad" a -- _ _ bi -- tar __ _ Fi -- o -- ren -- _ _ za.
 
 		\set stanza = #"2. "
-		Fi -- o -- ren -- za, tu sa -- rai la piu fa -- mo -- _ _ _ sa
-		Cit -- tà che ve -- "ga il" so -- _ le;
+		Fio -- ren -- za, tu sa -- rai la piu fa -- mo -- _ _ _ _ sa
+		Cit -- tà che veg -- "ga il" so -- _ le;
 		Di lor pre -- sen -- za sa -- rai glo -- ri -- o -- _ _ _ _ sa.
 		Ju -- non tuo sta -- to vuo -- _ le
-		Te -- ner don -- ne e ma -- ri -- _ ti
-		Ter -- rà sen -- za dis -- _ cor -- _ di -- a,
+		Te -- ner don -- "ne e" ma -- ri -- _ _ ti
+		Ter -- rà sen -- za dis -- _ cor -- _ _ dia,
 		Fa -- "rà il" po -- pol fio -- rir fuor d’o -- "gni u" -- san -- _ _ za
 		Sa -- "no e" ga -- gliar -- "do e" sem -- _ _ "pre in" ab -- _ bon -- _ dan -- _ _ za.
 
@@ -129,7 +129,7 @@ soprano = \new Voice	{
 
 		\set stanza = #"4. "
 		Ma Ve -- ner bel -- la sem -- "pre in" can -- "ti e’n" fe -- _ _ _ _ ste,
-		In bal -- "li e’n" no -- "ze e’n" mo -- _ stre,
+		In bal -- "li e’n" noz -- "ze e’n" mo -- _ stre,
 		In va -- rie fog -- "gie e’n" nuo -- ve so -- pra -- ve -- _ _ _ _ ste,
 		In tor -- nia -- men -- "ti e’n" gio -- _ stre
 		Tut -- te __ _ don -- ne et don -- zel -- le.
@@ -153,24 +153,24 @@ alto = \new Voice {
 	}
 	\addlyrics {
 		\set stanza = #"1. "
-		Né più bel -- la di que -- ste, ne più de -- _ _ _ gna
+		Né più bel -- la di que -- ste, né più de -- _ _ _ gna
 		Si tro -- "va al" -- cu -- na -- de -- _ a,
 		Ju -- non ve -- de -- te che nel ciel su re -- _ _ _ gna.
 		Ve -- de -- te Ci -- te -- re -- _ a,
 		Ve -- de -- te qui Mi -- ner -- _ _ _ va,
 		Che gl’in -- ge -- gni con -- _ ser -- _ _ va,
 		E’l mar -- ti -- al fu -- _ ro -- _ _ re,
-		Do -- ma con l’a -- re -- "te et" col -- la sa -- pien -- _ _ za
+		Do -- ma con l’ar -- "te et" col -- la sa -- pien -- _ _ _ za
 		Ve -- nu -- "te in" -- sie -- "me ad" a -- _ bi -- _ tar __ Fi -- o -- ren -- _ za.
 
 		\set stanza = #"2. "
-		Fi -- o -- ren -- za, tu sa -- rai la più fa -- _ mo -- _ sa
-		Cit -- tà che ve -- "ga il" so -- _ le;
+		Fio -- ren -- za, tu sa -- rai la più fa -- mo -- _ _ _ sa
+		Cit -- tà che veg -- "ga il" so -- _ le;
 		Di lor pre -- sen -- za sa -- rai glo -- ri -- o -- _ _ _ sa.
 		Ju -- non tuo sta -- to vuo -- _ le
-		Te -- ner don -- ne e ma -- _ ri -- _ ti
-		E cit -- ta -- di -- ni __ _ u -- _ ni -- ti
-		Ter -- rà sen -- za dis -- _ cor -- _ di -- a,
+		Te -- ner don -- "ne e" ma -- _ ri -- _ _ ti
+		E cit -- ta -- di -- ni u -- ni -- _ _ ti
+		Ter -- rà sen -- za dis -- _ cor -- _ _ dia,
 		Fa -- "rà il" po -- pol fio -- rir fuor d’o -- "gni u" -- san -- _ _ za
 		Sa -- "no e" ga -- gliar -- "do e" sem -- _ "pre in" _ ab -- bon -- _ dan -- _ za.
 
@@ -187,7 +187,7 @@ alto = \new Voice {
 
 		\set stanza = #"4. "
 		Ma Ve -- ner bel -- la sem -- "pre in" can -- "ti e’n" fe -- _ _ _ ste,
-		In bal -- "li e’n" no -- "ze e’n" mo -- _ stre,
+		In bal -- "li e’n" noz -- "ze e’n" mo -- _ stre,
 		In va -- rie fog -- "gie e’n" nuo -- ve so -- pra -- ve -- _ _ _ ste,
 		In tor -- nia -- men -- "ti e’n" gio -- _ stre
 		Tut -- te __ _ don -- ne et don -- _ zel -- le.
@@ -212,24 +212,24 @@ tenor = \new Voice {
 		}
 	}
 	\addlyrics {
-		Né più bel -- la di que -- ste, ne più de -- _ _ _ gna
+		Né più bel -- la di que -- ste, né più de -- _ _ _ gna
 		Si tro -- "va al" -- cu -- na -- de -- a,
 		Ju -- non ve -- de -- te che nel ciel su re -- _ _ _ gna.
 		Ve -- de -- te Ci -- te -- re -- a,
 		Ma -- dre dol -- ce d’a -- mo -- _ _ re,
 		Ve -- de -- te qui Mi -- _ ner -- _ _ va,
 		Che gl’in -- ge -- gni con -- _ ser -- _ _ _ _ va,
-		Do -- ma con l’a -- _ re -- _ "te et" con la sa -- pien -- _ _ za,
+		Do -- ma con l’ar -- _ te et con la sa -- _ pien -- _ _ za,
 		Ve -- nu -- "te in" -- sie -- "me ad" a -- _ bi -- tar __ _ Fi -- o -- ren -- _ _ za.
 
 		\set stanza = #"2. "
-		Fi -- o -- ren -- za, tu sa -- rai la più fa -- mo -- _ _ sa
-		Cit -- tà che ve -- "ga il" so -- le;
+		Fio -- ren -- za, tu sa -- rai la più fa -- mo -- _ _ _ sa
+		Cit -- tà che veg -- "ga il" so -- le;
 		Di lor pre -- sen -- za sa -- rai glo -- ri -- o -- _ _ _ sa.
 		Ju -- non tuo sta -- to vuo -- le
-		Cre -- sce -- re ed in con -- cor -- di -- a
-		Te -- ner don -- ne e ma -- _ ri -- _ ti
-		E cit -- ta -- di -- ni __ _ u -- _ _ _ ni -- ti
+		Cre -- sce -- "re ed" in con -- cor -- _ _ dia
+		Te -- ner don -- "ne e" ma -- _ ri -- _ _ ti
+		E cit -- ta -- di -- ni u -- ni -- _ _ _ _ ti
 		Fa -- "rà il" po -- pol __ _ fru -- _ ire fuor d’o -- "gni u" -- san -- _ _ za
 		Sa -- "no e" ga -- gliar -- "do e" sem -- _ "pre in" ab -- _ bon -- _ dan -- _ _ za.
 
@@ -246,10 +246,10 @@ tenor = \new Voice {
 
 		\set stanza = #"4. "
 		Ma Ve -- ner bel -- la sem -- "pre in" can -- "ti e’n" fe -- _ _ _ ste,
-		In bal -- "li e’n" no -- "ze e’n" mo -- stre,
+		In bal -- "li e’n" noz -- "ze e’n" mo -- stre,
 		In va -- rie fog -- "gie e’n" nuo -- ve so -- pra -- ve -- _ _ _ ste,
 		In tor -- nia -- men -- "ti e’n" gio -- stre
-		Fa -- ra ga -- lan -- te et bel -- _ le
+		Fa -- ra ga -- lan -- "te et" bel -- _ _ le
 		Tut -- te __ _ don -- ne et don -- _ zel -- le.
 		Con a -- mo -- ro -- sa __ _ vi -- _ _ _ _ sta
 		Ter -- rà sem -- pre __ _ Fio -- _ ren -- "za in" can -- "to e" ri -- _ _ so
@@ -272,24 +272,24 @@ bass = \new Voice {
 		}
 	}
 	\addlyrics {
-		Né più bel -- la di que -- ste, ne più de -- _ _ gna
+		Né più bel -- la di que -- ste, né più de -- _ _ gna
 		Si tro -- "va al" -- cu -- na -- de -- _ a,
 		Ju -- non ve -- de -- te che nel ciel su re -- _ _ gna.
 		Ve -- de -- te Ci -- te -- re -- _ a,
 		Ma -- dre dol -- ce d’a -- mo -- _ _ _ re,
 		Ve -- de -- te qui Mi -- ner -- _ _ _ va,
 		E’l mar -- ti -- al fu -- _ ro -- _ _ re,
-		Do -- ma con l’a -- re -- "te et" con la sa -- pien -- _ _ za,
+		Do -- ma con l’ar -- "te et" con la sa -- _ pien -- _ _ za,
 		Ve -- nu -- "te in" -- sie -- "me ad" a -- _ bi -- tar Fi -- o -- ren -- _ za.
 
 		\set stanza = #"2. "
-		Fi -- o -- ren -- za, tu sa -- rai la più fa -- mo -- _ sa
-		Cit -- tà che ve -- "ga il" so -- _ le;
+		Fio -- ren -- za, tu sa -- rai la più fa -- mo -- _ _ sa
+		Cit -- tà che veg -- "ga il" so -- _ le;
 		Di lor pre -- sen -- za sa -- rai glo -- ri -- o -- _ _ sa.
 		Ju -- non tuo sta -- to vuo -- _ le
-		Cre -- sce -- re ed in con -- _ cor -- di -- a
-		Te -- ner don -- ne e ma -- _ ri -- _ ti
-		Ter -- rà sen -- za dis -- _ cor -- _ di -- a,
+		Cre -- sce -- "re ed" in con -- _ cor -- _ di -- a
+		Te -- ner don -- "ne e" ma -- _ ri -- _ _ ti
+		Ter -- rà sen -- za dis -- _ cor -- _ _ dia,
 		Fa -- "rà il" po -- pol fio -- rir fuor d’o -- "gni u" -- san -- _ _ za
 		Sa -- "no e" ga -- gliar -- "do e" sem -- _ "pre in" ab -- bon -- _ dan -- _ za.
 
@@ -306,10 +306,10 @@ bass = \new Voice {
 
 		\set stanza = #"4. "
 		Ma Ve -- ner bel -- la sem -- "pre in" can -- "ti e’n" fe -- _ _ ste,
-		In bal -- "li e’n" no -- "ze e’n" mo -- _ stre,
+		In bal -- "li e’n" noz -- "ze e’n" mo -- _ stre,
 		In va -- rie fog -- "gie e’n" nuo -- ve so -- pra -- ve -- _ _ ste,
 		In tor -- nia -- men -- "ti e’n" gio -- _ stre
-		Fa -- ra ga -- lan -- te et __ _ bel -- _ le
+		Fa -- ra ga -- lan -- "te et" bel -- _ _ _ le
 		Tut -- te __ _ don -- ne et don -- _ zel -- le.
 		Fa -- rà dol -- ce con -- _ qui -- _ _ sta
 		Ter -- rà sem -- pre Fio -- ren -- "za in" can -- "to e" ri -- _ _ so
