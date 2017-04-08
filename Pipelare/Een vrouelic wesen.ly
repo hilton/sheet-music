@@ -1,8 +1,8 @@
 % CPDL #38204
-% Copyright ©2015 Peter Hilton - https://github.com/hilton
+% Copyright ©2017 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "4"
+revision = "5"
 \pointAndClickOff
 
 #(set-global-staff-size 15.0)
@@ -20,7 +20,7 @@ revision = "4"
 	system-system-spacing = #'( (basic-distance . 20) (stretchability . 100) )
 	ragged-bottom = ##f
 	ragged-last-bottom = ##t
-} 
+}
 
 year = #(strftime "©%Y" (localtime (current-time)))
 
@@ -39,12 +39,12 @@ year = #(strftime "©%Y" (localtime (current-time)))
 				\with-url #"http://www.cpdl.org/wiki/index.php/Een_vrouelic_wesen_(Matthaeus_Pipelare)" "CPDL #38204" -
 				Transcription & IPA copyright \year \with-url #"http://hilton.org.uk" "Peter Hilton" -
 				\with-url #"http://creativecommons.org/licenses/by-nc-sa/3.0/" "CC BY-NC-SA 3.0" -
-				Lilypond source at \with-url #"https://github.com/hilton/sheet-music" https://github.com/hilton/sheet-music - 
-				revision \revision 
+				Lilypond source at \with-url #"https://github.com/hilton/sheet-music" https://github.com/hilton/sheet-music -
+				revision \revision
 			}
 		}
 	}
-	tagline = \markup \larger { 
+	tagline = \markup \larger {
 		\vspace #2
 		\fill-line {
 			\hspace #1
@@ -78,23 +78,23 @@ year = #(strftime "©%Y" (localtime (current-time)))
 		\remove "Metronome_mark_engraver"
 		\override VerticalAxisGroup #'staff-staff-spacing = #'((basic-distance . 10) (stretchability . 100))
 	}
-	\context { 
+	\context {
 		\Staff
 		\remove "Time_signature_engraver"
 	}
-	\context { 
+	\context {
 		\StaffGroup
-		\remove "Span_bar_engraver"	
+		\remove "Span_bar_engraver"
 	}
-	\context { 
-		\Voice 
+	\context {
+		\Voice
 		\override NoteHead #'style = #'baroque
 		\consists "Horizontal_bracket_engraver"
 		\consists "Ambitus_engraver"
 	}
 }
 
-global = { 
+global = {
 	\key f \major
 	\time 4/2
 	\tempo 2 = 65
@@ -130,10 +130,10 @@ superius = \new Voice	{
 counterTenor = \new Voice {
 	\relative c' {
 		d2. c4 d2 e d r4 d2 \ficta cis4 d2. c8 bes c2 bes g |
-		g4 bes4. c8 d e f4 r r2 | a,4 f'2 e4 e c d2 | r4 d2 \ficta es d8 c bes4 d ~ d
+		g4 bes4. c8 d e f4 r r2 | a,4 f'2 e4 d c d2 | r4 d2 \ficta es d8 c bes4 d ~ d
 		c8 bes a1 d2 | d d f4 \ficta es8 d c2 | d c4 f2 e4 f2 |
 		d4 f4. e8 d c bes1 c2 f,1 r2 r a bes2. d4.
-		
+
 		e8 f4. e8 d2 \ficta cis8 \ficta b \ficta cis2 | d r4 d c a bes8 c d e | f4. e8 d c f4. e8 d2 \ficta cis4 |
 		d4 f2 e8 d e2 d1 d2. c8 bes a2 g4 g'2 \ficta fis4 g2. f8 \ficta es |
 		f \ficta es d c bes4 f g2 r2 g4. a8 bes c d4. e8 f4 d2 ~ d
@@ -195,14 +195,14 @@ bass = \new Voice {
 
 \score {
 	\transpose c d {
-		\new StaffGroup << 
+		\new StaffGroup <<
 			\set Score.proportionalNotationDuration = #(ly:make-moment 1 8)
 			\set Score.barNumberVisibility = #all-bar-numbers-visible
-			\new Staff << \global \superius \set Staff.instrumentName = #"S" \set Staff.shortInstrumentName = #"S" >> 
-			\new Staff << \global \counterTenor \set Staff.instrumentName = #"CT" \set Staff.shortInstrumentName = #"CT" >> 
-			\new Staff << \global \tenor \set Staff.instrumentName = #"T" \set Staff.shortInstrumentName = #"T" >> 
-			\new Staff << \global \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >> 
-		>> 
+			\new Staff << \global \superius \set Staff.instrumentName = #"S" \set Staff.shortInstrumentName = #"S" >>
+			\new Staff << \global \counterTenor \set Staff.instrumentName = #"CT" \set Staff.shortInstrumentName = #"CT" >>
+			\new Staff << \global \tenor \set Staff.instrumentName = #"T" \set Staff.shortInstrumentName = #"T" >>
+			\new Staff << \global \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >>
+		>>
 	}
 	\header {
 		piece = ""
@@ -210,4 +210,3 @@ bass = \new Voice {
 	\layout { }
 %	\midi {	}
 }
-
