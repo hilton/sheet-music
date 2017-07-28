@@ -1,10 +1,10 @@
 % CPDL #33472
 % http://www.cpdl.org/wiki/index.php/Missa_pro_defunctis_(Jacobus_Clemens_non_Papa)
-% Copyright ©2016 Peter Hilton - https://github.com/hilton
+% Copyright ©2017 Peter Hilton - https://github.com/hilton
 
 \version "2.16.2"
 \pointAndClickOff
-revision = "8"
+revision = "9"
 
 #(set-global-staff-size 15)
 
@@ -33,10 +33,12 @@ year = #(strftime "©%Y" (localtime (current-time)))
 		\column \center-align {
 			\line {
 				Copyright \year Peter Hilton - 
-				\with-url #"http://creativecommons.org/licenses/by-nc-sa/3.0/" "CC BY-NC-SA 3.0" -
 				\with-url #"http://www.cpdl.org/wiki/index.php/Missa_pro_defunctis_(Jacobus_Clemens_non_Papa)" "CPDL #33472" -
 				Lilypond source at \with-url #"https://github.com/hilton/sheet-music" https://github.com/hilton/sheet-music - 
-				revision \revision 
+				revision \revision - This work is licensed under the
+			}
+			\line {
+				Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License published at \with-url #"http://creativecommons.org/licenses/by-nc-sa/4.0/" "http://creativecommons.org/licenses/by-nc-sa/4.0/"
 			}
 		}
 	}
