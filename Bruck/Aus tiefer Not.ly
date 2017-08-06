@@ -2,7 +2,7 @@
 % Copyright ©2017 Peter Hilton - https://github.com/hilton/sheet-music
 
 \version "2.18.2"
-revision = "2"
+revision = "3"
 \pointAndClickOff
 
 #(set-global-staff-size 16.0)
@@ -73,7 +73,7 @@ global = {
 	\key c \major
 	\time 2/2
 	\set Timing.measureLength = #(ly:make-moment 4/2)
-	\tempo 2 = 60
+	\tempo 2 = 100
 	\set Staff.midiInstrument = "Choir Aahs"
 	\accidentalStyle "forget"
 }
@@ -132,7 +132,7 @@ alto = \new Voice	{
 tenor = \new Voice {
 	\relative c' {
 		\clef "treble_8"
-		b\breve e,1 c' c b2 g a1 b2 e2 ~ e4 d4 c b c1 b\breve r1 b
+		b\breve e,1 b' c b2 g a1 b2 e2 ~ e4 d4 c b c1 b\breve r1 b
 		c d c a g f e\breve | e\breve r1 r2 a1 g2 c1
 		b a2 d1 c2 b1 a\breve r1 r2 c1 b2 c1 d g,2. a4 b2 c a1 
 		g\breve r1 g c b a e g f e\breve ~ e 
@@ -154,7 +154,7 @@ bass = \new Voice {
 		\clef bass
     r\breve r r1 e a, e' e2 e a, a e'1 r2 g f a1 g2
     a a, d1 a r2 d e c d1 a\breve a r2 e' c a e'1 a,2 a'1 
-    gis2 a gis4 fis gis2 a e1 a, r2 a'1 g2 f e d1 c g'2. a4 b2 g2 ~ g c,2 d1
+    gis2 a g4 f g2 a e1 a, r2 a'1 g2 f e d1 c g'2. a4 b2 g2 ~ g c,2 d1
     r2 g, c b a a e'1 a, r2 g d' a c2. d4 e2 c d1 a2 c1 b4 a e'\breve
   }
   \addlyrics {
