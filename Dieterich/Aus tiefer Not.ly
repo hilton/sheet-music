@@ -75,7 +75,6 @@ global = {
 	\tempo 2 = 60
 	\set Staff.midiInstrument = "Choir Aahs"
 	\accidentalStyle "forget"
-	\set Score.barNumberVisibility = #(every-nth-bar-number-visible 2)
 }
 
 showBarLine = { \once \override Score.BarLine #'transparent = ##f }
@@ -159,7 +158,7 @@ bass = \new Voice {
 	\transpose c f {
 		\new StaffGroup <<
 			\set Score.proportionalNotationDuration = #(ly:make-moment 1 4)
-			\set Score.barNumberVisibility = #all-bar-numbers-visible
+			\set Score.barNumberVisibility = #(every-nth-bar-number-visible 2)
 			\new Staff << \global \soprano  \set Staff.instrumentName = #"S" \set Staff.shortInstrumentName = #"S" >>
 			\new Staff << \global \alto  \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >>
 			\new Staff << \global \tenor  \set Staff.instrumentName = #"T" \set Staff.shortInstrumentName = #"T" >>
@@ -167,5 +166,5 @@ bass = \new Voice {
 		>>
 	}
 	\layout { }
-%	\midi {	}
+	\midi {	}
 }
