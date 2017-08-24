@@ -135,7 +135,16 @@ alto = \new Voice	{
 	}
 }
 
-tenor = \new Voice {
+tenorA = \new Voice {
+	\relative c {
+%		\clef "treble_8"
+			r\breve
+		}
+		\addlyrics {
+	}
+}
+
+tenorB = \new Voice {
 	\relative c {
 		\clef "treble_8"
 		}
@@ -178,7 +187,7 @@ bassB = \new Voice {
 			\set Score.barNumberVisibility = #all-bar-numbers-visible
 			\new Staff << \global \soprano \set Staff.instrumentName = #"S" \set Staff.shortInstrumentName = #"S" >>
 			\new Staff << \global \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >>
-%			\new Staff << \global \tenor \set Staff.instrumentName = #"T" \set Staff.shortInstrumentName = #"T" >>
+			\new Staff << \global \tenorA \set Staff.instrumentName = #"T1" \set Staff.shortInstrumentName = #"T1" >>
 			\new Staff << \global \bassB \set Staff.instrumentName = #"B2" \set Staff.shortInstrumentName = #"B2" >>
 		>>
 	}
