@@ -2,7 +2,7 @@
 % Copyright ©2017 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "2"
+revision = "3"
 \pointAndClickOff
 
 #(set-global-staff-size 15.0)
@@ -94,17 +94,18 @@ soprano = \new Voice	{
 		c1 c2 | c\breve | a1 | g2 a4 c4. bes8 c4 g c | d2 d4 d |
 		c2 e | f2 d4. c8 | bes1 | c2 a4 c4 | bes g2 f4 | g1 | r2 c | a
 		
-		d2. c4 bes bes | c2. c4 | a a r a | bes2 bes c c | bes d c a4. bes8 |
+		d2. c4 bes bes | c2. c4 | a2 r4 a | bes2 bes c c | bes d c a4. bes8 |
 		c4 bes2 a8 g fis4 g2 fis4 g\longa s1
   }
 	\addlyrics {
-		Chri -- _ ste qui __ _ lux __ _ es et __ _ di -- _ _ _ _ _ _ _ _ _ _ _ _ _ es, 
-		lux es et di -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ es lux es et di -- es noc -- tis te -- ne -- bras de -- _ te -- _ _ gis
-		noc -- tis te -- ne -- bras __ _ de -- te -- gis
-		lu -- cis -- que lu -- men __ _ _ cre -- _ _ _ _ de -- _ _ ris, __ _
+		Chri -- ste __ _ qui __ _ lux es et __ _ _ di -- _ _ _ _ _ _ _ _ _ _ _ _ _ es, 
+		lux es et di -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ es lux es et di -- es 
+		noc -- tis te -- ne -- bras de -- _ te -- _ _ gis
+		noc -- tis __ _ te -- ne -- bras de -- te -- gis
+		lu -- cis -- que lu -- men __ _ cre -- _ _ _ _ _ _ _ de -- ris, __ _
 		cre -- _ _ _ _ _ _ _ de -- _ ris
-		lu -- men be -- _ a -- tum prae -- di -- cans, __ _
-		lu -- men be -- a -- tum prae -- _ _ _ _ _ _ _ _ di -- _ _ cans. __ _
+		lu -- men be -- _ a -- tum prae -- di -- cans,
+		lu -- men be -- a -- tum prae -- _ _ _ _ _ _ _ _ _ _ di -- cans. __ _
 	}
 }
 
@@ -122,8 +123,15 @@ alto = \new Voice	{
 		r4 d bes c a2 r4 d bes g bes2 | c4 c2 c4 | bes1 d2. bes4 | bes1 \showBarLine \bar "|."
 	}
 	\addlyrics {
-		Chri -- _ ste qui __ _ lux __ _ es et di -- _ _ _ _ es,
+		Chri -- ste __ _ qui __ _ lux es et di -- _ _ _ _ _ es,
 		lux es et di -- es, lux es et di -- _ _ _ _ _ _ _ _ _ _ _ _ _ es
+		lux es et di -- _ _ _ _ _ _ _ _ es
+		noc -- tis te -- ne -- bras __ _ _ de -- te -- gis
+		noc -- tis te -- ne -- bras de -- _ _ te -- gis
+		lu -- cis -- que lu -- _ _ _ _ men __ _ cre -- _ _ _ _ _ _ de -- _ _ ris,
+		lu -- men be -- a -- _ _ _ tum prae -- _ di -- cans, 
+		prae -- _ _ _ _ _ _ _ _ _ _ _ _ di -- cans, prae -- _ di -- cans
+		lu -- men be -- a -- tum prae -- di -- cans, prae -- di -- cans.
 	}
 }
 
@@ -135,7 +143,7 @@ tenor = \new Voice {
 	}
 }
 
-bass = \new Voice {
+bassB = \new Voice {
 	\relative c {
 		\clef bass
 			r\breve r1 d2 d f d c d e f |
@@ -144,12 +152,22 @@ bass = \new Voice {
 			
 			bes bes bes f c'1 bes2 g4 g' f d f2 c a | d a1
 			r2 | a c1 c2 c1 | f, r2 a | c4 c c2 | g1 |
-			c2 c d d g, bes | a a | r1 c2 c | d4 d a2 | d
+			c1 d1 g,2 bes | a1 | r1 c2 c | d4 d a2 | d
 			
 			d4 c bes a g2 | c1 d2 d bes4 g4. a8 bes4 | a4. g8 a2 g bes c d |
 			c4 d es es d2 d g, g c4 c c c | g\breve s1
 		}
 		\addlyrics {
+		  Chri -- ste __ _ qui __ _ lux es et
+			di -- _ _ _ es lux es et di -- es, lux es et di -- es, lux es et
+			di -- _ es, lux es et di -- _ _ _ es, noc
+			
+			tis te ne -- bras de -- te -- gis de -- _ _ te -- gis de -- te -- gis,
+			lu -- cis et lu -- men, lu -- cis et lu -- men,
+			cre -- _ de -- _ ris, lu -- men cre -- de -- ris lu -- 
+			
+			_ _ _ _ men be -- a -- tum pre -- _ _ _ _ _ _ _ _ _ _ 
+			_ _ _ di -- cans, lu -- men be -- a -- tum pre -- di -- cans.
 	}
 }
 
@@ -161,7 +179,7 @@ bass = \new Voice {
 			\new Staff << \global \soprano \set Staff.instrumentName = #"S" \set Staff.shortInstrumentName = #"S" >>
 			\new Staff << \global \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >>
 %			\new Staff << \global \tenor \set Staff.instrumentName = #"T" \set Staff.shortInstrumentName = #"T" >>
-			\new Staff << \global \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >>
+			\new Staff << \global \bassB \set Staff.instrumentName = #"B2" \set Staff.shortInstrumentName = #"B2" >>
 		>>
 	}
 	\layout { }
