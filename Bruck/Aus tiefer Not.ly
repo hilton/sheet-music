@@ -1,8 +1,8 @@
-% CPDL #
+% CPDL #46366
 % Copyright ©2017 Peter Hilton - https://github.com/hilton/sheet-music
 
 \version "2.18.2"
-revision = "3"
+revision = "4"
 \pointAndClickOff
 
 #(set-global-staff-size 16.0)
@@ -34,11 +34,12 @@ year = #(strftime "©%Y" (localtime (current-time)))
 		\column \center-align {
 			\line {
 				Copyright \year \with-url #"http://hilton.org.uk" "Peter Hilton" - 
+				\with-url #"http://www.cpdl.org/wiki/index.php/Aus_tiefer_Not_schrei_ich_zu_dir_(Arnold_von_Bruck)" "CPDL #46366" -
 				Lilypond source \with-url #"https://github.com/hilton/sheet-music" https://github.com/hilton/sheet-music -
-				revision \revision - This work is licensed under the
+				rev \revision - This work is licensed under
 			}
       \line {
-				CC Attribution-NonCommercial-ShareAlike 4.0 International License published at \with-url #"http://creativecommons.org/licenses/by-nc-sa/4.0/" "http://creativecommons.org/licenses/by-nc-sa/4.0/"
+				the CC Attribution-NonCommercial-ShareAlike 4.0 International License published at \with-url #"http://creativecommons.org/licenses/by-nc-sa/4.0/" "http://creativecommons.org/licenses/by-nc-sa/4.0/"
 			}
 		}
 	}
