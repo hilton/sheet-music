@@ -2,7 +2,7 @@
 % Copyright ©2017 Peter Hilton - https://github.com/hilton/sheet-music
 
 \version "2.18.2"
-revision = "1"
+revision = "2"
 \pointAndClickOff
 
 #(set-global-staff-size 16.0)
@@ -116,7 +116,6 @@ soprano = \new Voice	{
 
 alto = \new Voice	{
 	\relative c {
-		\clef "treble_8"
 		\repeat volta 2 {
 			f1 c'2 d bes4 c4. bes8 a4 g g f f'2 e4 d c2 
 			a4 g2 f r r1 r r4 c' g c2
