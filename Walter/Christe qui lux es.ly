@@ -90,11 +90,11 @@ soprano = \new Voice	{
 		g4 f d a'4. g8 g2 f4 | g1 ~ g2 r4 g g g bes4. c8 d2. c8 bes | a4. bes8 c4 d4. c8 bes a
 		bes2 | c2. c4 bes g g f g1 \break r2 a f4 g a2 g r4 bes2 bes bes4 |
 		
-		bes2 f | bes a4 c2 bes8 a g2 | \break r4 f bes4. c8 | d2 c4 a | c2. a4 | a2 r | a
-		c1 c2 | c1 ~ \break c | a1 | g2 a4 c4. bes8 c4 g c | d2 d4 d |
+		bes2 f | bes a4 c4 ~ \break c bes8 a g2 | r4 f bes4. c8 | d2 c4 a | c2. a4 | a2 r | a
+		c1 c2 | c\breve | a1 | g2 a4 c4. bes8 c4 g c | d2 d4 d |
 		c2 e | f2 d4. c8 | bes1 | c2 a4 c4 | bes g2 f4 | g1 | r2 c | a
 		
-		d2. c4 bes bes | c2. c4 | a2 r4 a | bes2 bes c c | bes d c a4. bes8 |
+		d2 ~ d4 c4 bes bes | c2. c4 | a2 r4 a | bes2 bes c c | bes d c a4. bes8 |
 		c4 bes2 a8 g fis4 g2 fis4 g\longa s1
   }
 	\addlyrics {
@@ -116,10 +116,10 @@ alto = \new Voice	{
 		d4 g e c e4. f8 g4 g, a f c'2 r4 c a d2 c4 d bes a d d8 c bes a g1 r4 d'2
 		
 		d d bes4 c4. d8 | e4 f2 e4 | f2 r4 d a'2. f4 | g2 c,4 e f d c2 | c1
-		r2 e | f g4 g4 ~ g8 f8 e d e2 | f1 | e2 e4. d8 | e f g4. f8 e4 | d1 |
-		e d1 ~ d c1 | r2 d | c1 | a2 a'2. g4 
+		r2 e | f g4 g4. f8 e d e2 | f1 | e2 e4. d8 | e f g4. f8 e4 | d1 |
+		e d\breve c1 | r2 d | c1 | a2 a'2. g4 
 		
-		f e | d2 g2 ~ g4 f4 e2 | d r4 d4. c8 bes a g4 g'2 f8 e f2 | g f4. e8 c4 e d2 |
+		f e | d2 g2. f4 e2 | d r4 d4. c8 bes a g4 g'2 f8 e f2 | g f4. e8 c4 e d2 |
 		r4 d bes c a2 r4 d bes g bes2 | c4 c2 c4 | bes1 d2. bes4 | bes1 \showBarLine \bar "|."
 	}
 	\addlyrics {
@@ -141,8 +141,8 @@ tenorA = \new Voice {
 		r\breve r r r r r1 d d f d
 		c d e f2 e d1 r\breve
 		f2 f f f c1 d f e d2 e\breve
-		r2 r1 r r r1 r2 e2 g1
-		g2. g2 f8 e f2 g1 f d e f2 e d1
+		r2 r\breve r r2 e2 g1
+		g2. g4 ~ g4 f8 e f2 g1 f d e f2 e d1
 		r e f d c d e2 f
 		e4 d2 c4 d\breve es1 d\breve s1
 	}
@@ -166,7 +166,7 @@ tenorB = \new Voice {
 		c4 d bes c bes a8 g a2 g r4 bes bes bes c2 bes4 g g g bes4. c8 d2. c8 bes a2 bes4. c8
 		d4 d, e f e c g'2 d r4 d e c f4. g8 a2 d,4 g2 f4 g2 r4 d' d4. c8 bes a g4
 		
-		f4. e8 d1 c g'2 d4 f g2 d r4 d e2. c4 f2 e r
+		f4. e8 d1 c2 ~ c g'2 d4 f g2 d r4 d e2. c4 f2 e r
 		a c c4 c g c2 bes8 a g4 a g2 f2. f4 c1 r4 e g2. g4 g4. f8
 		e4 c g'2 d f4. d8 d2 r4 d e2 c g' d4 f e4. d8 e2 d4 d'2 c4 d2
 		
@@ -195,7 +195,7 @@ bassA = \new Voice {
 		a bes2 a g1 r\breve bes1 bes2 bes
 		
 		bes1 f g bes a g2 a1 a\breve
-		r2 r1 r1 r2 a2 c1 c2. c2 bes8 a bes2
+		r2 r\breve r2 a2 c1 c2. c2 bes8 a bes2
 		c1 bes g a bes2 a g1 r a1
 		
 		bes1 g f g a bes a4 g2 f4
@@ -223,7 +223,7 @@ bassB = \new Voice {
 		bes2 a1 g2 r c c d a bes4 g d'2 g,1 r2 bes |
 		
 		bes bes bes f c'1 bes2 g4 g' f d f2 c a | d a1
-		r2 | a c1 c2 c1 | f, r2 a | c4 c c2 | g1 |
+		r2 | a c2 ~ c c2 c1 | f, r2 a | c4 c c2 | g1 |
 		c1 d1 g,2 bes | a1 | r1 c2 c | d4 d a2 | d
 		
 		d4 c bes a g2 | c1 d2 d bes4 g4. a8 bes4 | a4. g8 a2 g bes c d |
