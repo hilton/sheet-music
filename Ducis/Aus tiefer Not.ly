@@ -206,7 +206,7 @@ bass = \new Voice {
 }
 
 \score {
-	\transpose c c {
+	\transpose c d {
 		\new StaffGroup <<
 			\set Score.proportionalNotationDuration = #(ly:make-moment 1 4)
 			\set Score.barNumberVisibility = #all-bar-numbers-visible
