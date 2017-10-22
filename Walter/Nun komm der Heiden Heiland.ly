@@ -1,8 +1,8 @@
-% CPDL #
+% CPDL #46932
 % Copyright ©2017 Peter Hilton - https://github.com/hilton/sheet-music
 
 \version "2.18.2"
-revision = "3"
+revision = "4"
 \pointAndClickOff
 
 #(set-global-staff-size 16.0)
@@ -34,6 +34,7 @@ year = #(strftime "©%Y" (localtime (current-time)))
 		\column \center-align {
 			\line {
 				Copyright \year \with-url #"http://hilton.org.uk" "Peter Hilton" - 
+				\with-url #"http://www.cpdl.org/wiki/index.php/Nun_komm_der_Heiden_Heiland_(Johann_Walter)" "CPDL #46932" -
 				Lilypond source \with-url #"https://github.com/hilton/sheet-music" https://github.com/hilton/sheet-music -
 				rev \revision - This work is licensed under
 			}
