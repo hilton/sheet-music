@@ -2,7 +2,7 @@
 % Copyright ©2017 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "2"
+revision = "3"
 \pointAndClickOff
 
 #(set-global-staff-size 15.0)
@@ -201,7 +201,7 @@ tenor = \new Voice {
 		c4 d bes c r f, g c4. bes8 a4 g2 f1\fermata r r r r f2 f4 f |
 		a bes c4. bes8 a g c2 \ficta b4 c2 r r1 r4 f, g a | bes1 \[ a2 g \] f4 a f4. g8 a4 bes c4. bes8 |
 		
-		a g c2 \ficta b4 c1 c2. c4 c2 c2 ~ c4 c4 a a | d1 c4. bes16 a g4 a \[ bes2 a \] f r a bes |
+		a g c2 \ficta b4 c1 c2. c4 c2 c2 ~ c4 c4 a a | d1 c4. bes16 a g4 a \[ bes2 g \] f r a bes |
 		a4 f a4. bes8 c4 c bes c a2 r f g4 a | f bes2 a4 d2 r4 a2 f4 a c bes a c2 f,4 g r2 |
 		r a g4 a4. bes8 c4 f,8 g a bes c4 f, r d'2 c4 d bes2 a8 g | a4 a g c ~ c a4. bes8 c4. 
 		
