@@ -2,7 +2,7 @@
 % Copyright ©2017 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "4"
+revision = "5"
 \pointAndClickOff
 
 #(set-global-staff-size 15.0)
@@ -154,7 +154,7 @@ tenorA = \new Voice {
 		lu -- cis
 		et lu -- _ _ _ men cre -- _ _ de -- _ ris,
 		
-		lu -- men be -- _ a -- tum pre -- 
+		lu -- men be -- _ a -- tum prae -- 
 		_ _ _ di -- _ cans.
 	}
 }
@@ -181,10 +181,10 @@ tenorB = \new Voice {
 		
 		ne -- _ _ bras de -- _ _ te -- gis de -- _ _ te -- gis,
 		luc -- cis et lu -- men cre -- _ _ _ _ _ _ de -- ris, lu -- cis et lu -- _
-		_ _ men cre -- _ de -- ris, et lu -- _ men be -- a -- _ _ _ tum pre -- di -- cans,
+		_ _ men cre -- _ de -- ris, et lu -- _ men be -- a -- _ _ _ tum prae -- di -- cans,
 		
-		pre -- _ _ _ _ _ _ _ _ di -- cans, lu -- men __ _ be -- a -- _ _ tum pre -- _
-		_ _ _ di -- cans lu -- men -- be -- a -- _ tum pre -- _ _ di -- _ cans.
+		prae -- _ _ _ _ _ _ _ _ di -- cans, lu -- men __ _ be -- a -- _ _ tum prae -- _
+		_ _ _ di -- cans lu -- men -- be -- a -- _ tum prae -- _ _ di -- _ cans.
 	}
 }
 
@@ -210,7 +210,7 @@ bassA = \new Voice {
 		lu -- cis et lu -- _ _ _ 
 		men cre -- _ _ de -- _ ris, lu -- 
 		
-		men be -- _ a -- tum pre -- _ _ _
+		men be -- _ a -- tum prae -- _ _ _
 		di -- _ cans.
 	}
 }
@@ -238,8 +238,8 @@ bassB = \new Voice {
 		lu -- cis et lu -- men, lu -- cis et lu -- men,
 		cre -- _ de -- _ ris, lu -- men cre -- de -- ris lu -- 
 		
-		_ _ _ _ men be -- a -- tum pre -- _ _ _ _ _ _ _ _ _ _ 
-		_ _ _ di -- cans, lu -- men be -- a -- tum pre -- di -- cans.
+		_ _ _ _ men be -- a -- tum prae -- _ _ _ _ _ _ _ _ _ _ 
+		_ _ _ di -- cans, lu -- men be -- a -- tum prae -- di -- cans.
 	}
 }
 
