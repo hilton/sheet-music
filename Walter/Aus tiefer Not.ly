@@ -1,8 +1,8 @@
-% CPDL #
+% CPDL #47216
 % Copyright ©2017 Peter Hilton - https://github.com/hilton/sheet-music
 
 \version "2.18.2"
-revision = "4"
+revision = "5"
 \pointAndClickOff
 
 #(set-global-staff-size 16.0)
@@ -35,6 +35,7 @@ year = #(strftime "©%Y" (localtime (current-time)))
 		\column \center-align {
 			\line {
 				Copyright \year \with-url #"http://hilton.org.uk" "Peter Hilton" - 
+				\with-url #"http://www.cpdl.org/wiki/index.php/Aus_tiefer_Not_(Johann_Walter)" "CPDL #47216" -
 				Lilypond source \with-url #"https://github.com/hilton/sheet-music" https://github.com/hilton/sheet-music -
 				rev \revision - This work is licensed under
 			}
@@ -203,5 +204,5 @@ bass = \new Voice {
 		>>
 	}
 	\layout { }
-%	\midi {	}
+	\midi {	}
 }
