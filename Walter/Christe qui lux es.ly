@@ -1,8 +1,8 @@
-% CPDL #
+% CPDL #47321
 % Copyright ©2017 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "5"
+revision = "6"
 \pointAndClickOff
 
 #(set-global-staff-size 15.0)
@@ -37,6 +37,7 @@ year = #(strftime "©%Y" (localtime (current-time)))
 		\column \center-align {
 			\line {
 				Copyright \year \with-url #"http://hilton.org.uk" "Peter Hilton" -
+				\with-url #"http://www.cpdl.org/wiki/index.php/Christe_qui_lux_es_(Johann_Walter)" "CPDL #47321" -
 				Lilypond source \with-url #"https://github.com/hilton/sheet-music" https://github.com/hilton/sheet-music -
 				revision \revision
 			}
@@ -257,5 +258,5 @@ bassB = \new Voice {
 		>>
 	}
 	\layout { }
-%	\midi {	}
+	\midi {	}
 }
