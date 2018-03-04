@@ -1,7 +1,8 @@
-% Copyright ©2016 Peter Hilton - https://github.com/hilton
+% CPDL #48971
+% Copyright ©2018 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "5"
+revision = "7"
 \pointAndClickOff
 
 #(set-global-staff-size 15.0)
@@ -34,10 +35,13 @@ year = #(strftime "©%Y" (localtime (current-time)))
 		\vspace #2
 		\column \center-align {
 			\line {
-				Copyright \year \with-url #"http://hilton.org.uk" "Peter Hilton" -
-				\with-url #"http://creativecommons.org/licenses/by-nc-sa/3.0/" "CC BY-NC-SA 3.0" -
-				Lilypond source at \with-url #"https://github.com/hilton/sheet-music" https://github.com/hilton/sheet-music - 
-				revision \revision 
+				Copyright \year \with-url #"http://hilton.org.uk" "Peter Hilton" - 
+				\with-url #"http://www.cpdl.org/wiki/index.php/O_bene_mio_(Adrian_Willaert)" "CPDL #48971" -
+				Lilypond source \with-url #"https://github.com/hilton/sheet-music" https://github.com/hilton/sheet-music -
+				rev \revision - This work is licensed under
+			}
+      \line {
+				the CC Attribution-NonCommercial-ShareAlike 4.0 International License published at \with-url #"http://creativecommons.org/licenses/by-nc-sa/4.0/" "http://creativecommons.org/licenses/by-nc-sa/4.0/"
 			}
 		}
 	}
@@ -187,5 +191,5 @@ bass = \new Voice	{
 		piece = ""
 	}
 	\layout { }
-%	\midi {	}
+	\midi {	}
 }
