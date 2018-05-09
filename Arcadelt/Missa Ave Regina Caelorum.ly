@@ -2,7 +2,7 @@
 % Copyright ©2017 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "3"
+revision = "4"
 \pointAndClickOff
 
 #(set-global-staff-size 15.0)
@@ -281,12 +281,14 @@ baritone = \new Voice {
 		ram __ _ Pa -- tris, mi -- _ se -- re -- re no -- bis, mi -- _ se -- re -- re no -- bis. Quo -- ni -- am tu so -- lus 
 		San -- ctus. Tu so -- lus Do -- _ mi -- nus. Tu so -- lus Al -- tis -- si -- mus, 
 
-		Je -- su __ _ Chri -- _ _ ste. Cum San -- cto Spi -- ri -- tu, __ _ in __ _ glo -- 
-		ri -- a De -- i Pa -- _ tris, in glo -- ri -- a De --
-		i Pa -- _ _ _ _ tris, in __ _ _
-
-		glo -- ri -- a, __ _ De -- i Pa -- _ tris, De -- i Pa -- _ tris. __ _ _
-		A -- _ _ men, A -- _ _ _ men.
+		Je -- su __ _ Chri -- _ _ ste. Cum San -- cto Spi -- _ _ _ ri -- _ tu, in __ _ 
+		glo -- ri -- a __ _ De -- i Pa -- _ tris, De -- 
+		
+		i Pa -- _ tris __ _, A -- men, in __ _ _ glo -- ri -- 
+		
+		a De -- i Pa -- _ _ tris, in glo -- ri -- a De -- 
+		i Pa -- tris, A -- men, in glo -- ri -- a De -- i Pa -- _ _
+		tris, A -- _ men, A -- _ _ _ men.
 	}
 }
 
