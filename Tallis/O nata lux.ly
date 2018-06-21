@@ -71,8 +71,7 @@ year = #(strftime "©%Y" (localtime (current-time)))
 
 global = { 
 	\key bes \major
-	\time 3/1
-	\partial 1.
+	\time 6/2
 	\tempo 2 = 72
 	\set Staff.midiInstrument = "Choir Aahs"
 	\accidentalStyle "forget"
@@ -84,12 +83,12 @@ fictaParenthesized = { \once \set suggestAccidentals = ##t \override AccidentalS
 
 superius = \new Voice	{
 	\relative c'' {
-		d2 es c \bar "" d1. a2 bes g a1 e'2 f d e1 c2 d \bar "" \break
-		bes a1 g r2 d' c a bes1. bes2 a a g2. f4 g a \bar "" \break bes2 c c d1. bes2 c c d1 r2
-		f es c \bar "" \break d1. d2 c a bes1. a2 g e a1. d2 d cis d1 r2 
+		d2 es c d1. a2 bes g a1 e'2 f d e1 c2 d \break
+		bes a1 g r2 d' c a bes1. bes2 a a g2. f4 g a bes2 c c d1. bes2 c c d1 r2
+		f es c d1. \break d2 c a bes1. a2 g e a1. d2 d cis d1 r2 
 		\showBarLine 
 		\repeat volta 2 {
-			a a g a1. a2 a g a1. d2 a bes a1 g2 g1 fis2 g1 \fermata
+			a a g a1. a2 a g a1. d2 a bes a1 g2 g1 fis2 g1. \fermata
 		 \showBarLine \bar ":|."
 		}
 	}
@@ -107,7 +106,7 @@ discantus = \new Voice {
 		g1 \ficta fis2 g1 r2 d e \ficta f g1. d2 f f es1. bes2 es es d2. es4 f2 g g c, f1 r2
 		f g a bes1. f2 a a g1. d2 e e f2. e4 f g a2 g e fis1 r2
 		\repeat volta 2 {
-			\ficta f! f d f1. f2 f d f1. f2 f d f1 es d2 d b1 \fermata
+			\ficta f! f d f1. f2 f d f1. f2 f d f1 es d2 d b1. \fermata
 		}
 	}
 	\addlyrics {
@@ -123,9 +122,9 @@ contraTenor = \new Voice {
 		\clef "treble_8"
 		bes2 c g a2. g4 f2 f d d' cis2. \ficta b4 a1 f'2 g e f1
 		bes,2 d d d1 r2 bes a a g1. bes2 c d g,2. a4 bes2 bes bes a bes1. bes2 es es d1 r2
-		d c c bes2. c4 d2. es4 f2 f d1. a2 b cis d1. d2 e \ficta e d1 r2
+		d c c bes2. c4 d2 ~ d4 es4 f2 f d1. a2 b cis d1. d2 e \ficta e d1 r2
 		\repeat volta 2 {
-			d d d d1. d2 d d d1. d2 d bes d2. c4 bes2 c a a g1 \fermata
+			d d d d1. d2 d d d1. d2 d bes d2. c4 bes2 c a a g1. \fermata
 		}
 	}
 	\addlyrics {
@@ -141,9 +140,9 @@ tenor = \new Voice {
 		\clef "treble_8"
 		g2 g c, f2. g4 a2 a g g e1 r2 c'2 d bes c1 a2
 		d2. c4 a2 b1 r2 g g f d1 g a2 f bes2. a4 g2 f es c f1 f2 bes1 a2 bes1 r2
-		bes bes a f1 bes c2 d bes2. a4 bes c d2 g, g a1. a2 bes c a1 r2
+		bes bes a f1 bes2 ~ bes c2 d bes2. a4 bes c d2 g, g a1. a2 bes c a1 r2
 		\repeat volta 2 {
-			a2 a bes a1. a2 a bes a1. a2 a g f1 g2 es f2. es4 d1 \fermata
+			a2 a bes a1. a2 a bes a1. a2 a g f1 g2 es f2. es4 d1. \fermata
 		}
 	}
 	\addlyrics {
@@ -161,7 +160,7 @@ bassus = \new Voice {
 		g2 d1 g, r2 bes c d g,1 g2 g' f d es1. d2 c c bes2. c4 d2 es c c bes1 r2
 		d es f bes,1 bes2 bes' a f g1. f2 e e d1. f2 g a d,1 r2
 		\repeat volta 2 {
-			d f g d1. d2 f g d1. d2 d g d1 es2 c d d g,1 \fermata
+			d f g d1. d2 f g d1. d2 d g d1 es2 c d d g,1. \fermata
 		}
 	}
 	\addlyrics {
@@ -190,4 +189,3 @@ bassus = \new Voice {
 	\layout { }
 	\midi {	}
 }
-
