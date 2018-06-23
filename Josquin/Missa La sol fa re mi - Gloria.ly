@@ -2,7 +2,7 @@
 % Copyright ©2018 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "3"
+revision = "4"
 \pointAndClickOff
 
 #(set-global-staff-size 15.0)
@@ -25,14 +25,14 @@ revision = "3"
 year = #(strftime "©%Y" (localtime (current-time)))
 
 \header {
-  copyright = \markup \sans {
-    \vspace #2
-    \column \center-align {
-      \line {
-        revision \revision
-      }
-    }
-  }
+	copyright = \markup \sans {
+		\vspace #2
+		\column \center-align {
+			\line {
+				revision \revision
+			}
+		}
+	}
   tagline = ##f
 }
 
@@ -104,7 +104,7 @@ soprano = \new Voice	{
 	\relative c' {
     e1 g2 a1 a2 g4. a8 b2. a8 b c4 b4. a8 a2 \ficta gis4 
     a2 r4 a a g a f g e2 d4 e1 r2 g2 a1 
-    g2 e r4 g f g a2 g e r4 g a a g2 e4 g a
+    g2 e r4 g f g a2 g r4 e f g a a g2 e4 g a
     b4 c4. b8 g4 a2 g8 \ficta fis g4 e g4. a8 b c d4 c b4. a8 a2 \ficta gis4 a c2 c4 c b c b c b g2 r1. r1.
     r4 g b a c4. b8 g4. c b a g a g f e a g8 [ e g a ] f4 e4. c8
     e4 g2 a4 b c4. b8 a4. g8 f e d1 r4 d g2 a4 b4. g8 g2c4 a b4. g8 g e e4 a f g4. e8 e c c4
@@ -128,10 +128,9 @@ soprano = \new Voice	{
   }
 	\addlyrics {
     Et in ter -- ra pax __ _ _ _ _ _ ho -- _ mi -- ni -- bus.
-    Bo -- ne vo -- lun -- ta -- _ _ _ tis.
-    Lau -- da -- mus  te, be -- ne -- di -- ci -- mus te, a -- do -- ra -- mus  te,
-    glo -- ri -- fi -- ca -- _ mus te. __ _ _ _
-    Gra -- _ _ ti -- _ as a -- _ gi -- mus ti -- bi,
+    Bo -- ne vo -- lun -- ta -- _ _ _ tis. Lau -- da -- 
+		mus  te, a -- do -- ra -- mus  te, glo -- ri -- fi -- ca -- mus te. Gra -- _ ti -- as 
+		a -- _ _ gi -- _ _ mus __ _ ti -- _ _ _ _ _ _ _ _ _ bi,
     prop -- ter mag -- nam glo -- ri -- am  tu -- am
     Do -- mi -- ne  De -- _ us
     Rex  cae -- les -- tis  De -- us Pa -- ter
@@ -315,5 +314,5 @@ bass = \new Voice {
 		>>
 	}
 	\layout { }
-	\midi {	}
+%	\midi {	}
 }
