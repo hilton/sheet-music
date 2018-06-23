@@ -2,7 +2,7 @@
 % Copyright ©2018 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "2"
+revision = "3"
 \pointAndClickOff
 
 #(set-global-staff-size 15.0)
@@ -25,6 +25,14 @@ revision = "2"
 year = #(strftime "©%Y" (localtime (current-time)))
 
 \header {
+  copyright = \markup \sans {
+    \vspace #2
+    \column \center-align {
+      \line {
+        revision \revision
+      }
+    }
+  }
   tagline = ##f
 }
 
@@ -94,8 +102,9 @@ singleDigitTime = { \override Staff.TimeSignature.style = #'single-digit }
 
 soprano = \new Voice	{
 	\relative c' {
-    e1 g2 a1 a2 g4. a8 b2. a8 b c4 b4. a8 a2 \ficta gis4 a2 r4 a a g a f g e2 d4 e1 r2
-    g2 a1 g2 e r4 g f g a2 g r4 e f g a a g2 e4 g a
+    e1 g2 a1 a2 g4. a8 b2. a8 b c4 b4. a8 a2 \ficta gis4 
+    a2 r4 a a g a f g e2 d4 e1 r2 g2 a1 
+    g2 e r4 g f g a2 g e r4 g a a g2 e4 g a
     b4 c4. b8 g4 a2 g8 \ficta fis g4 e g4. a8 b c d4 c b4. a8 a2 \ficta gis4 a c2 c4 c b c b c b g2 r1. r1.
     r4 g b a c4. b8 g4. c b a g a g f e a g8 [ e g a ] f4 e4. c8
     e4 g2 a4 b c4. b8 a4. g8 f e d1 r4 d g2 a4 b4. g8 g2c4 a b4. g8 g e e4 a f g4. e8 e c c4
@@ -120,9 +129,9 @@ soprano = \new Voice	{
 	\addlyrics {
     Et in ter -- ra pax __ _ _ _ _ _ ho -- _ mi -- ni -- bus.
     Bo -- ne vo -- lun -- ta -- _ _ _ tis.
-    Lau -- da -- mus  te, a -- do -- ra -- mus  te,
-    glo -- ri -- fi -- ca -- mus  te.
-    Gra -- _ ti -- as a -- _ _ _ gi -- _ mus __ _ ti -- _ _ _ _ _ _ _ _ _ bi,
+    Lau -- da -- mus  te, be -- ne -- di -- ci -- mus te, a -- do -- ra -- mus  te,
+    glo -- ri -- fi -- ca -- _ mus te. __ _ _ _
+    Gra -- _ _ ti -- _ as a -- _ gi -- mus ti -- bi,
     prop -- ter mag -- nam glo -- ri -- am  tu -- am
     Do -- mi -- ne  De -- _ us
     Rex  cae -- les -- tis  De -- us Pa -- ter
@@ -169,10 +178,9 @@ alto = \new Voice	{
 	}
 	\addlyrics {
     Et in ter -- ra pax __ _ _ ho -- mi -- ni -- bus, __ _ _
-    bo -- ne vo -- lun -- ta -- _ _ _ tis.
-    Lau -- _ da -- mus  te, lau -- da -- mus  te, a -- _ _ do -- ra -- mus __ _  te,
-    glo -- ri -- fi -- _ ca -- mus te.
-    Gra -- ti -- as a -- gi -- mus ti -- _ bi
+    bo -- ne vo -- lun -- ta -- _ _ _ tis, vo -- lun -- ta -- _ tis.
+    Lau -- da -- mus  te, be -- ne -- di -- ci -- mus te, __ _ _ a -- do -- ra -- _ mus  te,
+    glo -- ri -- fi -- ca -- _ _ _ _ mus te.
     prop -- ter mag -- nam glo -- _ ri -- am
     Do -- mi -- ne  De -- _ us  Rex  cae -- les -- _ _ _ tis  De -- us Pa -- _ _ ter
     om -- _ ni -- _ _ _ _ _ _ _ _ _ po -- tens.
@@ -199,7 +207,9 @@ alto = \new Voice	{
 tenor = \new Voice {
 	\relative c' {
     \clef "treble_8"
-    e1 e2 d4 c a1 b1 e2. d4 c a b2 r1. r1. r1. e2 d4 c a2 b r4 e2. d4 c a2 b r4 e d c a2 b e d c2. a4 b2 r1. r1.
+    e1 e2 d4 c a1 b1 e2. d4 c a b2 
+    r1. r1. r1. e2 d4 c a2 
+    b r4 e2 e4 d4 c a2 b r4 e d c a2 b e d4 d c2. a4 b2 r1. r1.
     r4 a2 a4 a g a g a g e c' b a8f'4 e8 e2 d4 e g4. f8 d4 
     r2 r1. r1. r1. r1. e1. d4 c a1 b1. r1. r1. r1. e1 d4 c
     a2 b1 
@@ -221,11 +231,11 @@ tenor = \new Voice {
 	}
 	\addlyrics {
     Et in ter -- _ ra pax ho -- _ mi -- ni -- bus.
-  %  Bo -- ne vo -- lun -- ta -- tis. _ _ _
-    Lau -- _ da -- mus  te, a -- do -- ra -- mus  te,
-    glo -- ri -- fi -- ca -- mus te.
-    Gra -- ti -- _ as %a -- gi -- mus ti -- bi _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
-    prop -- ter mag -- nam glo -- ri -- am  tu -- _ _ _ _ _ _ _ _ _ am __ _ _
+    Lau -- da -- _ mus 
+    te, be -- ne -- di -- ci -- mus te, a -- do -- ra -- mus  te, glo -- ri -- fi -- 
+    ca -- mus te. Prop -- ter mag -- nam 
+    
+    glo -- ri -- am  tu -- _ _ _ _ _ _ _ _ _ am __ _ _
     om -- ni -- _ po -- tens.
     Je -- su __ _  Chri -- te.
     Do -- mi -- ne __ _ _ _  De -- _ _ _ _ _ _ _ us 

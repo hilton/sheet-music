@@ -2,7 +2,7 @@
 % Copyright ©2018 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "3"
+revision = "4"
 \pointAndClickOff
 
 #(set-global-staff-size 15.0)
@@ -19,15 +19,20 @@ revision = "3"
 	markup-system-spacing = #'( (padding . 4) )
 	system-system-spacing = #'( (basic-distance . 20) (stretchability . 100) )
 	ragged-bottom = ##f
-	ragged-last-bottom = ##f
+	ragged-last-bottom = ##t
 }
 
 year = #(strftime "©%Y" (localtime (current-time)))
 
 \header {
-	title = ##f
-	composer = ##f
-	copyright = ##f
+	copyright = \markup \sans {
+		\vspace #2
+		\column \center-align {
+			\line {
+				revision \revision
+			}
+		}
+	}
 	tagline = ##f
 }
 
@@ -79,7 +84,7 @@ soprano = \new Voice	{
 		\set Timing.timing = ##t
   }
 	\addlyrics {
-		Á -- _ gnus Dé -- i, Á -- _ gnus Dé -- i, Á -- _ gnus Dé -- i,
+		Á -- _ gnus Dé -- i, á -- _ gnus Dé -- i, á -- _ gnus Dé -- i,
 		qui  tól -- lis __ _  pec -- cá -- _ ta __ _  mún -- _ _ _ _ _ _ _ _ di, mún -- _ _ _ di, mún -- _ _ _ _ _ di,
 		mún -- _ _ _ di mún -- _ _ _ _ _ _ _ _ _ di, __ _
 		mún -- _ _ _ _ _ _ _ di, mún -- _ _ _ _ _ _ _ di, mún -- _ _ _ _ _ di,
@@ -98,50 +103,50 @@ soprano = \new Voice	{
 
 alto = \new Voice	{
 	\relative c' {
-    e\breve d1 c1 a2 b1. r4 g c2. d4 e2 e
-		d1 \[ c2 a \] b \[ e d1 \]
-		a4. b8 c d e4
-	  a,4. b8 c2 r4 e e e b b d4. c8 a4 d c a4. b8 c d e4 c4. a8 b4 c d b c4. b8 d4. c8
+    e\breve d1 c1 a2 b1. r4 g c2. d4 
+		e2 e d1 \[ c2 a \] b \[ e d1 \] c1. a2 r4 e' 
+		e e b b d4. c8 a4 d c a4. b8 c d e4 c4. a8 b4 c d b c4. b8 d4. c8
 	  b a g4. f8  g4 a2 \ficta gis4 a e'2 f4 g2 \[ c, d \] b \[ c d \] b  \[ c d \] b \[ c d \] b4 e4 ~ \break e8 d8 f4. e8 d c b4 c4. d8 e4. d8 f4. e8 d c b2 
 	  r4 b c8 [a] c [d] e1 r4 b c8 a c d e2 r4 g g g f d e g g g f d e2 e\breve.
   }
 	\addlyrics {
-		Á -- gnus Dé -- _ i, Dé -- _ _ i, Á -- _ _ _ gnus Dé -- _ _ _ _ _ _ i __ _ _,
-		qui  tól -- lis __ _  pec -- cá -- _ ta __ _  mún -- _ _ _ _ di, 
-	        mún -- _ _ _ _ di, mún -- _ _ _ _ _ _ _ _ _ _ di,
-	        mún -- _ di, mún -- _ di, mún -- _ di, mún -- _ di, mún -- _ di, 
-	        mún -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ di, 
-	        mise -- ré -- _ _ _ re, mise -- ré -- _ _ _ re,  
-		mi -- se -- ré -- _ re __ _   mi -- se -- ré -- _ re nó -- bis.
+		Á -- gnus Dé -- _ i, Dé -- _ _ 
+		i, á -- gnus Dé -- _ i, á -- gnus Dé -- i,
+		qui  tól -- lis __ _  pec -- cá -- _ ta  mún -- _ _ _ _ _ di, 
+		mún -- _ _ _ _ di, mún -- _ _ _ _ _ _ _ _ _ _ di,
+		mún -- _ di, mún -- _ di, mún -- _ di, mún -- _ di, mún -- _ di, 
+		mún -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ di, 
+		mi -- se -- _ ré -- _ re, mi -- se -- _ ré -- _ re,  
+		mi -- se -- ré -- re nó -- bis,  mi -- se -- ré -- re nó -- _ bis.
 	}
 	\addlyrics {
 		_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 		_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-		_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-		_ _ _ _
-		dó -- _ na  nó -- _ bis, dó -- _ na  nó -- _ bis,
-		dó -- na  nó -- _ bis __ _  dó -- na  nó -- _ bis pá -- cem.
+		_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+		dó -- na _  nó -- _ bis, dó -- na _  nó -- _ bis, 
+		dó -- na  nó -- bis pá -- cem, dó -- na  nó -- bis pá -- _ cem.
 	}
 }
 
 tenor = \new Voice {
 	\relative c' {
 	  \clef "treble_8"
-    a1. \[ g2 f \] d e1 e' d c2 a1 b2 
-		r4 e,4 f d f4. g8 a4. b8 c4 d e2 r4 e,4 f d f4. g8
-		c1. a1 b1 r2 r1. r1. r1.
+    a1. \[ g2 f \] d e1 e' d c2 a1 
+		b2 r4 e,4 f d f4. g8 a4. b8 c4 d e2 r4 e,4 f d f4. g8 a4. b8 c d e4 a,4. b8 c2 a
+		b1 r2 r1. r1. r1.
 	  e1 d2 \[ c a \] b a1 g2 \[ f d \] e a1 g2 f d e r1. r1. r4 e'2 d4 c a b2
 	  r4 e2 d4 c a b2 r4 e2 d4. c8 a4 b e2 d4 c a b2 a\breve.
   }
 	\addlyrics {
-		Á -- gnus Dé -- _ i Á -- gnus Dé -- _ i Dé -- _ _ _ _ _ _ _ _ i Dé -- _ _ _ _ _ _ i 
-		qui __ _  tól -- _ lis  pec -- _ cá -- _ ta  mún -- _ _ _ di
-		mi -- se -- ré -- _ re  mi -- se -- ré -- _ re  mise -- ré -- _ _ re nó -- _ _ _ _ bis.
+		Á -- gnus Dé -- _ i á -- gnus Dé -- _ 
+		i Dé -- _ _ _ _ _ _ _ _ i Dé -- _ _ _ _ _ _ _ _ _ _ _ _ _ 
+		i, mún -- _ _ _ di, mún -- _ _ _ di, mún -- _ _ _ di,
+		mi -- se -- ré -- _ re  mi -- se -- ré -- _ re nó -- _ _ _ bis, nó -- _ _ _ _ bis.
 	}
 	\addlyrics {
-		_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+		_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 		_ _ _ _ _ _ _ _ _ _ 
-		dó -- na nó -- _ bis  dó -- na  nó -- _ bis  dó -- na __ _ nó -- bis pá -- _ _ _ _ cem.
+		dó -- na nó -- _ bis  dó -- na  nó -- _ bis pá -- _ _ _ cem, pá -- _ _ _ _ cem.
 	}
 
 }
@@ -159,13 +164,13 @@ bass = \new Voice {
 		qui  tól -- lis __ _  pec -- cá -- _ ta __ _  mún -- _ _ _ _ _ _ di,
 		mún -- _ _ _ di, mún -- _ _ _ di, mún -- _ _ _ di, mún -- _ _ _ di, mún -- _ _ _ di, 
 		mún -- _ _ _ _ _ _ di, 
-		mi -- se -- ré -- re  mi -- _ _ se -- _ ré -- re nó -- _ _ _ _ bis. 
+		mi -- se -- ré -- re, mi -- _ se -- ré -- re nó -- bis, mi -- se -- ré -- re nó -- bis. 
 	}
 	\addlyrics {
 		_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 		_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 		_ _ _ _ _ _ _ _ _ _ _ _ _ _ _  
-		dó -- na nó -- bis, dó -- _ _ na __ _  nó -- bis pá -- _ _ _ _ cem.
+		dó -- na nó -- bis, dó -- _ na nó -- bis pá -- cem, dó -- na nó -- bis pá -- cem.
 	}
 }
 
@@ -182,7 +187,7 @@ bass = \new Voice {
 		>>
 	}
   \header {
-		piece = \markup \larger \sans { Agnus Dei I/III }
+		piece = \markup \larger \sans { Agnus Dei I & III }
 	}
 	\layout { }
 	\midi {	}
