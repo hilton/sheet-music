@@ -130,7 +130,7 @@ soprano = \new Voice	{
     Et in ter -- ra pax __ _ _ _ _ _ ho -- _ mi -- ni -- bus.
     Bo -- ne vo -- lun -- ta -- _ _ _ tis. Lau -- da -- 
 		mus  te, a -- do -- ra -- mus  te, glo -- ri -- fi -- ca -- mus te. Gra -- _ ti -- as 
-		a -- _ _ gi -- _ _ mus __ _ ti -- _ _ _ _ _ _ _ _ _ bi,
+		a -- gi -- mus ti -- _ _ bi, gra -- _ _ ti -- _ as a -- gi -- mus ti -- _ bi, 
     prop -- ter mag -- nam glo -- ri -- am  tu -- am
     Do -- mi -- ne  De -- _ us
     Rex  cae -- les -- tis  De -- us Pa -- ter
