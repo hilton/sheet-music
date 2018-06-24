@@ -137,7 +137,7 @@ alto = \new Voice	{
 		Chri -- _ _ _ ste  e -- _ le -- _ _ _ _ i -- son,
 		e -- _ le -- _ _ i -- son.
 		Ky -- _ ri -- e  e -- le -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ i -- son
-		Ky -- ri -- e e -- le -- _ _ _ _ _ _ _ i -- (son,) 
+		Ky -- ri -- e e -- le -- _ _ _ _ _ _ _ i -- son, 
 		Ky -- _ _ ri -- e, Ky -- _ _ ri -- e_e -- le -- _ _ i -- son.
 	}
 }
@@ -173,7 +173,7 @@ tenor = \new Voice {
     Ky -- _ _ ri -- e_e -- le -- _ _ i -- son, Ky -- _ _ ri -- 
 		e_e -- le -- _ i -- _ son, Ky -- _ _ ri -- e_e -- le -- _ _ i -- son,
     Ky -- _ _ ri -- e, 
-		(e -- le) -- _ i -- son, i -- son.
+		e -- le -- _ i -- son, i -- son.
 	}
 
 }
