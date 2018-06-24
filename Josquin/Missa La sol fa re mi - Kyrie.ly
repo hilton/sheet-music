@@ -2,7 +2,7 @@
 % Copyright ©2018 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "2"
+revision = "3"
 \pointAndClickOff
 
 #(set-global-staff-size 15.0)
@@ -88,7 +88,7 @@ soprano = \new Voice	{
 	\relative c'' {
   a1 g2 f1 d2 \[ e2 a \] g2 f1 d2 \break
 	e4 g4. f8 g4 a b c4. b8 g4 a4. g8 f e d4 g4. c,8 c4 d f e4. a,8 a4 a'2 \ficta gis4 
-	a1 r2 a1 a2 \[ g2 c \] b2 a1. 
+	a1 r2 a1 a2 \[ g2 c \] b2 a1 a2 
 	\set Timing.timing = ##f \ficta gis\breve.
   \showBarLine \bar "||" \set Timing.timing = ##t	\set Score.currentBarNumber = #15 \time 2/2
   a1 g \[ f2 d \] e2 a2 ~ \break
@@ -103,16 +103,17 @@ soprano = \new Voice	{
 	\set Timing.timing = ##f	e\breve. \set Timing.timing = ##t	\showBarLine \bar "|." 
   }
 	\addlyrics {
-    Ky -- _ _ ri -- e_e -- _ _ lei -- _ son, e -- _ _ _ _ lei -- _ _ _ _ _ _ son,
-    Ky -- ri -- e  e -- _ lei -- _ _ _ _ son,
-    Ky -- ri -- e_e -- _ _ lei -- son.
-    Chri -- _ _ _ ste_e -- lei -- _ _ _ _ son, Chri -- _ _ _ _ _ ste
-    e -- lei -- _ _ _ _ _ _ _ _ son,
-    e -- _ lei -- _ _ _ _ son.
-    Ky -- _ _ ri -- e_e -- lei -- _ _ _ son,
-    Ky -- _ _ ri -- e  e -- lei -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ son,
-    e -- lei -- _ _ _ _ _ _ _ _ _ _ son, e -- lei -- _ _ _ son,
-    e -- lei -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ son.
+    Ky -- _ _ ri -- e_e -- _ _ le -- i -- 
+		son, e -- _ _ _ _ le -- _ _ _ _ i -- _ son,
+    Ky -- ri -- e  e -- _ le -- _ _ _ i -- son,
+    Ky -- ri -- e_e -- _ _ le -- i -- son.
+    Chri -- _ _ _ ste_e -- le -- _ _ _ i -- son, Chri -- _ _ _ _ _ ste
+    e -- le -- _ _ _ _ _ _ _ i -- son,
+    e -- _ le -- _ _ _ i -- son.
+    Ky -- _ _ ri -- e_e -- le -- _ _ i -- son,
+    Ky -- _ _ ri -- e  e -- le -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ i -- son,
+    e -- le -- _ _ _ _ _ _ _ _ _ i -- son, e -- le -- _ _ i -- son,
+    e -- le -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ i -- son.
 	}
 }
 
@@ -130,15 +131,14 @@ alto = \new Voice	{
 		e d c a2 b4 e d c a2 b4 e d c a2 b\breve.
   }
 	\addlyrics {
-		Ky -- _ _ ri -- e_e -- _ _ lei -- _ son, 
-		Ky -- _ _ ri -- e  Ky -- _ ri -- e e -- _ _ lei -- _ _ _ _ son.
-		Chri -- _ _ _ ste_e -- lei -- _ _ _ _ son,
-		Chri -- _ _ _ ste  e -- _ lei -- _ _ _ _ son, __ _ 
-		e -- _ lei -- _ 
-		_ _ son.
-		Ky -- _ ri -- e  e -- lei -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ son
-		Ky -- ri -- e e -- lei -- _ _ _ _ _ _ _ _ (son,) 
-		Ky -- _ _ ri -- e, Ky -- _ _ ri -- e_e -- lei -- _ _ _ son.
+		Ky -- _ _ ri -- e_e -- _ _ le -- i -- son, 
+		Ky -- _ _ ri -- e  Ky -- _ ri -- e e -- _ _ le -- _ _ _ i -- son.
+		Chri -- _ _ _ ste_e -- le -- _ _ _ i -- son,
+		Chri -- _ _ _ ste  e -- _ le -- _ _ _ _ i -- son,
+		e -- _ le -- _ _ i -- son.
+		Ky -- _ ri -- e  e -- le -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ i -- son
+		Ky -- ri -- e e -- le -- _ _ _ _ _ _ _ i -- (son,) 
+		Ky -- _ _ ri -- e, Ky -- _ _ ri -- e_e -- le -- _ _ i -- son.
 	}
 }
 
@@ -161,20 +161,19 @@ tenor = \new Voice {
 		e g a f2 e r1 r d2 g\breve.
   }
 	\addlyrics {
-		Ky -- _ ri -- e  e -- _ _ lei -- _ _ _ _ son, e -- _ lei -- _ _ 
-		son, Ky -- ri -- e_e -- lei -- _ _ _ _ _ _ son,  e -- _ lei -- _ son,
+		Ky -- _ ri -- e  e -- _ _ le -- _ _ _ i -- son, e -- _ le -- i -- _
+		son, Ky -- ri -- e_e -- le -- _ _ _ _ _ i -- son,  e -- _ le -- i -- son,
 		
-    Ky -- _ _ ri -- e e -- lei -- _ son
-    Ky -- _ _ ri -- e __ _ e -- _ lei -- _ son.
-    Chri -- _ _ _ ste_e -- lei -- _ _ _ _ _ _ _ _ _ _ _ _ _ son, __ _ _ _
-    Chri -- _ ste __ _  e -- _ lei -- _ _ _ _ _ _ _ _ 
-		_ _ _ _ son.
-		Ky -- _ _ ri -- e   e -- lei -- _ _ _ _ _ _ _ _ _ _ _ _ _ son, __ _
-    Ky -- _ _ ri -- e_e -- lei -- _ _ _ son,
-    Ky -- _ _ ri -- e_e -- lei -- _ _ _ son,
-    Ky -- _ _ ri -- e_e -- lei -- _ _ _ son,
+    Ky -- _ _ ri -- e e -- le -- i -- son
+    Ky -- _ _ ri -- e __ _ e -- _ le -- i -- son.
+    Chri -- _ _ _ ste_e -- le -- _ _ _ _ _ _ _ _ _ _ _ _ i -- son, __ _ _ _
+    Chri -- _ ste __ _  e -- _ le -- _ _ _ _ _ _ _ _ 
+		_ _ i -- _ son.
+		Ky -- _ _ ri -- e   e -- le -- _ _ _ _ _ _ _ _ _ _ _ _ i -- son, __ _
+    Ky -- _ _ ri -- e_e -- le -- _ _ i -- son, Ky -- _ _ ri -- 
+		e_e -- le -- _ i -- _ son, Ky -- _ _ ri -- e_e -- le -- _ _ i -- son,
     Ky -- _ _ ri -- e, 
-		(e -- lei) -- _ _ son, lei -- son.
+		(e -- le) -- _ i -- son, i -- son.
 	}
 
 }
@@ -196,13 +195,13 @@ bass = \new Voice {
     a'2 g4 e g a f a g e g a f2 e\breve.
   }
 	\addlyrics {
-    Ky -- _ _ ri -- e_e -- _ _ lei -- _ son.
-    Chri -- _ _ _ ste_e -- lei -- _ _ _ son,
-    Chri -- _ _ _ ste_e -- lei -- _ _ _ son,
-    Chri -- _ _ _ ste_e -- lei -- _ _ _ son. 
-    Ky -- _ _ ri -- e, Ky -- _ _ ri -- e_e -- lei -- _ _ _ son,
-    Ky -- _ _ _ _ _ _ _ _ _ _ ri -- e  e -- lei -- _ _ son,
-    Ky -- _ _ _ _ _ _ _ _ _ _ ri -- e  e -- lei -- _ _ _ _ _ _ _ _ _ _ son.
+    Ky -- _ _ ri -- e_e -- _ _ le -- i -- son.
+    Chri -- _ _ _ ste_e -- le -- _ _ i -- son,
+    Chri -- _ _ _ ste_e -- le -- _ i -- _ son,
+    Chri -- _ _ _ ste_e -- le -- _ i -- _ son. 
+    Ky -- _ _ ri -- e, Ky -- _ _ ri -- e_e -- le -- _ _ i -- son,
+    Ky -- _ _ _ _ _ _ _ _ _ _ ri -- e  e -- le -- _ i -- son,
+    Ky -- _ _ _ _ _ _ _ _ _ _ ri -- e  e -- le -- _ _ _ _ _ _ _ _ _ i -- son.
 	}
 }
 
