@@ -79,8 +79,7 @@ singleDigitTime = { \override Staff.TimeSignature.style = #'single-digit }
 			\relative c {
 				\clef "treble_8"
 				\cadenzaOn
-				\override Stem #'transparent = ##t 
-        c d f s f s f s s  e s s  f s g s e s g f e s e-- s s \showBarLine\bar "|"
+        c4 d f s f s f s s  e s s  f s g s e s g f e s e2 s \showBarLine\bar "|"
 				\cadenzaOff
 			}
 		}
@@ -93,10 +92,11 @@ singleDigitTime = { \override Staff.TimeSignature.style = #'single-digit }
 	}
 	\layout {
 		ragged-right = ##t
-    \context {
-  		\Voice
-  		\remove "Ambitus_engraver"
-  	}
+		\context { \Voice \remove "Ambitus_engraver" }
+		\context { \Staff
+			\remove "Time_signature_engraver"
+			\hide Stem
+		}
 	}
 }
 
