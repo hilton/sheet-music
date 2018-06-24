@@ -2,7 +2,7 @@
 % Copyright ©2018 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "4"
+revision = "5"
 \pointAndClickOff
 
 #(set-global-staff-size 15.0)
@@ -177,8 +177,8 @@ alto = \new Voice	{
 	}
 	\addlyrics {
     Et in ter -- ra pax __ _ _ ho -- mi -- ni -- bus, __ _ _
-    bo -- ne vo -- lun -- ta -- _ _ _ tis, vo -- lun -- ta -- _ tis.
-    Lau -- da -- mus  te, be -- ne -- di -- ci -- mus te, __ _ _ a -- do -- ra -- _ mus  te,
+    bo -- ne vo -- lun -- ta -- _ _ _ tis, Lau -- da -- mus __ _ te,
+    lau -- da -- mus  te, be -- ne -- di -- ci -- mus te, __ _ _ a -- do -- ra -- _ mus  te,
     glo -- ri -- fi -- ca -- _ _ _ _ mus te.
     prop -- ter mag -- nam glo -- _ ri -- am
     Do -- mi -- ne  De -- _ us  Rex  cae -- les -- _ _ _ tis  De -- us Pa -- _ _ ter
