@@ -19,7 +19,7 @@ revision = "5"
 	markup-system-spacing = #'( (padding . 4) )
 	system-system-spacing = #'( (basic-distance . 15) (stretchability . 100) )
 	ragged-bottom = ##f
-	ragged-last-bottom = ##t
+	ragged-last-bottom = ##f
 }
 
 year = #(strftime "©%Y" (localtime (current-time)))
@@ -39,7 +39,7 @@ year = #(strftime "©%Y" (localtime (current-time)))
 \layout {
 	indent = #0
   	ragged-right = ##f
-  	ragged-last = ##f
+  	ragged-last = ##t
 	\context {
 		\Score
 		\override BarNumber #'self-alignment-X = #CENTER
@@ -57,6 +57,7 @@ year = #(strftime "©%Y" (localtime (current-time)))
 		\override NoteHead #'style = #'baroque
 		\consists "Horizontal_bracket_engraver"
 		\consists "Ambitus_engraver"
+		\remove "Forbid_line_break_engraver"
 	}
 }
 
@@ -109,19 +110,19 @@ soprano = \new Voice	{
     r4 g b a c4. b8 g4. c b a g a g f e a g8 [ e g a ] f4 e4. c8
     e4 g2 a4 b c4. b8 a4. g8 f e d1 r4 d g2 a4 b4. g8 g2c4 a b4. g8 g e e4 a f g4. e8 e c c4
     g'2 e4 f2. e8 d d4 g4. f8 e d \[ c2 d \] c2 r4 g' a c4. b8 g b a4. g8 e4b' c4. b8
-    g4 a2 \ficta gis4 a c b c2 b4 a b ~ b a4 g a2 \ficta gis4 a e f1 
-    \set Timing.timing = ##f e\breve \showBarLine \bar "||" \set Timing.timing = ##t \break
+    g4 a2 \ficta gis4 a c b c2 b4 a b2 a4 g a2 \ficta gis4 a e f1 
+    \set Timing.timing = ##f e\breve \showBarLine \bar "||" \set Timing.timing = ##t
     
     \set Score.currentBarNumber = #41 \time 2/2
-    r1 a1 c2 c b g a b c b4 a \break 
+    r1 a1 c2 c b g a b c b4 a 
     g1 r2 g1 g2 g1 f2. e8 d f4 e2 d8 c e4 d r d2 c8 
-    b b4 a8 g g2 g'2 g2. f8 e e4 c g'2. a4 b c ~
-    c b8 a g4 a2 g8 f e2 r g2. g4 g2 g4 g g e \ficta fis2
-    g2 a1 d,\breve r1 r2 d e4. f8 [g a] b4 ~ \break
-    b8 a8 a2 \ficta gis4 a2 r r1 r r a4. b8 [c d] e4 ~ \break
-    e d2 \ficta cis4 d a c b a g f2 e r r4
-    a4 g g a f e2 r \tuplet 3/2 {a4 a a}  \tuplet 3/2 {g2 g4}  \tuplet 3/2 {a f2} e2 r r4 a g g a f e2 \break
-    r b' c b4 g4. f8 g a b4 b e,2 r4 g g4. a8 b c b4. a8 c2 b8 a g\breve r1 r2 r4 e e4. f8 g a b4. a8 a2 \ficta gis4 \break
+    b b4 a8 g g2 g'2 g2. f8 e e4 c g'2. a4 b c2
+		b8 a g4 a2 g8 f e2 r g2. g4 g2 g4 g g e \ficta fis2
+    g2 a1 d,\breve r1 r2 d e4. f8 [g a] b4.
+		a8 a2 \ficta gis4 a2 r r1 r r a4. b8 [c d] e2 
+		d2 \ficta cis4 d a c b a g f2 e r r4
+    a4 g g a f e2 r \tuplet 3/2 {a4 a a}  \tuplet 3/2 {g2 g4}  \tuplet 3/2 {a f2} e2 r r4 a g g a f e2
+    r b' c b4 g4. f8 g a b4 b e,2 r4 g g4. a8 b c b4. a8 c2 b8 a g\breve r1 r2 r4 e e4. f8 g a b4. a8 a2 \ficta gis4
     a a a a c2 b4 g a g c b e, a g4. f8 d4. e8 f g a b c4. b8 g4 a b2 c4. b8 g4 d
     a'4. g8 e4 g a b c2. b8 a g\breve
     \showBarLine \bar "|."
@@ -212,21 +213,21 @@ tenor = \new Voice {
     r4 a2 a4 a g a g a g e c' b a8f'4 e8 e2 d4 e g4. f8 d4 
     r2 r1. r1. r1. r1. e1. d4 c a1 b1. r1. r1. r1. e1 d4 c
     a2 b1 
-    r2 r4 g a c4 ~ \break c8 b8 g b a4. g8 e d e g f4. e8 c4 r2.
+    r2 r4 g a c4. b8 g b a4. g8 e d e g f4. e8 c4 r2.
     e'\breve d1 c2. a4 b2 r4 e2 d4 c a b\breve
     
     r1 r1 r1 r1 r1 r1 r1 e\breve d c2 a 
-    b\breve. r1 r1 r2 r4 c4 ~
-    c d4 e f2 e8 d c4 a c2 b2. b4 b2 c4 c c c a b4. a8 g4 ~
-    g \ficta fis8 e f g
+    b\breve. r1 r1 r2 r4 c2
+		d4 e f2 e8 d c4 a c2 b2. b4 b2 c4 c c c a b4. a8 g2
+		\ficta fis8 e f g
     a8 f g1 r4 g f g4. a8 b c d4 e d g, f g2 f8 e e4 b' c d e2     
     r4 a,2 g4 f d e2 r4 a2 g4 f d e2
-    r1 r1 r1 r1 r4 e'2 d4 c a b2 r2 r4 e ~
-    e d4 c a b2 r2 r4 e2 d4 c a b2 r1  r4 e2 d4 c a b2 r4 e2 d4 c a b2 r4 e2 d4 c2 a2 
+    r1 r1 r1 r1 r4 e'2 d4 c a b2 r2 r4 e2
+		d4 c a b2 r2 r4 e2 d4 c a b2 r1  r4 e2 d4 c a b2 r4 e2 d4 c a b2 r4 e2 d4 c2 a2 
     e'2 r4 e,4 e4. f8g a b4. c8 d4. a8 c4 b2 a1 r2 r1 r4
     a4 c d e2 r4 e,4 f g a b c d e4.d8 b4 
-    r4 r2 r2 r4 e ~ 
-    e d4 c a b2 r4 a2 g4 f d e\breve.
+    r4 r2 r2 r4 e2
+		d4 c a b2 r4 a2 g4 f d e\breve.
 	}
 	\addlyrics {
     Et in ter -- _ ra pax ho -- _ mi -- ni -- bus.
@@ -236,7 +237,7 @@ tenor = \new Voice {
     
     glo -- ri -- am  tu -- _ _ _ _ _ _ _ _ _ am __ _ _
     om -- ni -- _ po -- tens.
-    Je -- su __ _  Chri -- te.
+    Je -- su __ _  Chri -- ste.
     Do -- mi -- ne __ _ _ _  De -- _ _ _ _ _ _ _ us 
     Fi -- _ _ li -- us  Pa -- _ _ _ tris.
    
@@ -265,12 +266,12 @@ bass = \new Voice {
     g8 b a4. g8 e1 r4 a g a f g f g e f e f d e  \[ c2 d \] a2 e'\breve
     
     d1 d2 d a' a g2. f8 e \[ d2 g \] \[ a b \] c1 r2 c, c c g'1 \[ d1 a' \] 
-    g1 r2 g g2. f8 e e4 c g'2. a4 b c2 b8 a g4 a4 ~
-    a g8 f e4 d
+    g1 r2 g g2. f8 e e4 c g'2. a4 b c2 b8 a g4 a2 
+		g8 f e4 d
     f4 g a2 r e2. e4 e2 c4 c c c d2 b a1 g4 g'2 f8 e g4. f8 d4 g, r g'2 f8 e g4. f8 d4 g,
     c4. d8 [e f] g4 a f e2 a,4. b8 [c d] e4. d8 d2 \ficta cis4 d2 r r1 r4 d c c d \ficta bes a2 r1 r1 r4
-    a'4 g g a f e2 r2 \tuplet 3/2 {a4 a a } \tuplet 3/2 {g2 g4 } \tuplet 3/2 {a4 f2 } e2 r r4 a g g a f e2 r e2 ~ 
-    e g2 a r4 e e2 g a r4 e e2 g a f e1 r4 e e4. f8 g a b4. a8 a2 \ficta gis4 a4. a,8 a2 r2 r1 r4 a' a
+    a'4 g g a f e2 r2 \tuplet 3/2 {a4 a a } \tuplet 3/2 {g2 g4 } \tuplet 3/2 {a4 f2 } e2 r r4 a g g a f e2 r e1 
+		g2 a r4 e e2 g a r4 e e2 g a f e1 r4 e e4. f8 g a b4. a8 a2 \ficta gis4 a4. a,8 a2 r2 r1 r4 a' a
     d,4 a'2 g4. f8 d4 e r g a f e g4. f8 d4. e8 f g a4. b8 c4. b8 g4 b a4. g8 e4 g f4. e8 c4 e d4. c8 a1 r2 e'2 e1
 	}
 	\addlyrics {
@@ -281,7 +282,7 @@ bass = \new Voice {
     prop -- ter mag -- nam
     glo -- ri -- am __ _ _ _ _ _  tu -- am Do -- mi -- ne  De -- _ _ _ _ _ us
     Do -- mi -- _ ne  Fi -- _ _ _ _ _ _ _ li
-    Je -- su  Chri -- te.
+    Je -- su  Chri -- ste.
     Do -- mi -- ne __ _ _ _  De -- _ _ _ _ _ _ _ us Ag -- nus De -- _ _ _ _ _ i
     Fi -- _ _ _ _ _ _ _ _ _ _ li -- us Pa -- _ _ tris.
     Qui  tol -- lis pec -- ca -- ta __ _ _ _ _  mun -- _ di,
@@ -305,7 +306,7 @@ bass = \new Voice {
 \score {
 	\transpose c c {
 		\new StaffGroup <<
- 			\set Score.proportionalNotationDuration = #(ly:make-moment 1 8)
+ 			\set Score.proportionalNotationDuration = #(ly:make-moment 3 17)
 			\set Score.barNumberVisibility = #all-bar-numbers-visible
 			\new Staff << \global \soprano \set Staff.instrumentName = #"S" \set Staff.shortInstrumentName = #"S" >>
 			\new Staff << \global \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >>

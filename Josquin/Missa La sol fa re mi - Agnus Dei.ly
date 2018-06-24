@@ -2,7 +2,7 @@
 % Copyright ©2018 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "4"
+revision = "5"
 \pointAndClickOff
 
 #(set-global-staff-size 15.0)
@@ -17,7 +17,7 @@ revision = "4"
 	outer-margin = 15\mm
 	top-markup-spacing = #'( (basic-distance . 4) )
 	markup-system-spacing = #'( (padding . 4) )
-	system-system-spacing = #'( (basic-distance . 20) (stretchability . 100) )
+	system-system-spacing = #'( (padding . 3) (basic-distance . 30) (stretchability . 100) )
 	ragged-bottom = ##f
 	ragged-last-bottom = ##t
 }
@@ -26,7 +26,7 @@ year = #(strftime "©%Y" (localtime (current-time)))
 
 \header {
 	copyright = \markup \sans {
-		\vspace #2
+		\vspace #1
 		\column \center-align {
 			\line {
 				revision \revision
@@ -38,8 +38,8 @@ year = #(strftime "©%Y" (localtime (current-time)))
 
 \layout {
 	indent = #0
-  	ragged-right = ##f
-  	ragged-last = ##f
+	ragged-right = ##f
+	ragged-last = ##t
 	\context {
 		\Score
 		\override BarNumber #'self-alignment-X = #CENTER
@@ -57,6 +57,7 @@ year = #(strftime "©%Y" (localtime (current-time)))
 		\override NoteHead #'style = #'baroque
 		\consists "Horizontal_bracket_engraver"
 		\consists "Ambitus_engraver"
+		\remove "Forbid_line_break_engraver"
 	}
 }
 
@@ -76,11 +77,11 @@ soprano = \new Voice	{
 	\relative c'' {
 %    \set Score.currentBarNumber = #105
 	  r1. r1. a1. g2. f4 d2 e1 a2 g1 f2 \[ d e \] a g1 f2 d e1 r4 a a a e e g4. f8 d4 g f d4. e8 f g a4. g8 e4 a g e4. f8 g4 a2
-	  g4 e4. d8 f4. e8 d c b4 e4. d8 c a b2 \break r4 a
+	  g4 e4. d8 f4. e8 d c b4 e4. d8 c a b2 r4 a
 	  c2 d4. e8 f4 c \[ f2 g \] a4. f8 \[ f2 g \] r4 c, f2 g a4. g8 [ f d ] f4 e b' c d4. c8 b a g4 a e b' c d4. c8 b a g1 r4 e g e g4. a8 b2 r4
 	  e,4 g e g4. a8 [ b c ] b4. a8 a4 g c4. b8 b4. a8 a4. \ficta gis8 \ficta gis \ficta fis 
 		\set Timing.timing = ##f a\breve.
-	  \showBarLine \bar "||" \break
+	  \showBarLine \bar "||"
 		\set Timing.timing = ##t
   }
 	\addlyrics {
@@ -103,10 +104,10 @@ soprano = \new Voice	{
 
 alto = \new Voice	{
 	\relative c' {
-    e\breve d1 c1 a2 b1. r4 g c2. d4 
-		e2 e d1 \[ c2 a \] b \[ e d1 \] c1. a2 r4 e' 
+    e\breve d1 c1 a2 b1. r4 g c2. d4 e2 e d2 ~
+		d \[ c2 a \] b \[ e d1 \] c1. a2 r4 e' 
 		e e b b d4. c8 a4 d c a4. b8 c d e4 c4. a8 b4 c d b c4. b8 d4. c8
-	  b a g4. f8  g4 a2 \ficta gis4 a e'2 f4 g2 \[ c, d \] b \[ c d \] b  \[ c d \] b \[ c d \] b4 e4 ~ \break e8 d8 f4. e8 d c b4 c4. d8 e4. d8 f4. e8 d c b2 
+	  b a g4. f8  g4 a2 \ficta gis4 a e'2 f4 g2 \[ c, d \] b \[ c d \] b  \[ c d \] b \[ c d \] b4 e4. d8 f4. e8 d c b4 c4. d8 e4. d8 f4. e8 d c b2 
 	  r4 b c8 [a] c [d] e1 r4 b c8 a c d e2 r4 g g g f d e g g g f d e2 e\breve.
   }
 	\addlyrics {
@@ -154,7 +155,8 @@ tenor = \new Voice {
 bass = \new Voice {
 	\relative c {
 		\clef bass
-    a1. \[ c2 d1 \] a1. e'4. f8 g2 g, c2. d4 f2 e c d1 a2 f' e \[ c2 d \] b2 a1.
+    a1. \[ c2 d1 \] a1. e'4. f8 g2 g, c2. d4 f2 e c d2 ~
+		d a2 f' e \[ c2 d \] b2 a1.
     r4 a' a a e e g4. f8 d4 g f d4. e8 f g a4. g8 e4 a2 g4 f d e a g f d2 e1
     r2 a1 g2 \[ f d \] e2 a1 g2 \[ f d \] e2 a1 g2 \[ f d \] e4 a2 g4 f2 d \[ e2 g \] a2 e
     r4 c g'2 a e r4 c g'4. f8 d4 f e c g'4. f8 d4 f e2 a,\breve.
@@ -178,7 +180,7 @@ bass = \new Voice {
 \score {
 	\transpose c c {
 		\new StaffGroup <<
- 			\set Score.proportionalNotationDuration = #(ly:make-moment 1 7)
+ 			\set Score.proportionalNotationDuration = #(ly:make-moment 1 5)
 			\set Score.barNumberVisibility = #all-bar-numbers-visible
 			\new Staff << \global \soprano \set Staff.instrumentName = #"S" \set Staff.shortInstrumentName = #"S" >>
 			\new Staff << \global \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >>
@@ -190,7 +192,7 @@ bass = \new Voice {
 		piece = \markup \larger \sans { Agnus Dei I & III }
 	}
 	\layout { }
-	\midi {	}
+%	\midi {	}
 }
 
 soprano = \new Voice	{
@@ -198,8 +200,8 @@ soprano = \new Voice	{
 		\set Score.currentBarNumber = #30 \partial 1
 	  b1 c2 b4 c4. b8 g4 a b e,2 r g a4 b2 c4 b c2 b8 a g4 c, d f e2 r
 	  g2 a4 g a c2 b8 a g2 c, r4 g'a g2  e4 f g2 c4 b a4. g8 g2 f4 e c d2 r4
-	  c4 d e 4. c8 d4 e c d e f g2 c,4 d e f g a c, d e f g a b^\markup \flat c 
-	  b4. a8 a2 g4 f2 e d4 c b2^\markup \flat a4 d c f e a g c4. b8 a2 \ficta gis4 \set Timing.timing = ##f a\breve
+	  c4 d e 4. c8 d4 e c d e f g2 c,4 d e f g a c, d e f g a \ficta bes c b4 ~
+		b8 a8 a2 g4 f2 e d4 c \ficta bes2 a4 d c f e a g c4. b8 a2 \ficta gis4 \set Timing.timing = ##f a\breve
 	  \showBarLine \bar "||" \set Timing.timing = ##t
   }
 	\addlyrics {
@@ -233,15 +235,17 @@ alto = \new Voice	{
 \score {
 	\transpose c c {
 		\new StaffGroup <<
- 			\set Score.proportionalNotationDuration = #(ly:make-moment 1 7)
+ 			\set Score.proportionalNotationDuration = #(ly:make-moment 1 6)
 			\set Score.barNumberVisibility = #all-bar-numbers-visible
 			\new Staff << \global \soprano \set Staff.instrumentName = #"S" \set Staff.shortInstrumentName = #"S" >>
 			\new Staff << \global \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >>
 		>>
 	}
 	\header {
-		piece = \markup \larger \sans { \vspace #1 Agnus Dei II }
+		piece = \markup \larger \sans { \vspace #2 Agnus Dei II }
 	}
-	\layout { }
-	\midi {	}
+	\layout {
+		ragged-last = ##f
+	}
+%	\midi {	}
 }

@@ -19,7 +19,7 @@ revision = "3"
 	markup-system-spacing = #'( (padding . 4) )
 	system-system-spacing = #'( (basic-distance . 15) (stretchability . 100) )
 	ragged-bottom = ##f
-	ragged-last-bottom = ##t
+	ragged-last-bottom = ##f
 }
 
 year = #(strftime "©%Y" (localtime (current-time)))
@@ -86,14 +86,12 @@ singleDigitTime = { \override Staff.TimeSignature.style = #'single-digit }
 
 soprano = \new Voice	{
 	\relative c'' {
-  a1 g2 f1 d2 \[ e2 a \] g2 f1 d2 \break
+  a1 g2 f1 d2 \[ e2 a \] g2 f1 d2	
 	e4 g4. f8 g4 a b c4. b8 g4 a4. g8 f e d4 g4. c,8 c4 d f e4. a,8 a4 a'2 \ficta gis4 
 	a1 r2 a1 a2 \[ g2 c \] b2 a1 a2 
 	\set Timing.timing = ##f \ficta gis\breve.
   \showBarLine \bar "||" \set Timing.timing = ##t	\set Score.currentBarNumber = #15 \time 2/2
-  a1 g \[ f2 d \] e2 a2 ~ \break
-	
-	a4 g4 g2 f d e\breve r1 r1 
+  a1 g \[ f2 d \] e2 a2. g4 g2 f d e\breve r1 r1 
 	r1 r1 r1 r2 b'2 c2. b8 a c2 b a1g2 c1 b2 a4 c b a2 \ficta gis8 \ficta fis \ficta gis2 a\breve
   \[ d,2 d' \] c2 a2. b4 c2 d1 \set Timing.timing = ##f	\ficta cis\breve
   \showBarLine \bar "||" \set Timing.timing = ##t	\set Score.currentBarNumber = #44 \time 3/2
@@ -151,8 +149,7 @@ tenor = \new Voice {
 		b\breve. \time 2/2
     r1 r1 r1 r1 
 		
-		r1 r1 a1 g f2 \[ d e \] a2 ~ \break
-		a4 g4 g2 f2. e8 d e4 f8 g a4 c b a2 \ficta gis4 \[ a1 e' \] f1 e \[ a,2 b \] \[ c2 d \] b2
+		r1 r1 a1 g f2 \[ d e \] a2. g4 g2 f2. e8 d e4 f8 g a4 c b a2 \ficta gis4 \[ a1 e' \] f1 e \[ a,2 b \] \[ c2 d \] b2
     e,2 f2. e8 d \[ f2 e \] \[ f g \] \[ e d \] 
 		f2 e \[ f g \] e\breve \time 3/2
     a2 b4 a d2 c4 f, e d d'2 c4 a b a b d c2 b4 a c d b a 		
@@ -209,7 +206,7 @@ bass = \new Voice {
 \score {
 	\transpose c c {
 		\new StaffGroup <<
- 			\set Score.proportionalNotationDuration = #(ly:make-moment 1 8)
+ 			\set Score.proportionalNotationDuration = #(ly:make-moment 1 4)
 			\set Score.barNumberVisibility = #all-bar-numbers-visible
 			\new Staff << \global \soprano \set Staff.instrumentName = #"S" \set Staff.shortInstrumentName = #"S" >>
 			\new Staff << \global \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >>
