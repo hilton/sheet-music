@@ -105,8 +105,9 @@ soprano = \new Voice	{
 
 alto = \new Voice	{
 	\relative c' {
-		a1 a4. b8 c2 d1c\breve a2 d b4e4. d8 d2 a4 b c a f'4. e8 d c b4 c f, c'2 a4 b c a
-		f'4. e8 d c b4 c f, c'2 d4 e2 a,  d c2. c,4 c2 f2. f4 f2 r r r4 f g a4. f8 c'2 a4 b
+		a1 a4. b8 c2 d1c\breve a2 d b4e4. d8 d2 a4 b c a f'4. e8 d c 
+		b4 c f, c'2 a4 b c a f'4. e8 d c b4 c f, c'2 d4 e2 a, d c1 r2 f2. f4 f2 
+		r r r4 f g a4. f8 c'2 a4 b
 		c4 d4. c8 a4. b8 c4. b8 g4 a2 \ficta gis4 a2 e4 g4. a8 b4. c8 d f4 e8 e2 d4 e2 r4 g2 e4 f g e2 r2 r2
 		r4 a g e f g e c4. b8 a4g1 c2 b4 a2 g4 a d, g1 g\breve
 
@@ -120,8 +121,8 @@ alto = \new Voice	{
 		c r r r1. f,1 c4 g' a d, f4. g8 a2 d,2. e4 f4 g a\breve.
 	}
 	\addlyrics {
-	  Sanc -- tus, __ _ _  sanc -- _ tus, __ _  sanc -- _ _ _ _ _ _ tus,
-	  sanc -- _ _ _ _ _ tus, sanc -- _ _ _ tus, sanc -- _ _ _ _ _ tus, sanc -- _ _ _ _ _ _ tus
+	  Sanc -- tus, __ _ _  sanc -- _ tus, __ _  sanc -- _ _ _ _ _ _ tus, sanc -- _ _ _ 
+		_ _ tus, sanc -- _ _ _ tus, sanc -- _ _ _ _ _ tus, sanc -- _ _ _ _ tus
 	  Do -- mi -- nus De -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _  us
 	  Sa -- _ _ _ _ _ _ _ _ ba -- oth, Sa -- _ _ ba -- oth,
 	  Sa -- _ _ _ ba -- oth, Sa -- _ _ _ _ _ _ _ _ _ ba -- oth.
@@ -141,7 +142,9 @@ alto = \new Voice	{
 tenor = \new Voice {
 	\relative c' {
 		\clef "treble_8"
-		r1. r1. a1. \[ g2 f \] d2 e a1 g2 f d e a1 g2 f d e a1 g2 f d e1 r2 a1. \[ g2 f \] d2 e a1 g2 f d e1 r2
+		r1. r1. a1. \[ g2 f \] d2 e a1 g2 f d 
+		e a1 g2 f d e a1 g2 f d e2. c4 c2 a1. 
+		\[ g2 f \] d2 e a1 g2 f d e1 r2
 		e'1. \[ d2 c \] a2 b e1 d2 c a b e1 d2 c a b e1 d2 c a 
 		
 		b\breve. r1. a2. g4 f d e2 a1 g2 f4 d e e'2 d4 c a b e ~ \break
