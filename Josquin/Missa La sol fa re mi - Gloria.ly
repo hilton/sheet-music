@@ -304,16 +304,14 @@ bass = \new Voice {
 
 
 \score {
-	\transpose c c {
-		\new StaffGroup <<
- 			\set Score.proportionalNotationDuration = #(ly:make-moment 3 17)
-			\set Score.barNumberVisibility = #all-bar-numbers-visible
-			\new Staff << \global \soprano \set Staff.instrumentName = #"S" \set Staff.shortInstrumentName = #"S" >>
-			\new Staff << \global \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >>
-			\new Staff << \global \tenor \set Staff.instrumentName = #"T" \set Staff.shortInstrumentName = #"T" >>
-			\new Staff << \global \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >>
-		>>
-	}
+	\new StaffGroup <<
+			\set Score.proportionalNotationDuration = #(ly:make-moment 3 17)
+		\set Score.barNumberVisibility = #all-bar-numbers-visible
+		\new Staff << \global \soprano \set Staff.instrumentName = #"S" \set Staff.shortInstrumentName = #"S" >>
+		\new Staff << \global \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >>
+		\new Staff << \global \tenor \set Staff.instrumentName = #"T" \set Staff.shortInstrumentName = #"T" >>
+		\new Staff << \global \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >>
+	>>
 	\layout { }
 %	\midi {	}
 }

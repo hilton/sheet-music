@@ -38,8 +38,8 @@ year = #(strftime "©%Y" (localtime (current-time)))
 
 \layout {
 	indent = #0
-  	ragged-right = ##f
-  	ragged-last = ##t
+	ragged-right = ##f
+	ragged-last = ##t
 	\context {
 		\Score
 		\override BarNumber #'self-alignment-X = #CENTER
@@ -211,16 +211,14 @@ bass = \new Voice {
 }
 
 \score {
-	\transpose c c {
-		\new StaffGroup <<
- 			\set Score.proportionalNotationDuration = #(ly:make-moment 1 5)
-			\set Score.barNumberVisibility = #all-bar-numbers-visible
-			\new Staff << \global \soprano \set Staff.instrumentName = #"S" \set Staff.shortInstrumentName = #"S" >>
-			\new Staff << \global \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >>
-			\new Staff << \global \tenor \set Staff.instrumentName = #"T" \set Staff.shortInstrumentName = #"T" >>
-			\new Staff << \global \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >>
-		>>
- 	}
+	\new StaffGroup <<
+			\set Score.proportionalNotationDuration = #(ly:make-moment 1 5)
+		\set Score.barNumberVisibility = #all-bar-numbers-visible
+		\new Staff << \global \soprano \set Staff.instrumentName = #"S" \set Staff.shortInstrumentName = #"S" >>
+		\new Staff << \global \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >>
+		\new Staff << \global \tenor \set Staff.instrumentName = #"T" \set Staff.shortInstrumentName = #"T" >>
+		\new Staff << \global \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >>
+	>>
   \header {
 		piece = \markup \larger \sans { Sanctus }
 	}

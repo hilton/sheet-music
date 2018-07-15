@@ -233,14 +233,12 @@ alto = \new Voice	{
 }
 
 \score {
-	\transpose c c {
-		\new StaffGroup <<
- 			\set Score.proportionalNotationDuration = #(ly:make-moment 1 6)
-			\set Score.barNumberVisibility = #all-bar-numbers-visible
-			\new Staff << \global \soprano \set Staff.instrumentName = #"S" \set Staff.shortInstrumentName = #"S" >>
-			\new Staff << \global \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >>
-		>>
-	}
+	\new StaffGroup <<
+			\set Score.proportionalNotationDuration = #(ly:make-moment 1 6)
+		\set Score.barNumberVisibility = #all-bar-numbers-visible
+		\new Staff << \global \soprano \set Staff.instrumentName = #"S" \set Staff.shortInstrumentName = #"S" >>
+		\new Staff << \global \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >>
+	>>
 	\header {
 		piece = \markup \larger \sans { \vspace #2 Agnus Dei II }
 	}
