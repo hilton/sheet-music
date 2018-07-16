@@ -2,7 +2,7 @@
 % Copyright ©2018 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "5"
+revision = "6"
 \pointAndClickOff
 
 #(set-global-staff-size 15.0)
@@ -19,7 +19,7 @@ revision = "5"
 	markup-system-spacing = #'( (padding . 4) )
 	system-system-spacing = #'( (basic-distance . 15) (stretchability . 100) )
 	ragged-bottom = ##f
-	ragged-last-bottom = ##f
+	ragged-last-bottom = ##t
 }
 
 year = #(strftime "©%Y" (localtime (current-time)))
@@ -103,22 +103,22 @@ singleDigitTime = { \override Staff.TimeSignature.style = #'single-digit }
 
 soprano = \new Voice	{
 	\relative c' {
-    e1 g2 a1 a2 g4. a8 b2. a8 b c4 b4. a8 a2 \ficta gis4 
-    a2 r4 a a g a f g e2 d4 e1 r2 g2 a1 
-    g2 e r4 g f g a2 g r4 e f g a a g2 e4 g a
-    b4 c4. b8 g4 a2 g8 \ficta fis g4 e g4. a8 b c d4 c b4. a8 a2 \ficta gis4 a c2 c4 c b c b c b g2 r1. r1.
-    r4 g b a c4. b8 g4. c b a g a g f e a g8 [ e g a ] f4 e4. c8
-    e4 g2 a4 b c4. b8 a4. g8 f e d1 r4 d g2 a4 b4. g8 g2c4 a b4. g8 g e e4 a f g4. e8 e c c4
-    g'2 e4 f2. e8 d d4 g4. f8 e d \[ c2 d \] c2 r4 g' a c4. b8 g b a4. g8 e4b' c4. b8
-    g4 a2 \ficta gis4 a c b c2 b4 a b2 a4 g a2 \ficta gis4 a e f1 
-    \set Timing.timing = ##f e\breve \showBarLine \bar "||" \set Timing.timing = ##t
+    e1 g2 a1 a2 g4. a8 b2. a8 b c4 b4. a8 a2 \ficta gis4 a2 r4 a a g 
+		a f g e2 d4 e1 r2 g2 a1 g2 e r4 g f g a2 g 
+		r4 e f g a a g2 e4 g a b4 c4. b8 g4 a2 g8 \ficta fis g4 e g4. a8 b c d4 c b4. a8 a2 \ficta gis4 
+		a c2 c4 c b c b c b g2 r1. r1. r4 g b a c4. b8 
+		
+		g4. c b a g a g f e a g8 [ e g a ] f4 e4. c8 c4 g'2 a4 b c4. b8 a4. g8 f e 
+		d1 r4 d g2 a4 b4. g8 g2 c4 a b4. g8 g e e4 a f g4. e8 e c c4 g'2 e4 f2 ~
+		f4 e8 d d4 g4. f8 e d \[ c2 d \] c2 r4 g' a c4. b8 g b a4. g8 e4b' c4. b8 g4 a2 \ficta gis4 a c 
+		b c2 b4 a b2 a4 g a2 \ficta gis4 a e f1 
+    \set Timing.timing = ##f e\breve. \showBarLine \bar "||" \set Timing.timing = ##t
     
     \set Score.currentBarNumber = #41 \time 2/2
-    r1 a1 c2 c b g a b c b4 a 
-    g1 r2 g1 g2 g1 f2. e8 d f4 e2 d8 c e4 d r d2 c8 
-    b b4 a8 g g2 g'2 g2. f8 e e4 c g'2. a4 b c2
-		b8 a g4 a2 g8 f e2 r g2. g4 g2 g4 g g e \ficta fis2
-    g2 a1 d,\breve r1 r2 d e4. f8 [g a] b4.
+    r1 a1 c2 c b g a b c b4 a g1 r2 g1 g2 g1 
+		f2. e8 d f4 e2 d8 c e4 d r d2 c8 b b4 a8 g g2 g'2 g2. f8 e e4 c g'2. a4 b c4 ~
+		c b8 a g4 a2 g8 f e2 r g2. g4 g2 g4 g g e \ficta fis2 g2 a1 d,1 ~
+		d r1 r2 d e4. f8 [g a] b4.
 		a8 a2 \ficta gis4 a2 r r1 r r a4. b8 [c d] e2 
 		d2 \ficta cis4 d a c b a g f2 e r r4
     a4 g g a f e2 r \tuplet 3/2 {a4 a a}  \tuplet 3/2 {g2 g4}  \tuplet 3/2 {a f2} e2 r r4 a g g a f e2
@@ -157,20 +157,23 @@ soprano = \new Voice	{
 
 alto = \new Voice	{
 	\relative c' {
-    b2 c b a c2. d4 e1 r2 e e e c4. d8 e4 c f e c d4. c8 b2 a4 b2 r4
-    e4. d8 c a b2 r4 a c d e2 r4 b c b a g c4. d8 e2 r4 g f e4. c8 d4 e b c4. b8 a4 g c8 d
-    e2 d4 e1 r1 r1. 
-    e1 e2 e1 e2 d4 c a1 b1
-    r4 c2 e4 d f4. e8c4 e2
-    f4 g4. \ficta fis16 e \ficta fis4 g c,d e4. d8 a'4 g c, d e4. c8 d4 e g4. f8 e4. d8 c4 b a c2 r4 d2. b4 g d'2
-    g,4 c2 d4 e4. c8 c2 f4 d e4. c8 c a a4 d b c4. a8 a4 g c4. b8 a2 f g1 
-    r1. r r2.
-    g4 a c b8 a c4 b8 a b4 a2 r4 e'4 f d r d e c r c d b c2 \[ a1 g\breve \]
+    b2 c b a c2. d4 e1 r2 e e e c4. d8 e4 c f e 
+		c d4. c8 b2 a4 b2 r4 e4. d8 c a b2 r4 a c d e2 r4 b c b a g c4. d8 e2 
+		r4 g f e4. c8 d4 e b c4. b8 a4 g c8 d e2 d4 e1 r1 r1. 
+    e1 e2 e1 e2 d4 c a1 b1 r4 c2 e4 d f4. e8 c4 
+		
+		e2 f4 g4. \ficta fis16 e \ficta fis4 g c,d e4. d8 a'4 g c, d e4. c8 d4 e g4. f8 e4. d8 c4 b a c2 r4 d4 ~
+		d2 b4 g d'2 g,4 c2 d4 e4. c8 c2 f4 d e4. c8 c a a4 d b c4. a8 a4 g c4. b8 a2 
+		f g1 r1. r r2.
+    g4 a c b8 a c4 b8 a b4 a2 r4 e'4 f d r d e c r c d b c2 \[ a1 g\breve. \]
     
-    d'1 f2 f e c d e f e4 d \[c2 d \] e2. c2 b8 a c4 b g2 c b b a r4 a4. b8 c d e4 f g2. f8 e d2. b2 a8 g g2 r1 r1 
-    r1 r1 r1 e'\breve. d1 c2 a b\longa r4 e2 d4 c a b2 
-    r1 r1 a4. b8 [c d] e4. d8 d2 \ficta cis4 d
-    a'2 g4 f d e2 d4 f e g f e2 d4 e c b2 r2 r4 e d d e c b2 r \tuplet 3/2 {e4 e e}  \tuplet 3/2 {d2 d4}  \tuplet 3/2 {e4 c2} b2 r2 r4
+    d'1 f2 f e c d e f e4 d \[c2 d \] e2. c2 b8 a c4 b g2 c b b a r4 
+		a4. b8 c d e4 f g2. f8 e d2. b2 a8 g g2 r1 r1 r1 
+		r1 r1 e'\breve. d1 c2 a b1 ~
+		b\breve. r4 e2 d4 c a b2 r1 r1 a4. b8 [c d] e4 ~
+		
+		e8 d8 d2 \ficta cis4 d a'2 g4 f d e2 d4 f e g f e2 d4 e c b2 r2 r4 e d d e c 
+		b2 r \tuplet 3/2 {e4 e e}  \tuplet 3/2 {d2 d4}  \tuplet 3/2 {e4 c2} b2 r2 r4
     e4 d d e c b2 r r4 e d e2 d8 c b2 r4 e d e b g'2 g4 f e2 d4 
     b\breve r1 r1 r4 e2 d4 c a b2 r4 e2 d4 c a b2 r4 e2 d4 c a b2 r4 
     d4. c8 a4. b8 c d e4 a, r d e8 c
@@ -206,53 +209,54 @@ alto = \new Voice	{
 
 tenor = \new Voice {
 	\relative c' {
-    \clef "treble_8"
-    e1 e2 d4 c a1 b1 e2. d4 c a b2 
-    r1. r1. r1. e2 d4 c a2 
-    b r4 e2 e4 d4 c a2 b r4 e d c a2 b e d4 d c2. a4 b2 r1. r1.
-    r4 a2 a4 a g a g a g e c' b a8f'4 e8 e2 d4 e g4. f8 d4 
-    r2 r1. r1. r1. r1. e1. d4 c a1 b1. r1. r1. r1. e1 d4 c
-    a2 b1 
-    r2 r4 g a c4. b8 g b a4. g8 e d e g f4. e8 c4 r2.
-    e'\breve d1 c2. a4 b2 r4 e2 d4 c a b\breve
-    
-    r1 r1 r1 r1 r1 r1 r1 e\breve d c2 a 
-    b\breve. r1 r1 r2 r4 c2
-		d4 e f2 e8 d c4 a c2 b2. b4 b2 c4 c c c a b4. a8 g2
-		\ficta fis8 e f g
-    a8 f g1 r4 g f g4. a8 b c d4 e d g, f g2 f8 e e4 b' c d e2     
-    r4 a,2 g4 f d e2 r4 a2 g4 f d e2
-    r1 r1 r1 r1 r4 e'2 d4 c a b2 r2 r4 e2
-		d4 c a b2 r2 r4 e2 d4 c a b2 r1  r4 e2 d4 c a b2 r4 e2 d4 c a b2 r4 e2 d4 c2 a2 
-    e'2 r4 e,4 e4. f8g a b4. c8 d4. a8 c4 b2 a1 r2 r1 r4
-    a4 c d e2 r4 e,4 f g a b c d e4.d8 b4 
-    r4 r2 r2 r4 e2
-		d4 c a b2 r4 a2 g4 f d e\breve.
+		\clef "treble_8"
+		e1 e2 d4 c a1 b1 e2. d4 c a b2 r1. 
+		r1. r1. e2 d4 c a2 b r4 e2 e4 d4 c a2 b 
+		r4 e d c a2 b e d4 d c2. a4 b2 r1. r1.
+		r4 a2 a4 a g a g a g e c' b a8f'4 e8 e2 d4 e g4. f8 d4 r2 r1. 
+		
+		r1. r1. r1. e1. d4 c a1 
+		b1. r1. r1. r1. e1 d4 c
+		a2 b1 r2 r4 g a c4. b8 g b a4. g8 e d e g f4. e8 c4 r2. e'1. ~
+		e2 d1 c2. a4 b2 r4 e2 d4 c a b\breve.
+
+		r1 r1 r1 r1 r1 r1 r1 e\breve d1 ~
+		d c2 a b\breve. r1 r1 r2 r4 c ~
+		c d4 e f2 e8 d c4 a c2 b2. b4 b2 c4 c c c a b4. a8 g2
+		\ficta fis8 e f g a8 f g1 
+		r4 g f g4. a8 b c d4 e d g, f g2 f8 e e4 b' c d e2 r4 a,2 g4 f d e2 r4 a2 g4 
+		
+		f d e2 r1 r1 r1 r1 r4 e'2 d4 c a b2 r2 r4 e ~
+		e d4 c a b2 r2 r4 e2 d4 c a b2 r1 r4 e2 d4 c a b2 
+		r4 e2 d4 c a b2 r4 e2 d4 c2 a2 e'2 r4 e,4 e4. f8 g a b4. c8 d4. a8 c4 b2 a ~ 
+		a r2 r1 r4 a4 c d e2 r4 e,4 f g a b c d e4. d8 b4 r4 r2 r2 r4 e ~
+		
+		e d4 c a b2 r4 a2 g4 f d e\breve.
 	}
 	\addlyrics {
-    Et in ter -- _ ra pax ho -- _ mi -- ni -- bus.
-    Lau -- da -- _ mus 
-    te, be -- ne -- di -- ci -- mus te, a -- do -- ra -- mus  te, glo -- ri -- fi -- 
-    ca -- mus te. Prop -- ter mag -- nam 
-    
-    glo -- ri -- am  tu -- _ _ _ _ _ _ _ _ _ am __ _ _
-    om -- ni -- _ po -- tens.
-    Je -- su __ _  Chri -- ste.
-    Do -- mi -- ne __ _ _ _  De -- _ _ _ _ _ _ _ us 
-    Fi -- _ _ li -- us  Pa -- _ _ _ tris.
-   
-    mi -- se -- re -- _ re
-    pec -- ca -- ta  mun -- _ _ _ _ di,
-    su -- sci -- pe de -- pre -- ca -- ti -- o -- nem __ _  nos -- _ _ _ _ _ _ tram.
-    Qui __ _   se -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ des
-    ad __ _ dex -- te -- ram Pa -- _ _ _ tris
-    mi -- se -- re -- _ re
-    tu so -- lus sanc -- tus
-    so -- lus Do -- mi -- nus, tu __ _ so -- _ lus Al -- _ tis -- si -- mus, Je -- us Chri -- _ 
-    ste.
-    Cum Sanc -- _ _ _ _ _ _ to Spi -- ri -- tu in glo -- ri -- a,
-    in glo -- ri -- a De -- _ i Pa -- _ tris 
-    De -- i Pa -- _ tris. A -- _ _ _ men.
+		Et in ter -- _ ra pax ho -- _ mi -- ni -- bus.
+		Lau -- da -- _ mus 
+		te, be -- ne -- di -- ci -- mus te, a -- do -- ra -- mus  te, glo -- ri -- fi -- 
+		ca -- mus te. Prop -- ter mag -- nam 
+
+		glo -- ri -- am  tu -- _ _ _ _ _ _ _ _ _ am __ _ _
+		om -- ni -- _ po -- tens.
+		Je -- su __ _  Chri -- ste.
+		Do -- mi -- ne __ _ _ _  De -- _ _ _ _ _ _ _ us 
+		Fi -- _ _ li -- us  Pa -- _ _ _ tris.
+
+		mi -- se -- re -- _ re
+		pec -- ca -- ta  mun -- _ _ _ _ di,
+		su -- sci -- pe de -- pre -- ca -- ti -- o -- nem __ _  nos -- _ _ _ _ _ _ tram.
+		Qui __ _   se -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ des
+		ad __ _ dex -- te -- ram Pa -- _ _ _ tris
+		mi -- se -- re -- _ re
+		tu so -- lus sanc -- tus
+		so -- lus Do -- mi -- nus, tu __ _ so -- _ lus Al -- _ tis -- si -- mus, Je -- us Chri -- _ 
+		ste.
+		Cum Sanc -- _ _ _ _ _ _ to Spi -- ri -- tu in glo -- ri -- a,
+		in glo -- ri -- a De -- _ i Pa -- _ tris 
+		De -- i Pa -- _ tris. A -- _ _ _ men.
 	}
 }
 
@@ -263,12 +267,12 @@ bass = \new Voice {
     r4 e2 e4 f e f2 e r4 c d e f2 e r4 e f g a4. g8 e4 f e2 r e g4 g a g a2 b a4 a,2 a4 a
     e'4 r e a, e'4. c8 c4 g' a2 g4 f2 e r4 g b a c4. b8 g4 f a4. b8 c2 r r r1. r1. c,1 c'4. b8 g4 a4. g8 f e d2 b4 g g'2 g
     r1. r1. r1. c,1 d2 d g, r4 g'4 a c4. b8 g b a4. g8 e d e g f4. e8 c4 g'a c4. b8
-    g8 b a4. g8 e1 r4 a g a f g f g e f e f d e  \[ c2 d \] a2 e'\breve
+    g8 b a4. g8 e1 r4 a g a f g f g e f e f d e  \[ c2 d \] a2 e'\breve.
     
-    d1 d2 d a' a g2. f8 e \[ d2 g \] \[ a b \] c1 r2 c, c c g'1 \[ d1 a' \] 
-    g1 r2 g g2. f8 e e4 c g'2. a4 b c2 b8 a g4 a2 
-		g8 f e4 d
-    f4 g a2 r e2. e4 e2 c4 c c c d2 b a1 g4 g'2 f8 e g4. f8 d4 g, r g'2 f8 e g4. f8 d4 g,
+    d1 d2 d a' a g2. f8 e \[ d2 g \] \[ a b \] c1 r2 c, c c g'1 
+		\[ d1 a' \] g1 r2 g g2. f8 e e4 c g'2. a4 b c2 b8 a g4 a ~ 
+		a g8 f e4 d f4 g a2 r e2. e4 e2 c4 c c c d2 b a1 g4 g'2 f8 e 
+		g4. f8 d4 g, r g'2 f8 e g4. f8 d4 g,
     c4. d8 [e f] g4 a f e2 a,4. b8 [c d] e4. d8 d2 \ficta cis4 d2 r r1 r4 d c c d \ficta bes a2 r1 r1 r4
     a'4 g g a f e2 r2 \tuplet 3/2 {a4 a a } \tuplet 3/2 {g2 g4 } \tuplet 3/2 {a4 f2 } e2 r r4 a g g a f e2 r e1 
 		g2 a r4 e e2 g a r4 e e2 g a f e1 r4 e e4. f8 g a b4. a8 a2 \ficta gis4 a4. a,8 a2 r2 r1 r4 a' a
@@ -305,7 +309,7 @@ bass = \new Voice {
 
 \score {
 	\new StaffGroup <<
-			\set Score.proportionalNotationDuration = #(ly:make-moment 3 17)
+			\set Score.proportionalNotationDuration = #(ly:make-moment 1 6)
 		\set Score.barNumberVisibility = #all-bar-numbers-visible
 		\new Staff << \global \soprano \set Staff.instrumentName = #"S" \set Staff.shortInstrumentName = #"S" >>
 		\new Staff << \global \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >>
