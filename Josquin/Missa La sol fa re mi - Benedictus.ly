@@ -76,19 +76,26 @@ showBarLine = { \once \override Score.BarLine #'transparent = ##f }
 ficta = { \once \set suggestAccidentals = ##t \override AccidentalSuggestion #'parenthesized = ##f }
 singleDigitTime = { \override Staff.TimeSignature.style = #'single-digit }
 
+
+%{ ██████   ███████  ███    ██  ███████  ██████   ██   ██████  ████████  ██    ██  ███████
+   ██   ██  ██       ████   ██  ██       ██   ██  ██  ██          ██     ██    ██  ██
+   ██████   █████    ██ ██  ██  █████    ██   ██  ██  ██          ██     ██    ██  ███████
+   ██   ██  ██       ██  ██ ██  ██       ██   ██  ██  ██          ██     ██    ██       ██
+   ██████   ███████  ██   ████  ███████  ██████   ██   ██████     ██      ██████   ███████ %}
+
 soprano = \new Voice	{
 	\relative c'' {
   r1 r1 g4. a8 b4 c2 b8 a b a g f e2 r r1 a1 ~ 
 	a\breve g1 f2 d e  a,2. b4 c d e f4. g8 a4 ~
 	a8 b8 c2 b8 a b4. a8 [b c]
-  d4. c8 a2 b c b8 a g4 a2 g4^\markup \sharp a\breve 
+  d4. c8 a2 b c b8 a g4 a2 \ficta gis4 a\breve 
   \showBarLine \bar "||" \break
   r1 r1 a1 b2 d c2. b8 a g2. a8 b c4 a2 g8 f e2
   g2 a2. b4 c2. b8 a g2 c, r4 e2 f4 g a2 g8 f e4 a2 b4 c d2 c8 b a4 d,2 e4 f g2 f8 e d4 g2 a4 b c2 b8 a g4
   c,2 d4 e f2 e8 d c4 a'2 g4 f d e a2 g4 f d e a2 g4 f d e2 r1 r2 r4 c f g a b
   c4. d8 f4 e4. d8 d4. c8 c4. b8 b4 a4. g8 g\breve
   \showBarLine \bar "||" \time 3/2 \break
-  r1. r1. r1. r1. r1. r1. g2. a4 b2 c1 g2 \[ a2 g \] a2 \[ b2 g \] a2 g2. a4 b2 c1 b2 c b2. a4 a1 g2^\markup \sharp a1 r2
+  r1. r1. r1. r1. r1. r1. g2. a4 b2 c1 g2 \[ a2 g \] a2 \[ b2 g \] a2 g2. a4 b2 c1 b2 c b2. a4 a1 \ficta gis2 a1 r2
   a,2. b4 c2 d1 a2 d2. e4 f2 g1 d2 g2. a4 b2 e,2. f4 g2 \[ a2 e \] b'2 c2. b4 g2
   \[ a2 e \] r2 r1. \[ a,2 c \] d2 \[ e2 f \] g2 a a, b c2. d4 e2 \[ a,2 c \] d2 \[ e2 a, \] a'2 g c, d \[ e2 c \] d2 \set Timing.timing = ##f e\longa. \showBarLine \bar "|." 
   }
@@ -105,97 +112,112 @@ soprano = \new Voice	{
 	  in __ _ ex -- cel -- sis, in __ _ ex -- _ _ cel -- sis, __ _ _ _ _ _  in __ _ ex -- cel -- _ _ _ _ _ _ _ _ sis.
 	}
 }
+
 alto = \new Voice	{
 	\relative c' {
-  r1 r1 r1 r1 r4 e4 f a2 g8 f g f e d c2 r2 r1 r4 c4 d f2 e8 d e d c b a4 f g d a'2. b4 c2 f,
-  r4 f a4. b8 c4. d8 e4 f g4. f8 d4. e8 f4 c f2 e1 r4 e1 c4 f2 e1
-  
-  a,1 b2 d c2. b8 a g2. a8 b c4 a2 g8 f e2 g a2. b4 c2 b4 c ~
-	c b8 a c4 d e\breve r1 r4 a,2 b4 c d2 c8 b a4 d, r2 r1 r4 g2 a4 b c2 b8 a g4 c, r2 r1
-  r4 f2 g4 a f2 g4 a b c2 f,4 g a b c4. d8 f4 e4 ~
-	e8 d8 d2 c4^\markup \sharp d a'2 g4 f
-  d4 e a2 g4 f d e a2 g4 f d e a2 g4 f d e\breve
-  
-  r1. r1. r1. e2. f4 g2 a e f g2. f4 d2 c g'2. f4 e1 e2 c1 c2 \[ d2 e \] c2 r2
-  g'1 e2 f g c,2 g'e f e1 c2. d4 e2 f1 e2 f2. e4 d c \[ b2 a \] d2 \[ b2 g2. \] a4
-  \[ b2 e, \] r2 \[ a2 c \] b2 \[ a2 c \] b2 a e'1 c2. b4 a2 \[ g2 a \] e2 r1. r1.
-  \[ a2 c \] d2 \[ e2 f ]\] g2 \[ a2 e \] r2 \[ a,2 c \] d2 e2. f4 g2 \[ a2 e \] a2 g1 g, a g\breve.
+		r1 r1 r1 r1 r4 e4 f a2 g8 f g f e d c2 r2 
+		r1 r4 c4 d f2 e8 d e d c b a4 a b d a2. b4 c2 f,
+		r4 f a4. b8 c4. d8 e4 f g4. f8 d4. e8 f4 c f2 e1 r4 e1 c4 f2 e1
+		a,1 b2 d c2. b8 a g2. r4 r1 r r2 r4 b4 c2 b4 c ~
+		
+		c b8 a c4 d e\breve r1 r r r r 
+		r1 r r r r r r r c4. d8 f4 e4 ~
+		e8 d8 d2 \ficta cis4 d a'2 g4 f d4 e a2 g4 f d e a2 g4 f d e a2 g4 f d e\breve
+		r1. r1. r1. e2. f4 g2 a e f g2. f4 d2 
+		
+		c g'2. f4 e1 e2 c1 c2 \[ d2 e \] c2 r2 g'1 e2 f g 
+		c,2 g'e f e1 c2. d4 e2 f1 e2 f2. e4 d c \[ b2 a \] d2 
+		\[ b2 g2. \] a4 e'1 d2 \[ a2 c \] b2 \[ a2 c \] b2 a e'1 c2. b4 a2 
+		\[ g2 a \] b2 r1. r1. \[ a2 c \] d2 \[ e2 f ]\] g2 \[ a2 e \] r2 
+		
+		\[ a,2 c \] d2 e2. f4 g2 \[ a2 e \] a2 g1 g, a g\breve.
 	}
 	\addlyrics {
-  Be -- ne -- dic -- _ _ _ _ _ _ tus,  be -- ne -- dic -- _ _ _ _ _ _ tus,
-  be -- _ ne -- dic -- _ _ tus, be -- _ ne -- dic -- _ _ _ _ _ _ _ _ _ _ tus, be -- ne -- dic -- tus.
-  Qui __ _ _  ve -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ nit 
-  in no -- mi -- ne, __ _ _ _ _ in no -- mi -- ne, __ _ _ _ _ 
-  in no -- mi -- ne, in no -- mi -- ne, 
-  in __ _  no -- mi -- ne, __ _ _  in __ _  no -- mi -- ne
-  Do -- _ _ mi -- ni, Do -- _ _ mi -- ni, Do -- _ _ mi -- ni, Do -- _ _ mi -- ni.
-  Ho -- _ _ san -- _ _ _ _ _ na, __ _ _ _  ho -- san -- na, ho -- san -- na,
-  ho -- san -- _ na, ho -- _ _ san -- na, ho -- _ _ san -- na, ho -- _ _ _ san -- _ na, ho -- _ _ san -- na,  
-  in __ _ ex -- cel -- _ _ _ sis, in __ _ ex -- cel -- _ sis, in __ _   ex -- cel -- _ _ sis, __ _  in __ _   ex -- cel -- _ _ sis, __ _  
-  in ex -- cel -- _ sis.
+		Be -- ne -- dic -- _ _ _ _ _ _ tus,  be -- ne -- dic -- _ _ _ _ _ _ tus,
+		be -- _ ne -- dic -- _ _ tus, be -- _ ne -- dic -- _ _ _ _ _ _ _ _ _ _ tus, be -- ne -- dic -- tus.
+		Qui __ _ _  ve -- _ _ nit, qui ve -- _ _ _ _ _ _ nit 
+		in __ _  no -- _ _ mi -- _ ne
+		Do -- _ _ mi -- ni, Do -- _ _ mi -- ni, Do -- _ _ mi -- ni, Do -- _ _ mi -- ni.
+		Ho -- _ _ san -- _ _ _ _ _ na, __ _ _ _  ho -- san -- na, ho -- san -- na,
+		ho -- san -- _ na, ho -- _ _ san -- na, ho -- _ _ san -- na, ho -- _ _ _ san -- _ na, ho -- _ _ san -- na,  
+		in __ _ ex -- cel -- _ _ _ sis, in __ _ ex -- cel -- _ sis, in __ _   ex -- cel -- _ _ sis, __ _  in __ _   ex -- cel -- _ _ sis, __ _  
+		in ex -- cel -- _ sis.
 	}
  
 }
 
 tenor = \new Voice {
 	\relative c' {
-	  \clef "treble_8"
-  e\breve. d1 c2 a b1 r1 r1 r1 r1 r4 a4 b d2 c8 b c b a g f4. g8 a4. b8 c2 f, r c' d b a d b4 e2 d8 c b4 a b2 a\breve
-  
-  s\longa s\longa s\longa s\longa s\longa s\longa s\longa s\longa s\breve
-  
-  e'1 d2 c1 a2 b1. r2 e1 d2 c a b1 r2 e1 d2 \[ c2 a \] b2 r2 e1 d2 c a \[ b2 e2. \] d4 \[ c2 a2 \] b2 e2. d4 c2 \[ a2 b1 \] a1 g2 \[ f2 d \] e2
-  r2 a1 g2 f d e1 r2 e'1 d2 \[ c2 a \] b2 e1 d2 \[ c2 a \] b2 e1 d2 \[ c2 a \] b2 e1 d2 \[ c2 a \] b2 e1 d2 \[ c2 a \]
-  b2 e1 d2 c1 a2 \[ b2 e \] d2 c1 a2 b1 e2. d4 c2 a b\breve. 
-  
+		\clef "treble_8"
+		e\breve. d1 c2 a b1 r1 
+		r1 r1 r1 r4 f4 g d d' c8 b c b a g f4. g8 a4. b8 c2 f, 
+		r c' d b a d b4 e2 d8 c b4 a b2 a\breve
+
+		r1 r r r2 r4 a8 b c4 a2 g8 f e2 g a2. r4 r1
+		r r r r r4 a2 b4 c d2 c8 b a4 d, r2 r1 
+		r4 g2 a4 b c2 b8 a g4 c, r2 r1 r4 f2 g4 a f2 g4 a b c2 f,4 g a b c4 r r2 
+		r1 r r r r r r r r
+		e1 d2 c1 a2 b1. r2 e1 d2 c a b1 r2 
+		
+		e1 d2 \[ c2 a \] b2 r2 e1 d2 c a \[ b2 e2. \] d4 \[ c2 a2 \] b2 
+		e2. d4 c2 \[ a2 b1 \] a1 g2 \[ f2 d \] e2 r2 a1 g2 f d 
+		e1 r2 \[ b'2 e, \] g \[ c2 a \] b2 e1 d2 \[ c2 a \] b2 e1 d2 
+		\[ c2 a \] g2 e'1 d2 \[ c2 a \] b2 e1 d2 \[ c2 a \]
+		b2 e1 d2 c1 a2 \[ b2 e \] d2 c1 a2 b1 e2. d4 c2 a b\breve. 
 }
 	\addlyrics {
-  Be -- ne -- dic -- _ tus,  be -- ne -- dic -- _ _ _ _ _ _ _ _ _ _ _ tus,
-  be -- _ ne -- dic -- _ _ _ _ _ _ _ _ tus.
-  
-  Ho -- _ san -- _ na, ho -- _ san -- _ na, ho -- _ san -- _ na, ho -- _ san -- _ na, 
-  ho -- _ san -- _ na, ho -- _ san -- _ na, ho -- _ san -- _ na, ho -- _ san -- _ na
-  in ex -- cel -- _ sis, in ex -- cel -- _ sis, in ex -- cel -- _ sis, in ex -- cel -- _ sis, 
-  in ex -- cel -- _ sis, in ex -- cel -- _ sis, in ex -- cel -- _ sis, in ex -- cel -- _ sis. 
+		Be -- ne -- dic -- _ tus,  be -- ne -- dic -- _ _ _ _ _ _ _ _ _ _ _ _ tus,
+		be -- _ ne -- dic -- _ _ _ _ _ _ _ _ tus.
+		Qui __ _ _ ve -- _ _ _ _ nit,
+		in no -- mi -- ne, __ _ _ _ _ 
+		in no -- mi -- ne, __ _ _ _ _ 
+		in no -- mi -- ne, in no -- mi -- ne, 
+		in __ _  no -- mi -- ne,
+		
+		Ho -- _ san -- _ na, ho -- _ san -- _ na, ho -- _ san -- _ na, ho -- _ san -- _ na, 
+		ho -- _ san -- _ na, ho -- _ san -- _ na, ho -- _ san -- _ na, ho -- _ san -- _ na
+		in __ _ ex -- cel -- _ sis, in ex -- cel -- _ sis, in ex -- cel -- _ sis, in ex -- cel -- _ sis, 
+		in ex -- cel -- _ sis, in ex -- cel -- _ sis, in ex -- cel -- _ sis, in ex -- cel -- _ sis. 
 	}
-
 }
 
 bass = \new Voice {
 	\relative c {
 		\clef bass
-  e4. f8 g4 a2 g8 f g f e d c2 r r1 r1 r1 a'4. b8 c4 d ~
-	d c8 b c b a g f2 r r1 r1 r1 a\breve ~
-	a1 g1 f2 d e\breve a,
-  
-  r1 r1 r1 r1 r1 r1 r1 r1 r1 r1 e'2.f4 g a2 g8 f e4 a, r2 r1 r2 d4 e f g2 f8 e d4 g, r2 r1 r2 c4 d e f2 e8 d c4 f, r2
-  f'2. e4 f g c, f2 e4 f g e f2 g4 a b^\markup \flat a2 r4 f2 g4 a b c f,2 e4 f g e f2 g4 a b c f,2 g4 a b c\breve
-  
-  e,2. f4 g2 \[ a2 e \] f2 g2. f4 d2 c1. r1. g'2. a4 b2 c \[ c,2 g' \] a2. g4 e2 \[ f2 e \] c2
-  \[ g'2 e\] f2 \[ g2 c, \] g'2 a1 g2 a2 g a1 e a,2. b4 c2 d1 a2 d2. e4 f2 g d1 g2. a4 b2 e,2. f4 g2 a1 e2 c'2. b4 g2 a2. g4 e2
-  \[ a,2 c \] d2 \[ e2 f \] g2 a1 d,2 a'1g2 c1 b2 a1 e2 c'1 b2 a2. g4 f2 \[ e2 c' \] b2 a2. g4 f2 e2. d4
-  c4 b c2 \[ a1 e'\breve. \]
-}
+		e4. f8 g4 a2 g8 f g f e d c2 r r1 r1 r1 a'4. b8 c4 d ~
+		d c8 b c b a g f2 r r1 r1 r1 a\breve ~
+		a1 g1 f2 d e\breve a,
+
+		r1 r1 r1 r1 r1 r1 r1 r1 r1 r1 e'2.f4 g a2 g8 f e4 a, r2 r1 r2 d4 e f g2 f8 e d4 g, r2 r1 r2 c4 d e f2 e8 d c4 f, r2
+		f'2. e4 f g c, f2 e4 f g e f2 g4 a \ficta bes a2 r4 f2 g4 a b c f,2 e4 f g e f2 g4 a b c f,2 g4 a b c\breve
+		e,2. f4 g2 \[ a2 e \] f2 g2. f4 d2 c1. r1. g'2. a4 b2 
+		
+		c \[ c,2 g' \] a2. g4 e2 \[ f2 e \] c2 \[ g'2 e\] f2 \[ g2 c, \] g'2 a1 g2 
+		a2 g a1 e a,2. b4 c2 d1 a2 d2. e4 f2 g d1 
+		g2. a4 b2 e,2. f4 g2 a1 e2 c'2. b4 g2 a2. g4 e2 \[ a,2 c \] d2 
+		\[ e2 f \] e2 a1 d,2 a'1g2 c1 b2 a1 e2 c'1 b2 a2. g4 f2 \[ e2 c' \] b2 a2. g4 f2 e2. d4
+		c4 b c2 \[ a1 e'\breve. \]
+	}
 	\addlyrics {
-  Be -- _ ne -- dic -- _ _ _ _ _ _ tus,  be -- _ ne -- dic -- _ _ _ _ _ _ tus,
-  be -- ne -- dic -- _ tus. __ _ 
-  
-  in no -- mi -- ne, __ _ _ _ _ in no -- mi -- ne, __ _ _ _ _ in no -- mi -- ne, __ _ _ _ _ 
-  in __ _  no -- mi -- ne, in __ _  no -- mi -- ne, in __ _  no -- mi -- ne, 
-  Do -- _ _ mi -- ni, Do -- _ _ mi -- ni, Do -- _ _ mi -- ni, Do -- _ _ mi -- ni.
-  
-  Ho -- _ _ san -- _ _ _ _ _ na, ho -- _ _ san -- _ _ _ _ na, ho -- _ _ san -- _ na,
-  ho -- _ _ san -- na, ho -- _ san -- na, ho -- _ _ san -- na,  ho -- _ _ san -- na,
-  ho -- _ _ _ _ _ san -- na,
-  in __ _  ex -- cel -- _ sis, in __ _  ex -- cel -- _ sis, in  ex -- cel -- sis, in  ex -- cel -- sis,
-  in  ex -- cel -- _ _ sis, in  ex -- cel -- _ _ _ _ _ _ _ _ sis. 
+		Be -- _ ne -- dic -- _ _ _ _ _ _ tus,  be -- _ ne -- dic -- _ _ _ _ _ _ tus,
+		be -- ne -- dic -- _ tus. __ _ 
+
+		in no -- mi -- ne, __ _ _ _ _ in no -- mi -- ne, __ _ _ _ _ in no -- mi -- ne, __ _ _ _ _ 
+		in __ _  no -- mi -- ne, in __ _  no -- mi -- ne, in __ _  no -- mi -- ne, 
+		Do -- _ _ mi -- ni, Do -- _ _ mi -- ni, Do -- _ _ mi -- ni, Do -- _ _ mi -- ni.
+
+		Ho -- _ _ san -- _ _ _ _ _ na, ho -- _ _ san -- _ _ _ _ na, ho -- _ _ san -- _ na,
+		ho -- _ _ san -- na, ho -- _ san -- na, ho -- _ _ san -- na,  ho -- _ _ san -- na,
+		ho -- _ _ _ _ _ san -- na,
+		in __ _  ex -- cel -- _ sis, in __ _  ex -- cel -- _ sis, in  ex -- cel -- sis, in  ex -- cel -- sis,
+		in  ex -- cel -- _ _ sis, in  ex -- cel -- _ _ _ _ _ _ _ _ sis. 
 	}
 }
 
 
 \score {
 	\new StaffGroup <<
-		\set Score.proportionalNotationDuration = #(ly:make-moment 1 5)
+		\set Score.proportionalNotationDuration = #(ly:make-moment 1 6)
 		\set Score.barNumberVisibility = #all-bar-numbers-visible
 		\new Staff << \global \soprano \set Staff.instrumentName = #"S" \set Staff.shortInstrumentName = #"S" >>
 		\new Staff << \global \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >>
