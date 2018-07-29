@@ -132,8 +132,8 @@ alto = \new Voice	{
 		\[ a,2 c \] d2 e2. f4 g2 \[ a2 e \] a2 g1 g, a g\breve.
 	}
 	\addlyrics {
-		Be -- ne -- dic -- _ _ _ _ _ _ tus,  be -- ne -- dic -- _ _ _ _ _ _ tus,
-		be -- _ ne -- dic -- _ _ tus, be -- _ ne -- dic -- _ _ _ _ _ _ _ _ _ _ tus, be -- ne -- dic -- tus.
+		Be -- ne -- dic -- _ _ _ _ _ _ tus,  
+		be -- ne -- dic -- _ _ _ _ _ _ tus, be -- ne -- dic -- _ _ _ tus, be -- _ ne -- dic -- _ _ _ _ _ _ _ _ _ _ tus, be -- ne -- dic -- tus.
 		Qui __ _ _  ve -- _ _ nit, qui ve -- _ _ _ _ _ _ nit 
 		in __ _  no -- _ _ mi -- _ ne
 		Do -- _ _ mi -- ni, Do -- _ _ mi -- ni, Do -- _ _ mi -- ni, Do -- _ _ mi -- ni.
