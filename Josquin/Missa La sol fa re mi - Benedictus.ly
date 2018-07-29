@@ -2,7 +2,7 @@
 % Copyright ©2017 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "2"
+revision = "3"
 \pointAndClickOff
 
 #(set-global-staff-size 15.0)
@@ -124,12 +124,11 @@ alto = \new Voice	{
 		r1 r r r r r r r c4. d8 f4 e4 ~
 		e8 d8 d2 \ficta cis4 d a'2 g4 f d4 e a2 g4 f d e a2 g4 f d e a2 g4 f d e\breve
 		r1. r1. r1. e2. f4 g2 a e f g2. f4 d2 
-		
 		c g'2. f4 e1 e2 c1 c2 \[ d2 e \] c2 r2 g'1 e2 f g 
-		c,2 g'e f e1 c2. d4 e2 f1 e2 f2. e4 d c \[ b2 a \] d2 
-		\[ b2 g2. \] a4 e'1 d2 \[ a2 c \] b2 \[ a2 c \] b2 a e'1 c2. b4 a2 
-		\[ g2 a \] b2 r1. r1. \[ a2 c \] d2 \[ e2 f ]\] g2 \[ a2 e \] r2 
 		
+		c,2 g'e f e1 c2. d4 e2 f1 e2 f2. e4 d c \[ b2 a \] d2 
+		\[ b2 g2. \] a4 e'1 d2 \[ c a \] b2 e1 d2 \[ c a \] b2 e1 d2 
+		\[ c a \] b2 r1. r1. \[ a2 c \] d2 \[ e2 f ]\] g2 \[ a2 e \] r2 
 		\[ a,2 c \] d2 e2. f4 g2 \[ a2 e \] a2 g1 g, a g\breve.
 	}
 	\addlyrics {
@@ -139,8 +138,9 @@ alto = \new Voice	{
 		in __ _  no -- _ _ mi -- _ ne
 		Do -- _ _ mi -- ni, Do -- _ _ mi -- ni, Do -- _ _ mi -- ni, Do -- _ _ mi -- ni.
 		Ho -- _ _ san -- _ _ _ _ _ na, __ _ _ _  ho -- san -- na, ho -- san -- na,
-		ho -- san -- _ na, ho -- _ _ san -- na, ho -- _ _ san -- na, ho -- _ _ _ san -- _ na, ho -- _ _ san -- na,  
-		in __ _ ex -- cel -- _ _ _ sis, in __ _ ex -- cel -- _ sis, in __ _   ex -- cel -- _ _ sis, __ _  in __ _   ex -- cel -- _ _ sis, __ _  
+		ho -- san -- _ na, ho -- _ _ san -- na, ho -- _ _ san -- na, ho -- _ _ _ san -- _ na, san -- _ na,
+		in ex -- cel -- _ sis, in ex -- cel -- _ sis, in ex -- cel -- _ sis, 
+		in __ _ ex -- cel -- _ _ sis __ _, in __ _ ex -- cel -- _ _ sis __ _, 
 		in ex -- cel -- _ sis.
 	}
  
@@ -161,9 +161,9 @@ tenor = \new Voice {
 		
 		e1 d2 \[ c2 a \] b2 r2 e1 d2 c a \[ b2 e2. \] d4 \[ c2 a2 \] b2 
 		e2. d4 c2 \[ a2 b1 \] a1 g2 \[ f2 d \] e2 r2 a1 g2 f d 
-		e1 r2 \[ b'2 e, \] g \[ c2 a \] b2 e1 d2 \[ c2 a \] b2 e1 d2 
-		\[ c2 a \] g2 e'1 d2 \[ c2 a \] b2 e1 d2 \[ c2 a \]
-		b2 e1 d2 c1 a2 \[ b2 e \] d2 c1 a2 b1 e2. d4 c2 a b\breve. 
+		e1 r2 \[ b'2 e, \] g \[ a2 c \] b2 \[ a2 c \] b2 a e'1 c2. b4 a2 
+		\[ g2 a \] e2 e'1 d2 \[ c2 a \] b2 e1 d2 \[ c2 a \]
+		b2 e1 d2 c1 a2 \[ b2 e \] d2 c1 a2 b1 e2. d4 \[ c2 a \] b\breve. 
 }
 	\addlyrics {
 		Be -- ne -- dic -- _ tus,  be -- ne -- dic -- _ _ _ _ _ _ _ _ _ _ _ _ tus,
@@ -176,8 +176,9 @@ tenor = \new Voice {
 		
 		Ho -- _ san -- _ na, ho -- _ san -- _ na, ho -- _ san -- _ na, ho -- _ san -- _ na, 
 		ho -- _ san -- _ na, ho -- _ san -- _ na, ho -- _ san -- _ na, ho -- _ san -- _ na
-		in __ _ ex -- cel -- _ sis, in ex -- cel -- _ sis, in ex -- cel -- _ sis, in ex -- cel -- _ sis, 
-		in ex -- cel -- _ sis, in ex -- cel -- _ sis, in ex -- cel -- _ sis, in ex -- cel -- _ sis. 
+		in __ _ ex -- cel -- _ sis, in __ _ ex -- cel -- sis, in __ _ ex -- cel -- _ sis, 
+		in ex -- cel -- _ sis, in ex -- cel -- _ sis, in ex -- cel -- sis, 
+		in __ _ ex -- cel -- _ sis, in ex -- cel -- _ sis. 
 	}
 }
 
