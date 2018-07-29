@@ -99,10 +99,10 @@ soprano = \new Voice	{
 		
 		r \[ a1 bes \] a2 f g a2. g4 g1 f2 g1 ~
 		g f1 g f\breve e1 f1. d2 
-		d\breve\fermata r1 r1 g2 a g2. f8 e e4 g f d e f g2 
-		a1 r1 r1 r2 r4 b2 c4 b c4. b8 g4 a b4. a8 a2 \ficta gis4 a c b c2 
+		d\breve\fermata \showBarLine \bar "|" r1 r1 g2 a g2. f8 e e4 g f d e f g2 
+		a1 r1 r1 r2 r4 b2 c4 b c4. b8 g4 a b4. a8 a2 \ficta gis4 a c b c ~
 		
-		b8 a c4 b2 c4 a b4. a8 a2 g8 \ficta fis g4 a b2 e,4 c' b g a4. g8 e4 b' a c4. b8 g4 a2 g4 d' 
+		c b8 a c4 b2 c4 a b4. a8 a2 g8 \ficta fis g4 a b2 e,4 c' b g a4. g8 e4 b' a c4. b8 g4 a2 g4 d' 
 		c e4. d8 b4 c4. b8 g4 d' c e4. d8 b4 c4. b8 g4 b4. a8 a2 g8 \ficta fis g4 a d,2 r1 r1 
 		e4 f g2 e8 f g a b4 c4. b8 a2 \ficta gis4 a1 r1 r1 r1 \[ b2 c \] 
 		b4 g a b e, a2 g8 \ficta fis g2 r2 e4. f8 g4 g g g g g g2 r2 r4 a g f e4. d8 c4 b 
@@ -160,38 +160,6 @@ soprano = \new Voice	{
 		Et ex -- pec -- to re -- sur -- rec -- ti -- o -- nem mor -- tu -- o -- _ _ _ _ _ _ rum,
 		et vi -- _ tam ven -- _ tu -- ri sae -- _ _ _ _ _ _ _ _ _ _ _ _ cu -- li.
 		A -- _ _ _ _ _ men, a -- _ _ _ _ _ _ _ _ _ men.
-  
-%{  
-  Pa -- trem om -- ni -- po -- ten -- tem, fac -- to -- rem cae -- li et ter -- rae,
-  vi -- si -- bi -- li -- um om -- ni -- um et in -- vi -- si -- bi -- li -- um.
-  Et in u -- num Do -- mi -- num Ie -- sum Chris -- tum,
-  Fi -- li -- um De -- i u -- ni -- ge -- ni -- tum,
-  et ex Pa -- tre na -- tum an -- te om -- ni -- a sae -- cu -- la.
-  De -- um de De -- o, Lu -- men de Lu -- mi -- ne,
-  De -- um ve -- rum de De -- o ve -- ro,
-  ge -- ni -- tum non fac -- tum, con -- sub -- stan -- ti -- a -- lem Pa -- tri;
-  per quem om -- ni -- a fac -- ta sunt.
-  Qui prop -- ter nos ho -- mi -- nes et prop -- ter nos -- tram
-  sa -- lu -- tem des -- cen -- dit de cae -- lis.
-  Et in -- car -- na -- tus est de Spi -- ri -- tu Sanc -- to ex
-  Ma -- ri -- a Vir -- gi -- ne, et ho -- mo fac -- tus est.
-  Cru -- ci -- fix -- us e -- ti -- am pro no -- bis sub Pon -- ti -- o Pi -- la -- to,
-  pas -- sus et se -- pul -- tus est,
-  et re -- sur -- rex -- it ter -- ti -- a di -- e, se -- cun -- dum Scrip -- tu -- ras,
-  et as -- cen -- dit in cae -- lum, se -- det ad dex -- te -- ram Pa -- tris.
-  Et i -- te -- rum ven -- tu -- rus est cum glo -- ri -- a, iu -- di -- ca -- re vi -- vos
-  et mor -- tu -- os, cu -- ius reg -- ni non e -- rit fi -- nis.
-  
-  Et in Spi -- ri -- tum Sanc -- tum, Do -- mi -- num et vi -- vi -- fi -- can -- tem,
-  qui ex Pa -- tre Fi -- li -- o -- que pro -- ce -- dit.
-  Qui cum Pa -- tre et Fi -- li -- o si -- mul a -- do -- ra -- tur et con -- glo -- ri -- fi -- ca -- tur:
-  qui lo -- cu -- tus est per pro -- phe -- tas.
-  Et u -- nam, sanc -- tam, ca -- tho -- li -- cam et a -- pos -- to -- li -- cam Ec -- cle -- si -- am.
-  Con -- fi -- te -- or u -- num bap -- tis -- ma in re -- mis -- si -- o -- nem pec -- ca -- to -- rum.
-  Et ex -- pec -- to re -- sur -- rec -- ti -- o -- nem mor -- tu -- o -- rum,
-  et vi -- tam ven -- tu -- ri sae -- cu -- li.
-  A -- men.
-%}
 	}
 }
 
@@ -215,12 +183,12 @@ alto = \new Voice	{
 		\[ e1 d\breve. \] c2  a b1 r1 e1 ~
 		e d\breve. c\breve a1. b2 
 		b\breve\fermata e2 d c4 a b2 r1 r2 e1 d2 c4 a b2 
-		c2. b8 a c4 b a c d e4. c8 d4 e4. f8 g2. c,4 g' c, g'2 f e4 c d4. e8 
+		c2. b8 a c4 b a c d e4. c8 d4 e4. f8 g2. c,4 g' c, g'2 f e4 c d4. e8 f4 r4 e2 ~
 		
-		f4 r4 e\breve d2 c4 a b2 e d c4 a b2 r1 r1 r1 
+		e1. d2 c4 a b2 e d c4 a b2 r1 r1 r1 
 		r2. d4 c e4. d8 b4 c4. b8 g4 d' c g'4. f8 f4. e8 e2 d4 e r2. r4 e d c a2 b 
-		r1 r4 e d c a2 b \[ e2 f \] e4 c d e a, d2 \ficta cis4 d f e c g'4. f8 [e d] e2 
-		b4 c d e1 e2 d c4 a b1 r2 e d c4 a b2 r4 e2 d4 
+		r1 r4 e d c a2 b \[ e2 f \] e4 c d e a, d2 \ficta cis4 d f e c g'4. f8 [e d] e4 ~ 
+		e b4 c d e1 e2 d c4 a b1 r2 e d c4 a b2 r4 e2 d4 
 		
 		c a b2 r1 r2 r4 e4 f e8 d f4 e2 d \ficta cis4 d a4. f8 g4 a2 r r1
 		r1. e'\breve. d1 c a b2 e1 
@@ -239,8 +207,8 @@ alto = \new Voice	{
 		
 		f e4. c8 d4 e4. d8 c4 b e2. d4 c a b2 r d e d b4 c a b c4. d8 e2 
 		a,4. b8 c4. b8 g4 b a c2 b4 a2 b\breve e4. d8 c4. b8 a4 g a2 r1
-		r4 e'2 d4 c a b2 r a'2 g2. f4 e2. d4 c2. b4
-		a2 g a1. g2 a2. b4 c2 e d c a\breve b
+		r4 e'2 d4 c a b2 r a'2 g2. f4 e2. d4 c2. b4 a2 g a1 ~
+		a2 g2 a2. b4 c2 e d c a\breve b
 	}
 	\addlyrics {
 		Pa -- trem, __
@@ -400,9 +368,9 @@ bass = \new Voice {
 		\[c d \] \[ g, d'\] \[ e2 f \] \[ g e \] \[ d1 c ~
 		c \] d1 \[ g,1 d'\] f1 \[ c1 d1. \] g,2 
 		g\breve\fermata r2 g'2 a g e f4 d e4. f8 g2 a4 e f g c, f e2 
-		a,4 a'2 g8 f a4 g c2 b4 a2 g8 f e1 r1 r1 r1 r4 a g a2 
+		a,4 a'2 g8 f a4 g c2 b4 a2 g8 f e1 r1 r1 r1 r4 a g a ~
 		
-		g8 f a4 g e a f g e f d e2 c4 b2 a r r1 r1 r1 r1 r1 r1 r1 r1e'4 f g2 e8 f g a b4 c4. b8 a2 \ficta gis4 a d, e4. c8 c2 r r1
+		a g8 f a4 g e a f g e f d e2 c4 b2 a r r1 r1 r1 r1 r1 r1 r1 r1e'4 f g2 e8 f g a b4 c4. b8 a2 \ficta gis4 a d, e4. c8 c2 r r1
 		\[ a2 d \] c4 a b c d b a2 \[ d2 a' \] \[ g2 a \] e4. d8 c4 b \[ a2 e'\] r4 c d b a2 r4 e'e e e2 r4 c d b
 		a2 r r1 r2 e' f4 e8 d f4 e4. d8 d2 \ficta cis4 d2 r1 r4  e f e8 d f4 e a,2 r r1
 		a'1 f2 e2. f4 g2 c,1 c2 d1 a2 c2. b4 a2 g a1 \[ b2 c \] d2
