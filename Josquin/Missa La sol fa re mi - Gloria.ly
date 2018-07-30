@@ -2,7 +2,7 @@
 % Copyright ©2018 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "6"
+revision = "7"
 \pointAndClickOff
 
 #(set-global-staff-size 15.0)
@@ -100,6 +100,13 @@ singleDigitTime = { \override Staff.TimeSignature.style = #'single-digit }
 		}
 	}
 }
+
+
+%{   ██████      ██          ██████      ██████      ██      █████
+    ██           ██         ██    ██     ██   ██     ██     ██   ██
+    ██   ███     ██         ██    ██     ██████      ██     ███████
+    ██    ██     ██         ██    ██     ██   ██     ██     ██   ██
+     ██████      ███████     ██████      ██   ██     ██     ██   ██  }%
 
 soprano = \new Voice	{
 	\relative c' {

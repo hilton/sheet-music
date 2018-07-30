@@ -129,36 +129,36 @@ soprano = \new Voice	{
 		\showBarLine \bar "|."
   }
 	\addlyrics {
-		Pa -- _ trem om -- ni -- po -- ten -- _ _ _ tem, fac -- to -- rem cae -- li et ter -- _ _ rae,
-		vi -- si -- bi -- li -- um om -- _ _ ni -- um et in -- vi -- si -- _ _ bi -- _ _ li -- um.
-		Et in u -- _ num Do -- _ _ _ _ _ mi -- num __ _ _ _  Je -- sum __ _ _  Chris -- _ _ _ _ tum, __ _ _ _
-		Fi -- li -- um De -- _ i __ _ _ _  u -- ni -- _ ge -- _ _ _ _ _ ni -- tum,
-		et ex Pa -- tre na -- tum an -- _ _ _ te om -- ni -- a sae -- cu -- la, __ _ sae -- cu -- la. __ _
+		Pá -- _ trem om -- ni -- po -- tén -- _ _ _ tem, fac -- tó -- rem caé -- li et tér -- _ _ rae,
+		vi -- si -- bí -- li -- um óm -- _ _ ni -- um et in -- vi -- si -- _ _ bí -- _ _ li -- um.
+		Et in ú -- _ num Dó -- _ _ _ _ _ mi -- num __ _ _ _  Jé -- sum __ _ _  Chrís -- _ _ _ _ tum, __ _ _ _
+		Fí -- li -- um Dé -- _ i __ _ _ _  u -- ni -- _ gé -- _ _ _ _ _ ni -- tum,
+		et ex Pá -- tre ná -- tum an -- _ _ _ te óm -- ni -- a saé -- cu -- la, __ _ saé -- cu -- la. __ _
 
-		De -- um de __ _  De -- _ o, Lu -- men de Lu -- _ _ _ _ _ _ mi -- ne,
-		De -- um ve -- _ _ _ rum,  de De -- o ve -- _ ro,
-		%  ge -- ni -- tum non fac -- tum, con -- sub -- stan -- ti -- a -- lem Pa -- tri;
-		per quem om -- ni -- a fac -- _ _ ta sunt.
-		Qui prop -- ter nos ho -- mi -- nes et prop -- ter nos -- _ _ tram
-		sa -- lu -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ tem des -- _ cen -- _ _ dit de __ _  cae -- _ _ _ _ _ _ _ lis.
-		Et __ _  in -- car -- na -- tus est de Spi -- ri -- tu Sanc -- to
-		ex __ _ Ma -- ri -- a Vir -- _ _ gi -- ne, et ho -- mo fac -- _ tus est.
-		Cru -- ci -- fi -- _ _ xus e -- _ ti -- am pro no -- bis sub Pon -- ti -- o __ _ _ Pi -- la -- _ _ _ to,
-		pas -- sus et __ _ _ _  se -- _ _ pul -- _ _ _ _ _ _ tus est,
-		et re -- sur -- rex -- _ it ter -- ti -- a __ _ _ di -- e, se -- cun -- dum __ _ _ _ _ _  Scrip -- tu -- _ _ _ _ _ _ _ _ _ _ _ _ _ ras,
-		et as -- cen -- dit __ _ _ _ _  in __ _  cae -- _ lum, se -- _ det ad dex -- te -- ram Pa -- _ _ tris.
+		Dé -- um de __ _  Dé -- _ o, Lú -- men de Lú -- _ _ _ _ _ _ mi -- ne,
+		Dé -- um vé -- _ _ _ rum,  de Dé -- o vé -- _ ro,
+		%  gé -- ni -- tum non fác -- tum, con -- sub -- stan -- ti -- á -- lem Pá -- tri;
+		per quem óm -- ni -- a fác -- _ _ ta sunt.
+		Qui prop -- ter nos hó -- mi -- nes et prop -- ter nós -- _ _ tram
+		sa -- lú -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ tem dés -- _ cen -- _ _ dit de __ _  caé -- _ _ _ _ _ _ _ lis.
+		Et __ _  in -- cár -- na -- tus est de Spí -- ri -- tu Sánc -- to
+		ex __ _ Ma -- rí -- a Vír -- _ _ gi -- ne, et hó -- mo fác -- _ tus est.
+		Cru -- ci -- fí -- _ _ xus é -- _ ti -- am pro nó -- bis sub Pón -- ti -- o __ _ _ Pi -- lá -- _ _ _ to,
+		pás -- sus et __ _ _ _  se -- _ _ púl -- _ _ _ _ _ _ tus est,
+		et re -- sur -- réx -- _ it tér -- ti -- a __ _ _ dí -- e, se -- cún -- dum __ _ _ _ _ _  Scrip -- tú -- _ _ _ _ _ _ _ _ _ _ _ _ _ ras,
+		et as -- cén -- dit __ _ _ _ _  in __ _  caé -- _ lum, sé -- _ det ad déx -- te -- ram Pá -- _ _ tris.
 
-		Et __ _  i -- te -- rum ven -- tu -- rus est cum glo -- ri -- a, __ _ _  ju -- di -- ca -- _ re % vi -- vos
-		et mor -- _ _ _ _ _ _ tu -- os, cu -- ius reg -- ni non e -- _ rit fi -- _ _ _ _ _ _ _ nis, fi -- nis.
+		Et __ _  í -- te -- rum ven -- tú -- rus est cum gló -- ri -- a, __ _ _  ju -- di -- cá -- _ re % ví -- vos
+		et mór -- _ _ _ _ _ _ tu -- os, cú -- ius rég -- ni non é -- _ rit fí -- _ _ _ _ _ _ _ nis, fí -- nis.
 
-		Et in Spi -- ri -- tum Sanc -- tum, __ _ _  Do -- mi -- num et vi -- vi -- fi -- can -- _ _ tem, et vi -- vi -- fi -- can -- _ _ tem,
-		qui ex Pa -- tre __ _ _ Fi -- li -- o -- que __ _  pro -- ce -- _ dit.
-		Qui cum Pa -- tre et Fi -- li -- o si -- mul a -- do -- ra -- tur et con -- glo -- ri -- fi -- ca -- tur:
-		qui lo -- cu -- tus est per pro -- phe -- _ _ tas.
-		Et u -- nam, sanc -- _ tam, ca -- tho -- li -- cam et a -- pos -- to -- li -- cam Ec -- cle -- si -- am, Ec -- cle -- _ _ _ _ si -- am.
-		Con -- fi -- te -- _ _ _ _ or u -- num bap -- tis -- _ _ ma in re -- mis -- si -- o -- _ _ _ _ _ nem pec -- ca -- to -- _ rum. __ _ _ _
-		Et ex -- pec -- to re -- sur -- rec -- ti -- o -- nem mor -- tu -- o -- _ _ _ _ _ _ rum,
-		et vi -- _ tam ven -- _ tu -- ri sae -- _ _ _ _ _ _ _ _ _ _ _ _ cu -- li.
+		Et in Spí -- ri -- tum Sánc -- tum, __ _ _  Dó -- mi -- num et vi -- vi -- fi -- cán -- _ _ tem, et vi -- vi -- fi -- cán -- _ _ tem,
+		qui ex Pá -- tre __ _ _ Fi -- li -- ó -- que __ _  pro -- cé -- _ dit.
+		Qui cum Pá -- tre et Fí -- li -- o si -- mul a -- do -- rá -- tur et con -- glo -- ri -- fi -- cá -- tur:
+		qui lo -- cú -- tus est per pro -- phé -- _ _ tas.
+		Et ú -- nam, sánc -- _ tam, ca -- thó -- li -- cam et a -- pos -- tó -- li -- cam Ec -- clé -- si -- am, Ec -- clé -- _ _ _ _ si -- am.
+		Con -- fí -- te -- _ _ _ _ or ú -- num bap -- tís -- _ _ ma in re -- mis -- si -- ó -- _ _ _ _ _ nem pec -- ca -- tó -- _ rum. __ _ _ _
+		Et ex -- péc -- to re -- sur -- rec -- ti -- ó -- nem mor -- tu -- ó -- _ _ _ _ _ _ rum,
+		et ví -- _ tam ven -- _ tú -- ri saé -- _ _ _ _ _ _ _ _ _ _ _ _ cu -- li.
 		A -- _ _ _ _ _ men, a -- _ _ _ _ _ _ _ _ _ men.
 	}
 }
@@ -211,41 +211,41 @@ alto = \new Voice	{
 		a2 g2 a2. b4 c2 e d c a\breve b
 	}
 	\addlyrics {
-		Pa -- trem, __
-		vi -- si -- bi -- li -- um __ _ _  om -- ni -- um et in -- _ _ vi -- si -- bi -- _ _ 
+		Pá -- trem, __
+		vi -- si -- bí -- li -- um __ _ _ óm -- ni -- um, et in -- _ _ vi -- si -- bí -- _ _ 
 		_ _ _ _ _ _ _ _ _ _ _ _ _ _ li -- um.
-		Et in u -- _ num,
-		et ex Pa -- tre na -- tum an -- _ te om -- ni -- a __ _ _  sae -- cu -- la.
+		Et in ú -- _ num,
+		et ex Pá -- tre ná -- tum an -- _ te óm -- ni -- a __ _ _  saé -- cu -- la.
 
-		De -- um de __ _  De -- _ o, de __ _  De -- 
-		um ve -- _ rum
-		fac -- _ _ ta sunt.
+		Dé -- um de __ _  Dé -- _ o, de __ _  Dé -- 
+		um vé -- _ rum,
+		fác -- _ _ ta sunt.
 		
-		Qui prop -- ter nos __ _ _ _ _ _ _ _ _ _ _ _  ho -- _ _ _ _ _ _ mi -- nes __ _ _  et prop -- ter nos -- tram
-		sa -- lu -- _ tem des -- cen -- dit de  cae -- _ _ lis, de __ _ _ _ _  cae -- lis, de cae -- lis.
-		Et in -- car -- na -- tus est 
-		de Spiri -- tu Sanc -- to
-		Vir -- _ _ gi -- ne, et  ho -- mo  fac -- tus est.
-		Cru -- ci -- fi -- _ xus 
-		e -- _ _ ti -- am
-		sub __ _ _ Pon -- ti -- o  Pi -- _ la -- _ _ to, __ _ _
-		sub Pon -- ti -- o  Pi -- la -- _ _ _ to,
-		Pi -- la -- to pas -- sus et se -- pul -- tus est
-		se -- cun -- dum __ _ _ _ _ _  scrip -- tu -- _ _ _ _ _ _ ras,
-		et as -- cen -- _ dit in __ _ cae -- _ lum
-		se -- _ det ad dex -- te -- ram Pa -- _ tris,  Pa -- _ _ _ _ _ _ _ _ _ _ tris.
+		Qui prop -- ter nos __ _ _ _ _ _ _ _ _ _ _ _  hó -- _ _ _ _ _ _ mi -- nes, __ _ _  et prop -- ter nós -- tram
+		sa -- lú -- _ tem des -- cén -- dit de  caé -- _ _ lis, de __ _ _ _ _  caé -- lis, de caé -- lis.
+		Et in -- car -- ná -- tus est 
+		de Spíri -- tu Sánc -- to
+		Vír -- _ _ gi -- ne, et  hó -- mo  fác -- tus est.
+		Cru -- ci -- fí -- _ xus 
+		é -- _ _ ti -- am,
+		sub __ _ _ Pón -- ti -- o  Pi -- _ lá -- _ _ to, __ _ _
+		sub Pón -- ti -- o  Pi -- lá -- _ _ _ to,
+		Pi -- lá -- to pás -- sus, et se -- púl -- tus est
+		se -- cún -- dum __ _ _ _ _ _  scrip -- tú -- _ _ _ _ _ _ ras,
+		et as -- cén -- _ dit in __ _ caé -- _ lum,
+		sé -- _ det ad déx -- te -- ram Pá -- _ tris,  Pá -- _ _ _ _ _ _ _ _ _ _ tris.
 
-		ven -- _ tu -- rus est cum __ _ glo -- ri -- a  ju -- di -- ca -- _ re
-		vi -- vos __ _ _ _  et mor -- _ _ _ _ tu -- os,
-		cu -- jus reg -- _ ni non e -- rit fi -- nis, fi -- _ _ _ _ _ nis.
-		Et in Spi -- ri -- tum Sanc -- tum, __ _ _  Do -- _ _ _ mi -- num,
-		qui ex Pa -- _ _ tre  Fi -- li -- o -- _ que  pro -- _ _ ce -- _ _ _ dit.
-		Qui cum Pa -- tre et Fi -- li -- o si -- mul a -- do -- _ ra -- tur con -- glo -- ri -- fi -- ca -- tur:
-		qui lo -- cu -- tus est per pro -- phe -- _ _ tas.
-		Et u -- nam, sanc -- tam, ca -- tho -- li -- cam et a -- pos -- to -- li -- cam Ec -- cle -- _ si -- am.
-		Con -- fi -- te -- _ _ _ _ or u -- num bap -- tis -- _ _ ma  in re -- mis -- si -- _ o -- _ nem, in re -- mis -- si -- o -- _ _ _ _ _ nem __ _ _  pec -- _ _ ca -- to -- _ _ _ rum.
-		Et ex -- pec -- to re -- sur -- rec -- ti -- _ o -- nem __ _ _ _ _  mor -- tu -- o -- _ _ rum,
-		vi -- _ tam ven -- tu -- _ ri ven -- _ tu -- _ ri
+		ven -- _ tú -- rus est cum __ _ gló -- ri -- a, ju -- di -- cá -- _ re
+		ví -- vos __ _ _ _  et mór -- _ _ _ _ tu -- os,
+		cú -- jus rég -- _ ni non é -- rit fí -- nis, fí -- _ _ _ _ _ nis.
+		Et in Spí -- ri -- tum Sánc -- tum, __ _ _  Dó -- _ _ _ mi -- num,
+		qui ex Pá -- _ _ tre  Fi -- li -- ó -- _ que  pro -- _ _ cé -- _ _ _ dit.
+		Qui cum Pá -- tre et Fí -- li -- o si -- mul a -- do -- _ rá -- tur, con -- glo -- ri -- fi -- cá -- tur:
+		qui lo -- cú -- tus est per Pro -- phé -- _ _ tas.
+		Et ú -- nam sánc -- tam ca -- thó -- li -- cam et a -- pos -- tó -- li -- cam Ec -- clé -- _ si -- am.
+		Con -- fí -- te -- _ _ _ _ or ú -- num bap -- tís -- _ _ ma  in re -- mis -- si -- _ ó -- _ nem, in re -- mis -- si -- ó -- _ _ _ _ _ nem __ _ _  pec -- _ _ ca -- tó -- _ _ _ rum.
+		Et ex -- péc -- to re -- sur -- rec -- ti -- _ ó -- nem __ _ _ _ _  mor -- tu -- ó -- _ _ rum,
+		ví -- _ tam ven -- tú -- _ ri ven -- _ tú -- _ ri
 		A -- _ _ _ _ _ _ _ _ men, a -- _ _ men, a -- _ _ _ men.
 	}
 }
