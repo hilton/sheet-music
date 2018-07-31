@@ -2,7 +2,7 @@
 % Copyright ©2018 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "7"
+revision = "8"
 \pointAndClickOff
 
 #(set-global-staff-size 15.0)
@@ -102,11 +102,11 @@ singleDigitTime = { \override Staff.TimeSignature.style = #'single-digit }
 }
 
 
-%{   ██████      ██          ██████      ██████      ██      █████
-    ██           ██         ██    ██     ██   ██     ██     ██   ██
-    ██   ███     ██         ██    ██     ██████      ██     ███████
-    ██    ██     ██         ██    ██     ██   ██     ██     ██   ██
-     ██████      ███████     ██████      ██   ██     ██     ██   ██  }%
+%{   ██████      ██         ██████      ██████      ██      █████
+    ██           ██        ██    ██     ██   ██     ██     ██   ██
+    ██   ███     ██        ██    ██     ██████      ██     ███████
+    ██    ██     ██        ██    ██     ██   ██     ██     ██   ██
+     ██████      ███████    ██████      ██   ██     ██     ██   ██  %}
 
 soprano = \new Voice	{
 	\relative c' {
@@ -135,29 +135,29 @@ soprano = \new Voice	{
     \showBarLine \bar "|."
   }
 	\addlyrics {
-    Et in ter -- ra pax __ _ _ _ _ _ ho -- _ mi -- ni -- bus.
-    Bo -- ne vo -- lun -- ta -- _ _ _ tis. Lau -- da -- 
-		mus  te, a -- do -- ra -- mus  te, glo -- ri -- fi -- ca -- mus te. Gra -- _ ti -- as 
-		a -- gi -- mus ti -- _ _ bi, gra -- _ _ ti -- _ as a -- gi -- mus ti -- _ bi, 
-    prop -- ter mag -- nam glo -- ri -- am  tu -- am
-    Do -- mi -- ne  De -- _ us
-    Rex  cae -- les -- tis  De -- us Pa -- ter
-    om -- _ _ _ _ _ ni -- po -- tens, om -- _ _ ni -- _ _ _ po -- _ tens.
-    Do -- mi -- ne  Fi -- _ li  u -- ni -- ge -- _ _ ni -- te,
-    Je -- su  Chri -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ te.
-    Do -- mi -- ne __ _ _ _  De -- _ us Ag -- _ nus De -- _ _ i  Fi -- _ _ _  li -- us  Pa -- _ _ _ _ _ _ tris.
-    Qui tol -- lis pec -- _ ca -- ta  mun -- _ _ di,
+    Et in tér -- ra pax __ _ _ _ _ _ ho -- _ mí -- ni -- bus
+    bó -- nae vo -- lun -- tá -- _ _ _ tis. Lau -- dá -- 
+		mus te, a -- do -- rá -- mus te, glo -- ri -- fi -- cá -- mus te. Grá -- _ ti -- as 
+		á -- gi -- mus tí -- _ _ bi, grá -- _ _ ti -- _ as á -- gi -- mus tí -- _ bi 
+    prop -- ter mág -- nam gló -- ri -- am tú -- am.
+    Dó -- mi -- ne Dé -- _ us,
+    Rex cae -- lés -- tis, Dé -- us Pá -- ter
+    om -- _ _ _ _ _ ní -- po -- tens, om -- _ _ ní -- _ _ _ po -- _ tens.
+    Dó -- mi -- ne Fí -- _ li u -- ni -- gé -- _ _ ni -- te
+    Jé -- su Chrí -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ te.
+    Dó -- mi -- ne __ _ _ _ Dé -- _ us, Ag -- _ nus Dé -- _ _ i, Fí -- _ _ _  li -- us Pá -- _ _ _ _ _ _ tris.
+    Qui tól -- lis pec -- _ cá -- ta mún -- _ _ di,
     mi -- se -- re -- re __ _ _ _  no -- _ _ _ bis,
-    qui __ _ _  tol -- _ _ lis pec -- ca -- _ _ _ ta  mun -- _ _ _ _ _ _  di, __ _ _ _
-    su -- sci -- pe de -- pre -- ca -- ti -- o -- nem  nos -- tram.
-    Qui  se -- _ _ _ _ _ _ _ des ad __ _ _ _ _ dex -- te -- ram __ _   Pa -- _ _ _ _ tris 
-    mi -- se -- re -- re  no -- bis.
-    Quo -- ni -- am  tu  so -- lus  Sanc -- tus,
-    tu so -- lus  Do -- mi -- nus,
-    tu so -- lus  Al -- _ _ _ tis -- si -- mus
-    Je -- su __ _ _ _  Chri -- _ _ _ _ ste
-    Cum Sanc -- _ _ _ _ to Spi -- ri -- tu, in glo -- ri -- a
-    De -- i Pa -- _ _ _ tris
+    qui __ _ _ tól -- _ _ lis pec -- cá -- _ _ _ ta  mún -- _ _ _ _ _ _  di, __ _ _ _
+    sú -- sci -- pe de -- pre -- ca -- ti -- ó -- nem nós -- tram.
+    Qui sé -- _ _ _ _ _ _ _ des ad __ _ _ _ _ déx -- te -- ram __ _   Pá -- _ _ _ _ tris,
+    mi -- se -- ré -- re nó -- bis.
+    Quó -- ni -- am  tu só -- lus sánc -- tus,
+    tu só -- lus Dó -- mi -- nus,
+    tu só -- lus Al -- _ _ _ tís -- si -- mus,
+    Jé -- su __ _ _ _  Chrí -- _ _ _ _ ste.
+    Cum Sánc -- _ _ _ _ to Spí -- ri -- tu, in gló -- ri -- a
+    Dé -- i Pá -- _ _ _ tris.
     A -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ men.
 	}
 }
@@ -187,29 +187,29 @@ alto = \new Voice	{
     e4. d8 b4 c8 a c2 b4 d2 \tuplet 3/2 {c2 a c} b\breve
 	}
 	\addlyrics {
-    Et in ter -- ra pax __ _ _ ho -- mi -- ni -- bus, __ _ _
-    bo -- ne vo -- lun -- ta -- _ _ _ tis, Lau -- da -- mus __ _ te,
-    lau -- da -- mus  te, be -- ne -- di -- ci -- mus te, __ _ _ a -- do -- ra -- _ mus  te,
-    glo -- ri -- fi -- ca -- _ _ _ _ mus te.
-    prop -- ter mag -- nam glo -- _ ri -- am
-    Do -- mi -- ne  De -- _ us  Rex  cae -- les -- _ _ _ tis  De -- us Pa -- _ _ ter
-    om -- _ ni -- _ _ _ _ _ _ _ _ _ po -- tens.
-    Do -- mi -- ne  Fi -- li  u -- ni -- ge -- ni -- _ _ _ _ _ _ _ te
-    Je -- su  Chri -- _ _ _ _ _ _ _ te.
-    Ag -- nus De -- _ _ _ _ _ _ i
-    Fi -- li -- us Fi -- li -- us Fi -- li -- us  Pa -- _ tris.
+    Et in tér -- ra pax __ _ _ ho -- mí -- ni -- bus __ _ _
+    bó -- nae vo -- lun -- tá -- _ _ _ tis. Lau -- dá -- mus __ _ te,
+    lau -- dá -- mus te, be -- ne -- dí -- ci -- mus te, __ _ _ a -- do -- rá -- _ mus te,
+    glo -- ri -- fi -- cá -- _ _ _ _ mus te,
+    prop -- ter mág -- nam gló -- _ ri -- am,
+    Dó -- mi -- ne Dé -- _ us  Rex cae -- lés -- _ _ _ tis, Dé -- us Pá -- _ _ ter
+    om -- _ ní -- _ _ _ _ _ _ _ _ _ po -- tens.
+    Dó -- mi -- ne Fí -- li u -- ni -- gé -- ni -- _ _ _ _ _ _ _ te
+    Jé -- su  Chrí -- _ _ _ _ _ _ _ te.
+    Ag -- nus Dé -- _ _ _ _ _ _ i,
+    Fí -- li -- us, Fí -- li -- us, Fí -- li -- us Pá -- _ tris.
    
-    Qui tol -- lis pec -- _ ca -- ta  mun -- _ _ _ _ di,
-    mi -- se -- _ re -- _ _ _ re  no -- bis,
-    qui __ _ _ _ _ _ tol -- _ _ _ _ _ _ lis 
-    su -- _ _ sci -- pe Qui __ _  se -- _ des
-    ad __ _ _ _ _ _ dex -- te -- ram  Pa -- _ _ _ _ _ _ _ _ _ _ _ _ _ tris
-    mi -- se -- re -- re  no -- bis.
-    Quo -- ni -- am  tu  so -- lus  Sanc -- tus,
-    tu so -- lus  Do -- mi -- nus,
-    tu so -- _ _ _ lus  Al -- tis -- si -- mus
-    Je -- su Chri -- _ _ 
-    ste Cum __ _  Sanc -- _ to Spi -- _ _ ri -- tu in __ _ glo -- ri -- a
+    Qui tól -- lis pec -- _ cá -- ta mún -- _ _ _ _ di,
+    mi -- se -- _ ré -- _ _ _ re nó -- bis,
+    qui __ _ _ _ _ _ tól -- _ _ _ _ _ _ lis 
+    sú -- _ _ sci -- pe, Qui __ _ sé -- _ des
+    ad __ _ _ _ _ _ déx -- te -- ram Pá -- _ _ _ _ _ _ _ _ _ _ _ _ _ tris,
+    mi -- se -- re -- re  nó -- bis.
+    Quó -- ni -- am tu só -- lus sánc -- tus,
+    tu só -- lus Dó -- mi -- nus,
+    tu só -- _ _ _ lus Al -- tís -- si -- mus,
+    Jé -- su Chrí -- _ _ 
+    ste. Cum __ _  Sánc -- _ to Spí -- _ _ ri -- tu in __ _ gló -- ri -- a,
     A -- _ _ _ _ _ _ men a -- _ _ _ _ _ _ _ _ _ _ _ _ _ men.
 	}
 }
@@ -241,29 +241,29 @@ tenor = \new Voice {
 		e d4 c a b2 r4 a2 g4 f d e\breve.
 	}
 	\addlyrics {
-		Et in ter -- _ ra pax ho -- _ mi -- ni -- bus.
-		Lau -- da -- _ mus 
-		te, be -- ne -- di -- ci -- mus te, a -- do -- ra -- mus  te, glo -- ri -- fi -- 
-		ca -- mus te. Prop -- ter mag -- nam 
+		Et in tér -- _ ra pax ho -- _ mí -- ni -- bus.
+		Lau -- dá -- _ mus 
+		te, be -- ne -- dí -- ci -- mus te, a -- do -- rá -- mus te, glo -- ri -- fi -- 
+		cá -- mus te. Prop -- ter mág -- nam 
 
-		glo -- ri -- am  tu -- _ _ _ _ _ _ _ _ _ am __ _ _
-		om -- ni -- _ po -- tens.
-		Je -- su __ _  Chri -- ste.
-		Do -- mi -- ne __ _ _ _  De -- _ _ _ _ _ _ _ us 
-		Fi -- _ _ li -- us  Pa -- _ _ _ tris.
+		gló -- ri -- am tú -- _ _ _ _ _ _ _ _ _ am. __ _ _
+		om -- ní -- _ po -- tens.
+		Jé -- su __ _ Chrí -- ste.
+		Dó -- mi -- ne __ _ _ _ Dé -- _ _ _ _ _ _ _ us 
+		Fí -- _ _ li -- us Pá -- _ _ _ tris.
 
-		mi -- se -- re -- _ re
-		pec -- ca -- ta  mun -- _ _ _ _ di,
-		su -- sci -- pe de -- pre -- ca -- ti -- o -- nem __ _  nos -- _ _ _ _ _ _ tram.
-		Qui __ _   se -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ des
-		ad __ _ dex -- te -- ram Pa -- _ _ _ tris
-		mi -- se -- re -- _ re
-		tu so -- lus sanc -- tus
-		so -- lus Do -- mi -- nus, tu __ _ so -- _ lus Al -- _ tis -- si -- mus, Je -- us Chri -- _ 
+		mi -- se -- ré -- _ re,
+		pec -- cá -- ta mún -- _ _ _ _ di,
+		sú -- sci -- pe de -- pre -- ca -- ti -- ó -- nem __ _ nós -- _ _ _ _ _ _ tram.
+		Qui __ _ sé -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ des
+		ad __ _ déx -- te -- ram Pá -- _ _ _ tris,
+		mi -- se -- ré -- _ re,
+		tu só -- lus sanc -- tus,
+		só -- lus Dó -- mi -- nus, tu __ _ so -- _ lus Al -- _ tís -- si -- mus, Jé -- us Chrí -- _ 
 		ste.
-		Cum Sanc -- _ _ _ _ _ _ to Spi -- ri -- tu in glo -- ri -- a,
-		in glo -- ri -- a De -- _ i Pa -- _ tris 
-		De -- i Pa -- _ tris. A -- _ _ _ men.
+		Cum Sánc -- _ _ _ _ _ _ to Spí -- ri -- tu, in gló -- ri -- a,
+		in gló -- ri -- a Dé -- _ i Pá -- _ tris,
+		Dé -- i Pá -- _ tris. A -- _ _ _ men.
 	}
 }
 
@@ -286,30 +286,31 @@ bass = \new Voice {
     d,4 a'2 g4. f8 d4 e r g a f e g4. f8 d4. e8 f g a4. b8 c4. b8 g4 b a4. g8 e4 g f4. e8 c4 e d4. c8 a1 r2 e'2 e1
 	}
 	\addlyrics {
-    Et in ter -- ra pax ho -- mi -- ni -- bus bo -- _ _ nae vo -- lun -- ta -- _ _ tis
-    Lau -- da -- mus  te, be -- ne -- di -- ci -- mus te,
-    a -- do -- ra -- mus te, glo -- ri -- fi -- ca -- _ _ mus te.
-    Gra -- ti -- as a -- gi -- mus ti -- bi,
-    prop -- ter mag -- nam
-    glo -- ri -- am __ _ _ _ _ _  tu -- am Do -- mi -- ne  De -- _ _ _ _ _ us
-    Do -- mi -- _ ne  Fi -- _ _ _ _ _ _ _ li
-    Je -- su  Chri -- ste.
-    Do -- mi -- ne __ _ _ _  De -- _ _ _ _ _ _ _ us Ag -- nus De -- _ _ _ _ _ i
-    Fi -- _ _ _ _ _ _ _ _ _ _ li -- us Pa -- _ _ tris.
-    Qui  tol -- lis pec -- ca -- ta __ _ _ _ _  mun -- _ di,
-    mi -- se -- re -- re  no -- _ bis,
-    qui  tol -- _ _ _ lis pec -- ca -- ta  mun -- _ _ _ _ _ _ _ _  di, __ _ _
-    su -- sci -- pe de -- pre -- ca -- ti -- o -- nem  nos -- tram.
-    Qui __ _ _  se -- _ _ des, qui __ _ _  se -- _ _ _ _ _ _ _ _ _ _ des
-    ad __ _ _ _ _ _ dex -- te -- ram
-    mi -- se -- re -- re  no -- bis, mi -- se -- re -- re  no -- bis.
-    Quo -- ni -- am  tu  so -- lus  Sanc -- tus,
-    tu so -- lus  Do -- mi -- nus,
-    tu so -- lus  Al -- tis -- si -- mus
-    Je -- su __ _  Chri -- _ ste
-    Cum Sanc -- _ _ _ _ to Spi -- _ _ ri -- tu, in glo -- ri -- a
-    De -- i Pa -- tris.
-    A -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ men, a -- men
+		Et in tér -- ra pax ho -- mí -- ni -- bus bó -- _ _ nae vo -- lun -- tá -- _ _ tis.
+		Lau -- dá -- mus te, be -- ne -- dí -- ci -- mus te,
+		a -- do -- rá -- mus te, glo -- ri -- fi -- cá -- _ _ mus te.
+		Grá -- ti -- as á -- gi -- mus tí -- bi,
+		prop -- ter mág -- nam
+		gló -- ri -- am __ _ _ _ _ _ tú -- am. Dó -- mi -- ne Dé -- _ _ _ _ _ us,
+		Dó -- mi -- _ ne Fí -- _ _ _ _ _ _ _ li,
+		Jé -- su Chrí -- ste.
+		Dó -- mi -- ne __ _ _ _ Dé -- _ _ _ _ _ _ _ us, Ag -- nus Dé -- _ _ _ _ _ i,
+		Fí -- _ _ _ _ _ _ _ _ _ _ li -- us Pá -- _ _ tris.
+		
+		Qui tól -- lis pec -- cá -- ta __ _ _ _ _ mún -- _ di,
+		mi -- se -- ré -- re nó -- _ bis,
+		qui tól -- _ _ _ lis pec -- cá -- ta mún -- _ _ _ _ _ _ _ _ di, __ _ _
+		sú -- sci -- pe de -- pre -- ca -- ti -- ó -- nem nós -- tram.
+		Qui __ _ _ sé -- _ _ des, qui __ _ _ sé -- _ _ _ _ _ _ _ _ _ _ des
+		ad __ _ _ _ _ _ déx -- te -- ram,
+		mi -- se -- ré -- re nó -- bis, mi -- se -- ré -- re nó -- bis.
+		Quó -- ni -- am tu só -- lus sánc -- tus,
+		tu só -- lus Dó -- mi -- nus,
+		tu só -- lus Al -- tís -- si -- mus
+		Jé -- su __ _ Chrí -- _ ste
+		Cum Sánc -- _ _ _ _ to Spí -- _ _ ri -- tu, in gló -- ri -- a
+		Dé -- i Pá -- tris.
+		A -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ men, a -- men.
 	}
 }
 

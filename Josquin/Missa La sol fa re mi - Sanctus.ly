@@ -73,6 +73,13 @@ showBarLine = { \once \override Score.BarLine #'transparent = ##f }
 ficta = { \once \set suggestAccidentals = ##t \override AccidentalSuggestion #'parenthesized = ##f }
 singleDigitTime = { \override Staff.TimeSignature.style = #'single-digit }
 
+
+%{	 ██████      █████      ███    ██      ██████    ████████    ██    ██      ██████
+		██          ██   ██     ████   ██     ██            ██       ██    ██     ██
+		 █████      ███████     ██ ██  ██     ██            ██       ██    ██      █████ 
+		     ██     ██   ██     ██  ██ ██     ██            ██       ██    ██          ██
+		██████      ██   ██     ██   ████      ██████       ██        ██████      ██████   %}
+
 soprano = \new Voice	{
 	\relative c'' {
 	  a1 a2 g f2. d4 e\breve a1 g2 f d e a1 
@@ -91,16 +98,16 @@ soprano = \new Voice	{
 	  \showBarLine \bar "|." 
   }
 	\addlyrics {
-	  Sanc -- tus, san -- _ _ tus Sanc -- _ _ _ tus Sanc -- _ _ _ _ _ tus Sanc -- _ _ _ _ _ _ _ _ _ _ tus
-	  Do -- mi -- nus De -- us, De -- _ _ _ _ _ _ _ _ _ _ us Sa -- _ _ _ _ _ _ _ _ _ ba -- _ oth,
-	  Sa -- _ _ _ _ _ _ _ ba -- oth Sa -- _ ba -- oth, Sa -- _ _ _ _ _ _ _ _ _ _ _ _ ba -- oth.
+	  Sánc -- tus, Sánc -- _ _ tus, Sánc -- _ _ _ tus, Sánc -- _ _ _ _ _ tus, Sánc -- _ _ _ _ _ _ _ _ _ _ tus
+	  Dó -- mi -- nus Dé -- us, Dé -- _ _ _ _ _ _ _ _ _ _ us Sá -- _ _ _ _ _ _ _ _ _ ba -- _ oth,
+	  Sá -- _ _ _ _ _ _ _ ba -- oth Sá -- _ ba -- oth, Sá -- _ _ _ _ _ _ _ _ _ _ _ _ ba -- oth.
 	  
-	  Ple -- _ _ ni sunt coe -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ li,
-	  glo -- _ _ ri -- a  tu -- _ _ _ a, glo -- _ _ ri -- a, glo -- _ _ ri -- a, glo -- _ _ _ _ _ _ ri -- a tu -- _ _ a. 
-	  Ho -- _ san -- _ na, ho -- _ _ san -- _ _ _ _ _ _ _ _ na,
-	  ho -- _ _ san -- na, ho -- _ _ san -- na, ho -- _ _ _ _ _ san -- _ _ na, __ _ _ _ _ _ _
-	  in __ _ _ _ _  ex -- cel -- _ _ _ _ sis, __ _
-	  in __ _ _ _ _  ex -- cel -- _ _ _ _ sis,  in ex -- cel -- _ sis.
+	  Plé -- _ _ ni sunt caé -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ li,
+	  gló -- _ _ ri -- a  tú -- _ _ _ a, gló -- _ _ ri -- a, gló -- _ _ ri -- a, gló -- _ _ _ _ _ _ ri -- a tú -- _ _ a. 
+	  Ho -- _ sán -- _ na, ho -- _ _ sán -- _ _ _ _ _ _ _ _ na,
+	  ho -- _ _ sán -- na, ho -- _ _ sán -- na, ho -- _ _ _ _ _ sán -- _ _ na, __ _ _ _ _ _ _
+	  in __ _ _ _ _  ex -- cél -- _ _ _ _ sis, __ _
+	  in __ _ _ _ _  ex -- cél -- _ _ _ _ sis,  in ex -- cél -- _ sis.
 	}
 }
 
@@ -122,21 +129,21 @@ alto = \new Voice	{
 		c r r r1. a1 g2 f f4. g8 a2 r4 a2 g4 f4 g a\breve.
 	}
 	\addlyrics {
-	  Sanc -- tus, __ _ _  sanc -- _ tus, __ _  sanc -- _ _ _ _ _ _ tus, sanc -- _ _ _ 
-		_ _ tus, sanc -- _ _ _ tus, sanc -- _ _ _ _ _ tus, sanc -- _ _ _ _ tus Do -- mi -- nus 
-		De -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ us
-	  Sa -- _ _ _ _ _ _ ba -- oth, Sa -- _ _ ba -- oth,
-	  Sa -- _ _ _ ba -- oth, Sa -- _ _ _ _ _ _ _ _ ba -- oth.
+	  Sánc -- tus, __ _ _  sánc -- _ tus, __ _  sánc -- _ _ _ _ _ _ tus, sánc -- _ _ _ 
+		_ _ tus, sánc -- _ _ _ tus, sánc -- _ _ _ _ _ tus, sánc -- _ _ _ _ tus Dó -- mi -- nus 
+		Dé -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ us
+	  Sá -- _ _ _ _ _ _ ba -- oth, Sá -- _ _ ba -- oth,
+	  Sá -- _ _ _ ba -- oth, Sá -- _ _ _ _ _ _ _ _ ba -- oth.
 	  
-	  Ple -- ni sunt __ _ _  coe -- _ _ _ _ _ _ _ li,
-	  et __ _ ter -- _ ra, et __ _ ter -- _ ra, 
-	  et __ _ ter -- _ ra, et __ _ ter -- _ ra, 
-	  glo -- _ _ ri -- a __ _ _  
+	  Plé -- ni sunt __ _ _  caé -- _ _ _ _ _ _ _ li,
+	  et __ _ tér -- _ ra, et __ _ tér -- _ ra, 
+	  et __ _ tér -- _ ra, et __ _ tér -- _ ra, 
+	  gló -- _ _ ri -- a __ _ _  
 		
-		tu -- _ _ _ _ _ a. Ho -- _ san -- _ na, 
-		ho -- _ _ _ _ san -- na, ho -- _ san -- _ na, ho -- _ _ san -- na, ho -- _ _ _ san -- _ na, __ _ _
-	  ho -- _ san -- _ _ na, in  ex -- cel -- _ _ _ _ _ 
-		sis, in  ex -- cel -- _ _ sis,  in ex -- cel -- _ sis.
+		tú -- _ _ _ _ _ a. Ho -- _ sán -- _ na, 
+		ho -- _ _ _ _ sán -- na, ho -- _ sán -- _ na, ho -- _ _ sán -- na, ho -- _ _ _ sán -- _ na, __ _ _
+	  ho -- _ sán -- _ _ na in  ex -- cél -- _ _ _ _ _ 
+		sis, in  ex -- cél -- _ _ sis,  in ex -- cél -- _ sis.
 	}
 }
 
@@ -159,19 +166,19 @@ tenor = \new Voice {
 		a1 g2 \[ f2 d \] e2 f1 c4 g' a d, d2 e d2. e4 f d e\breve.
 	}
 	\addlyrics {
-		Sanc -- _ _ _ tus, sanc -- _ _ _ 
-		tus, sanc -- _ _ _ tus, sanc -- _ _ _ _ _ tus, Do -- mi -- nus 
-		De -- _ _ us, De -- _ _ _ us,
-		Sa -- _ _ _ _ _ _ ba -- oth, Sa -- _ _ ba -- oth, 
-		Sa -- _ _ ba -- oth, Sa -- _ _ ba -- _ oth. 
+		Sánc -- _ _ _ tus, sánc -- _ _ _ 
+		tus, sánc -- _ _ _ tus, sánc -- _ _ _ _ _ tus, Dó -- mi -- nus 
+		Dé -- _ _ us, Dé -- _ _ _ us,
+		Sá -- _ _ _ _ _ _ ba -- oth, Sá -- _ _ ba -- oth, 
+		Sá -- _ _ ba -- oth, Sá -- _ _ ba -- _ oth. 
 
-		Ple -- _ _ ni sunt coe -- _ _ _ li, coe -- _ _ _ _ _ _ _ _ li,
-		et __ _ ter -- _ ra, et __ _ ter -- _ ra, 
-		glo -- _ _ ri -- a, glo -- _ _ ri -- a, glo -- _ _ ri -- a, glo -- _ _ ri -- a tu -- _ _ _ a.
+		Plé -- _ _ ni sunt caé -- _ _ _ li, caé -- _ _ _ _ _ _ _ _ li,
+		et __ _ tér -- _ ra, et __ _ tér -- _ ra, 
+		gló -- _ _ ri -- a, gló -- _ _ ri -- a, gló -- _ _ ri -- a, gló -- _ _ ri -- a tú -- _ _ _ a.
 
-		Ho -- _ san -- _ na, ho -- _ san -- _ na, ho -- _ san -- _ na, 
-		ho -- _ _ _ _ _ _ _ san -- _ na, in ex -- cel -- _ sis, in ex -- cel -- _ sis, 
-		in ex -- cel -- _ sis, in ex -- _ cel -- _ sis, __ _ in ex -- cel -- _ sis.
+		Ho -- _ sán -- _ na, ho -- _ sán -- _ na, ho -- _ sán -- _ na, 
+		ho -- _ _ _ _ _ _ _ sán -- _ na, in ex -- cél -- _ sis, in ex -- cél -- _ sis, 
+		in ex -- cél -- _ sis, in ex -- _ cél -- _ sis, __ _ in ex -- cél -- _ sis.
 	}
 }
 
@@ -192,21 +199,21 @@ bass = \new Voice {
 	  d2 c4 d2 f e d4. c8 \ficta bes2 a a'4. g8 f4 e d8 c b4 a\breve.
 	}
 	\addlyrics {
-	  Sanc -- _ _ _ tus, __ _ _  sanc -- tus, __ _ _ sanc -- tus, __ _ _  sanc -- tus, __ _ _ _  
-	  sanc -- _ _ _ _ _ tus, __ _ _ sanc -- _ _ _ _ _ _ _ tus.
-	  Do -- mi -- nus De -- _ _ _ _ _ _ _ us  Do -- _ _ _ _ _ _ _ _ _ mi -- _ nus De -- _ _ us De -- _ _ us
-	  Sa -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ ba -- oth.
+	  Sánc -- _ _ _ tus, __ _ _  sánc -- tus, __ _ _ sánc -- tus, __ _ _  sánc -- tus, __ _ _ _  
+	  sánc -- _ _ _ _ _ tus, __ _ _ sánc -- _ _ _ _ _ _ _ tus.
+	  Dó -- mi -- nus Dé -- _ _ _ _ _ _ _ us  Dó -- _ _ _ _ _ _ _ _ _ mi -- _ nus Dé -- _ _ us Dé -- _ _ us
+	  Sá -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ ba -- oth.
   
-	  Ple -- _ ni sunt  coe -- _ _ _ _ _ li,
-	  et __ _ ter -- _ ra, et __ _ ter -- _ ra, et __ _ ter -- _ ra, et __ _ ter -- _ ra, 
-	  et __ _ ter -- _ ra, et __ _ ter -- _ ra, et __ _ ter -- _ ra
-	  glo -- _ _ _ _ _ ri -- a  tu -- a.
-	  Ho -- _ san -- _ na, ho -- _ san -- na, ho -- _ san -- na, ho -- _ san -- na, 
-	  ho -- _ _ _ san -- na, ho -- _ _ san -- na, ho -- _ _ san -- na,
-	  ho -- _ _ _ _ _ san -- _ _ na, ho -- _ _ _ _ san -- na,  
-	  in __ _ _ _ _  ex -- cel -- _ _ _ _ sis, in ex -- cel -- _ _ sis,
-	  in __ _ _ _ _  ex -- cel -- _ _ _ _ sis, __ _ 
-	  ex -- cel -- _ _ sis, in __ _ _  ex -- cel -- _ _ sis.
+	  Plé -- _ ni sunt  caé -- _ _ _ _ _ li,
+	  et __ _ tér -- _ ra, et __ _ tér -- _ ra, et __ _ tér -- _ ra, et __ _ tér -- _ ra, 
+	  et __ _ tér -- _ ra, et __ _ tér -- _ ra, et __ _ tér -- _ ra
+	  gló -- _ _ _ _ _ ri -- a  tú -- a.
+	  Ho -- _ sán -- _ na, ho -- _ sán -- na, ho -- _ sán -- na, ho -- _ sán -- na, 
+	  ho -- _ _ _ sán -- na, ho -- _ _ sán -- na, ho -- _ _ sán -- na,
+	  ho -- _ _ _ _ _ sán -- _ _ na, ho -- _ _ _ _ sán -- na,  
+	  in __ _ _ _ _  ex -- cél -- _ _ _ _ sis, in ex -- cél -- _ _ sis,
+	  in __ _ _ _ _  ex -- cél -- _ _ _ _ sis, __ _ 
+	  ex -- cél -- _ _ sis, in __ _ _  ex -- cél -- _ _ sis.
 	}
 }
 
