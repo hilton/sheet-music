@@ -2,7 +2,7 @@
 % Copyright ©2017 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "3"
+revision = "4"
 \pointAndClickOff
 
 #(set-global-staff-size 15.0)
@@ -100,16 +100,16 @@ soprano = \new Voice	{
   \[ a2 e \] r2 r1. \[ a,2 c \] d2 \[ e2 f \] g2 a a, b c2. d4 e2 \[ a,2 c \] d2 \[ e2 a, \] a'2 g c, d \[ e2 c \] d2 \set Timing.timing = ##f e\longa. \showBarLine \bar "|." 
   }
 	\addlyrics {
-	  Be -- _ ne -- dic -- _ _ _ _ _ _ tus,
-	  be -- ne -- dic -- _ tus, __ _  be -- _ ne -- dic -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ tus. 
-	  Qui __ _ _  ve -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ nit __ _ _ _ 
-	  in no -- mi -- ne, __ _ _ _ in no -- mi -- ne, __ _ _ _ in no -- mi -- ne, __ _ _ _ in no -- mi -- ne, __ _ _ _ in no -- mi -- ne, __ _ _ _
-	  in __ _  no -- mi -- ne, in __ _  no -- mi -- ne, in __ _  no -- mi -- ne
-	  Do -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ mi -- ni.
+	  Be -- _ ne -- díc -- _ _ _ _ _ _ tus,
+	  be -- ne -- díc -- _ tus, __ _  be -- _ ne -- díc -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ tus
+	  qui __ _ _  vé -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ nit __ _ _ _ 
+	  in nó -- mi -- ne, __ _ _ _ in nó -- mi -- ne, __ _ _ _ in nó -- mi -- ne, __ _ _ _ in nó -- mi -- ne, __ _ _ _ in nó -- mi -- ne, __ _ _ _
+	  in __ _  nó -- mi -- ne, in __ _  nó -- mi -- ne, in __ _  nó -- mi -- ne
+	  Dó -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ mi -- ni.
 	  
-	  Ho -- _ _ san -- na, ho -- _ _ san -- _ na, ho -- _ _ san -- na,
-	  ho -- _ _ _ san -- na, ho -- _ _ san -- na, ho -- _ _ san -- na, ho -- _ _ _ _ _ san -- na __ _ 
-	  in __ _ ex -- cel -- sis, in __ _ ex -- _ _ cel -- sis, __ _ _ _ _ _  in __ _ ex -- cel -- _ _ _ _ _ _ _ _ sis.
+	  Ho -- _ _ sán -- na, ho -- _ _ sán -- _ na, ho -- _ _ sán -- na,
+	  ho -- _ _ _ sán -- na, ho -- _ _ sán -- na, ho -- _ _ sán -- na, ho -- _ _ _ _ _ sán -- na __ _ 
+	  in __ _ ex -- cél -- sis, in __ _ ex -- _ _ cél -- sis, __ _ _ _ _ _  in __ _ ex -- cél -- _ _ _ _ _ _ _ _ sis.
 	}
 }
 
@@ -132,16 +132,17 @@ alto = \new Voice	{
 		\[ a,2 c \] d2 e2. f4 g2 \[ a2 e \] a2 g1 g, a g\breve.
 	}
 	\addlyrics {
-		Be -- ne -- dic -- _ _ _ _ _ _ tus,  
-		be -- ne -- dic -- _ _ _ _ _ _ tus, be -- ne -- dic -- _ _ _ tus, be -- _ ne -- dic -- _ _ _ _ _ _ _ _ _ _ tus, be -- ne -- dic -- tus.
-		Qui __ _ _  ve -- _ _ nit, qui ve -- _ _ _ _ _ _ nit 
-		in __ _  no -- _ _ mi -- _ ne
-		Do -- _ _ mi -- ni, Do -- _ _ mi -- ni, Do -- _ _ mi -- ni, Do -- _ _ mi -- ni.
-		Ho -- _ _ san -- _ _ _ _ _ na, __ _ _ _  ho -- san -- na, ho -- san -- na,
-		ho -- san -- _ na, ho -- _ _ san -- na, ho -- _ _ san -- na, ho -- _ _ _ san -- _ na, san -- _ na,
-		in ex -- cel -- _ sis, in ex -- cel -- _ sis, in ex -- cel -- _ sis, 
-		in __ _ ex -- cel -- _ _ sis __ _, in __ _ ex -- cel -- _ _ sis __ _, 
-		in ex -- cel -- _ sis.
+		Be -- ne -- díc -- _ _ _ _ _ _ tus,  
+		be -- ne -- díc -- _ _ _ _ _ _ tus, be -- ne -- díc -- _ _ _ tus, be -- _ ne -- díc -- _ _ _ _ _ _ _ _ _ _ tus, be -- ne -- díc -- tus
+		qui __ _ _  vé -- _ _ nit, qui vé -- _ _ _ _ _ _ nit 
+		in __ _  nó -- _ _ mi -- _ ne
+		Dó -- _ _ mi -- ni, Dó -- _ _ mi -- ni, Dó -- _ _ mi -- ni, Dó -- _ _ mi -- ni.
+		
+		Ho -- _ _ sán -- _ _ _ _ _ na, __ _ _ _  ho -- sán -- na, ho -- sán -- na,
+		ho -- sán -- _ na, ho -- _ _ sán -- na, ho -- _ _ sán -- na, ho -- _ _ _ sán -- _ na, sán -- _ na,
+		in ex -- cél -- _ sis, in ex -- cél -- _ sis, in ex -- cél -- _ sis, 
+		in __ _ ex -- cél -- _ _ sis, __ _ in __ _ ex -- cél -- _ _ sis, __ _
+		in ex -- cél -- _ sis.
 	}
  
 }
@@ -166,19 +167,19 @@ tenor = \new Voice {
 		b2 e1 d2 c1 a2 \[ b2 e \] d2 c1 a2 b1 e2. d4 \[ c2 a \] b\breve. 
 }
 	\addlyrics {
-		Be -- ne -- dic -- _ tus,  be -- ne -- dic -- _ _ _ _ _ _ _ _ _ _ _ _ tus,
-		be -- _ ne -- dic -- _ _ _ _ _ _ _ _ tus.
-		Qui __ _ _ ve -- _ _ _ _ nit,
-		in no -- mi -- ne, __ _ _ _ _ 
-		in no -- mi -- ne, __ _ _ _ _ 
-		in no -- mi -- ne, in no -- mi -- ne, 
-		in __ _  no -- mi -- ne,
+		Be -- ne -- díc -- _ tus,  be -- ne -- díc -- _ _ _ _ _ _ _ _ _ _ _ _ tus,
+		be -- _ ne -- díc -- _ _ _ _ _ _ _ _ tus
+		qui __ _ _ vé -- _ _ _ _ nit,
+		in nó -- mi -- ne, __ _ _ _ _ 
+		in nó -- mi -- ne, __ _ _ _ _ 
+		in nó -- mi -- ne, in nó -- mi -- ne, 
+		in __ _  nó -- mi -- ne.
 		
-		Ho -- _ san -- _ na, ho -- _ san -- _ na, ho -- _ san -- _ na, ho -- _ san -- _ na, 
-		ho -- _ san -- _ na, ho -- _ san -- _ na, ho -- _ san -- _ na, ho -- _ san -- _ na
-		in __ _ ex -- cel -- _ sis, in __ _ ex -- cel -- sis, in __ _ ex -- cel -- _ sis, 
-		in ex -- cel -- _ sis, in ex -- cel -- _ sis, in ex -- cel -- sis, 
-		in __ _ ex -- cel -- _ sis, in ex -- cel -- _ sis. 
+		Ho -- _ sán -- _ na, ho -- _ sán -- _ na, ho -- _ sán -- _ na, ho -- _ sán -- _ na, 
+		ho -- _ sán -- _ na, ho -- _ sán -- _ na, ho -- _ sán -- _ na, ho -- _ sán -- _ na
+		in __ _ ex -- cél -- _ sis, in __ _ ex -- cél -- sis, in __ _ ex -- cél -- _ sis, 
+		in ex -- cél -- _ sis, in ex -- cél -- _ sis, in ex -- cél -- sis, 
+		in __ _ ex -- cél -- _ sis, in ex -- cél -- _ sis. 
 	}
 }
 
@@ -200,18 +201,18 @@ bass = \new Voice {
 		c4 b c2 \[ a1 e'\breve. \]
 	}
 	\addlyrics {
-		Be -- _ ne -- dic -- _ _ _ _ _ _ tus,  be -- _ ne -- dic -- _ _ _ _ _ _ tus,
-		be -- ne -- dic -- _ tus. __ _ 
+		Be -- _ ne -- díc -- _ _ _ _ _ _ tus,  be -- _ ne -- díc -- _ _ _ _ _ _ tus,
+		be -- ne -- díc -- _ tus. __ _ 
 
-		in no -- mi -- ne, __ _ _ _ _ in no -- mi -- ne, __ _ _ _ _ in no -- mi -- ne, __ _ _ _ _ 
-		in __ _  no -- mi -- ne, in __ _  no -- mi -- ne, in __ _  no -- mi -- ne, 
-		Do -- _ _ mi -- ni, Do -- _ _ mi -- ni, Do -- _ _ mi -- ni, Do -- _ _ mi -- ni.
+		in nó -- mi -- ne, __ _ _ _ _ in nó -- mi -- ne, __ _ _ _ _ in nó -- mi -- ne, __ _ _ _ _ 
+		in __ _  nó -- mi -- ne, in __ _  nó -- mi -- ne, in __ _  nó -- mi -- ne, 
+		Dó -- _ _ mi -- ni, Dó -- _ _ mi -- ni, Dó -- _ _ mi -- ni, Dó -- _ _ mi -- ni.
 
-		Ho -- _ _ san -- _ _ _ _ _ na, ho -- _ _ san -- _ _ _ _ na, ho -- _ _ san -- _ na,
-		ho -- _ _ san -- na, ho -- _ san -- na, ho -- _ _ san -- na,  ho -- _ _ san -- na,
-		ho -- _ _ _ _ _ san -- na,
-		in __ _  ex -- cel -- _ sis, in __ _  ex -- cel -- _ sis, in  ex -- cel -- sis, in  ex -- cel -- sis,
-		in  ex -- cel -- _ _ sis, in  ex -- cel -- _ _ _ _ _ _ _ _ sis. 
+		Ho -- _ _ sán -- _ _ _ _ _ na, ho -- _ _ sán -- _ _ _ _ na, ho -- _ _ sán -- _ na,
+		ho -- _ _ sán -- na, ho -- _ sán -- na, ho -- _ _ sán -- na,  ho -- _ _ sán -- na,
+		ho -- _ _ _ _ _ sán -- na,
+		in __ _  ex -- cél -- _ sis, in __ _  ex -- cél -- _ sis, in  ex -- cél -- sis, in  ex -- cél -- sis,
+		in  ex -- cél -- _ _ sis, in  ex -- cél -- _ _ _ _ _ _ _ _ sis. 
 	}
 }
 

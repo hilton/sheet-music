@@ -2,7 +2,7 @@
 % Copyright ©2018 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "5"
+revision = "6"
 \pointAndClickOff
 
 #(set-global-staff-size 15.0)
@@ -72,6 +72,13 @@ global = {
 showBarLine = { \once \override Score.BarLine #'transparent = ##f }
 ficta = { \once \set suggestAccidentals = ##t \override AccidentalSuggestion #'parenthesized = ##f }
 singleDigitTime = { \override Staff.TimeSignature.style = #'single-digit }
+
+
+%{	 █████       ██████      ███    ██     ██    ██      ██████             ██████      ███████     ██
+		██   ██     ██           ████   ██     ██    ██     ██                  ██   ██     ██          ██
+		███████     ██   ███     ██ ██  ██     ██    ██      █████              ██   ██     █████       ██
+		██   ██     ██    ██     ██  ██ ██     ██    ██          ██             ██   ██     ██          ██
+		██   ██      ██████      ██   ████      ██████      ██████              ██████      ███████     ██  %}
 
 soprano = \new Voice	{
 	\relative c'' {
