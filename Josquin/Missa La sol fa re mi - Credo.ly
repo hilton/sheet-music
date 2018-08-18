@@ -2,7 +2,7 @@
 % Copyright ©2018 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "2"
+revision = "3"
 \pointAndClickOff
 
 #(set-global-staff-size 15.0)
@@ -171,7 +171,7 @@ alto = \new Voice	{
 		e1. d\breve. c1. \[ a 
 		
 		b1 \] b4 c d2 b d e \[ e f \] e r4 e c d2 e4 f d2 \ficta cis4 
-		d2 r r4 d c e4. d8 d2 \ficta cis4 d2 g, a e'\breve. ~
+		d2 r r4 d c e4. d8 d2 \ficta cis4 d2 r1 e\breve. ~
 		e1. d1. c \[ a b1. ~
 		b \] r1. r1. r1. e1. ~
 		
@@ -214,10 +214,10 @@ alto = \new Voice	{
 		Pá -- trem, __
 		vi -- si -- bí -- li -- um __ _ _ óm -- ni -- um, et in -- _ _ vi -- si -- bí -- _ _ 
 		_ _ _ _ _ _ _ _ _ _ _ _ _ _ li -- um.
-		Et in ú -- _ num,
-		et ex Pá -- tre ná -- tum an -- _ te óm -- ni -- a __ _ _  saé -- cu -- la.
-
-		Dé -- um de __ _  Dé -- _ o, de __ _  Dé -- 
+		Et in ú -- _ 
+		
+		num, et ex Pá -- tre ná -- tum an -- _ te óm -- ni -- a __ _ _  saé -- cu -- 
+		la.	Dé -- um de __ _  Dé -- _ o, Dé -- 
 		um vé -- _ rum,
 		fác -- _ _ ta sunt.
 		
@@ -259,7 +259,7 @@ tenor = \new Voice {
 		g4 a g a e2 r4 f2 f4 g2 a \[ a bes \] a4 a a2 g f2. d4 e f 
 		
 		g1 r2 r1. r1. r1. r1. 
-		r1. r1. r1. \[ g2 c2. \]  b4 b2 r4 g4 g2 
+		r1. r1. r2 g a \[ g2 c2. \]  b4 b2 r4 g4 g2 
 		a  g4. f8 e2 r4 f2 f4 g2 a1 g2 f2. d4 e4. f8 g1 r4 d'4 ~
 		d8 d8 d4 e d4. c8 b2 c4. a8 a2 b4 c d4. b8 b4. a8 g f e4 c'4. b8 a2 \ficta gis4 a2 \[ a b \] 
 		
@@ -301,13 +301,13 @@ tenor = \new Voice {
 		d, g2 f d e c d e f1 e\breve.
 	}
 	\addlyrics {
-		Pá -- _ trem __ _ _  om -- ni -- po -- tén -- _ _ _ _ _ tem, fac -- _ tó -- rem caé -- li et tér -- _ rae,
-		tér -- rae __ _,
-		Dó -- mi -- num, Et in ú -- num Dó -- mi -- num Jé -- sum Chrís -- tum,
-		Fí -- _ li -- um Dé -- i  u -- ni -- gé -- ni -- 
+		Pá -- _ trem __ _ _  om -- ni -- po -- tén -- _ _ _ _ _ tem, fac -- _ tó -- rem caé -- 
+		li et tér -- _ rae, tér -- rae __ _,
+		Dó -- mi -- num, Et in 
+		ú -- num Dó -- mi -- num Jé -- sum Chrís -- tum, Fí -- _ li -- um Dé -- i  u -- ni -- gé -- ni -- 
 		
 		tum,
-		Dé -- _ _ o, Lú -- men 
+		de __ _  Dé -- _ _ o, Lú -- men 
 		de Lú -- mi -- ne, Dé -- um vé -- rum, de Dé -- o vé -- _ ro. Gé -- 
 		ni -- tum non fác -- _ tum, con -- sub -- stan -- ti -- _ á -- _ lem __ _ _ _ _ Pá -- _ _ _ tri, Pá -- _ 
 		
