@@ -1,8 +1,8 @@
 % CPDL #
-% Copyright ©2018 Peter Hilton - https://github.com/hilton
+% Copyright ©2018 Kees de With, Peter Hilton & Maarten Michielsen - https://github.com/hilton
 
 \version "2.18.2"
-revision = "4"
+revision = "5"
 \pointAndClickOff
 
 #(set-global-staff-size 15.0)
@@ -36,7 +36,7 @@ year = #(strftime "©%Y" (localtime (current-time)))
 		\vspace #2
 		\column \center-align {
 			\line {
-				Copyright \year \with-url #"http://hilton.org.uk" "Kees de With & Peter Hilton" -
+				Copyright \year \with-url #"http://hilton.org.uk" "Kees de With, Peter Hilton & Maarten Michielsen" -
 				Lilypond source \with-url #"https://github.com/hilton/sheet-music" https://github.com/hilton/sheet-music -
 				revision \revision
 			}
@@ -109,17 +109,15 @@ soprano = \new Voice	{
 	\set Timing.timing = ##f	e\breve. \set Timing.timing = ##t	\showBarLine \bar "|." 
   }
 	\addlyrics {
-    Ký -- _ _ ri -- e_e -- _ _ lé -- i -- 
-		son, e -- _ _ _ _ lé -- _ _ _ _ i -- _ son,
-    Ký -- ri -- e  e -- _ lé -- _ _ _ i -- son,
-    Ký -- ri -- e_e -- _ _ lé -- i -- son.
-    Chrí -- _ _ _ ste_e -- lé -- _ _ _ i -- son, Chrí -- _ _ _ _ _ ste
-    e -- lé -- _ _ _ _ _ _ _ i -- son,
-    e -- _ lé -- _ _ _ i -- son.
-    Ký -- _ _ ri -- e_e -- lé -- _ _ i -- son,
-    Ký -- _ _ ri -- e  e -- lé -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ i -- son,
-    e -- lé -- _ _ _ _ _ _ _ _ _ i -- son, e -- lé -- _ _ i -- son,
-    e -- lé -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ i -- son.
+    Ký -- _ _ ri -- e_e -- _ _ lé -- i -- son, e -- _ _ _ _ lé -- _ _ _ _ i -- _ 
+		son, Ký -- ri -- e  e -- _ lé -- _ _ _ i -- son, Ký -- ri -- e_e -- _ _ lé -- i -- 
+		son. Chrí -- _ _ _ ste_e -- lé -- _ _ _ i -- son, 
+		Chrí -- _ _ _ _ _ ste
+		
+    e -- lé -- _ _ _ _ _ _ _ i -- son, e -- _ _ lé -- _ _ 
+		i -- son. Ký -- _ _ ri -- e_e -- lé -- _ _ i -- son, Ký -- _ _ ri -- e  e -- _ lé -- _ _ _ _ 
+		_ _ _ _ _ _ _ _ _ _ _ _ i -- son, e -- _ _ _ lé -- _ _ _ _ _ _ i -- son, e -- _ lé -- _ i -- 
+		son, e -- lé -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ i -- son.
 	}
 }
 
@@ -131,10 +129,10 @@ alto = \new Voice	{
 		e\breve. \time 2/2 r1 e d c2 a \[b e2. \] d4 d2 c a b1 r1 r1 r1 r1 e d c \[ a2 b \] \[ c d \] \[ b a \] e'1 f e1 c2 d a1 bes a2. g4 
 		a'1 \[ \ficta bes1 a\breve \] \time 3/2
     r1. r1. r1. r1. r2 
-		r4 a c d b c b c
+		r4 a, c d b c b c
     d8 c b a g4. f8 g4 a c4. d8 [e f] g2 e4 f e4. d8 g4. f8 e2 d4 e2 r e c d1
     g,4 c2 a4 bes a4. g8 c4. \ficta bes8 a2 g4 a 
-		e d c a2 b4 e d c a2 b4 e d c a2 b\breve.
+		e' d c a2 b4 e d c a2 b4 e d c a2 b\breve.
   }
 	\addlyrics {
 		Ký -- _ _ ri -- e_e -- _ _ lé -- i -- son, 
@@ -144,7 +142,7 @@ alto = \new Voice	{
 		e -- _ lé -- _ _ i -- son.
 		Ký -- _ ri -- e  e -- lé -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ i -- son
 		Ký -- ri -- e e -- lé -- _ _ _ _ _ _ _ i -- son, 
-		Ký -- _ _ ri -- e, Ký -- _ _ ri -- e_e -- lé -- _ _ i -- son.
+		Ký -- _ _ ri -- e, Ký -- _ _ ri -- e e -- lé -- _ i -- son.
 	}
 }
 
@@ -204,7 +202,8 @@ bass = \new Voice {
     Chrí -- _ _ _ ste_e -- lé -- _ _ i -- son,
     Chrí -- _ _ _ ste_e -- lé -- _ i -- _ son,
     Chrí -- _ _ _ ste_e -- lé -- _ i -- _ son. 
-    Ký -- _ _ ri -- e, Ký -- _ _ ri -- e_e -- lé -- _ _ i -- son,
+    Ký -- _ _ ri -- e, e -- _ lé -- i -- son,
+		e -- lé -- _ i -- son,
     Ký -- _ _ _ _ _ _ _ _ _ _ ri -- e  e -- lé -- _ i -- son,
     Ký -- _ _ _ _ _ _ _ _ _ _ ri -- e  e -- lé -- _ _ _ _ _ _ _ _ _ i -- son.
 	}
@@ -224,5 +223,5 @@ bass = \new Voice {
 		piece = \markup \larger \sans { Kyrie }
 	}
 	\layout { }
-	\midi {	}
+%	\midi {	}
 }

@@ -2,7 +2,7 @@
 % Copyright ©2018 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "8"
+revision = "9"
 \pointAndClickOff
 
 #(set-global-staff-size 15.0)
@@ -73,6 +73,12 @@ showBarLine = { \once \override Score.BarLine #'transparent = ##f }
 ficta = { \once \set suggestAccidentals = ##t \override AccidentalSuggestion #'parenthesized = ##f }
 singleDigitTime = { \override Staff.TimeSignature.style = #'single-digit }
 
+%{   ██████      ██         ██████      ██████      ██      █████
+    ██           ██        ██    ██     ██   ██     ██     ██   ██
+    ██   ███     ██        ██    ██     ██████      ██     ███████
+    ██    ██     ██        ██    ██     ██   ██     ██     ██   ██
+     ██████      ███████    ██████      ██   ██     ██     ██   ██  %}
+
 \score {
 	\new Staff <<
 		\key f \major
@@ -100,13 +106,6 @@ singleDigitTime = { \override Staff.TimeSignature.style = #'single-digit }
 		}
 	}
 }
-
-
-%{   ██████      ██         ██████      ██████      ██      █████
-    ██           ██        ██    ██     ██   ██     ██     ██   ██
-    ██   ███     ██        ██    ██     ██████      ██     ███████
-    ██    ██     ██        ██    ██     ██   ██     ██     ██   ██
-     ██████      ███████    ██████      ██   ██     ██     ██   ██  %}
 
 soprano = \new Voice	{
 	\relative c' {
@@ -150,7 +149,7 @@ soprano = \new Voice	{
     mi -- se -- re -- re __ _ _ _  no -- _ _ _ bis,
     qui __ _ _ tól -- _ _ lis pec -- cá -- _ _ _ ta  mún -- _ _ _ _ _ _  di, __ _ _ _
     sú -- sci -- pe de -- pre -- ca -- ti -- ó -- nem nós -- tram.
-    Qui sé -- _ _ _ _ _ _ _ des ad __ _ _ _ _ déx -- te -- ram __ _   Pá -- _ _ _ _ tris,
+    Qui sé -- _ _ _ _ _ _ _ des ad __ _ _ _ déx -- _ te -- ram __ _   Pá -- _ _ _ _ tris,
     mi -- se -- ré -- re nó -- bis.
     Quó -- ni -- am  tu só -- lus sánc -- tus,
     tu só -- lus Dó -- mi -- nus,
@@ -194,7 +193,7 @@ alto = \new Voice	{
     prop -- ter mág -- nam gló -- _ ri -- am,
     Dó -- mi -- ne Dé -- _ us  Rex cae -- lés -- _ _ _ tis, Dé -- us Pá -- _ _ ter
     om -- _ ní -- _ _ _ _ _ _ _ _ _ po -- tens.
-    Dó -- mi -- ne Fí -- li u -- ni -- gé -- ni -- _ _ _ _ _ _ _ te
+    Dó -- mi -- ne Fí -- li u -- ni -- gé -- ni -- te, u -- ni -- gé -- _ ni -- _ te
     Jé -- su  Chrí -- _ _ _ _ _ _ _ te.
     Ag -- nus Dé -- _ _ _ _ _ _ i,
     Fí -- li -- us, Fí -- li -- us, Fí -- li -- us Pá -- _ tris.
@@ -229,8 +228,8 @@ tenor = \new Voice {
 
 		r1 r1 r1 r1 r1 r1 r1 e\breve d1 ~
 		d c2 a b\breve. r1 r1 r2 r4 c ~
-		c d4 e f2 e8 d c4 a c2 b2. b4 b2 c4 c c c a b4. a8 g2
-		\ficta fis8 e f g a8 f g1 
+		c d4 e f2 e8 d c4 a c2 b2. b4 b2 c4 c c c a b4. a8 g4 g
+		\ficta fis8 e \ficta fis g a8 \ficta fis g1 
 		r4 g f g4. a8 b c d4 e d g, f g2 f8 e e4 b' c d e2 r4 a,2 g4 f d e2 r4 a2 g4 
 		
 		f d e2 r1 r1 r1 r1 r4 e'2 d4 c a b2 r2 r4 e ~
@@ -254,7 +253,7 @@ tenor = \new Voice {
 
 		mi -- se -- ré -- _ re,
 		pec -- cá -- ta mún -- _ _ _ _ di,
-		sú -- sci -- pe de -- pre -- ca -- ti -- ó -- nem __ _ nós -- _ _ _ _ _ _ tram.
+		sú -- sci -- pe de -- pre -- ca -- ti -- _ ó -- _ nem nós -- _ _ _ _ _ _ tram.
 		Qui __ _ sé -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ des
 		ad __ _ déx -- te -- ram Pá -- _ _ _ tris,
 		mi -- se -- ré -- _ re,
@@ -295,15 +294,15 @@ bass = \new Voice {
 		Dó -- mi -- _ ne Fí -- _ _ _ _ _ _ _ li,
 		Jé -- su Chrí -- ste.
 		Dó -- mi -- ne __ _ _ _ Dé -- _ _ _ _ _ _ _ us, Ag -- nus Dé -- _ _ _ _ _ i,
-		Fí -- _ _ _ _ _ _ _ _ _ _ li -- us Pá -- _ _ tris.
+		Fí -- _ li -- us, Fí -- _ li -- us, Fí -- _ li -- _ us Pá -- _ _ tris.
 		
 		Qui tól -- lis pec -- cá -- ta __ _ _ _ _ mún -- _ di,
 		mi -- se -- ré -- re nó -- _ bis,
-		qui tól -- _ _ _ lis pec -- cá -- ta mún -- _ _ _ _ _ _ _ _ di, __ _ _
+		qui tól -- _ _ lis __ _ pec -- cá -- ta mún -- _ _ _ _ _ _ _ _ di, __ _ _
 		sú -- sci -- pe de -- pre -- ca -- ti -- ó -- nem nós -- tram.
 		Qui __ _ _ sé -- _ _ des, qui __ _ _ sé -- _ _ _ _ _ _ _ _ _ _ des
 		ad __ _ _ _ _ _ déx -- te -- ram,
-		mi -- se -- ré -- re nó -- bis, mi -- se -- ré -- re nó -- bis.
+		ad __ _ déx -- _ te -- ram, mi -- se -- ré -- _ _ re.
 		Quó -- ni -- am tu só -- lus sánc -- tus,
 		tu só -- lus Dó -- mi -- nus,
 		tu só -- lus Al -- tís -- si -- mus
