@@ -242,12 +242,11 @@ tenor = \new Voice {
 	}
 	\addlyrics {
 		Et in tér -- _ ra pax ho -- _ mí -- ni -- bus.
-		Lau -- dá -- _ mus 
-		te, be -- ne -- dí -- ci -- mus te, a -- do -- rá -- mus te, glo -- ri -- fi -- 
-		cá -- mus te. Prop -- ter mág -- nam 
-
-		gló -- ri -- am tú -- _ _ _ _ _ _ _ _ _ am. __ _ _
-		om -- ní -- _ po -- tens.
+		Lau -- dá -- _ mus te, be -- ne -- dí -- ci -- mus te, 
+		a -- do -- rá -- mus te, glo -- ri -- fi -- cá -- mus te. 
+		Prop -- ter mág -- nam gló -- ri -- am tú -- _ _ _ _ _ _ _ _ _ am. __ _ _
+		
+		Dó -- mi -- ne Fí -- li.
 		Jé -- su __ _ Chrí -- ste.
 		Dó -- mi -- ne __ _ _ _ Dé -- _ _ _ _ _ _ _ us 
 		Fí -- _ _ li -- us Pá -- _ _ _ tris.
