@@ -2,7 +2,7 @@
 % Copyright ©2018 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "9"
+revision = "10"
 \pointAndClickOff
 
 #(set-global-staff-size 15.0)
@@ -39,7 +39,7 @@ year = #(strftime "©%Y" (localtime (current-time)))
 \layout {
 	indent = #0
   	ragged-right = ##f
-  	ragged-last = ##t
+  	ragged-last = ##f
 	\context {
 		\Score
 		\override BarNumber #'self-alignment-X = #CENTER
@@ -125,13 +125,14 @@ soprano = \new Voice	{
 		f2. e8 d f4 e2 d8 c e4 d r d2 c8 b b4 a8 g g2 g'2 g2. f8 e e4 c g'2. a4 b c4 ~
 		c b8 a g4 a2 g8 f e2 r g2. g4 g2 g4 g g e \ficta fis2 g2 a1 d,1 ~
 		d r1 r2 d e4. f8 [g a] b4.
-		a8 a2 \ficta gis4 a2 r r1 r r a4. b8 [c d] e2 
-		d2 \ficta cis4 d a c b a g f2 e r r4
-    a4 g g a f e2 r \tuplet 3/2 {a4 a a}  \tuplet 3/2 {g2 g4}  \tuplet 3/2 {a f2} e2 r r4 a g g a f e2
-    r b' c b4 g4. f8 g a b4 b e,2 r4 g g4. a8 b c b4. a8 c2 b8 a g\breve r1 r2 r4 e e4. f8 g a b4. a8 a2 \ficta gis4
-    a a a a c2 b4 g a g c b e, a g4. f8 d4. e8 f g a b c4. b8 g4 a b2 c4. b8 g4 d
-    a'4. g8 e4 g a b c2. b8 a g\breve
-    \showBarLine \bar "|."
+		a8 a2 \ficta gis4 a2 r r1 r 
+		
+		r a4. b8 [c d] e2 d2 \ficta cis4 d a c b a g f2 e r r4 a4 g g a f e2 
+		r \tuplet 3/2 {a4 a a}  \tuplet 3/2 {g2 g4}  \tuplet 3/2 {a f2} e2 r r4 a g g a f e2 r b' c b4 g4 ~
+		g8 f8 g a b4 b e,2 r4 g g4. a8 b c b4. a8 c2 b8 a g\breve r1 r2 r4 e 
+		e4. f8 g a b4. a8 a2 \ficta gis4 a a a a c2 b4 g a g c b e, a g4. f8 d4. e8 f g a b c4. b8 g4 a 
+		
+		b2 c4. b8 g4 d a'4. g8 e4 g a b c2. b8 a g\breve \showBarLine \bar "|."
   }
 	\addlyrics {
     Et in tér -- ra pax __ _ _ _ _ _ ho -- _ mí -- ni -- bus
@@ -179,11 +180,11 @@ alto = \new Voice	{
 		b\breve. r4 e2 d4 c a b2 r1 r1 a4. b8 [c d] e4 ~
 		
 		e8 d8 d2 \ficta cis4 d a'2 g4 f d e2 d4 f e g f e2 d4 e c b2 r2 r4 e d d e c 
-		b2 r \tuplet 3/2 {e4 e e}  \tuplet 3/2 {d2 d4}  \tuplet 3/2 {e4 c2} b2 r2 r4
-    e4 d d e c b2 r r4 e d e2 d8 c b2 r4 e d e b g'2 g4 f e2 d4 
-    b\breve r1 r1 r4 e2 d4 c a b2 r4 e2 d4 c a b2 r4 e2 d4 c a b2 r4 
-    d4. c8 a4. b8 c d e4 a, r d e8 c
-    e4. d8 b4 c8 a c2 b4 d2 \tuplet 3/2 {c2 a c} b\breve
+		b2 r \tuplet 3/2 {e4 e e}  \tuplet 3/2 {d2 d4}  \tuplet 3/2 {e4 c2} b2 r2 r4 e4 d d e c b2 r r4 e d e ~
+		e d8 c b2 r4 e d e b g'2 g4 f e2 d4 b\breve r1 r1 
+		r4 e2 d4 c a b2 r4 e2 d4 c a b2 r4 e2 d4 c a b2 r4 d4. c8 a4. b8 c d e4 a, 
+		
+		r d e8 c e4. d8 b4 c8 a c2 b4 d2 \tuplet 3/2 {c2 a c} b\breve
 	}
 	\addlyrics {
     Et in tér -- ra pax __ _ _ ho -- mí -- ni -- bus __ _ _
@@ -323,6 +324,8 @@ bass = \new Voice {
 		\new Staff << \global \tenor \set Staff.instrumentName = #"T" \set Staff.shortInstrumentName = #"T" >>
 		\new Staff << \global \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >>
 	>>
-	\layout { }
+	\layout {
+		ragged-last = ##t
+	}
 %	\midi {	}
 }

@@ -2,7 +2,7 @@
 % Copyright ©2018 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "5"
+revision = "6"
 \pointAndClickOff
 
 #(set-global-staff-size 15.0)
@@ -220,7 +220,7 @@ bass = \new Voice {
 
 \score {
 	\new StaffGroup <<
-		\set Score.proportionalNotationDuration = #(ly:make-moment 1 6)
+		\set Score.proportionalNotationDuration = #(ly:make-moment 1 5)
 		\set Score.barNumberVisibility = #all-bar-numbers-visible
 		\new Staff << \global \soprano \set Staff.instrumentName = #"S" \set Staff.shortInstrumentName = #"S" >>
 		\new Staff << \global \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >>

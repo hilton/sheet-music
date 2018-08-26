@@ -224,7 +224,7 @@ soprano = \new Voice	{
 
 alto = \new Voice	{
 	\relative c' {
-	  e\breve ~ e2 d2 c2. a4 b2 r2 e\breve d2 c2. a4 b2 r4 e d c a2 b4 e4. d8 c4 a b r
+	  e1 ~ e1. d2 c2. a4 b2 r2 e\breve d2 c2. a4 b2 r4 e d c a2 b4 e4. d8 c4 a b r
 	  e4. d8 c4 a b e2 d4 c a b e d4. c8 a4 b2 e d4 c a b r e d c a b
 	  e2 d4 c a b r e d c a b r e2 d4 c a b e2 d4 c a b e2 d4 c8 a b4 e d c a
 	  \tuplet 3/2 { b4 e4. d8 } \tuplet 3/2 { d2 c4 } \tuplet 3/2 { a b2 } a\breve
