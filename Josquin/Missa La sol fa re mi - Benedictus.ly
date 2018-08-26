@@ -1,8 +1,8 @@
 % CPDL #
-% Copyright ©2017 Peter Hilton - https://github.com/hilton
+% Copyright ©2018 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "4"
+revision = "5"
 \pointAndClickOff
 
 #(set-global-staff-size 15.0)
@@ -106,10 +106,11 @@ soprano = \new Voice	{
 	  in nó -- mi -- ne, __ _ _ _ in nó -- mi -- ne, __ _ _ _ in nó -- mi -- ne, __ _ _ _ in nó -- mi -- ne, __ _ _ _ in nó -- mi -- ne, __ _ _ _
 	  in __ _  nó -- mi -- ne, in __ _  nó -- mi -- ne, in __ _  nó -- mi -- ne
 	  Dó -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ mi -- ni.
-	  
 	  Ho -- _ _ sán -- na, ho -- _ _ sán -- _ na, ho -- _ _ sán -- na,
-	  ho -- _ _ _ sán -- na, ho -- _ _ sán -- na, ho -- _ _ sán -- na, ho -- _ _ _ _ _ sán -- na __ _ 
-	  in __ _ ex -- cél -- sis, in __ _ ex -- _ _ cél -- sis, __ _ _ _ _ _  in __ _ ex -- cél -- _ _ _ _ _ _ _ _ sis.
+		
+	  ho -- _ _ _ sán -- na, ho -- _ _ sán -- na, ho -- _ _ 
+		sán -- na, in __ _ ex -- cél -- _ sis, in __ _ ex -- cél -- _ _ sis, __ _
+	  in __ _ ex -- cél -- _ _ sis, in ex -- cél -- _ sis, in __ _ ex -- cél -- _ _ _ _ _ _ _ _ sis.
 	}
 }
 
@@ -139,7 +140,7 @@ alto = \new Voice	{
 		Dó -- _ _ mi -- ni, Dó -- _ _ mi -- ni, Dó -- _ _ mi -- ni, Dó -- _ _ mi -- ni.
 		
 		Ho -- _ _ sán -- _ _ _ _ _ na, __ _ _ _  ho -- sán -- na, ho -- sán -- na,
-		ho -- sán -- _ na, ho -- _ _ sán -- na, ho -- _ _ sán -- na, ho -- _ _ _ sán -- _ na, sán -- _ na,
+		ho -- sán -- _ na, ho -- _ sán -- _ na, ho -- _ _ sán -- na, ho -- _ _ _ sán -- _ _ na, __ _ _
 		in ex -- cél -- _ sis, in ex -- cél -- _ sis, in ex -- cél -- _ sis, 
 		in __ _ ex -- cél -- _ _ sis, __ _ in __ _ ex -- cél -- _ _ sis, __ _
 		in ex -- cél -- _ sis.

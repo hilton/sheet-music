@@ -2,7 +2,7 @@
 % Copyright ©2018 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "6"
+revision = "7"
 \pointAndClickOff
 
 #(set-global-staff-size 15.0)
@@ -92,7 +92,7 @@ soprano = \new Voice	{
 		\set Timing.timing = ##t
   }
 	\addlyrics {
-		Á -- _ gnus Dé -- i, á -- _ gnus Dé -- i, á -- _ gnus Dé -- i,
+		Á -- _ _ _ gnus Dé -- _ _ _ i, á -- _ gnus Dé -- i,
 		qui  tól -- lis __ _  pec -- cá -- _ ta __ _  mún -- _ _ _ _ _ _ _ _ di, mún -- _ _ _ di, mún -- _ _ _ _ _ di,
 		mún -- _ _ _ di mún -- _ _ _ _ _ _ _ _ _ di, __ _
 		mún -- _ _ _ _ _ _ _ di, mún -- _ _ _ _ _ _ _ di, mún -- _ _ _ _ _ di,
@@ -120,7 +120,7 @@ alto = \new Voice	{
 	\addlyrics {
 		Á -- gnus Dé -- _ i, Dé -- _ _ 
 		i, á -- gnus Dé -- _ i, á -- gnus Dé -- i,
-		qui  tól -- lis __ _  pec -- cá -- _ ta  mún -- _ _ _ _ _ di, 
+		qui  tól -- lis __ _  pec -- cá -- _ ta _ mún -- _ _ _ _ di, 
 		mún -- _ _ _ _ di, mún -- _ _ _ _ _ _ _ _ _ _ di,
 		mún -- _ di, mún -- _ di, mún -- _ di, mún -- _ di, mún -- _ di, 
 		mún -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ di, 

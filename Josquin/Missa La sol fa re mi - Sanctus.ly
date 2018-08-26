@@ -2,7 +2,7 @@
 % Copyright ©2018 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "4"
+revision = "5"
 \pointAndClickOff
 
 #(set-global-staff-size 15.0)
@@ -82,32 +82,32 @@ singleDigitTime = { \override Staff.TimeSignature.style = #'single-digit }
 
 soprano = \new Voice	{
 	\relative c'' {
-	  a1 a2 g f2. d4 e\breve a1 g2 f d e a1 
+		a1 a2 g f2. d4 e\breve a1 g2 f d e a1 
 		g4. e8 f4 e2 d4 e2 a1 g4. e8 f4 e2 d4 c b4. a8 a2 \ficta gis4 a1 c2. c4 c2 f 
 		e r2 r4 b4 c1 f2 g4. a8 \ficta bes4 a2 f4 g e2 c4 b2 a4 c4. d8 e f g4. a8
-	  b4 a2 c b8 a g1 r4 g a b c c,4. d8 e c d2 c r4 g' a b c a2 c4 b g4. f8 e d c4 g'4. f8 f4. e8 e2 d4 
+		b4 a2 c b8 a g1 r4 g a b c c,4. d8 e c d2 c r4 g' a b c a2 c4 b g4. f8 e d c4 g'4. f8 f4. e8 e2 d4 
 		\set Timing.timing = ##f e\breve.
-	  \showBarLine \bar "||" \set Timing.timing = ##t	\set Score.currentBarNumber = #27
-	  a2. g4 f d e2 a1 g2 f4 e2 d8 c b4 e4. d8 d2 c4 g' f4. e8 a4. g8 g4 c
-	  b4. a8 a2 \ficta gis4 a1 r2 r1. r1. r1. r1. r1. r1. r1. r1. r1. r1. r2 r2 r4 a g c4. a8 b4 r a2 g4 f d e2 r4 d2 c4 f4. d8 e2 r4
-	  a g c4. a8 b4 r a g c4. a8 b4. a8 a2 \ficta gis4 a c2 b4 a2 \set Timing.timing = ##f \ficta gis\breve.
-	  \showBarLine \bar "||" \set Timing.timing = ##t	\set Score.currentBarNumber = #54
-	  r1. r1. e1 d2 c2. a4 b2 r4 e2 f4 g2 c,8 d e f g4c d
-	  b4 c a2 c4 b g a f r f g e f d2 f4 e8 d c \ficta bes a4 a'2 f4 g e4. d8 f4. e8 d c b2 r1. r1. 
-	  r4 e4. f8 g a b4 g a c4. b8 a2 \ficta gis4 a2 e r r1. r4 a,4. b8 c d e4 c d f4. e8 d2 \ficta cis4 d f2 g4 a b \set Timing.timing = ##f c\breve.
-	  \showBarLine \bar "|." 
+		\showBarLine \bar "||" \set Timing.timing = ##t	\set Score.currentBarNumber = #27
+		a2. g4 f d e2 a1 g2 f4 e2 d8 c b4 e4. d8 d2 c4 g' f4. e8 a4. g8 g4 c
+		b4. a8 a2 \ficta gis4 a1 r2 r1. r1. r1. r1. r1. r1. r1. r1. r1. r1. r2 r2 r4 a g c4. a8 b4 r a2 g4 f d e2 r4 d2 c4 f4. d8 e2 r4
+		a g c4. a8 b4 r a g c4. a8 b4. a8 a2 \ficta gis4 a c2 b4 a2 \set Timing.timing = ##f \ficta gis\breve.
+		\showBarLine \bar "||" \set Timing.timing = ##t	\set Score.currentBarNumber = #54
+		r1. r1. e1 d2 c2. a4 b2 r4 e2 f4 g2 c,8 d e f g4c d
+		b4 c a2 c4 b g a f r f g e f d2 f4 e8 d c \ficta bes a4 a'2 f4 g e4. d8 f4. e8 d c b2 r1. r1. 
+		r4 e4. f8 g a b4 g a c4. b8 a2 \ficta gis4 a2 e r r1. r4 a,4. b8 c d e4 c d f4. e8 d2 \ficta cis4 d f2 g4 a b \set Timing.timing = ##f c\breve.
+		\showBarLine \bar "|." 
   }
 	\addlyrics {
-	  Sánc -- tus, Sánc -- _ _ tus, Sánc -- _ _ _ tus, Sánc -- _ _ _ _ _ tus, Sánc -- _ _ _ _ _ _ _ _ _ _ tus
-	  Dó -- mi -- nus Dé -- us, Dé -- _ _ _ _ _ _ _ _ _ _ us Sá -- _ _ _ _ _ _ _ _ _ ba -- _ oth,
-	  Sá -- _ _ _ _ _ _ _ ba -- oth Sá -- _ ba -- oth, Sá -- _ _ _ _ _ _ _ _ _ _ _ _ ba -- oth.
-	  
-	  Plé -- _ _ ni sunt caé -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ li,
-	  gló -- _ _ ri -- a  tú -- _ _ _ a, gló -- _ _ ri -- a, gló -- _ _ ri -- a, gló -- _ _ _ _ _ _ ri -- a tú -- _ _ a. 
-	  Ho -- _ sán -- _ na, ho -- _ _ sán -- _ _ _ _ _ _ _ _ na,
-	  ho -- _ _ sán -- na, ho -- _ _ sán -- na, ho -- _ _ _ _ _ sán -- _ _ na, __ _ _ _ _ _ _
-	  in __ _ _ _ _  ex -- cél -- _ _ _ _ sis, __ _
-	  in __ _ _ _ _  ex -- cél -- _ _ _ _ sis,  in ex -- cél -- _ sis.
+		Sánc -- tus, __ _ Sánc -- _ tus, Sánc -- _ _ _ tus, Sánc -- _ _ _ _ _ tus, Sánc -- _ _ _ _ _ _ _ _ _ _ tus
+		Dó -- mi -- nus Dé -- us, Dé -- _ _ _ _ _ _ _ _ _ _ us Sá -- _ _ _ _ _ _ _ _ _ ba -- _ oth,
+		Sá -- _ _ _ _ _ _ _ ba -- oth Sá -- _ ba -- oth, Sá -- _ _ _ _ _ _ _ _ _ _ _ _ ba -- oth.
+
+		Plé -- _ _ ni sunt caé -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ li,
+		gló -- _ _ ri -- a  tú -- _ _ _ a, gló -- _ _ ri -- a, gló -- _ _ ri -- a, gló -- _ _ _ _ _ _ ri -- a tú -- _ _ a. 
+		Ho -- _ sán -- _ na, ho -- _ _ sán -- _ _ _ _ _ _ _ _ na,
+		ho -- _ sán -- _ na, ho -- _ _ sán -- na, ho -- _ _ _ _ _ sán -- _ _ na, __ _ _ _ _ _ _
+		in __ _ _ _ _  ex -- cél -- _ _ _ _ sis, __ _
+		in __ _ _ _ _  ex -- cél -- _ _ _ _ sis,  in ex -- cél -- _ sis.
 	}
 }
 
@@ -141,7 +141,7 @@ alto = \new Voice	{
 	  gló -- _ _ ri -- a __ _ _  
 		
 		tú -- _ _ _ _ _ a. Ho -- _ sán -- _ na, 
-		ho -- _ _ _ _ sán -- na, ho -- _ sán -- _ na, ho -- _ _ sán -- na, ho -- _ _ _ sán -- _ na, __ _ _
+		ho -- _ _ _ _ sán -- na, ho -- _ sán -- _ na, ho -- _ sán -- _ na, ho -- _ _ _ sán -- _ na, __ _ _
 	  ho -- _ sán -- _ _ na in  ex -- cél -- _ _ _ _ _ 
 		sis, in  ex -- cél -- _ _ sis,  in ex -- cél -- _ sis.
 	}
@@ -199,17 +199,17 @@ bass = \new Voice {
 	  d2 c4 d2 f e d4. c8 \ficta bes2 a a'4. g8 f4 e d8 c b4 a\breve.
 	}
 	\addlyrics {
-	  Sánc -- _ _ _ tus, __ _ _  sánc -- tus, __ _ _ sánc -- tus, __ _ _  sánc -- tus, __ _ _ _  
+	  Sánc -- _ _ _ _ _ tus, sánc -- tus, __ _ _ sánc -- tus, __ _ _  sánc -- tus, __ _ _ _  
 	  sánc -- _ _ _ _ _ tus, __ _ _ sánc -- _ _ _ _ _ _ _ tus.
 	  Dó -- mi -- nus Dé -- _ _ _ _ _ _ _ us  Dó -- _ _ _ _ _ _ _ _ _ mi -- _ nus Dé -- _ _ us Dé -- _ _ us
 	  Sá -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ ba -- oth.
   
-	  Plé -- _ ni sunt  caé -- _ _ _ _ _ li,
+	  Plé -- ni __ _ sunt caé -- _ _ _ _ _ li,
 	  et __ _ tér -- _ ra, et __ _ tér -- _ ra, et __ _ tér -- _ ra, et __ _ tér -- _ ra, 
 	  et __ _ tér -- _ ra, et __ _ tér -- _ ra, et __ _ tér -- _ ra
 	  gló -- _ _ _ _ _ ri -- a  tú -- a.
 	  Ho -- _ sán -- _ na, ho -- _ sán -- na, ho -- _ sán -- na, ho -- _ sán -- na, 
-	  ho -- _ _ _ sán -- na, ho -- _ _ sán -- na, ho -- _ _ sán -- na,
+	  ho -- _ _ _ sán -- na, ho -- _ sán -- _ na, ho -- _ sán -- _ na,
 	  ho -- _ _ _ _ _ sán -- _ _ na, ho -- _ _ _ _ sán -- na,  
 	  in __ _ _ _ _  ex -- cél -- _ _ _ _ sis, in ex -- cél -- _ _ sis,
 	  in __ _ _ _ _  ex -- cél -- _ _ _ _ sis, __ _ 
