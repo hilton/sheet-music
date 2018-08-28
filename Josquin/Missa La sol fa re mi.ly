@@ -2,7 +2,7 @@
 % Copyright ©2018 Kees de With, Peter Hilton & Maarten Michielsen - https://github.com/hilton
 
 \version "2.18.2"
-revision = "12"
+revision = "13"
 \pointAndClickOff
 
 #(set-global-staff-size 15.0)
@@ -122,16 +122,15 @@ soprano = \new Voice	{
 
 alto = \new Voice	{
 	\relative c' {
-		r1. r1. r1. r1. 
-		e1 d2 c1 a2 \[ b e \] d c2. a4 b2 
-    e4. d8 c4 a b2 r4 a2. d2 b4 e2 c4 d e f c d c f2 
-		e\breve. \time 2/2 r1 e d c2 a \[b e2. \] d4 d2 c a b1 r1 r1 r1 r1 e d c \[ a2 b \] \[ c d \] \[ b a \] e'1 f e1 c2 d a1 bes a2. g4 
-		a'1 \[ \ficta bes1 a\breve \] \time 3/2
-    r1. r1. r1. r1. r2 
-		r4 a, c d b c b c
-    d8 c b a g4. f8 g4 a c4. d8 [e f] g2 e4 f e4. d8 g4. f8 e2 d4 e2 r e c d1
-    g,4 c2 a4 bes a4. g8 c4. \ficta bes8 a2 g4 a 
-		e' d c a2 b4 e d c a2 b4 e d c a2 b\breve.
+		r1. r1. r1. r1. e1 d2 c1 a2 
+		\[ b e \] d c2. a4 b2 e4. d8 c4 a b2 r4 a2. d2 b4 e2 c4 d e f c d c f2 
+		e\breve. \time 2/2 r1 e d c2 a \[b e2. \] d4 d2 c a b1 
+		r1 r1 r1 r1 e d c \[ a2 b \] \[ c d \] 
+		
+		\[ b a \] e'1 f e1 c2 d a1 bes a2. g4 a1 
+		\[ \ficta bes1 a\breve \] \time 3/2 r1. r1. r1. r1. r2  r4 a c d 
+		b c b c d8 c b a g4. f8 g4 a c4. d8 [e f] g2 e4 f e4. d8 g4. f8 e2 d4 e2 r e c d1
+    g,4 c2 a4 bes a4. g8 c4. \ficta bes8 a2 g4 a e' d c a2 b4 e d c a2 b4 e d c a2 b\breve.
   }
 	\addlyrics {
 		Ký -- _ _ ri -- e_e -- _ _ lé -- i -- son, 
