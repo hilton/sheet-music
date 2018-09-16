@@ -1,8 +1,8 @@
-% CPDL #
+% CPDL #51324
 % Copyright ©2018 Kees de With, Peter Hilton & Maarten Michielsen - https://github.com/hilton
 
 \version "2.18.2"
-revision = "13"
+revision = "14"
 \pointAndClickOff
 
 #(set-global-staff-size 15.0)
@@ -37,6 +37,7 @@ year = #(strftime "©%Y" (localtime (current-time)))
 		\column \center-align {
 			\line {
 				Copyright \year \with-url #"http://hilton.org.uk" "Kees de With, Peter Hilton & Maarten Michielsen" -
+				"CPDL #51324" -
 				Lilypond source \with-url #"https://github.com/hilton/sheet-music" https://github.com/hilton/sheet-music -
 				revision \revision
 			}
