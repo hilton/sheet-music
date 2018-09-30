@@ -2,8 +2,7 @@
 % Copyright ©2018 Kees de With, Peter Hilton & Maarten Michielsen - https://github.com/hilton
 
 \version "2.18.2"
-revision = "14"
-\pointAndClickOff
+revision = "15"
 
 #(set-global-staff-size 15.0)
 
@@ -927,10 +926,10 @@ soprano = \new Voice	{
 		\showBarLine \bar "||" \set Timing.timing = ##t	\set Score.currentBarNumber = #27
 		a2. g4 f d e2 a1 g2 f4 e2 d8 c b4 e4. d8 d2 c4 g' f4. e8 a4. g8 g4 c
 		b4. a8 a2 \ficta gis4 a1 r2 r1. r1. r1. r1. r1. r1. r1. r1. r1. r1. r2 r2 r4 a g c4. a8 b4 r a2 g4 f d e2 r4 d2 c4 f4. d8 e2 r4
-		a g c4. a8 b4 r a g c4. a8 b4. a8 a2 \ficta gis4 a c2 b4 a2 \set Timing.timing = ##f \ficta gis\breve.
+		a g c4. a8 b4 r a g c4 ~ c8 a8 b4. a8 a2 \ficta gis4 a c2 b4 a2 \set Timing.timing = ##f \ficta gis\breve.
 		\showBarLine \bar "||" \set Timing.timing = ##t	\set Score.currentBarNumber = #54
 		r1. r1. e1 d2 c2. a4 b2 r4 e2 f4 g2 c,8 d e f g4c d
-		b4 c a2 c4 b g a f r f g e f d2 f4 e8 d c \ficta bes a4 a'2 f4 g e4. d8 f4. e8 d c b2 r1. r1. 
+		b4 c a2 c4 b g a f r f g e f d2 f4 e8 d c b a4 a'2 f4 g e4. d8 f4. e8 d c b2 r1. r1. 
 		r4 e4. f8 g a b4 g a c4. b8 a2 \ficta gis4 a2 e r r1. r4 a,4. b8 c d e4 c d f4. e8 d2 \ficta cis4 d f2 g4 a b \set Timing.timing = ##f c\breve.
 		\showBarLine \bar "|." 
   }
@@ -942,7 +941,7 @@ soprano = \new Voice	{
 		Plé -- _ _ ni sunt caé -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ li,
 		gló -- _ _ ri -- a  tú -- _ _ _ a, gló -- _ _ ri -- a, gló -- _ _ ri -- a, gló -- _ _ _ _ _ _ ri -- a tú -- _ _ a. 
 		Ho -- _ sán -- _ na, ho -- _ _ sán -- _ _ _ _ _ _ _ _ na,
-		ho -- _ sán -- _ na, ho -- _ _ sán -- na, ho -- _ _ _ _ _ sán -- _ _ na, __ _ _ _ _ _ _
+		ho -- _ sán -- _ na, ho -- _ sán -- _ na, ho -- _ _ _ _ _ sán -- _ _ na, __ _ _ _ _ _ _
 		in __ _ _ _ _  ex -- cél -- _ _ _ _ sis, __ _
 		in __ _ _ _ _  ex -- cél -- _ _ _ _ sis,  in ex -- cél -- _ sis.
 	}
@@ -1032,8 +1031,8 @@ bass = \new Voice {
 		f g4 a f e2 a,2 r a e'\breve.
 	  e1 d2 c2. a4 b2 r4 a2 a' g4 a a,2 a' g4 a a, a' f
 	  e2 r4 c'2 a4 b g a f2 a4 g e f d r d e c d bes2 d4 c8 b a g f4 f'2 d4 e c d4. e8 [ f g ] a2 
-	  \ficta gis4 a e4. f8 g a b4 g a c4. b8 a2 \ficta gis4 a2 c b a4. g8 f2 e r4 a,4. b8 c d e4 c d f4. e8
-	  d2 c4 d2 f e d4. c8 \ficta bes2 a a'4. g8 f4 e d8 c b4 a\breve.
+	  \ficta gis4 a e4. f8 \ficta g! a b4 g a c4. b8 a2 \ficta gis4 a2 c b a4. g8 f2 e r4 a,4. b8 c d e4 c d f4. e8
+	  d2 c4 d2 f e d4. c8 \ficta bes2 a a'4. g8 f4 e d8 c \ficta b!4 a\breve.
 	}
 	\addlyrics {
 	  Sánc -- _ _ _ _ _ tus, sánc -- tus, __ _ _ sánc -- tus, __ _ _  sánc -- tus, __ _ _ _  
@@ -1045,11 +1044,11 @@ bass = \new Voice {
 	  et __ _ tér -- _ ra, et __ _ tér -- _ ra, et __ _ tér -- _ ra, et __ _ tér -- _ ra, 
 	  et __ _ tér -- _ ra, et __ _ tér -- _ ra, et __ _ tér -- _ ra
 	  gló -- _ _ _ _ _ ri -- a  tú -- a.
-	  Ho -- _ sán -- _ na, ho -- _ sán -- na, ho -- _ sán -- na, ho -- _ sán -- na, 
+	  Ho -- _ sán -- _ na, ho -- sán -- _ na, ho -- sán -- _ na, ho -- sán -- _ na, 
 	  ho -- _ _ _ sán -- na, ho -- _ sán -- _ na, ho -- _ sán -- _ na,
 	  ho -- _ _ _ _ _ sán -- _ _ na, ho -- _ _ _ _ sán -- na,  
 	  in __ _ _ _ _  ex -- cél -- _ _ _ _ sis, in ex -- cél -- _ _ sis,
-	  in __ _ _ _ _  ex -- cél -- _ _ _ _ sis, __ _ 
+	  in __ _ _ _ _  ex -- cél -- _ _ _ _ sis, in
 	  ex -- cél -- _ _ sis, in __ _ _  ex -- cél -- _ _ sis.
 	}
 }
@@ -1270,8 +1269,8 @@ soprano = \new Voice	{
 
 alto = \new Voice	{
 	\relative c' {
-    e\breve d1 c1 a2 b1. r4 g c2. d4 e2 e d2 ~
-		d \[ c2 a \] b \[ e d1 \] c1. a2 r4 e' 
+    e\breve d1 c1 a2 b1. r4 g c2. d4 
+    e2 e d1 \[ c2 a \] b \[ e d1 \] c1. a2 r4 e' 
 		e e b b d4. c8 a4 d c a4. b8 c d e4 c4. a8 b4 c d b c4. b8 d4. c8
 	  b a g4. f8  g4 a2 \ficta gis4 a e'2 f4 g2 \[ c, d \] b \[ c d \] b  \[ c d \] b \[ c d \] b4 e4. d8 f4. e8 d c b4 c4. d8 e4. d8 f4. e8 d c b2 
 	  r4 b c8 [a] c [d] e1 r4 b c8 a c d e2 r4 g g g f d e g g g f d e2 e\breve.
@@ -1321,8 +1320,8 @@ tenor = \new Voice {
 bass = \new Voice {
 	\relative c {
 		\clef bass
-    a1. \[ c2 d1 \] a1. e'4. f8 g2 g, c2. d4 f2 e c d2 ~
-		d a2 f' e \[ c2 d \] b2 a1.
+    a1. \[ c2 d1 \] a1. e'4. f8 g2 g, c2. d4 f2 
+    e c d1 a2 f' e \[ c2 d \] b2 a1.
     r4 a' a a e e g4. f8 d4 g f d4. e8 f g a4. g8 e4 a2 g4 f d e a g f d2 e1
     r2 a1 g2 \[ f d \] e2 a1 g2 \[ f d \] e2 a1 g2 \[ f d \] e4 a2 g4 f2 d \[ e2 g \] a2 e
     r4 c g'2 a e r4 c g'4. f8 d4 f e c g'4. f8 d4 f e2 a,\breve.
