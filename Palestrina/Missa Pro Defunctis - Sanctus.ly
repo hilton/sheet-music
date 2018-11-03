@@ -135,13 +135,8 @@ bass = \new Voice {
 		>>
 	>>
 	\header {
-		piece = \markup { \larger \bold "Sanctus" }
+		piece = \markup \larger \sans { Sanctus }
 	}
 	\layout {
-		ragged-last = ##f
-		\context {
-			\Score
-			proportionalNotationDuration = #(ly:make-moment 1 4)
-		}
 	}
 }

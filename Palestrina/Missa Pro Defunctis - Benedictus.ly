@@ -98,7 +98,7 @@ bass = \new Voice {
 		>>
 	>>
 	\header {
-		piece = \markup { \larger \bold "Benedictus" }
+		piece = \markup \larger \sans { Benedictus }
 	}
 	\layout {
 		ragged-last = ##f
