@@ -1,8 +1,22 @@
-\markup \bold \larger { Kyrie }
-
-\markup {
-	\wordwrap \larger {
-		Kyrie eleison.
+\score {
+	\new Staff <<
+		\key f \major
+		\new Voice = "tenor" {
+			\relative c {
+				\clef "treble_8"
+				\cadenzaOn \override Stem #'transparent = ##t 
+				f4^"solo" g a bes s a s a2 g s2 a4^"tutti" g f e f s g s f s f2 \cadenzaOff
+			}
+		}
+		\addlyrics {
+			Ky -- _ _ _ ri -- e __ _ e -- _ _ _ _ le -- i -- son,
+		}
+	>>
+	\header {
+		piece = \markup \larger \sans { Kyrie }
+	}
+	\layout {
+		ragged-right = ##t
 	}
 }
 
@@ -91,11 +105,6 @@ basslyrics = \new Lyrics \lyricsto "bass" {
 		>>
 	>>
 	\layout {
-   	ragged-last = ##f
-		\context {
-			\Score
-			proportionalNotationDuration = #(ly:make-moment 1 4)
-		}
 	}
 }
 
@@ -106,9 +115,22 @@ basslyrics = \new Lyrics \lyricsto "bass" {
 		██      ██   ██  ██   ██  ██       ██    ██    ██
 		 ██████ ██   ██  ██   ██  ██  ███████    ██    ███████  %}
 
-\markup {
-	\wordwrap \larger {
-		Christe eleison.
+\score {
+	\new Staff <<
+		\key f \major
+		\new Voice = "tenor" {
+			\relative c {
+				\clef "treble_8"
+				\cadenzaOn \override Stem #'transparent = ##t 
+				f4^"solo" g a bes s a s a2 g s2 a4^"tutti" g f e f s g s f s f2 \cadenzaOff
+			}
+		}
+		\addlyrics {
+			Chri -- _ _ _ _ -- ste __ _ e -- _ _ _ _ le -- i -- son,
+		}
+	>>
+	\layout {
+		ragged-right = ##t
 	}
 }
 
@@ -206,11 +228,6 @@ basslyrics = \new Lyrics \lyricsto "bass" {
 		>> 
 	>>
 	\layout {
-   	ragged-last = ##f
-		\context {
-			\Score
-			proportionalNotationDuration = #(ly:make-moment 1 4)
-		}
 	}
 }
 
@@ -222,9 +239,22 @@ basslyrics = \new Lyrics \lyricsto "bass" {
 		██  ██     ██    ██   ██  ██  ██          ██
 		██   ██    ██    ██   ██  ██  ███████     ███████  %}
 
-\markup {
-	\wordwrap \larger {
-		Kyrie eleison.
+\score {
+	\new Staff <<
+		\key f \major
+		\new Voice = "tenor" {
+			\relative c {
+				\clef "treble_8"
+				\cadenzaOn \override Stem #'transparent = ##t 
+				f4^"solo" g a bes s a s a2 g s2 a4^"tutti" g f e f s g s f s f2 \cadenzaOff
+			}
+		}
+		\addlyrics {
+			Ky -- _ _ _ ri -- e __ _ e -- _ _ _ _ le -- i -- son,
+		}
+	>>
+	\layout {
+		ragged-right = ##t
 	}
 }
 
@@ -315,6 +345,5 @@ bass = \new Voice {
 		>> 
 	>>
 	\layout {
-		ragged-last = ##f
 	}
 }

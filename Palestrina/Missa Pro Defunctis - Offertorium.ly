@@ -197,14 +197,9 @@ bass = \new Voice {
 		>>
 	>>
 	\header {
-		piece = \markup { \larger \bold "Offertorium" }
+		piece = \markup \larger \sans { Offertorium }
 	}
 	\layout {
-		ragged-last = ##f
-		\context {
-			\Score
-			proportionalNotationDuration = #(ly:make-moment 1 4)
-		}
 	}
 }
 
@@ -312,11 +307,6 @@ baritone = \new Voice {
 		>>
 	>>
 	\layout {
-		ragged-last = ##f
-		\context {
-			\Score
-			proportionalNotationDuration = #(ly:make-moment 1 4)
-		}
 	}
 }
 
@@ -407,10 +397,5 @@ bass = \new Voice {
 		>>
 	>>
 	\layout {
-		ragged-last = ##f
-		\context {
-			\Score
-			proportionalNotationDuration = #(ly:make-moment 1 4)
-		}
 	}
 }

@@ -48,35 +48,13 @@ year = #(strftime "©%Y" (localtime (current-time)))
 	tagline = ##f
 }
 
-\paper {
-	annotate-spacing = ##f
-	top-margin = #7
-	bottom-margin = #10
-	top-markup-spacing =  #'(
-		(padding . 3)
-	)
-	top-system-spacing =  #'(
-		(basic-distance . 8)
-	)
-	markup-markup-spacing =  #'(
-		(padding . 4)
-	)
-	markup-system-spacing =  #'(
-		(padding . 2)
-	)
-	system-system-spacing #'padding = #3
-	last-bottom-spacing =  #'(
-		(minimum-distance . 12)
-	)
-
-	ragged-last-bottom=##t
-} 
-
 \layout {
 	indent = #0
 	ragged-right = ##f
+	ragged-last = ##f
 	\context {
 		\Score
+		proportionalNotationDuration = #(ly:make-moment 1 4)
 		\override BarNumber #'self-alignment-X = #CENTER
 		\override BarNumber #'break-visibility = #'#(#f #t #t)
 		\override BarLine #'transparent = ##t
@@ -91,7 +69,6 @@ year = #(strftime "©%Y" (localtime (current-time)))
 		\Voice
 		\override NoteHead #'style = #'baroque
 		\consists "Horizontal_bracket_engraver"
-		\consists "Ambitus_engraver"
 		\remove "Forbid_line_break_engraver"
 	}
 }
@@ -107,6 +84,7 @@ year = #(strftime "©%Y" (localtime (current-time)))
 		\line { Te decet hymnus Deus, in Sion, et tibi reddetur votum in Ierusalem. }
 		\line { Exaudi orationem meam; ad te omnis caro veniet. }
 		\line { Requiem æternam dona eis, Domine, et lux perpetua luceat eis. }
+		\vspace #1
 	}
 }
 
@@ -124,6 +102,7 @@ year = #(strftime "©%Y" (localtime (current-time)))
 		\line { Absolve, Domine, animas omnium fidelium defunctorum }
 		\line { ab omni vinculo delictorum et gratia tua illis succurente }
 		\line { mereantur evadere iudicium ultionis, et lucis æternae beatitudine perfrui. }
+		\vspace #2
 	}
 }
 
