@@ -1,6 +1,6 @@
 \markup \bold \larger { Kyrie }
 
-\markuplines {
+\markup {
 	\wordwrap \larger {
 		Kyrie eleison.
 	}
@@ -10,7 +10,7 @@ soprano = \new Voice {
 	\relative c' {
 		r2 f g a bes2. a4 a2 g a2. g8 f
 		e f g4. f8 f2 e4 f1 r2 c d e f4 a
-		\break g2 r4 a2 f4 g2 f4 c8 d e f g a g4 f2 e4 f1\fermata 
+		g2 r4 a2 f4 g2 f4 c8 d e f g a g4 f2 e4 f1\fermata \showBarLine \bar "||"
 	}
 	\addlyrics {
 		Ky -- _ _ _ ri -- e __ _  e -- _ _ _ _ le -- _  _ i -- son
@@ -35,8 +35,7 @@ tenor = {
 		\relative c {
 			\clef "treble_8" 
 			R1 R R R r2 f
-			g a bes2. a4 a2 g a2. g8 f e f g4. f8 f4~
-			f e4 f1 c2 f e4. f8 g4 a g c a1\fermata
+			g a bes2. a4 a2 g a2. g8 f e f g4. f8 f2 e4 f1 c2 f e4. f8 g4 a g c a1\fermata
 		}
 	}
 }
@@ -48,7 +47,7 @@ baritone = {
 	\new Voice = "baritone" {
 		\relative c {
 			\clef "treble_8" 
-			f2 bes g f4 a g2 f1 c'4. bes8 a2 r2	\bar "" \break
+			f2 bes g f4 a g2 f1 c'4. bes8 a2 r2	\bar ""
 			r4 c4 d2. bes4 c2 f, c' r f, g a
 			bes2. a4 a2 g a2. g8 f e4 f 
 				\afterGrace g2 \parenthesize g4 f1\fermata
@@ -80,38 +79,34 @@ basslyrics = \new Lyrics \lyricsto "bass" {
 	le -- _ _ _ _ i -- son
 }
 
-bars = {
-	\key f \major
-	\repeat unfold 16 { s1 }
-	\revert Score.BarLine #'transparent % no bar lines
-	\revert Staff.BarLine #'transparent % mensurstriche
-	\bar "||"
-}
-
 \score {
 	<<
 		\new ChoirStaff
-	  	<< 
-			\new Staff << \global \bars \soprano >> 
-			\new Staff << \global \bars \alto >> 
-			\new Staff << \global \bars \tenor \tenorlyrics >>
-			\new Staff << \global \bars \baritone \baritonelyrics >>
-			\new Staff << \global \bars \bass \basslyrics >>
+		<< 
+			\new Staff << \global \keyF \soprano >> 
+			\new Staff << \global \keyF \alto >> 
+			\new Staff << \global \keyF \tenor \tenorlyrics >>
+			\new Staff << \global \keyF \baritone \baritonelyrics >>
+			\new Staff << \global \keyF \bass \basslyrics >>
 		>>
 	>>
 	\layout {
-	   	ragged-last = ##f
+   	ragged-last = ##f
 		\context {
 			\Score
-			proportionalNotationDuration = #(ly:make-moment 1 8)
+			proportionalNotationDuration = #(ly:make-moment 1 4)
 		}
 	}
 }
 
 
-% CHRISTE
+%{	 ██████ ██   ██  ██████   ██  ███████ ████████ ███████
+		██      ██   ██  ██   ██  ██  ██         ██    ██
+		██      ███████  ██████   ██  ███████    ██    █████
+		██      ██   ██  ██   ██  ██       ██    ██    ██
+		 ██████ ██   ██  ██   ██  ██  ███████    ██    ███████  %}
 
-\markuplines {
+\markup {
 	\wordwrap \larger {
 		Christe eleison.
 	}
@@ -120,10 +115,9 @@ bars = {
 soprano = \new Voice {
 	\new Voice = "soprano" {
 		\relative c' {
-			R1 r2 f g a bes a4 a2 g8 f g4 a \bar "" \break c1
-			a2 g4 c4. bes8 a2 g4 f2 r2 r1 \bar "" \break 
-			r2 f1 g2 a bes2. a4 a2 g a2~ \bar "" \break 
-			a4 g8 f e f g2 f e4 f1~ f1\fermata \bar "||"
+			R1 r2 f g a bes a4 a2 g8 f g4 a c1 a2 g4 c4 ~
+			c8 bes8 a2 g4 f2 r2 r1 r2 f1 g2 a bes2 ~
+			bes4 a4 a2 g a2. g8 f e f g2 f e4 f1 ~ f1\fermata \showBarLine \bar "||"
 		}
 	}
 }
@@ -139,7 +133,7 @@ alto = {
 			c f2 e4 f2 r c1 d2 e f2. e4
 			e2 d2. c4 c4. bes8 a g f4 
 				#(define afterGraceFraction (cons 17 32)) \afterGrace f'1 \parenthesize f2 r4 c d e f4. e16 d
-			c4 d c2 ~ c1 a4. bes8 c4 d c1\fermata
+			c4 d c1. a4. bes8 c4 d c1\fermata
 		}
 	}
 }
@@ -156,8 +150,7 @@ tenor = {
 			f2 g a bes4. a8 g c, c'2 d c8 bes c2 d2. c4
 			f,8 g a bes 
 				\afterGrace c2 \parenthesize c4 f,2 c r4 f8 g a bes c2 bes4 c2 f, g
-			a bes2. a4 \afterGrace g2 \parenthesize g4 f\breve r4 c' c c~
-			c bes8 a g4 e g a \afterGrace g2 \parenthesize g4 f1~ f1\fermata
+			a bes2. a4 \afterGrace g2 \parenthesize g4 f\breve r4 c' c c2 bes8 a g4 e g a \afterGrace g2 \parenthesize g4 f1 ~ f1\fermata
 		}
 	}
 }
@@ -176,9 +169,8 @@ baritone = \new Voice {
 			\clef "treble_8" 
 			R1 R r2 f g a bes2. a4
 			a2 g4 a2 g8 f 
-				#(define afterGraceFraction (cons 17 32)) \afterGrace g2 \parenthesize g4 a2 r2 r4 f g a2 bes4 c2~
-			c f,1 c2 c' d c2. a4 bes c f,2 ~ f
-			r4 c e f g8 c, c'4. bes8 a g a2~ a1\fermata
+			#(define afterGraceFraction (cons 17 32)) \afterGrace g2 \parenthesize g4 a2 r2 r4 f g a2 bes4 c21 f,1 c2 c' d c2. a4 bes c f,1
+			r4 c e f g8 c, c'4. bes8 a g a2 ~ a1\fermata
 		}
 	}
 }
@@ -192,9 +184,8 @@ bass = \new Voice {
 		\relative c {
 			\clef "bass"
 			R1 R R R R
-			r2 c d e f2. e4 d2 c d c~
-			c bes4. c8 d e f2 e4 f2 bes, f1 r2 f a4 bes
-			c2~ c4 f, \afterGrace c'2 \parenthesize c4 f,1 ~ f1\fermata
+			r2 c d e f2. e4 d2 c d c1 bes4. c8 d e f2 e4 f2 bes, f1 r2 f a4 bes
+			c2. f,4 \afterGrace c'2 \parenthesize c4 f,1 ~ f1\fermata
 		}
 	}
 }
@@ -203,36 +194,35 @@ basslyrics = \new Lyrics \lyricsto "bass" {
 	Chri -- ste e -- le -- _ \lyricLeft "            i" -- son.
 }
 
-bars = {
-	\key f \major
-	\repeat unfold 20 { s1 }
-	\revert Score.BarLine #'transparent % no bar lines
-	\revert Staff.BarLine #'transparent % mensurstriche
-	\bar "||"
-}
-
 \score {
 	<<
 		\new ChoirStaff
-	  	<< 
-			\new Staff << \global \bars \soprano \sopranolyrics >>
-			\new Staff << \global \bars \alto \altolyrics >>
-			\new Staff << \global \bars \tenor \tenorlyrics >>
-			\new Staff << \global \bars \baritone \baritonelyrics >>
-			\new Staff << \global \bars \bass \basslyrics >>
+		<< 
+			\new Staff << \global \keyF \soprano \sopranolyrics >>
+			\new Staff << \global \keyF \alto \altolyrics >>
+			\new Staff << \global \keyF \tenor \tenorlyrics >>
+			\new Staff << \global \keyF \baritone \baritonelyrics >>
+			\new Staff << \global \keyF \bass \basslyrics >>
 		>> 
 	>>
 	\layout {
-	   	ragged-last = ##f
+   	ragged-last = ##f
+		\context {
+			\Score
+			proportionalNotationDuration = #(ly:make-moment 1 4)
+		}
 	}
 }
 
 
-% KYRIE 2
 
-\pageBreak
+%{	██   ██ ██    ██ ██████   ██  ███████     ██████
+		██  ██   ██  ██  ██   ██  ██  ██               ██
+		█████     ████   ██████   ██  █████        █████
+		██  ██     ██    ██   ██  ██  ██          ██
+		██   ██    ██    ██   ██  ██  ███████     ███████  %}
 
-\markuplines {
+\markup {
 	\wordwrap \larger {
 		Kyrie eleison.
 	}
@@ -240,11 +230,12 @@ bars = {
 
 soprano = \new Voice {
 	\relative c'' {
-		R1 R R c2. f,4 f2 c' \break
+		R1 R R c2. f,4 f2 c'
 		bes c d2. c4 bes a g2. f4 
-			#(define afterGraceFraction (cons 25 32)) \afterGrace a1 \parenthesize a4 g2 \break
+			#(define afterGraceFraction (cons 25 32)) \afterGrace a1 \parenthesize a4 g2
 		r c f, f f1 
-			#(define afterGraceFraction (cons 29 32)) \afterGrace g \parenthesize g4 a1\fermata \bar "||"
+			#(define afterGraceFraction (cons 29 32)) \afterGrace g \parenthesize g4 a1\fermata 
+			\showBarLine \bar "||"
 	}
 	\addlyrics {
 		Ky -- ri -- e e -- 
@@ -301,9 +292,8 @@ baritone = \new Voice {
 bass = \new Voice {
 	\relative c {
 		\clef "bass"
-		R1 r2 f2. bes,4 bes2 f'1 d2 c
-		g c bes r1 r4 c2 f,4 f2. f'2 e4
-		d2 c bes2. a4 bes2 f 
+		R1 r2 f2. bes,4 bes2 f'1 d2 c g c bes r2
+		r2 r4 c2 f,4 f2. f'2 e4 d2 c bes2. a4 bes2 f 
 			#(define afterGraceFraction (cons 29 32)) \afterGrace c'1 \parenthesize c4 f,1\fermata \bar "||"
 	}
 	\addlyrics {
@@ -313,26 +303,18 @@ bass = \new Voice {
 	}
 }
 
-bars = {
-	\key f \major
-	\repeat unfold 16 { s1 }
-	\revert Score.BarLine #'transparent % no bar lines
-	\revert Staff.BarLine #'transparent % mensurstriche
-	\bar "||"
-}
-
 \score {
 	<<
 		\new ChoirStaff
-	  	<< 
-			\new Staff << \global \bars \soprano >>
-			\new Staff << \global \bars \alto >>
-			\new Staff << \global \bars \tenor >>
-			\new Staff << \global \bars \baritone >>
-			\new Staff << \global \bars \bass >>
+		<< 
+			\new Staff << \global \keyF \soprano >>
+			\new Staff << \global \keyF \alto >>
+			\new Staff << \global \keyF \tenor >>
+			\new Staff << \global \keyF \baritone >>
+			\new Staff << \global \keyF \bass >>
 		>> 
 	>>
 	\layout {
-	   	ragged-last = ##f
+		ragged-last = ##f
 	}
 }
