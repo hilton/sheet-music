@@ -1,18 +1,14 @@
+
 soprano = \new Voice {
 	\relative c'' {
-		R1 R R R R \break
-		R a1 a2 gis a4. g!8 f e f2 e8 d e2 \break
-		d8 e f g a1 r2 f1. g2 a a ~ \break
+		R1 R R R R R a1 a2 gis 
+		a4. g!8 f e f2 e8 d e2 d8 e f g a1 r2 f1. g2 a a2. a4 a2
+		a1 a a1. f2 g a r4 c4. c8 c4 b a a gis a1 
 		
-		a4 a a2 a1 a a1. f2 \break
-		g a r4 c4. c8 c4 b a a gis a1 f \break
-		g a a c2 d4 g, e2 f4 f ~ \break
-		
-		f8 e16 d c4 d e f2 e4 a f d e8 d16 e f4 e c'2 g bes f4 ~ \break
-		f8 g a4. g8 f2 e8 d e2 f4 c' c c a2 f4 bes4. g8 a4 g c \break
-		c c a2 g e4. f8 g2 c1 r4 a a f e f \break
-		
-		g2. d4 e4. f8 g2 r4 c4. b8 a g a4 a a2 fis1\fermata
+		f g a a c2 d4 g, e2 f4 f4. e16 d c4 d e f2 e4 a f d e8 d16 e f4 
+		e c'2 g bes f4. g8 a4. g8 f2 e8 d e2 f4 c' c c a2 f4 bes4. g8 a4 g c
+		c c a2 g e4. f8 
+		g2 c1 r4 a a f e f g2. d4 e4. f8 g2 r4 c4. b8 a g a4 a a2 fis1\fermata \showBarLine \bar "||"
 	}
 	\addlyrics {
 		San -- ctus, __ _ San -- _ _ _ _ _ _ _ _ _ _ _ ctus, San -- ctus, __ _
@@ -58,19 +54,13 @@ alto = \new Voice {
 tenor = \new Voice {
 	\relative c' {
 		\clef "treble_8" 
-		R1 R a1 a2 gis a4. g!8 f e f4 ~
-		f4 e8 d e2 d4 a'4. g8 a b c4 d b2 r4 a2 d,4 a' bes a2
-		d, r4 f8 g a bes c4 c c4. bes8 a g f4. e8 d4 f2 e4 f2 a4. g8
+		R1 R a1 a2 gis a4. g!8 f e f2 e8 d e2 d4 a'4. g8 a b c4 d b2 
+		r4 a2 d,4 a' bes a2 d, r4 f8 g a bes c4 c c4. bes8 a g f4. e8 d4 f2 e4 f2 a4. g8 f4 d a'2 ~ 
+		a2 r4 d4. d8 a4 c d e e, f4. g8 a2 r d2. d4 a c4. d8 e2 c4 b b a1 ~ 
 		
-		f4 d a'1 r4 d4. d8 a4 c d e e, f4. g8 a2 r
-		d2. d4 a c4. d8 e2 c4 b b a1. r2
-		r4 e e c c'1. d2 e4 c4. b16 a b4 c2 r
-		
-		r2 r4 a f d e2 d r4 d e f e4. f8 g2 d4. e8
-		f2 c1 r4 c' c c a2 f bes4. a8 g4 f c'2
-		a4. bes8 c d c2 b!4 c2 r4 c c c a f2 d4. e8 f g a b c a
-		
-		b4 c2 b4 c2 r4 c c c a f f2 e d1\fermata
+		a2 r2 r4 e e c c'1. d2 e4 c4. b16 a b4 c2 r r2 r4 a f d e2 d r4 d 
+		e f e4. f8 g2 d4. e8 f2 c1 r4 c' c c a2 f bes4. a8 g4 f c'2 a4. bes8 c d c2 b!4 c2 
+		r4 c c c a f2 d4. e8 f g a b c a b4 c2 b4 c2 r4 c c c a f f2 e d1\fermata
 		
 	}
 	\addlyrics {
@@ -90,17 +80,13 @@ tenor = \new Voice {
 baritone = \new Voice {
 		\relative c' {
 		\clef "treble_8" 
-		a1 a2 gis a4. g!8 f e f2 e8 d e2 f4. g8 a4 bes
-		a2. g4 f4. e8 d2 a' r4 e f4. g8 a2 d, r
-		f1. g2 a a bes bes a r4 a
+		a1 a2 gis a4. g!8 f e f2 e8 d e2 f4. g8 a4 bes a2. g4 f4. e8 d2 a' r4 e 
+		f4. g8 a2 d, r f1. g2 a a bes bes a r4 a a4 d2 cis8 b 
+		cis2. d4 d,2 r r4 a'4. a8 d,4 f4. g8 a4 bes g4 g f2. a4. a8 e4 g a b e,4. d16 e f4 e e 
 		
-		a4 d2 cis8 b cis2. d4 d,2 r r4 a'4. a8 d,4 f4. g8 a4 bes
-		g4 g f2. a4. a8 e4 g a b e,4. d16 e f4 e e d a' a f
-		c'2 c r1 f,1 g a
-		
-		a1 a2 a a a1 g2 bes1
-		a2 a g1 f r r
-		f g1. a2 a a a1
+		d a' a f c'2 c r1 f,1 g a a1 a2 a a a2 ~ 
+		a2 g2 bes1 a2 a g1 f r r f g1 ~
+		g2 a2 a a a1
 		
 		g\breve a a1\fermata
 	}
@@ -117,19 +103,13 @@ baritone = \new Voice {
 bass = \new Voice {
 	\relative c {
 		\clef "bass"
-		R1 R R R d1 
-		d2 cis d4. e8 f g f2 e8 d e2 d1 r2 a
-		bes f1 c'2 f4. e8 d4. c8 bes4. a8 g2 f f'4. e8
+		R1 R R R d1 d2 cis d4. e8 f g f2 e8 d e2 
+		d1 r2 a bes f1 c'2 f4. e8 d4. c8 bes4. a8 g2 f f'4. e8 d2 a 
+		r4 a'4. a8 d,4 f4. g8 a4 d, a a d1 r2 r2 d d4 a c4. d8 e4 a, e' e a,1 
 		
-		d2 a r4 a'4. a8 d,4 f4. g8 a4 d, a a d1 r2
-		r2 d d4 a c4. d8 e4 a, e' e a,1 d
-		c a2 a' a4 f d2 c r r4 a' f d
-		
-		f4. e8 d4 cis d2 a r r4 d c a c2 g bes
-		f4 f a4. bes8 c1 f, r r
-		r r2 c' c4 c a2 f f'4. e8 d2 a
-		
-		r1 c2 c4 c a f f'4. e8 d2 a d1\fermata
+		d c a2 a' a4 f d2 c r r4 a' f d f4. e8 d4 cis d2 a r r4 d 
+		c a c2 g bes f4 f a4. bes8 c1 f, r r r r2 c' 
+		c4 c a2 f f'4. e8 d2 a r1 c2 c4 c a f f'4. e8 d2 a d1\fermata
 	}
 	\addlyrics {
 		San -- ctus, __ _ San -- _ _ _ _ _ _ _ ctus, San -- _ _ ctus,
@@ -143,33 +123,25 @@ bass = \new Voice {
 	}
 }
 
-bars = {
-	\key a \minor
-	\repeat unfold 50 { s1 }
-	\revert Score.BarLine #'transparent % no bar lines
-	\revert Staff.BarLine #'transparent % mensurstriche
-	\bar "||"
-}
-
 \score {
 	<<
 		\new ChoirStaff
 	  	<< 
-			\new Staff << \global \bars \soprano >> 
-			\new Staff << \global \bars \alto >> 
-			\new Staff << \global \bars \tenor >>
-			\new Staff << \global \bars \baritone >>
-			\new Staff << \global \bars \bass >>
+			\new Staff << \global \keyA \soprano >> 
+			\new Staff << \global \keyA \alto >> 
+			\new Staff << \global \keyA \tenor >>
+			\new Staff << \global \keyA \baritone >>
+			\new Staff << \global \keyA \bass >>
 		>>
 	>>
 	\header {
 		piece = \markup { \larger \bold "Sanctus" }
 	}
 	\layout {
-	   	ragged-last = ##f
+		ragged-last = ##f
 		\context {
 			\Score
-			proportionalNotationDuration = #(ly:make-moment 1 8)
+			proportionalNotationDuration = #(ly:make-moment 1 4)
 		}
 	}
 }
