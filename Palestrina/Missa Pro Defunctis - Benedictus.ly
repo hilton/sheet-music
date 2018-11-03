@@ -147,7 +147,8 @@ baritone = \new Voice {
 bass = \new Voice {
 	\relative c {
 		\clef "bass"
-		f1 g2 a a d,4 f4. e16 d e4 f4. e8 d4. c8 bes4. a8 g2 f f'4. e8 d4 d c2 a1 a'2 
+		f1 g2 a a d,4 f4. e16 d e4 f4. e8 d4. c8 bes4. a8 g2 f f'4. e8 d4 d c2 a2 ~
+		a2 a'2 
 		f4. e8 d2  a2 a c g g d' a a4. b8 c2 g d' f4 f c2 g d'4. e8 f2 
 		c c f,1 r r r r2 c' c4 c a2  f2 f'4. e8 
 		d2 a r1 c2 c4 c a2 f f'4. e8 d4. c16 bes a1 d1\fermata
