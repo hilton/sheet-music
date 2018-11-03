@@ -75,29 +75,16 @@ year = #(strftime "©%Y" (localtime (current-time)))
 
 \include "Missa Pro Defunctis - symbols.ly"
 
-\markup {
-	\column \larger {
-		\vspace #1
-		\line \bold { Introïtus }
-		\vspace #0.5
-		\line { Requiem æternam dona eis, Domine, et lux perpetua luceat eis. }
-		\line { Te decet hymnus Deus, in Sion, et tibi reddetur votum in Ierusalem. }
-		\line { Exaudi orationem meam; ad te omnis caro veniet. }
-		\line { Requiem æternam dona eis, Domine, et lux perpetua luceat eis. }
-		\vspace #1
-	}
-}
+
+\include "Missa Pro Defunctis - Introitus.ly"
 
 \include "Missa Pro Defunctis - Kyrie.ly"
 
+\include "Missa Pro Defunctis - Graudale.ly"
+
 \markup {
 	\column \larger {
-		\line \bold { Graduale }
-		\vspace #0.5
-		\line { Requiem æternam dona eis, Domine: et lux perpetua luceat eis. }
-		\line { In memoria æterna erit iustus, ab auditione mala non timebit. }
-		\vspace #2
-		\line \bold { Tractus }
+		\line \sans { Tractus }
 		\vspace #0.5
 		\line { Absolve, Domine, animas omnium fidelium defunctorum }
 		\line { ab omni vinculo delictorum et gratia tua illis succurente }
