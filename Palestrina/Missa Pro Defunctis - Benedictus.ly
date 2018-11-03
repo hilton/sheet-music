@@ -78,7 +78,8 @@ year = #(strftime "©%Y" (localtime (current-time)))
 soprano = \new Voice {
 	\relative c' {
 		R1 R R R R R f g2 a a a 
-		a a a1 r r r g2 bes ~ bes4 a a2 g2. g4 f1 
+		a a a1 r r r g2 bes ~ bes4 a a2 g2. g4 \break
+		f1 
 		g2. g4 a c c c a2 f4 bes4. g8 a4 g \afterGrace c2 \parenthesize c4 c4 a2 g e4. f8 g2 c ~ c2 r4 a 
 		a f e f g2. d4 e4. f8 g2 r4 c c c \afterGrace a2 \parenthesize a4 f4. g8 a2 e fis1\fermata \showBarLine \bar "||"
 	}
@@ -172,7 +173,7 @@ bass = \new Voice {
 		piece = \markup { \larger \bold "Benedictus" }
 	}
 	\layout {
-		ragged-last = ##t
+		ragged-last = ##f
 		\context {
 			\Score
 			proportionalNotationDuration = #(ly:make-moment 1 4)
