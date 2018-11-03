@@ -76,7 +76,8 @@ year = #(strftime "©%Y" (localtime (current-time)))
 
 soprano = \new Voice {
 	\relative c'' {
-		R1 R R g fis2 g g1 a g2 a4 g2 fis4 g2 r4 g2 fis4 g4 a4. g8 g2 fis8 e fis2 g1 r r r a a2 a2. gis4 a fis4 gis2 a1 r4 a a2 b c4 a2 gis4 a1 r r r g1. a2 b2 g a g2. fis8 e fis4 fis g1\fermata \showBarLine \bar "||"
+		R1 R R g fis2 g g1 a g2 a4 g2 fis4 g2 r4 g2 fis4 g4 a4. g8 g2 fis8 e fis2 g1 r r r a \break
+		a2 a2. gis4 a fis4 gis2 a1 r4 a a2 b c4 a2 gis4 a1 r r r g1. a2 b2 g a g2. fis8 e fis4 fis g1\fermata \showBarLine \bar "||"
 	}
 	\addlyrics {
 		A -- gnus __ _ De -- i, A -- gnus De -- _ i, A -- gnus __ _ De -- _ _ _ _ _ i,
@@ -156,11 +157,10 @@ bass = \new Voice {
 		>>
 	>>
 	\header {
-		piece = \markup { \larger \bold "Agnus Dei I" }
+		piece = \markup { \larger \bold "Agnus Dei" }
 	}
 	\layout {
-		indent = #32.3
-		ragged-last = ##t
+		ragged-last = ##f
 		\context {
 			\Score
 			proportionalNotationDuration = #(ly:make-moment 1 4)
