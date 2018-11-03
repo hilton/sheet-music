@@ -1,15 +1,82 @@
+\version "2.18.2"
+#(set-global-staff-size 15.0)
+
+\paper {
+	#(define fonts (make-pango-font-tree "Century Schoolbook L" "Source Sans Pro" "Luxi Mono" (/ 15 20)))
+	annotate-spacing = ##f
+	two-sided = ##t
+	top-margin = 8\mm
+	bottom-margin = 10\mm
+	inner-margin = 15\mm
+	outer-margin = 15\mm
+	top-markup-spacing = #'( (basic-distance . 4) )
+	markup-system-spacing = #'( (padding . 4) )
+	system-system-spacing = #'( (basic-distance . 15) (stretchability . 100) )
+	ragged-bottom = ##f
+	ragged-last-bottom = ##t
+}
+
+year = #(strftime "©%Y" (localtime (current-time)))
+
+\header {
+	tagline = ##f
+}
+
+\paper {
+	annotate-spacing = ##f
+	top-margin = #7
+	bottom-margin = #10
+	top-markup-spacing =  #'(
+		(padding . 3)
+	)
+	top-system-spacing =  #'(
+		(basic-distance . 8)
+	)
+	markup-markup-spacing =  #'(
+		(padding . 4)
+	)
+	markup-system-spacing =  #'(
+		(padding . 2)
+	)
+	system-system-spacing #'padding = #3
+	last-bottom-spacing =  #'(
+		(minimum-distance . 12)
+	)
+
+	ragged-last-bottom=##t
+} 
+
+\layout {
+	indent = #0
+	ragged-right = ##f
+	\context {
+		\Score
+		\override BarNumber #'self-alignment-X = #CENTER
+		\override BarNumber #'break-visibility = #'#(#f #t #t)
+		\override BarLine #'transparent = ##t
+		\remove "Metronome_mark_engraver"
+		\override VerticalAxisGroup #'staff-staff-spacing = #'((basic-distance . 10) (stretchability . 100))
+	}
+	\context {
+		\StaffGroup
+		\remove "Span_bar_engraver"
+	}
+	\context {
+		\Voice
+		\override NoteHead #'style = #'baroque
+		\consists "Horizontal_bracket_engraver"
+		\consists "Ambitus_engraver"
+		\remove "Forbid_line_break_engraver"
+	}
+}
+
+\include "Missa Pro Defunctis - symbols.ly"
+
+
+
 soprano = \new Voice {
 	\relative c'' {
-		R1 R R g \break
-		fis2 g g1 a g2 a4 g2 fis4 g2 \break
-		r4 g2 fis4 g4 a4. g8 g2 fis8 e fis2 g1 r \break
-		
-		r r a a2 a2. gis4 a fis4 \break
-		gis2 a1 r4 a a2 b c4 a2 gis4 a1 \break
-		r r r g1. a2 \break
-		
-		b2 g a g2. fis8 e fis4 fis g1\fermata
-		
+		R1 R R g fis2 g g1 a g2 a4 g2 fis4 g2 r4 g2 fis4 g4 a4. g8 g2 fis8 e fis2 g1 r r r a a2 a2. gis4 a fis4 gis2 a1 r4 a a2 b c4 a2 gis4 a1 r r r g1. a2 b2 g a g2. fis8 e fis4 fis g1\fermata \showBarLine \bar "||"
 	}
 	\addlyrics {
 		A -- gnus __ _ De -- i, A -- gnus De -- _ i, A -- gnus __ _ De -- _ _ _ _ _ i,
@@ -20,16 +87,7 @@ soprano = \new Voice {
 
 alto = \new Voice {
 	\relative c' {
-		R1 d cis2 d e4 d2 cis4
-		d2 e2. d8 c d2 f1 e2 e2. d8 c d4. c16 b
-		a4 g a2 e'2. c4 d2. a4 b4. c8 d2 r4 d d2
-		
-		d2. cis4 d b cis2 d e f e e cis4 d
-		b2 a e' f e e e4 f e2 e c2 ~
-		c d2 e c1 d4. d8 d2 e2. d4 d2 ~
-		
-		d e2 r4 e2 d8 c d2 d d1\fermata
-		
+		R1 d cis2 d e4 d2 cis4 d2 e2. d8 c d2 f1 e2 e2. d8 c d4. c16 b a4 g a2 e'2. c4 d2. a4 b4. c8 d2 r4 d d2 d2. cis4 d b cis2 d e f e e cis4 d b2 a e' f e e e4 f e2 e c2 ~ c d2 e c1 d4. d8 d2 e2. d4 d2 ~ d e2 r4 e2 d8 c d2 d d1\fermata
 	}
 	\addlyrics {
 		A -- gnus De -- _ _ _ _ _ _ _ i, A -- gnus De -- _ _ _ _ _ _ _ i, A -- gnus De -- _ _ _ i,
@@ -44,15 +102,7 @@ alto = \new Voice {
 tenor = \new Voice {
 	\relative c' {
 		\clef "treble_8" 
-		R1 R R R
-		R R R r2 c1 b2
-		c d4. c8 b4 c4. b8 a g a1 g a2 bes
-		
-		a2 a fis4 g e2 fis a d, a' e a4 d,
-		e2 a cis d e4 a, a gis a a r2 r4 c2 bes4
-		a g f2 r4 c'4. bes8 a2 g fis4 g2 e4. f8 g2 d
-		
-		r4 g2 e4 f e4. f8 g4 a8 d, d'2 a4 b1\fermata
+		R1 R R R R R R r2 c1 b2 c d4. c8 b4 c4. b8 a g a1 g a2 bes a2 a fis4 g e2 fis a d, a' e a4 d, e2 a cis d e4 a, a gis a a r2 r4 c2 bes4 a g f2 r4 c'4. bes8 a2 g fis4 g2 e4. f8 g2 d r4 g2 e4 f e4. f8 g4 a8 d, d'2 a4 b1\fermata
 	}
 	\addlyrics {
 		A -- gnus __ _ De -- _ _ _ _ _ _ _ i,
@@ -67,15 +117,7 @@ tenor = \new Voice {
 baritone = \new Voice {
 		\relative c' {
 		\clef "treble_8" 
-		R1 R R R
-		r2 c1 b2 c d4. c8 b4 c4. b8 a g a2 g
-		r1 r r4 a4 d, d'4. c8 b a b4 g4. fis8 fis4 g2 ~
-		
-		g4 f4 e2 d4 d a'2 a4 d4. cis8 cis4 d2 c! b a4 a
-		e'2 c4 e2 a,2 d c4 b e c d b2 a1
-		r4 c2 bes4 a g a4. g8 f4 g a2 b r4 c2 b4 a2
-		
-		g2 r4 c c c2 b4 a2. a4 g1\fermata
+		R1 R R R r2 c1 b2 c d4. c8 b4 c4. b8 a g a2 g r1 r r4 a4 d, d'4. c8 b a b4 g4. fis8 fis4 g2 ~ g4 f4 e2 d4 d a'2 a4 d4. cis8 cis4 d2 c! b a4 a e'2 c4 e2 a,2 d c4 b e c d b2 a1 r4 c2 bes4 a g a4. g8 f4 g a2 b r4 c2 b4 a2 g2 r4 c c c2 b4 a2. a4 g1\fermata
 	}
 	\addlyrics {
 		A -- gnus __ _ De -- _ _ _ _ _ _ _ i, A -- gnus De -- _ _ _ i,
@@ -90,15 +132,7 @@ baritone = \new Voice {
 bass = \new Voice {
 	\relative c' {
 		\clef "bass"
-		g1 fis2 g a4. g8 fis4 g4. fis8 e d e2
-		d c2. b8 a g4 g' f4. e8 d2 e c r r4 g'
-		f e d2 e4 c e2 d1 g, d'2 g,
-		
-		d'2 a d4 g, a2 d r1 r r2
-		r1 a'2 d, a' e a4 d, e2 a, f'2 ~
-		f4 e4 d2 c f2. e4 d2 g, r2 r4 g'2 fis4
-		
-		g2 c, a4. b8 c4 g d'2 d g,1\fermata
+		g1 fis2 g a4. g8 fis4 g4. fis8 e d e2 d c2. b8 a g4 g' f4. e8 d2 e c r r4 g' f e d2 e4 c e2 d1 g, d'2 g, d'2 a d4 g, a2 d r1 r r2 r1 a'2 d, a' e a4 d, e2 a, f'2 ~ f4 e4 d2 c f2. e4 d2 g, r2 r4 g'2 fis4 g2 c, a4. b8 c4 g d'2 d g,1\fermata
 	}
 	\addlyrics {
 		A -- gnus __ _ De -- _ _ _ _ _ _ _ i, A -- _ _ gnus __ _ De -- _ _ _ i,
@@ -110,23 +144,15 @@ bass = \new Voice {
 	}
 }
 
-bars = {
-	\key a \minor
-	\repeat unfold 33 { s1 }
-	\revert Score.BarLine #'transparent % no bar lines
-	\revert Staff.BarLine #'transparent % mensurstriche
-	\bar "||"
-}
-
 \score {
 	<<
 		\new ChoirStaff
-	  	<< 
-			\new Staff << \global \bars \soprano >> 
-			\new Staff << \global \bars \alto >> 
-			\new Staff << \global \bars \tenor >>
-			\new Staff << \global \bars \baritone >>
-			\new Staff << \global \bars \bass >>
+		<<
+			\new Staff << \global \keyA \soprano >> 
+			\new Staff << \global \keyA \alto >> 
+			\new Staff << \global \keyA \tenor >>
+			\new Staff << \global \keyA \baritone >>
+			\new Staff << \global \keyA \bass >>
 		>>
 	>>
 	\header {
@@ -134,10 +160,10 @@ bars = {
 	}
 	\layout {
 		indent = #32.3
-	   	ragged-last = ##t
+		ragged-last = ##t
 		\context {
 			\Score
-			proportionalNotationDuration = #(ly:make-moment 1 9)
+			proportionalNotationDuration = #(ly:make-moment 1 4)
 		}
 	}
 }
