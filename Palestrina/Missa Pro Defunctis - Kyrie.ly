@@ -122,7 +122,7 @@ basslyrics = \new Lyrics \lyricsto "bass" {
 			\relative c {
 				\clef "treble_8"
 				\cadenzaOn \override Stem #'transparent = ##t 
-				f4^"solo" g a bes s a s a2 g s2 a4^"tutti" g f e f s g s f s f2 \cadenzaOff
+				f4^"solo" g a bes a s a2 g s2 a4^"tutti" g f e f s g s f s f2 \cadenzaOff
 			}
 		}
 		\addlyrics {
