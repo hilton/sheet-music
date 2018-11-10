@@ -98,5 +98,11 @@ bass = \new Voice {
 		piece = \markup \larger \sans { Agnus Dei }
 	}
 	\layout {
+		ragged-right = ##f
+		ragged-last = ##f
+		\context {
+			\Score
+			proportionalNotationDuration = #(ly:make-moment 1 4)
+		}
 	}
 }

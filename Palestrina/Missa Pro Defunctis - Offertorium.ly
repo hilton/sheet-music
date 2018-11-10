@@ -1,10 +1,7 @@
-
 soprano = \new Voice {
 	\relative c'' {
-		R1 R1 g2 fis g2. g4 g2 g
-		#(define afterGraceFraction (cons 17 32)) \afterGrace a1 \parenthesize a2 
-		bes4. a8 g2 f1. bes2 ~
-		bes4 a8 g a4 bes4. a8 \afterGrace g2 \parenthesize g4 fis4 g2 r1 r1 r4 d'2 c4 a c2 
+		R1 R1 g2 fis g2. g4 g2 g 2 a2 a bes4. a8 g2 f1. bes2 ~
+		bes4 a8 g a4 bes4. a8 g4 g4 fis4 g2 r1 r1 r4 d'2 c4 a c2 
 		bes4 a2 f4. f8 g4 g a4. a8 g2 ~
 		g2 r4 f2 d4 f4. g8 a4 bes2 a4 bes2 r1 r c2 bes2. a4 g2 fis g bes 
 		
@@ -20,8 +17,8 @@ soprano = \new Voice {
 		bes4. bes8 g4 g c4. c8 a2 d4. c8 bes2 a4 g2 fis4 g1\fermata \showBarLine \bar "||"
 	}
 	\addlyrics {
-		Do -- _ _ mi -- ne Je -- \lyricLeft "-               su" Chri -- _ _ ste, 
-		Rex __ _ _ _ glo -- _ \lyricLeft "        ri" -- _ æ,
+		Do -- _ _ mi -- ne Je -- _ _ -- su Chri -- _ _ ste, 
+		Rex __ _ _ _ glo -- _ -- ri -- _ æ,
 		li -- be -- ra a --
 		ni -- mas om -- ni -- um fi -- de -- li -- um de -- func -- to -- _ _ _ _ rum
 		de -- poe -- nis in -- fer -- ni, et de pro -- fun -- do la -- _ _ _ cu: li --
@@ -163,7 +160,7 @@ bass = \new Voice {
 		
 		g4 f2 e4 d4. c8 bes4 c a2 g1 r r4 d'
 		g2. g4 fis g2 f!4 es d c c2 b4 c d es2 d4 d
-		e f g8 a bes2 a4 bes2 a g4 g f2 bes, r1
+		\ficta e! f g8 a bes2 a4 bes2 a g4 g f2 bes, r1
 		
 		d2 es4 d c es d2 c4 b c2 d es4. d8 c2 bes
 		g c4. c8 a2 d4. c8 bes4. a8 g a bes c d1 g,1\fermata
@@ -200,6 +197,12 @@ bass = \new Voice {
 		piece = \markup \larger \sans { Offertorium }
 	}
 	\layout {
+		ragged-right = ##f
+		ragged-last = ##f
+		\context {
+			\Score
+			proportionalNotationDuration = #(ly:make-moment 3 11)
+		}
 	}
 }
 
@@ -213,10 +216,10 @@ bass = \new Voice {
 soprano = \new Voice {
 	\relative c' {
 		f2 g bes2. a4 a2 f g bes a r f2 g4 bes2 a4 g2 f r4 a2 g4 a bes4 ~
-		bes8 a8 \afterGrace g2 \parenthesize g4 fis4
+		bes8 a8 g4 g4 fis4
 		g4 g8 a bes c d c bes4 a8 g a4 a2 g4 a2 fis g4 a bes4. a8 g4 fis
 		g2 g r4 g2 g4 a2 a4 g4 ~ 
-		g4 fis8 e fis4 g a4. a8 a4 c2 bes8 a bes4 a2 \afterGrace g \parenthesize g4 fis4 g2 r4 g f d f4. g8 a2 g
+		g4 fis8 e fis4 g a4. a8 a4 c2 bes8 a bes4 a2 g4 g4 fis4 g2 r4 g f d f4. g8 a2 g
 		g1 r4 bes a f a2 c4. bes8 a4 g f g4. f8 e d e2
 		d4 bes' a f a2 c4. bes8 a4 g a bes4. a8 g2 fis4 g1\fermata
 		\once \override Score.RehearsalMark #'self-alignment-X = #RIGHT
@@ -224,9 +227,9 @@ soprano = \new Voice {
 	}
 	\addlyrics {
 		Ho -- _ _ sti -- as et pre -- _ ces ti -- bi, Do -- _ mi -- ne,
-		lau -- dis of -- fe -- _ \lyricLeft "        ri" -- _ mus;
+		lau -- dis of -- fe -- _ _ -- ri -- _ mus;
 		tu __ _ _ _ _ _ _ _ _ _ su -- sci -- pe pro a -- ni -- ma -- _ _ bus il -- lis,
-		qua -- rum ho -- di -- e __ _ _ _ me -- mo -- ri -- am fa -- _ _ _ _ \lyricLeft "         ci" -- _ mus:
+		qua -- rum ho -- di -- e __ _ _ _ me -- mo -- ri -- am fa -- _ _ _ _ _ -- ci -- _ mus:
 		fac e -- _ as, __  _ Do -- mi -- ne, de mor -- te trans -- i -- _ _ re ad vi -- _ _ _ _ tam,
 		de mor -- te trans -- i -- _ _ re ad vi -- _ _ _ tam.
 	}
@@ -281,7 +284,7 @@ baritone = \new Voice {
 		g4 es4 d2 r4 g4. a8 bes c d1 c4 bes a2 d, g4 fis g2. a4
 		b c2 b4 c2 r2 r4 c2 bes4 a4. a8 a4 bes c4. c8 c4 a8 bes
 		c a d2 c4. \autoBeamOff bes8 \autoBeamOn bes a16 g a4 a g c bes g bes2 c4 d4. c8 
-			\afterGrace c2 \parenthesize c4 b4
+			c4 c4 b4
 		c2 r4 es d bes d2 c f, r1 r
 		r2 r4 bes a f a2 c4. bes8 a4 g bes2 a b1\fermata
 	}
@@ -290,7 +293,7 @@ baritone = \new Voice {
 		lau -- dis of -- fe -- ri -- mus;
 		tu __ _ _ _ su -- _ sci -- pe pro a -- ni -- ma -- bus il -- _ _ lis,
 		qua -- rum ho -- di -- e me -- mo -- ri -- am fa -- _ _ _ _ _ _ _ _ _ _ ci -- mus:
-		fac e -- as, Do -- _ _ _ \lyricLeft "       mi" -- _ ne, de mor -- te trans -- i -- re,
+		fac e -- as, Do -- _ _ _ _ mi -- _ ne, de mor -- te trans -- i -- re,
 		de mor -- te trans -- i -- _ _ re ad vi -- tam.
 	}
 }
@@ -307,6 +310,12 @@ baritone = \new Voice {
 		>>
 	>>
 	\layout {
+		ragged-right = ##f
+		ragged-last = ##f
+		\context {
+			\Score
+			proportionalNotationDuration = #(ly:make-moment 1 4)
+		}
 	}
 }
 
@@ -320,12 +329,11 @@ baritone = \new Voice {
 
 soprano = \new Voice {
 	\relative c'' {
-		g2 g g1 r r4 a bes a g a c8 bes a g
-		\afterGrace a2 \parenthesize a4 g4 bes a8 g g2 fis4 g1 r r2 f
+		g2 g g1 r r4 a bes a g a c8 bes a g a4 a4 g4 bes a8 g g2 fis4 g1 r r2 f
 		bes4. bes8 g4 g c4. c8 a2 d4. c8 bes2 a4 g2 fis4 g1\fermata \showBarLine \bar "||"
 	}
 	\addlyrics {
-		Quam o -- lim, Quam o -- _ lim __ _ A -- _ _ _ \lyricLeft "-     bra" -- hæ pro -- mi _ si -- _ sti,
+		Quam o -- lim, Quam o -- _ lim __ _ A -- _ _ _ _ -- bra -- hæ pro -- mi _ si -- _ sti,
 		et se -- mi -- ni, et se -- mi -- ni e -- _ _ _ _ _ ius.
 	}
 }
@@ -397,5 +405,11 @@ bass = \new Voice {
 		>>
 	>>
 	\layout {
+		ragged-right = ##f
+		ragged-last = ##f
+		\context {
+			\Score
+			proportionalNotationDuration = #(ly:make-moment 1 4)
+		}
 	}
 }

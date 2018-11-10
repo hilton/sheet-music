@@ -54,7 +54,6 @@ year = #(strftime "©%Y" (localtime (current-time)))
 	ragged-last = ##f
 	\context {
 		\Score
-		proportionalNotationDuration = #(ly:make-moment 1 4)
 		\override BarNumber #'self-alignment-X = #CENTER
 		\override BarNumber #'break-visibility = #'#(#f #t #t)
 		\override BarLine #'transparent = ##t
@@ -66,6 +65,10 @@ year = #(strftime "©%Y" (localtime (current-time)))
 		\remove "Span_bar_engraver"
 	}
 	\context {
+		\Staff
+		\consists "Custos_engraver"
+	}
+	\context {
 		\Voice
 		\override NoteHead #'style = #'baroque
 		\consists "Horizontal_bracket_engraver"
@@ -75,51 +78,15 @@ year = #(strftime "©%Y" (localtime (current-time)))
 
 \include "Missa Pro Defunctis - symbols.ly"
 
-
 \include "Missa Pro Defunctis - Introitus.ly"
-
 \include "Missa Pro Defunctis - Kyrie.ly"
-
 \include "Missa Pro Defunctis - Graudale.ly"
-
-\markup {
-	\column \larger {
-		\line \sans { Tractus }
-		\vspace #0.5
-		\line { Absolve, Domine, animas omnium fidelium defunctorum }
-		\line { ab omni vinculo delictorum et gratia tua illis succurente }
-		\line { mereantur evadere iudicium ultionis, et lucis æternae beatitudine perfrui. }
-		\vspace #2
-	}
-}
-
+\include "Missa Pro Defunctis - Tractus.ly"
 \include "Missa Pro Defunctis - Offertorium.ly"
-
 \include "Missa Pro Defunctis - Sanctus.ly"
-
 \include "Missa Pro Defunctis - Benedictus.ly"
-
 \include "Missa Pro Defunctis - Agnus Dei 1.ly"
-
 \include "Missa Pro Defunctis - Agnus Dei 2.ly"
-
-\pageBreak
-
+% \pageBreak
 \include "Missa Pro Defunctis - Agnus Dei 3.ly"
-
-\markup {
-	\column \larger {
-		\vspace #2
-		\line \bold { Communio }
-		\vspace #0.5
-		\line { Lux æterna luceat eis, Domine, }
-		\line { cum sanctis tuis in æternum, }
-		\line { quia pius es. }
-		\line { Requiem æternam dona eis, Domine; }
-		\line { et lux perpetua luceat eis; }
-		\line { cum Sanctis tuis in æternum, }
-		\line { quia pius es. }
-		\vspace #2
-		\line { Requiescat in pace. Amen. }
-	}
-}
+\include "Missa Pro Defunctis - Communio.ly"

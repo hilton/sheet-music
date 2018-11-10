@@ -33,13 +33,14 @@ alto = \new Voice {
 tenor = \new Voice {
 	\relative c' {
 		\clef "treble_8"
-		R1 R R g fis2 g g1 a2 r4 a a2 a2. g4 a f g2 a r1 r4 g a b c a g2 r4 g2 a b g2 a4. g8 \afterGrace g2 \parenthesize g4 fis4 g2 
+		R1 R R g fis2 g g1 a2 r4 a a2 a2 ~ 
+		a4 g4 a f g2 a r1 r4 g a b c a g2 r4 g2 a b g2 a4. g8 g4 g4 fis4 g2 
 		c1 a2 g c f, f g g1 a2 b g1 a2 a g1\fermata
 	}
 	\addlyrics {
 		A -- gnus __ _ De -- i,
 		qui tol -- lis pec -- ca -- ta mun -- di, pec -- ca -- ta mun -- _ di,
-		do -- na e -- is re -- _ \lyricLeft "        qui" -- _ em,
+		do -- na e -- is re -- _ _ qui -- _ em,
 		do -- na e -- is re -- qui -- em,
 		do -- na e -- is re -- qui -- em,
 	}
@@ -90,5 +91,11 @@ bass = \new Voice {
 		>>
 	>>
 	\layout {
+		ragged-right = ##f
+		ragged-last = ##f
+		\context {
+			\Score
+			proportionalNotationDuration = #(ly:make-moment 1 4)
+		}
 	}
 }

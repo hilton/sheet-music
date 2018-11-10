@@ -64,18 +64,18 @@ year = #(strftime "©%Y" (localtime (current-time)))
 			\relative c {
 				\clef "treble_8"
 				\cadenzaOn \override Stem #'transparent = ##t
-				f8^"solo" f g s4 f8 s4 f8 s4. f8^"tutti" g a s4 a8 g g f g s4 g2 f \breathe \bar ""
-				f8 g a s4 a8 g s4. a8 s4 a8 c a g \grace a bes a g s4. f8 s4 f8 g a g f g s4 g2 f s \showBarLine \bar "|"
-				a8 g s4. a8 g f s4. a8 s4 g8 a s4 g8 f s4 f2 \breathe \bar ""
-				a8 g s4 a s a8 c a g \grace a bes a g s4. f8 g a g f g s4 g2 f \showBarLine \bar "|"
-				f8^"solo" g s4. g8 f s4 g8 a s4. a8 a s4. a8 a s4. a8 s4. g4 a2 \breathe \bar ""
-				f8 s4. g8 s4 a8 s4. a8 a a s4. a8 a s4. a8 s4. g8 bes g a2 \showBarLine \bar "|"
-				f8^"tutti" s4 g8 a s4 a8 s4. a4 a a a a s4. a8 a2 \breathe \bar ""
-				a4 s a4 s a8 a s4. f8 s4 g8 a s4. g8 s4 f f2 \showBarLine \bar "|"
-				f8 f g s4 f8 s4 f8 s4.  \bar "" f8 g a s4 a8 g g f g s4 g2 f \breathe \bar ""
-				f8 g a s4 a8 g s4. a8 s4 a8 c a g \grace a bes a g s4. f8 s4 f8 g a g f g s4 g2 f \showBarLine \bar "|"
-				a8 g s4. a8 g f s4. a8 s4 g8 a s4 g8 f s4 f2 \breathe \bar ""
-				a8 g s4 a s a8 c a g \grace a bes a g s4. f8 g a g f g s4 g2 f \showBarLine \bar "||"
+				f8^"solo" f g s8 f8 s8 f8 s4 f8^"tutti" g a s8 a8 g g f g s8 g2 f \breathe
+				f8 g a s8 a8 g s4 a8 s8 a8 c a g \grace a bes a g s4 f8 s8 f8 g a g f g s8 g2 f s \showBarLine \bar "|"
+				a8 g s4 a8 g f s4 a8 s8 g8 a s8 g8 f s8 f2 \breathe \bar ""
+				a8 g s8 a s a8 c a g \grace a bes a g s4 f8 g a g f g s8 g2 f \showBarLine \bar "|"
+				f8^"solo" g s4 g8 f s8 g8 a s4 a8 a s4 a8 a s4 a8 s4 g4 a2 \breathe
+				f8 s4 g8 s8 a8 s4 a8 a a s4 a8 a s4 a8 s4 g8 bes g a2 \showBarLine \bar "|"
+				f8^"tutti" s8 g8 a s8 a8 s4 a4 a a a a s4 a8 a2 \breathe \bar ""
+				a4 s a4 s a8 a s4 f8 s8 g8 a s4 g8 s8 f f2 \showBarLine \bar "|"
+				f8 f g s8 f8 s8 f8 s4 f8 g a s8 a8 g g f g s8 g2 f \breathe
+				f8 g a s8 a8 g s4 a8 s8 a8 c a g \grace a bes a g s4 f8 s8 f8 g a g f g s8 g2 f \showBarLine \bar "|"
+				a8 g s4 a8 g f s4 a8 s8 g8 a s8 g8 f s8 f2 \breathe \bar ""
+				a8 g s8 a s a8 c a g \grace a bes a g s4 f8 g a g f g s8 g2 f \showBarLine \bar "||"
 		  }
 		}
 		\addlyrics {

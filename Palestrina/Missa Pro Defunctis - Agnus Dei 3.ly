@@ -34,8 +34,8 @@ tenor = \new Voice {
 	\relative c' {
 		\clef "treble_8" 
 		R1 R R R R R R g1 fis2 g 
-		g1 a1. r4 a4 a2 a2. g4 a f g2 a r4 a c2 a4 b c d2 
-		c4. \autoBeamOff b8 \autoBeamOn b a16 b c4 f, g2 r1 g2 a b g4 c2 e4 d1 c1 d 
+		g1 a1. r4 a4 a2 a2. g4 a f g2 a r4 a c2 a4 b c d4 ~ d4 
+		c4. \autoBeamOff b8 \autoBeamOn b a16 b c4 f, g2 r1 g2 a b g4 c2 e4 d1 c1 d2 ~ d2 
 		e2 e4 c2 c4 d2 b4 b a4 d, r d'4. c8 b2 a4 g a b2 c1 b1\fermata
 	}
 	\addlyrics {
@@ -55,7 +55,7 @@ baritone = \new Voice {
 		d1 cis2 d b a b g a b c c,4 d e f e2 r4 g8 a b c d2 a4 b2 
 		c4 c,8 d e f g2 f4 e2 d r d f d4 e f4. e8 d2 e4 a a2 a2. gis4 a f 
 		g1 a4 a c4. b8 a2 g4 b c2 r r1 r g2 e a1 
-		b2 c g g g g a1 g\breve ~ g1 ~ g1\fermata
+		b2 c g g g g a1 g\breve. ~ g1\fermata
 	}
 	\addlyrics {
 		A -- gnus __ _ De -- _ i, A -- _ gnus __ _ De -- _ _ _ i,
@@ -97,5 +97,11 @@ bass = \new Voice {
 		>>
 	>>
 	\layout {
+		ragged-right = ##f
+		ragged-last = ##f
+		\context {
+			\Score
+			proportionalNotationDuration = #(ly:make-moment 1 4)
+		}
 	}
 }

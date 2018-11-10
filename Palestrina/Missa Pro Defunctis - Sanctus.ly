@@ -1,12 +1,11 @@
-
 soprano = \new Voice {
 	\relative c'' {
 		R1 R R R R R a1 a2 gis 
-		a4. g!8 f e f2 e8 d e2 d8 e f g a1 r2 f1. g2 a a2. a4 a2
+		a4. g!8 f e f4 ~ f e8 d e2 d8 e f g a1 r2 f1. g2 a a2. a4 a2
 		a1 a a1. f2 g a r4 c4. c8 c4 b a a gis a1 
 		
 		f g a a c2 d4 g, e2 f4 f4. e16 d c4 d e f2 e4 a f d e8 d16 e f4 
-		e c'2 g bes f4. g8 a4. g8 f2 e8 d e2 f4 c' c c a2 f4 bes4. g8 a4 g c
+		e c'2 g4 ~ g4 bes2 f4. g8 a4. g8 f2 e8 d e2 f4 c' c c a2 f4 bes4. g8 a4 g c
 		c c a2 g e4. f8 
 		g2 c1 r4 a a f e f g2. d4 e4. f8 g2 r4 c4. b8 a g a4 a a2 fis1\fermata \showBarLine \bar "||"
 	}
@@ -55,12 +54,11 @@ tenor = \new Voice {
 	\relative c' {
 		\clef "treble_8" 
 		R1 R a1 a2 gis a4. g!8 f e f2 e8 d e2 d4 a'4. g8 a b c4 d b2 
-		r4 a2 d,4 a' bes a2 d, r4 f8 g a bes c4 c c4. bes8 a g f4. e8 d4 f2 e4 f2 a4. g8 f4 d a'2 ~ 
-		a2 r4 d4. d8 a4 c d e e, f4. g8 a2 r d2. d4 a c4. d8 e2 c4 b b a1 ~ 
-		
-		a2 r2 r4 e e c c'1. d2 e4 c4. b16 a b4 c2 r r2 r4 a f d e2 d r4 d 
+		r4 a2 d,4 a' bes a2 d, r4 f8 g a bes c4 c c4. bes8 a g f4. e8 d4 f2 e4 f2 a4. g8 f4 d a'1 
+		r4 d4 ~ d8 d8 a4 c d e e, f4. g8 a2 r d2. d4 a c4. d8 e2 c4 b b a1. r2 
+		r4 e e c c'1. d2 e4 c4. b16 a b4 c2 r r2 r4 a f d e2 d r4 d 
 		e f e4. f8 g2 d4. e8 f2 c1 r4 c' c c a2 f bes4. a8 g4 f c'2 a4. bes8 c d c2 b!4 c2 
-		r4 c c c a f2 d4. e8 f g a b c a b4 c2 b4 c2 r4 c c c a f f2 e d1\fermata
+		r4 c c c a f2 d4. \autoBeamOff e8 \autoBeamOn f g a b c a b4 c2 b4 c2 r4 c c c a f f2 e d1\fermata
 		
 	}
 	\addlyrics {
@@ -84,11 +82,10 @@ baritone = \new Voice {
 		f4. g8 a2 d, r f1. g2 a a bes bes a r4 a a4 d2 cis8 b 
 		cis2. d4 d,2 r r4 a'4. a8 d,4 f4. g8 a4 bes g4 g f2. a4. a8 e4 g a b e,4. d16 e f4 e e 
 		
-		d a' a f c'2 c r1 f,1 g a a1 a2 a a a2 ~ 
-		a2 g2 bes1 a2 a g1 f r r f g1 ~
+		d a' a f c'2 c r1 f,1 g a a1 a2 a a a1 g2 bes1 a2 a g1 f r r f g1 ~
 		g2 a2 a a a1
 		
-		g\breve a a1\fermata
+		g\breve a ~ a1\fermata
 	}
 	\addlyrics {
 		San -- ctus, __ _ San -- _ _ _ _ _ _ ctus, San -- _ _ _ _ _ _ _ _ ctus,
@@ -138,5 +135,11 @@ bass = \new Voice {
 		piece = \markup \larger \sans { Sanctus }
 	}
 	\layout {
+		ragged-right = ##f
+		ragged-last = ##f
+		\context {
+			\Score
+			proportionalNotationDuration = #(ly:make-moment 1 4)
+		}
 	}
 }
