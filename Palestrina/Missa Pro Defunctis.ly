@@ -2,7 +2,7 @@
 % Copyright ©2013 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "10"
+revision = "11"
 
 #(set-global-staff-size 15.0)
 
