@@ -68,6 +68,7 @@ year = #(strftime "©%Y" (localtime (current-time)))
 	}
 	\context {
 		\Staff
+    \consists "Ambitus_engraver"
 		\consists "Custos_engraver"
 		\override Custos.style = #'hufnagel
 	}
@@ -83,7 +84,7 @@ global = {
   \language "deutsch"
  	\key c \major
 	\time 2/1
-	\tempo 2 = 44
+	\tempo 1 = 60
 	\set Staff.midiInstrument = "Choir Aahs"
 	\accidentalStyle "forget"
 }
@@ -175,6 +176,7 @@ cantusprimus =  \relative c''
 % Triple time
   \showBarLine \bar "|" \time 3/1
 	\set Score.proportionalNotationDuration = #(ly:make-moment 4 3)
+	\tempo \breve. = 50
 	r\breve.
 %75
 	r\breve. |
@@ -201,8 +203,9 @@ cantusprimus =  \relative c''
 	r\breve.
 % End of triple time
   \showBarLine \bar "|" \time 2/1
-	\set Score.proportionalNotationDuration = #(ly:make-moment 7 10)
-        d1. d2
+	\set Score.proportione alNotationDuration = #(ly:make-moment 7 10)
+	\tempo 1 = 60
+  d1. d2
 %95
 	d1 e2 e~ |
 	e2 e g1
@@ -1843,332 +1846,332 @@ bassussecundus =  \relative c
 
 
 lyricscantusprimus = \lyricmode {
-	Sta -- bat Ma -- ter do -- lo -- ro -- sa
-        dum pen -- de -- bat Fi -- li -- us,
-        O quam tri -- stis et af -- fli -- cta
-        fu -- it il -- la be -- ne -- di -- cta
-        ma -- ter U -- ni -- ge -- ni -- ti!
-        et do -- le -- bat
-        cum vi -- de -- bat 
-        na -- ti poe -- nas in -- _ _ cly -- ti.
-        Quis est ho -- mo qui non fle -- _ _ ret,
-        in tan -- to sup -- pli -- _ _ ci -- o?
-        pi -- am ma -- trem con -- tem -- pla -- ri
-        Pro pec -- ca -- tis su -- ae gen -- tis
-        vi -- dit su -- um dul -- cem na -- tum
-        dum e -- mi -- sit spi -- ri -- tum
-        spi -- ri -- tum.
-        Me sen -- ti -- re vim do -- lo -- ris
-        fac, ut te -- cum lu -- ge -- am.
-        San -- cta Ma -- ter, i -- stud a -- gas,
-        cru -- ci -- fi -- xi fi -- ge pla -- gas
-        Tu -- i na -- ti vul -- ne -- ra -- ti,
-        tam di -- gna -- ti pro me pa -- ti,
-        poe -- nas me -- cum di -- _ _ vi -- de.
-        do -- nec e -- go vi -- xe -- ro.
-        Jux -- ta cru -- cem te -- _ _ _ cum sta -- re,
-        et me ti -- bi so -- ci -- a -- re __ _ _ _ 
-        in plan -- ctu de -- _ _ si -- de -- ro.
-        Vir -- go vir -- gi -- num prae -- cla -- ra,
-        mi -- hi jam non sis a -- ma -- ra,
-        fac __ _ _ me te -- cum plan -- _ _ ge -- re.
-        Fac, ut por -- tem Chri -- sti mor -- tem,
-        Fac me pla -- gis vul -- ne -- ra -- ri,
-        cru -- ce hac in -- e -- bri -- a -- ri
-        et cru -- o -- re Fi -- li -- i.
-        per te, vir -- go sim de -- fen -- sus
-        in di -- e ju -- _ _ _ di -- ci -- i.
-        mor -- te Chri -- sti prae -- mu -- ni -- ri,
-        con -- fo -- ve -- ri gra -- _ _ ti -- a.
-        fac, ut a -- ni -- mae do -- ne -- tur
-        pa -- ra -- di -- si glo -- ri -- a,
-        glo -- _ _ _ _ _ ri -- a.
-	}
+	Sta -- bat Ma -- ter do -- lo -- ró -- sa
+	dum pen -- dé -- bat Fí -- li -- us,
+	O quam tri -- stis et af -- flí -- cta
+	fu -- it il -- la be -- ne -- dí -- cta
+	ma -- ter U -- ni -- gé -- ni -- ti!
+	et do -- lé -- bat
+	cum vi -- dé -- bat 
+	na -- ti pœ -- nas in -- _ _ cly -- ti.
+	Quis est ho -- mo qui non fle -- _ _ ret,
+	in tan -- to sup -- plí -- _ _ ci -- o?
+	pi -- am ma -- trem con -- tem -- plá -- ri
+	Pro pec -- cá -- tis su -- æ gen -- tis
+	vi -- dit su -- um dul -- cem na -- tum
+	dum e -- mí -- sit spí -- ri -- tum,
+	spí -- ri -- tum.
+	Me sen -- tí -- re vim do -- ló -- ris
+	fac, ut te -- cum lú -- ge -- am.
+	San -- cta Ma -- ter, i -- stud a -- gas,
+	cru -- ci -- fí -- xi fi -- ge pla -- gas
+	Tu -- i na -- ti vul -- ne -- rá -- ti,
+	tam di -- gná -- ti pro me pa -- ti,
+	pœ -- nas me -- cum dí -- _ _ vi -- de.
+	do -- nec e -- go ví -- xe -- ro.
+	Jux -- ta cru -- cem te -- _ _ _ cum sta -- re,
+	et me ti -- bi so -- ci -- á -- re __ _ _ _ 
+	in plan -- ctu de -- _ _ sí -- de -- ro.
+	Vir -- go vír -- gi -- num præ -- clá -- ra,
+	mi -- hi jam non sis a -- má -- ra,
+	fac __ _ _ me te -- cum plán -- _ _ ge -- re.
+	Fac, ut por -- tem Chri -- sti mor -- tem,
+	Fac me pla -- gis vul -- ne -- rá -- ri,
+	cru -- ce hac in -- e -- bri -- á -- ri
+	et cru -- ó -- re Fí -- li -- i.
+	per te, vir -- go sim de -- fen -- sus
+	in di -- e ju -- _ _ _ di -- ci -- i.
+	mor -- te Chri -- sti prae -- mu -- ni -- ri,
+	con -- fo -- ve -- ri gra -- _ _ ti -- a.
+	fac, ut a -- ni -- mae do -- ne -- tur
+	pa -- ra -- di -- si glo -- ri -- a,
+	glo -- _ _ _ _ _ ri -- a.
+}
 
 
 lyricsaltusprimus = \lyricmode {
-	Sta -- bat Ma -- ter do -- lo -- ro -- sa
-        dum pen -- de -- bat Fi -- li -- us,
-        O __ _ _ quam tri -- stis et af -- fli -- cta
-        fu -- it il -- la be -- ne -- di -- cta
-        ma -- ter U -- ni -- ge -- ni -- ti!
-        et do -- le -- bat
-        cum vi -- de -- bat 
-        na -- ti poe -- _ _ nas in -- cly -- ti.
-        Quis est ho -- mo qui non fle -- ret,
-        in tan -- to sup -- pli -- ci -- o?
-        pi -- am ma -- trem con -- tem -- pla -- ri
-        Pro pec -- ca -- tis su -- ae gen -- tis
-        vi -- dit su -- um dul -- cem na -- tum
-        dum e -- mi -- sit spi -- ri -- tum __ _ _ _
-        spi -- ri -- tum.
-        Me sen -- ti -- re vim do -- lo -- ris
-        fac, ut te -- cum lu -- ge -- am.
-        San -- cta Ma -- ter, i -- stud a -- gas,
-        cru -- ci -- fi -- xi fi -- ge pla -- _ gas
-        Tu -- i na -- ti vul -- ne -- ra -- ti,
-        tam di -- gna -- ti pro me pa -- ti,
-        poe -- nas me -- cum di -- vi -- de.
-        do -- nec e -- go vi -- _ _ _ xe -- ro.
-        Jux -- ta cru -- cem te -- cum sta -- re,
-        et me ti -- bi so -- ci -- a -- re
-        in plan -- ctu de -- si -- _ _ de -- ro.
-        Vir -- go vir -- gi -- num prae -- cla -- ra,
-        mi -- hi jam non sis a -- ma -- ra,
-        fac me te -- cum plan -- _ _ ge -- re.
-        Fac, ut por -- tem Chri -- sti mor -- tem,
-        pas -- si -- o -- nis fac con -- sor -- tem,
-        et pla -- gas re -- co -- le -- re.
-        per te, vir -- go sim de -- fen -- sus
-        in di -- e ju -- di -- ci -- i.
-        mor -- te Chri -- _ _ sti prae -- mu -- ni -- ri,
-        con -- fo -- ve -- ri gra -- ti -- a.
-        fac, ut a -- ni -- mae do -- ne -- _ _ _ tur
-        pa -- ra -- di -- si glo -- ri -- a.
-	}
+	Sta -- bat Ma -- ter do -- lo -- ró -- sa
+	dum pen -- dé -- bat Fí -- li -- us,
+	O __ _ _ quam tri -- stis et af -- flí -- cta
+	fu -- it il -- la be -- ne -- dí -- cta
+	ma -- ter U -- ni -- gé -- ni -- ti!
+	et do -- lé -- bat
+	cum vi -- dé -- bat 
+	na -- ti pœ -- _ _ nas ín -- cly -- ti.
+	Quis est ho -- mo qui non fle -- ret,
+	in tan -- to sup -- plí -- ci -- o?
+	pi -- am ma -- trem con -- tem -- plá -- ri
+	Pro pec -- cá -- tis su -- æ gen -- tis
+	vi -- dit su -- um dul -- cem na -- tum
+	dum e -- mí -- sit spí -- ri -- tum, __ _ _ _
+	spí -- ri -- tum.
+	Me sen -- tí -- re vim do -- ló -- ris
+	fac, ut te -- cum lú -- ge -- am.
+	San -- cta Ma -- ter, i -- stud a -- gas,
+	cru -- ci -- fí -- xi fi -- ge pla -- _ gas
+	Tu -- i na -- ti vul -- ne -- rá -- ti,
+	tam di -- gná -- ti pro me pa -- ti,
+	pœ -- nas me -- cum dí -- vi -- de.
+	do -- nec e -- go vi -- _ _ _ xe -- ro.
+	Jux -- ta cru -- cem te -- cum sta -- re,
+	et me ti -- bi so -- ci -- á -- re
+	in plan -- ctu de -- sí -- _ _ de -- ro.
+	Vir -- go vír -- gi -- num præ -- clá -- ra,
+	mi -- hi jam non sis a -- má -- ra,
+	fac me te -- cum plán -- _ _ ge -- re.
+	Fac, ut por -- tem Chri -- sti mor -- tem,
+	pas -- si -- ó -- nis fac con -- sór -- tem,
+	et pla -- gas re -- có -- le -- re.
+	per te, vir -- go sim de -- fen -- sus
+	in di -- e ju -- di -- ci -- i.
+	mor -- te Chri -- _ _ sti prae -- mu -- ni -- ri,
+	con -- fo -- ve -- ri gra -- ti -- a.
+	fac, ut a -- ni -- mae do -- ne -- _ _ _ tur
+	pa -- ra -- di -- si glo -- ri -- a.
+}
 
 
 lyricstenorprimus = \lyricmode {
-	Sta -- bat Ma -- ter do -- lo -- ro -- sa
-        dum pen -- de -- bat Fi -- _ _ li -- us,
-        O __ _ quam tri -- stis et af -- fli -- cta
-        fu -- it il -- la be -- ne -- di -- cta
-        ma -- ter U -- ni -- ge -- ni -- ti!
-        et do -- le -- bat
-        cum vi -- de -- bat 
-        na -- ti poe -- _ _ nas in -- cly -- ti.
-        Quis est ho -- _ _ _ _ mo qui non fle -- _ _ ret,
-        in tan -- to sup -- pli -- _ _ _ _ _ ci -- o?
-        pi -- am ma -- trem con -- tem -- pla -- _ _ _ ri
-        Pro pec -- ca -- tis su -- ae gen -- tis
-        vi -- dit su -- um dul -- cem na -- tum
-        dum e -- mi -- sit spi -- ri -- tum
-        spi -- _ _ _ _ _ _ _ _ _ ri -- tum.
-        Me sen -- ti -- re vim do -- lo -- ris
-        fac, ut te -- cum lu -- ge -- am.
-        San -- cta Ma -- ter, i -- stud a -- gas,
-        cru -- ci -- fi -- xi fi -- ge pla -- gas
-        Tu -- i na -- ti vul -- ne -- ra -- ti,
-        tam di -- gna -- ti pro me pa -- _ _ _ _ _ _ ti,
-        poe -- nas me -- cum di -- _ _ vi -- de.
-        do -- nec e -- go __ _ _ vi -- xe -- ro.
-        Fac, ut por -- tem Chri -- sti mor -- tem,
-        pas -- si -- o -- nis fac con -- sor -- _ _ _ _ tem,
-        et pla -- gas re -- co -- le -- re.
-        Fac me pla -- gis vul -- ne -- ra -- ri,
-        cru -- ce hac in -- e -- bri -- a -- ri
-        et cru -- o -- re Fi -- li -- i.
-        per te, vir -- go sim de -- fen -- sus
-        in di -- e __ _ _ _ _ _ ju -- di -- ci -- i.
-        mor -- te Chri -- sti prae -- mu -- ni -- ri,
-        con -- fo -- ve -- ri gra -- _ _ ti -- a.
-        fac, ut a -- ni -- mae do -- ne -- _ _ _ _ tur
-        pa -- _ _ ra -- di -- si glo -- _ ri -- a.
-	}
+	Sta -- bat Ma -- ter do -- lo -- ró -- sa
+	dum pen -- dé -- bat Fí -- _ _ li -- us,
+	O __ _ quam tri -- stis et af -- flí -- cta
+	fu -- it il -- la be -- ne -- dí -- cta
+	ma -- ter U -- ni -- gé -- ni -- ti!
+	et do -- lé -- bat
+	cum vi -- dé -- bat 
+	na -- ti pœ -- _ _ nas ín -- cly -- ti.
+	Quis est ho -- _ _ _ _ mo qui non fle -- _ _ ret,
+	in tan -- to sup -- plí -- _ _ _ _ _ ci -- o?
+	pi -- am ma -- trem con -- tem -- plá -- _ _ _ ri
+	Pro pec -- cá -- tis su -- æ gen -- tis
+	vi -- dit su -- um dul -- cem na -- tum
+	dum e -- mí -- sit spí -- ri -- tum,
+	spi -- _ _ _ _ _ _ _ _ _ ri -- tum.
+	Me sen -- tí -- re vim do -- ló -- ris
+	fac, ut te -- cum lú -- ge -- am.
+	San -- cta Ma -- ter, i -- stud a -- gas,
+	cru -- ci -- fí -- xi fi -- ge pla -- gas
+	Tu -- i na -- ti vul -- ne -- rá -- ti,
+	tam di -- gná -- ti pro me pa -- _ _ _ _ _ _ ti,
+	pœ -- nas me -- cum dí -- _ _ vi -- de.
+	do -- nec e -- go __ _ _ ví -- xe -- ro.
+	Fac, ut por -- tem Chri -- sti mor -- tem,
+	pas -- si -- ó -- nis fac con -- sór -- _ _ _ _ tem,
+	et pla -- gas re -- có -- le -- re.
+	Fac me pla -- gis vul -- ne -- rá -- ri,
+	cru -- ce hac in -- e -- bri -- á -- ri
+	et cru -- ó -- re Fí -- li -- i.
+	per te, vir -- go sim de -- fen -- sus
+	in di -- e __ _ _ _ _ _ ju -- di -- ci -- i.
+	mor -- te Chri -- sti prae -- mu -- ni -- ri,
+	con -- fo -- ve -- ri gra -- _ _ ti -- a.
+	fac, ut a -- ni -- mae do -- ne -- _ _ _ _ tur
+	pa -- _ _ ra -- di -- si glo -- _ ri -- a.
+}
 
 
 lyricsbassusprimus = \lyricmode {
-	Sta -- bat Ma -- ter do -- lo -- ro -- sa
-        dum pen -- de -- bat Fi -- li -- us, __ _
-        O quam tri -- stis et af -- fli -- cta
-        fu -- it il -- la be -- ne -- di -- cta
-        ma -- ter U -- ni -- ge -- ni -- ti!
-        et do -- le -- bat
-        cum vi -- de -- bat 
-        na -- ti poe -- nas in -- cly -- ti.
-        Quis est ho -- mo qui non fle -- ret,
-        in tan -- to sup -- pli -- ci -- o? __ _
-        pi -- am ma -- trem con -- tem -- pla -- ri
-        Pro pec -- ca -- tis su -- ae gen -- tis
-        vi -- dit su -- um dul -- cem na -- tum
-        dum e -- mi -- sit spi -- ri -- tum
-        spi -- ri -- tum.
-        Me sen -- ti -- re vim do -- lo -- ris
-        fac, ut te -- cum lu -- ge -- am.
-        San -- cta Ma -- ter, i -- stud a -- gas,
-        cru -- ci -- fi -- xi fi -- ge pla -- gas
-        Tu -- i na -- ti vul -- ne -- ra -- ti,
-        tam di -- gna -- ti pro me pa -- _ _ ti,
-        poe -- nas me -- cum di -- vi -- de.
-        do -- nec e -- go vi -- xe -- ro.
-        Fac, ut por -- tem Chri -- sti mor -- tem,
-        pas -- si -- o -- nis fac con -- sor -- tem,
-        et pla -- gas re -- co -- le -- re.
-        per te, vir -- go sim de -- fen -- sus
-        in di -- e __ _ _ _ _ ju -- di -- ci -- i.
-        mor -- te Chri -- sti prae -- mu -- ni -- ri,
-        con -- fo -- ve -- ri gra -- _ _ ti -- a.
-        fac, ut a -- ni -- mae do -- ne -- _ _ _ _ tur
-        pa -- ra -- di -- si glo -- _ ri -- a.
-	}
+	Sta -- bat Ma -- ter do -- lo -- ró -- sa
+	dum pen -- dé -- bat Fí -- li -- us, __ _
+	O quam tri -- stis et af -- flí -- cta
+	fu -- it il -- la be -- ne -- dí -- cta
+	ma -- ter U -- ni -- gé -- ni -- ti!
+	et do -- lé -- bat
+	cum vi -- dé -- bat 
+	na -- ti pœ -- nas ín -- cly -- ti.
+	Quis est ho -- mo qui non fle -- ret,
+	in tan -- to sup -- plí -- ci -- o? __ _
+	pi -- am ma -- trem con -- tem -- plá -- ri
+	Pro pec -- cá -- tis su -- æ gen -- tis
+	vi -- dit su -- um dul -- cem na -- tum
+	dum e -- mí -- sit spí -- ri -- tum,
+	spí -- ri -- tum.
+	Me sen -- tí -- re vim do -- ló -- ris
+	fac, ut te -- cum lú -- ge -- am.
+	San -- cta Ma -- ter, i -- stud a -- gas,
+	cru -- ci -- fí -- xi fi -- ge pla -- gas
+	Tu -- i na -- ti vul -- ne -- rá -- ti,
+	tam di -- gná -- ti pro me pa -- _ _ ti,
+	pœ -- nas me -- cum dí -- vi -- de.
+	do -- nec e -- go ví -- xe -- ro.
+	Fac, ut por -- tem Chri -- sti mor -- tem,
+	pas -- si -- ó -- nis fac con -- sór -- tem,
+	et pla -- gas re -- có -- le -- re.
+	per te, vir -- go sim de -- fen -- sus
+	in di -- e __ _ _ _ _ ju -- di -- ci -- i.
+	mor -- te Chri -- sti prae -- mu -- ni -- ri,
+	con -- fo -- ve -- ri gra -- _ _ ti -- a.
+	fac, ut a -- ni -- mae do -- ne -- _ _ _ _ tur
+	pa -- ra -- di -- si glo -- _ ri -- a.
+}
 
 
 lyricscantussecundus = \lyricmode {
-	Jux -- ta cru -- cem la -- cry -- mo -- sa,
-        cu -- jus a -- ni -- mam ge -- men -- tem,
-        con -- tri -- sta -- tam et do -- len -- tem
-        per -- tran -- si -- vit __ _ _ _ gla -- di -- us.
-        O quam tri -- stis et af -- fli -- cta
-        Quae moe -- re -- bat
-        et tre -- me -- bat
-        na -- ti poe -- nas in -- cly -- ti. __ _ _
-        Chri -- sti ma -- trem si vi -- de -- ret
-        Quis non pos -- set con -- tri -- sta -- ri,
-        do -- len -- tem cum Fi -- li -- o?
-        vi -- dit Je -- sum in tor -- men -- tis,
-        et fla -- gel -- lis sub -- di -- tum;
-        mo -- ri -- en -- tem, de -- so -- la -- tum,
-        dum e -- mi -- sit spi -- ri -- tum.
-        E -- ja Ma -- ter, fons a -- mo -- ris,
-        Fac, ut ar -- de -- at cor me -- um
-        in a -- man -- do Chri -- stum De -- _ um,
-        ut si -- bi com -- pla -- ce -- am.
-        San -- cta Ma -- ter, i -- stud a -- gas,
-        cor -- di me -- o __ _ _ _ _ va -- li -- de.
-        Fac me te -- cum pi -- e fle -- re,
-        cru -- ci -- fi -- xo con -- do -- le -- re,
-        do -- nec e -- go vi -- xe -- ro.
-        Jux -- ta cru -- cem te -- _ _ _ cum sta -- re,
-        et me ti -- bi so -- ci -- a -- re __ _ _ _ _ _ 
-        in plan -- ctu de -- si -- _ _ de -- ro.
-        Vir -- go vir -- gi -- num prae -- cla -- ra,
-        mi -- hi jam non sis a -- ma -- ra,
-        fac me te -- cum __ _ plan -- ge -- re.
-        Fac, ut por -- tem Chri -- sti mor -- tem,
-        Fac me pla -- gis vul -- ne -- ra -- ri,
-        cru -- ce hac in -- e -- bri -- a -- ri
-        et cru -- o -- re Fi -- _ _ li -- i.
-        In -- flam -- ma -- tus et ac -- cen -- sus
-        Fac me cru -- ce cu -- sto -- di -- _ ri,
-        con -- fo -- ve -- ri gra -- _ _ ti -- a.
-        Quan -- do cor -- pus mo -- ri -- e -- tur,
-        pa -- ra -- di -- si glo -- ri -- a
-        glo -- _ _ ri -- a __ _ _ _
-        pa -- ra -- di -- si glo -- ri -- a.
-	}
+	Jux -- ta cru -- cem la -- cry -- mó -- sa,
+	cu -- jus á -- ni -- mam ge -- men -- tem,
+	con -- tri -- sta -- tam et do -- lén -- tem
+	per -- tran -- sí -- vit __ _ _ _ glá -- di -- us.
+	O quam tri -- stis et af -- flí -- cta
+	Quae mœ -- ré -- bat
+	et tre -- me -- bat
+	na -- ti pœ -- nas ín -- cly -- ti. __ _ _
+	Chri -- sti ma -- trem si vi -- dé -- ret
+	Quis non pos -- set con -- tri -- stá -- ri,
+	do -- lén -- tem cum Fí -- li -- o?
+	vi -- dit Jé -- sum in tor -- mén -- tis,
+	et fla -- gél -- lis súb -- di -- tum;
+	mo -- ri -- én -- tem, de -- so -- lá -- tum,
+	dum e -- mí -- sit spí -- ri -- tum.
+	E -- ja Ma -- ter, fons a -- mó -- ris,
+	Fac, ut ár -- de -- at cor me -- um
+	in a -- mán -- do Chri -- stum De -- _ um,
+	ut si -- bi com -- plá -- ce -- am.
+	San -- cta Ma -- ter, i -- stud a -- gas,
+	cor -- di me -- o __ _ _ _ _ vá -- li -- de.
+	Fac me te -- cum pi -- e fle -- re,
+	cru -- ci -- fí -- xo con -- do -- lé -- re,
+	do -- nec e -- go ví -- xe -- ro.
+	Jux -- ta cru -- cem te -- _ _ _ cum sta -- re,
+	et me ti -- bi so -- ci -- á -- re __ _ _ _ _ _ 
+	in plan -- ctu de -- sí -- _ _ de -- ro.
+	Vir -- go vír -- gi -- num præ -- clá -- ra,
+	mi -- hi jam non sis a -- má -- ra,
+	fac me te -- cum __ _ plán -- ge -- re.
+	Fac, ut por -- tem Chri -- sti mor -- tem,
+	Fac me pla -- gis vul -- ne -- rá -- ri,
+	cru -- ce hac in -- e -- bri -- á -- ri
+	et cru -- ó -- re Fí -- _ _ li -- i.
+	In -- flam -- ma -- tus et ac -- cen -- sus
+	Fac me cru -- ce cu -- sto -- di -- _ ri,
+	con -- fo -- ve -- ri gra -- _ _ ti -- a.
+	Quan -- do cor -- pus mo -- ri -- e -- tur,
+	pa -- ra -- di -- si glo -- ri -- a
+	glo -- _ _ ri -- a __ _ _ _
+	pa -- ra -- di -- si glo -- ri -- a.
+}
 
 
 lyricsaltussecundus = \lyricmode {
-	Jux -- ta cru -- cem la -- cry -- mo -- sa,
-        cu -- jus a -- ni -- mam ge -- men -- tem,
-        con -- tri -- sta -- tam et do -- len -- tem
-        et do -- _ _ len -- tem
-        per -- tran -- si -- _ _ _ _ vit gla -- di -- us.
-        O quam tri -- stis et af -- fli -- cta __ _ _
-        Quae moe -- re -- bat
-        et tre -- me -- bat
-        na -- ti poe -- nas __ _ _ in -- cly -- ti. __ _ _ _ _ _ _ _ _
-        Chri -- sti ma -- trem si vi -- de -- ret
-        Quis non pos -- set con -- tri -- sta -- ri,
-        do -- len -- tem cum Fi -- li -- o?
-        vi -- dit Je -- sum in tor -- men -- tis,
-        et fla -- gel -- lis sub -- di -- tum;
-        mo -- ri -- en -- tem, de -- so -- la -- tum,
-        dum e -- mi -- sit spi -- _ _ _ _ _ _ _ _ _ ri -- tum.
-        E -- ja Ma -- ter, fons a -- mo -- ris,
-        Fac, ut ar -- de -- at cor me -- um
-        in a -- man -- do Chri -- stum De -- um,
-        ut si -- bi com -- pla -- ce -- am.
-        San -- cta Ma -- ter, i -- stud a -- gas,
-        cor -- di me -- _ _ _ o va -- li -- de.
-        Fac me te -- cum pi -- e fle -- _ _ _ re,
-        cru -- ci -- fi -- xo con -- do -- le -- _ _ _ re,
-        do -- nec e -- go vi -- xe -- ro.
-        Fac, ut por -- tem Chri -- sti mor -- tem,
-        cru -- ce hac in -- e -- bri -- a -- ri
-        et cru -- o -- re __ _ _ Fi -- li -- i.
-        In -- flam -- ma -- tus et ac -- cen -- sus
-        Fac me cru -- _ _ ce cu -- sto -- di -- ri,
-        con -- fo -- ve -- ri __ _ _ gra -- ti -- a.
-        Quan -- do cor -- pus mo -- ri -- e -- tur,
-        pa -- ra -- di -- si glo -- ri -- a
-        glo -- _ _ ri -- a
-        pa -- ra -- di -- si glo -- ri -- a.
-	}
+	Jux -- ta cru -- cem la -- cry -- mó -- sa,
+	cu -- jus á -- ni -- mam ge -- men -- tem,
+	con -- tri -- sta -- tam et do -- lén -- tem
+	et do -- _ _ lén -- tem
+	per -- tran -- sí -- _ _ _ _ vit glá -- di -- us.
+	O quam tri -- stis et af -- flí -- cta __ _ _
+	Quae mœ -- ré -- bat
+	et tre -- me -- bat
+	na -- ti pœ -- nas __ _ _ ín -- cly -- ti. __ _ _ _ _ _ _ _ _
+	Chri -- sti ma -- trem si vi -- dé -- ret
+	Quis non pos -- set con -- tri -- stá -- ri,
+	do -- lén -- tem cum Fí -- li -- o?
+	vi -- dit Jé -- sum in tor -- mén -- tis,
+	et fla -- gél -- lis súb -- di -- tum;
+	mo -- ri -- én -- tem, de -- so -- lá -- tum,
+	dum e -- mí -- sit spi -- _ _ _ _ _ _ _ _ _ ri -- tum.
+	E -- ja Ma -- ter, fons a -- mó -- ris,
+	Fac, ut ár -- de -- at cor me -- um
+	in a -- mán -- do Chri -- stum De -- um,
+	ut si -- bi com -- plá -- ce -- am.
+	San -- cta Ma -- ter, i -- stud a -- gas,
+	cor -- di me -- _ _ _ o vá -- li -- de.
+	Fac me te -- cum pi -- e fle -- _ _ _ re,
+	cru -- ci -- fí -- xo con -- do -- lé -- _ _ _ re,
+	do -- nec e -- go ví -- xe -- ro.
+	Fac, ut por -- tem Chri -- sti mor -- tem,
+	cru -- ce hac in -- e -- bri -- á -- ri
+	et cru -- ó -- re __ _ _ Fí -- li -- i.
+	In -- flam -- ma -- tus et ac -- cen -- sus
+	Fac me cru -- _ _ ce cu -- sto -- di -- ri,
+	con -- fo -- ve -- ri __ _ _ gra -- ti -- a.
+	Quan -- do cor -- pus mo -- ri -- e -- tur,
+	pa -- ra -- di -- si glo -- ri -- a
+	glo -- _ _ ri -- a
+	pa -- ra -- di -- si glo -- ri -- a.
+}
 	
 
 lyricstenorsecundus = \lyricmode {
-	Jux -- ta cru -- cem la -- cry -- mo -- sa,
-        cu -- jus a -- ni -- mam ge -- men -- tem,
-        con -- tri -- sta -- tam et __ _ _ do -- len -- _ _ _ tem
-        per -- tran -- si -- vit gla -- di -- us.
-        O quam tri -- stis et af -- fli -- cta __ _ _ _ _ _ _
-        Quae moe -- re -- bat
-        et tre -- me -- bat
-        na -- ti poe -- nas in -- cly -- ti. __ _ _ _ _
-        Chri -- sti ma -- _ _ _ _ trem si vi -- de -- ret
-        Quis non pos -- set con -- tri -- sta -- _ ri,
-        do -- len -- tem cum Fi -- li -- o?
-        vi -- dit Je -- sum in tor -- men -- tis,
-        et fla -- gel -- lis sub -- di -- tum; __ _
-        mo -- ri -- en -- tem, de -- so -- la -- tum,
-        dum e -- mi -- sit spi -- ri -- tum
-        spi -- ri -- tum.
-        E -- ja Ma -- ter, fons a -- mo -- ris,
-        Fac, ut ar -- de -- at cor me -- um
-        in a -- man -- do Chri -- stum De -- um,
-        ut si -- bi __ _ _ com -- pla -- ce -- am.
-        San -- cta Ma -- ter, i -- stud a -- gas,
-        cor -- di me -- o __ _ _ _ _ _ _ va -- li -- de.
-        Fac __ _ _ me te -- cum pi -- e fle -- _ re,
-        cru -- ci -- fi -- xo con -- do -- le -- re,
-        do -- nec e -- go vi -- _ _ _ _ xe -- ro.
-        Jux -- ta cru -- cem te -- _ _ _ _ cum sta -- re,
-        in plan -- ctu de -- si -- de -- ro.
-        Vir -- go vir -- gi -- num prae -- cla -- ra,
-        mi -- hi jam non sis a -- ma -- ra,
-        fac me te -- cum plan -- ge -- re.
-        Fac, ut por -- tem Chri -- sti mor -- tem,
-        pas -- si -- o -- nis fac con -- sor -- tem,
-        et pla -- gas re -- co -- le -- re. __ _
-        In -- flam -- ma -- tus et ac -- cen -- sus
-        Fac me cru -- ce cu -- sto -- di -- ri,
-        con -- fo -- ve -- ri gra -- _ _ _ ti -- a.
-        Quan -- do cor -- pus mo -- ri -- e -- tur,
-        pa -- ra -- di -- _ _ si glo -- ri -- a
-        pa -- ra -- di -- _ _ _ _ si glo -- ri -- a.
-	}
+	Jux -- ta cru -- cem la -- cry -- mó -- sa,
+	cu -- jus á -- ni -- mam ge -- men -- tem,
+	con -- tri -- sta -- tam et __ _ _ do -- lén -- _ _ _ tem
+	per -- tran -- sí -- vit glá -- di -- us.
+	O quam tri -- stis et af -- flí -- cta __ _ _ _ _ _ _
+	Quae mœ -- ré -- bat
+	et tre -- me -- bat
+	na -- ti pœ -- nas ín -- cly -- ti. __ _ _ _ _
+	Chri -- sti ma -- _ _ _ _ trem si vi -- dé -- ret
+	Quis non pos -- set con -- tri -- stá -- _ ri,
+	do -- lén -- tem cum Fí -- li -- o?
+	vi -- dit Jé -- sum in tor -- mén -- tis,
+	et fla -- gél -- lis súb -- di -- tum; __ _
+	mo -- ri -- én -- tem, de -- so -- lá -- tum,
+	dum e -- mí -- sit spí -- ri -- tum,
+	spí -- ri -- tum.
+	E -- ja Ma -- ter, fons a -- mó -- ris,
+	Fac, ut ár -- de -- at cor me -- um
+	in a -- mán -- do Chri -- stum De -- um,
+	ut si -- bi __ _ _ com -- plá -- ce -- am.
+	San -- cta Ma -- ter, i -- stud a -- gas,
+	cor -- di me -- o __ _ _ _ _ _ _ vá -- li -- de.
+	Fac __ _ _ me te -- cum pi -- e fle -- _ re,
+	cru -- ci -- fí -- xo con -- do -- lé -- re,
+	do -- nec e -- go ví -- _ _ _ _ xe -- ro.
+	Jux -- ta cru -- cem te -- _ _ _ _ cum sta -- re,
+	in plan -- ctu de -- sí -- de -- ro.
+	Vir -- go vír -- gi -- num præ -- clá -- ra,
+	mi -- hi jam non sis a -- má -- ra,
+	fac me te -- cum plán -- ge -- re.
+	Fac, ut por -- tem Chri -- sti mor -- tem,
+	pas -- si -- ó -- nis fac con -- sór -- tem,
+	et pla -- gas re -- có -- le -- re. __ _
+	In -- flam -- ma -- tus et ac -- cen -- sus
+	Fac me cru -- ce cu -- sto -- di -- ri,
+	con -- fo -- ve -- ri gra -- _ _ _ ti -- a.
+	Quan -- do cor -- pus mo -- ri -- e -- tur,
+	pa -- ra -- di -- _ _ si glo -- ri -- a
+	pa -- ra -- di -- _ _ _ _ si glo -- ri -- a.
+}
 
 
 lyricsbassussecundus = \lyricmode {
-	Jux -- ta cru -- cem la -- cry -- mo -- sa,
-        cu -- jus a -- ni -- mam ge -- men -- tem, __ _
-        con -- tri -- sta -- tam et do -- len -- tem
-        per -- tran -- si -- vit gla -- di -- us.
-        O quam tri -- stis et af -- fli -- cta
-        Quae moe -- re -- bat
-        et tre -- me -- bat
-        na -- ti poe -- _ _ nas in -- cly -- ti.
-        Chri -- sti ma -- trem si vi -- de -- ret
-        Quis non pos -- set con -- tri -- sta -- ri,
-        do -- len -- tem cum Fi -- li -- o?
-        vi -- dit Je -- sum in tor -- men -- tis,
-        et fla -- gel -- lis sub -- di -- tum; __ _
-        mo -- ri -- en -- tem, de -- so -- la -- tum,
-        dum e -- mi -- sit spi -- ri -- tum. __ _
-        E -- ja Ma -- ter, fons a -- mo -- ris,
-        Fac, ut ar -- de -- at cor me -- um
-        in a -- man -- do Chri -- stum De -- um,
-        ut si -- bi __ _ _ com -- pla -- ce -- am.
-        San -- cta Ma -- ter, i -- stud a -- gas,
-        cor -- di me -- o va -- li -- de. __ _
-        Fac me te -- cum pi -- e fle -- re,
-        cru -- ci -- fi -- xo con -- do -- le -- re,
-        do -- nec e -- go vi -- xe -- ro.
-        Fac, ut por -- tem Chri -- sti mor -- tem,
-        et cru -- o -- re Fi -- li -- i.
-        In -- flam -- ma -- tus et ac -- cen -- sus
-        Fac me cru -- ce cu -- sto -- di -- ri,
-        con -- fo -- ve -- ri gra -- ti -- a.
-        Quan -- do cor -- pus mo -- ri -- e -- tur,
-        pa -- ra -- di -- si glo -- ri -- a __ _ _ _ _ _
-        pa -- ra -- di -- si glo -- ri -- a.
-	}
+	Jux -- ta cru -- cem la -- cry -- mó -- sa,
+	cu -- jus á -- ni -- mam ge -- men -- tem, __ _
+	con -- tri -- sta -- tam et do -- lén -- tem
+	per -- tran -- sí -- vit glá -- di -- us.
+	O quam tri -- stis et af -- flí -- cta
+	Quae mœ -- ré -- bat
+	et tre -- me -- bat
+	na -- ti pœ -- _ _ nas ín -- cly -- ti.
+	Chri -- sti ma -- trem si vi -- dé -- ret
+	Quis non pos -- set con -- tri -- stá -- ri,
+	do -- lén -- tem cum Fí -- li -- o?
+	vi -- dit Jé -- sum in tor -- mén -- tis,
+	et fla -- gél -- lis súb -- di -- tum; __ _
+	mo -- ri -- én -- tem, de -- so -- lá -- tum,
+	dum e -- mí -- sit spí -- ri -- tum. __ _
+	E -- ja Ma -- ter, fons a -- mó -- ris,
+	Fac, ut ár -- de -- at cor me -- um
+	in a -- mán -- do Chri -- stum De -- um,
+	ut si -- bi __ _ _ com -- plá -- ce -- am.
+	San -- cta Ma -- ter, i -- stud a -- gas,
+	cor -- di me -- o vá -- li -- de. __ _
+	Fac me te -- cum pi -- e fle -- re,
+	cru -- ci -- fí -- xo con -- do -- lé -- re,
+	do -- nec e -- go ví -- xe -- ro.
+	Fac, ut por -- tem Chri -- sti mor -- tem,
+	et cru -- ó -- re Fí -- li -- i.
+	In -- flam -- ma -- tus et ac -- cen -- sus
+	Fac me cru -- ce cu -- sto -- di -- ri,
+	con -- fo -- ve -- ri gra -- ti -- a.
+	Quan -- do cor -- pus mo -- ri -- e -- tur,
+	pa -- ra -- di -- si glo -- ri -- a __ _ _ _ _ _
+	pa -- ra -- di -- si glo -- ri -- a.
+}
 
 
 
 \score {
-	\transpose c c {
+	\transpose c b, {
 		\new StaffGroup << 
 			\new Staff << \global \set Staff.instrumentName = #"S1" \set Staff.shortInstrumentName = #"S1" 
 	      \new Voice="v1" { \cantusprimus \showBarLine \bar "|." }
@@ -2207,5 +2210,5 @@ lyricsbassussecundus = \lyricmode {
 	\header {
 	}
 	\layout { }
-%	\midi {	}
+	\midi {	}
 }
