@@ -2,7 +2,7 @@
 % Copyright ©2018 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "2"
+revision = "3"
 
 #(set-global-staff-size 15.0)
 
@@ -101,7 +101,7 @@ cantusprimus =  \relative c''
 %5
 	r\breve |
 	r\breve
-	r1 r2 e'1 d2 c h2 ~ h a1 \ficta gis2
+	r1 r2 e'1 d2 c h2 ~ \break h a1 \ficta gis2
 %10
 	a1 r |
 	r\breve
@@ -203,11 +203,11 @@ cantusprimus =  \relative c''
 	r\breve.
 % End of triple time
   \showBarLine \bar "|" \time 2/1
-	\set Score.proportione alNotationDuration = #(ly:make-moment 7 10)
+	\set Score.proportiontoalNotationDuration = #(ly:make-moment 7 10)
 	\tempo 1 = 60
   d1. d2
 %95
-	d1 e2 e~ |
+	d1 e2 e~ | \break
 	e2 e g1
 	f2 c1 c2
 	c1 h2 c1 c2 c1
@@ -215,7 +215,7 @@ cantusprimus =  \relative c''
 	h\breve |
 	r\breve
 	r\breve
-	r\breve
+	r\breve \break
 	r2 d e e1
 %105
 	d2 c c |
@@ -224,7 +224,7 @@ cantusprimus =  \relative c''
 	a1 gis2 h
 %110
 	c2 d1 c2 |
-	h4 a a1 gis2
+	h4 a a1 gis2 \break
 	a1 r
 	r\breve
 	r\breve
@@ -233,7 +233,7 @@ cantusprimus =  \relative c''
 	r\breve
 	r\breve
 	r2 f'1 e2
-	e1 d
+	e1 d \break
 %120
 	d1. d2 |
 	d1 r
@@ -258,7 +258,7 @@ cantusprimus =  \relative c''
 	b2. a4 g2 g |
 	a1 r
 	c1. c2
-	c1 g2 h2 ~ h d2 d1
+	c1 g2 h2 ~ \break h d2 d1
 %145
 	cis1 r |
 	r\breve
@@ -274,7 +274,7 @@ cantusprimus =  \relative c''
 	d2 c1 c2 |
 	h1 c2 d1 c2 h1
 	h2 c1 c2
-	h1 a1 ~
+	h1 a1 ~ \break
 %160
 	a1 a2. a4 |
 	a1 r
@@ -293,7 +293,7 @@ cantusprimus =  \relative c''
 	f2 f1 e2
 	d1 cis2 d1 cis2 r a
 %175
-	d2 d1 c2 |
+	d2 d1 c2 | \break
 	h4 g g'1 d2
 	e1 r
 	r\breve
@@ -301,20 +301,18 @@ cantusprimus =  \relative c''
 %180
 	r2 h1 a2 |
 	g1 g2 g1 g2 g1
-	g1 r
+	g1 r \break
 	r\breve
 %185
 	r\breve |
 	r2 f'1 e2
 	d2 c d e
-	f2 e2. d4 d2~
-	d2 cis4 h cis2 cis
+	f2 e2. d4 d1 cis4 h cis2 cis
 %190
 	d\longa |
-	}
+}
 
-altusprimus =  \relative c' 
-        {
+altusprimus =  \relative c' {
 	e1 g
 	a1 a2 g1 a2 g1
 	e1 r
@@ -499,8 +497,7 @@ altusprimus =  \relative c'
 	e2 e1 d2 |
 	e2 \ficta gis a1
 	d,2 e g f
-	e\breve~
-	e1 r
+	e\breve. r1
 %170
 	r\breve |
 	r1 r2 a1 d,2 a'2. g4
@@ -978,8 +975,7 @@ cantussecundus =  \relative c''
 	r2 cis1 cis2 |
 	d2. d4 f2 e
 	d\breve
-	c\breve~
-	c1 r2 f1
+	c\breve. r2 f1
 %15
 	e2 d c |
 	d2 d b1
@@ -1173,10 +1169,9 @@ cantussecundus =  \relative c''
 	e2 e a,2. a4
 %190
 	a\longa |
-	}
+}
 
-altussecundus =  \relative c'
-	{
+altussecundus =  \relative c' {
 	r\breve
 	r\breve
 	r\breve
@@ -1545,8 +1540,8 @@ tenorsecundus =  \relative c'
 	c1 g2 c4 d
 	e4 f g1 e2
 %125
-	d1 c~ |
-	c\breve
+	d1 
+	c\breve.
 	r\breve
 	r\breve
 	r1 g'
@@ -2055,7 +2050,7 @@ lyricsaltussecundus = \lyricmode {
 	Jux -- ta cru -- cem la -- cry -- mó -- sa,
 	cu -- jus á -- ni -- mam ge -- men -- tem,
 	con -- tri -- sta -- tam et do -- lén -- tem
-	et do -- _ _ lén -- tem
+	et do -- _ lén -- _ tem
 	per -- tran -- sí -- _ _ _ _ vit glá -- di -- us.
 	O quam tri -- stis et af -- flí -- cta __ _ _
 	Quae mœ -- ré -- bat
