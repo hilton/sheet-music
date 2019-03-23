@@ -16,10 +16,10 @@
 				g8^"solo" s g8 c   c s4 c8 s b d e c c a s c a a g a g c c a c g g f2 \showBarLine \bar "|"
 				g8 s g s g s a2 g8 a \grace b c s g a g f s f2 \breathe \bar ""
 				f2^"tutti" a8 \grace b c d s c s c b c a g g g a g g f g2 \breathe
-				c8 c c d c b a a g a c b a g g a f2 \breathe a8 \grace b c b a b a a g2 \showBarLine \bar "|"
+				c8 c c d c b a a g a c b a g g a f2 \breathe a8 \grace b c b a b a a g2 \showBarLine \bar "||"
     }
 		\addlyrics {
-			Ab -- sól -- _ _ _  ve, __ _ _ _ Dó -- _ _ _ mi -- ne, __ _ _ _ _ _ 
+			Ab -- sól -- _ _ _ _ _ ve, __ _ Dó -- _ _ _ mi -- ne, __ _ _ _ _ _ 
 			á -- _ ni -- mas óm -- ni -- um fi -- dé -- _ li -- um 
 			de -- func -- tó -- _ _ _ _ _ rum __ _ _ _ _ _ _ _ _ _ _ _ _
 			ab óm -- _ ni __ _ _ vín -- _ _ _ cu -- lo 

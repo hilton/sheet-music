@@ -45,7 +45,7 @@ tenor = \new Voice {
 	\addlyrics {
 		Be -- ne -- _ di -- ctus qui ve -- _ _ nit __ _ _ _ in no -- mi -- ne Do -- mi -- ni,
 		in no -- mi -- ne Do -- _ _ _ _ _ _ mi -- ni.
-		Ho -- san -- na in ex -- cel -- _ sis, __ _ in ex -- _ _ _ cel -- _ sis,
+		Ho -- san -- na in ex -- cel -- _ _ sis, in ex -- _ _ _ cel -- _ sis,
 		Ho -- san -- na in ex -- cel -- _ _ _ _ _ _ _ _ _ _ sis,
 		Ho -- san -- na in ex -- cel -- _ _ _ _ _ sis.
 	}

@@ -51,7 +51,7 @@ baritone = \new Voice {
 		\relative c' {
 		\clef "treble_8" 
 		R1 R R R r2 c1 b2 c d4. c8 b4 c4. b8 a g a2 g 
-		r1 r r4 a4 d, d'4. c8 b a b4 g4. fis8 fis4 g2. f4 e2 d4 d a'2 a4 d4. cis8 cis4 
+		r1 r r4 a4 d, d'4. c8 b a b4 g4. fis8 fis4 g2. \ficta f!4 e2 d4 d a'2 a4 d4. cis8 cis4 
 		d2 c! b a4 a e'2 c4 e2 a,2 d c4 b e c d b2 a1 r4 c2 bes4 
 		a g a4. g8 f4 g a2 b r4 c2 b4 a2 g2 r4 c c c2 b4 a2. a4 g1\fermata
 	}

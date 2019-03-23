@@ -17,8 +17,8 @@ soprano = \new Voice {
 		bes4. bes8 g4 g c4. c8 a2 d4. c8 bes2 a4 g2 fis4 g1\fermata \showBarLine \bar "||"
 	}
 	\addlyrics {
-		Do -- _ _ mi -- ne Je -- _ _ -- su Chri -- _ _ ste, 
-		Rex __ _ _ _ glo -- _ -- ri -- _ æ,
+		Do -- _ _ mi -- ne Je -- _ -- su Chri -- _ _ ste, 
+		Rex __ _ _ _ glo -- _ _ -- ri -- _ æ,
 		li -- be -- ra a --
 		ni -- mas om -- ni -- um fi -- de -- li -- um de -- func -- to -- _ _ _ _ rum
 		de -- poe -- nis in -- fer -- ni, et de pro -- fun -- do la -- _ _ _ cu: li --
@@ -27,7 +27,7 @@ soprano = \new Voice {
 		sed sig -- ni -- fer san -- ctus Mi -- cha -- el
 		re -- præ -- sen -- tet e -- as
 		in lu -- cem san -- _ _ _ ctam.
-		Quam o -- lim A -- bra -- hæ pro -- _ mi -- _ si -- _ sti,
+		Quam o -- lim A -- bra -- hæ pro -- mi -- si -- _ _ _ sti,
 		et se -- mi -- ni, et se -- mi -- ni e -- _ _ _ _ _ ius.
 	}
 }
@@ -47,7 +47,7 @@ alto = \new Voice {
 		a4 a a g d'2. c4 c2 bes4 g g'4. g8 f4 d 2 es4 d d
 		d2 r1 r es2. d4 c a g8 a bes c d4 a
 		r f' d d f2 f  r4 c d4. e8 f2 d4 f g f e!8 f g2 
-		fis4 g f es c d2 g, r4 g'2 f4 es1 d2
+		fis4 g \ficta f! es c d2 g, r4 g'2 f4 es1 d2
 		d4 g2 e4 e2 f4. e8 d\breve d1\fermata
 	}
 	\addlyrics {
@@ -340,8 +340,8 @@ soprano = \new Voice {
 
 alto = \new Voice {
 	\relative c' {
-		d2 es4 d c es d2 d4. d8 g2 fis r4 f g f e8 f g2 
-		fis4 g f es c d2 g, r4 g'2 f4 es1 d2
+		d2 es4 d c es d2 d4. d8 g2 fis r4 \ficta f! g f e8 f g2 
+		fis4 g \ficta f! es c d2 g, r4 g'2 f4 es1 d2
 		d4 g2 e4 e2 f4. e8 d\breve d1\fermata
 	}
 	\addlyrics {
@@ -387,8 +387,8 @@ bass = \new Voice {
 		g c4. c8 a2 d4. c8 bes4. a8 g a bes c d1 g,1\fermata
 	}
 	\addlyrics {
+		Quam o -- lim A -- bra -- hæ pro -- mi -- si -- sti, 
 		Quam o -- lim A -- bra -- hæ pro -- mi -- si -- sti, pro -- mi -- si -- sti,
-		Quam o -- lim A -- bra -- hæ pro -- mi -- si -- sti,
 		et se -- mi -- ni e -- _ _ _ _ _ _ _ _ ius.
 	}
 }

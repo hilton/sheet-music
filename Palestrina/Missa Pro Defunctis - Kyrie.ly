@@ -6,6 +6,7 @@
 				\clef "treble_8"
 				\cadenzaOn \override Stem #'transparent = ##t 
 				f4^"solo" g a bes s a s a2 g s4 a4 g f e f s g s f s f2 \cadenzaOff
+				\showBarLine \bar "|"
 			}
 		}
 		\addlyrics {
@@ -121,6 +122,7 @@ basslyrics = \new Lyrics \lyricsto "bass" {
 				\clef "treble_8"
 				\cadenzaOn \override Stem #'transparent = ##t 
 				f4^"solo" g a bes a s a2 g s4 a4 g f e f s g s f s f2 \cadenzaOff
+				\showBarLine \bar "|"
 			}
 		}
 		\addlyrics {
@@ -245,6 +247,7 @@ basslyrics = \new Lyrics \lyricsto "bass" {
 				\clef "treble_8"
 				\cadenzaOn \override Stem #'transparent = ##t 
 				f4^"solo" g a bes s a s a2 g s4 a4 g f e f s g s f s f2 \cadenzaOff
+				\showBarLine \bar "|"
 			}
 		}
 		\addlyrics {
@@ -259,7 +262,7 @@ basslyrics = \new Lyrics \lyricsto "bass" {
 soprano = \new Voice {
 	\relative c'' {
 		R1 R R c2. f,4 f2 c'
-		bes c d2. c4 bes a g2 ~ g4 f4 a2. a4 g2 r c f, f f1 g2. g4 a1\fermata 
+		bes c d2. c4 bes a g2. f4 a2. a4 g2 r c f, f f1 g2. g4 a1\fermata 
 			\showBarLine \bar "||"
 	}
 	\addlyrics {
@@ -286,7 +289,7 @@ tenor = \new Voice {
 	\relative c' {
 		\clef "treble_8" 
 		R1 c2. f,4 f2 bes2. a8 g a bes c2 bes4 c2
-		d4 g,2 a4 bes2. a4 g f c'2 ~ c r4 c2 c4 c,2
+		d4 g,2 a4 bes2. a4 g f c'1 r4 c2 c4 c,2
 		f g4 a bes4. a8 f g a4 d,8 e f g a bes c d c2. c4 c1\fermata
 	}
 	\addlyrics {
@@ -313,7 +316,7 @@ bass = \new Voice {
 	\relative c {
 		\clef "bass"
 		R1 r2 f2. bes,4 bes2 f'1 d2 c g c bes r2
-		r2 r4 c4 ~ c f,4 f2. f'2 e4 d2 c bes2. a4 bes2 f c'2. c4 f,1\fermata
+		r2 r4 c2 f,4 f2. f'2 e4 d2 c bes2. a4 bes2 f c'2. c4 f,1\fermata
 	}
 	\addlyrics {
 		Ky -- ri -- e e -- _ _

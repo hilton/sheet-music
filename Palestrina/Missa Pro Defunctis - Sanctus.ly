@@ -79,8 +79,8 @@ baritone = \new Voice {
 		\relative c' {
 		\clef "treble_8" 
 		a1 a2 gis a4. g!8 f e f2 e8 d e2 f4. g8 a4 bes a2. g4 f4. e8 d2 a' r4 e 
-		f4. g8 a2 d, r f1. g2 a a bes bes a r4 a a4 d2 cis8 b 
-		cis2. d4 d,2 r r4 a'4. a8 d,4 f4. g8 a4 bes g4 g f2. a4. a8 e4 g a b e,4. d16 e f4 e e 
+		f4. g8 a2 d, r f1. g2 a a bes bes a r4 a2 d2 cis8 b 
+		cis2. d4 d,2 r r4 a'4. a8 d,4 f4. g8 a4 bes g4 g f2. a4. a8 e4 g a \ficta b! e,4. d16 e f4 e e 
 		
 		d a' a f c'2 c r1 f,1 g a a1 a2 a a a1 g2 bes1 a2 a g1 f r r f g1 ~
 		g2 a2 a a a1
@@ -90,7 +90,7 @@ baritone = \new Voice {
 	\addlyrics {
 		San -- ctus, __ _ San -- _ _ _ _ _ _ ctus, San -- _ _ _ _ _ _ _ _ ctus,
 		San -- _ _ _ ctus, San -- ctus, __ _ San -- _ ctus, __ _
-		Do -- _ _ _ _ _ mi -- nus, Do -- mi -- nus De -- _ _ us Sa -- ba -- oth,
+		Do -- _ _ _ _ mi -- nus, Do -- mi -- nus De -- _ _ us Sa -- ba -- oth,
 		Do -- mi -- nus De -- _ us Sa -- _ _ _ _ ba -- oth.
 		Ple -- ni sunt cæ -- li, ple -- ni sunt cæ -- li et ter -- ra __ _ glo -- ri -- a tu -- a,
 		Ho -- san -- na in ex -- cel -- _ sis. __ _

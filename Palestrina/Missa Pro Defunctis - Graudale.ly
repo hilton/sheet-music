@@ -24,10 +24,7 @@
 				c8 c s8 c8 s8 c8 s8 c8 s c8 s8 c8 d s4 d8 c b g a c b g4 a2 c \breathe
 				b8 d e c a s8 a8 c a g a c c a c c b a c g g f2 \showBarLine \bar "|"
 				f8^"tutti" g a c b a b s4 g8 a s8 c8 a c2 d8 s8 d2 e8 c b4 c2 d \breathe
-				g,8 a c c e d c b a \grace b c4 a2^"D.C. al Fine" \showBarLine \bar "|" 
-%        \once \override Score.RehearsalMark.break-visibility = #end-of-line-visible
-%        \once \override Score.RehearsalMark.self-alignment-X = #RIGHT
-%				\mark "D.C. al Fine"
+				g,8 a c c e d c b a \grace b c4 a2^"D.C. al Fine" \showBarLine \bar "||" 
     }
 		\addlyrics {
 		  Ré -- _ _ qui -- em æ -- tér -- _ _ _ _ _ _ _ _ _ nam dó -- _ _ _ _ na __ _ _ é -- is, __ _ _ _ _
