@@ -51,7 +51,7 @@ year = #(strftime "©%Y" (localtime (current-time)))
 	ragged-last = ##f
 	\context {
 		\Score
-%		proportionalNotationDuration = #(ly:make-moment 1 1)
+		proportionalNotationDuration = #(ly:make-moment 1 2)
 		\override BarNumber #'self-alignment-X = #CENTER
 		\override BarNumber #'break-visibility = #'#(#f #t #t)
 		\override BarLine #'transparent = ##t
@@ -75,6 +75,30 @@ year = #(strftime "©%Y" (localtime (current-time)))
 	}
 }
 
+chantLayout = \layout {
+	ragged-right = ##t
+  \context {
+    \Score
+    \remove "Bar_number_engraver"
+  }
+  \context {
+    \Staff
+    \remove "Time_signature_engraver"
+    instrumentName = #"T"
+    clefTransposition = #-7
+    middleCPosition = #1
+  }
+  \context {
+    \Voice
+    \override Stem #'transparent = ##t
+  }
+  \context {
+    \Lyrics
+    \override LyricSpace.minimum-distance = #2.0
+    \override LyricHyphen.minimum-distance = #2.0
+  }
+}
+
 global = { 
 	\time 2/1
 	\tempo 1 = 40
@@ -82,32 +106,33 @@ global = {
 	\accidentalStyle "forget"
 }
 
+lyricLeft = { \once \override LyricText.self-alignment-X = #LEFT }
 showBarLine = { \once \override Score.BarLine #'transparent = ##f }
 ficta = { \once \set suggestAccidentals = ##t \override AccidentalSuggestion #'parenthesized = ##f }
 
 mezzo = \new Voice {
   \relative c'' {
-    c2. c4 c2 c b1 c2 e1 d c b2 c1
-    d2 d4 d d2 d2. d4 d d
+    c2. c4 c2 c b1 c2 e1 d c b2 c1 \break
+    r4 d d4 d d2 d2. d4 d d
     e1. d2 c1 b c b\breve \showBarLine \bar "|"
   }
   \addlyrics {
     \set stanza = #"1. "
     Mi -- se -- ré -- re me -- i De -- _ _ _ us:
-    sé -- cun -- dum mag -- nam mi -- se -- ri -- cór -- di -- am tu -- _ am.
+    se -- cún -- dum mag -- nam mi -- se -- ri -- cór -- di -- am tu -- _ am.
   }
 }
 
 alto = \new Voice {
   \relative c'' {
     a2. a4 a2 a g\breve a1 g\breve g1
-    g2 g4 g g2 g2. g4 g g
+    r4 g g4 g g2 g2. g4 g g
     g1. f2 e1 e\breve e
   }
   \addlyrics {
     \set stanza = #"1. "
     Mi -- se -- ré -- re me -- i De -- us:
-    sé -- cun -- dum mag -- nam mi -- se -- ri -- cór -- di -- am tu -- am.
+    se -- cún -- dum mag -- nam mi -- se -- ri -- cór -- di -- am tu -- am.
   }
 }
 
@@ -115,13 +140,13 @@ tenorA = \new Voice {
   \relative c' {
 		\clef "treble_8"
 		e2. e4 e2 e e1 e f1. e2 d1 e
-		d2 d4 d d2 d2. d4 d d
+		r4 d d4 d d2 d2. d4 d d
 		g,1 b2. b4 e,1. b'1 a gis4 fis gis1
   }
   \addlyrics {
     \set stanza = #"1. "
     Mi -- se -- ré -- re me -- i De -- _ _ us:
-    sé -- cun -- dum mag -- nam mi -- se -- ri -- cór -- _ di -- am tu -- _ _ _ am.
+    se -- cún -- dum mag -- nam mi -- se -- ri -- cór -- _ di -- am tu -- _ _ _ am.
   }
 }
 
@@ -129,13 +154,13 @@ tenorB = \new Voice {
   \relative c' {
 		\clef "treble_8"
 		a2. a4 a2 a b g1 c2. b4 a2 b c d g, g1
-		b2 b4 b b2 b2. b4 b b
+		r4 b b4 b b2 b2. b4 b b
 		b1. d2 g, a1 gis2 a1 b\breve
   }
   \addlyrics {
     \set stanza = #"1. "
     Mi -- se -- ré -- re me -- i De -- _ _ _ _ _ _ us:
-    sé -- cun -- dum mag -- nam mi -- se -- ri -- cór -- di -- am tu -- _ _ am.
+    se -- cún -- dum mag -- nam mi -- se -- ri -- cór -- di -- am tu -- _ _ am.
   }
 }
 
@@ -143,13 +168,13 @@ bass = \new Voice {
   \relative c {
 		\clef "bass"
 		a2. a4 a2 a e'1 c f g\breve c,1
-		g'2 g4 g g2 g2. g4 g g
+		r4 g' g4 g g2 g2. g4 g g
 		e1 b c e a, e'\breve
   }
   \addlyrics {
     \set stanza = #"1. "
     Mi -- se -- ré -- re me -- i De -- _ us:
-    sé -- cun -- dum mag -- nam mi -- se -- ri -- cór -- di -- am tu -- _ am.
+    se -- cún -- dum mag -- nam mi -- se -- ri -- cór -- di -- am tu -- _ am.
   }
 }
 
@@ -170,27 +195,19 @@ bass = \new Voice {
 
 \score {
 	\new Staff <<
-		\set Staff.instrumentName = #"B"
-		\key g \major
-	  \time 2/1
 		\new Voice {
-			\relative c {
-			  \clef "bass" e\breve e \showBarLine \bar "|"
+			\relative c' {
+			  \cadenzaOn c\breve c4 d c s2
+			  c\breve c4 b g a s \showBarLine \bar "|"
 			}
 		}
     \addlyrics {
       \set stanza = #"2. "
-      \override LyricText.self-alignment-X = #LEFT
-			"Et secúndum multitudinem miseratiónem tuárum:" "dele inituitátem meam."
+			\lyricLeft "Et secúndum multitudinem miseratiónem" tu -- á -- rum:
+			\lyricLeft "dele iniqui" -- tá -- tem me -- am.
 		}
 	>>
-	\layout {
-		ragged-right = ##t
-    \context {
-      \Score
-      \remove "Bar_number_engraver"
-    }
-	}
+	\layout { \chantLayout }
 }
 
 sopranoA = \new Voice {
@@ -202,7 +219,7 @@ sopranoA = \new Voice {
   }
   \addlyrics {
     \set stanza = #"3. "
-    Am -- pli -- us la -- va me ab in -- i -- qui -- tá -- _ te me -- _ _ _ a:
+    Am -- pli -- us la -- va me ab in -- i -- qui -- tá -- te __ _ me -- _ _ _ a:
     et a pec -- ca -- to me -- o mun -- _ _ _ _ da -- me.
   }
 }
@@ -260,27 +277,19 @@ bass = \new Voice {
 
 \score {
 	\new Staff <<
-		\set Staff.instrumentName = #"B"
-		\key g \major
-	  \time 2/1
 		\new Voice {
-			\relative c {
-			  \clef "bass" e\breve e \showBarLine \bar "|"
+			\relative c' {
+			  \cadenzaOn c\breve c4 d c s2
+			  c\breve c4 b g a s \showBarLine \bar "|"
 			}
 		}
     \addlyrics {
       \set stanza = #"4. "
-      \override LyricText.self-alignment-X = #LEFT
-			"Quóniam iniquitátem mean ego cognósco:" "et peccátum meum contra me est semper."
+			\lyricLeft "Quóniam iniquitátem mean ego" cog -- nós -- co:
+			\lyricLeft "et peccátum meum contra" me est sem -- per.
 		}
 	>>
-	\layout {
-		ragged-right = ##t
-    \context {
-      \Score
-      \remove "Bar_number_engraver"
-    }
-	}
+	\layout { \chantLayout }
 }
 
 soprano = \new Voice {
@@ -375,26 +384,109 @@ bass = \new Voice {
 
 \score {
 	\new Staff <<
-		\set Staff.instrumentName = #"B"
-		\key g \major
-	  \time 2/1
 		\new Voice {
-			\relative c {
-			  \clef "bass" e\breve e \showBarLine \bar "|"
+			\relative c' {
+			  \cadenzaOn c\breve c4 d c c s2
+			  c\breve c4 b g a s \showBarLine \bar "|"
 			}
 		}
     \addlyrics {
       \set stanza = #"6. "
-      \override LyricText.self-alignment-X = #LEFT
-			"Ecce enim in iniquitátibus concéptus sum:" 
-			"et in peccátis concépit me mater mea."
+			\lyricLeft "Ecce enim in iniquitátibus" con -- cép -- tus sum:
+			\lyricLeft "et in peccátis concépit me" ma -- ter me -- a.
 		}
 	>>
-	\layout {
-		ragged-right = ##t
-    \context {
-      \Score
-      \remove "Bar_number_engraver"
-    }
+	\layout { \chantLayout }
+}
+
+
+sopranoA = \new Voice {
+  \relative c'' {
+    \set Score.currentBarNumber = #38
+    e2. e4 e2 e e4 e e2 e e1 d2 e f4 e e2 r4 a2 g4 f e4. f8 d4 e1. ~ e\breve \break
+    f2 f f4 f4. f8 f2 f4 f4. f8 f4 f8 f f2 f f f f
+    e1. d2 ~ d8 e c b c1 b8. c16 a4 gis2 a1 gis2 a\breve
+    \showBarLine \bar "|"
+  }
+  \addlyrics {
+    \set stanza = #"7. "
+    Ec -- ce e -- nim ver -- i -- tá -- tem di -- _ lex -- í -- _ _ _ _ _ _ _ _ sti
+    in -- cér -- ta et oc -- cúl -- ta sa -- pi -- én -- ti -- æ tu -- æ 
+    ma -- ni -- fes -- tá -- sti __ _ _ _ mi -- _ _ _ _ _ _ hi.
+  }
+}
+
+sopranoB = \new Voice {
+  \relative c'' {
+    c2. c4 c2 c c4 c c2 c c1 b1. a ~ a1 c2 b8. c16 a4 b2 ~ b\breve
+    d2 d d4 d4. d8 d2 d4 d4. d8 d4 d8 d d2 d d d d
+    c1 b1. a1 d2. c4 c b8 a b1 cis\breve
+  }
+  \addlyrics {
+    \set stanza = #"7. "
+    Ec -- ce e -- nim ver -- i -- tá -- tem di -- lex -- í -- _ _ _ _ sti
+    in -- cér -- ta et oc -- cúl -- ta sa -- pi -- én -- ti -- æ tu -- æ 
+    ma -- ni -- fes -- tá -- sti mi -- _ _ _ _ _ _ hi.
+  }
+}
+
+alto = \new Voice {
+  \relative c'' {
+    a2. a4 a2 a a4 a a2 a g1 g c, a2 a'\breve gis8. a16 fis4 gis2 ~ gis\breve
+    a2 a a4 a4. a8 a2 a4 a4. a8 a4 a8 a a2 a a a a
+    a1 e e f e\breve e
+  }
+  \addlyrics {
+    \set stanza = #"7. "
+    Ec -- ce e -- nim ver -- i -- tá -- tem di -- lex -- í -- _ _ _ _ _ sti
+    in -- cér -- ta et oc -- cúl -- ta sa -- pi -- én -- ti -- æ tu -- æ 
+    ma -- ni -- fes -- tá -- sti mi -- _ _ hi.
+  }
+}
+
+bass = \new Voice {
+  \relative c' {
+		\clef "bass"
+		a2. a4 a2 a a4 a a2 a c1 g a f\breve e1. ~ e\breve
+    d2 d d4 d4. d8 d2 d4 d4. d8 d4 d8 d d2 d d d d
+    a'1 gis a d, e\breve a,
+  }
+  \addlyrics {
+    \set stanza = #"7. "
+    Ec -- ce e -- nim ver -- i -- tá -- tem di -- lex -- í -- _ sti
+    in -- cér -- ta et oc -- cúl -- ta sa -- pi -- én -- ti -- æ tu -- æ 
+    ma -- ni -- fes -- tá -- sti mi -- _ _ hi.
+  }
+}
+
+\score {
+	\new StaffGroup << 
+		\set Score.barNumberVisibility = #all-bar-numbers-visible
+		\new Staff << \global \sopranoA \set Staff.instrumentName = #"S1" \set Staff.shortInstrumentName = #"S1" >> 
+		\new Staff << \global \sopranoB \set Staff.instrumentName = #"S2" \set Staff.shortInstrumentName = #"S2" >> 
+		\new Staff << \global \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >> 
+		\new Staff << \global \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >> 
+	>> 
+	\header {
+		piece = \markup \concat { "Verse 7: conjectural early ornamentation of original version"}
 	}
+	\layout { }
+}
+
+
+\score {
+	\new Staff <<
+		\new Voice {
+			\relative c' {
+			  \cadenzaOn c\breve c4 d c s2
+			  c\breve c4 b g a s \showBarLine \bar "|"
+			}
+		}
+    \addlyrics {
+      \set stanza = #"8. "
+			\lyricLeft "Aspérges me hyssópo et" mun -- dá -- bor:
+			\lyricLeft "lavábis me et super nivem" de -- al -- bá -- bor.
+		}
+	>>
+	\layout { \chantLayout }
 }
