@@ -197,8 +197,8 @@ bass = \new Voice {
 	\new Staff <<
 		\new Voice {
 			\relative c' {
-			  \cadenzaOn c\breve c4 d c s2
-			  c\breve c4 b g a s \showBarLine \bar "|"
+			  \cadenzaOn c\breve c4 d2 c s2
+			  c\breve c4 b g2 a \showBarLine \bar "|"
 			}
 		}
     \addlyrics {
@@ -279,8 +279,8 @@ bass = \new Voice {
 	\new Staff <<
 		\new Voice {
 			\relative c' {
-			  \cadenzaOn c\breve c4 d c s2
-			  c\breve c4 b g a s \showBarLine \bar "|"
+			  \cadenzaOn c\breve c4 d2 c s2
+			  c\breve c4 b g2 a \showBarLine \bar "|"
 			}
 		}
     \addlyrics {
@@ -386,8 +386,8 @@ bass = \new Voice {
 	\new Staff <<
 		\new Voice {
 			\relative c' {
-			  \cadenzaOn c\breve c4 d c c s2
-			  c\breve c4 b g a s \showBarLine \bar "|"
+			  \cadenzaOn c\breve c4 d c c2 s2
+			  c\breve c4 b g2 a \showBarLine \bar "|"
 			}
 		}
     \addlyrics {
@@ -478,8 +478,8 @@ bass = \new Voice {
 	\new Staff <<
 		\new Voice {
 			\relative c' {
-			  \cadenzaOn c\breve c4 d c s2
-			  c\breve c4 b g a s \showBarLine \bar "|"
+			  \cadenzaOn c\breve c4 d2 c s2
+			  c\breve c4 b g2 a \showBarLine \bar "|"
 			}
 		}
     \addlyrics {
