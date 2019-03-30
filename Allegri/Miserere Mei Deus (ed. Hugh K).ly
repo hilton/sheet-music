@@ -2,7 +2,7 @@
 % Copyright ©2019 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "1"
+revision = "3"
 
 #(set-global-staff-size 15.0)
 
@@ -30,13 +30,13 @@ year = #(strftime "©%Y" (localtime (current-time)))
 			\vspace #1
 		}
 	}
-	composer = \markup \sans \column \right-align { "Gegorio Allegri" }
+	composer = \markup \sans \column \right-align { "Gregorio Allegri (edited by Hugh Keyte)" }
 	copyright = \markup \sans {
 		\vspace #2
 		\column \center-align {
 			\line {
-				Copyright \year \with-url #"http://www.cappellagabrieli.nl" "Cappella Gabrieli" -
-				"Edited by HK - Typeset by Peter Hilton" -
+				Copyright \year "Hugh Keyte" -
+				"Typeset by Peter Hilton" -
 				Lilypond source at \with-url #"https://github.com/hilton/sheet-music" https://github.com/hilton/sheet-music - 
 				revision \revision 
 			}
@@ -154,21 +154,18 @@ bass = \new Voice {
 }
 
 \score {
-	\transpose c c {
-		\new StaffGroup << 
-			\set Score.barNumberVisibility = #all-bar-numbers-visible
-			\new Staff << \global \mezzo \set Staff.instrumentName = #"MS" \set Staff.shortInstrumentName = #"MS" >> 
-			\new Staff << \global \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >> 
-			\new Staff << \global \tenorA \set Staff.instrumentName = #"T1" \set Staff.shortInstrumentName = #"T1" >> 
-			\new Staff << \global \tenorB \set Staff.instrumentName = #"T2" \set Staff.shortInstrumentName = #"T2" >> 
-			\new Staff << \global \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >> 
-		>> 
-	}
+	\new StaffGroup << 
+		\set Score.barNumberVisibility = #all-bar-numbers-visible
+		\new Staff << \global \mezzo \set Staff.instrumentName = #"MS" \set Staff.shortInstrumentName = #"MS" >> 
+		\new Staff << \global \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >> 
+		\new Staff << \global \tenorA \set Staff.instrumentName = #"T1" \set Staff.shortInstrumentName = #"T1" >> 
+		\new Staff << \global \tenorB \set Staff.instrumentName = #"T2" \set Staff.shortInstrumentName = #"T2" >> 
+		\new Staff << \global \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >> 
+	>> 
 	\header {
-		piece = "Choir 1"
+		piece = \markup \concat { "Verse 1: Original version (Cappella Sistina manuscript 205, mid 17" \super th "century)"}
 	}
 	\layout { }
-%	\midi {	}
 }
 
 \score {
@@ -178,17 +175,21 @@ bass = \new Voice {
 	  \time 2/1
 		\new Voice {
 			\relative c {
-			  \clef "bass" e\breve \showBarLine \bar "|"
+			  \clef "bass" e\breve e \showBarLine \bar "|"
 			}
 		}
     \addlyrics {
       \set stanza = #"2. "
-      \once \override LyricText.self-alignment-X = #LEFT
-			"Et secúndum multitudinem miseratiónem tuárum: dele inituitátem meam."
+      \override LyricText.self-alignment-X = #LEFT
+			"Et secúndum multitudinem miseratiónem tuárum:" "dele inituitátem meam."
 		}
 	>>
 	\layout {
 		ragged-right = ##t
+    \context {
+      \Score
+      \remove "Bar_number_engraver"
+    }
 	}
 }
 
@@ -244,17 +245,129 @@ bass = \new Voice {
 }
 
 \score {
-	\transpose c c {
-		\new StaffGroup << 
-			\set Score.barNumberVisibility = #all-bar-numbers-visible
-			\new Staff << \global \sopranoA \set Staff.instrumentName = #"S1" \set Staff.shortInstrumentName = #"S1" >> 
-			\new Staff << \global \sopranoB \set Staff.instrumentName = #"S2" \set Staff.shortInstrumentName = #"S2" >> 
-			\new Staff << \global \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >> 
-			\new Staff << \global \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >> 
-		>> 
-	}
+	\new StaffGroup << 
+		\set Score.barNumberVisibility = #all-bar-numbers-visible
+		\new Staff << \global \sopranoA \set Staff.instrumentName = #"S1" \set Staff.shortInstrumentName = #"S1" >> 
+		\new Staff << \global \sopranoB \set Staff.instrumentName = #"S2" \set Staff.shortInstrumentName = #"S2" >> 
+		\new Staff << \global \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >> 
+		\new Staff << \global \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >> 
+	>> 
 	\header {
-		piece = "Choir 2"
+		piece = \markup \concat { "Verse 3: Original version (Cappella Sistina manuscript 206, mid 17" \super th "century)"}
+	}
+	\layout { }
+}
+
+\score {
+	\new Staff <<
+		\set Staff.instrumentName = #"B"
+		\key g \major
+	  \time 2/1
+		\new Voice {
+			\relative c {
+			  \clef "bass" e\breve e \showBarLine \bar "|"
+			}
+		}
+    \addlyrics {
+      \set stanza = #"4. "
+      \override LyricText.self-alignment-X = #LEFT
+			"Quóniam iniquitátem mean ego cognósco:" "et peccátum meum contra me est semper."
+		}
+	>>
+	\layout {
+		ragged-right = ##t
+    \context {
+      \Score
+      \remove "Bar_number_engraver"
+    }
+	}
+}
+
+soprano = \new Voice {
+  \relative c'' {
+    \set Score.currentBarNumber = #22
+    e2. e4 e2 e4 e e2 e1 e2 e1 e2 c2. a4 f'2. e4 e d8 c d1 c
+    d2 d d4 d d2 d d4 d d2. d4 d2 d d d2 d1 d r r2 
+    d1 c4 b c2 f2. e8 d e1 \ficta d!4 c b a gis b c1 b b\breve \showBarLine \bar "|"
+  }
+  \addlyrics {
+    \set stanza = #"5. "
+    Ti -- bi so -- li pec -- ca -- vi, 
+    et ma -- lum co -- _ ram __ _ te __ _ _ fe -- ci:
+    et ju -- sti -- fi -- cé -- ris in ser -- món -- i -- bus tu -- is, et vín -- cas
+    cum ju -- di -- cá -- _ _ _ _ _ _ _ _ _ _ _ _ ris.
+  }
+}
+
+mezzo = \new Voice {
+  \relative c'' {
+      c2. c4 c2 c4 c c2 c1 c2 b1 c2 e1 d c2. b8[ a] b c4 b8 c1
+      b2 b b4 b b2 b b4 b b2. b4 b2 b b b2 b1 b r r
+      a1 a2 a g c1 b4 a gis a b2. a4 a1 gis4 fis gis\breve
+  }
+  \addlyrics {
+    \set stanza = #"5. "
+    Ti -- bi so -- li pec -- ca -- vi, et ma -- lum co -- _ ram __ _ te __ _ _ fe -- ci:
+    et ju -- sti -- fi -- cé -- ris in ser -- món -- i -- bus tu -- is, et vín -- cas
+    cum ju -- di -- cá -- _ _ _ _ _ _ _ _ _ _ ris.
+  }
+}
+
+alto = \new Voice {
+  \relative c'' {
+    a2. a4 a2 a4 a a2 a1 a2 g1 g a2 a g1 g e
+    g2 g g4 g g2 g g4 g g2. g4 g2 g g g2 g1 g2 g1 f4 e f1
+    e1 r r4 g g g f1 e1 ~ e\breve e\breve
+  }
+  \addlyrics {
+    \set stanza = #"5. "
+    Ti -- bi so -- li pec -- ca -- vi, et ma -- lum co -- ram te fe -- ci:
+    et ju -- sti -- fi -- cé -- ris in ser -- món -- i -- bus tu -- is, et vín -- cas
+    cum ju -- di -- cá -- ris, cum ju -- di -- cá -- _ ris.
+  }
+}
+
+tenor = \new Voice {
+  \relative c' {
+		\clef "treble_8"
+    a2. a4 a2 a4 a a2 a1 a2 b2 g c1 a2 d4 c b a8 g c2 g1 g
+    d'2 d d4 d d2 d d4 d d2. d4 d2 d d d2 d1 b a a1.
+    c2 c1 c a2 b1 e4 d c2. d4 e2 e, e\breve
+  }
+  \addlyrics {
+    \set stanza = #"5. "
+    Ti -- bi so -- li pec -- ca -- vi, et ma -- lum co -- _ ram __ _ _ _ _ te fe -- ci:
+    et ju -- sti -- fi -- cé -- ris in ser -- món -- i -- bus tu -- is, et vín -- cas
+    cum ju -- di -- cá -- ris, cum ju -- di -- _ cá -- _ _ _ ris.
+  }
+}
+
+bass = \new Voice {
+  \relative c {
+		\clef "bass"
+    a2. a4 a2 a4 a a2 a1 a2 e'1 c f g2 g g,1 c
+    g'2 g g4 g g2 g g4 g g2. g4 g2 g g g2 g1 g d d2 f
+    a1 a, c d e a, e' e\breve
+  }
+  \addlyrics {
+    \set stanza = #"5. "
+    Ti -- bi so -- li pec -- ca -- vi, et ma -- lum co -- ram te fe -- ci:
+    et ju -- sti -- fi -- cé -- ris in ser -- món -- i -- bus tu -- is, et vín -- cas
+    cum ju -- di -- cá -- ris, cum ju -- di -- cá -- _ ris.
+  }
+}
+
+\score {
+	\new StaffGroup << 
+		\set Score.barNumberVisibility = #all-bar-numbers-visible
+		\new Staff << \global \soprano \set Staff.instrumentName = #"S" \set Staff.shortInstrumentName = #"S" >> 
+		\new Staff << \global \mezzo \set Staff.instrumentName = #"MS" \set Staff.shortInstrumentName = #"MS" >> 
+		\new Staff << \global \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >> 
+		\new Staff << \global \tenor \set Staff.instrumentName = #"T" \set Staff.shortInstrumentName = #"T" >> 
+		\new Staff << \global \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >> 
+	>> 
+	\header {
+		piece = "Verse 5: Original version (Cappella Sistina manuscript 185)"
 	}
 	\layout { }
 	\midi {	}
@@ -267,17 +380,21 @@ bass = \new Voice {
 	  \time 2/1
 		\new Voice {
 			\relative c {
-			  \clef "bass" e\breve \showBarLine \bar "|"
+			  \clef "bass" e\breve e \showBarLine \bar "|"
 			}
 		}
     \addlyrics {
-      \set stanza = #"4. "
-      \once \override LyricText.self-alignment-X = #LEFT
-			"Quóniam iniquitátem mean ego cognósco: et peccátum meum contra me est semper."
+      \set stanza = #"6. "
+      \override LyricText.self-alignment-X = #LEFT
+			"Ecce enim in iniquitátibus concéptus sum:" 
+			"et in peccátis concépit me mater mea."
 		}
 	>>
 	\layout {
 		ragged-right = ##t
+    \context {
+      \Score
+      \remove "Bar_number_engraver"
+    }
 	}
 }
-
