@@ -203,7 +203,7 @@ cantusprimus =  \relative c''
 	r\breve.
 % End of triple time
   \showBarLine \bar "|" \time 2/1
-	\set Score.proportiontoalNotationDuration = #(ly:make-moment 7 10)
+	\set Score.proportionalNotationDuration = #(ly:make-moment 7 10)
 	\tempo 1 = 60
   d1. d2
 %95
