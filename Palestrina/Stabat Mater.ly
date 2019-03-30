@@ -1,4 +1,4 @@
-% CPDL #
+% CPDL #53763
 % Copyright ©2019 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
@@ -39,6 +39,7 @@ year = #(strftime "©%Y" (localtime (current-time)))
 				\with-url #"http://creativecommons.org/licenses/by-nc-sa/3.0/" "CC BY-NC-SA 3.0" -
 %				\with-url #"https://www.cpdl.org/wiki/index.php/Stabat_Mater_(Giovanni_Pierluigi_da_Palestrina)" "CPDL #" -
 				Lilypond source at \with-url #"https://github.com/hilton/sheet-music" https://github.com/hilton/sheet-music - 
+				"CPDL #53763" -
 				revision \revision 
 			}
 			\line {
