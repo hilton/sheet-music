@@ -490,3 +490,95 @@ bass = \new Voice {
 	>>
 	\layout { \chantLayout }
 }
+
+
+\score {
+	\new Staff <<
+		\new Voice {
+			\relative c' {
+			  \cadenzaOn c\breve d2 c s2
+			  c\breve c4 b g2 a \showBarLine \bar "|"
+			}
+		}
+    \addlyrics {
+      \set stanza = #"10. "
+			\lyricLeft "Avérte fáciem tuam a peccátis" me -- is:
+			\lyricLeft "et omnes iniquitátes" me -- as de -- le.
+		}
+	>>
+	\layout { \chantLayout }
+}
+
+
+\score {
+	\new Staff <<
+		\new Voice {
+			\relative c' {
+			  \cadenzaOn c\breve d2 c s2
+			  c\breve c4 b g a a2 \showBarLine \bar "|"
+			}
+		}
+    \addlyrics {
+      \set stanza = #"12. "
+			\lyricLeft "Ne projícias me a fácie" tu -- a:
+			\lyricLeft "et spíritum sanctum tuum ne" áu -- fe -- ras a me.
+		}
+	>>
+	\layout { \chantLayout }
+}
+
+
+\score {
+	\new Staff <<
+		\new Voice {
+			\relative c' {
+			  \cadenzaOn c\breve d2 c s2
+			  c\breve c4 b g2 a \showBarLine \bar "|"
+			}
+		}
+    \addlyrics {
+      \set stanza = #"14. "
+			\lyricLeft "Decébo iníquos vías" tu -- as:
+			\lyricLeft "et ímpii ad te" con -- ver -- tén -- tur.
+		}
+	>>
+	\layout { \chantLayout }
+}
+
+
+\score {
+	\new Staff <<
+		\new Voice {
+			\relative c' {
+			  \cadenzaOn c\breve c4 d c c2 s2
+			  c\breve c4 b g2 a \showBarLine \bar "|"
+			}
+		}
+    \addlyrics {
+      \set stanza = #"16. "
+			\lyricLeft "Dómine, lábia me" a -- pé -- ri -- es:
+			\lyricLeft "et os meum annuntiábit" lau -- dem tu -- am.
+		}
+	>>
+	\layout { \chantLayout }
+}
+
+
+\score {
+	\new Staff <<
+		\new Voice {
+			\relative c' {
+			  \cadenzaOn c\breve c4 c c d2 c s2
+			  c\breve c4 b g a a2 \showBarLine \bar "|"
+			}
+		}
+    \addlyrics {
+      \set stanza = #"18. "
+			\lyricLeft "Sacrifícium Deo spíritus" con -- tri -- bu -- lá -- tus:
+			\lyricLeft "cor contrite, et humiliátum, Deus," non de -- spí -- ci -- es.
+		}
+	>>
+	\layout { \chantLayout }
+}
+
+
