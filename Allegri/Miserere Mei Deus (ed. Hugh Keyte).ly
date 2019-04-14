@@ -2,7 +2,7 @@
 % Copyright ©2019 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "3"
+revision = "4"
 
 #(set-global-staff-size 15.0)
 
@@ -197,8 +197,8 @@ bass = \new Voice {
 	\new Staff <<
 		\new Voice {
 			\relative c' {
-			  \cadenzaOn c\breve c4 d2 c s2
-			  c\breve c4 b g2 a \showBarLine \bar "|"
+			  \cadenzaOn c\breve c4 d4. c s4 \showBarLine \bar "|" s
+			  c\breve c4 b g4. a \showBarLine \bar "|"
 			}
 		}
     \addlyrics {
@@ -232,7 +232,7 @@ sopranoB = \new Voice {
   \addlyrics {
     \set stanza = #"3. "
     Am -- pli -- us la -- va me ab in -- i -- qui -- tá -- te me -- _ _ _ a:
-    et a pec -- ca -- to me -- o mun -- _ _ _ da -- me.
+    et a pec -- ca -- to me -- o mun -- _ _ _ da me.
   }
 }
 
@@ -279,13 +279,13 @@ bass = \new Voice {
 	\new Staff <<
 		\new Voice {
 			\relative c' {
-			  \cadenzaOn c\breve c4 d2 c s2
-			  c\breve c4 b g2 a \showBarLine \bar "|"
+			  \cadenzaOn c\breve c4 d4. c s4 \showBarLine \bar "|" s
+			  c\breve c4 b g4. a \showBarLine \bar "|"
 			}
 		}
     \addlyrics {
       \set stanza = #"4. "
-			\lyricLeft "Quóniam iniquitátem mean ego" cog -- nós -- co:
+			\lyricLeft "Quóniam iniquitátem meam ego" cog -- nós -- co:
 			\lyricLeft "et peccátum meum contra" me est sem -- per.
 		}
 	>>
@@ -303,7 +303,7 @@ soprano = \new Voice {
     \set stanza = #"5. "
     Ti -- bi so -- li pec -- ca -- vi, 
     et ma -- lum co -- _ ram __ _ te __ _ _ fe -- ci:
-    et ju -- sti -- fi -- cé -- ris in ser -- món -- i -- bus tu -- is, et vín -- cas
+    ut ju -- sti -- fi -- cé -- ris in ser -- mó -- ni -- bus tu -- is, et vín -- cas
     cum ju -- di -- cá -- _ _ _ _ _ _ _ _ _ _ _ _ ris.
   }
 }
@@ -317,7 +317,7 @@ mezzo = \new Voice {
   \addlyrics {
     \set stanza = #"5. "
     Ti -- bi so -- li pec -- ca -- vi, et ma -- lum co -- _ ram __ _ te __ _ _ fe -- ci:
-    et ju -- sti -- fi -- cé -- ris in ser -- món -- i -- bus tu -- is, et vín -- cas
+    ut ju -- sti -- fi -- cé -- ris in ser -- mó -- ni -- bus tu -- is, et vín -- cas
     cum ju -- di -- cá -- _ _ _ _ _ _ _ _ _ _ ris.
   }
 }
@@ -331,7 +331,7 @@ alto = \new Voice {
   \addlyrics {
     \set stanza = #"5. "
     Ti -- bi so -- li pec -- ca -- vi, et ma -- lum co -- ram te fe -- ci:
-    et ju -- sti -- fi -- cé -- ris in ser -- món -- i -- bus tu -- is, et vín -- cas
+    ut ju -- sti -- fi -- cé -- ris in ser -- mó -- ni -- bus tu -- is, et vín -- cas
     cum ju -- di -- cá -- ris, cum ju -- di -- cá -- _ ris.
   }
 }
@@ -346,7 +346,7 @@ tenor = \new Voice {
   \addlyrics {
     \set stanza = #"5. "
     Ti -- bi so -- li pec -- ca -- vi, et ma -- lum co -- _ ram __ _ _ _ _ te fe -- ci:
-    et ju -- sti -- fi -- cé -- ris in ser -- món -- i -- bus tu -- is, et vín -- cas
+    ut ju -- sti -- fi -- cé -- ris in ser -- mó -- ni -- bus tu -- is, et vín -- cas
     cum ju -- di -- cá -- ris, cum ju -- di -- _ cá -- _ _ _ ris.
   }
 }
@@ -361,7 +361,7 @@ bass = \new Voice {
   \addlyrics {
     \set stanza = #"5. "
     Ti -- bi so -- li pec -- ca -- vi, et ma -- lum co -- ram te fe -- ci:
-    et ju -- sti -- fi -- cé -- ris in ser -- món -- i -- bus tu -- is, et vín -- cas
+    ut ju -- sti -- fi -- cé -- ris in ser -- mó -- ni -- bus tu -- is, et vín -- cas
     cum ju -- di -- cá -- ris, cum ju -- di -- cá -- _ ris.
   }
 }
@@ -386,8 +386,8 @@ bass = \new Voice {
 	\new Staff <<
 		\new Voice {
 			\relative c' {
-			  \cadenzaOn c\breve c4 d c c2 s2
-			  c\breve c4 b g2 a \showBarLine \bar "|"
+			  \cadenzaOn c\breve c4 d c c4. s4 \showBarLine \bar "|" s
+			  c\breve c4 b g4. a \showBarLine \bar "|"
 			}
 		}
     \addlyrics {
@@ -478,8 +478,8 @@ bass = \new Voice {
 	\new Staff <<
 		\new Voice {
 			\relative c' {
-			  \cadenzaOn c\breve c4 d2 c s2
-			  c\breve c4 b g2 a \showBarLine \bar "|"
+			  \cadenzaOn c\breve c4 d4. c s4 \showBarLine \bar "|" s
+			  c\breve c4 b g4. a \showBarLine \bar "|"
 			}
 		}
     \addlyrics {
@@ -496,8 +496,8 @@ bass = \new Voice {
 	\new Staff <<
 		\new Voice {
 			\relative c' {
-			  \cadenzaOn c\breve d2 c s2
-			  c\breve c4 b g2 a \showBarLine \bar "|"
+			  \cadenzaOn c\breve d4. c s4 \showBarLine \bar "|" s
+			  c\breve c4 b g4. a \showBarLine \bar "|"
 			}
 		}
     \addlyrics {
@@ -514,8 +514,8 @@ bass = \new Voice {
 	\new Staff <<
 		\new Voice {
 			\relative c' {
-			  \cadenzaOn c\breve d2 c s2
-			  c\breve c4 b g a a2 \showBarLine \bar "|"
+			  \cadenzaOn c\breve d4. c s4 \showBarLine \bar "|" s
+			  c\breve c4 b g a a4. \showBarLine \bar "|"
 			}
 		}
     \addlyrics {
@@ -532,13 +532,13 @@ bass = \new Voice {
 	\new Staff <<
 		\new Voice {
 			\relative c' {
-			  \cadenzaOn c\breve d2 c s2
-			  c\breve c4 b g2 a \showBarLine \bar "|"
+			  \cadenzaOn c\breve d4. c s4 \showBarLine \bar "|" s
+			  c\breve c4 b g4. a \showBarLine \bar "|"
 			}
 		}
     \addlyrics {
       \set stanza = #"14. "
-			\lyricLeft "Decébo iníquos vías" tu -- as:
+			\lyricLeft "Docébo iníquos vías" tu -- as:
 			\lyricLeft "et ímpii ad te" con -- ver -- tén -- tur.
 		}
 	>>
@@ -550,13 +550,13 @@ bass = \new Voice {
 	\new Staff <<
 		\new Voice {
 			\relative c' {
-			  \cadenzaOn c\breve c4 d c c2 s2
-			  c\breve c4 b g2 a \showBarLine \bar "|"
+			  \cadenzaOn c\breve c4 d c c4. s4 \showBarLine \bar "|" s
+			  c\breve c4 b g4. a \showBarLine \bar "|"
 			}
 		}
     \addlyrics {
       \set stanza = #"16. "
-			\lyricLeft "Dómine, lábia me" a -- pé -- ri -- es:
+			\lyricLeft "Dómine, lábia mea" a -- pé -- ri -- es:
 			\lyricLeft "et os meum annuntiábit" lau -- dem tu -- am.
 		}
 	>>
@@ -568,14 +568,14 @@ bass = \new Voice {
 	\new Staff <<
 		\new Voice {
 			\relative c' {
-			  \cadenzaOn c\breve c4 c c d2 c s2
-			  c\breve c4 b g a a2 \showBarLine \bar "|"
+			  \cadenzaOn c\breve c4 c c d4. c s4 \showBarLine \bar "|" s
+			  c\breve c4 b g a a4. \showBarLine \bar "|"
 			}
 		}
     \addlyrics {
       \set stanza = #"18. "
 			\lyricLeft "Sacrifícium Deo spíritus" con -- tri -- bu -- lá -- tus:
-			\lyricLeft "cor contrite, et humiliátum, Deus," non de -- spí -- ci -- es.
+			\lyricLeft "cor contritum, et humiliátum, Deus," non de -- spí -- ci -- es.
 		}
 	>>
 	\layout { \chantLayout }
