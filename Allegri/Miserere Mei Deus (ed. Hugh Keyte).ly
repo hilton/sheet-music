@@ -1,4 +1,3 @@
-% CPDL #
 % Copyright ©2019 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
@@ -528,7 +527,7 @@ soprano = \new Voice {
   \addlyrics {
     \set stanza = #"9. "
     Au -- dí -- tu -- i me -- o da -- bis gáu -- di -- um 
-    et lae -- tí -- _ _ ti -- am:
+    et læ -- tí -- _ _ ti -- am:
     et ex -- sul -- tá -- bunt os -- sa
     Hu -- mi -- li -- á -- _ _ _ _ _ _ _ _ _ _ _ ta
   }
@@ -545,7 +544,7 @@ mezzo = \new Voice {
   \addlyrics {
     \set stanza = #"9. "
     Au -- dí -- tu -- i me -- o da -- bis gáu -- di -- um 
-    et lae -- tí -- _ _ _ _ _ ti -- am:
+    et læ -- tí -- _ _ _ _ _ ti -- am:
     et ex -- sul -- tá -- bunt os -- sa
     Hu -- mi -- li -- á -- _ _ _ _ _ _ _ _ _ _ _ ta
   }
@@ -561,7 +560,7 @@ alto = \new Voice {
   \addlyrics {
     \set stanza = #"9. "
     Au -- dí -- tu -- i me -- o da -- bis gáu -- di -- um 
-    et lae -- _ _ _ _ tí -- ti -- am:
+    et læ -- _ _ _ _ tí -- ti -- am:
     et ex -- sul -- tá -- bunt os -- sa
     Hu -- mi -- li -- á -- _ _ _ _ _ _ ta
   }
@@ -579,7 +578,7 @@ tenor = \new Voice {
   \addlyrics {
     \set stanza = #"9. "
     Au -- dí -- tu -- i me -- o da -- bis gáu -- di -- um 
-    et lae -- tí -- _ _ _ _ _ _ ti -- am:
+    et læ -- tí -- _ _ _ _ _ _ ti -- am:
     et ex -- sul -- tá -- bunt os -- sa
     Hu -- mi -- li -- á -- _ _ _ _ _ _ _ _ _ ta
   }
@@ -596,7 +595,7 @@ bass = \new Voice {
   \addlyrics {
     \set stanza = #"9. "
     Au -- dí -- tu -- i me -- o da -- bis gáu -- di -- um 
-    et lae -- tí -- _ _ _ ti -- am:
+    et læ -- tí -- _ _ _ ti -- am:
     et ex -- sul -- tá -- bunt os -- sa
     Hu -- mi -- li -- á -- _ _ _ _ _ _ _ _ ta
   }
@@ -612,7 +611,7 @@ bass = \new Voice {
 		\new Staff << \global \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >> 
 	>> 
 	\header {
-		piece = "Verse 9: later 18th century version (published Charles Burney, 1771)"
+		piece = \markup { Verse 9: later \concat { 18 \super th } century version (published Charles Burney, 1771) }
 	}
 	\layout { }
 	\midi {	}
@@ -742,6 +741,111 @@ bass = \new Voice {
 
 % Verse 13
 
+soprano = \new Voice {
+  \relative c'' {
+    \set Score.currentBarNumber = #88
+    \dynamicUp
+    \cadenzaOn e2. e4 \cadenzaOff e2 e4 e e2. e4 e2 e1 e2 e1. c2. a4 fis'2. e4 d16 e8. d16 c8.
+    \break d2 e8 d16 e d4 c1\fermata
+    \cadenzaOn d2 \cadenzaOff d2. d4 d2 d4 d d1 d r
+    r2 d2. e4 d8[ c] b[ c] b8 c16 d c4 f2. e8 d e2. d8 c b2. a4 gis b
+    c2. b8 a b\breve\fermata
+    \showBarLine \bar "|"
+  }
+  \addlyrics {
+    \set stanza = #"13. "
+    Red -- de mi -- hi læ -- tí -- ti -- am sa -- lu -- tá -- ris
+    tu -- _ _ _ _ _ _ _ _ _ _ _ i:
+    et spí -- ri -- tu prin -- ci -- pá -- li
+    con -- _ fir -- _ ma _ me, __ _ _ _ con -- _ _ fir -- _ _ _ _ _ _ ma _ _ me.
+  }
+}
+
+mezzo = \new Voice {
+  \relative c'' {
+    c2. c4 c2 c4 c c2. c4 c2 c1 c2 b1 c2 e1 d2 d c
+    b16[ c8. b16 a8.] c8 b16 c b4 c1\fermata
+    b2 b2. b4 b2 b4 b b1 b r
+    r a a2. g4 g2 c2 ~ c2. b8 a gis4 a b2. 
+    a4 gis8 a16 b a2. gis4 fis g1\fermata
+  }
+  \addlyrics {
+    \set stanza = #"13. "
+    Red -- de mi -- hi læ -- tí -- ti -- am sa -- lu -- tá -- _ ris __ _
+    tu -- _ _ _ _ _ _ _ _ _ i:
+    et spí -- ri -- tu prin -- ci -- pá -- li
+    con -- fir -- ma me, con -- _ _ _ _ fir -- _ ma __ _ _ _ _ _ me.
+  }
+}
+
+alto = \new Voice {
+  \relative c'' {
+    a2. a4 a2 a4 a a2. a4 a2 a1 a2 g1 ~ g2. a4 a1 g 
+    g2. f4 e1\fermata
+    g2 g2. g4 g2 g4 g g1 g2 g2. a4 g8[ f] e[ f]
+    e32[ f g f32] ~ f8 ~ f2. e1 r r4 g g g f1 e
+    e2. e4 e\breve\fermata
+  }
+  \addlyrics {
+    \set stanza = #"13. "
+    Red -- de mi -- hi læ -- tí -- ti -- am sa -- lu -- tá -- ris
+    tu -- _ _ _ i:
+    et spí -- ri -- tu prin -- ci -- pá -- li
+    con -- _ fir -- _ ma __ _ me, __ _ _ _ _ 
+    con -- fir -- ma me, con -- fir -- ma me.
+  }
+}
+
+tenor = \new Voice {
+  \relative c' {
+		\clef "treble_8"
+    a2. a4 a2 a4 a a2. a4 a2 a1 a2 b g c1 a2 d8 c b2 g4 c2
+    g1 g\fermata
+    b2 b2. b4 b2 b4 b b1 b a
+    a1 c c\breve a2 b1 e4 d
+    c d e2 e1 e,\fermata
+  }
+  \addlyrics {
+    \set stanza = #"13. "
+    Red -- de mi -- hi læ -- tí -- ti -- am sa -- lu -- tá -- _ ris
+    tu -- _ _ _ _ _ _ i:
+    et spí -- ri -- tu prin -- ci -- pá -- li
+    con -- fir -- ma me, con -- fir -- _ _ _ _ _ ma me.
+  }
+}
+
+bass = \new Voice {
+  \relative c {
+		\clef "bass"
+    a2. a4 a2 a4 a a2. a4 a2 a1 a2 e'1 c f g
+    g, c\fermata
+    g'2 g2. g4 g2 g4 g g1 g d
+    d2 f a1 a, c d e
+    a, e'\breve\fermata
+  }
+  \addlyrics {
+    \set stanza = #"13. "
+    Red -- de mi -- hi læ -- tí -- ti -- am sa -- lu -- tá -- ris
+    tu -- _ _ i:
+    et spí -- ri -- tu prin -- ci -- pá -- li
+    con -- fir -- ma me, con -- fir -- _ _ ma me.
+  }
+}
+
+\score {
+	\new StaffGroup << 
+		\set Score.barNumberVisibility = #all-bar-numbers-visible
+		\new Staff << \global \soprano \set Staff.instrumentName = #"S" \set Staff.shortInstrumentName = #"S" >> 
+		\new Staff << \global \mezzo \set Staff.instrumentName = #"MS" \set Staff.shortInstrumentName = #"MS" >> 
+		\new Staff << \global \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >> 
+		\new Staff << \global \tenor \set Staff.instrumentName = #"T" \set Staff.shortInstrumentName = #"T" >> 
+		\new Staff << \global \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >> 
+	>> 
+	\header {
+		piece = \markup { Verse 13: one of a group of related early \concat { 19 \super th } century manuscript versions }
+	}
+	\layout { }
+}
 
 
 % Verse 14
