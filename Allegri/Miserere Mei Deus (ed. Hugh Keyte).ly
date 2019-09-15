@@ -783,7 +783,7 @@ alto = \new Voice {
     a2. a4 a2 a4 a a2. a4 a2 a1 a2 g1 ~ g2. a4 a1 g 
     g2. f4 e1\fermata
     g2 g2. g4 g2 g4 g g1 g2 g2. a4 g8[ f] e[ f]
-    e32[ f g f32] ~ f8 ~ f2. e1 r r4 g g g f1 e
+    \appoggiatura { e32 f g } f1 e1 r r4 g g g f1 e
     e2. e4 e\breve\fermata
   }
   \addlyrics {
@@ -842,7 +842,10 @@ bass = \new Voice {
 		\new Staff << \global \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >> 
 	>> 
 	\header {
-		piece = \markup { Verse 13: one of a group of related early \concat { 19 \super th } century manuscript versions }
+		piece = \markup { 
+		  Verse 13: one of a group of related early \concat { 19 \super th } century manuscript versions 
+		  (Breslav manuscript)
+		}
 	}
 	\layout { }
 }
@@ -870,6 +873,88 @@ bass = \new Voice {
 
 % Verse 15
 
+sopranoA = \new Voice {
+  \relative c'' {
+    \set Score.currentBarNumber = #102
+    e2. e4 e2 e e4 e e2. e4 e1 e1 e2 e1 e2 e e2. d8 c d2 e
+    f4. e8 e4 a ~ a8.[ g16 fis8. e16] d16.[ e32 d16. fis32] 
+    d8 dis \appoggiatura { dis8.[ e32 f] } e\breve\fermata
+    f2 f4 f f2 f f4 f f1 f2 f e1. \grace { e32 d cis } d2 d4 c8. b16 c1 b8[ d f a,]
+    gis c b a a2. b8 a gis fis \grace { fis32 g a } g4 a\breve\fermata
+    \showBarLine \bar "|"
+  }
+  \addlyrics {
+    \set stanza = #"15. "
+    Lí -- be -- ra me de san -- guí -- ni -- bus, De -- us, 
+    De -- us sa -- lú -- _ _ _ tis me -- _ _ _ _ _ _ _ _ _ _ _ _ æ:
+    et ex -- sul -- tá -- bit lin -- gua me -- a ju -- stí -- ti -- am __ _ _ _
+    tu _ _ _ _ _ _ _ _ _ _ _ _ _ -- am.
+  }
+}
+
+sopranoB = \new Voice {
+  \relative c'' {
+    c2. c4 c2 c c4 c c2. c4 c1 c1 c2 c1 c2 c c1 ~ c4 b8 a b2
+    b a1 b2 c4 b16.[ c32 a16. c32] b2 b1\fermata
+    d2 d4 d d2 d d4 d d1 d2 d c1 b b2. a8. gis16 a2 d ~
+    d4. c8 d c b a \grace { a32 b c } b2. e8 d cis\breve\fermata
+  }
+  \addlyrics {
+    \set stanza = #"15. "
+    Lí -- be -- ra me de san -- guí -- ni -- bus, De -- us, 
+    De -- us sa -- lú -- _ _ tis me -- _ _ _ _ _ _ _ _ æ:
+    et ex -- sul -- tá -- bit lin -- gua me -- a ju -- stí -- ti -- am __ _ _ _
+    tu -- _ _ _ _ _ _ _ _ am.
+  }
+}
+
+alto = \new Voice {
+  \relative c'' {
+    a2. a4 a2 a a4 a a2. a4 a1 a1 a2 a1 a2 a g1 g
+    e8 d c4. b8 a2. a'2 ~ a2. gis16.[ a32 fis16. a32] g1\fermata
+    a2 a4 a a2 a a4 a a1 a2 a a1 e e f
+    e\breve e\fermata
+  }
+  \addlyrics {
+    \set stanza = #"15. "
+    Lí -- be -- ra me de san -- guí -- ni -- bus, De -- us, 
+    De -- us sa -- lú -- tis me -- _ _ _ _ _ _ _ _ _ æ:
+    et ex -- sul -- tá -- bit lin -- gua me -- a ju -- stí -- ti -- am __ _
+    tu -- am.
+  }
+}
+
+bass = \new Voice {
+  \relative c' {
+		\clef "bass"
+    a2. a4 a2 a a4 a a2. a4 a1 a1 a2 a1 a2 a c1 g
+    a f e\breve\fermata
+    d2 d4 d d2 d d4 d d1 d2 d a'1 gis a d,
+    e\breve a,\fermata
+  }
+  \addlyrics {
+    \set stanza = #"15. "
+    Lí -- be -- ra me de san -- guí -- ni -- bus, De -- us, 
+    De -- us sa -- lú -- tis me -- _ æ:
+    et ex -- sul -- tá -- bit lin -- gua me -- a ju -- stí -- ti -- am
+    tu -- _ am.
+  }
+}
+
+
+\score {
+	\new StaffGroup << 
+		\set Score.barNumberVisibility = #all-bar-numbers-visible
+		\new Staff << \global \sopranoA \set Staff.instrumentName = #"S1" \set Staff.shortInstrumentName = #"S1" >> 
+		\new Staff << \global \sopranoB \set Staff.instrumentName = #"S2" \set Staff.shortInstrumentName = #"S2" >> 
+		\new Staff << \global \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >> 
+		\new Staff << \global \bass \set Staff.instrumentName = #"Bar" \set Staff.shortInstrumentName = #"Bar" >> 
+	>> 
+	\header {
+		piece = "Verse 15: from the same source as verse 13 (Breslav manuscript)"
+	}
+	\layout { }
+}
 
 
 % Verse 16
