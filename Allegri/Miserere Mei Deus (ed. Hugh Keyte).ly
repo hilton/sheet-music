@@ -880,8 +880,8 @@ sopranoA = \new Voice {
     f4. e8 e4 a ~ a8.[ g16 fis8. e16] d16.[ e32 d16. fis32] 
     d8 dis \appoggiatura { dis8.[ e32 f] } e\breve\fermata
     f2 f4 f f2 f f4 f f1 f2 f e1. \grace { e32 d cis } d2 d4 c8. b16 c1 b8[ d f a,]
-    gis c b a a2. b8 a gis fis \grace { fis32 g a } g4 a\breve\fermata
-    \showBarLine \bar "|"
+    gis c b a a2. b8 a gis fis \grace { fis32 g a } g4 \cadenzaOn a\breve\fermata
+    \showBarLine \bar "|" \cadenzaOff
   }
   \addlyrics {
     \set stanza = #"15. "
@@ -979,6 +979,99 @@ bass = \new Voice {
 
 % Verse 17
 
+soprano = \new Voice {
+  \relative c'' {
+    \set Score.currentBarNumber = #118
+    e2. e4 e2 e e4 e e2 e e4 e e2. e4 e2 e1 e\breve c4 b8 a \grace g' f2. e4 e d8 c
+    \grace { c32 d e } d1. d2 c1\fermata d2 d d1 d2 r r\breve r2 d2.( e4) d8( c4) b8
+    \grace d c2 \grace g'8 f2. e8 fis16 dis e1 d8. e16 c4 b8. c16 a4 gis b 
+      \tuplet 3/2 { b8 c d } c1 d8 c d c b c \cadenzaOn b\breve\fermata
+      \showBarLine \bar "|" \cadenzaOff
+  }
+  \addlyrics {
+    \set stanza = #"17. "
+    Quó -- ni -- am si vo -- lu -- ís -- ses sa -- cri -- fí -- ci -- um 
+    de -- dí -- sem __ _ _ ú -- _ _ _ _ _ ti -- que:
+    ho -- lo -- cáu -- stis non de -- lec -- 
+    tá __ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ be -- _ ris.
+  }
+}
+
+mezzo = \new Voice {
+  \relative c'' {
+    c2. c4 c2 c c4 c c2 c c4 c c2. c4 c2 c1 b c a g2 c2.
+    d8 c b8. c16 a4 b c2 b4 c1\fermata b2 b b1 b2 r r\breve r
+    a2 d4 d g,2 c1 b8. c16 a4 gis a b gis e fis2. ~ fis1 ~ fis2 gis8. a16 fis4 g1
+  }
+  \addlyrics {
+    \set stanza = #"17. "
+    Quó -- ni -- am si vo -- lu -- ís -- ses sa -- cri -- fí -- ci -- um de -- dí -- sem ú -- _ _ 
+    _ _ _ _ _ _ _ ti -- que: ho -- lo -- cáu -- stis 
+    non de -- lec -- tá __ _ _ _ _ _ _ _ _ _ _ be -- _ _ ris.
+  }
+}
+
+alto = \new Voice {
+  \relative c'' {
+    a2. a4 a2 a a4 a a2 a a4 a a2. a4 a2 a1 g1 g1. f16 g a4. d,2 e
+    g1. g2 g1\fermata g2 g g1 g2 g2.( a4) g8( f4) e8 \grace { e32 f g } f2. g4 a\breve ~
+    a1 g f e ~ e ~ e2 e2 e\breve\fermata
+  }
+  \addlyrics {
+    \set stanza = #"17. "
+    Quó -- ni -- am si vo -- lu -- ís -- ses sa -- cri -- fí -- ci -- um de -- dí -- sem ú -- _ _ _ _ 
+    _ ti -- que:
+    ho -- lo -- cáu -- stis non de -- lec -- 
+    tá __ _ _ _ _ _ be -- ris.
+  }
+}
+
+tenor = \new Voice {
+  \relative c' {
+		\clef "treble_8"
+    c2. c4 c2 c c4 c c2 c c4 c c2. c4 c2 c1 g2 b e1. d8. e16 c4 b c8 b c4 d
+    d1. d2 e1\fermata d2 b b1 b2 r a1 a2. g4 f2 f' e1. 
+    d1 c2 a b\breve a8. b16 gis4 a2. a4 b\breve\fermata
+  }
+  \addlyrics {
+    \set stanza = #"17. "
+    Quó -- ni -- am si vo -- lu -- ís -- ses sa -- cri -- fí -- ci -- um de -- dí -- sem ú -- _ _ _ _ _ _ _ _
+    _ ti -- que:
+    ho -- lo -- cáu -- stis non de -- lec -- 
+    tá __ _ _ _ _ _ _ _ _ _ _ be -- ris.
+  }
+}
+
+bass = \new Voice {
+  \relative c {
+		\clef "bass"
+    a2. a4 a2 a a4 a a2 a a4 a a2. a4 a2 a1 e'1 c f g2 c,
+    g1. g2 c1\fermata g'2 g g1 g2 r d1 d2. e4 f2. g4 a1
+    a,2. b4 c1 d e a,1. a2 e'\breve\fermata
+  }
+  \addlyrics {
+    \set stanza = #"17. "
+    Quó -- ni -- am si vo -- lu -- ís -- ses sa -- cri -- fí -- ci -- um de -- dí -- sem 
+    ú -- _ _ _ ti -- que:
+    ho -- lo -- cáu -- stis non de -- lec -- 
+    tá __ _ _ _ _ _ _ _ _ be -- ris.
+  }
+}
+
+\score {
+	\new StaffGroup << 
+		\set Score.barNumberVisibility = #all-bar-numbers-visible
+		\new Staff << \global \soprano \set Staff.instrumentName = #"S" \set Staff.shortInstrumentName = #"S" >> 
+		\new Staff << \global \mezzo \set Staff.instrumentName = #"MS" \set Staff.shortInstrumentName = #"MS" >> 
+		\new Staff << \global \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >> 
+		\new Staff << \global \tenor \set Staff.instrumentName = #"T" \set Staff.shortInstrumentName = #"T" >> 
+		\new Staff << \global \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >> 
+	>> 
+	\header {
+		piece = "Verse 17: 1771 (Burney) version embellished Hugh Keyte, dynamics from Breslav and ???"
+	}
+	\layout { }
+}
 
 
 % Verse 18
