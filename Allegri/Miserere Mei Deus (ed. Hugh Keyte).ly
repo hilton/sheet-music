@@ -1096,6 +1096,75 @@ bass = \new Voice {
 
 % Verse 19
 
+sopranoA = \new Voice {
+  \relative c'' {
+    \set Score.currentBarNumber = #134
+    \cadenzaOn e2 e2. e4 e2 e2. e4 e2 e e2. e4 e e \cadenzaOff e2 e
+    e2. d8 c \grace e d2 e \grace g8 f4. e8 a4 ~ a8. g16
+    \grace g8 f8. e16 d8 e16. c32 d4 dis8 e
+    \grace { dis16 e fis} e1 ~ e\breve\fermata
+    f2. f4 f2 f f f 
+    e1. d2. c8. b16 c1. 
+    \override TextSpanner.bound-details.left.text = "a piacere"
+    b8\startTextSpan \tuplet 3/2 { c16 b a } b4 d8 \tuplet 3/2 { e16 d c } d4 f2 \stopTextSpan
+    a, gis4( b) a( c) b( d) c2 ~ c2. \grace b8 a4 gis a8 fis gis4. gis8 
+    a\breve\fermata
+    \showBarLine \bar "|"
+  }
+  \addlyrics {
+    \set stanza = #"19. "
+  }
+}
+
+sopranoB = \new Voice {
+  \relative c'' {
+    c2 c2. c4 c2 c2. c4 c2 c c2. c4 c c c2 c
+    c1 b a2 c ~ c1 ~ c4 d8 c b4. c16 a b\breve\fermata
+    d2. d4 d2 d d d
+    c1 b1. ~ b4 a8. gis16 a1 r d\breve ~ 
+    d2. c4 b4. c16. a32 b1 ~ b4. b8 cis\breve\fermata
+  }
+  \addlyrics {
+    \set stanza = #"19. "
+  }
+}
+
+alto = \new Voice {
+  \relative c'' {
+    a2 a2. a4 a2 a2. a4 a2 a a2. a4 a a a2 a
+    g1 g c,2 a'2 ~ a\breve ~ a4 a gis4. a16 fis gis1\fermata
+    a2. a4 a2 a a a
+    a1 e e2. f4 \grace { e16 fis g } fis1 ~ fis\breve e ~ e1. e2 e\breve\fermata
+  }
+  \addlyrics {
+    \set stanza = #"19. "
+  }
+}
+
+bass = \new Voice {
+  \relative c' {
+		\clef "bass"
+    a2 a2. a4 a2 a2. a4 a2 a a2. a4 a a a2 a
+    
+  }
+  \addlyrics {
+    \set stanza = #"19. "
+  }
+}
+
+\score {
+	\new StaffGroup << 
+		\set Score.barNumberVisibility = #all-bar-numbers-visible
+		\new Staff << \global \sopranoA \set Staff.instrumentName = #"S1" \set Staff.shortInstrumentName = #"S1" >> 
+		\new Staff << \global \sopranoB \set Staff.instrumentName = #"S2" \set Staff.shortInstrumentName = #"S2" >> 
+		\new Staff << \global \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >> 
+		\new Staff << \global \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >> 
+	>> 
+	\header {
+		piece = \markup \concat { "Verse 19: a conflation of two closely related versions - Alfieri ‘D’ (1840) and Paris manuscript"}
+	}
+	\layout { }
+}
 
 % Verse 20
 
