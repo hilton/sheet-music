@@ -1096,6 +1096,7 @@ bass = \new Voice {
 
 % Verse 19
 
+
 sopranoA = \new Voice {
   \relative c'' {
     \set Score.currentBarNumber = #134
@@ -1145,7 +1146,9 @@ bass = \new Voice {
   \relative c' {
 		\clef "bass"
     a2 a2. a4 a2 a2. a4 a2 a a2. a4 a a a2 a
-    
+    c1 g a2 f1. e1 ~ e\breve\fermata
+    d2. d4 d2 d d d
+    a1 gis a d, ~ d\breve
   }
   \addlyrics {
     \set stanza = #"19. "
