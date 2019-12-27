@@ -1,7 +1,7 @@
 % Copyright ©2019 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "4"
+revision = "5"
 
 #(set-global-staff-size 15.0)
 
@@ -14,7 +14,7 @@ revision = "4"
 	inner-margin = 15\mm
 	outer-margin = 15\mm
 	top-markup-spacing = #'( (basic-distance . 4) )
-	markup-system-spacing = #'( (padding . 4) )
+	markup-system-spacing = #'( (padding . 3) (stretchability . 50) )
 	system-system-spacing = #'( (basic-distance . 15) (stretchability . 100) )
 	ragged-bottom = ##f
 	ragged-last-bottom = ##t
@@ -34,8 +34,8 @@ year = #(strftime "©%Y" (localtime (current-time)))
 		\vspace #2
 		\column \center-align {
 			\line {
-				Copyright \year "Hugh Keyte" -
-				"Typeset by Peter Hilton" -
+				"Copyright ©1986 Hugh Keyte" -
+				"Typeset edition copyright " \year " Peter Hilton" -
 				Lilypond source at \with-url #"https://github.com/hilton/sheet-music" https://github.com/hilton/sheet-music - 
 				revision \revision 
 			}
@@ -55,7 +55,7 @@ year = #(strftime "©%Y" (localtime (current-time)))
 		\override BarNumber #'break-visibility = #'#(#f #t #t)
 		\override BarLine #'transparent = ##t
 		\remove "Metronome_mark_engraver"
-		\override VerticalAxisGroup #'staff-staff-spacing = #'((basic-distance . 10) (stretchability . 100))
+		\override StaffGrouper #'staff-staff-spacing = #'((basic-distance . 10) (stretchability . 100))
 	}
 	\context {
 		\StaffGroup
@@ -275,7 +275,7 @@ bass = \new Voice {
 		\new Staff << \global \sopranoA \set Staff.instrumentName = #"S1" \set Staff.shortInstrumentName = #"S1" >> 
 		\new Staff << \global \sopranoB \set Staff.instrumentName = #"S2" \set Staff.shortInstrumentName = #"S2" >> 
 		\new Staff << \global \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >> 
-		\new Staff << \global \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >> 
+		\new Staff << \global \bass \set Staff.instrumentName = #"Bar" \set Staff.shortInstrumentName = #"Bar" >> 
 	>> 
 	\header {
 		piece = \markup \concat { "Verse 3: Original version (Cappella Sistina manuscript 206, mid 17" \super th "century)"}
@@ -485,7 +485,7 @@ bass = \new Voice {
 		\new Staff << \global \sopranoA \set Staff.instrumentName = #"S1" \set Staff.shortInstrumentName = #"S1" >> 
 		\new Staff << \global \sopranoB \set Staff.instrumentName = #"S2" \set Staff.shortInstrumentName = #"S2" >> 
 		\new Staff << \global \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >> 
-		\new Staff << \global \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >> 
+		\new Staff << \global \bass \set Staff.instrumentName = #"Bar" \set Staff.shortInstrumentName = #"Bar" >> 
 	>> 
 	\header {
 		piece = \markup \concat { "Verse 7: conjectural early ornamentation of original version"}
@@ -710,7 +710,7 @@ bass = \new Voice {
 		\new Staff << \global \sopranoA \set Staff.instrumentName = #"S1" \set Staff.shortInstrumentName = #"S1" >> 
 		\new Staff << \global \sopranoB \set Staff.instrumentName = #"S2" \set Staff.shortInstrumentName = #"S2" >> 
 		\new Staff << \global \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >> 
-		\new Staff << \global \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >> 
+		\new Staff << \global \bass \set Staff.instrumentName = #"Bar" \set Staff.shortInstrumentName = #"Bar" >> 
 	>> 
 	\header {
 		piece = \markup \concat { "Verse 11: the first (‘A’ and ‘B’) of two embellishments (A-D) in the first printed publication to include them (Alfieri, 1840)"}
@@ -1108,12 +1108,19 @@ sopranoA = \new Voice {
     e1. d2. c8. b16 c1. 
     \override TextSpanner.bound-details.left.text = "a piacere"
     b8\startTextSpan \tuplet 3/2 { c16 b a } b4 d8 \tuplet 3/2 { e16 d c } d4 f2 \stopTextSpan
-    a, gis4( b) a( c) b( d) c2 ~ c2. \grace b8 a4 gis a8 fis gis4. gis8 
+    a, gis4( b) a( c) b( d) c2 ~ c2. 
+    \cadenzaOn \grace b8 a4 gis a8 fis gis4. gis8 \cadenzaOff
     a\breve\fermata
+    \once \override Score.RehearsalMark.self-alignment-X = #RIGHT
+    \mark "segue"
     \showBarLine \bar "|"
   }
   \addlyrics {
     \set stanza = #"19. "
+    Be -- ní -- gne fac, Dó -- mi -- ne, in bo -- na vo -- lun -- tá -- te 
+    tu -- _ _ _ a Si -- _ _ _ _ _ _ _ _ _ _ _ on:
+    ut æ -- di -- fi -- cén -- tur mu -- ri __ _ _ 
+    Je -- rú -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ sa -- lem.
   }
 }
 
@@ -1127,6 +1134,8 @@ sopranoB = \new Voice {
   }
   \addlyrics {
     \set stanza = #"19. "
+    Be -- ní -- gne fac, Dó -- mi -- ne, in bo -- na vo -- lun -- tá -- te tu -- a Si -- _ _ _ _ _ _ on:
+    ut æ -- di -- fi -- cén -- tur mu -- ri __ _ _ Je -- rú -- _ _ _ _ _ sa -- lem.
   }
 }
 
@@ -1139,6 +1148,8 @@ alto = \new Voice {
   }
   \addlyrics {
     \set stanza = #"19. "
+    Be -- ní -- gne fac, Dó -- mi -- ne, in bo -- na vo -- lun -- tá -- te tu -- a Si -- _ _ _ _ _ on:
+    ut æ -- di -- fi -- cén -- tur mu -- ri Je -- _ rú -- _ sa -- lem.
   }
 }
 
@@ -1148,10 +1159,12 @@ bass = \new Voice {
     a2 a2. a4 a2 a2. a4 a2 a a2. a4 a a a2 a
     c1 g a2 f1. e1 ~ e\breve\fermata
     d2. d4 d2 d d d
-    a1 gis a d, ~ d\breve
+    a'1 gis a d, ~ d\breve e ~ e1. e2 a,\breve\fermata
   }
   \addlyrics {
     \set stanza = #"19. "
+    Be -- ní -- gne fac, Dó -- mi -- ne, in bo -- na vo -- lun -- tá -- te tu -- a Si -- _ on:
+    ut æ -- di -- fi -- cén -- tur mu -- ri Je -- rú -- _ sa -- lem.
   }
 }
 
@@ -1161,7 +1174,7 @@ bass = \new Voice {
 		\new Staff << \global \sopranoA \set Staff.instrumentName = #"S1" \set Staff.shortInstrumentName = #"S1" >> 
 		\new Staff << \global \sopranoB \set Staff.instrumentName = #"S2" \set Staff.shortInstrumentName = #"S2" >> 
 		\new Staff << \global \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >> 
-		\new Staff << \global \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >> 
+		\new Staff << \global \bass \set Staff.instrumentName = #"Bar" \set Staff.shortInstrumentName = #"Bar" >> 
 	>> 
 	\header {
 		piece = \markup \concat { "Verse 19: a conflation of two closely related versions - Alfieri ‘D’ (1840) and Paris manuscript"}
@@ -1169,6 +1182,215 @@ bass = \new Voice {
 	\layout { }
 }
 
-% Verse 20
+% Verse 20(A)
 
+soprano = \new Voice {
+  \relative c'' {
+    \set Score.currentBarNumber = #145
+    e2 e4 e e1 e2 e4 e e2. e4 e e e2. e4 e2 r4 e e e e2 e 
+    e1 e4. d8 c2. b8 c16. a32 \grace g'8 f2. e4 
+    \grace f8 e4 d8 e16. a32 e8( d4.) e8( d16 e d e d8) c1\fermata
+      \showBarLine \bar "|"
+  }
+  \addlyrics {
+    \set stanza = #"20. "
+    Tunc ac -- cep -- tá -- bis sa -- cri -- fí -- ci -- um ju -- stí -- ti -- ae, 
+    ob -- la -- ti -- ó -- nes et ho -- _ _ lo -- _ _ cáu -- _ _ _ _ _ _ _ sta:
+  }
+}
+
+mezzo = \new Voice {
+  \relative c'' {
+    c2 c4 c c1 c2 c4 c c2. c4 c c c2. c4 c2 r4 c c c c2 c 
+    b1 c2 e1 d2. c4 \grace d8 c2. b8(c16.) a32(c8 b16 c b c b8) c1\fermata
+  }
+  \addlyrics {
+    \set stanza = #"20. "
+    Tunc ac -- cep -- tá -- bis sa -- cri -- fí -- ci -- um ju -- stí -- ti -- ae, 
+    ob -- la -- ti -- ó -- nes et ho -- _ lo -- _ cáu -- _ _ sta:
+  }
+}
+
+alto = \new Voice {
+  \relative c'' {
+    a2 a4 a a1 a2 a4 a a2. a4 a a a2. a4 a2 r4 a a a a2 a 
+    g1 ~ g2. a4 a1 g g2. f4 e1\fermata
+    
+  }
+  \addlyrics {
+    \set stanza = #"20. "
+    Tunc ac -- cep -- tá -- bis sa -- cri -- fí -- ci -- um ju -- stí -- ti -- ae, 
+    ob -- la -- ti -- ó -- nes et __ _ ho -- lo -- cáu -- _ sta:
+  }
+}
+
+tenor = \new Voice {
+  \relative c' {
+		\clef "treble_8"
+    a2 a4 a a1 a2 a4 a a2. a4 a a a2. a4 a2 r4 a a a a2 a 
+    b g c1 a2 d8 c b2 g4 c2 g1 g\fermata
+  }
+  \addlyrics {
+    \set stanza = #"20. "
+    Tunc ac -- cep -- tá -- bis sa -- cri -- fí -- ci -- um ju -- stí -- ti -- ae, 
+    ob -- la -- ti -- ó -- nes et ho -- lo -- cáu -- _ _ _ _ _ _ sta:
+  }
+}
+
+bass = \new Voice {
+  \relative c {
+		\clef "bass"
+    a2 a4 a a1 a2 a4 a a2. a4 a a a2. a4 a2 r4 a a a a2 a 
+    e'1 c f g g, c\fermata
+  }
+  \addlyrics {
+    \set stanza = #"20. "
+    Tunc ac -- cep -- tá -- bis sa -- cri -- fí -- ci -- um ju -- stí -- ti -- ae, 
+    ob -- la -- ti -- ó -- nes et ho -- lo -- cáu -- _ sta:
+  }
+}
+
+\score {
+	\new StaffGroup << 
+		\set Score.barNumberVisibility = #all-bar-numbers-visible
+		\new Staff << \global \soprano \set Staff.instrumentName = #"S" \set Staff.shortInstrumentName = #"S" >> 
+		\new Staff << \global \mezzo \set Staff.instrumentName = #"MS" \set Staff.shortInstrumentName = #"MS" >> 
+		\new Staff << \global \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >> 
+		\new Staff << \global \tenor \set Staff.instrumentName = #"T" \set Staff.shortInstrumentName = #"T" >> 
+		\new Staff << \global \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >> 
+	>> 
+	\header {
+		piece = "Verse 20(A): Paris manuscript"
+	}
+	\layout { }
+}
+
+
+% Verse 20(B)
+
+soprano = \new Voice {
+  \relative c'' {
+    \set Score.currentBarNumber = #152
+    d1. d2 d1 d2 d d2.(a4) a2.(e4) e2 b' c1 c \cadenzaOn b1. \cadenzaOff e2 cis\breve\fermata
+      \showBarLine \bar "|."
+  }
+  \addlyrics {
+    tunc im -- pó -- nent su -- per al -- tá -- re tu -- um ví -- tu -- los.
+  }
+}
+
+mezzo = \new Voice {
+  \relative c'' {
+    a1. a2 a1 a2 a a a c(a) b1 a a b1. b2 a\breve\fermata
+  }
+  \addlyrics {
+    tunc im -- pó -- nent su -- per al -- tá -- re tu -- um ví -- tu -- los.
+  }
+}
+
+alto = \new Voice {
+  \relative c' {
+    f1. f2 f1 f2 f f f a(e) e1 e e e1. e2 e\breve\fermata
+  }
+  \addlyrics {
+    tunc im -- pó -- nent su -- per al -- tá -- re tu -- um ví -- tu -- los.
+  }
+}
+
+tenor = \new Voice {
+  \relative c' {
+		\clef "treble_8"
+    a1. a2 a1 a2 a a d e1. e,2 e1 e2 e2. fis4 gis a gis2. gis4 e\breve\fermata
+  }
+  \addlyrics {
+    tunc im -- pó -- nent su -- per al -- tá -- re tu -- um ví -- tu -- los.
+  }
+}
+
+bass = \new Voice {
+  \relative c {
+		\clef "bass"
+    d1. d2 d1 d2 d d d a1 e' a, a e'1. e2 a,\breve\fermata
+  }
+  \addlyrics {
+    tunc im -- pó -- nent su -- per al -- tá -- re tu -- um ví -- tu -- los.
+  }
+}
+
+sopranoB = \new Voice {
+  \relative c'' {
+    \set Score.currentBarNumber = #152
+    f1. f2 f1 f2 f f f e1 e c c e1. e2 e\breve\fermata
+    
+      \showBarLine \bar "|."
+  }
+  \addlyrics {
+    tunc im -- pó -- nent su -- per al -- tá -- re tu -- um ví -- tu -- los.
+  }
+}
+
+mezzoB = \new Voice {
+  \relative c'' {
+    d1. d2 d1 d2 d d d c1 b2 e1 e2 e1.(b1) b2 cis\breve\fermata
+  }
+  \addlyrics {
+    tunc im -- pó -- nent su -- per al -- tá -- re tu -- um ví -- tu -- los.
+  }
+}
+
+altoB = \new Voice {
+  \relative c'' {
+    a1. a2 a1 a2 a a a a1 gis a a2 a1 gis4 fis gis2. gis4 a\breve\fermata
+  }
+  \addlyrics {
+    tunc im -- pó -- nent su -- per al -- tá -- re tu -- um ví -- _ _ _ tu -- los.
+  }
+}
+
+bassB = \new Voice {
+  \relative c {
+		\clef "bass"
+    d1. d2 d1 d2 d d d a'1 e a a e1. e2 a\breve\fermata
+  }
+  \addlyrics {
+    tunc im -- pó -- nent su -- per al -- tá -- re tu -- um ví -- tu -- los.
+  }
+}
+
+
+
+\score {
+  <<
+	  \new ChoirStaff << 
+		  \set Score.barNumberVisibility = #all-bar-numbers-visible
+		  \new Staff << \global \soprano \set Staff.instrumentName = #"S" \set Staff.shortInstrumentName = #"S" >> 
+		  \new Staff << \global \mezzo \set Staff.instrumentName = #"MS" \set Staff.shortInstrumentName = #"MS" >> 
+		  \new Staff << \global \alto \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >> 
+		  \new Staff << \global \tenor \set Staff.instrumentName = #"T" \set Staff.shortInstrumentName = #"T" >> 
+		  \new Staff << \global \bass \set Staff.instrumentName = #"B" \set Staff.shortInstrumentName = #"B" >> 
+	  >>
+	  \new ChoirStaff << 
+		  \set Score.barNumberVisibility = #all-bar-numbers-visible
+		  \new Staff << \global \sopranoB \set Staff.instrumentName = #"S1" \set Staff.shortInstrumentName = #"S1" >> 
+		  \new Staff << \global \mezzoB \set Staff.instrumentName = #"S2" \set Staff.shortInstrumentName = #"S2" >> 
+		  \new Staff << \global \altoB \set Staff.instrumentName = #"A" \set Staff.shortInstrumentName = #"A" >> 
+		  \new Staff << \global \bassB \set Staff.instrumentName = #"Bar" \set Staff.shortInstrumentName = #"Bar" >> 
+	  >> 
+	>> 
+	\header {
+		piece = \markup \column {
+		  "Verse 20(B): Passim from 1731 (Cappella Sistina manuscript 185)"
+		  \concat {
+		    \italic "‘Questo ultimo verso si canta adagio e piano, smorzando a poco a poco l’armonia’"
+		    " (Burney)"
+		  }
+		}
+	}
+	\layout {
+	  \context {
+	    \Score
+	    \override StaffGrouper.staffgroup-staff-spacing.basic-distance = #15
+    }
+	}
+}
 
