@@ -1,8 +1,8 @@
-% CPDL #
-% Copyright ©2014 Peter Hilton - https://github.com/hilton
+% CPDL #69713
+% Copyright ©2020 Peter Hilton - https://github.com/hilton
 
 \version "2.20.0"
-revision = "4"
+revision = "5"
 %\pointAndClickOff
 
 #(set-global-staff-size 15.0)
@@ -34,6 +34,7 @@ year = #(strftime "©%Y" (localtime (current-time)))
 			\line {
 				This edition copyright \year Peter Hilton - 
 				Lilypond source at \with-url #"https://github.com/hilton/sheet-music" https://github.com/hilton/sheet-music - 
+				\with-url #"https://www.cpdl.org/wiki/index.php/O_nata_lux_(Thomas_Tallis)" "CPDL #69713"
 				revision \revision 
 			}
 			\line {
