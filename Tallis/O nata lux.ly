@@ -1,9 +1,9 @@
-% CPDL #31402
+% CPDL #
 % Copyright ©2014 Peter Hilton - https://github.com/hilton
 
-\version "2.18.2"
-revision = "3"
-\pointAndClickOff
+\version "2.20.0"
+revision = "4"
+%\pointAndClickOff
 
 #(set-global-staff-size 15.0)
 
@@ -35,6 +35,9 @@ year = #(strftime "©%Y" (localtime (current-time)))
 				This edition copyright \year Peter Hilton - 
 				Lilypond source at \with-url #"https://github.com/hilton/sheet-music" https://github.com/hilton/sheet-music - 
 				revision \revision 
+			}
+			\line {
+				Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International license - \with-url #"https://creativecommons.org/licenses/by-nc-sa/4.0/" https://creativecommons.org/licenses/by-nc-sa/4.0/
 			}
 		}
 	}
@@ -71,8 +74,8 @@ year = #(strftime "©%Y" (localtime (current-time)))
 
 global = { 
 	\key bes \major
-	\time 6/2
-	\tempo 2 = 72
+	\time 6/4
+	\tempo 4 = 96
 	\set Staff.midiInstrument = "Choir Aahs"
 	\accidentalStyle "forget"
 }
@@ -83,12 +86,12 @@ fictaParenthesized = { \once \set suggestAccidentals = ##t \override AccidentalS
 
 superius = \new Voice	{
 	\relative c'' {
-		d2 es c d1. a2 bes g a1 e'2 f d e1 c2 d \break
-		bes a1 g r2 d' c a bes1. bes2 a a g2. f4 g a bes2 c c d1. bes2 c c d1 r2
-		f es c d1. \break d2 c a bes1. a2 g e a1. d2 d cis d1 r2 
+		d4 es c d2. a4 bes g a2 e'4 f d e2 c4 d 
+		bes a2 g r4 d' c a bes2. \break bes4 a a g4. f8 g a bes4 c c d2. bes4 c c d2 r4
+		f es c d2. d4 c a bes2. \break a4 g e a2. d4 d cis d2 r4 
 		\showBarLine 
 		\repeat volta 2 {
-			a a g a1. a2 a g a1. d2 a bes a1 g2 g1 fis2 g1. \fermata
+			a a g a2. a4 a g a2. d4 a bes a2 g4 g2 fis4 g2. \fermata
 		 \showBarLine \bar ":|."
 		}
 	}
@@ -102,11 +105,11 @@ superius = \new Voice	{
 
 discantus = \new Voice {
 	\relative c'' {
-		g2 g g f2. e4 d2 d d d e2. d4 cis2 \ficta c'! bes bes a1 a2
-		g1 \ficta fis2 g1 r2 d e \ficta f g1. d2 f f es1. bes2 es es d2. es4 f2 g g c, f1 r2
-		f g a bes1. f2 a a g1. d2 e e f2. e4 f g a2 g e fis1 r2
+		g4 g g f4. e8 d4 d d d e4. d8 cis4 \ficta c'! bes bes a2 a4
+		g2 \ficta fis4 g2 r4 d e \ficta f g2. d4 f f es2. bes4 es es d4. es8 f4 g g c, f2 r4
+		f g a bes2. f4 a a g2. d4 e e f4. e8 f g a4 g e fis2 r4
 		\repeat volta 2 {
-			\ficta f! f d f1. f2 f d f1. f2 f d f1 es d2 d b1. \fermata
+			\ficta f! f d f2. f4 f d f2. f4 f d f2 es d4 d b2. \fermata
 		}
 	}
 	\addlyrics {
@@ -120,11 +123,11 @@ discantus = \new Voice {
 contraTenor = \new Voice {
 	\relative c' {
 		\clef "treble_8"
-		bes2 c g a2. g4 f2 f d d' cis2. \ficta b4 a1 f'2 g e f1
-		bes,2 d d d1 r2 bes a a g1. bes2 c d g,2. a4 bes2 bes bes a bes1. bes2 es es d1 r2
-		d c c bes2. c4 d2 ~ d4 es4 f2 f d1. a2 b cis d1. d2 e \ficta e d1 r2
+		bes4 c g a4. g8 f4 f d d' cis4. \ficta b8 a2 f'4 g e f2
+		bes,4 d d d2 r4 bes a a g2. bes4 c d g,4. a8 bes4 bes bes a bes2. bes4 es es d2 r4
+		d c c bes4. c8 d4. es8 f4 f d2. a4 b cis d2. d4 e \ficta e d2 r4
 		\repeat volta 2 {
-			d d d d1. d2 d d d1. d2 d bes d2. c4 bes2 c a a g1. \fermata
+			d d d d2. d4 d d d2. d4 d bes d4. c8 bes4 c a a g2. \fermata
 		}
 	}
 	\addlyrics {
@@ -138,11 +141,11 @@ contraTenor = \new Voice {
 tenor = \new Voice {
 	\relative c' {
 		\clef "treble_8"
-		g2 g c, f2. g4 a2 a g g e1 r2 c'2 d bes c1 a2
-		d2. c4 a2 b1 r2 g g f d1 g a2 f bes2. a4 g2 f es c f1 f2 bes1 a2 bes1 r2
-		bes bes a f1 bes2 ~ bes c2 d bes2. a4 bes c d2 g, g a1. a2 bes c a1 r2
+		g4 g c, f4. g8 a4 a g g e2 r4 c'4 d bes c2 a4
+		d4. c8 a4 b2 r4 g g f d2 g4 ~ g a4 f bes4. a8 g4 f es c f2 f4 bes2 a4 bes2 r4
+		bes bes a f2 bes c4 d bes4. a8 bes c d4 g, g a2. a4 bes c? a2 r4
 		\repeat volta 2 {
-			a2 a bes a1. a2 a bes a1. a2 a g f1 g2 es f2. es4 d1. \fermata
+			a4 a bes a2. a4 a bes a2. a4 a g f2 g4 es f4. es8 d2. \fermata
 		}
 	}
 	\addlyrics {
@@ -156,11 +159,11 @@ tenor = \new Voice {
 bassus = \new Voice {
 	\relative c' {
 		\clef bass
-		g2 c, es d1. d2 g, bes a1. a'2 bes g a1 f2
-		g2 d1 g, r2 bes c d g,1 g2 g' f d es1. d2 c c bes2. c4 d2 es c c bes1 r2
-		d es f bes,1 bes2 bes' a f g1. f2 e e d1. f2 g a d,1 r2
+		g4 c, es d2. d4 g, bes a2. a'4 bes g a2 f4
+		g4 d2 g, r4 bes c d g,2 g4 g' f d es2. d4 c c bes4. c8 d4 es c c bes2 r4
+		d es f bes,2 bes4 bes' a f g2. f4 e e d2. f4 g a d,2 r4
 		\repeat volta 2 {
-			d f g d1. d2 f g d1. d2 d g d1 es2 c d d g,1. \fermata
+			d f g d2. d4 f g d2. d4 d g d2 es4 c d d g,2. \fermata
 		}
 	}
 	\addlyrics {
