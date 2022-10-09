@@ -2,7 +2,7 @@
 % Copyright ©2014 Peter Hilton - https://github.com/hilton
 
 \version "2.18.0"
-revision = "2"
+revision = "3"
 \pointAndClickOff
 
 #(set-global-staff-size 15) 
@@ -33,6 +33,7 @@ year = #(strftime "©%Y" (localtime (current-time)))
 			\line {
 				This edition copyright \year Peter Hilton - 
 				Lilypond source at \with-url #"https://github.com/hilton/sheet-music" https://github.com/hilton/sheet-music - 
+				\with-url #"https://www.cpdl.org/wiki/index.php/Ave_Maria_(a_5,_1575)_(Giovanni_Pierluigi_da_Palestrina)" "CPDL #31404"
 				revision \revision 
 			}
 			\line {
@@ -46,7 +47,8 @@ year = #(strftime "©%Y" (localtime (current-time)))
 \layout {
 	indent = #0
   	ragged-right = ##f
-  	ragged-last = ##t
+  	ragged-last = ##f
+  	ragged-last = ##f
 	\context {
 		\Score
 		\override BarNumber #'self-alignment-X = #CENTER
@@ -71,7 +73,6 @@ global= {
 	\key f \major
 	\time 2/2
 	\tempo 4 = 100
-	\set Score.timing = ##f 
 %	\override Score.LyricText #'font-size = #-1
 	\set Staff.midiInstrument = "Harpsichord"
 	#(set-accidental-style 'forget)
@@ -99,19 +100,19 @@ cantus = \new Voice {
 		\bar "" \break d4 bes bes bes bes2 a4 c f4. e8 d4 e d1 d\breve \showBarLine \bar "|."
 	}
 	\addlyrics {
-		A -- ve Ma -- ri -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-		a, a -- ve Ma -- ri -- _ _ _ _ _ _ a, __
-		gra -- ti -- a ple -- na, "[gra" -- ti -- a ple -- na,]
-		Do -- mi -- nus te -- _ _ _ cum, "[Do" -- mi -- nus te -- 
-		cum: be -- ne -- di -- _ _ _ _ _ _ _ _ _ cta tu
-		in mu -- li -- e -- ri -- bus, "[in" mu -- li -- e -- _ _ _ _ ri -- bus,] in
-		mu -- li -- e -- ri -- bus "[in" mu -- li -- e -- ri -- bus,] et be -- ne -- 
-		di -- _ _ _ _ _ fru -- ctus ven -- tris tu -- i Je -- _ _ sus. San -- cta Ma -- ri -- a
-		re -- gi -- na cœ -- _ _ _ _ _ _ li, __ _ _ _ _ dul -- cis
-		et pi -- a, o ma -- ter De -- i, o -- ra pro
-		no -- bis pec -- _ _ ca -- to -- _ _ _ ri -- bus, ut cum e -- 
-		le -- ctis te vi -- de -- a -- _ _ _ mus, te vi -- de -- a -- 
-		mus, ut cum e -- le -- ctis te vi -- _ _ de -- a -- mus.
+		Á -- ve Ma -- rí -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+		a, á -- ve Ma -- rí -- _ _ _ _ _ _ a, __
+		grá -- ti -- a plé -- na, grá -- ti -- a plé -- na,
+		Dó -- mi -- nus té -- _ _ _ cum, Dó -- mi -- nus té -- 
+		cum: be -- ne -- dí -- _ _ _ _ _ _ _ _ _ cta tu
+		in mu -- li -- é -- ri -- bus, in mu -- li -- é -- _ _ _ _ ri -- bus, in
+		mu -- li -- é -- ri -- bus, in mu -- li -- é -- ri -- bus, et be -- ne -- 
+		dí -- _ _ _ _ cta frú -- ctus vén -- tris tú -- i Jé -- _ _ sus. Sán -- cta Ma -- rí -- a
+		re -- gí -- na coé -- _ _ _ _ _ _ li, __ _ _ _ _ dúl -- cis
+		et pí -- a, o má -- ter Dé -- i, ó -- ra pro
+		nó -- bis pec -- _ _ ca -- tó -- _ _ _ ri -- bus, ut cum e -- 
+		lé -- ctis te vi -- de -- á -- _ _ _ mus, te vi -- de -- á -- 
+		mus, ut cum e -- lé -- ctis te vi -- _ _ de -- á -- mus.
 	}
 }
 
@@ -125,7 +126,7 @@ quintus = \new Voice {
 		a4 bes2 r4 c d2. c4 bes a g g'2 f e4 d c4. \ficta b16 a 
 			\ficta b4 c2
 		r2 c bes4 a f8 g a2( g) \ficta fis4 g2 r1 d'2 c4 a bes2
-		a4. bes8 g2( a) r2 r1 r4 bes2 a4 g f bes a bes4. c8 d2
+		a4. bes8 g2 a r2 r1 r4 bes2 a4 g f bes a bes4. c8 d2
 		\ficta es4. d16 c bes2. d2 c4 d2 bes a1 r2 r1 
 		r c2 d4 c d2 \ficta e! r2 r r4 d2 \ficta cis4 d2 bes a1
 		r2 r1 r r4 a a g a bes c c c c c2
@@ -135,25 +136,26 @@ quintus = \new Voice {
 		
 	}
 	\addlyrics {
-		A -- ve Ma -- ri -- a,
-		"[a" -- _ _ _ _ _ _ ve Ma -- ri -- _ _ _ _ _ _ _ a,] gra -- ti -- a
-		ple -- _ na, gra -- ti -- a ple -- na, Do -- 
-		mi -- nus te -- cus, "[Do" -- mi -- nus te -- cum,] "[Do" -- mi -- nus te -- cum:]
-		be -- ne -- di -- _ _ _ _ _ _ _ _ _ cta tu, __ _ _ _ _ "[be" -- ne -- di -- 
-		cta tu] in mu -- li -- e -- ri -- bus, "[in" mu -- li -- e -- ri -- _ _ _ bus,]
-		in mu -- li -- e -- _ _ ri -- bus, et be -- be -- di -- 
-		ctus __ _ _ fru -- ctus ven -- tris tu -- i Je -- _ _
-		sus. __ _ _ _ San -- cta Ma -- ri -- a, __
-		re -- gi -- na cœ -- li, dul -- cis et pi -- a
-		o ma -- ter De -- _ i, o -- ra pro no -- 
-		bis pec -- ca -- to -- ri -- bus, pec -- ca -- to -- _ _ ri -- bus, ut cum e -- le -- 
-		ctis, ut cum e -- le -- ctis te vi -- de -- a -- _ _ _
-		mus, ut cum e -- le -- ctis __ _ _ te vi -- de -- a -- _ _ _ mus.
+		Á -- ve Ma -- rí -- a,
+		á -- _ _ _ _ _ _ ve Ma -- rí -- _ _ _ _ _ _ _ a, grá -- ti -- a
+	        plé -- _ na, grá -- ti -- a plé -- na, Dó -- 
+		mi -- nus té -- cum, Dó -- mi -- nus té -- cum, Dó -- mi -- nus té -- cum:
+		be -- ne -- dí -- _ _ _ _ _ _ _ _ _ cta tu, __ _ _ _ _ be -- ne -- dí -- 
+		cta tu in mu -- li -- é -- ri -- bus, in mu -- li -- é -- ri -- _ _ _ bus,
+		in mu -- li -- é -- _ _ ri -- bus, et be -- be -- dí -- _ _ _
+		ctus frú -- ctus vén -- tris tú -- i Jé -- _ _
+		sus. __ _ _ _ Sán -- cta Ma -- rí -- a, __
+		re -- gí -- na coé -- li, dúl -- cis et pí -- a
+		o má -- ter Dé -- _ i, ó -- ra pro nó -- 
+		bis pec -- ca -- tó -- ri -- bus, pec -- ca -- tó -- _ _ ri -- bus, ut cum e -- lé -- 
+		ctis, ut cum e -- lé -- ctis te vi -- de -- á -- _ _ _
+		mus, ut cum e -- lé -- ctis __ _ _ te vi -- de -- á -- _ _ _ mus.
 	}
 }
 
 altus = \new Voice {
 	\relative c' {
+		\clef "treble_8"
 		r1 r r2 es bes c g'2. f8 e
 		d c d e f g a4. g8 g2 f4 g2 f es4 c d4. c8 bes g g'2 f4 g2 d
 		bes4 c d e f2 r r4 bes2 a4 g2 f4. \ficta es16 d es2 d r4 a'4 g f 
@@ -171,20 +173,20 @@ altus = \new Voice {
 		
 	}
 	\addlyrics {
-		A -- ve Ma -- ri -- _ _
-		_ _ _ _ _ _ _ _ _ _ a, "[a" -- ve Ma -- ri -- _ _ _ _ _ a,] gra -- 
-		ti -- a ple -- _ na, gra -- ti -- a ple -- _ _ _ na, Do -- mi -- nus
-		te -- cum, "[Do" -- mi -- nus te -- cum,] __ _ _ "[Do" -- mi -- nus te -- _ _ _ _ cum:] be -- 
-		ne -- di -- _ _ _ _ _ _ _ cta tu, "[be" -- ne -- di -- cta tu] __
-		in mu -- li -- e -- ri -- bus, __ "[in" mu -- li -- e -- ri -- bus,] in mu -- li -- 
-		e -- ri -- bus, "[in" mu -- li -- e -- ri -- bus,] et be -- ne -- di -- _ _ _ _ _ ctus,
-		"[be" -- ne -- di -- ctus] fru -- ctus ven -- tris tu -- i, "[fru" -- ctus ven -- tris tu -- i] Je -- _
-		_ _ _ sus. San -- cta Ma -- ri -- a, re -- gi -- na
-		cœ -- li, re -- gi -- na cœ -- _ _ _ _ _ _ li, dul -- cis et pi -- a, "[dul" -- 
-		cis et pi -- a,] o ma -- ter De -- i, o ma -- ter De -- _ i, o -- ra pro no -- 
-		bis pec -- _ _ _ _ _ca -- to -- ri -- bus, pec -- _ _ ca -- to -- ri -- bus, ut cum e -- le -- 
-		ctis te vi -- de -- a -- _ _ _ _ mus, "[ut" cum e -- le -- ctis te vi -- de -- _ a -- _
-		mus,] ut cum e -- le -- ctis te vi -- de -- a -- mus.		
+		Á -- ve Ma -- rí -- _ _
+		_ _ _ _ _ _ _ _ _ _ a, á -- ve Ma -- rí -- _ _ _ _ _ a, grá -- 
+		ti -- a plé -- _ na, grá -- ti -- a plé -- _ _ _ na, Dó -- mi -- nus
+		té -- cum, Dó -- mi -- nus té -- cum, __ _ _ Dó -- mi -- nus té -- _ _ _ _ cum: be -- 
+		ne -- dí -- _ _ _ _ _ _ _ cta tu, be -- ne -- dí -- cta tu __
+		in mu -- li -- é -- ri -- bus, __ in mu -- li -- é -- ri -- bus, in mu -- li -- 
+		é -- ri -- bus, in mu -- li -- é -- ri -- bus, et be -- ne -- dí -- _ _ _ _ _ ctus,
+		be -- ne -- dí -- ctus frú -- ctus vén -- tris tú -- i, frú -- ctus vén -- tris tú -- i Jé -- _
+		_ _ _ sus. Sán -- cta Ma -- rí -- a, re -- gí -- na
+		coé -- li, re -- gí -- na coé -- _ _ _ _ _ _ li, dúl -- cis et pí -- a, dúl -- 
+		cis et pí -- a, o má -- ter Dé -- i, o má -- ter Dé -- _ i, ó -- ra pro nó -- 
+		bis pec -- _ _ _ _ ca -- tó -- ri -- bus, pec -- _ _ ca -- tó -- ri -- bus, ut cum e -- lé -- 
+		ctis te vi -- de -- á -- _ _ _ _ mus, ut cum e -- lé -- ctis te vi -- de -- _ a -- _
+		mus, ut cum e -- lé -- ctis te vi -- de -- á -- mus.		
 	}
 }
 
@@ -207,19 +209,19 @@ tenor = \new Voice {
 		d d d1 c4 a bes c d c8 bes a4 bes a2 g\breve
 	}
 	\addlyrics {
-		A -- ve Ma -- ri -- a, Ma -- ri -- _ _ _ a, gra -- 
-		ti -- a ple -- na, Do -- _ _ _ mi -- nus
-		tu -- cum, Do -- mi -- nus te -- cum: be -- 
-		ne -- di -- _ _ _ _ _ _ _ _ _ _ _ cta tu, be -- ne -- di -- 
-		cta tu in mu -- li -- e -- ri -- bus,
-		"[in" mu -- li -- e -- ri -- bus,] et be -- ne -- di -- _ _ ctus
-		fru -- ctus ven -- tris tu -- i, Je -- _ _ _ _ _ _ _ _ _ _ _ _ _
-		_ sus. San -- cta Ma -- ri -- _ _ a,_ re -- gi -- na
-		cœ -- _ li, dul -- cis et pi -- a, "[dul" -- cis et
-		pi -- _ a,] o ma -- ter De -- _ i, o -- ra pro no -- 
-		bis pec -- ca -- to -- ri -- bus, pec -- _ _ ca -- to -- ri -- bus, __ _ _ _ _ _
-		ut cum e -- le -- ctis te vi -- de -- a -- _ _ _ mus, ut
-		cum, e -- le -- ctis te vi -- de -- a -- _ _ _ _ _ mus.
+		Á -- ve Ma -- rí -- a, Ma -- rí -- _ _ _ a, grá -- 
+		ti -- a plé -- na, Dó -- _ _ _ mi -- nus
+		té -- cum, Dó -- mi -- nus té -- cum: be -- 
+		ne -- dí -- _ _ _ _ _ _ _ _ _ _ _ cta tu, be -- ne -- dí -- 
+		cta tu in mu -- li -- é -- ri -- bus,
+		in mu -- li -- é -- ri -- bus, et be -- ne -- dí -- _ _ ctus
+		frú -- ctus vén -- tris tú -- i, Jé -- _ _ _ _ _ _ _ _ _ _ _ _ _
+		_ sus. Sán -- cta Ma -- rí -- _ _ a,_ re -- gí -- na
+		coé -- _ li, dúl -- cis et pí -- a, dúl -- cis et
+		pí -- _ a, o má -- ter Dé -- _ i, ó -- ra pro nó -- 
+		bis pec -- ca -- tó -- ri -- bus, pec -- _ _ ca -- tó -- ri -- bus, __ _ _ _ _ _
+		ut cum e -- lé -- ctis te vi -- de -- á -- _ _ _ mus, ut
+		cum, e -- lé -- ctis te vi -- de -- á -- _ _ _ _ _ mus.
 	}
 }
 
@@ -242,26 +244,27 @@ bassus = \new Voice {
 		g4 bes bes bes bes,8 c d e f2 bes,4 a bes c d1 g\breve
 	}
 	\addlyrics {
-		A -- ve Ma -- ri -- _ _ _ a, gra -- 
-		ti -- a ple -- _ _ _ na __ _ _ _ _ Do -- mi -- nus
-		te -- cum, Do -- mi -- nus te -- cum, te -- _ _ _ cum:
-		be -- ne -- di -- _ _ _ _ _ _ _ _ cta
+		Á -- ve Ma -- rí -- _ _ _ a, grá -- 
+		ti -- a plé -- _ _ _ na __ _ _ _ _ Dó -- mi -- nus
+		té -- cum, Dó -- mi -- nus té -- cum, té -- _ _ _ cum:
+		be -- ne -- dí -- _ _ _ _ _ _ _ _ cta
 		tu __ in mu -- 
-		li -- e -- ri -- bus, __ et be -- ne -- di -- ctus
-		fru -- ctus ven -- tris tu -- i Je -- sus, Je -- _
-		_ sus. San -- cta Ma -- ri -- a, re -- gi -- na cœ -- _ _ _
-		_ _ li, dul -- cis et pi -- a, "[dul" -- cis et pi -- 
-		a,] o ma -- ter De -- _ _ _ _ _ i, o -- ra pro no -- 
-		bis pec -- _ _ ca -- to -- ri -- bus, ut cum e -- le -- _ _ _ 
-		_ ctis te vi -- de -- a -- mus, ut cum e -- le -- ctis te vi -- de -- a -- 
-		mus, ut cum e -- le -- _ _ _ _ ctis te vi -- de -- a -- mus.
+		li -- e -- ri -- bus, __ et be -- ne -- dí -- ctus
+		frú -- ctus vén -- tris tú -- i Jé -- sus, Jé -- _
+		_ sus. Sán -- cta Ma -- rí -- a, re -- gí -- na coé -- _ _ _
+		_ _ li, dúl -- cis et pí -- a, dúl -- cis et pí -- 
+		a, o má -- ter Dé -- _ _ _ _ _ i, ó -- ra pro nó -- 
+		bis pec -- _ _ ca -- tó -- ri -- bus, ut cum e -- lé -- _ _ _ 
+		_ ctis te vi -- de -- á -- mus, ut cum e -- lé -- ctis te vi -- de -- á -- 
+		mus, ut cum e -- lé -- _ _ _ _ ctis te vi -- de -- á -- mus.
 	}
 }
 
 \score {
 	\transpose c a, {
 		\new StaffGroup << 
-			\set Score.proportionalNotationDuration = #(ly:make-moment 1 16)
+			\set Score.proportionalNotationDuration = #(ly:make-moment 1 7)
+			\set Score.barNumberVisibility = #all-bar-numbers-visible
 			\new Staff << \global \cantus >> 
 			\new Staff << \global \quintus >> 
 			\new Staff << \global \altus >> 
@@ -270,5 +273,5 @@ bassus = \new Voice {
 		>> 
 	}
 	\layout { }
-	\midi {	}
+%	\midi {	}
 }
