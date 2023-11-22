@@ -2,7 +2,7 @@
 % Copyright ©2013 Peter Hilton - https://github.com/hilton
 
 \version "2.18.0"
-revision = "5"
+revision = "6"
 \pointAndClickOff
 
 #(set-global-staff-size 15)
@@ -299,7 +299,7 @@ bassus = \new Voice {
 		g4 f e d c1 d2 e d1 g r R\breve R r1 r2 g |
 		c a1 g c, c' g2 d'1 g, r\breve r2 g1 g2 c1 |
 		
-		g1 r R\breve R R r2 c,1 c2 f1 e |
+		g1 r R\breve R R r2 c,1 c2 f1 c |
 		d2. d4 a'1 f2 c d1 | a r\breve r2 a'2 | g f \ficta bes1 a r |
 		R\breve R R r2 c, g' e d1 c\breve r1 |
 		
