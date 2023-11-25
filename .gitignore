@@ -2,3 +2,4 @@
 *.midi
 .DS_Store
 temp.ly
+*.band
