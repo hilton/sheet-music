@@ -2,7 +2,7 @@
 % Based on CPDL #55912 by Oscar Smith
 
 \version "2.24.2"
-revision = "1"
+revision = "2"
 %\pointAndClickOff
 
 #(set-global-staff-size 15)
@@ -28,7 +28,6 @@ year = #(strftime "©%Y" (localtime (current-time)))
 	title = \markup \medium \fontsize #6 \override #'(font-name . "Source Sans Pro Light") {
 		"Missa In illo tempore"
 	}
-	piece = \markup \larger \sans { Sanctus }
 	composer = \markup \sans {
 		\vspace #2
 		\column {
@@ -53,41 +52,41 @@ year = #(strftime "©%Y" (localtime (current-time)))
   	ragged-last = ##f
 	\context {
 		\Score
-		\override BarNumber #'self-alignment-X = #CENTER
-		\override BarNumber #'break-visibility = #'#(#f #t #t)
-		\override SpanBar #'transparent = ##t
-		\override BarLine #'transparent = ##t
-		\override VerticalAxisGroup #'staff-staff-spacing = #'((basic-distance . 10) (stretchability . 100))
+		\override BarNumber.self-alignment-X = #CENTER
+		\override BarNumber.break-visibility = #'#(#f #t #t)
+		\override VerticalAxisGroup.staff-staff-spacing = #'((basic-distance . 10) (stretchability . 100))
+		\override SpanBar.transparent = ##t
+		\override BarLine.transparent = ##t
 	}
 	\context {
 		\Staff
 	}
 	\context { 
 		\Voice 
-		\override NoteHead #'style = #'baroque
+		\override NoteHead.style = #'baroque
 		\consists "Horizontal_bracket_engraver"
 		\consists "Ambitus_engraver"
 	}
 	\context {
 		\Score
-		proportionalNotationDuration = #(ly:make-moment 1 4)
-      \override SpacingSpanner #'uniform-stretching = ##t
+		proportionalNotationDuration = #(ly:make-moment 1 7)
+		\override SpacingSpanner.uniform-stretching = ##t
 	}
 }
 
 
-global= { 
+global = {
 	\key bes \major
+	\omit Staff.TimeSignature
 	\time 4/2
-	\set Staff.midiInstrument = "choir aahs"
+	\set Staff.midiInstrument = "drawbar organ"
 	\accidentalStyle "forget"
 }
 
 showBarLine = {
-	\once \override Score.BarLine #'transparent = ##f
-	\once \override Score.SpanBar #'transparent = ##f 
+	\once \override Score.BarLine.transparent = ##f
+	\once \override Score.SpanBar.transparent = ##f 
 }
-ficta = { \once \set suggestAccidentals = ##t }
 
 
 sopranoA =  \relative bes' {
@@ -320,7 +319,7 @@ alto =  \relative f' {
 altoLyrics =  \lyricmode {
   \set
   ignoreMelismata = ##t Sanc -- _ _ _ _ _
-  _ _ _ _ _ _ _ tus Sanc -- _
+  _ _ _ _ _ _ tus Sanc -- _ _
   _ _ _ _ _ _ _ _ _
   _ _ _ _ _ tus Sanc -- _ _
   _ _ _ _ _ _ _ tus Do -- mi
@@ -570,9 +569,12 @@ bassLyrics =  \lyricmode {
 
 
 
-% The score definition
 \score {
-  \transpose bes as {
+  \header {
+    piece = \markup \larger \sans { Sanctus }
+  }
+  
+  \transpose bes g {
   <<
 
     \new StaffGroup
@@ -636,5 +638,370 @@ bassLyrics =  \lyricmode {
   >>
   }
   \layout {}
-  \midi {\tempo 2 = 100 }
+%  \midi {\tempo 2 = 100 }
 }
+
+
+% Benedictus
+
+sopranoA =  \relative c'' {
+  \clef "treble" 
+  \set Score.currentBarNumber = #60
+  b1. b2 | % 61
+  c2. b4 a1 | % 62
+  \time 6/2 gis2. a4 b2 cis1
+  cis2 | % 63
+  \time 4/2 d2. e4 f1 | % 64
+  e1. g2 | % 65
+  \break
+  g1. g2.
+  f4 e2. e4 e2 | % 67
+  e2 d4 c4 d2. d4 | % 68
+  e1. fis2 | % 69
+  g1 g2 f2 | \barNumberCheck #70
+  \break
+  e2. e4 d1 | % 71
+  c2. c4 g'\breve
+  r2 g2 | % 73
+  a4 g4 f4 e4 f2
+  f2 | % 74
+  g4 f4 e4 d4 e2 e2 | % 75
+  \break
+  f4 e4 d4 c4 d1 | % 76
+  e4 d4 c4 b4 c2
+  e2 | % 77
+  d2 e1 d2 | % 78
+  c2 d1 c2 | % 79
+  b2 c1 b2 | \barNumberCheck #80
+  a2 b2. c4 d4 b4 | % 81
+  \break
+  e\breve | % 82
+  d2 c2 d1 | % 83
+  c1. b4 a4  | % 84
+  d2 g,2 g'1 | % 85
+  f\breve | % 86
+  e\breve | % 87
+  \break
+  d\breve c\breve b2. a4
+  g2 g'2. f4 e2. d4
+  c2 d\breve e \showBarLine \bar "|."
+}
+
+
+sopranoALyrics =  \lyricmode {
+  Be -- ne -- di -- _ _ ctus,  ___ _  be -- ne -- di -- _ _  ctus qui ve -- nit in no -- mi -- ne_ Do --  _ _ _ mi -- ni,
+  qui ve -- nit in no -- mi -- ne Do -- mi -- ni. __
+  O -- san -- _ _ _  _  na in __ _ _ _ _  ex -- cel -- _ _ _ _ sis, __ _ _ _ _  
+  o -- san -- _ na in __ _ ex -- cel -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _  sis,
+  o -- san -- na in ex -- cel -- _ _ _ _ _ _ _ _ sis.
+}
+
+sopranoB =  \relative c'' {
+  \clef "treble"
+  \set Score.currentBarNumber = #60
+  gis1. gis2 | % 61
+  a2. b4 c1 | % 62
+  b1 e1. e2 | % 63
+  f2. e4 d1 | % 64
+  cis1. d2 | % 65
+  e1. d1
+  c2 b2. c4 | % 67
+  c1 a2. a4 | % 68
+  b1. d2 | % 69
+  d1 d2 d2 | \barNumberCheck #70
+  c2 b2 b1 | % 71
+  e2. d4 c2 c2 | % 72
+  d2 e2 d2 e1 % tie
+  d2 c2 d1 % tie
+  c2 b2 c1 % tie
+  b2 a\breve % tie
+  g\breve % tie
+  g'1 % tie
+  f\breve | % 79
+  e\breve | \barNumberCheck #80
+  d\breve | % 81
+  c\breve | % 82
+  g'1 g1.
+  f2 e2 f1 % tie
+  e2 d2 e1 % tie
+  d2 c2 d1 % tie
+  c2 b2 c1 % tie
+  b2 a2 b1 % tie
+  a2 g2 a1 g2 g'2.
+  f4 e2. d4 c1. b4
+  a4 b1 c\breve |
+}
+
+sopranoBLyrics =  \lyricmode {
+  Be -- ne -- di -- _ _ ctus,
+  be -- ne -- di -- _ _ ctus qui ve -- nit in no -- mi -- ne Do -- mi -- ni,
+  qui ve -- nit in no -- mi -- ne Do -- _ _ mi -- ni.
+  O -- san -- _ na in __ _ ex -- cel -- _ _ _ sis, __ 
+  o -- san -- na in ex -- cel -- sis, o -- san -- _ na
+  in __ _ ex -- cel -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ sis.
+}
+
+alto =  \relative g' {
+  \clef "treble" 
+  \set Score.currentBarNumber = #60
+  e1. e2 | % 61
+  e\breve | % 62
+  e2. fis4 gis2
+  a1 a2 | % 63
+  a\breve | % 64
+  a1. b2 | % 65
+  c1. b2 | % 66
+  a2 a1 g2 | % 67
+  a1 f2 a2 | % 68
+  gis1. a2 | % 69
+  b2. b4 b2 a2.
+  g4 g2 g2. g4 | % 71
+  g1. c2 | % 72
+  b2 c1 b2 | % 73
+  a2 bes1 a2 | % 74
+  g2 a1 g2 | % 75
+  f2 g1 f2 | % 76
+  e2 f2. e4 e4 d8 c8 | % 77
+  d4 g,4
+  c4 d4 e4 f4 g2 | % 78
+  c2 bes2. f4 a2 | % 79
+  e2 a2. e4 g2 | \barNumberCheck #80
+  d2 g1 g2 | % 81
+  g\breve | % 82
+  g\breve  | % 84
+  R
+  r2 c2 b2 c1
+  bes2 a2 bes1 
+  a2 g2 a1 
+  g2 f2 g1
+  f2 e2 f1 e2 d1
+  g\longa g\breve
+}
+
+altoLyrics =  \lyricmode {
+  Be -- ne -- di -- ctus, ___ _ 
+  be -- ne -- di -- ctus qui ve -- nit in no -- mi -- ne Do -- mi -- ni,
+  qui ve -- nit in no -- mi -- ne_ Do -- mi -- ni.
+  O sa -- _ na in __ _ ex -- cel -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ sis, 
+  in __ _ _ ex -- cel -- _ _ sis, in ex -- cel -- sis, 
+  o -- san -- _ na in __ _ ex -- cel -- _ _ _ _ _ _ _ _ _ _ sis.
+}
+
+tenorA =  \relative g {
+  \clef "treble_8"
+  \set Score.currentBarNumber = #60  
+  b2. b4
+  e2. d4 | % 61
+  c4. b8 a2. b4 c4
+  d4 | % 62
+  e2 b1 a1 e'2 | % 63
+  d4. e8 f2. e4 d2 | % 64
+  e1 a,2 d2 | % 65
+  c4. d8 e4. d8 c2
+  d2 | % 66
+  a1 b2 e2 | % 67
+  a,1. d2 | % 68
+  b1 r1 | % 69
+  d2 g2. d4 a'2 |
+  \barNumberCheck #70
+  e1 g2 d2 | % 71
+  e1. g2 | % 72
+  g1 r r\breve r r r
+  r1 r2 g2 | % 78
+  a4 g4 f4 e4 f2
+  f2 | % 79
+  g4 f4 e4 d4 e2 e2 | 
+  \barNumberCheck #80
+  f4 e4 d4 c4 d1 | % 81
+  e4 d4 c4 b4 c1 | % 82
+  g\breve | % 83
+  c1 r1 | % 84
+  r1 r2 g'2 | % 85
+  a4 g4 f4 e4 f2
+  f2 | % 86
+  g4 f4 e4 d4 e2
+  e2 | % 87
+  f4 e4 d4 c4
+  d1 e4 d4 c4 b4
+  c1 d2 g,2. a4 b2
+  g1 c1 g4 a4 b4
+  c4 d2 g,2 g\breve
+}
+
+tenorALyrics =  \lyricmode {
+  Be -- ne -- di -- _ _ _ _ _ _ _ _ ctus,
+  be -- ne -- di -- _ _ _ _ ctus
+  qui ve -- nit __ _ _ _ _ in no -- mi -- ne Do -- mi -- ni,
+  qui ve -- nit in no -- mi -- ne Do -- mi -- ni.
+  O -- san -- _ _ _ _ na in __ _ _ _ _ ex -- cel -- _ _ _ _ _ _ _ _ _ _ sis,
+  o -- san -- _ _ _ _ na in __ _ _ _ _ ex -- cel -- _ _ _ _ _ _ _ _ _ sis,
+  in __ _ _ ex -- cel -- _ _ _ _ _ _ sis.
+}
+
+
+tenorB =  \relative g {
+  \clef "treble_8" 
+  \set Score.currentBarNumber = #60    
+  r2 b1 b2 | % 61
+  a4. b8 c2. b4 a2 | % 62
+  b2 e1 e2 a2. g4
+  | % 63
+  f4. e8 d2. e4 f4
+  g4 | % 64
+  a2 e1 b2 | % 65
+  e4. f8 g2 g2. d4 | % 66
+  f2 c2 e1 | % 67
+  c2 b4 a4 d2 a2 | % 68
+  e'1. a,2 | % 69
+  g4. a8 b2. g4 a2 |
+  \barNumberCheck #70
+  c2 g2 b1 | % 71
+  g1. g2 | % 72
+  g1 g'1 | % 73
+  f\breve | % 74
+  e\breve | % 75
+  d\breve | % 76
+  c\breve | % 77
+  g'1 g1 | % 82
+  r\breve r r r |
+  r1 g1 | % 83
+  a1. f2 | % 84
+  g1. e2 | % 85
+  f1. d2 | % 86
+  e1. c2 | % 87
+  d1. b2 c1.
+  a2 b1. g1 g'2.
+  f4 e2 d\breve c
+}
+
+tenorBLyrics =  \lyricmode {
+  Be -- ne -- di -- _ _ _ _ ctus,
+  be -- ne -- di -- _ _ _ _ _ _ _ _ ctus
+  qui ve -- _ _ nit in no -- mi -- ne Do -- _ _ _ mi -- ni,
+  qui ve -- _ _ nit in no -- mi -- ne Do -- mi -- ni.
+  O -- san -- na in ex -- cel -- sis,
+  o -- san -- na in ex -- cel -- _ _ _ _ _ _ _ _ _ _ _ _ _ sis.
+}
+
+bass =  \relative c {
+  \clef "bass" 
+  \set Score.currentBarNumber = #60    
+  e1. e2 | % 61
+  a\breve | % 62
+  e1. a1 a2 | % 63
+  d\breve | % 64
+  a1. g2 | % 65
+  c1 c2 g2 | % 66
+  a2. a4
+  e1 | % 67
+  f1. f2 | % 68
+  e1. d2 | % 69
+  g1 g2 d2 | \barNumberCheck #70
+  e2. e4 b1 | % 71
+  c1. c2 | % 72
+  g'\breve | % 76
+  r r r
+  r1 r2 c2 | % 77
+  b2 c1 b2 | % 78
+  a2 bes1 a2 | % 79
+  g2 a1 g2 | \barNumberCheck #80
+  f2 g2. a4 b2 | % 81
+  c1. b4 a4 | % 82
+  b g c1 b2 | % 83
+  a2. b4 c2 d2 | % 84
+  b2 c2 g2 c2 | % 85
+  a2 bes2 f2 bes2 | % 86
+  g2 a2 e2 a2 | % 87
+  f2 g2 d2 g2
+  e2 f2 c2 f2 d2 e2
+  b1 c\breve g'\breve
+  c,
+}
+
+bassLyrics =  \lyricmode {
+  Be -- ne -- di -- ctus,
+  be -- ne -- di -- ctus qui ve -- nit in no -- mi -- ne Do -- mi -- ni,
+  qui ve -- nit in no -- mi -- ne Do -- mi -- ni.
+  O -- san -- _ na in __ _ ex -- cel -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ sis,
+  o -- _ _ san -- _ _ _ na -- _ _ _ in __ _ _ _ ex -- _ _ _ cel __ _ _ _ _ sis.
+}
+
+
+benedictus = {
+	\key c \major
+	\omit Staff.TimeSignature
+	\time 4/2
+	\set Staff.midiInstrument = "drawbar organ"
+	\accidentalStyle "forget"
+}
+
+\score {
+  \header {
+    piece = \markup \larger \sans { Benedictus }
+  }
+  
+\transpose c g, {
+
+    \new StaffGroup
+    <<
+
+      \new Staff
+      <<
+        \set Staff.instrumentName = "S1"
+        \context Staff <<
+          \context Voice = "sopranoA" {  \benedictus \sopranoA }
+          \new Lyrics \lyricsto "sopranoA" { \sopranoALyrics }
+        >>
+      >>
+      
+      \new Staff
+      <<
+        \set Staff.instrumentName = "S2"
+        \context Staff <<
+          \context Voice = "sopranoB" {  \benedictus \sopranoB }
+          \new Lyrics \lyricsto "sopranoB" { \sopranoBLyrics }
+        >>
+      >>
+    
+    \new Staff
+    <<
+        \set Staff.instrumentName = "A"
+      \context Staff <<
+        \context Voice = "alto" {  \benedictus \alto }
+        \new Lyrics \lyricsto "alto" { \altoLyrics }
+      >>
+    >>
+    
+    \new Staff
+    <<
+        \set Staff.instrumentName = "T1"
+      \context Staff <<
+        \context Voice = "tenorA" {  \benedictus \tenorA }
+        \new Lyrics \lyricsto "tenorA" { \tenorALyrics }
+      >>
+    >>
+    
+    \new Staff
+    <<
+        \set Staff.instrumentName = "T2"
+      \context Staff <<
+        \context Voice = "tenorB" {  \benedictus \tenorB }
+        \new Lyrics \lyricsto "tenorB" { \tenorBLyrics }
+      >>
+    >>
+    
+    \new Staff
+    <<
+        \set Staff.instrumentName = "B"
+      \context Staff <<
+        \context Voice = "bass" {  \benedictus \bass }
+        \new Lyrics \lyricsto "bass" { \bassLyrics }
+      >>
+    >>
+
+    >>
+  }
+  \layout {  }
+%  \midi {\tempo 2 = 60 }
+}
+
