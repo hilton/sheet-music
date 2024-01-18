@@ -174,7 +174,7 @@ bass = \new Voice {
 
 
 \score {
-	\transpose f g {
+	\transpose f f {
 		<<
 			\new StaffGroup
 	        << 
@@ -259,7 +259,7 @@ bass = \new Voice {
 }
 
 \score {
-	\transpose f g {
+	\transpose f f {
 	<<
 		\new StaffGroup
 	  	<< 
@@ -289,7 +289,7 @@ bass = \new Voice {
 % KYRIE 1
 
 \score {
-	\transpose f g {
+	\transpose f f {
 	\new Staff <<
 		\key f \major
 		\new Voice = "tenor" {
@@ -358,7 +358,7 @@ bass = \new Voice {
 
 
 \score {
-	\transpose f g {
+	\transpose f f {
 	<<
 		\new StaffGroup
 	  	<< 
@@ -379,7 +379,7 @@ bass = \new Voice {
 % CHRISTE
 
 \score {
-	\transpose f g {
+	\transpose f f {
 	\new Staff <<
 		\key f \major
 		\new Voice = "tenor" {
@@ -445,7 +445,7 @@ bass = \new Voice {
 }
 
 \score {
-	\transpose f g {
+	\transpose f f {
 	<<
 		\new StaffGroup
 	  	<< 
@@ -465,7 +465,7 @@ bass = \new Voice {
 % KYRIE 2
 
 \score {
-	\transpose f g {
+	\transpose f f {
 	\new Staff <<
 		\key f \major
 		\new Voice = "tenor" {
@@ -537,7 +537,7 @@ bass = \new Voice {
 }
 
 \score {
-	\transpose f g {
+	\transpose f f {
 	<<
 		\new StaffGroup
 	  	<< 
@@ -676,7 +676,7 @@ bass = \new Voice {
 }
 
 \score {
-	\transpose f g {
+	\transpose f f {
 	<<
 		\new StaffGroup
 	  	<< 
@@ -836,7 +836,7 @@ bass = \new Voice {
 }
 
 \score {
-	\transpose f g {
+	\transpose f f {
 	<<
 		\new StaffGroup
 	  	<< 
@@ -858,7 +858,7 @@ bass = \new Voice {
 \pageBreak
 
 \score {
-	\transpose f g {
+	\transpose f f {
 	\new Staff <<
 		\key f \major
 		\new Voice = "tenor" {
@@ -979,7 +979,7 @@ bass = \new Voice {
 }
 
 \score {
-	\transpose f g {
+	\transpose f f {
 	<<
 		\new StaffGroup
 	  	<< 
@@ -1067,7 +1067,7 @@ bass = \new Voice {
 }
 
 \score {
-	\transpose f g {
+	\transpose f f {
 	\new StaffGroup << 
 		\set Score.proportionalNotationDuration = #(ly:make-moment 1 8)
 		\new Staff << \globalC \soprano >> 
@@ -1144,7 +1144,7 @@ bass = \new Voice {
 }
 
 \score {
-	\transpose f g {
+	\transpose f f {
 	\new StaffGroup << 
 		\set Score.proportionalNotationDuration = #(ly:make-moment 1 8)
 		\new Staff << \globalC \soprano >> 
@@ -1236,7 +1236,7 @@ bass = \new Voice {
 }
 
 \score {
-	\transpose f g {
+	\transpose f f {
 	\new StaffGroup << 
 		\set Score.proportionalNotationDuration = #(ly:make-moment 1 2)
 		\new Staff << \globalC \soprano >> 
@@ -1388,7 +1388,7 @@ bass = \new Voice {
 
 
 \score {
-	\transpose f g {
+	\transpose f f {
 	<<
 		\new StaffGroup
 	  	<< 
@@ -1409,7 +1409,7 @@ bass = \new Voice {
 
 
 \score {
-	\transpose f g {
+	\transpose f f {
 	\new Staff <<
 		\key c \major
 		\new Voice {
