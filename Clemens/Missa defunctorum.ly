@@ -1,10 +1,10 @@
 % CPDL #33472
 % http://www.cpdl.org/wiki/index.php/Missa_pro_defunctis_(Jacobus_Clemens_non_Papa)
-% Copyright ©2017 Peter Hilton - https://github.com/hilton
+% Copyright ©2024 Peter Hilton - https://github.com/hilton
 
-\version "2.16.2"
-\pointAndClickOff
-revision = "9"
+\version "2.24.2"
+%\pointAndClickOff
+revision = "10"
 
 #(set-global-staff-size 15)
 
@@ -17,7 +17,7 @@ revision = "9"
 	markup-system-spacing = #'( (padding . 4) )
 	system-system-spacing = #'( (basic-distance . 15) (padding . 2) (stretchability . 100) )
 	indent = 0
-  	ragged-bottom = ##f
+	ragged-bottom = ##f
 	ragged-last-bottom = ##t
 } 
 
@@ -46,20 +46,20 @@ year = #(strftime "©%Y" (localtime (current-time)))
 }
 
 \layout {
-  	ragged-right = ##f
-  	ragged-last = ##f
+	ragged-right = ##f
+	ragged-last = ##f
 	\context {
 		\Score
-		\override BarNumber #'self-alignment-X = #CENTER
-		\override BarNumber #'break-visibility = #'#(#f #t #t)
-		\override SpanBar #'transparent = ##t
-		\override BarLine #'transparent = ##t
+		\override BarNumber.self-alignment-X = #CENTER
+		\override BarNumber.break-visibility = #'#(#f #t #t)
+		\override SpanBar.transparent = ##t
+		\override BarLine.transparent = ##t
 		\remove "Metronome_mark_engraver"
-		\override VerticalAxisGroup #'staff-staff-spacing = #'((basic-distance . 10) (stretchability . 50))
+		\override VerticalAxisGroup.staff-staff-spacing = #'((basic-distance . 10) (stretchability . 50))
 	}
 	\context { 
 		\Voice 
-		\override NoteHead #'style = #'baroque
+		\override NoteHead.style = #'baroque
 		\consists "Horizontal_bracket_engraver"
 	}
 }
@@ -82,8 +82,8 @@ globalC = {
 }
 
 showBarLine = {
-	\once \override Score.BarLine #'transparent = ##f
-	\once \override Score.SpanBar #'transparent = ##f 
+	\once \override Score.BarLine.transparent = ##f
+	\once \override Score.SpanBar.transparent = ##f 
 }
 ficta = { \once \set suggestAccidentals = ##t }
 
@@ -92,7 +92,7 @@ ficta = { \once \set suggestAccidentals = ##t }
 
 soprano = \new Voice {
 	\relative c' {
-		\once \override Staff.TimeSignature #'stencil = ##f
+		\once \override Staff.TimeSignature.stencil = ##f
 		\cadenzaOn s1 \cadenzaOff \showBarLine \bar "|" \time 2/2
 		\set Score.currentBarNumber = #2
 		f2. g4 a bes c4. bes8 a4 c bes a2
@@ -114,7 +114,7 @@ soprano = \new Voice {
 
 alto = \new Voice {
 	\relative c {
-		\once \override Staff.TimeSignature #'stencil = ##f
+		\once \override Staff.TimeSignature.stencil = ##f
 		s1 r2 f2. g4 a bes c c d4. c16 bes
 		a4 bes c d2 c4 d2 r4 f2 e4 d c2 bes4 c d c2 c1
 		r4 c2 c4 c2 f,4 f' ~ f e d c4. a8 d4 c1 r4 f f2 c2.
@@ -134,8 +134,8 @@ alto = \new Voice {
 tenor = \new Voice {
 	\relative c {
 		\clef "treble_8"
-		\once \override Staff.TimeSignature #'stencil = ##f
-		\override Stem #'transparent = ##t f4 g f f-- \override Stem #'transparent = ##f 
+		\once \override Staff.TimeSignature.stencil = ##f
+		\override Stem.transparent = ##t f4 g f f-- \override Stem.transparent = ##f 
 		r1 r2 f\breve g1 a2 ~ a a1 f2 g g f a
 		a g a a c4. bes8 a4 g a bes g1 f2 a a
 			 
@@ -154,7 +154,7 @@ tenor = \new Voice {
 bass = \new Voice {
 	\relative c {
 		\clef "bass"
-		\once \override Staff.TimeSignature #'stencil = ##f
+		\once \override Staff.TimeSignature.stencil = ##f
 		s1 r1 f2. g4 a2 d,1
 		c4 bes \ficta es2 d f4. e8 d4 c d1 c4 bes c2 f,4 f'2 f4
 		f2 c r4 f2 f4 f c d e f bes, c1 f,2 r4 f' f2
@@ -174,16 +174,18 @@ bass = \new Voice {
 
 
 \score {
-	<<
-		\new StaffGroup
-	  	<< 
-			\set Score.proportionalNotationDuration = #(ly:make-moment 1 8)
-			\new Staff << \globalF \soprano >> 
-			\new Staff << \globalF \alto >>
-			\new Staff << \globalF \tenor >>
-			\new Staff << \globalF \bass >>
-		>> 
-	>>
+	\transpose f g {
+		<<
+			\new StaffGroup
+	        << 
+		      \set Score.proportionalNotationDuration = #(ly:make-moment 1 8)
+		      \new Staff << \globalF \soprano >> 
+		      \new Staff << \globalF \alto >>
+		      \new Staff << \globalF \tenor >>
+		      \new Staff << \globalF \bass >>
+			>> 
+		>>
+	}
 	\header {
 		piece = \markup \larger \sans { Introitus }
 	}
@@ -195,7 +197,7 @@ bass = \new Voice {
 
 soprano = \new Voice {
 	\relative c' {
-		\once \override Staff.TimeSignature #'stencil = ##f
+		\once \override Staff.TimeSignature.stencil = ##f
 		\cadenzaOn \skip 8*22 \cadenzaOff 
 		\set Score.currentBarNumber = #26
 		\showBarLine \bar "|" \time 2/2
@@ -212,7 +214,7 @@ soprano = \new Voice {
 
 alto = \new Voice {
 	\relative c' {
-		\once \override Staff.TimeSignature #'stencil = ##f
+		\once \override Staff.TimeSignature.stencil = ##f
 		\skip 8*22 c1 e2 f f4 f f f f2. f4
 		f2. f4 f d f2 r4 c e f f2 f4 f f4. e8 d4 d bes c d2
 		r4 c f f f4. e16 d c4 d e2 f2. e8 d e4 d d2. d4 c1
@@ -227,8 +229,8 @@ alto = \new Voice {
 tenor = \new Voice {
 	\relative c {
 		\clef "treble_8"
-		\once \override Staff.TimeSignature #'stencil = ##f
-		\override Stem #'transparent = ##t f8 s4 g8 a a s4 a8 a s4 a8 a s4 a8 s4 g8 g-- a-- \override Stem #'transparent = ##f
+		\once \override Staff.TimeSignature.stencil = ##f
+		\override Stem.transparent = ##t f8 s4 g8 a a s4 a8 a s4 a8 a s4 a8 s4 g8 g-- a-- \override Stem.transparent = ##f
 		a1 c c4 c c c d2. d4
 		d2. d4 c bes c2 r4 a c c c2 c4 d d c bes a g2 a
 		r4 a c c c2 a c1 c2. a4 bes4. a8 f4 g a1
@@ -244,7 +246,7 @@ tenor = \new Voice {
 bass = \new Voice {
 	\relative c {
 		\clef "bass"
-		\once \override Staff.TimeSignature #'stencil = ##f
+		\once \override Staff.TimeSignature.stencil = ##f
 		\skip 8*22 f1 c2 f f4 f f f d2. d4
 		bes2. bes4 f' g f2 r4 f4 c f f2 f4 bes, bes f' g d \ficta es2 d
 		r4 f f f f2. d4 c2 f c2. d4 bes1 f
@@ -257,6 +259,7 @@ bass = \new Voice {
 }
 
 \score {
+	\transpose f g {
 	<<
 		\new StaffGroup
 	  	<< 
@@ -267,6 +270,7 @@ bass = \new Voice {
 			\new Staff << \globalF \bass >>
 		>> 
 	>>
+	}
 	\layout { }
 %	\midi { }
 }
@@ -276,7 +280,7 @@ bass = \new Voice {
 		\fill-line {
 			\line { }
 			\line { }
-			\line \right-align { Repeat \italic " Requiem aeternam dona eis Domine, et lux perpetua luceat eis." }
+			\line \right-align { Repeat \italic " Requiem aeternam dona eis Domine, et lux perpetua luceat eis." }
 		}
 	}
 }
@@ -285,13 +289,14 @@ bass = \new Voice {
 % KYRIE 1
 
 \score {
+	\transpose f g {
 	\new Staff <<
 		\key f \major
 		\new Voice = "tenor" {
 			\relative c {
 				\clef "treble_8"
 				\cadenzaOn
-				\override Stem #'transparent = ##t f4 g a bes a a-- g-- s8 s2_"*" a4 g f e f g f f-- \showBarLine\bar ":|."
+				\override Stem.transparent = ##t f4 g a bes a a-- g-- s8 s2_"*" a4 g f e f g f f-- \showBarLine\bar ":|."
 				\cadenzaOff
 			}
 		}
@@ -299,6 +304,7 @@ bass = \new Voice {
 			Ky -- _ _ _ ri -- e __ _ e -- _ _ _ _ le -- i -- son,
 		}
 	>>
+	}
 	\header {
 		piece = \markup \larger \sans { Kyrie }
 	}
@@ -352,6 +358,7 @@ bass = \new Voice {
 
 
 \score {
+	\transpose f g {
 	<<
 		\new StaffGroup
 	  	<< 
@@ -362,6 +369,7 @@ bass = \new Voice {
 			\new Staff << \globalF \bass >>
 		>> 
 	>>
+	}
 	\layout { }
 %	\midi { }
 }
@@ -371,20 +379,22 @@ bass = \new Voice {
 % CHRISTE
 
 \score {
+	\transpose f g {
 	\new Staff <<
 		\key f \major
 		\new Voice = "tenor" {
 			\relative c {
 				\clef "treble_8"
 				\cadenzaOn
-				\override Stem #'transparent = ##t f4 g a bes a a-- g-- s8 s2_"*" a4 g f e f g f f-- \showBarLine \bar ":|."
+				\override Stem.transparent = ##t f4 g a bes a a-- g-- s8 s2_"*" a4 g f e f g f f-- \showBarLine \bar ":|."
 				\cadenzaOff
 			}
 		}
 		\addlyrics {
-			Chri -- _ _ _ _ -- ste __ _ e -- _ _ _ _ le -- i -- son,
+			Chri -- _ _ _ _ ste __ _ e -- _ _ _ _ le -- i -- son,
 		}
 	>>
+	}
 	\layout {
 		ragged-right = ##t
 	}
@@ -435,6 +445,7 @@ bass = \new Voice {
 }
 
 \score {
+	\transpose f g {
 	<<
 		\new StaffGroup
 	  	<< 
@@ -445,6 +456,7 @@ bass = \new Voice {
 			\new Staff << \globalF \bass >>
 		>> 
 	>>
+	}
 	\layout { }
 %	\midi { }
 }
@@ -453,13 +465,14 @@ bass = \new Voice {
 % KYRIE 2
 
 \score {
+	\transpose f g {
 	\new Staff <<
 		\key f \major
 		\new Voice = "tenor" {
 			\relative c {
 				\clef "treble_8"
 				\cadenzaOn
-				\override Stem #'transparent = ##t f4 g a bes a a-- g-- s8 s2_"*" a4 g f e f g f f-- \showBarLine\bar "|"
+				\override Stem.transparent = ##t f4 g a bes a a-- g-- s8 s2_"*" a4 g f e f g f f-- \showBarLine\bar "|"
 				\cadenzaOff
 			}
 		}
@@ -467,6 +480,7 @@ bass = \new Voice {
 			Ky -- _ _ _ ri -- e __ _ e -- _ _ _ _ le -- i -- son,
 		}
 	>>
+	}
 	\layout {
 		ragged-right = ##t
 	}
@@ -523,6 +537,7 @@ bass = \new Voice {
 }
 
 \score {
+	\transpose f g {
 	<<
 		\new StaffGroup
 	  	<< 
@@ -533,6 +548,7 @@ bass = \new Voice {
 			\new Staff << \globalF \bass >>
 		>> 
 	>>
+	}
 	\layout { }
 %	\midi { }
 }
@@ -542,7 +558,7 @@ bass = \new Voice {
 
 soprano = \new Voice {
 	\relative c'' {
-		\once \override Staff.TimeSignature #'stencil = ##f
+		\once \override Staff.TimeSignature.stencil = ##f
 		\cadenzaOn s1 s8 \cadenzaOff 
 		\set Score.currentBarNumber = #2
 		\showBarLine \bar "|" \time 2/2
@@ -574,7 +590,7 @@ soprano = \new Voice {
 
 alto = \new Voice {
 	\relative c' {
-		\once \override Staff.TimeSignature #'stencil = ##f
+		\once \override Staff.TimeSignature.stencil = ##f
 		s1 s8 r1 c2 f4. e8 d4 d e2 f f4 f4 ~ | f8 
 		e16 d e4 e4. e8 e4 e2 g4. f8 e d c4 c d1 e4. f8 g4 f d2 d |
 
@@ -603,8 +619,8 @@ alto = \new Voice {
 tenor = \new Voice {
 	\relative c {
 		\clef "treble_8"
-		\once \override Staff.TimeSignature #'stencil = ##f
-		\override Stem #'transparent = ##t g'8 g a b a g a a-- g-- \override Stem #'transparent = ##f
+		\once \override Staff.TimeSignature.stencil = ##f
+		\override Stem.transparent = ##t g'8 g a b a g a a-- g-- \override Stem.transparent = ##f
 		g2 c4. b8 a4 a d2 r4 g,2 c4. b8 a g a4 b |
 		c2 r4 c2 c4 c2 c4. c8 a2 a b4. b8 c2 c b a4. b8 |
 
@@ -633,7 +649,7 @@ tenor = \new Voice {
 bass = \new Voice {
 	\relative c {
 		\clef "bass"
-		\once \override Staff.TimeSignature #'stencil = ##f
+		\once \override Staff.TimeSignature.stencil = ##f
 		s1 s8 r1 r r2 c f4. e8 d4 d |
 		c1 r4 c2 c4 c2 f4. f8 d4 d g4. g8 c,4 c2 a4 \ficta b!4. c8 d2 |
 
@@ -660,6 +676,7 @@ bass = \new Voice {
 }
 
 \score {
+	\transpose f g {
 	<<
 		\new StaffGroup
 	  	<< 
@@ -670,6 +687,7 @@ bass = \new Voice {
 			\new Staff << \globalC \bass >>
 		>> 
 	>>
+	}
 	\header {
 		piece = \markup \larger \sans { Tractus }
 	}
@@ -682,7 +700,7 @@ bass = \new Voice {
 
 soprano = \new Voice {
 	\relative c' {
-		\once \override Staff.TimeSignature #'stencil = ##f
+		\once \override Staff.TimeSignature.stencil = ##f
 		\cadenzaOn \skip 8*17 \cadenzaOff 
 
 		\set Score.currentBarNumber = #2
@@ -718,7 +736,7 @@ soprano = \new Voice {
 
 alto = \new Voice {
 	\relative c' {
-		\once \override Staff.TimeSignature #'stencil = ##f
+		\once \override Staff.TimeSignature.stencil = ##f
 		\skip 8*17 d1 f\breve d4 f es2 d d
 		r d d1 e2 f2. f4 f2 | f2. f4 g g f d f2 r4 d2
 
@@ -751,8 +769,8 @@ alto = \new Voice {
 tenor = \new Voice {
 	\relative c {
 		\clef "treble_8"
-		\once \override Staff.TimeSignature #'stencil = ##f
-		\override Stem #'transparent = ##t g'8 f g g s4 g8 f g s4 g8 a bes g g-- f-- \override Stem #'transparent = ##f
+		\once \override Staff.TimeSignature.stencil = ##f
+		\override Stem.transparent = ##t g'8 f g g s4 g8 f g s4 g8 a bes g g-- f-- \override Stem.transparent = ##f
 		a2 b c1 d2. c4 \ficta bes! d bes c a2 g |
 		r bes a bes c c2. c4 c2 d2. d4 \ficta es4. d8 c4 bes c2 r4 bes2
 
@@ -786,7 +804,7 @@ tenor = \new Voice {
 bass = \new Voice {
 	\relative c {
 		\clef "bass"
-		\once \override Staff.TimeSignature #'stencil = ##f
+		\once \override Staff.TimeSignature.stencil = ##f
 		\skip 8*17
 		d2 g f1 bes,2. f'4 g d \ficta es c d2 g, |
 		r g' d g c, f2. f4 f2 bes2. bes4 es, \ficta es f g f2 g2.
@@ -818,6 +836,7 @@ bass = \new Voice {
 }
 
 \score {
+	\transpose f g {
 	<<
 		\new StaffGroup
 	  	<< 
@@ -828,6 +847,7 @@ bass = \new Voice {
 			\new Staff << \globalF \bass >>
 		>> 
 	>>
+	}
 	\header {
 		piece = \markup \larger \sans { Offertorium }
 	}
@@ -838,6 +858,7 @@ bass = \new Voice {
 \pageBreak
 
 \score {
+	\transpose f g {
 	\new Staff <<
 		\key f \major
 		\new Voice = "tenor" {
@@ -845,7 +866,7 @@ bass = \new Voice {
 				\clef "treble_8"
 				\once \omit Staff.TimeSignature
 				\cadenzaOn
-				\override Stem #'transparent = ##t 
+				\override Stem.transparent = ##t 
 				f4 g bes bes bes a s  g f s  g bes bes bes a s  f g bes s  bes g a g f f s  a g a bes s  a g f f g g-- \showBarLine\bar "|"
 				\cadenzaOff
 			}
@@ -855,6 +876,7 @@ bass = \new Voice {
 			Do -- mi -- _ _ _ ne lau -- _ dis __ _ of -- _ fe -- ri -- _ mus.
 		}
 	>>
+	}
 	\layout {
 		ragged-right = ##t
 	}
@@ -934,7 +956,7 @@ tenor = \new Voice {
 bass = \new Voice {
 	\relative c {
 		\clef "bass"
-		\once \override Staff.TimeSignature #'stencil = ##f
+		\once \override Staff.TimeSignature.stencil = ##f
 		g'1 f2. \ficta es8 d |
 		c2 g'4. a8 bes4 f g f c \ficta es d2 g,4 g' f \ficta e! d2 g,4 g' g f g bes2
 		a4 g4. f8 | es4 d c2 bes4 g d'2 c r4 f2 e4 f g f2 a4. g8 |
@@ -957,6 +979,7 @@ bass = \new Voice {
 }
 
 \score {
+	\transpose f g {
 	<<
 		\new StaffGroup
 	  	<< 
@@ -967,6 +990,7 @@ bass = \new Voice {
 			\new Staff << \globalF \bass >>
 		>> 
 	>>
+	}
 	\layout { }
 %	\midi { }
 }
@@ -992,7 +1016,7 @@ soprano = \new Voice {
 
 alto = \new Voice {
 	\relative c' {
-		\once \override Staff.TimeSignature #'stencil = ##f
+		\once \override Staff.TimeSignature.stencil = ##f
 		s2 r2 e1 f2 e c4 e2 e4 e e f2 r4 f4 ~ 
 		f e f2 e d4 f2 f4 e e f f2 e8 d e4 f e2
 		d1 d2 f f2. f4 f f e2 c d2. d4 e2 e f1 \fermata
@@ -1009,8 +1033,8 @@ alto = \new Voice {
 tenor = \new Voice {
 	\relative c' {
 		\clef "treble_8"
-		\once \override Staff.TimeSignature #'stencil = ##f
-		\override Stem #'transparent = ##t a4-- a-- \override Stem #'transparent = ##f
+		\once \override Staff.TimeSignature.stencil = ##f
+		\override Stem.transparent = ##t a4-- a-- \override Stem.transparent = ##f
 		a1 c2 d \ficta b! a c2. c4 c c d2 ~
 		d4 \ficta bes c d2 c4 d2 r4 d2 c4 d4. c8 a1.
 		a1 b2 c c2. c4 d d b2 a a2. a4 c2 b d1 \fermata
@@ -1028,7 +1052,7 @@ tenor = \new Voice {
 bass = \new Voice {
 	\relative c' {
 		\clef "bass"
-		\once \override Staff.TimeSignature #'stencil = ##f
+		\once \override Staff.TimeSignature.stencil = ##f
 		s2 r2 a1 d,2 e a, a'2. a4 f f \ficta bes2
 		g2 f4. g8 a4 a d,4. e8 f4 d a'2 d,1 a 
 		d g2 f f2. f4 d d e2 a, d2. d4 a2 e' d1 \fermata 
@@ -1043,13 +1067,15 @@ bass = \new Voice {
 }
 
 \score {
+	\transpose f g {
 	\new StaffGroup << 
 		\set Score.proportionalNotationDuration = #(ly:make-moment 1 8)
 		\new Staff << \globalC \soprano >> 
 		\new Staff << \globalC \alto >> 
 		\new Staff << \globalC \tenor >> 
 		\new Staff << \globalC \bass >> 
-	>> 
+	>>
+	}
 	\header {
 		piece = \markup \larger \sans { Sanctus }
 		}
@@ -1062,7 +1088,7 @@ bass = \new Voice {
 
 soprano = \new Voice {
 	\relative c'' {
-		\once \override Staff.TimeSignature #'stencil = ##f
+		\once \override Staff.TimeSignature.stencil = ##f
 		\skip 8*9 \showBarLine \bar "|" \time 2/2
 		a2 a4 a a1 a2. g4 f1 \fermata \break g g2. g4
 		f2 f e1 e\breve \showBarLine \bar "||"
@@ -1075,7 +1101,7 @@ soprano = \new Voice {
 
 alto = \new Voice {
 	\relative c' {
-		\once \override Staff.TimeSignature #'stencil = ##f
+		\once \override Staff.TimeSignature.stencil = ##f
 		\skip 8*9 
 		d2 f4 f e1 f2. d4 d1\fermata e2. d8 c d2 e
 		c d b1 c\breve 
@@ -1089,9 +1115,9 @@ alto = \new Voice {
 tenor = \new Voice {
 	\relative c {
 		\clef "treble_8"
-		\once \override Staff.TimeSignature #'stencil = ##f
+		\once \override Staff.TimeSignature.stencil = ##f
 		\cadenzaOn
-		\override Stem #'transparent = ##t f8 g a a s a s a a  \override Stem #'transparent = ##f 
+		\override Stem.transparent = ##t f8 g a a s a s a a  \override Stem.transparent = ##f 
 		\cadenzaOff
 		a2 d4 d d c8 b c2 c2. b4 a1 \fermata c2. b8 a b2 c2.
 		 a4 bes a a g8 f g2 a\breve 
@@ -1106,7 +1132,7 @@ tenor = \new Voice {
 bass = \new Voice {
 	\relative c {
 		\clef "bass"
-		\once \override Staff.TimeSignature #'stencil = ##f
+		\once \override Staff.TimeSignature.stencil = ##f
 		\skip 8*9 
 		d2 d4 d a'1 f2. g4 d1 \fermata c2 g'1 c,2
 		f d e1 a,\breve 
@@ -1118,6 +1144,7 @@ bass = \new Voice {
 }
 
 \score {
+	\transpose f g {
 	\new StaffGroup << 
 		\set Score.proportionalNotationDuration = #(ly:make-moment 1 8)
 		\new Staff << \globalC \soprano >> 
@@ -1125,6 +1152,7 @@ bass = \new Voice {
 		\new Staff << \globalC \tenor >> 
 		\new Staff << \globalC \bass >> 
 	>> 
+	}
 	\header {
 		piece = \markup \larger \sans {
 %			\vspace #10 
@@ -1142,7 +1170,7 @@ bass = \new Voice {
 
 soprano = \new Voice {
 	\relative c'' {
-		\once \override Staff.TimeSignature #'stencil = ##f
+		\once \override Staff.TimeSignature.stencil = ##f
 		\skip 1 \showBarLine \bar "|" \time 2/2
 		g2 g4 g a1 g4 f g2 g1\fermata g a2 a2. a4 g2. g4 g2 \showBarLine \bar "||" \break
 		\skip 1 \showBarLine \bar "|" \time 2/2
@@ -1159,7 +1187,7 @@ soprano = \new Voice {
 
 alto = \new Voice {
 	\relative c' {
-		\once \override Staff.TimeSignature #'stencil = ##f
+		\once \override Staff.TimeSignature.stencil = ##f
 		s1 e2 e4 e f1 d4 d e2 e1\fermata d f2 f2. f4 d2. e4 e2
 		s1 f2 f4 f e1 e4 c d2 e1\fermata e e2 f2. e8 d e2 f d2. d4 f2
 		s1 e2 e4 e f1 d4 d f2 e1\fermata e e g e2 e2. e4 f2 f2. f4 d1 e
@@ -1174,12 +1202,12 @@ alto = \new Voice {
 tenor = \new Voice {
 	\relative c' {
 		\clef "treble_8"
-		\once \override Staff.TimeSignature #'stencil = ##f
-		\override Stem #'transparent = ##t a4 a a a \override Stem #'transparent = ##f
+		\once \override Staff.TimeSignature.stencil = ##f
+		\override Stem.transparent = ##t a4 a a a \override Stem.transparent = ##f
 		c2 c4 c c1 b4 a c2 c1\fermata b c2 d2. c4 c b8 a b4 c4 c2
-		\override Stem #'transparent = ##t a4 a a a \override Stem #'transparent = ##f
+		\override Stem.transparent = ##t a4 a a a \override Stem.transparent = ##f
 		c2 c4 c c1 b4 a a2 c1\fermata b c2 d2. c4 c2. b8 a b4 c2 b4 c2
-		\override Stem #'transparent = ##t a4 a a a \override Stem #'transparent = ##f
+		\override Stem.transparent = ##t a4 a a a \override Stem.transparent = ##f
 		c2 c4 c c1 b4 a d2 c1\fermata b c d c2 c2. c4 c2 c2. c4 c b8 a b2 b1 
 	}
 	\addlyrics {
@@ -1195,7 +1223,7 @@ tenor = \new Voice {
 bass = \new Voice {
 	\relative c {
 		\clef "bass"
-		\once \override Staff.TimeSignature #'stencil = ##f
+		\once \override Staff.TimeSignature.stencil = ##f
 		s1 c2 c4 c f1 g4 d c2 c1\fermata g' f2 d2. f4 g2. c,4 c2
 		s1 f2 f4 f c1 e4 a, d2 c1\fermata e a,2 d2. a4 a'2 f g2. g4 f2
 		s1 a2 a4 a f1 g4 d d2 a1\fermata e' a g c,2 c2. c4 f2 f2. f4 g1 e
@@ -1208,13 +1236,15 @@ bass = \new Voice {
 }
 
 \score {
+	\transpose f g {
 	\new StaffGroup << 
 		\set Score.proportionalNotationDuration = #(ly:make-moment 1 2)
 		\new Staff << \globalC \soprano >> 
 		\new Staff << \globalC \alto >> 
 		\new Staff << \globalC \tenor >> 
 		\new Staff << \globalC \bass >> 
-	>> 
+	>>
+	}
 	\header {
 		piece = \markup \larger \sans { Agnus Dei }
 	}
@@ -1227,7 +1257,7 @@ bass = \new Voice {
 
 soprano = \new Voice {
 	\relative c'' {
-		\once \override Staff.TimeSignature #'stencil = ##f
+		\once \override Staff.TimeSignature.stencil = ##f
 		\cadenzaOn \skip 8*8 \cadenzaOff 
 		\showBarLine \bar "|" \time 2/2
 		a1 a4 g2 a4 f a4. g8 g2 f4 g1 e4 f ~ | \break f
@@ -1261,7 +1291,7 @@ soprano = \new Voice {
 
 alto = \new Voice {
 	\relative c' {
-		\once \override Staff.TimeSignature #'stencil = ##f
+		\once \override Staff.TimeSignature.stencil = ##f
 		\skip 8*8
 		e1 e2 e d4 e2 c4 d d b4. c8 d4 e a,2 |
 		r4 d f e2 f4 d e4. c8 d4 e2. f4. e8 c4 f e4. d8 c b a4 d f2 |
@@ -1293,15 +1323,15 @@ alto = \new Voice {
 tenor = \new Voice {
 	\relative c {
 		\clef "treble_8"
-		\once \override Staff.TimeSignature #'stencil = ##f
-		\override Stem #'transparent = ##t a'8 s g f g a a-- g-- \override Stem #'transparent = ##f
+		\once \override Staff.TimeSignature.stencil = ##f
+		\override Stem.transparent = ##t a'8 s g f g a a-- g-- \override Stem.transparent = ##f
 		a1 c2 b4 c a c4. b8 g4 a2 g4. a8 b4 c4. b16 a a4 ~ a
 		g4 a2 r2 r4 a | c b c2 a4 d4. c8 a4 | b2 a r4 a d c4 ~ | c
 		d4 b c | g c2 b4 c4. b8 a4 g r b c4. d8 e4 d g,8 c4 b8 c4 e, f g |
 
 		a a g g2 a4 b c a r8 d, f4 g a a g2 ~ g\breve
-		\once \override Staff.TimeSignature #'stencil = ##f
-		\override Stem #'transparent = ##t g8 a c s  c c c s  c c s  c c s  d c c-- \override Stem #'transparent = ##f
+		\once \override Staff.TimeSignature.stencil = ##f
+		\override Stem.transparent = ##t g8 a c s  c c c s  c c s  c c s  d c c-- \override Stem.transparent = ##f
 		e2 e4 e a,2. a4 e'2 e2. 
 		d8 c d4 c2 b4 a2 g1 |
 		r1 r2 r4 a c b c2 a4 d4. c8 a4 b2 a | r4 a d c ~ c
@@ -1327,7 +1357,7 @@ tenor = \new Voice {
 bass = \new Voice {
 	\relative c {
 		\clef "bass"
-		\once \override Staff.TimeSignature #'stencil = ##f
+		\once \override Staff.TimeSignature.stencil = ##f
 		\skip 8*8
 		a1 a8 b c d e4 c d a e'2 d e4 g4. f8 e d c4 d |
 		b2 a r1 r1 r4 d f2 d4 e c f2 d4. e8 f g |
@@ -1358,6 +1388,7 @@ bass = \new Voice {
 
 
 \score {
+	\transpose f g {
 	<<
 		\new StaffGroup
 	  	<< 
@@ -1368,6 +1399,7 @@ bass = \new Voice {
 			\new Staff << \globalC \bass >>
 		>> 
 	>>
+	}
 	\header {
 		piece = \markup \larger \sans { Communio }
 	}
@@ -1377,11 +1409,12 @@ bass = \new Voice {
 
 
 \score {
+	\transpose f g {
 	\new Staff <<
 		\key c \major
 		\new Voice {
 			\relative c'' {
-				\cadenzaOn \override Stem #'transparent = ##t
+				\cadenzaOn \override Stem.transparent = ##t
 				g8 a a g s  a s  a g g-- s \showBarLine \bar "|"
 				s8 g g-- a-- s8 \showBarLine \bar "|."
 				\cadenzaOff
@@ -1391,6 +1424,7 @@ bass = \new Voice {
 			Re -- qui -- és -- cant in pá -- _ ce. A -- men. _
 		}
 	>>
+	}
 	\layout {
 		ragged-right = ##t
 		\context { 
