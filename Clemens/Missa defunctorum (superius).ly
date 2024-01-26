@@ -3,34 +3,31 @@
 
 \version "2.24.2"
 \pointAndClickOff
-revision = "12"
-
-#(set-global-staff-size 15)
+revision = "13"
 
 \paper {
-	#(define fonts (make-pango-font-tree "Century Schoolbook L" "Source Sans Pro" "Luxi Mono" (/ 15 20)))
+	#(define fonts (set-global-fonts #:sans "Source Sans Pro"))
 	annotate-spacing = ##f
 	two-sided = ##t
 	inner-margin = 15\mm
-	outer-margin = 15\mm
+	outer-margin = 10\mm
 	top-margin = 10\mm
 	bottom-margin = 10\mm
-	markup-system-spacing = #'( (padding . 4) )
-	system-system-spacing = #'( (basic-distance . 15) (padding . 2) (stretchability . 100) )
+ 	markup-system-spacing = #'( (padding . 1) )
 	indent = 0
 	ragged-bottom = ##f
-	ragged-last-bottom = ##t
+	ragged-last-bottom = ##f
 } 
 
 year = #(strftime "©%Y" (localtime (current-time)))
 
 \header {
-	title = \markup \medium \fontsize #6 \override #'(font-name . "Source Sans Pro Light") {
+	title = \markup \medium \fontsize #4 \override #'(font-name . "Source Sans Pro Light") {
 		"Missa defunctorum (superius)"
 	}
 	composer = \markup \sans { Clemens non Papa }
-	copyright = \markup \sans {
-		\vspace #2
+	copyright = \markup \sans \teeny {
+		\vspace #1
 		\column \center-align {
 			\line {
 				Copyright \year Peter Hilton - 
@@ -54,7 +51,6 @@ year = #(strftime "©%Y" (localtime (current-time)))
 		\override BarLine.transparent = ##t
 		\remove "Bar_number_engraver"
 		\remove "Metronome_mark_engraver"
-		\override VerticalAxisGroup.staff-staff-spacing = #'((basic-distance . 10) (stretchability . 50))
 		\override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/8)
 	}
 	\context { 
@@ -63,7 +59,6 @@ year = #(strftime "©%Y" (localtime (current-time)))
 		\consists "Horizontal_bracket_engraver"
 	}
 }
-
 
 global = { 
 	\tempo 2 = 44
@@ -372,8 +367,6 @@ soprano = \new Voice {
 	}
 }
 
-\pageBreak
-
 % SANCTUS 
 
 soprano = \new Voice {
@@ -436,16 +429,18 @@ soprano = \new Voice {
 	}
 }
 
+\pageBreak
+
 % AGNUS DEI
 
 soprano = \new Voice {
 	\relative c'' {
 		\once \override Staff.TimeSignature.stencil = ##f
 		\override Stem.transparent = ##t a4 a a a \override Stem.transparent = ##f \showBarLine\bar "|"
-		g2 g4 g a1 g4 f g2 g1\fermata g a2 a2. a4 g2. g4 g2 \showBarLine \bar "|"
+		g2 g4 g a1 g4 f g2 g1\fermata g a2 a2. a4 g2. g4 g2 \showBarLine \bar "|" \break
 
 		\override Stem.transparent = ##t a4 a a a \override Stem.transparent = ##f \showBarLine\bar "|"
-		a2 a4 a g1 g4 e f2 g1\fermata g a2 a2. a4 a1 g a2 \showBarLine \bar "|"
+		a2 a4 a g1 g4 e f2 g1\fermata g a2 a2. a4 a1 g a2 \showBarLine \bar "|" \break
 		
 		\override Stem.transparent = ##t a4 a a a \override Stem.transparent = ##f \showBarLine\bar "|"
 		a2 a4 a a1 g4 f a2 a1\fermata g a b g2 g2. g4 a2 a2. a4 g1 g \showBarLine \bar "||"
