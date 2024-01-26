@@ -3,7 +3,7 @@
 
 \version "2.24.2"
 \pointAndClickOff
-revision = "11"
+revision = "12"
 
 #(set-global-staff-size 15)
 
@@ -100,7 +100,7 @@ tenor = \new Voice {
 		\time 2/2
 		\showBarLine\bar "|"
 		
-		r1 r2 f\breve g1 a1 a1 f2 g g f a
+		r1 r2 f\breve g1 a1 a1 f2 g g \mark \default f a
 		a g a a c4. bes8 a4 g a bes g1 \mark \default f2 a a
 			 
 		g a bes g f1 r2 a c c c a
@@ -113,7 +113,7 @@ tenor = \new Voice {
 		\override Stem.transparent = ##f
 		\showBarLine\bar "|"
 		
-		\mark \default 
+		
 		a1 c c4 c c c d2. d4
 		d2. d4 c bes c2 r4 a c c c2 c4 d d c bes a g2 a
 		r4 a c c c2 a c1 c2. a4 bes4. a8 f4 g a1
@@ -178,7 +178,6 @@ tenor = \new Voice {
 		\showBarLine\bar "|"
 		\time 2/2
 		
-		\mark #3
 		d'1 c2 bes c d g,4 c2 bes4 c2. f,4
 		bes g a2 d2. c4 bes c4. bes8 bes2 a4 bes2 \fermata
 		\showBarLine\bar "|"
@@ -190,8 +189,8 @@ tenor = \new Voice {
 		\showBarLine\bar "|"
 		\time 2/2
 		
-		\mark \default 
-		bes1 g2 d' c1 d2. d4 \ficta es d2 c4 d2. bes4 c bes2 a4 bes2 r4 a bes2 g
+		
+		bes1 g2 d' c1 d2. d4 \ficta es d2 c4 d2. bes4 c bes2 a4 \mark #3 bes2 r4 a bes2 g
 		bes bes4. c8 d2. bes4 c2. d4 bes2. g4 a bes2 a4 bes2 g f1
 		\showBarLine\bar "||"
 
@@ -234,14 +233,14 @@ tenor = \new Voice {
 		\showBarLine \bar "|" \time 2/2
 		
 		g2 c4. b8 a4 a d2 r4 g,2 c4. b8 a g a4 b |
-		c2 r4 c2 c4 c2 c4. c8 a2 a b4. b8 c2 c b a4. b8 |
+		c2 r4 c2 c4 c2 c4. c8 a2 a b4. b8 \mark #4 c2 c b a4. b8 |
 
-		c2 \mark #5 f, r4 f2 a c b4 | c2 d4. d8 e4 c2 a4 d4. c8 b4 a8 g |
+		c2 f, r4 f2 a c b4 | \mark #5 c2 d4. d8 e4 c2 a4 d4. c8 b4 a8 g |
 		a2 g 
 		\showBarLine \bar "|"
 		\mark #6 r1 r r2 g g c2. b4 a c4.
-		b16 a b4 c2 a4. g8 a4 bes a4. \ficta b!8 c4 g d'2 g,4 g2 g4 a2 c1 |
-		b2 b4 a c b a fis g2 a g e4 g4. \ficta fis16 e \ficta fis!4 g2 \mark #7 r4 b a2 |
+		b16 a b4 c2 a4. g8 a4 bes a4. \ficta b!8 c4 g d'2 \mark #7 g,4 g2 g4 a2 c1 |
+		b2 b4 a c b a fis g2 a g e4 g4. \ficta fis16 e \ficta fis!4 g2 \mark #8 r4 b a2 |
 
 		c1 b2 d a c g b d4. d8 a2 c bes |
 		a c c4 c2 b8 a b1 |
@@ -287,16 +286,16 @@ tenor = \new Voice {
 		a2 b c1 d2. c4 \ficta bes! d bes c a2 g |
 		r bes a bes c c2. c4 c2 d2. d4 \ficta es4. d8 c4 bes c2 r4 bes2
 
-		a4 g2 | a1 r2 \mark #8 c a c c bes bes c d4 g,2 a4 |
+		a4 g2 | a1 r2 c a c c bes bes c d4 g,2 a4 |
 		bes c2 bes4 c2 r4 bes a bes c d2 \ficta c!4 d2 r4 d d d2 c bes4 |
-		c2 es2. d4 c d c4. a8 bes2 a \mark \default r4 a c2 d2. d4 d2 |
+		c2 es2. d4 c d c4. a8 bes2 a r4 a c2 d2. d4 d2 |
 		d2 c4 bes c d4. c8 c2 \ficta b4 c2 | r \ficta bes!1 c2 a2. a4 a2 c |
 
-		d c2. a4 bes d4. c16 \ficta b! c4 a2 \mark \default r4 \ficta bes! c2. c4 c2 d2. c4 |
+		d c2. a4 bes d4. c16 \ficta b! c4 a2 r4 \ficta bes! c2. c4 c2 d2. c4 |
 		bes2 c a d2. c4 bes c bes2 a r4 a bes c d2 c4. bes8 |
 		a g bes4 a2 g1 
 		\showBarLine \bar "|"
-		\mark \default 
+		
 		bes g2 c a r4 bes bes2 bes4 a8 g a2 d2.
 		c4 bes c bes g a1 r2 d2 es2. d4 c bes a f g2 a g |
 		\showBarLine \bar "|"
@@ -339,7 +338,6 @@ tenor = \new Voice {
 				\once \omit Staff.TimeSignature
 				\cadenzaOn
 				\override Stem.transparent = ##t 
-				\mark #12 
 				f4 g bes bes bes a s  g f s  g bes bes bes a s  f g bes s  bes g a g f f s  a g a bes s  a g f f g g-- s 
 				\showBarLine\bar "|"
 				\cadenzaOff
@@ -355,13 +353,13 @@ tenor = \new Voice {
 
 tenor = \new Voice {
 	\relative c'' {
-		\mark #13
+		\set Score.rehearsalMarkFormatter = #format-mark-alphabet
 		bes1 c2. d4 |
-		\ficta es2 d2. c4 bes c4. bes8 g4 a2 g4 bes a g a2 g4. f8 d2 r |
-		r r4 g g f g2 bes4 bes4. a8 f4 g2 \mark \default a r4 c2 bes4 c d c2 |
+		\ficta es2 d2. c4 bes c4. bes8 g4 a2 \mark #9 g4 bes a g a2 g4. f8 d2 r |
+		r r4 g g f g2 bes4 bes4. a8 f4 g2 \mark #10 a r4 c2 bes4 c d c2 |
 		d4 \ficta es c2 bes r4 d d d d2 es4 d2 c8 bes c4 d c2 r bes1 
 
-		g2 a2. a4 c2 d2. d4 \ficta es2 c4 c4 c8 bes16 a bes4 c2 \mark \default bes1 g2 |
+		g2 a2. a4 c2 d2. d4 \ficta es2 c4 c4 c8 bes16 a bes4 \mark #11 c2 bes1 g2 |
 		c a r4 bes bes bes2 a8 g a2 d2. c4 bes8 g c4 bes c a1 |
 		r2 d \ficta es2. d4 c bes a f g2 a g1
 		\showBarLine\bar "||"
@@ -399,7 +397,7 @@ tenor = \new Voice {
 		
 		a1 c2 d \ficta b! a c2. c4 c c d2. 
 		\ficta bes4 c d2 c4 d2 r4 d2 c4 d4. c8 a1.
-		\showBarLine\bar "|" \mark #16
+		\showBarLine\bar "|"
 		a1 b2 c c2. c4 d d b2 a a2. a4 c2 b d1 \fermata
 		c1 d2 c a2. f4 g a2 g4 a2 \showBarLine\bar "|"
 	}
@@ -431,7 +429,7 @@ tenor = \new Voice {
 		\once \override Staff.TimeSignature.stencil = ##f
 		\cadenzaOn
 		\override Stem.transparent = ##t 
-		\mark #17 f8 g a a s a s a a s \override Stem.transparent = ##f 
+		f8 g a a s a s a a s \override Stem.transparent = ##f 
 		\cadenzaOff \showBarLine \bar "|"
 		
 		a2 d4 d d c8 b c2 c2. b4 a1 \fermata c2. b8 a b2 c2.
@@ -461,10 +459,10 @@ tenor = \new Voice {
 		\override Stem.transparent = ##t a4 a a a \override Stem.transparent = ##f \showBarLine\bar "|"
 		c2 c4 c c1 b4 a c2 c1\fermata b c2 d2. c4 c b8 a b4 c4 c2 \showBarLine\bar "|"
 		
-		\override Stem.transparent = ##t \mark #18 a4 a a a \override Stem.transparent = ##f \showBarLine\bar "|"
+		\override Stem.transparent = ##t a4 a a a \override Stem.transparent = ##f \showBarLine\bar "|"
 		c2 c4 c c1 b4 a a2 c1\fermata b c2 d2. c4 c2. b8 a b4 c2 b4 c2 \showBarLine\bar "|"
 		
-		\override Stem.transparent = ##t \mark \default a4 a a a \override Stem.transparent = ##f \showBarLine\bar "|"
+		\override Stem.transparent = ##t a4 a a a \override Stem.transparent = ##f \showBarLine\bar "|"
 		c2 c4 c c1 b4 a d2 c1\fermata b c d c2 c2. c4 c2 c2. c4 c b8 a b2 b1  \showBarLine\bar "||"
 	}
 	\addlyrics {
@@ -501,15 +499,15 @@ tenor = \new Voice {
 		\time 2/2
 		
 		a1 c2 b4 c a c4. b8 g4 a2 g4. a8 b4 c4. b16 a a2
-		g4 a2 r2 r4 a | c b c2 a4 d4. c8 a4 | b2 a r4 a d c2
-		d4 b c | g c2 b4 \mark #20 c4. b8 a4 g r b c4. d8 e4 d g,8 c4 b8 c4 e, f g |
+		g4 a2 r2 r4 a | c b c2 a4 \mark #11 d4. c8 a4 | b2 a r4 a d c2
+		d4 b c | g c2 b4 c4. b8 a4 g r b c4. d8 e4 d g,8 c4 b8 c4 e, f g |
 
-		a a g g2 a4 b c a r8 d, f4 g a a g2 ~ g\breve
+		a a g \mark #12 g2 a4 b c a r8 d, f4 g a a g2 ~ g\breve
 		\showBarLine\bar "|"
 		
 		\once \override Staff.TimeSignature.stencil = ##f
 		\override Stem.transparent = ##t 
-		\cadenzaOn \mark \default g8 a c s  c c c s  c c s  c c s  d c c-- s \cadenzaOff
+		\cadenzaOn g8 a c s  c c c s  c c s  c c s  d c c-- s \cadenzaOff
 		\override Stem.transparent = ##f
 		\showBarLine\bar "|"
 		
@@ -517,7 +515,7 @@ tenor = \new Voice {
 		d8 c d4 c2 b4 a2 g1 |
 		r1 r2 r4 a c b c2 a4 d4. c8 a4 b2 a | r4 a d c2
 
-		d4 b c g c2 b4 \mark \default c4. b8 a4 g r b c4. d8 e4 d g,8 c4 b8 c4 e, f g |
+		d4 b c g c2 b4 \mark #13 c4. b8 a4 g r b c4. d8 e4 d g,8 c4 b8 c4 e, f g |
 		a a g g2 a4 b c a d, f g a a g2 ~ g\breve |
 		\showBarLine\bar "|"
 		

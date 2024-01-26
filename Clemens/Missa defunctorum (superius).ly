@@ -3,7 +3,7 @@
 
 \version "2.24.2"
 \pointAndClickOff
-revision = "11"
+revision = "12"
 
 #(set-global-staff-size 15)
 
@@ -50,15 +50,12 @@ year = #(strftime "©%Y" (localtime (current-time)))
 	ragged-last = ##f
 	\context {
 		\Score
-% 		\override BarNumber.self-alignment-X = #CENTER
-% 		\override BarNumber.break-visibility = #'#(#f #t #t)
 		\override SpanBar.transparent = ##t
 		\override BarLine.transparent = ##t
 		\remove "Bar_number_engraver"
 		\remove "Metronome_mark_engraver"
 		\override VerticalAxisGroup.staff-staff-spacing = #'((basic-distance . 10) (stretchability . 50))
 		\override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/8)
-%    		\override SpacingSpanner.spacing-increment = #1.5
 	}
 	\context { 
 		\Voice 
@@ -103,8 +100,8 @@ soprano = \new Voice {
 		\showBarLine\bar "|"
 		
 		f2. g4 a bes c4. bes8 a4 c bes a2
-		g8 f e4 d g2 f4. e8 d4 c d e f a4. g8 f4 e8 d f2 e4 f2 r4 f2
-		f4 e2 e4 f8 g a bes a2 g4 f g4. f8 f2 e8 d e2 f4 c'4. bes8 a2 g8 f
+		g8 f e4 d g2 f4. e8 d4 c d e f a4. g8 f4 e8 d f2 e4 \mark \default f2 r4 f2
+		f4 e2 e4 f8 g a bes a2 g4 f g4. f8 f2 e8 d e2 \mark \default f4 c'4. bes8 a2 g8 f
 		
 		e4 c'4. bes8 a4 g f2 e4 f a a c bes a a g8 f g2. f4 a g f2.
 		g4. f8 f2 e4 f2 \fermata \showBarLine \bar "|"
@@ -191,7 +188,7 @@ soprano = \new Voice {
 		\showBarLine\bar "|"
 		\time 2/2
 		
-		f1 g2 a a g bes1. a1 g1 f2 f2. a4 g f2 e4
+		f1 g2 a a g bes1. a1 g1 f2 \mark #3 f2. a4 g f2 e4
 		f1 bes a g f2. a4 g f4. e16 d e4 f1 \showBarLine \bar "||"
 	}
 	\addlyrics {
@@ -230,13 +227,13 @@ soprano = \new Voice {
 		\showBarLine \bar "|" \time 2/2
 		
 		r2 g2 c4. b8 a g a2 b4 c2 a d4. d8 |
-		g,4 g2 g4 g g4. g8 e2 g4 f2. f4 g2 | g e4 a4. g8 g4. f8 f4.
+		g,4 g2 g4 g g4. g8 e2 g4 f2. f4 g2 | \mark #4 g e4 a4. g8 g4. f8 f4.
 
-		e16 d e4 f2 | f a c4. b8 a4 g a2. b4 | c g a8 b c a b4 a4. g8 g2
+		e16 d e4 f2 | f a c4. b8 a4 g \mark #5 a2. b4 | c g a8 b c a b4 a4. g8 g2
 		fis4 g2 \showBarLine \bar "|" 
-		g g c2. b4 | a c4. b16 a b4 c2 r4 g a2. g4
-		f2 e d f f4 a2 g4 | f2 e1. r2 e
-		e4 g2 a2 gis4 a4. a8 g4 g fis4. fis8 g4 g2 e4 | a2 d, r4 g4 f2
+		\mark #6 g g c2. b4 | a c4. b16 a b4 c2 r4 g a2. g4
+		f2 e d f f4 a2 g4 | f2 \mark #7 e1. r2 e
+		e4 g2 a2 gis4 a4. a8 g4 g fis4. fis8 g4 g2 e4 | a2 d, \mark #8 r4 g4 f2
 
 		e4 e g1 a2. c2 g2 b2 d4. d8 a2 c4. b8 a4. g8 g2 
 		fis4 g2 ~ g\breve \showBarLine \bar "||"
@@ -344,13 +341,14 @@ soprano = \new Voice {
 
 soprano = \new Voice {
 	\relative c'' {
+		\set Score.rehearsalMarkFormatter = #format-mark-alphabet
 		\set Score.currentBarNumber = #67
 		g1 a2. bes4 |
-		c2 bes2. a4 g a4. g8 g2 f4 | g2 r4 g g f g bes2 a4 g f |
-		g a bes g4. a8 bes4 c2 f,4 g4. f8 f2 e4 f a2 g4 a bes a2 r4 a4. 
+		c2 bes2. a4 g a4. g8 g2 f4 | \mark #9 g2 r4 g g f g bes2 a4 g f |
+		g a bes g4. a8 bes4 c2 f,4 g4. f8 f2 e4 \mark #10 f a2 g4 a bes a2 r4 a4. 
 		f8 bes2 a4 | bes1 r4 bes bes bes bes2 a2. a4 a2 r g1
 
-		g2 f2. f4 g2 bes2. bes4 bes2 a4 a g2 g r g1
+		g2 f2. f4 g2 bes2. bes4 bes2 a4 a g2 \mark #11 g r g1
 		g2 f d f2. f4 f2 bes2. a4 g a4. g8 g2 f8 e f2
 		r a c2. bes4 a g f a4. g8 g4. \ficta fis16 e \ficta fis4 g1 \showBarLine \bar "||" |
 	}
@@ -485,10 +483,10 @@ soprano = \new Voice {
 		\time 2/2
 		
 		a1 a4 g2 a4 f a4. g8 g2 f4 g1 e4 f2
-		e8 d c4 a' | c2 b4 c a g4. f8 g4 a b2 a g4 a1 r4 a2
+		e8 d c4 a' | c2 b4 c a g4. f8 g4 a \mark #11 b2 a g4 a1 r4 a2
 		a4 g2 | g1 r4 e f g a g2 f4 g2 r8 e f4 g a2 g2
 		
-		\ficta fis4 g d | e f g2 f8 e f g a4 g2 \ficta fis4 g2 ~ g\breve | \showBarLine \bar "|" | 
+		\ficta fis4 g \mark #12 d | e f g2 f8 e f g a4 g2 \ficta fis4 g2 ~ g\breve | \showBarLine \bar "|" | 
 
 		\once \override Staff.TimeSignature.stencil = ##f
 		\override Stem.transparent = ##t 
@@ -500,7 +498,7 @@ soprano = \new Voice {
 		b4. a8 b4 c a g2 \ficta fis4 g1 | \showBarLine \bar "|"
 		r2 a c b4 c a g4. f8 g4 | a b2 a g4 a1 r4 a2
 		
-		a4 g2 g1 r4 e f g a g2 f4 g2 r8 e f4 g a2 g
+		a4 g2 g1 \mark #13 r4 e f g a g2 f4 g2 r8 e f4 g a2 g
 		\ficta fis4 g d e \ficta f! g2 f4 \ficta bes a g2 \ficta f!4 g2 ~ g\breve |
 		\showBarLine\bar "|"
 		\cadenzaOn \override Stem.transparent = ##t

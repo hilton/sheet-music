@@ -3,7 +3,7 @@
 
 \version "2.24.2"
 \pointAndClickOff
-revision = "11"
+revision = "12"
 
 #(set-global-staff-size 15)
 
@@ -103,8 +103,8 @@ bass = \new Voice {
 		\showBarLine\bar "|"
 		
 		r1 f2. g4 a2 d,1
-		c4 bes \ficta es2 d f4. e8 d4 c d1 c4 bes c2 f,4 f'2 f4
-		f2 c r4 f2 f4 f c d e f bes, c1 f,2 r4 f' f2
+		c4 bes \ficta es2 d f4. e8 d4 c d1 c4 bes c2 \mark \default f,4 f'2 f4
+		f2 c r4 f2 f4 f c d e f bes, c1 \mark \default f,2 r4 f' f2
 			
 		c f bes, c d4 f f a g f2 e8 d c4. d8 e4 f4. e8 c4 d2 
 		bes c4 d c2 f, \fermata
@@ -192,7 +192,7 @@ bass = \new Voice {
 		\showBarLine\bar "|"
 		\time 2/2
 		
-		bes,1 es2 d4. \ficta es8 f2 c bes bes' g4 g a2 d, g es4 \ficta es f2 bes, f' bes,4 bes c2
+		bes,1 es2 d4. \ficta es8 f2 c bes bes' g4 g a2 d, g es4 \ficta es f2 \mark #3 bes, f' bes,4 bes c2
 		bes2 bes4 bes'4. a8 g f g2 f4. g8 a4 f g2 es d4. \ficta e!8 f2 bes, c f,1
 		\showBarLine \bar "||"
 	}
@@ -234,13 +234,13 @@ bass = \new Voice {
 		\showBarLine \bar "|" \time 2/2
 		
 		r1 r r2 c, f4. e8 d4 d |
-		c1 r4 c2 c4 c2 f4. f8 d4 d g4. g8 c,4 c2 a4 \ficta b!4. c8 d2 |
+		c1 r4 c2 c4 c2 f4. f8 d4 d g4. g8 \mark #4 c,4 c2 a4 \ficta b!4. c8 d2 |
 
-		c2 r4 f2 a2 c4. b8 a g f4 g f4. e8 d4 d c2 f d d1
+		c2 r4 f2 a2 c4. b8 a g f4 g \mark #5 f4. e8 d4 d c2 f d d1
 		g,2 \showBarLine \bar "|"
-		r1 r r c2 c f2. e4 |
-		d2 c d4 d2 bes4 f'2. e4 d2 c1 r2 r4 c2 c4 |
-		e2 g4 f e4. e8 cis4 d e4. e8 d2 b c a g r4 g' d2 |
+		\mark #6 r1 r r c2 c f2. e4 |
+		d2 c d4 d2 bes4 f'2. e4 d2 \mark #7 c1 r2 r4 c2 c4 |
+		e2 g4 f e4. e8 cis4 d e4. e8 d2 b c a g \mark #8 r4 g' d2 |
 
 		c2. c4 g'2 d f c e g4. g8 d2 f2. f4 d1
 		c2. c4 g1.
@@ -351,12 +351,13 @@ bass = \new Voice {
 bass = \new Voice {
 	\relative c {
 		\clef "bass"
+		\set Score.rehearsalMarkFormatter = #format-mark-alphabet
 		g'1 f2. \ficta es8 d |
-		c2 g'4. a8 bes4 f g f c \ficta es d2 g,4 g' f \ficta e! d2 g,4 g' g f g bes2
-		a4 g4. f8 | es4 d c2 bes4 g d'2 c r4 f2 e4 f g f2 a4. g8 |
+		c2 g'4. a8 bes4 f g f c \ficta es d2 g,4 \mark #9 g' f \ficta e! d2 g,4 g' g f g bes2
+		a4 g4. f8 | es4 d c2 bes4 g d'2 c \mark #10 r4 f2 e4 f g f2 a4. g8 |
 		f4 es f2 bes, bes' bes4 g g1 a2. d,4 f2 r g1
 		
-		\ficta es2 | d2. d4 c2 bes2. bes'4 es,2 f4 f g2 c, g'2. g4 es2 |
+		\ficta es2 | d2. d4 c2 bes2. bes'4 es,2 f4 f g2 \mark #11 c, g'2. g4 es2 |
 		c d2. bes4 bes2 f'2. f4 bes,2 f' g4 f g c, d1 |
 		r2 d c2. d4 f g d f es2 d g,1
 		\showBarLine \bar "||"
@@ -497,10 +498,10 @@ bass = \new Voice {
 		\time 2/2
 		
 		a,1 a8 b c d e4 c d a e'2 d e4 g4. f8 e d c4 d |
-		b2 a r1 r1 r4 d f2 d4 e c f2 d4. e8 f g |
+		b2 a r1 r1 r4 \mark #11 d f2 d4 e c f2 d4. e8 f g |
 		a4 f g c, e4. f8 g2 c, r4 e | f g a a g4. f8 e4 d c c d g, |
 
-		d'2 r4 g e d g c, d d2 g,4 d'2 r4 g, c b c c g1 |
+		d'2 r4 \mark #12 g e d g c, d d2 g,4 d'2 r4 g, c b c c g1 |
 		\showBarLine \bar "|"
 		
 		\once \override Staff.TimeSignature.stencil = ##f
@@ -514,7 +515,7 @@ bass = \new Voice {
 		\showBarLine \bar "|"
 		r1 r r r4 d' f2 d4 e c f2 d4. e8 f g |
 
-		a4 f g c, e4. f8 g2 c, r4 e f g a a g4. f8 e4 d c c d g, |
+		a4 f g c, e4. f8 g2 \mark #13 c, r4 e f g a a g4. f8 e4 d c c d g, |
 		d'2 r4 g e d g c, d2. g,4 d'2 r4 g, c b c c g1 |
 		\showBarLine \bar "|"
 		

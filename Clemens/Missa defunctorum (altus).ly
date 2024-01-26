@@ -3,7 +3,7 @@
 
 \version "2.24.2"
 \pointAndClickOff
-revision = "11"
+revision = "12"
 
 #(set-global-staff-size 15)
 
@@ -102,8 +102,8 @@ alto = \new Voice {
 		\showBarLine\bar "|"
 		
 		r2 f,2. g4 a bes c c d4. c16 bes
-		a4 bes c d2 c4 d2 r4 f2 e4 d c2 bes4 c d c2 c1
-		r4 c2 c4 c2 f,4 f'2 e4 d c4. a8 d4 c1 r4 f f2 c2.
+		a4 bes c d2 c4 d2 r4 f2 e4 d c2 bes4 c d c2 \mark \default c1
+		r4 c2 c4 c2 f,4 f'2 e4 d c4. a8 d4 c1 \mark \default r4 f f2 c2.
 			
 		e4 f c d2 c a c d c4 d e2. c4 f e d1
 		c4 bes c2 a \fermata
@@ -190,7 +190,7 @@ alto = \new Voice {
 		\showBarLine\bar "|"
 		\time 2/2
 		
-		d1 bes2 f' f e f2. f4 g2 e f d es c4 c d2. c4 \break d2 c
+		d1 bes2 f' f e f2. f4 g2 e f d es c4 c \mark #3 d2. c4 \break d2 c
 		d d4. e8 f g f2 e4 f2 e4 f e d2 c4 d2 c d c c1
 		\showBarLine \bar "||"
 	}
@@ -230,13 +230,13 @@ alto = \new Voice {
 		\showBarLine \bar "|" \time 2/2
 		
 		r1 c,2 f4. e8 d4 d e2 f f4 f4. 
-		e16 d e4 e4. e8 e4 e2 g4. f8 e d c4 c d1 e4. f8 g4 f d2 d |
+		e16 d e4 e4. e8 e4 e2 g4. f8 e d c4 c d1 \mark #4 e4. f8 g4 f d2 d |
 
-		g, a c c4. d8 e2 f4 d f1 g4 e f1 d1.
+		g, a c c4. d8 e2 f4 d \mark #5 f1 g4 e f1 d1.
 		\showBarLine \bar "|"
-		r2 c c f2. e4 d2 e1 f4. e16 d c4 g |
-		d'2 r4 g2 f8 e d4 d c4. c8 a b c2 b4 c2 | r4 c2 c4 e2 g4 g4.
-		f8 e4 d4. d8 e4 e2 d c4 d d2 d4 c1 b2 r4 d d2 |
+		\mark #6 r2 c c f2. e4 d2 e1 f4. e16 d c4 g |
+		d'2 r4 g2 f8 e d4 d c4. c8 a b c2 b4 \mark #7 c2 | r4 c2 c4 e2 g4 g4.
+		f8 e4 d4. d8 e4 e2 d c4 d d2 d4 c1 b2 \mark #8 r4 d d2 |
 
 		g e4 e d2 f4 f c2 e g4. g8 d2 f4. f8 c2 f2. d4 |
 		d2 r4 e2 e4 d1.
@@ -344,13 +344,14 @@ alto = \new Voice {
 
 alto = \new Voice {
 	\relative c' {
+		\set Score.rehearsalMarkFormatter = #format-mark-alphabet
 		\set Score.currentBarNumber = #67
 		d1 f |
-		g f4. e8 d4 f \ficta es c d2 r4 d d c d4. f8 e4 d d2 r4 d |
-		d c d2 es4 f \ficta es2 d2. bes4 c2 c1 r2 r4 f2 e4 |
+		g f4. e8 d4 f \ficta es c d2 \mark #9 r4 d d c d4. f8 e4 d d2 r4 d |
+		d c d2 es4 f \ficta es2 d2. bes4 c2 \mark #10 c1 r2 r4 f2 e4 |
 		f g f1 r4 f f g g1 e2. f4 f2 r d4. c16 d |
 
-		\ficta es4 d2 c4 d2. d4 e2 f2. f4 g2 f4 f d2 e d1 es1
+		\ficta es4 d2 c4 d2. d4 e2 f2. f4 g2 f4 f d2 \mark #11 e d1 es1
 		d2 | f2. d4 c1 f2. f4 d f d \ficta es d1 |
 		r2 f g2. f4 f d4. c8 a4 bes c d2 d1
 		\showBarLine \bar "||"
@@ -489,9 +490,9 @@ alto = \new Voice {
 		\time 2/2
 		
 		e1 e2 e d4 e2 c4 d d b4. c8 d4 e a,2 |
-		r4 d f e2 f4 d e4. c8 d4 e2. f4. e8 c4 f e4. d8 c b a4 d f2 |
+		r4 d f e2 f4 d e4. c8 d4 e2. \mark #11 f4. e8 c4 f e4. d8 c b a4 d f2 |
 		e4 f d e2 e4 d2 e \times 2/3 { c4 d e } a, e'2 d8 c b4 b c d e e d1
-		r4 b c d e e d1. r4 b c d e e d1 | \showBarLine \bar "|"
+		r4 \mark #12 b c d e e d1. r4 b c d e e d1 | \showBarLine \bar "|"
 		
 		\once \override Staff.TimeSignature.stencil = ##f
 		\override Stem.transparent = ##t 
@@ -503,7 +504,7 @@ alto = \new Voice {
 		g4 g2 f4 d d1. |
 		d2 f e4 f d e4. c8 d4 e2. f4. e8 c4 f e4. d8 c b a4 d f2 |
 
-		e4 f d e2 e4 d2 e \times 2/3 { c4 d e } a, e'2 d8 c b4 b c d e e d1
+		e4 f d e2 e4 d2 \mark #13 e \times 2/3 { c4 d e } a, e'2 d8 c b4 b c d e e d1
 		r4 b | c d e e d1. r4 b c d e e d1 | \showBarLine \bar "|"
 
 		\cadenzaOn \override Stem.transparent = ##t
