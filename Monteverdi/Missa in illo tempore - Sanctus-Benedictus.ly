@@ -2,7 +2,7 @@
 % Based on CPDL #55912 by Oscar Smith
 
 \version "2.24.2"
-revision = "3"
+revision = "5"
 \pointAndClickOff
 
 #(set-global-staff-size 15)
@@ -38,8 +38,9 @@ year = #(strftime "©%Y" (localtime (current-time)))
 		\vspace #6
 		\column \center-align {
 			\line {
-				This edition copyright \year Peter Hilton - 
+				This edition copyright \year \with-url #"https://www.cpdl.org/wiki/index.php/ChoralWiki:CPDL" CPDL - 
 				Lilypond source at \with-url #"https://github.com/hilton/sheet-music" https://github.com/hilton/sheet-music - 
+				\with-url #"https://www.cpdl.org/wiki/index.php/Missa_In_illo_tempore_(Claudio_Monteverdi)" "CPDL #79001"
 				revision \revision 
 			}
 		}
