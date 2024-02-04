@@ -2,7 +2,7 @@
 % Based on CPDL #12928?
 
 \version "2.24.2"
-revision = "2"
+revision = "3"
 \pointAndClickOff
 
 #(set-global-staff-size 15)
@@ -40,7 +40,8 @@ year = #(strftime "©%Y" (localtime (current-time)))
 			\line {
 				This edition copyright \year \with-url #"https://www.cpdl.org/wiki/index.php/ChoralWiki:CPDL" CPDL - 
 				Lilypond source at \with-url #"https://github.com/hilton/sheet-music" https://github.com/hilton/sheet-music - 
-				revision \revision 
+				\with-url #"https://www.cpdl.org/wiki/index.php/Cantate_Domino_(Claudio_Monteverdi)" "CPDL #79002"
+				revision \revision
 			}
 		}
 	}
