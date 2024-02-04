@@ -2,8 +2,8 @@
 % Based on CPDL #55912 by Oscar Smith
 
 \version "2.24.2"
-revision = "2"
-%\pointAndClickOff
+revision = "3"
+\pointAndClickOff
 
 #(set-global-staff-size 15)
 
@@ -360,7 +360,7 @@ tenorA =  \relative f' {
   \barNumberCheck #20
   d2. es4 f1  | % 21
   c1 d | % 22
-  bes1 c2 c  | % 23
+  bes1 c1  | % 23
   a2 a bes2. c4 | % 24
   d1  f  | % 25
   c1 d2. c4 | % 26
@@ -405,7 +405,7 @@ tenorALyrics =  \lyricmode {
   _ _ tus Do -- mi -- nus De -- us Sa -- ba -- oth
   San -- _ _ _ tus Sanc -- _ _ _ tus Do
   -- mi -- nus De -- us Sa -- ba -- "oth " __ _ _
-  _ _ Ple -- ni sunt coe -- _ li et ter -- _
+  _ _ Ple -- ni sunt coe -- li et ter -- _
   _ "ra " glo -- _ _ _ _
   _ _ _ ri -- a tu -- _ _ _ _ _
   _ a O -- san -- "na " "in " ex -- cel -- sis O -- san -- na in ex -- cel -- sis O -- san -- _
@@ -555,7 +555,7 @@ bassLyrics =  \lyricmode {
   _ _ tus Sanc -- _ _ _ _ _ _
   _ _ tus Sanc -- _ _ _ tus Do -- _ mi
   -- nus De -- us Sa -- ba -- oth Ple -- ni sunt coe -- li et ter --
-  ra Ple -- "ni " "sunt " coe -- _ li -- "et " ter -- _ ra glo --
+  ra Ple -- "ni " "sunt " coe -- _ li et ter -- _ ra glo --
   _ _ _ _ _ _ _ ri -- a tu --
   _ _ _ _ _ _ _ _ _
   _ _ _ a O -- san -- na -- in -- ex -- cel -- sis O --
