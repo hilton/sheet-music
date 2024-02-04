@@ -1,7 +1,8 @@
 % Copyright ©2023 Peter Hilton - https://github.com/hilton
+% Based on CPDL #12928?
 
 \version "2.24.2"
-revision = "1"
+revision = "2"
 \pointAndClickOff
 
 #(set-global-staff-size 15)
@@ -37,7 +38,7 @@ year = #(strftime "©%Y" (localtime (current-time)))
 		\vspace #6
 		\column \center-align {
 			\line {
-				This edition copyright \year Peter Hilton - 
+				This edition copyright \year \with-url #"https://www.cpdl.org/wiki/index.php/ChoralWiki:CPDL" CPDL - 
 				Lilypond source at \with-url #"https://github.com/hilton/sheet-music" https://github.com/hilton/sheet-music - 
 				revision \revision 
 			}
@@ -211,7 +212,7 @@ sopranoB =  \relative e' {
   gis2 gis4 | % 25
   a4 gis2 | % 26
   \tempo \markup {
-    \rhythm { 1[s] } = \rhythm { 2.[s] }
+    \rhythm { 2[s] } = \rhythm { 2[s] }
   }
   \time 2/2  a1 | % 27
   fis1 | % 28
@@ -554,7 +555,7 @@ tenorBLyrics =  \lyricmode {
   -- ta -- te et be -- _ ne -- di -- ci -- te no -- _ _
   mi -- ni e -- _ "ius." Qui -- "a," qui -- a mi -- ra -- "- bi"
   -- _ _ _ _ li -- a fe -- "cit." Can -- ta -- te
-  et ex -- sul -- "- ta" -- "te, " ___ can -- ta -- _ _
+  et ex -- sul -- "- ta" -- "te, " __ _ can -- ta -- _ _
   _ _ _ _ te et ex -- sul -- ta -- te et psal --
   li -- "te," can -- ta -- te et ex -- sul -- ta -- te et psal -- li
   -- "te." Psal -- li -- te in ci -- tha -- ra psal -- li -- te in ci
