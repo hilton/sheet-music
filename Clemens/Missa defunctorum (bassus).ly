@@ -91,7 +91,7 @@ bass = \new Voice {
 		\clef "bass"
 		\once \override Staff.TimeSignature.stencil = ##f
 		\override Stem.transparent = ##t 
-		\cadenzaOn f4 g f f-- \cadenzaOff
+		\cadenzaOn f4 g f f \fermata \cadenzaOff
 		\override Stem.transparent = ##f
 		\time 2/2
 		\showBarLine\bar "|"
@@ -106,7 +106,7 @@ bass = \new Voice {
 
 		\once \override Staff.TimeSignature.stencil = ##f
 		\override Stem.transparent = ##t
-		\cadenzaOn s8 f'8 s g8 a a s a8 a s a8 a s a8 s g8 g-- a-- s \cadenzaOff
+		\cadenzaOn s8 f'8 s g8 a a s a8 a s a8 a s a8 s g8 g a \fermata s \cadenzaOff
 		\override Stem.transparent = ##f
 		\showBarLine\bar "|"
 
@@ -121,7 +121,8 @@ bass = \new Voice {
 		do -- na e -- is Do -- _ _ mi -- ne, __ _
 		et lux __ _ per -- pe -- tu -- a lu -- ce -- at __ _ _ _ _ _ _ _ e -- _ _ _ _ _ _ _ is.
 
-		Te de -- _ cet hym -- nus De -- us in Si -- on __ _
+		Te de -- _ cet hym -- nus De -- us in Sy -- on, __ _
+		
 		Et ti -- _ bi red -- de -- tur vo -- tum
 		in Je -- ru -- sa -- lem, ex -- au -- di De -- us o -- ra -- ti  -- o -- nem me -- am,
 		ad te om -- nis ca -- ro __ _ ve -- ni -- et. __ _
@@ -220,7 +221,7 @@ bass = \new Voice {
 		\clef "bass"
 		\once \override Staff.TimeSignature.stencil = ##f
 		\override Stem.transparent = ##t \cadenzaOn
-		g'8 g a b a g a a-- g-- s
+		g'8 g a b a g a a g s
 		\cadenzaOff \override Stem.transparent = ##f
 		\showBarLine \bar "|" \time 2/2
 		
@@ -238,7 +239,7 @@ bass = \new Voice {
 		\showBarLine \bar "||"
 	}
 	\addlyrics {
-		Ab -- sol -- _ _ _ _ _ ve __ _ 
+		Ab -- sol -- _ _ _ _ _ ve: __ _ 
 		Do -- _ _ _ mi -- 
 		ne a -- ni -- mas om -- ni -- um fi -- de -- li -- um de -- fun -- cto -- _ _
 
@@ -270,7 +271,7 @@ bass = \new Voice {
 		\clef "bass"
 		\once \override Staff.TimeSignature.stencil = ##f
 		\override Stem.transparent = ##t \cadenzaOn
-		g'8 f g g s g8 f g s g8 a bes g g-- f-- s
+		g'8 f g g s g8 f g s g8 a bes g g f s
 		\cadenzaOff \override Stem.transparent = ##f
 		\showBarLine \bar "|" \time 2/2
 		
@@ -379,7 +380,7 @@ bass = \new Voice {
 	\relative c' {
 		\clef "bass"
 		\once \override Staff.TimeSignature.stencil = ##f
-		\override Stem.transparent = ##t a4-- a-- \override Stem.transparent = ##f
+		\override Stem.transparent = ##t a4 a \override Stem.transparent = ##f
 		\showBarLine\bar "|"
 		\time 2/2
 		
@@ -424,7 +425,7 @@ bass = \new Voice {
 		\showBarLine \bar "||"
 	}
 	\addlyrics {
-		Be -- ne -- di -- ctus qui ve -- nit
+		Be -- ne -- di -- ctus qui ve -- nit.
 		In no -- mi -- ne Do -- mi -- ni, O -- san -- na
 		in ex -- cel -- sis. __
 	}
@@ -481,7 +482,7 @@ bass = \new Voice {
 		\clef "bass"
 		\once \override Staff.TimeSignature.stencil = ##f
 		\override Stem.transparent = ##t
-		\cadenzaOn a'8 s g f g a a-- g-- s \cadenzaOff
+		\cadenzaOn a'8 s g f g a a g s \cadenzaOff
 		\override Stem.transparent = ##f
 		\showBarLine\bar "|"
 		\time 2/2
@@ -495,7 +496,7 @@ bass = \new Voice {
 		
 		\once \override Staff.TimeSignature.stencil = ##f
 		\override Stem.transparent = ##t 
-		\cadenzaOn g'8 a c s  c c c s  c c s  c c s  d c c-- s \cadenzaOff
+		\cadenzaOn g'8 a c s  c c c s  c c s  c c s  d c c \fermata s \cadenzaOff
 		\override Stem.transparent = ##f
 		\showBarLine\bar "|"
 		

@@ -106,7 +106,7 @@ alto = \new Voice {
 
 		\once \override Staff.TimeSignature.stencil = ##f
 		\override Stem.transparent = ##t
-		\cadenzaOn s8 f'8 s g8 a a s a8 a s a8 a s a8 s g8 g-- a-- s \cadenzaOff
+		\cadenzaOn s8 f'8 s g8 a a s a8 a s a8 a s a8 s g8 g a \fermata s \cadenzaOff
 		\override Stem.transparent = ##f
 		\showBarLine\bar "|"
 
@@ -121,7 +121,7 @@ alto = \new Voice {
 		do -- na e -- is Do -- _ _ _ _ mi -- ne, et lux __ _ 	
 		per -- pe -- tu -- a __ _ _ lu -- _ _ _ _ ce -- at __ _ e -- _ _ _ is.
 
-		Te de -- _ cet hym -- nus De -- us in Si -- on __ _
+		Te de -- _ cet hym -- nus De -- us in Sy -- on, __ _
 		
 		Et ti -- _ bi red -- de -- tur vo -- tum
 		in Je -- ru -- sa -- lem, ex -- au -- di De -- us o -- ra -- ti  -- o -- nem me -- _ am,
@@ -220,7 +220,7 @@ alto = \new Voice {
 	\relative c' {
 		\once \override Staff.TimeSignature.stencil = ##f
 		\override Stem.transparent = ##t \cadenzaOn
-		g'8 g a b a g a a-- g-- s
+		g'8 g a b a g a a g s
 		\cadenzaOff \override Stem.transparent = ##f
 		\showBarLine \bar "|" \time 2/2
 		
@@ -238,7 +238,7 @@ alto = \new Voice {
 		\showBarLine \bar "||"
 	}
 	\addlyrics {
-		Ab -- sol -- _ _ _ _ _ ve __ _ 
+		Ab -- sol -- _ _ _ _ _ ve: __ _ 
 		Do -- _ _ _ mi -- ne a -- ni -- mas __
 		_ _ _ om -- ni -- um fi -- de -- _ _ _ _ li -- um de -- _ _ fun -- cto -- rum
 
@@ -269,7 +269,7 @@ alto = \new Voice {
 	\relative c' {
 		\once \override Staff.TimeSignature.stencil = ##f
 		\override Stem.transparent = ##t \cadenzaOn
-		g'8 f g g s g8 f g s g8 a bes g g-- f-- s
+		g'8 f g g s g8 f g s g8 a bes g g f s
 		\cadenzaOff \override Stem.transparent = ##f
 		\showBarLine \bar "|" \time 2/2
 		
@@ -377,7 +377,7 @@ alto = \new Voice {
 alto = \new Voice {
 	\relative c'' {
 		\once \override Staff.TimeSignature.stencil = ##f
-		\override Stem.transparent = ##t a4-- a-- \override Stem.transparent = ##f
+		\override Stem.transparent = ##t a4 a \override Stem.transparent = ##f
 		\showBarLine \bar "|"
 		\time 2/2
 		
@@ -421,7 +421,7 @@ alto = \new Voice {
 		\showBarLine \bar "||"
 	}
 	\addlyrics {
-		Be -- ne -- di -- ctus qui ve -- nit
+		Be -- ne -- di -- ctus qui ve -- nit.
 		In no -- mi -- ne Do -- mi -- ni, O -- _ _ san -- na
 		in ex -- cel -- sis. __
 	}
@@ -476,7 +476,7 @@ alto = \new Voice {
 	\relative c' {
 		\once \override Staff.TimeSignature.stencil = ##f
 		\override Stem.transparent = ##t
-		\cadenzaOn a'8 s g f g a a-- g-- s \cadenzaOff
+		\cadenzaOn a'8 s g f g a a g s \cadenzaOff
 		\override Stem.transparent = ##f
 		\showBarLine\bar "|"
 		\time 2/2
@@ -488,7 +488,7 @@ alto = \new Voice {
 		
 		\once \override Staff.TimeSignature.stencil = ##f
 		\override Stem.transparent = ##t 
-		\cadenzaOn g8 a c s  c c c s  c c s  c c s  d c c-- s \cadenzaOff
+		\cadenzaOn g8 a c s  c c c s  c c s  c c s  d c c \fermata s \cadenzaOff
 		\override Stem.transparent = ##f
 		\showBarLine\bar "|" \break
 		
