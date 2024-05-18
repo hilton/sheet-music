@@ -40,7 +40,8 @@ year = #(strftime "©%Y" (localtime (current-time)))
 			\line {
 				This edition copyright \year Peter Hilton - 
 				Lilypond source at \with-url #"https://github.com/hilton/sheet-music" https://github.com/hilton/sheet-music - 
-				revision \revision 
+				\with-url #"https://www.cpdl.org/wiki/index.php/Adoramus_te,_Christe_(Claudio_Monteverdi)" "CPDL #32103"
+				revision \revision
 			}
 		}
 	}
