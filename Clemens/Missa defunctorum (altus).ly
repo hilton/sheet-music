@@ -2,8 +2,8 @@
 % Copyright ©2024 Peter Hilton - https://github.com/hilton
 
 \version "2.24.2"
-\pointAndClickOff
-revision = "13"
+% \pointAndClickOff
+revision = "14"
 
 \paper {
 	#(define fonts (set-global-fonts #:sans "Source Sans Pro"))
@@ -91,7 +91,7 @@ alto = \new Voice {
 	\relative c' {
 		\once \override Staff.TimeSignature.stencil = ##f
 		\override Stem.transparent = ##t 
-		\cadenzaOn f4 g f f-- \cadenzaOff
+		\cadenzaOn f4 g f f \fermata \cadenzaOff
 		\override Stem.transparent = ##f
 		\time 2/2
 		\showBarLine\bar "|"
@@ -117,16 +117,15 @@ alto = \new Voice {
 	}
 	\addlyrics {
 		Re -- _ qui -- em 
-		Ae -- _ _ _ _ ter -- nam, __  _ _
-		_ ae -- ter -- _ _ nam, ae -- _ ter -- _ _ _ _ _ nam
+		Ae -- _ _ _ _ ter -- _  _ _ _ _ _ _ _ nam, ae -- _ ter -- _ _ _ _ _ nam
 		do -- na e -- is Do -- _ _ _ _ mi -- ne, et lux __ _ 	
-		per -- pe -- _ tu -- _ a lu -- _ ce -- at e -- _ _ _ _ _ _ _ is.
+		per -- pe -- tu -- a __ _ _ lu -- _ _ _ _ ce -- at __ _ e -- _ _ _ is.
 
 		Te de -- _ cet hym -- nus De -- us in Si -- on __ _
 		
 		Et ti -- _ bi red -- de -- tur vo -- tum
 		in Je -- ru -- sa -- lem, ex -- au -- di De -- us o -- ra -- ti  -- o -- nem me -- _ am,
-		ad te om -- nis __ _ _ _ _ ca -- _ _ _ _ ro ve -- ni -- et.
+		ad te om -- nis __ _ _ _ ca -- ro __ _ _ _ _ _ ve -- ni -- et.
 		
 	}
 }
@@ -194,11 +193,11 @@ alto = \new Voice {
 		Ky -- ri -- _ e __ _ e -- _ _ lei -- _ _ _ _ _ _ son.
 
 		Chri -- _ _ _ _ ste __ _ e -- _ _ _ _ le -- i -- son,
-		Chri -- ste __ _ e -- lei -- _ _ son, Chri -- _ _ ste e -- lei -- _ _ _ son.
+		Chri -- _ _ ste e -- lei -- _ son, e -- le -- i -- son, Chri -- ste e -- lei -- _ son.
 
 		Ky -- _ _ _ ri -- e __ _ e -- _ _ _ _ le -- i -- son,
 		Ky -- ri -- _ e __ _
-		_ e -- lei -- _ son, e -- _ _ lei -- son, Ky -- ri -- _ e e -- _ _ _ _ lei -- son e -- _ _ _ _ _ _ lei -- _ son.
+		_ e -- lei -- _ _ _ _ son, e -- lei -- _ _ _ son, e -- _ _ _ _ lei -- son e -- _ _ _ _ lei -- _ _ _ son.
 	}
 }
 
@@ -244,9 +243,9 @@ alto = \new Voice {
 		_ _ _ om -- ni -- um fi -- de -- _ _ _ _ li -- um de -- _ _ fun -- cto -- rum
 
 		ab __ _ om -- ni __ _ _ vin -- cu -- lo de -- li -- cto -- rum. 
-		Et gra -- _ ti -- a tu -- a __ _ _ _ il -- 
+		Et gra -- _ ti -- a tu -- _ _ _ a il -- 
 		lis suc -- _ _ _ cur -- ren -- _ _ _ _ _ te me -- re -- an -- tur e -- 
-		_ _ va -- de -- re iu -- di -- ci -- um ul -- ti -- o -- nis, et lu -- 
+		_ _ va -- de -- re iu -- di -- ci -- um ul -- ci -- o -- nis, et lu -- 
 
 		_ cis æ -- ter -- næ be -- a -- ti -- tu -- di -- ne per -- fru -- i, per -- fru -- 
 		i, per -- fru -- i.
@@ -278,7 +277,7 @@ alto = \new Voice {
 		r d d1 e2 f2. f4 f2 | f2. f4 g g f d f2 r4 d2
 
 		d4 bes c d1 r2 e d e e d d4 e2 f4. e8 d c bes4 c |
-		\ficta es2 d4 \ficta e! f2 r4 d d d f f | e2 f r4 f2 f4 f2 d |
+		e2 d4 e f2 r4 d d d f f | e2 f r4 f2 f4 f2 d |
 		f g2. g4 e g f4. e8 d2 d r4 d e2 f2. f4 f2 |
 		f2. d4 e f4. e4 d16 c d2 e r d1 e2 d2. d4 d2 e |
 
@@ -354,12 +353,11 @@ alto = \new Voice {
 	}
 	\addlyrics {
 		Tu __ _
-		_ su -- _ _ _ _ sci -- pe pro a -- ni -- ma -- _ bus il -- lis, pro
-		a -- ni -- ma -- _ _ _ _ bus il -- lis qua -- rum 
-		ho -- di -- e me -- mo -- ri -- am fa -- ci -- mus, fac __ _ _
-
-		_ _ e -- as de mor -- te trans -- i -- re ad vi -- tam. Quam
-		o -- lim A -- bra -- hæ pro -- mi -- si -- _ _ _ sti
+		_ su -- _ _ _ _ sci -- pe pro a -- ni -- ma -- bus il -- _ lis, pro
+		a -- ni -- ma -- bus __ _ il -- _ _ _ lis qua -- rum 
+		ho -- di -- e me -- mo -- ri -- am fa -- ci -- mus, 
+		fac __ _ _ 	_ e -- _ as de mor -- te trans -- i -- re ad vi -- tam. 
+		Quam o -- lim A -- bra -- hæ pro -- mi -- si -- _ _ _ sti
 		et se -- mi -- ni e -- _ _ _ _ _ ius.
 	}
 }
@@ -392,8 +390,7 @@ alto = \new Voice {
 	}
 	\addlyrics {
 		San -- ctus
-		San -- ctus __ _ _  Do -- mi -- nus De -- us Do -- 
-		mi -- nus De -- _ us Sa -- _ ba -- oth Sa -- _ _ _ ba -- oth __
+		San -- _ _ ctus Do -- mi -- nus De -- us Do -- _ _ _ _ _ mi -- nus De -- us Sa -- _ _ _ ba -- oth
 		Ple -- ni __ _ sunt coe -- li et ter -- ra glo -- ri -- a tu -- a
 		O -- san -- na in ex -- cel -- sis
 	}
@@ -456,7 +453,7 @@ alto = \new Voice {
 		A -- gnus De -- i
 		Qui tol -- lis pec -- ca -- ta mun -- di, do -- na e -- is re -- qui -- em.
 		A -- gnus De -- i
-		Qui tol -- lis pec -- ca -- ta mun -- di, do -- na e __ _ _ is __ _ re -- qui -- em.
+		Qui tol -- lis pec -- ca -- ta mun -- di, do -- na e is __ _ re -- _ _ qui -- em.
 		A -- gnus De -- i
 		Qui tol -- lis pec -- ca -- ta mun -- di, do -- na e -- is re -- qui -- em sem -- pi -- ter -- nam.
 	}
@@ -486,8 +483,8 @@ alto = \new Voice {
 		
 		e1 e2 e d4 e2 c4 d d b4. c8 d4 e a,2 |
 		r4 d f e2 f4 d e4. c8 d4 e2. \mark #11 f4. e8 c4 f e4. d8 c b a4 d f2 |
-		e4 f d e2 e4 d2 e \times 2/3 { c4 d e } a, e'2 d8 c b4 b c d e e d1
-		r4 \mark #12 b c d e e d1. r4 b c d e e d1 | \showBarLine \bar "|"
+		e4 f d e2 e4 d2 e \times 2/3 { c4 d e } a, e'2 d8 c b4 b c d e2 d1
+		r4 \mark #12 b c d e2 d1. r4 b c d e2 d1 | \showBarLine \bar "|"
 		
 		\once \override Staff.TimeSignature.stencil = ##f
 		\override Stem.transparent = ##t 
@@ -499,8 +496,8 @@ alto = \new Voice {
 		g4 g2 f4 d d1. |
 		d2 f e4 f d e4. c8 d4 e2. f4. e8 c4 f e4. d8 c b a4 d f2 |
 
-		e4 f d e2 e4 d2 \mark #13 e \times 2/3 { c4 d e } a, e'2 d8 c b4 b c d e e d1
-		r4 b | c d e e d1. r4 b c d e e d1 | \showBarLine \bar "|"
+		e4 f d e2 e4 d2 \mark #13 e \times 2/3 { c4 d e } a, e'2 d8 c b4 b c d e2 d1
+		r4 b | c d e2 d1. r4 b c d e2 d1 | \showBarLine \bar "|"
 
 		\cadenzaOn \override Stem.transparent = ##t
 		s8 g8 a a g s  a s  a g g-- s \showBarLine \bar "|"
@@ -511,17 +508,16 @@ alto = \new Voice {
 		Lux æ -- _ ter -- _ na __ _ 
 		Lu -- ce -- at e -- _ _ is Do -- _ _ _ mi -- ne
 		cum san -- ctis tu -- is in __ _ _ æ -- ter -- _ _ _ _ _ _ _ num, cum san -- 
-		ctis tu -- is in æ -- ter -- _ _ _ _ _ _ _ _ num, qui -- _ a pi -- us es, 
-		qui -- _ a pi -- us es, qui -- _ a pi -- us es.
+		ctis tu -- is in æ -- ter -- _ _ _ _ _ _ _ _ num,
+		qui -- a pi -- us es, qui -- a pi -- us es, qui -- a pi -- us es.
 		
 		Re -- qui -- em æ -- ter -- nam do -- na e -- is Do -- mi -- ne 
 		
 		Et lux per -- pe -- tu -- a lu -- 
 		ce -- at e -- _ is.
-		Cum san -- ctis tu -- is in __ _ _ æ -- ter -- _ _ _ _ _ _ _ num, cum san -- 
-
-		ctis tu -- is in æ -- ter -- _ _ _ _ _ _ _ _ num, qui -- _ a pi -- us es, 
-		qui -- _ a pi -- us es, qui -- _ a pi -- us es.
+		Cum san -- ctis tu -- _ _ _ is, cum san -- _ ctis tu -- _ _ _ _ is
+		in æ -- _ _ _ _ ter -- _ _ _ _ _ _ _ _ _ num, 
+		qui -- a pi -- us es, qui -- a pi -- us es, qui -- a pi -- us es.
 		
 		Re -- qui -- és -- cant in pá -- _ ce. A -- men. _
 	}

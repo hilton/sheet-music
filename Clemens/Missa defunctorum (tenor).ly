@@ -2,8 +2,8 @@
 % Copyright ©2024 Peter Hilton - https://github.com/hilton
 
 \version "2.24.2"
-\pointAndClickOff
-revision = "13"
+% \pointAndClickOff
+revision = "14"
 
 \paper {
 	#(define fonts (set-global-fonts #:sans "Source Sans Pro"))
@@ -115,11 +115,10 @@ tenor = \new Voice {
 	}
 	\addlyrics {
 		Re -- _ qui -- em 
-		Ae -- _ _  ter -- _ _ nam __ _ do --
-		na __ _ e -- is __ _ _ _ _ Do -- _ mi -- ne, et lux __
-		
-		_ per -- pe -- tu -- a lu -- _ ce -- at __ _
-		e -- _ _ _ _ is.
+		Ae -- _ _  ter -- _ _ nam, __ _ do --
+		na __ _ e -- is __ _ _ _ _ Do -- mi -- ne, __ _ 
+		et lux __ _ per -- pe -- tu -- a lu -- _ ce -- at __ _ _
+		e -- _ _ _ is.
 		
 		Te de -- _ cet hym -- nus De -- us in Si -- on __ _
 		Et ti -- bi red -- de -- tur vo -- tum
@@ -194,12 +193,11 @@ tenor = \new Voice {
 		Ky -- _ _ ri -- e, Ky -- ri -- e e -- lei -- _ _ _ _ _ _ _ _ _ _ son.
 		
 		Chri -- _ _ _ _ ste __ _ e -- _ _ _ _ le -- i -- son,
-		Chri -- ste __ _ _ _ e -- lei -- _ son, Chri -- ste __ _ _ e -- _ lei -- _ _ _ _ son.
+		Chri -- _ _ ste __ _ e -- lei -- _ son, e -- lei -- _ son, e -- _ lei -- _ _ _ _ son.
 
 		Ky -- _ _ _ ri -- e __ _ e -- _ _ _ _ le -- i -- son,
-		Ky -- ri -- _ _ 
-		e e -- lei -- _ _ son, e -- lei -- _ _ son, Ky -- _ ri -- 
-		e e -- _ lei -- _ son, e -- lei -- _ _ _ _ _ _ son.
+		Ky -- ri -- _ _ 	e e -- lei -- _ _ son, e -- lei -- _ _ son, 
+		e -- lei -- _ son e -- _ lei -- _ son, e -- lei -- _ _ _ _ _ _ son.
 	}
 }
 
@@ -248,7 +246,7 @@ tenor = \new Voice {
 		_ rum ab __ _ om -- ni vin -- _ cu -- lo de -- li -- cto -- _ _ _ _ 
 		_ rum. Et gra -- _ ti -- a tu -- 
 		_ _ _ a il -- _ _ lis suc -- _ _ cur -- ren -- te me -- re -- an -- tur 
-		e -- va -- de -- re iu -- di -- ci -- um ul -- ti -- o -- _ _ _ _ nis, et lu -- 
+		e -- va -- de -- re iu -- di -- ci -- um ul -- ci -- o -- _ _ _ _ nis, et lu -- 
 
 		cis æ -- ter -- næ be -- a -- ti -- tu -- di -- ne per -- fru -- 
 		i, per -- fru -- i. __ _ _ _
@@ -277,37 +275,37 @@ tenor = \new Voice {
 		\cadenzaOff \override Stem.transparent = ##f
 		\showBarLine \bar "|" \time 2/2
 		
-		a2 b c1 d2. c4 \ficta bes! d bes c a2 g |
+		a2 bes c1 d2. c4 bes d bes c a2 g |
 		r bes a bes c c2. c4 c2 d2. d4 \ficta es4. d8 c4 bes c2 r4 bes2
 
 		a4 g2 | a1 r2 c a c c bes bes c d4 g,2 a4 |
-		bes c2 bes4 c2 r4 bes a bes c d2 \ficta c!4 d2 r4 d d d2 c bes4 |
+		bes c2 bes4 c2 r4 bes a bes c d2 c4 d2 r4 d d d2 c bes4 |
 		c2 es2. d4 c d c4. a8 bes2 a r4 a c2 d2. d4 d2 |
-		d2 c4 bes c d4. c8 c2 \ficta b4 c2 | r \ficta bes!1 c2 a2. a4 a2 c |
+		d2 c4 bes c d4. c8 c2 \ficta b4 c2 | r \ficta b1 c2 a2. a4 a2 c |
 
-		d c2. a4 bes d4. c16 \ficta b! c4 a2 r4 \ficta bes! c2. c4 c2 d2. c4 |
+		d c2. a4 bes d4. c16 bes c4 a2 r4 bes c2. c4 c2 d2. c4 |
 		bes2 c a d2. c4 bes c bes2 a r4 a bes c d2 c4. bes8 |
 		a g bes4 a2 g1 
 		\showBarLine \bar "|"
 		
 		bes g2 c a r4 bes bes2 bes4 a8 g a2 d2.
-		c4 bes c bes g a1 r2 d2 es2. d4 c bes a f g2 a g |
+		c4 bes c bes g a1 r2 d2 e2. d4 c bes a f g2 a g |
 		\showBarLine \bar "|"
 	}
 	\addlyrics {
 		Do -- mi -- _ ne Je -- su __ _ Chri -- _ _ _ ste __ _
-		Rex __ _ _ glo -- _ _ _ _ ri -- æ, __ _
+		Rex __ _ _ glo -- _ _ _ _ _ ri -- æ,
 		li -- be -- _ ra a -- ni -- mas om -- ni -- um fi -- de -- li -- um de -- 
 		
 		fun -- cto -- rum, de pœ -- _ nis in -- fer -- _ ni, in -- _
 		fer -- _ _ ni et de pro -- fun -- do la -- cu, li -- be -- ra e -- _
 		as de o -- re le -- o -- _ _ nis, ne ab -- sor -- be -- at
-		e -- _ as tar -- ta -- _ _ _ rus, ne ca -- dant in ob -- scu -- 
+		e -- as tar -- ta -- _ _ _ _ rus, ne ca -- dant in ob -- scu -- 
 
 		ra te -- ne -- bra -- rum __ _ _ lo -- ca,  sed sig -- ni -- fer san -- ctus
 		Mi -- cha -- el re -- præ -- sen -- tet e -- as in lu -- cem san -- _ _
 		_ _ _ _ ctam. Quam o -- _ lim A -- bra -- hæ __ _ _ _ pro -- 
-		mi -- si -- _ _ _ sti et se -- mi -- ni __ _ _ _ e -- _ ius.
+		mi -- si -- _ _ _ sti et se -- mi -- ni e -- _ _ _ _ ius.
 	}
 }
 
@@ -349,24 +347,22 @@ tenor = \new Voice {
 	\relative c'' {
 		\set Score.rehearsalMarkFormatter = #format-mark-alphabet
 		bes1 c2. d4 |
-		\ficta es2 d2. c4 bes c4. bes8 g4 a2 \mark #9 g4 bes a g a2 g4. f8 d2 r |
-		r r4 g g f g2 bes4 bes4. a8 f4 g2 \mark #10 a r4 c2 bes4 c d c2 |
+		e2 d2. c4 bes c4. bes8 g4 a2 \mark #9 g4 bes a g a2 g4. f8 d2 r |
+		r r4 g g f g2 bes4 bes4. a8 f4 g2 \mark #10 f r4 c'2 bes4 c d c2 |
 		d4 \ficta es c2 bes r4 d d d d2 es4 d2 c8 bes c4 d c2 r bes1 
 
-		g2 a2. a4 c2 d2. d4 \ficta es2 c4 c4 c8 bes16 a bes4 \mark #11 c2 bes1 g2 |
+		g2 a2. a4 c2 d2. d4 \ficta es2 c4 c4. bes16 a bes4 \mark #11 c2 bes1 g2 |
 		c a r4 bes bes bes2 a8 g a2 d2. c4 bes8 g c4 bes c a1 |
-		r2 d \ficta es2. d4 c bes a f g2 a g1
+		r2 d e2. d4 c bes a f g2 a g1
 		\showBarLine\bar "||"
 	}
 	\addlyrics {
-		Tu __ _ _
-		_ su -- _ _ _ _ sci -- pe pro a -- ni -- ma -- bus il -- _ lis, 
-		pro a -- ni -- ma -- bus il -- _ _ _ lis qua -- rum ho -- di -- e,
-		ho -- _ di -- e me -- mo -- ri -- am fa -- _ _ _ _ ci -- mus, fac
+		Tu __ _ _ 	_ su -- _ _ _ _ _ _ _ _ _ _ _ sci -- _ pe 
+		pro a -- ni -- ma -- bus il -- _ _ _ lis qua -- rum ho -- _ _ _ _ di -- e me -- mo -- ri -- am fa -- _ _ _ _ ci -- mus, fac
 
-		e -- as de mor -- te trans -- i -- re ad vi -- _ _ _ tam. Quam o -- 
-		lim __ _ A -- bra -- hæ __ _ _ _ pro -- mi -- si -- _ _ _ _ sti
-		et se -- mi -- ni __ _ _ _ e -- _ ius.
+		e -- as de mor -- te trans -- i -- re ad __ _ _ vi -- tam.
+		Quam o -- _ lim A -- bra -- hæ __ _ _ _ pro -- mi -- si -- _ _ _ _ sti
+		et se -- mi -- ni e -- _ _ _ _ ius.
 	}
 }
 
@@ -389,7 +385,7 @@ tenor = \new Voice {
 		\showBarLine\bar "|"
 		\time 2/2
 		
-		a1 c2 d \ficta b! a c2. c4 c c d2. 
+		a1 c2 d b a c2. c4 c c d2. 
 		\ficta bes4 c d2 c4 d2 r4 d2 c4 d4. c8 a1.
 		\showBarLine\bar "|"
 		a1 b2 c c2. c4 d d b2 a a2. a4 c2 b d1 \fermata
@@ -397,8 +393,8 @@ tenor = \new Voice {
 	}
 	\addlyrics {
 		San -- ctus
-		San -- _ _ ctus __ _ Do -- mi -- nus De -- us 
-		Sa -- _ _ ba -- oth Sa -- ba -- oth __ _ _
+		San -- _ _ _ ctus Do -- mi -- nus De -- us __ _
+		Sa -- _ ba -- oth Sa -- ba -- oth __ _ _
 		Ple -- ni __ _ sunt coe -- li et ter -- ra glo -- ri -- a tu -- a
 		O -- san -- na in ex -- cel -- _ _ sis
 	}
@@ -426,12 +422,12 @@ tenor = \new Voice {
 		f8 g a a s a s a a s \override Stem.transparent = ##f 
 		\cadenzaOff \showBarLine \bar "|"
 		
-		a2 d4 d d c8 b c2 c2. b4 a1 \fermata c2. b8 a b2 c2.
+		a2 d4 d2 c8 b c2 c2. b4 a1 \fermata c2. b8 a b2 c2.
 		 a4 bes a a g8 f g2 a\breve \showBarLine\bar "||"
 	}
 	\addlyrics {
 		Be -- ne -- di -- ctus qui ve -- nit
-		In no -- mi -- ne __ _ _ _ Do -- mi -- ni, O -- _ _ san -- na
+		In no -- mi -- _ _ ne Do -- mi -- ni, O -- _ _ san -- na
 		in __ _ ex -- cel -- _ _ _ sis. __
 	}
 }
@@ -496,7 +492,7 @@ tenor = \new Voice {
 		g4 a2 r2 r4 a | c b c2 a4 \mark #11 d4. c8 a4 | b2 a r4 a d c2
 		d4 b c | g c2 b4 c4. b8 a4 g r b c4. d8 e4 d g,8 c4 b8 c4 e, f g |
 
-		a a g \mark #12 g2 a4 b c a r8 d, f4 g a a g2 ~ g\breve
+		a a g \mark #12 g2 a4 b c a r8 d, f4 g a2 g2 ~ g\breve
 		\showBarLine\bar "|"
 		
 		\once \override Staff.TimeSignature.stencil = ##f
@@ -510,7 +506,7 @@ tenor = \new Voice {
 		r1 r2 r4 a c b c2 a4 d4. c8 a4 b2 a | r4 a d c2
 
 		d4 b c g c2 b4 \mark #13 c4. b8 a4 g r b c4. d8 e4 d g,8 c4 b8 c4 e, f g |
-		a a g g2 a4 b c a d, f g a a g2 ~ g\breve |
+		a a g g2 a4 b c a d, f g a2 g2 ~ g\breve |
 		\showBarLine\bar "|"
 		
 		\cadenzaOn \override Stem.transparent = ##t
@@ -522,8 +518,8 @@ tenor = \new Voice {
 		Lux æ -- _ ter -- _ na __ _ 
 		Lu -- ce -- at e -- is Do -- _ _ _ _ _ _ _ _ _ _ 
 		mi -- ne cum san -- ctis tu -- is in __ _ æ -- ter -- num, cum san -- ctis 
-		tu -- is in æ -- ter -- _ _ _ _ num, qui -- _ a pi -- _ _ _ us es, qui -- _ a 
-		pi -- us es, qui -- a pi -- us es, qui -- _ a pi -- us es.
+		tu -- is in æ -- ter -- _ _ _ _ num,
+		qui -- a pi -- us es, __ _ _ _ _ qui -- _ _ _ a pi -- us __ _ _ _ es, qui -- a pi -- us es.
 		
 		Re -- qui -- em æ -- ter -- nam do -- na e -- is Do -- mi -- ne 
 		
@@ -531,8 +527,8 @@ tenor = \new Voice {
 		_ _ _ ce -- at e -- is.
 		Cum san -- ctis tu -- is in __ _ æ -- ter -- num, cum san -- ctis 
 
-		tu -- is in æ -- ter -- _ _ _ _ num, qui -- _ a pi -- _ _ _ us es, qui -- _ a 
-		pi -- us es, qui -- a pi -- us es, qui -- _ a pi -- us es.
+		tu -- is in æ -- ter -- _ _ _ _ num,
+		qui -- a pi -- us es, __ _ _ _ _ qui -- _ _ _ a pi -- us __ _ _ _ es, qui -- a pi -- us es.
 		
 		Re -- qui -- és -- cant in pá -- _ ce. A -- men. _
 	}
