@@ -2,7 +2,7 @@
 % Copyright ©2024 Peter Hilton - https://github.com/hilton
 
 \version "2.24.2"
-% \pointAndClickOff
+\pointAndClickOff
 revision = "14"
 
 \paper {
@@ -98,9 +98,9 @@ alto = \new Voice {
 		
 		r2 f,2. g4 a bes c c d4. c16 bes
 		a4 bes c d2 c4 d2 r4 f2 e4 d c2 bes4 c d c2 \mark \default c1
-		r4 c2 c4 c2 f,4 f'2 e4 d c4. a8 d4 c1 \mark \default r4 f f2 c2.
+		r4 c2 c4 c2 f,4 f'2 e4 d c4. a8 d4 c1 \mark \default r4 f \[f2 c2.\]
 			
-		e4 f c d2 c a c d c4 d e2. c4 f e d1
+		e4 f c \[d2 c\] a \[c d\] c4 d e2. c4 f e d1
 		c4 bes c2 a \fermata
 		\showBarLine \bar "|"
 
@@ -110,9 +110,9 @@ alto = \new Voice {
 		\override Stem.transparent = ##f
 		\showBarLine\bar "|"
 
-		c,1 e2 f f4 f f f f2. f4
+		c,1 \[e2 f\] f4 f f f f2. f4
 		f2. f4 f d f2 r4 c e f f2 f4 f f4. e8 d4 d bes c d2
-		r4 c f f f4. e16 d c4 d e2 f2. e8 d e4 d d2. d4 c1
+		r4 c f f f4. e16 d c4 d \[e2 f2.\] e8 d e4 d d2. d4 c1
 		\showBarLine \bar "||"
 	}
 	\addlyrics {
@@ -162,7 +162,7 @@ alto = \new Voice {
 		\showBarLine\bar "|"		
 		\time 2/2
 		
-		c1 e2 f f e f d4 e f2. d4 f e c2
+		c1 \[e2 f\] \[f e\] f d4 e f2. d4 f e c2
 		d c1 c2 \fermata
 		\showBarLine \bar "|"
 
@@ -173,8 +173,8 @@ alto = \new Voice {
 		\showBarLine\bar "|"
 		\time 2/2
 
-		f1 f2 d f1 g4 f2 e4 f2 e4 d2 
-		c4 d2 f1 d4 e d2 c d2 \fermata
+		f1 \[f2 d\] f1 g4 f2 e4 f2 e4 d2 
+		c4 d2 f1 d4 e \[d2 c\] d2 \fermata
 		\showBarLine \bar "|"
 
 		\once \override Staff.TimeSignature.stencil = ##f
@@ -184,8 +184,8 @@ alto = \new Voice {
 		\showBarLine\bar "|"
 		\time 2/2
 		
-		d1 bes2 f' f e f2. f4 g2 e f d es c4 c \mark #3 d2. c4 \break d2 c
-		d d4. e8 f g f2 e4 f2 e4 f e d2 c4 d2 c d c c1
+		d1 \[bes2 f'\] \[f e\] f2. f4 g2 e f \[d es\] c4 c \mark #3 d2. c4 \break \[d2 c\]
+		d d4. e8 f g f2 e4 f2 e4 f e d2 c4 d2 c \[d c\] c1
 		\showBarLine \bar "||"
 	}
 	\addlyrics {
@@ -224,16 +224,16 @@ alto = \new Voice {
 		\cadenzaOff \override Stem.transparent = ##f
 		\showBarLine \bar "|" \time 2/2
 		
-		r1 c,2 f4. e8 d4 d e2 f f4 f4. 
+		r1 \[c,2 f4.\] e8 d4 d e2 f f4 f4. 
 		e16 d e4 e4. e8 e4 e2 g4. f8 e d c4 c d1 \mark #4 e4. f8 g4 f d2 d |
 
-		g, a c c4. d8 e2 f4 d \mark #5 f1 g4 e f1 d1.
+		\[g, a\] c c4. d8 e2 f4 d \mark #5 f1 g4 e f1 d1.
 		\showBarLine \bar "|"
-		\mark #6 r2 c c f2. e4 d2 e1 f4. e16 d c4 g |
+		\mark #6 r2 c \[c f2.\] e4 d2 e1 f4. e16 d c4 g |
 		d'2 r4 g2 f8 e d4 d c4. c8 a b c2 b4 \mark #7 c2 | r4 c2 c4 e2 g4 g4.
-		f8 e4 d4. d8 e4 e2 d c4 d d2 d4 c1 b2 \mark #8 r4 d d2 |
+		f8 e4 d4. d8 e4 e2 d c4 d d2 d4 c1 b2 \mark #8 r4 d \[d2 |
 
-		g e4 e d2 f4 f c2 e g4. g8 d2 f4. f8 c2 f2. d4 |
+		g\] e4 e d2 f4 f c2 e g4. g8 d2 f4. f8 c2 f2. d4 |
 		d2 r4 e2 e4 d1.
 		\showBarLine \bar "||"
 	}
@@ -273,16 +273,16 @@ alto = \new Voice {
 		\cadenzaOff \override Stem.transparent = ##f
 		\showBarLine \bar "|" \time 2/2
 		
-		d1 f\breve d4 f es2 d d
+		\[d1 f\breve\] d4 f \[es2 d\] d
 		r d d1 e2 f2. f4 f2 | f2. f4 g g f d f2 r4 d2
 
-		d4 bes c d1 r2 e d e e d d4 e2 f4. e8 d c bes4 c |
+		d4 bes c d1 r2 e \[d e\] e d d4 \[e2 f4.\] e8 d c bes4 c |
 		e2 d4 e f2 r4 d d d f f | e2 f r4 f2 f4 f2 d |
 		f g2. g4 e g f4. e8 d2 d r4 d e2 f2. f4 f2 |
 		f2. d4 e f4. e4 d16 c d2 e r d1 e2 d2. d4 d2 e |
 
 		f f2. f4 d d e2 d r4 d f2. f4 f2 f2. f4 |
-		d2 e d f2. f4 d4 f d2 d r4 d d f f2 e |
+		d2 e d f2. f4 d4 f d2 d r4 d d f \[f2 e\] |
 		d1 d \showBarLine \bar "|" d es d2 f2. d4 c1 f2. 
 		f4 d f | \ficta es8 d4 c8 d1 r2 f2 g2. f4 f d4. c8 a4 bes c d2 d
 		\showBarLine \bar "|"
@@ -381,10 +381,10 @@ alto = \new Voice {
 		\showBarLine \bar "|"
 		\time 2/2
 		
-		r2 e1 f2 e c4 e2 e4 e e f2 r4 f2 
+		r2 e1 \[f2 e\] c4 e2 e4 e e f2 r4 f2 
 		e4 f2 e d4 f2 f4 e e f f2 e8 d e4 f e2
 		\showBarLine \bar "|" \break
-		d1 d2 f f2. f4 f f e2 c d2. d4 e2 e f1 \fermata
+		d1 \[d2 f\] f2. f4 f f e2 c d2. d4 e2 e f1 \fermata
 		f1 f2 e d2. d4 b1 c2
 		\showBarLine \bar "|"
 	}
@@ -444,7 +444,7 @@ alto = \new Voice {
 		e2 e4 e f1 d4 d e2 e1\fermata d f2 f2. f4 d2. e4 e2 \showBarLine \bar "|"
 
 		\override Stem.transparent = ##t a4 a a a \override Stem.transparent = ##f \showBarLine\bar "|"
-		f2 f4 f e1 e4 c d2 e1\fermata e e2 f2. e8 d e2 f d2. d4 f2 \showBarLine \bar "|"
+		f2 f4 f e1 e4 c d2 e1\fermata e e2 f2. e8 d \[e2 f\] d2. d4 f2 \showBarLine \bar "|"
 		
 		\override Stem.transparent = ##t a4 a a a \override Stem.transparent = ##f \showBarLine\bar "|"
 		e2 e4 e f1 d4 d f2 e1\fermata e e g e2 e2. e4 f2 f2. f4 d1 e \showBarLine \bar "||"

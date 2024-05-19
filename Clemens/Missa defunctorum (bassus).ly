@@ -2,7 +2,7 @@
 % Copyright ©2024 Peter Hilton - https://github.com/hilton
 
 \version "2.24.2"
-% \pointAndClickOff
+\pointAndClickOff
 revision = "14"
 
 \paper {
@@ -98,10 +98,10 @@ bass = \new Voice {
 		
 		r1 f2. g4 a2 d,1
 		c4 bes \ficta es2 d f4. e8 d4 c d1 c4 bes c2 \mark \default f,4 f'2 f4
-		f2 c r4 f2 f4 f c d e f bes, c1 \mark \default f,2 r4 f' f2
+		f2 c r4 f2 f4 f c d e f bes, c1 \mark \default f,2 r4 f' \[f2
 			
-		c f bes, c d4 f f a g f2 e8 d c4. d8 e4 f4. e8 c4 d2 
-		bes c4 d c2 f, \fermata
+		c\] f bes, c d4 f f a g f2 e8 d c4. d8 e4 f4. e8 c4 \[d2 
+		bes\] c4 d c2 f, \fermata
 		\showBarLine \bar "|"
 
 		\once \override Staff.TimeSignature.stencil = ##f
@@ -110,9 +110,9 @@ bass = \new Voice {
 		\override Stem.transparent = ##f
 		\showBarLine\bar "|"
 
-		f1 c2 f f4 f f f d2. d4
+		f1 \[c2 f\] f4 f f f d2. d4
 		bes2. bes4 f' g f2 r4 f4 c f f2 f4 bes, bes f' g d \ficta es2 d
-		r4 f f f f2. d4 c2 f c2. d4 bes1 f'
+		r4 f f f f2. d4 \[c2 f\] c2. d4 \[bes1 f'\]
 		\showBarLine \bar "||"
 	}
 	\addlyrics {
@@ -162,8 +162,8 @@ bass = \new Voice {
 		\showBarLine\bar "|"		
 		\time 2/2
 		
-		f1 c2 f f c f g f4 d f g d e f2
-		bes, c1 f,2 \fermata
+		f1 \[c2 f\] \[f c\] \[f g\] f4 d f g d e \[f2
+		bes, c1\] f,2 \fermata
 		\showBarLine \bar "|"
 
 		\once \override Staff.TimeSignature.stencil = ##f
@@ -173,8 +173,8 @@ bass = \new Voice {
 		\showBarLine\bar "|"
 		\time 2/2
 		
-		bes,1 f'2 g f bes,4 bes'2 a4 g2 f4. e8 c4 d
-		\ficta es2 d bes f' g4 c, d4. e8 f2 bes, \fermata
+		bes,1 \[f'2 g\] f bes,4 bes'2 a4 g2 f4. e8 c4 d
+		\ficta es2 d \[bes f'\] g4 c, d4. e8 f2 bes, \fermata
 		\showBarLine \bar "|"
 
 		\once \override Staff.TimeSignature.stencil = ##f
@@ -185,7 +185,7 @@ bass = \new Voice {
 		\time 2/2
 		
 		bes,1 es2 d4. \ficta es8 f2 c bes bes' g4 g a2 d, g es4 \ficta es f2 \mark #3 bes, f' bes,4 bes c2
-		bes2 bes4 bes'4. a8 g f g2 f4. g8 a4 f g2 es d4. \ficta e!8 f2 bes, c f,1
+		bes2 bes4 bes'4. a8 g f g2 f4. g8 a4 f \[g2 es\] d4. \ficta e!8 f2 \[bes, c\] f,1
 		\showBarLine \bar "||"
 	}
 	\addlyrics {
@@ -225,12 +225,12 @@ bass = \new Voice {
 		\cadenzaOff \override Stem.transparent = ##f
 		\showBarLine \bar "|" \time 2/2
 		
-		r1 r r2 c, f4. e8 d4 d |
+		r1 r r2 \[c, f4.\] e8 d4 d |
 		c1 r4 c2 c4 c2 f4. f8 d4 d g4. g8 \mark #4 c,4 c2 a4 b4. c8 d2 |
 
-		c2 r4 f2 a2 c4. b8 a g f4 g \mark #5 f4. e8 d4 d c2 f d d1
+		c2 r4 \[f2 a2\] c4. b8 a g f4 g \mark #5 f4. e8 d4 d c2 f d d1
 		g,2 \showBarLine \bar "|"
-		\mark #6 r1 r r c2 c f2. e4 |
+		\mark #6 r1 r r c2 \[c f2.\] e4 |
 		d2 c d4 d2 bes4 f'2. e4 d2 \mark #7 c1 r2 r4 c2 c4 |
 		e2 g4 f e4. e8 cis4 d e4. e8 d2 b c a g \mark #8 r4 g' d2 |
 
@@ -275,19 +275,19 @@ bass = \new Voice {
 		\cadenzaOff \override Stem.transparent = ##f
 		\showBarLine \bar "|" \time 2/2
 		
-		d2 g f1 bes,2. f'4 g d \ficta es c d2 g, |
-		r g' d g c, f2. f4 f2 bes2. bes4 es, \ficta es f g f2 g2.
+		\[d2 g f1\] bes,2. f'4 g d \ficta es c d2 g, |
+		r g' \[d g\] c, f2. f4 f2 bes2. bes4 es, \ficta es f g f2 g2.
 
-		d4 \ficta es2 d1 r2 c d c c g' g a bes4. a8 g4 f |
+		d4 \ficta es2 d1 r2 c \[d c\] c g' \[g a\] bes4. a8 g4 f |
 		g c, g'2 f r4 g d g f d a'2 d, bes2. bes4 f'2 g |
 		f c2. g'4 a g a f g2 d r4 d c2 bes2. bes4 bes2 |
 		bes' f4 g2 f4 g1 c,2 r g'1 c,2 d2. d4 d2 c |
 
 		bes f'2. f4 g bes a2 d, r4 g4 f2. f4 f2 bes2. f4 |
-		g2 c, d bes2. f'4 g f g2 d r4 d g f bes,2 c |
-		d1 g, \showBarLine \bar "|"
-		g'2. g4 es2 c d2. bes4 bes2 f'2. f4 bes,2 |
-		f' g4 f g \ficta es d1 r2 d c2. d4 f g d f \ficta es2 d g, |
+		g2 c, d bes2. f'4 g f g2 d r4 d g f \[bes,2 c |
+		d1\] g, \showBarLine \bar "|"
+		g'2. g4 \[es2 c\] d2. bes4 bes2 f'2. f4 \[bes,2 |
+		f'\] g4 f g \ficta es d1 r2 d c2. d4 f g d f \ficta \[es2 d\] g, |
 		\showBarLine \bar "|"
 	}
 	\addlyrics {
@@ -346,12 +346,12 @@ bass = \new Voice {
 		\set Score.rehearsalMarkFormatter = #format-mark-alphabet
 		g'1 f2. e8 d |
 		c2 g'4. a8 bes4 f g f c \ficta es d2 g,4 \mark #9 g' f \ficta e! d2 g,4 g' g f g bes2
-		a4 g4. f8 | es4 d c2 bes4 g d'2 c \mark #10 r4 f2 e4 f g f2 a4. g8 |
+		a4 g4. f8 | es4 d c2 bes4 g \[d'2 c\] \mark #10 r4 f2 e4 f g f2 a4. g8 |
 		f4 es f2 bes, bes' bes4 g g1 a2. d,4 f2 r g1
 		
-		\ficta es2 | d2. d4 c2 bes2. bes'4 es,2 f4 f g2 \mark #11 c, g'2. g4 es2 |
-		c d2. bes4 bes2 f'2. f4 bes,2 f' g4 f g c, d1 |
-		r2 d c2. d4 f g d f es2 d g,1
+		\ficta es2 | d2. d4 c2 bes2. bes'4 es,2 f4 f g2 \mark #11 c, g'2. g4 \[es2 |
+		c\] d2. bes4 bes2 f'2. f4 \[bes,2 f'\] g4 f g c, d1 |
+		r2 d c2. d4 f g d f \[es2 d\] g,1
 		\showBarLine \bar "||"
 	}
 	\addlyrics {
@@ -384,9 +384,9 @@ bass = \new Voice {
 		\showBarLine\bar "|"
 		\time 2/2
 		
-		r2 a1 d,2 e a, a'2. a4 f f \ficta bes2
+		r2 a1 \[d,2 e\] a, a'2. a4 f f \ficta bes2
 		g2 f4. g8 a4 a d,4. e8 f4 d a'2 d,1 a 
-		d g2 f f2. f4 d d e2 a, d2. d4 a2 e' d1 \fermata 
+		d \[g2 f\] f2. f4 d d e2 a, d2. d4 a2 e' d1 \fermata 
 		f1 bes,2 c d2. d4 e1 a,2
 		\showBarLine \bar "|"
 	}
@@ -449,7 +449,7 @@ bass = \new Voice {
 		c,2 c4 c f1 g4 d c2 c1\fermata g' f2 d2. f4 g2. c,4 c2 \showBarLine \bar "|"
 		
 		\override Stem.transparent = ##t a'4 a a a \override Stem.transparent = ##f \showBarLine\bar "|"
-		f2 f4 f c1 e4 a, d2 c1\fermata e a,2 d2. a4 a'2 f g2. g4 f2 \showBarLine \bar "|"
+		f2 f4 f c1 e4 a, d2 c1\fermata e a,2 d2. a4 \[a'2 f g2.\] g4 f2 \showBarLine \bar "|"
 		
 		\override Stem.transparent = ##t a4 a a a \override Stem.transparent = ##f \showBarLine\bar "|"
 		a2 a4 a f1 g4 d d2 a1\fermata e' a g c,2 c2. c4 f2 f2. f4 g1 e \showBarLine \bar "||"
@@ -500,8 +500,8 @@ bass = \new Voice {
 		\override Stem.transparent = ##f
 		\showBarLine\bar "|"
 		
-		c,2 c4 c f2. f4 c2 c 
-		g'2. e4 f g d2 g,1 |
+		c,2 c4 c f2. f4 c2 \[c 
+		g'2.\] e4 f g d2 g,1 |
 		\showBarLine \bar "|"
 		r1 r r r4 d' f2 d4 e c f2 d4. e8 f g |
 

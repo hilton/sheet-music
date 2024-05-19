@@ -2,7 +2,7 @@
 % Copyright ©2024 Peter Hilton - https://github.com/hilton
 
 \version "2.24.2"
-% \pointAndClickOff
+\pointAndClickOff
 revision = "14"
 
 \paper {
@@ -94,10 +94,10 @@ tenor = \new Voice {
 		\time 2/2
 		\showBarLine\bar "|"
 		
-		r1 r2 f\breve g1 a1 a1 f2 g g \mark \default f a
-		a g a a c4. bes8 a4 g a bes g1 \mark \default f2 a a
+		r1 r2 \[f\breve g1 a1\] a1 f2 g g \mark \default f a
+		a g a a c4. bes8 a4 g a bes g1 \mark \default f2 a \[a
 			 
-		g a bes g f1 r2 a c c c a
+		g\] a bes g f1 r2 \[a c\] c \[c a\]
 		bes a4 g8 f g2 f \fermata
 		\showBarLine\bar "|"
 		
@@ -161,8 +161,8 @@ tenor = \new Voice {
 		\showBarLine\bar "|"		
 		\time 2/2
 		
-		f4. g8 a4 f c'1 c2. c4 c d bes2 c4 d c bes8 c d4 g, a2
-		bes g1 f2 \fermata
+		f4. g8 a4 f c'1 c2. c4 c d bes2 c4 d c bes8 c d4 g, \[a2
+		bes\] g1 f2 \fermata
 		\showBarLine\bar "|"
 
 		\once \override Staff.TimeSignature.stencil = ##f
@@ -172,7 +172,7 @@ tenor = \new Voice {
 		\showBarLine\bar "|"
 		\time 2/2
 		
-		d'1 c2 bes c d g,4 c2 bes4 c2. f,4
+		d'1 \[c2 bes\] \[c d\] g,4 c2 bes4 c2. f,4
 		bes g a2 d2. c4 bes c4. bes8 bes2 a4 bes2 \fermata
 		\showBarLine\bar "|"
 
@@ -184,8 +184,8 @@ tenor = \new Voice {
 		\time 2/2
 		
 		
-		bes1 g2 d' c1 d2. d4 \ficta es d2 c4 d2. bes4 c bes2 a4 \mark #3 bes2 r4 a bes2 g
-		bes bes4. c8 d2. bes4 c2. d4 bes2. g4 a bes2 a4 bes2 g f1
+		bes1 \[g2 d'\] c1 d2. d4 \ficta es d2 c4 d2. bes4 c bes2 a4 \mark #3 bes2 r4 a bes2 g
+		bes bes4. c8 d2. bes4 c2. d4 bes2. g4 a bes2 a4 \[bes2 g\] f1
 		\showBarLine\bar "||"
 
 	}
@@ -225,13 +225,13 @@ tenor = \new Voice {
 		\cadenzaOff \override Stem.transparent = ##f
 		\showBarLine \bar "|" \time 2/2
 		
-		g2 c4. b8 a4 a d2 r4 g,2 c4. b8 a g a4 b |
+		\[g2 c4.\] b8 a4 a d2 r4 \[g,2 c4.\] b8 a g a4 b |
 		c2 r4 c2 c4 c2 c4. c8 a2 a b4. b8 \mark #4 c2 c b a4. b8 |
 
-		c2 f, r4 f2 a c b4 | \mark #5 c2 d4. d8 e4 c2 a4 d4. c8 b4 a8 g |
+		c2 f, r4 \[f2 a\] c b4 | \mark #5 \[c2 d4.\] d8 e4 c2 a4 d4. c8 b4 a8 g |
 		a2 g 
 		\showBarLine \bar "|"
-		\mark #6 r1 r r2 g g c2. b4 a c4.
+		\mark #6 r1 r r2 g \[g c2.\] b4 a c4.
 		b16 a b4 c2 a4. g8 a4 bes a4. \ficta b!8 c4 g d'2 \mark #7 g,4 g2 g4 a2 c1 |
 		b2 b4 a c b a fis g2 a g e4 g4. \ficta fis16 e \ficta fis!4 g2 \mark #8 r4 b a2 |
 
@@ -276,10 +276,10 @@ tenor = \new Voice {
 		\cadenzaOff \override Stem.transparent = ##f
 		\showBarLine \bar "|" \time 2/2
 		
-		a2 bes c1 d2. c4 bes d bes c a2 g |
-		r bes a bes c c2. c4 c2 d2. d4 \ficta es4. d8 c4 bes c2 r4 bes2
+		\[a2 bes c1\] d2. c4 bes d bes c a2 g |
+		r bes \[a bes\] c c2. c4 c2 d2. d4 \ficta es4. d8 c4 bes c2 r4 bes2
 
-		a4 g2 | a1 r2 c a c c bes bes c d4 g,2 a4 |
+		a4 g2 | a1 r2 c \[a c\] c bes \[bes c\] d4 g,2 a4 |
 		bes c2 bes4 c2 r4 bes a bes c d2 c4 d2 r4 d d d2 c bes4 |
 		c2 es2. d4 c d c4. a8 bes2 a r4 a c2 d2. d4 d2 |
 		d2 c4 bes c d4. c8 c2 \ficta b4 c2 | r \ficta b1 c2 a2. a4 a2 c |
@@ -289,8 +289,8 @@ tenor = \new Voice {
 		a g bes4 a2 g1 
 		\showBarLine \bar "|"
 		
-		bes g2 c a r4 bes bes2 bes4 a8 g a2 d2.
-		c4 bes c bes g a1 r2 d2 e2. d4 c bes a f g2 a g |
+		bes \[g2 c\] a r4 bes bes2 bes4 a8 g a2 d2.
+		c4 bes c bes g a1 r2 d2 e2. d4 c bes a f \[g2 a\] g |
 		\showBarLine \bar "|"
 	}
 	\addlyrics {
@@ -347,14 +347,14 @@ tenor = \new Voice {
 tenor = \new Voice {
 	\relative c'' {
 		\set Score.rehearsalMarkFormatter = #format-mark-alphabet
-		bes1 c2. d4 |
+		\[bes1 c2.\] d4 |
 		e2 d2. c4 bes c4. bes8 g4 a2 \mark #9 g4 bes a g a2 g4. f8 d2 r |
 		r r4 g g f g2 bes4 bes4. a8 f4 g2 \mark #10 f r4 c'2 bes4 c d c2 |
 		d4 \ficta es c2 bes r4 d d d d2 es4 d2 c8 bes c4 d c2 r bes1 
 
-		g2 a2. a4 c2 d2. d4 \ficta es2 c4 c4. bes16 a bes4 \mark #11 c2 bes1 g2 |
-		c a r4 bes bes bes2 a8 g a2 d2. c4 bes8 g c4 bes c a1 |
-		r2 d e2. d4 c bes a f g2 a g1
+		g2 a2. a4 c2 d2. d4 \ficta es2 c4 c4. bes16 a bes4 \mark #11 c2 bes1 \[g2 |
+		c\] a r4 bes bes bes2 a8 g a2 d2. c4 bes8 g c4 bes c a1 |
+		r2 d e2. d4 c bes a f \[g2 a\] g1
 		\showBarLine\bar "||"
 	}
 	\addlyrics {
@@ -386,10 +386,10 @@ tenor = \new Voice {
 		\showBarLine\bar "|"
 		\time 2/2
 		
-		a1 c2 d b a c2. c4 c c d2. 
+		a1 \[c2 d\] b a c2. c4 c c d2. 
 		\ficta bes4 c d2 c4 d2 r4 d2 c4 d4. c8 a1.
 		\showBarLine\bar "|"
-		a1 b2 c c2. c4 d d b2 a a2. a4 c2 b d1 \fermata
+		a1 \[b2 c\] c2. c4 d d b2 a a2. a4 c2 b d1 \fermata
 		c1 d2 c a2. f4 g a2 g4 a2 \showBarLine\bar "|"
 	}
 	\addlyrics {
