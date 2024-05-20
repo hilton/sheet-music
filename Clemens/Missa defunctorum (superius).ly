@@ -94,7 +94,7 @@ soprano = \new Voice {
 		f4 e2 e4 f8 g a bes a2 g4 f g4. f8 f2 e8 d e2 \mark \default f4 c'4. bes8 a2 g8 f
 		
 		e4 c'4. bes8 a4 g f2 e4 f a a c bes a a g8 f g2. f4 a g f2.
-		g4. f8 f2 e4 f2 \fermata \showBarLine \bar "|"
+		g4. f8 f2 e4 \cadenzaOn f\longa \cadenzaOff \showBarLine \bar "|"
 		
 		\once \override Staff.TimeSignature.stencil = ##f
 		\override Stem.transparent = ##t
@@ -159,7 +159,7 @@ soprano = \new Voice {
 		\time 2/2
 
 		f1 \[g2 a\] \[a g\] \[a bes\] a2. bes4 a g f a
-		g f2 e8 d e4 e f2 \fermata \showBarLine \bar "|"
+		g f2 e8 d e4 e \cadenzaOn f\longa \cadenzaOff \showBarLine \bar "|"
 		
 		\once \override Staff.TimeSignature.stencil = ##f
 		\override Stem.transparent = ##t 
@@ -169,7 +169,7 @@ soprano = \new Voice {
 		\time 2/2
 		
 		bes1 \[a2 g\] \[a bes\] bes1 a2 g4 f
-		g2 f bes2. a4 g2 f1. \fermata \showBarLine\bar "|"
+		g2 f bes2. a4 g2 \cadenzaOn f1 ~ f\longa \cadenzaOff \showBarLine\bar "|"
 		
 		\once \override Staff.TimeSignature.stencil = ##f
 		\override Stem.transparent = ##t 
@@ -220,8 +220,8 @@ soprano = \new Voice {
 		g,4 g2 g4 g g4. g8 e2 g4 f2. f4 g2 | \mark #4 g e4 a4. g8 g4. f8 f4.
 
 		e16 d e4 f2 | \[f a\] c4. b8 a4 g \mark #5 a2. b4 | c g a8 b c a b4 a4. g8 g2
-		fis4 g2 \showBarLine \bar "|" 
-		\mark #6 g \[g c2.\] b4 | a c4. b16 a b4 c2 r4 g a2. g4
+		fis4 \cadenzaOn g\longa \cadenzaOff \showBarLine \bar "|" 
+		\mark #6 g2 \[g c2.\] b4 | a c4. b16 a b4 c2 r4 g a2. g4
 		f2 e d f f4 a2 g4 | f2 \mark #7 e1. r2 e
 		e4 g2 a2 gis4 a4. a8 g4 g fis4. fis8 g4 g2 e4 | a2 d, \mark #8 r4 g4 f2
 
@@ -275,8 +275,10 @@ soprano = \new Voice {
 
 		bes a2. a4 g f a2 f r4 g a2. a4 a2 bes2. a4 |
 		g2 g f bes2. a4 g a4. g8 g4 f2 r4 f g a bes2 a4 g2
-		\ficta f!8 e \ficta fis2 g1 | \showBarLine \bar "|" r2 g1 g2 \[f d\] f2. f4 f2 bes2.
-		a4 g a4. g8 g2 \ficta fis8 e \ficta fis2 r a c2. bes4 a g f a4. g8 g2 \ficta fis4 g2 \showBarLine \bar "|" |
+		\ficta f!8 e \ficta fis2 \cadenzaOn g\longa \cadenzaOff | \showBarLine \bar "|" 
+		r2 g1 g2 \[f d\] f2. f4 f2 bes2.
+		a4 g a4. g8 g2 \ficta fis8 e \ficta fis2 r a c2. bes4 a g f a4. g8 g2 \ficta fis4
+		\cadenzaOn g\longa \cadenzaOff \showBarLine \bar "|" |
 	}
 	\addlyrics {
 		Do -- mi -- _ ne Je -- su __ _ Chri -- _ _ _ ste __ _
@@ -374,7 +376,7 @@ soprano = \new Voice {
 		\[a2 c2.\] b8 a b4 a2 g4 a1 r4 a2 a4 f f
 		bes2 a2. a4 a2 a a r4 a a d2 c8 b c2 \showBarLine \bar "|"
 		f,1 \[g2 a\] a2. a4 a a g2 e f2. f4 a2 g a1 \fermata
-		a1 bes2 g f2. f4 e1 e2 \showBarLine \bar "|"
+		a1 bes2 g f2. f4 e1 \cadenzaOn e\breve \cadenzaOff \showBarLine \bar "|"
 	}
 	\addlyrics {
 		San -- ctus
@@ -432,13 +434,13 @@ soprano = \new Voice {
 	\relative c'' {
 		\once \override Staff.TimeSignature.stencil = ##f
 		\override Stem.transparent = ##t a4 a a a \override Stem.transparent = ##f \showBarLine\bar "|"
-		g2 g4 g a1 g4 f g2 g1\fermata g a2 a2. a4 g2. g4 g2 \showBarLine \bar "|" \break
+		g2 g4 g a1 g4 f g2 g1\fermata g a2 a2. a4 g2. g4 \cadenzaOn g\longa \cadenzaOff \showBarLine \bar "|" \break
 
 		\override Stem.transparent = ##t a4 a a a \override Stem.transparent = ##f \showBarLine\bar "|"
-		a2 a4 a g1 g4 e f2 g1\fermata g a2 a2. a4 a1 g a2 \showBarLine \bar "|" \break
+		a2 a4 a g1 g4 e f2 g1\fermata g a2 a2. a4 a1 g \cadenzaOn a\longa \cadenzaOff \showBarLine \bar "|" \break
 		
 		\override Stem.transparent = ##t a4 a a a \override Stem.transparent = ##f \showBarLine\bar "|"
-		a2 a4 a a1 g4 f a2 a1\fermata g a b g2 g2. g4 a2 a2. a4 g1 g \showBarLine \bar "||"
+		a2 a4 a a1 g4 f a2 a1\fermata g a b g2 g2. g4 a2 a2. a4 g1 \cadenzaOn g\longa \cadenzaOff \showBarLine \bar "||"
 	}
 	\addlyrics {
 		A -- gnus De -- i
@@ -485,11 +487,11 @@ soprano = \new Voice {
 		\showBarLine\bar "|"
 		
 		c2 c4 c c2. c4 c2 c |
-		b4. a8 b4 c a g2 \ficta fis4 g1 | \showBarLine \bar "|"
+		b4. a8 b4 c a g2 \ficta fis4 \cadenzaOn g\longa \cadenzaOff | \showBarLine \bar "|"
 		r2 a c b4 c a g4. f8 g4 | a b2 a g4 a1 r4 a2
 		
 		a4 g2 g1 \mark #13 r4 e f g a g2 f4 g2 r8 e f4 g a2 g
-		\ficta fis4 g d e \ficta f! g2 f4 \ficta bes a g2 \ficta fis4 g2 ~ g\breve |
+		\ficta fis4 g d e \ficta f! g2 f4 \ficta bes a g2 \ficta fis4 g1. ~ \cadenzaOn g\longa \cadenzaOff
 		\showBarLine\bar "|"
 		\cadenzaOn \override Stem.transparent = ##t
 		s8 g8 a a g s  a s  a g g-- s \showBarLine \bar "|"

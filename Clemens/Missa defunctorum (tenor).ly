@@ -98,7 +98,7 @@ tenor = \new Voice {
 		a g a a c4. bes8 a4 g a bes g1 \mark \default f2 a \[a
 			 
 		g\] a bes g f1 r2 \[a c\] c \[c a\]
-		bes a4 g8 f g2 f \fermata
+		bes a4 g8 f g2 \cadenzaOn f\longa \cadenzaOff 
 		\showBarLine\bar "|"
 		
 		\once \override Staff.TimeSignature.stencil = ##f
@@ -162,7 +162,7 @@ tenor = \new Voice {
 		\time 2/2
 		
 		f4. g8 a4 f c'1 c2. c4 c d bes2 c4 d c bes8 c d4 g, \[a2
-		bes\] g1 f2 \fermata
+		bes\] g1 \cadenzaOn f\longa \cadenzaOff 
 		\showBarLine\bar "|"
 
 		\once \override Staff.TimeSignature.stencil = ##f
@@ -173,7 +173,7 @@ tenor = \new Voice {
 		\time 2/2
 		
 		d'1 \[c2 bes\] \[c d\] g,4 c2 bes4 c2. f,4
-		bes g a2 d2. c4 bes c4. bes8 bes2 a4 bes2 \fermata
+		bes g a2 d2. c4 bes c4. bes8 bes2 a4 \cadenzaOn bes\longa \cadenzaOff
 		\showBarLine\bar "|"
 
 		\once \override Staff.TimeSignature.stencil = ##f
@@ -229,7 +229,7 @@ tenor = \new Voice {
 		c2 r4 c2 c4 c2 c4. c8 a2 a b4. b8 \mark #4 c2 c b a4. b8 |
 
 		c2 f, r4 \[f2 a\] c b4 | \mark #5 \[c2 d4.\] d8 e4 c2 a4 d4. c8 b4 a8 g |
-		a2 g 
+		a2 \cadenzaOn g\longa \cadenzaOff 
 		\showBarLine \bar "|"
 		\mark #6 r1 r r2 g \[g c2.\] b4 a c4.
 		b16 a b4 c2 a4. g8 a4 bes a4. \ficta b!8 c4 g d'2 \mark #7 g,4 g2 g4 a2 c1 |
@@ -286,11 +286,11 @@ tenor = \new Voice {
 
 		d c2. a4 bes d4. c16 bes c4 a2 r4 bes c2. c4 c2 d2. c4 |
 		bes2 c a d2. c4 bes c bes2 a r4 a bes c d2 c4. bes8 |
-		a g bes4 a2 g1 
+		a g bes4 a2 \cadenzaOn g\longa \cadenzaOff 
 		\showBarLine \bar "|"
 		
-		bes \[g2 c\] a r4 bes bes2 bes4 a8 g a2 d2.
-		c4 bes c bes g a1 r2 d2 e2. d4 c bes a f \[g2 a\] g |
+		bes1 \[g2 c\] a r4 bes bes2 bes4 a8 g a2 d2.
+		c4 bes c bes g a1 r2 d2 e2. d4 c bes a f \[g2 a\] \cadenzaOn g\longa \cadenzaOff 
 		\showBarLine \bar "|"
 	}
 	\addlyrics {
@@ -390,7 +390,7 @@ tenor = \new Voice {
 		\ficta bes4 c d2 c4 d2 r4 d2 c4 d4. c8 a1.
 		\showBarLine\bar "|"
 		a1 \[b2 c\] c2. c4 d d b2 a a2. a4 c2 b d1 \fermata
-		c1 d2 c a2. f4 g a2 g4 a2 \showBarLine\bar "|"
+		c1 d2 c a2. f4 g a2 g4 \cadenzaOn a\breve \cadenzaOff \showBarLine\bar "|"
 	}
 	\addlyrics {
 		San -- ctus
@@ -441,6 +441,8 @@ tenor = \new Voice {
 	}
 }
 
+\pageBreak
+
 % AGNUS DEI
 
 tenor = \new Voice {
@@ -448,13 +450,13 @@ tenor = \new Voice {
 		\clef "treble_8"
 		\once \override Staff.TimeSignature.stencil = ##f
 		\override Stem.transparent = ##t a4 a a a \override Stem.transparent = ##f \showBarLine\bar "|"
-		c2 c4 c c1 b4 a c2 c1\fermata b c2 d2. c4 c b8 a b4 c4 c2 \showBarLine\bar "|"
+		c2 c4 c c1 b4 a c2 c1\fermata b c2 d2. c4 c b8 a b4 c4 \cadenzaOn c\longa \cadenzaOff \showBarLine\bar "|" \break
 		
 		\override Stem.transparent = ##t a4 a a a \override Stem.transparent = ##f \showBarLine\bar "|"
-		c2 c4 c c1 b4 a a2 c1\fermata b c2 d2. c4 c2. b8 a b4 c2 b4 c2 \showBarLine\bar "|"
+		c2 c4 c c1 b4 a a2 c1\fermata b c2 d2. c4 c2. b8 a b4 c2 b4 \cadenzaOn c\longa \cadenzaOff \showBarLine\bar "|" \break
 		
 		\override Stem.transparent = ##t a4 a a a \override Stem.transparent = ##f \showBarLine\bar "|"
-		c2 c4 c c1 b4 a d2 c1\fermata b c d c2 c2. c4 c2 c2. c4 c b8 a b2 b1  \showBarLine\bar "||"
+		c2 c4 c c1 b4 a d2 c1\fermata b c d c2 c2. c4 c2 c2. c4 c b8 a b2 \cadenzaOn b\longa \cadenzaOff  \showBarLine\bar "||"
 	}
 	\addlyrics {
 		A -- gnus De -- i
@@ -503,11 +505,11 @@ tenor = \new Voice {
 		\showBarLine\bar "|"
 		
 		e2 e4 e a,2. a4 e'2 e2. 
-		d8 c d4 c2 b4 a2 g1 |
+		d8 c d4 c2 b4 a2 \cadenzaOn g\longa \cadenzaOff |
 		r1 r2 r4 a c b c2 a4 d4. c8 a4 b2 a | r4 a d c2
 
 		d4 b c g c2 b4 \mark #13 c4. b8 a4 g r b c4. d8 e4 d g,8 c4 b8 c4 e, f g |
-		a a g g2 a4 b c a d, f g a2 g2 ~ g\breve |
+		a a g g2 a4 b c a d, f g a2 g1. ~ \cadenzaOn g\longa \cadenzaOff
 		\showBarLine\bar "|"
 		
 		\cadenzaOn \override Stem.transparent = ##t

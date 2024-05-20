@@ -101,7 +101,7 @@ bass = \new Voice {
 		f2 c r4 f2 f4 f c d e f bes, c1 \mark \default f,2 r4 f' \[f2
 			
 		c\] f bes, c d4 f f a g f2 e8 d c4. d8 e4 f4. e8 c4 \[d2 
-		bes\] c4 d c2 f, \fermata
+		bes\] c4 d c2 \cadenzaOn f,\longa \cadenzaOff
 		\showBarLine \bar "|"
 
 		\once \override Staff.TimeSignature.stencil = ##f
@@ -163,7 +163,7 @@ bass = \new Voice {
 		\time 2/2
 		
 		f1 \[c2 f\] \[f c\] \[f g\] f4 d f g d e \[f2
-		bes, c1\] f,2 \fermata
+		bes, c1\] \cadenzaOn f,\longa \cadenzaOff 
 		\showBarLine \bar "|"
 
 		\once \override Staff.TimeSignature.stencil = ##f
@@ -174,7 +174,7 @@ bass = \new Voice {
 		\time 2/2
 		
 		bes,1 \[f'2 g\] f bes,4 bes'2 a4 g2 f4. e8 c4 d
-		\ficta es2 d \[bes f'\] g4 c, d4. e8 f2 bes, \fermata
+		\ficta es2 d \[bes f'\] g4 c, d4. e8 f2 \cadenzaOn bes,\longa \cadenzaOff
 		\showBarLine \bar "|"
 
 		\once \override Staff.TimeSignature.stencil = ##f
@@ -229,7 +229,7 @@ bass = \new Voice {
 		c1 r4 c2 c4 c2 f4. f8 d4 d g4. g8 \mark #4 c,4 c2 a4 b4. c8 d2 |
 
 		c2 r4 \[f2 a2\] c4. b8 a g f4 g \mark #5 f4. e8 d4 d c2 f d d1
-		g,2 \showBarLine \bar "|"
+		\cadenzaOn g,\longa \cadenzaOff \showBarLine \bar "|"
 		\mark #6 r1 r r c2 \[c f2.\] e4 |
 		d2 c d4 d2 bes4 f'2. e4 d2 \mark #7 c1 r2 r4 c2 c4 |
 		e2 g4 f e4. e8 cis4 d e4. e8 d2 b c a g \mark #8 r4 g' d2 |
@@ -285,9 +285,9 @@ bass = \new Voice {
 
 		bes f'2. f4 g bes a2 d, r4 g4 f2. f4 f2 bes2. f4 |
 		g2 c, d bes2. f'4 g f g2 d r4 d g f \[bes,2 c |
-		d1\] g, \showBarLine \bar "|"
+		d1\] \cadenzaOn g,\longa \cadenzaOff \showBarLine \bar "|"
 		g'2. g4 \[es2 c\] d2. bes4 bes2 f'2. f4 \[bes,2 |
-		f'\] g4 f g \ficta es d1 r2 d c2. d4 f g d f \ficta \[es2 d\] g, |
+		f'\] g4 f g \ficta es d1 r2 d c2. d4 f g d f \ficta \[es2 d\] \cadenzaOn g,\longa \cadenzaOff 
 		\showBarLine \bar "|"
 	}
 	\addlyrics {
@@ -387,7 +387,7 @@ bass = \new Voice {
 		r2 a1 \[d,2 e\] a, a'2. a4 f f \ficta bes2
 		g2 f4. g8 a4 a d,4. e8 f4 d a'2 d,1 a 
 		d \[g2 f\] f2. f4 d d e2 a, d2. d4 a2 e' d1 \fermata 
-		f1 bes,2 c d2. d4 e1 a,2
+		f1 bes,2 c d2. d4 e1 \cadenzaOn a,\breve \cadenzaOff 
 		\showBarLine \bar "|"
 	}
 	\addlyrics {
@@ -439,6 +439,8 @@ bass = \new Voice {
 	}
 }
 
+\pageBreak
+
 % AGNUS DEI
 
 bass = \new Voice {
@@ -446,13 +448,13 @@ bass = \new Voice {
 		\clef "bass"
 		\once \override Staff.TimeSignature.stencil = ##f
 		\override Stem.transparent = ##t a4 a a a \override Stem.transparent = ##f \showBarLine\bar "|"
-		c,2 c4 c f1 g4 d c2 c1\fermata g' f2 d2. f4 g2. c,4 c2 \showBarLine \bar "|"
+		c,2 c4 c f1 g4 d c2 c1\fermata g' f2 d2. f4 g2. c,4 \cadenzaOn c\longa \cadenzaOff \showBarLine \bar "|" \break
 		
 		\override Stem.transparent = ##t a'4 a a a \override Stem.transparent = ##f \showBarLine\bar "|"
-		f2 f4 f c1 e4 a, d2 c1\fermata e a,2 d2. a4 \[a'2 f g2.\] g4 f2 \showBarLine \bar "|"
+		f2 f4 f c1 e4 a, d2 c1\fermata e a,2 d2. a4 \[a'2 f g2.\] g4 \cadenzaOn f\longa \cadenzaOff \showBarLine \bar "|" \break
 		
 		\override Stem.transparent = ##t a4 a a a \override Stem.transparent = ##f \showBarLine\bar "|"
-		a2 a4 a f1 g4 d d2 a1\fermata e' a g c,2 c2. c4 f2 f2. f4 g1 e \showBarLine \bar "||"
+		a2 a4 a f1 g4 d d2 a1\fermata e' a g c,2 c2. c4 f2 f2. f4 g1 \cadenzaOn e\longa \cadenzaOff \showBarLine \bar "||"
 	}
 	\addlyrics {
 		A -- gnus De -- i
@@ -501,12 +503,12 @@ bass = \new Voice {
 		\showBarLine\bar "|"
 		
 		c,2 c4 c f2. f4 c2 \[c 
-		g'2.\] e4 f g d2 g,1 |
+		g'2.\] e4 f g d2 \cadenzaOn g,\longa \cadenzaOff |
 		\showBarLine \bar "|"
 		r1 r r r4 d' f2 d4 e c f2 d4. e8 f g |
 
 		a4 f g c, e4. f8 g2 \mark #13 c, r4 e f g a2 g4. f8 e4 d c c d g, |
-		d'2 r4 g e d g c, d2. g,4 d'2 r4 g, c b c2 g1 |
+		d'2 r4 g e d g c, d2. g,4 d'2 r4 g, c b c2 \cadenzaOn g\longa \cadenzaOff
 		\showBarLine \bar "|"
 		
 		\cadenzaOn \override Stem.transparent = ##t
