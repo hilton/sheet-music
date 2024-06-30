@@ -2,8 +2,7 @@
 % Copyright ©2024 Peter Hilton - https://github.com/hilton
 
 \version "2.24.2"
-\pointAndClickOff
-revision = "14"
+revision = "15"
 
 \paper {
 	#(define fonts (set-global-fonts #:sans "Source Sans Pro"))
@@ -98,7 +97,7 @@ tenor = \new Voice {
 		a g a a c4. bes8 a4 g a bes g1 \mark \default f2 a \[a
 			 
 		g\] a bes g f1 r2 \[a c\] c \[c a\]
-		bes a4 g8 f g2 \cadenzaOn f\longa \cadenzaOff 
+		bes a4 g8 f g2 \cadenzaOn f\breve \cadenzaOff 
 		\showBarLine\bar "|"
 		
 		\once \override Staff.TimeSignature.stencil = ##f
@@ -162,7 +161,7 @@ tenor = \new Voice {
 		\time 2/2
 		
 		f4. g8 a4 f c'1 c2. c4 c d bes2 c4 d c bes8 c d4 g, \[a2
-		bes\] g1 \cadenzaOn f\longa \cadenzaOff 
+		bes\] g1 \cadenzaOn f\breve \cadenzaOff 
 		\showBarLine\bar "|"
 
 		\once \override Staff.TimeSignature.stencil = ##f
@@ -173,7 +172,7 @@ tenor = \new Voice {
 		\time 2/2
 		
 		d'1 \[c2 bes\] \[c d\] g,4 c2 bes4 c2. f,4
-		bes g a2 d2. c4 bes c4. bes8 bes2 a4 \cadenzaOn bes\longa \cadenzaOff
+		bes g a2 d2. c4 bes c4. bes8 bes2 a4 \cadenzaOn bes\breve \cadenzaOff
 		\showBarLine\bar "|"
 
 		\once \override Staff.TimeSignature.stencil = ##f
@@ -191,14 +190,14 @@ tenor = \new Voice {
 	}
 	\addlyrics {
 		Ky -- _ _ _ ri -- e __ _ e -- _ _ _ _ le -- i -- son,
-		Ky -- _ _ ri -- e, Ky -- ri -- e e -- lei -- _ _ _ _ _ _ _ _ _ _ son.
+		Ky -- _ _ ri -- e, [Ky -- ri -- e] e -- lei -- _ _ _ _ _ _ _ _ _ _ son.
 		
 		Chri -- _ _ _ _ ste __ _ e -- _ _ _ _ le -- i -- son,
 		Chri -- _ _ ste __ _ e -- lei -- _ son, e -- lei -- _ son, e -- _ lei -- _ _ _ _ son.
 
 		Ky -- _ _ _ ri -- e __ _ e -- _ _ _ _ le -- i -- son,
-		Ky -- ri -- _ _ 	e e -- lei -- _ _ son, e -- lei -- _ _ son, 
-		e -- lei -- _ son e -- _ lei -- _ son, e -- lei -- _ _ _ _ _ _ son.
+		Ky -- ri -- _ _ 	e [e -- lei -- _ _ son], e -- lei -- _ _ son, 
+		e -- lei -- _ son [e -- _ lei -- _ son], e -- lei -- _ _ _ _ _ _ son.
 	}
 }
 
@@ -229,7 +228,7 @@ tenor = \new Voice {
 		c2 r4 c2 c4 c2 c4. c8 a2 a b4. b8 \mark #4 c2 c b a4. b8 |
 
 		c2 f, r4 \[f2 a\] c b4 | \mark #5 \[c2 d4.\] d8 e4 c2 a4 d4. c8 b4 a8 g |
-		a2 \cadenzaOn g\longa \cadenzaOff 
+		a2 \cadenzaOn g\breve \cadenzaOff 
 		\showBarLine \bar "|"
 		\mark #6 r1 r r2 g \[g c2.\] b4 a c4.
 		b16 a b4 c2 a4. g8 a4 bes a4. \ficta b!8 c4 g d'2 \mark #7 g,4 g2 g4 a2 c1 |
@@ -286,11 +285,11 @@ tenor = \new Voice {
 
 		d c2. a4 bes d4. c16 bes c4 a2 r4 bes c2. c4 c2 d2. c4 |
 		bes2 c a d2. c4 bes c bes2 a r4 a bes c d2 c4. bes8 |
-		a g bes4 a2 \cadenzaOn g\longa \cadenzaOff 
+		a g bes4 a2 \cadenzaOn g\breve \cadenzaOff 
 		\showBarLine \bar "|"
 		
 		bes1 \[g2 c\] a r4 bes bes2 bes4 a8 g a2 d2.
-		c4 bes c bes g a1 r2 d2 e2. d4 c bes a f \[g2 a\] \cadenzaOn g\longa \cadenzaOff 
+		c4 bes c bes g a1 r2 d2 e2. d4 c bes a f \[g2 a\] \cadenzaOn g\breve \cadenzaOff 
 		\showBarLine \bar "|"
 	}
 	\addlyrics {
@@ -495,7 +494,7 @@ tenor = \new Voice {
 		g4 a2 r2 r4 a | c b c2 a4 \mark #11 d4. c8 a4 | b2 a r4 a d c2
 		d4 b c | g c2 b4 c4. b8 a4 g r b c4. d8 e4 d g,8 c4 b8 c4 e, f g |
 
-		a a g \mark #12 g2 a4 b c a r8 d, f4 g a2 g2 ~ g\breve
+		a a g \mark #12 g2 a4 b c a r8 d, f4 g a2 \cadenzaOn g\longa \cadenzaOff
 		\showBarLine\bar "|"
 		
 		\once \override Staff.TimeSignature.stencil = ##f
@@ -505,11 +504,11 @@ tenor = \new Voice {
 		\showBarLine\bar "|"
 		
 		e2 e4 e a,2. a4 e'2 e2. 
-		d8 c d4 c2 b4 a2 \cadenzaOn g\longa \cadenzaOff |
+		d8 c d4 c2 b4 a2 \cadenzaOn g\breve \cadenzaOff |
 		r1 r2 r4 a c b c2 a4 d4. c8 a4 b2 a | r4 a d c2
 
 		d4 b c g c2 b4 \mark #13 c4. b8 a4 g r b c4. d8 e4 d g,8 c4 b8 c4 e, f g |
-		a a g g2 a4 b c a d, f g a2 g1. ~ \cadenzaOn g\longa \cadenzaOff
+		a a g g2 a4 b c a d, f g a2 \cadenzaOn g\longa \cadenzaOff
 		\showBarLine\bar "|"
 		
 		\cadenzaOn \override Stem.transparent = ##t

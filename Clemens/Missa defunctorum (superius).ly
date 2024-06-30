@@ -2,8 +2,7 @@
 % Copyright ©2024 Peter Hilton - https://github.com/hilton
 
 \version "2.24.2"
-\pointAndClickOff
-revision = "14"
+revision = "15"
 
 \paper {
 	#(define fonts (set-global-fonts #:sans "Source Sans Pro"))
@@ -94,7 +93,7 @@ soprano = \new Voice {
 		f4 e2 e4 f8 g a bes a2 g4 f g4. f8 f2 e8 d e2 \mark \default f4 c'4. bes8 a2 g8 f
 		
 		e4 c'4. bes8 a4 g f2 e4 f a a c bes a a g8 f g2. f4 a g f2.
-		g4. f8 f2 e4 \cadenzaOn f\longa \cadenzaOff \showBarLine \bar "|"
+		g4. f8 f2 e4 \cadenzaOn f\breve \cadenzaOff \showBarLine \bar "|"
 		
 		\once \override Staff.TimeSignature.stencil = ##f
 		\override Stem.transparent = ##t
@@ -159,7 +158,7 @@ soprano = \new Voice {
 		\time 2/2
 
 		f1 \[g2 a\] \[a g\] \[a bes\] a2. bes4 a g f a
-		g f2 e8 d e4 e \cadenzaOn f\longa \cadenzaOff \showBarLine \bar "|"
+		g f2 e8 d e4 e \cadenzaOn f\breve \cadenzaOff \showBarLine \bar "|"
 		
 		\once \override Staff.TimeSignature.stencil = ##f
 		\override Stem.transparent = ##t 
@@ -169,7 +168,7 @@ soprano = \new Voice {
 		\time 2/2
 		
 		bes1 \[a2 g\] \[a bes\] bes1 a2 g4 f
-		g2 f bes2. a4 g2 \cadenzaOn f1 ~ f\longa \cadenzaOff \showBarLine\bar "|"
+		g2 f bes2. a4 g2 \cadenzaOn f\longa \cadenzaOff \showBarLine\bar "|"
 		
 		\once \override Staff.TimeSignature.stencil = ##f
 		\override Stem.transparent = ##t 
@@ -189,7 +188,7 @@ soprano = \new Voice {
 		Chri --  _ _ _ _ ste e -- _ _ lei -- son, e -- _ lei -- son.
 		
 		Ky -- _ _ _ ri -- e __ _ e -- _ _ _ _ le -- i -- son,
-		Ky -- ri -- _ e, __ _ Ky -- _ ri -- e e -- _ le -- _ i -- son, 
+		Ky -- ri -- _ e, __ _ [Ky -- _ ri -- e] e -- _ le -- _ i -- son, 
 		Ky -- _ ri -- e e -- le -- _ _ _ i -- son.
 	}
 }
@@ -220,13 +219,13 @@ soprano = \new Voice {
 		g,4 g2 g4 g g4. g8 e2 g4 f2. f4 g2 | \mark #4 g e4 a4. g8 g4. f8 f4.
 
 		e16 d e4 f2 | \[f a\] c4. b8 a4 g \mark #5 a2. b4 | c g a8 b c a b4 a4. g8 g2
-		fis4 \cadenzaOn g\longa \cadenzaOff \showBarLine \bar "|" 
+		fis4 \cadenzaOn g\breve \cadenzaOff \showBarLine \bar "|" 
 		\mark #6 g2 \[g c2.\] b4 | a c4. b16 a b4 c2 r4 g a2. g4
 		f2 e d f f4 a2 g4 | f2 \mark #7 e1. r2 e
 		e4 g2 a2 gis4 a4. a8 g4 g fis4. fis8 g4 g2 e4 | a2 d, \mark #8 r4 g4 f2
 
 		e4 e g1 a2. c2 g2 b2 d4. d8 a2 c4. b8 a4. g8 g2 
-		fis4 g2 ~ g\breve \showBarLine \bar "||"
+		fis4 \cadenzaOn g\longa \cadenzaOff \showBarLine \bar "||"
 
 	}
 	\addlyrics {
@@ -275,10 +274,10 @@ soprano = \new Voice {
 
 		bes a2. a4 g f a2 f r4 g a2. a4 a2 bes2. a4 |
 		g2 g f bes2. a4 g a4. g8 g4 f2 r4 f g a bes2 a4 g2
-		\ficta f!8 e \ficta fis2 \cadenzaOn g\longa \cadenzaOff | \showBarLine \bar "|" 
+		\ficta f!8 e \ficta fis2 \cadenzaOn g\breve \cadenzaOff | \showBarLine \bar "|" 
 		r2 g1 g2 \[f d\] f2. f4 f2 bes2.
 		a4 g a4. g8 g2 \ficta fis8 e \ficta fis2 r a c2. bes4 a g f a4. g8 g2 \ficta fis4
-		\cadenzaOn g\longa \cadenzaOff \showBarLine \bar "|" |
+		\cadenzaOn g\breve \cadenzaOff \showBarLine \bar "|" |
 	}
 	\addlyrics {
 		Do -- mi -- _ ne Je -- su __ _ Chri -- _ _ _ ste __ _
@@ -478,7 +477,7 @@ soprano = \new Voice {
 		e8 d c4 a' | c2 b4 c a g4. f8 g4 a \mark #11 b2 a g4 a1 r4 a2
 		a4 g2 | g1 r4 e f g a g2 f4 g2 r8 e f4 g a2 g2
 		
-		\ficta fis4 g \mark #12 d | e f g2 f8 e f g a4 g2 \ficta fis4 g2 ~ g\breve | \showBarLine \bar "|" | 
+		\ficta fis4 g \mark #12 d | e f g2 f8 e f g a4 g2 \ficta fis4 \cadenzaOn g\longa \cadenzaOff | \showBarLine \bar "|" | 
 
 		\once \override Staff.TimeSignature.stencil = ##f
 		\override Stem.transparent = ##t 
@@ -487,11 +486,11 @@ soprano = \new Voice {
 		\showBarLine\bar "|"
 		
 		c2 c4 c c2. c4 c2 c |
-		b4. a8 b4 c a g2 \ficta fis4 \cadenzaOn g\longa \cadenzaOff | \showBarLine \bar "|"
+		b4. a8 b4 c a g2 \ficta fis4 \cadenzaOn g\breve \cadenzaOff | \showBarLine \bar "|"
 		r2 a c b4 c a g4. f8 g4 | a b2 a g4 a1 r4 a2
 		
 		a4 g2 g1 \mark #13 r4 e f g a g2 f4 g2 r8 e f4 g a2 g
-		\ficta fis4 g d e \ficta f! g2 f4 \ficta bes a g2 \ficta fis4 g1. ~ \cadenzaOn g\longa \cadenzaOff
+		\ficta fis4 g d e \ficta f! g2 f4 \ficta bes a g2 \ficta fis4 \cadenzaOn g\longa \cadenzaOff
 		\showBarLine\bar "|"
 		\cadenzaOn \override Stem.transparent = ##t
 		s8 g8 a a g s  a s  a g g-- s \showBarLine \bar "|"
@@ -500,8 +499,8 @@ soprano = \new Voice {
 	}
 	\addlyrics {
 		Lux æ -- _ ter -- _ na __ _ 
-		Lu -- ce -- at e -- is Do -- _ _ mi -- ne, Do -- _
-		mi -- _ ne cum san -- ctis tu -- is in __ _ _ æ -- ter -- _ _ num, in
+		Lu -- ce -- at e -- is Do -- _ _ mi -- ne, [Do -- _
+		mi -- _ ne] cum san -- ctis tu -- is in __ _ _ æ -- ter -- _ _ num, in
 		æ -- ter -- num,
 		qui -- a pi -- us __ _ _ es, qui -- a pi -- us __ _ _ es, 
 		qui -- a pi -- us __ _ _ _ _ _ _ _ es.

@@ -2,8 +2,7 @@
 % Copyright ©2024 Peter Hilton - https://github.com/hilton
 
 \version "2.24.2"
-\pointAndClickOff
-revision = "14"
+revision = "15"
 
 \paper {
 	#(define fonts (set-global-fonts #:sans "Source Sans Pro"))
@@ -101,7 +100,7 @@ alto = \new Voice {
 		r4 c2 c4 c2 f,4 f'2 e4 d c4. a8 d4 c1 \mark \default r4 f \[f2 c2.\]
 			
 		e4 f c \[d2 c\] a \[c d\] c4 d e2. c4 f e d1
-		c4 bes c2 \cadenzaOn a\longa \cadenzaOff
+		c4 bes c2 \cadenzaOn a\breve \cadenzaOff
 		\showBarLine \bar "|"
 
 		\once \override Staff.TimeSignature.stencil = ##f
@@ -163,7 +162,7 @@ alto = \new Voice {
 		\time 2/2
 		
 		c1 \[e2 f\] \[f e\] f d4 e f2. d4 f e c2
-		d c1 \cadenzaOn c\longa \cadenzaOff
+		d c1 \cadenzaOn c\breve \cadenzaOff
 		\showBarLine \bar "|"
 
 		\once \override Staff.TimeSignature.stencil = ##f
@@ -174,7 +173,7 @@ alto = \new Voice {
 		\time 2/2
 
 		f1 \[f2 d\] f1 g4 f2 e4 f2 e4 d2 
-		c4 d2 f1 d4 e \[d2 c\] \cadenzaOn d\longa \cadenzaOff 
+		c4 d2 f1 d4 e \[d2 c\] \cadenzaOn d\breve \cadenzaOff 
 		\showBarLine \bar "|"
 
 		\once \override Staff.TimeSignature.stencil = ##f
@@ -227,7 +226,7 @@ alto = \new Voice {
 		r1 \[c,2 f4.\] e8 d4 d e2 f f4 f4. 
 		e16 d e4 e4. e8 e4 e2 g4. f8 e d c4 c d1 \mark #4 e4. f8 g4 f d2 d |
 
-		\[g, a\] c c4. d8 e2 f4 d \mark #5 f1 g4 e f1 \cadenzaOn d1 ~ d\longa \cadenzaOff 
+		\[g, a\] c c4. d8 e2 f4 d \mark #5 f1 g4 e f1 \cadenzaOn d1 ~ d\breve \cadenzaOff 
 		\showBarLine \bar "|"
 		\mark #6 r2 c \[c f2.\] e4 d2 e1 f4. e16 d c4 g |
 		d'2 r4 g2 f8 e d4 d c4. c8 a b c2 b4 \mark #7 c2 | r4 c2 c4 e2 g4 g4.
@@ -283,8 +282,8 @@ alto = \new Voice {
 
 		f f2. f4 d d e2 d r4 d f2. f4 f2 f2. f4 |
 		d2 e d f2. f4 d4 f d2 d r4 d d f \[f2 e\] |
-		d1 \cadenzaOn d\longa \cadenzaOff \showBarLine \bar "|" d1 es d2 f2. d4 c1 f2. 
-		f4 d f | \ficta es8 d4 c8 d1 r2 f2 g2. f4 f d4. c8 a4 bes c d2 \cadenzaOn d\longa \cadenzaOff 
+		d1 \cadenzaOn d\breve \cadenzaOff \showBarLine \bar "|" d1 es d2 f2. d4 c1 f2. 
+		f4 d f | \ficta es8 d4 c8 d1 r2 f2 g2. f4 f d4. c8 a4 bes c d2 \cadenzaOn d\breve \cadenzaOff 
 		\showBarLine \bar "|"
 	}
 	\addlyrics {
@@ -493,11 +492,11 @@ alto = \new Voice {
 		\showBarLine\bar "|"
 		
 		g2 g4 g f2. f4 g2 g2.
-		g4 g2 f4 d \cadenzaOn d2 ~ d\longa \cadenzaOff |
+		g4 g2 f4 d \cadenzaOn d2 ~ d\breve \cadenzaOff |
 		d2 f e4 f d e4. c8 d4 e2. f4. e8 c4 f e4. d8 c b a4 d f2 |
 
 		e4 f d e2 e4 d2 \mark #13 e \times 2/3 { c4 d e } a, e'2 d8 c b4 b c d e2 d1
-		r4 b | c d e2 d1. r4 b c d e2 \cadenzaOn d\longa \cadenzaOff | \showBarLine \bar "|"
+		r4 b | c d e2 d1. r4 b c d e2 \cadenzaOn d\breve \cadenzaOff | \showBarLine \bar "|"
 
 		\cadenzaOn \override Stem.transparent = ##t
 		s8 g8 a a g s  a s  a g g-- s \showBarLine \bar "|"

@@ -2,8 +2,7 @@
 % Copyright ©2024 Peter Hilton - https://github.com/hilton
 
 \version "2.24.2"
-\pointAndClickOff
-revision = "14"
+revision = "15"
 
 \paper {
 	#(define fonts (set-global-fonts #:sans "Source Sans Pro"))
@@ -101,7 +100,7 @@ bass = \new Voice {
 		f2 c r4 f2 f4 f c d e f bes, c1 \mark \default f,2 r4 f' \[f2
 			
 		c\] f bes, c d4 f f a g f2 e8 d c4. d8 e4 f4. e8 c4 \[d2 
-		bes\] c4 d c2 \cadenzaOn f,\longa \cadenzaOff
+		bes\] c4 d c2 \cadenzaOn f,\breve \cadenzaOff
 		\showBarLine \bar "|"
 
 		\once \override Staff.TimeSignature.stencil = ##f
@@ -163,7 +162,7 @@ bass = \new Voice {
 		\time 2/2
 		
 		f1 \[c2 f\] \[f c\] \[f g\] f4 d f g d e \[f2
-		bes, c1\] \cadenzaOn f,\longa \cadenzaOff 
+		bes, c1\] \cadenzaOn f,\breve \cadenzaOff 
 		\showBarLine \bar "|"
 
 		\once \override Staff.TimeSignature.stencil = ##f
@@ -174,7 +173,7 @@ bass = \new Voice {
 		\time 2/2
 		
 		bes,1 \[f'2 g\] f bes,4 bes'2 a4 g2 f4. e8 c4 d
-		\ficta es2 d \[bes f'\] g4 c, d4. e8 f2 \cadenzaOn bes,\longa \cadenzaOff
+		\ficta es2 d \[bes f'\] g4 c, d4. e8 f2 \cadenzaOn bes,\breve \cadenzaOff
 		\showBarLine \bar "|"
 
 		\once \override Staff.TimeSignature.stencil = ##f
@@ -229,7 +228,7 @@ bass = \new Voice {
 		c1 r4 c2 c4 c2 f4. f8 d4 d g4. g8 \mark #4 c,4 c2 a4 b4. c8 d2 |
 
 		c2 r4 \[f2 a2\] c4. b8 a g f4 g \mark #5 f4. e8 d4 d c2 f d d1
-		\cadenzaOn g,\longa \cadenzaOff \showBarLine \bar "|"
+		\cadenzaOn g,\breve \cadenzaOff \showBarLine \bar "|"
 		\mark #6 r1 r r c2 \[c f2.\] e4 |
 		d2 c d4 d2 bes4 f'2. e4 d2 \mark #7 c1 r2 r4 c2 c4 |
 		e2 g4 f e4. e8 cis4 d e4. e8 d2 b c a g \mark #8 r4 g' d2 |
@@ -285,9 +284,9 @@ bass = \new Voice {
 
 		bes f'2. f4 g bes a2 d, r4 g4 f2. f4 f2 bes2. f4 |
 		g2 c, d bes2. f'4 g f g2 d r4 d g f \[bes,2 c |
-		d1\] \cadenzaOn g,\longa \cadenzaOff \showBarLine \bar "|"
+		d1\] \cadenzaOn g,\breve \cadenzaOff \showBarLine \bar "|"
 		g'2. g4 \[es2 c\] d2. bes4 bes2 f'2. f4 \[bes,2 |
-		f'\] g4 f g \ficta es d1 r2 d c2. d4 f g d f \ficta \[es2 d\] \cadenzaOn g,\longa \cadenzaOff 
+		f'\] g4 f g \ficta es d1 r2 d c2. d4 f g d f \ficta \[es2 d\] \cadenzaOn g,\breve \cadenzaOff 
 		\showBarLine \bar "|"
 	}
 	\addlyrics {
@@ -503,12 +502,12 @@ bass = \new Voice {
 		\showBarLine\bar "|"
 		
 		c,2 c4 c f2. f4 c2 \[c 
-		g'2.\] e4 f g d2 \cadenzaOn g,\longa \cadenzaOff |
+		g'2.\] e4 f g d2 \cadenzaOn g,\breve \cadenzaOff |
 		\showBarLine \bar "|"
 		r1 r r r4 d' f2 d4 e c f2 d4. e8 f g |
 
 		a4 f g c, e4. f8 g2 \mark #13 c, r4 e f g a2 g4. f8 e4 d c c d g, |
-		d'2 r4 g e d g c, d2. g,4 d'2 r4 g, c b c2 \cadenzaOn g\longa \cadenzaOff
+		d'2 r4 g e d g c, d2. g,4 d'2 r4 g, c b c2 \cadenzaOn g\breve \cadenzaOff
 		\showBarLine \bar "|"
 		
 		\cadenzaOn \override Stem.transparent = ##t
