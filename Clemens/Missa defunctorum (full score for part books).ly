@@ -2,7 +2,7 @@
 % Copyright ©2024 Peter Hilton - https://github.com/hilton
 
 \version "2.24.2"
-revision = "17"
+revision = "18"
 \pointAndClickOff
 
 #(set-global-staff-size 15)
@@ -30,8 +30,8 @@ year = #(strftime "©%Y" (localtime (current-time)))
 		"Missa defunctorum"
 	}
 	composer = \markup \sans { Clemens non Papa }
-	copyright = \markup \sans \teeny {
-		\vspace #1
+	copyright = \markup \sans {
+		\vspace #3
 		\column \center-align {
 			\line {
 				Copyright \year Peter Hilton - 
@@ -107,9 +107,12 @@ soprano = \new Voice {
 		f2. g4 a bes c4. bes8 a4 c bes a2
 		g8 f e4 d g2 f4. e8  \break
 		d4 c d e f a4. g8 f4 e8 d f2 e4 \mark \default f2 r4 f2
-		f4 e2 e4 f8 g a bes a2 g4 f g4. f8 f2 e8 d e2 \mark \default f4 c'4. bes8 a2 g8 f
+		f4 e2 e4 f8 g a bes a4 ~ a4 g4 f g4. f8 f2 e8 d e2 \mark \default f4 c'4. bes8 a2 g8 f
 		
-		e4 c'4. bes8 a4 g f2 e4 f a a c bes a a g8 f g2. f4 a g f2.
+		e4 c'4. bes8 a4 g f2 e4 f a a c 
+		\pageBreak
+		
+		bes a a g8 f g2. f4 a g f2.
 		g4. f8 f2 e4 \cadenzaOn f\breve \cadenzaOff s2 \showBarLine \bar "|"
 		
 		\cadenzaOn \skip 8*19 \cadenzaOff 
@@ -154,7 +157,7 @@ alto = \new Voice {
 		
 		r2 f,2. g4 a bes c c d4. c16 bes
 		a4 bes c d2 c4 d2 r4 f2 e4 d c2 bes4 c d c2 \mark \default c1
-		r4 c2 c4 c2 f,4 f'2 e4 d c4. a8 d4 c1 \mark \default r4 f \[f2 c2.\]
+		r4 c2 c4 c2 f,4 f'4 ~ f4 e4 d c4. a8 d4 c1 \mark \default r4 f \[f2 c2.\]
 			
 		e4 f c \[d2 c\] a \[c d\] c4 d e2. c4 f e d1
 		c4 bes 
@@ -199,7 +202,7 @@ tenor = \new Voice {
 		a g a a c4. bes8 a4 g a bes g1 \mark \default f2 a \[a
 			 
 		g\] a bes g f1 r2 \[a c\] c \[c a\]
-		bes a4 g8 f g2 \cadenzaOn f\breve \cadenzaOff s2 
+		bes a4 g8 f g2 \cadenzaOn f\breve \cadenzaOff  s2
 		\showBarLine\bar "|"
 		
 		\once \override Staff.TimeSignature.stencil = ##f
@@ -299,6 +302,8 @@ bass = \new Voice {
 	}
 }
 
+\pageBreak
+
 % KYRIE 1
 
 \score {
@@ -330,7 +335,7 @@ soprano = \new Voice {
 	\relative c' {
 		\set Score.currentBarNumber = #2
 		f1 \[g2 a\] \[a g\] \[a bes\] a2. bes4 a g f a
-		g f2 e8 d e4 e \cadenzaOn f\breve \cadenzaOff s2 \showBarLine \bar "|"
+		g f2 e8 d e4 e \cadenzaOn f\breve \cadenzaOff \showBarLine \bar "|"
 	}
 	\addlyrics {
 % 		Ky -- _ _ _ ri -- e __ _ e -- _ _ _ _ le -- i -- son,
@@ -341,7 +346,7 @@ soprano = \new Voice {
 alto = \new Voice {
 	\relative c' {
 		c1 \[e2 f\] \[f e\] f d4 e f2. d4 f e c2
-		d c1 \cadenzaOn c\breve \cadenzaOff s2
+		d c1 \cadenzaOn c\breve \cadenzaOff
 		\showBarLine \bar "|"	
 	}
 	\addlyrics {
@@ -354,7 +359,7 @@ tenor = \new Voice {
 	\relative c {
 		\clef "treble_8"
 		f4. g8 a4 f c'1 c2. c4 c d bes2 c4 d c bes8 c d4 g, \[a2
-		bes\] g1 \cadenzaOn f\breve \cadenzaOff s2 
+		bes\] g1 \cadenzaOn f\breve \cadenzaOff
 		\showBarLine\bar "|"
 	}
 	\addlyrics {
@@ -367,7 +372,7 @@ bass = \new Voice {
 	\relative c {
 		\clef "bass"
 		f1 \[c2 f\] \[f c\] \[f g\] f4 d f g d e \[f2
-		bes, c1\] \cadenzaOn f,\breve \cadenzaOff s2
+		bes, c1\] \cadenzaOn f,\breve \cadenzaOff
 		\showBarLine \bar "|"
 	}
 	\addlyrics {
@@ -386,10 +391,8 @@ bass = \new Voice {
  			\new Staff << \globalF \bass >>
 		>> 
 	}
-	\header {
-		piece = \markup \larger \sans { Kyrie }
-	}
 }
+
 
 % CHRISTE
 
@@ -419,7 +422,7 @@ soprano = \new Voice {
 	\relative c' {
 		\set Score.currentBarNumber = #11
 		bes1 \[a2 g\] \[a bes\] bes1 a2 g4 f
-		g2 f bes2. a4 g2 \cadenzaOn f\breve s1 \cadenzaOff s2
+		g2 f bes2. a4 g2 \cadenzaOn f\breve s1 \cadenzaOff
 		\showBarLine\bar "|"
 	}
 	\addlyrics {
@@ -431,7 +434,7 @@ soprano = \new Voice {
 alto = \new Voice {
 	\relative c' {	
 		f1 \[f2 d\] f1 g4 f2 e4 f2 e4 d2 
-		c4 d2 f1 d4 e \[d2 c\] \cadenzaOn d\breve s2 \cadenzaOff
+		c4 d2 f1 d4 e \[d2 c\] \cadenzaOn d\breve \cadenzaOff
 		\showBarLine \bar "|"
 	}
 	\addlyrics {
@@ -444,7 +447,7 @@ tenor = \new Voice {
 	\relative c {
 		\clef "treble_8"
 		d'1 \[c2 bes\] \[c d\] g,4 c2 bes4 c2. f,4
-		bes g a2 d2. c4 bes c4. bes8 bes2 a4 \cadenzaOn bes\breve s2 \cadenzaOff
+		bes g a2 d2. c4 bes c4. bes8 bes2 a4 \cadenzaOn bes\breve \cadenzaOff
 		\showBarLine\bar "|"
 	}
 	\addlyrics {
@@ -457,7 +460,7 @@ bass = \new Voice {
 	\relative c {
 		\clef "bass"
 		bes1 \[f'2 g\] f bes,4 bes'2 a4 g2 f4. e8 c4 d
-		\ficta es2 d \[bes f'\] g4 c, d4. e8 f2 \cadenzaOn bes,\breve s2 \cadenzaOff
+		\ficta es2 d \[bes f'\] g4 c, d4. e8 f2 \cadenzaOn bes,\breve \cadenzaOff
 		\showBarLine \bar "|"
 	}
 	\addlyrics {
@@ -477,6 +480,8 @@ bass = \new Voice {
 		>> 
 	}
 }
+
+\pageBreak
 
 % KYRIE 2
 
@@ -581,6 +586,8 @@ soprano = \new Voice {
 		
 		r2 \[g2 c4.\] b8 a g a2 b4 c2 \[a d4.\] d8 |
 		g,4 g2 g4 \break
+		\pageBreak
+		
 		g g4. g8 e2 g4 f2. f4 g2 | \mark #4 g e4 a4. g8 g4. f8 f4.
 
 		e16 d e4 f2 |  \break
@@ -737,28 +744,31 @@ bass = \new Voice {
 soprano = \new Voice {
 	\relative c' {
 		\once \override Staff.TimeSignature.stencil = ##f
-		\override Stem.transparent = ##t \cadenzaOn
-		g'8 f g g s g8 f g s g8 a bes g g f s
-		\cadenzaOff \override Stem.transparent = ##f
+		\cadenzaOn \skip 8*16 \cadenzaOff 
+		\set Score.currentBarNumber = #2
 		\showBarLine \bar "|" \time 2/2
 		
 		\[f2 g a1\] bes2. a4 g a4. g8 g4. \ficta fis16 e \ficta fis4 g2 |
 		r2 g \[f g\] g a2. a4 a2 bes2. bes4 bes bes a g | a2 r4 g2
 
-		f4 g2. f8 e f2 r g \[f g\] g g2. bes4 a2 f4 bes2 a4 |
-		g1 a2 r4 g f g a a a2 a bes2. bes4 a2 g |
-		a2 c2. bes4 a bes4. a8 a2 g4 a2 r4 f g2 bes2. bes4 bes2 |
+		f4 g2. f8 e f2 r g \break
+		\[f g\] g g2. bes4 a2 f4 bes2 a4 |
+		g1 a2 r4 g f g a a a2 a \break
+		bes2. bes4 a2 g |
+		a2 c2. bes4 a bes4. a8 a2 g4 a2 r4 f g2 bes2. bes4 bes2 |\break
 		bes2 a4 g a2 g1. r2 g1 g2 f2. f4 f2 g |
 
-		bes a2. a4 g f a2 f r4 g a2. a4 a2 bes2. a4 |
-		g2 g f bes2. a4 g a4. g8 g4 f2 r4 f g a bes2 a4 g2
+		bes a2. a4 g f \break
+		a2 f r4 g a2. a4 a2 bes2. a4 |
+		g2 g f bes2. a4 g a4. g8 g4 f2 \break
+		r4 f g a bes2 a4 g2
 		\ficta f!8 e \ficta fis2 \cadenzaOn g\breve \cadenzaOff | \showBarLine \bar "|" 
 		r2 g1 g2 \[f d\] f2. f4 f2 bes2.
 		a4 g a4. g8 g2 \ficta fis8 e \ficta fis2 r a c2. bes4 a g f a4. g8 g2 \ficta fis4
 		\cadenzaOn g\breve \cadenzaOff \showBarLine \bar "|" |
 	}
 	\addlyrics {
-		Do -- mi -- _ ne Je -- su __ _ Chri -- _ _ _ ste __ _
+% 		Do -- mi -- _ ne Je -- su __ _ Chri -- _ _ _ ste __ _
 		Rex __ _ _ glo -- _ _ _ _ _ _ _ ri -- æ,
 		li -- be -- _ ra a -- ni -- mas om -- ni -- um fi -- de -- li -- um de -- 
 		
@@ -777,10 +787,8 @@ soprano = \new Voice {
 alto = \new Voice {
 	\relative c' {
 		\once \override Staff.TimeSignature.stencil = ##f
-		\override Stem.transparent = ##t \cadenzaOn
-		g'8 f g g s g8 f g s g8 a bes g g f s
-		\cadenzaOff \override Stem.transparent = ##f
-		\showBarLine \bar "|" \time 2/2
+		\cadenzaOn \skip 8*16 \cadenzaOff 
+		\set Score.currentBarNumber = #2
 		
 		\[d1 f\breve\] d4 f \[es2 d\] d
 		r d d1 e2 f2. f4 f2 | f2. f4 g g f d f2 r4 d2
@@ -792,12 +800,12 @@ alto = \new Voice {
 
 		f f2. f4 d d e2 d r4 d f2. f4 f2 f2. f4 |
 		d2 e d f2. f4 d4 f d2 d r4 d d f \[f2 e\] |
-		d1 \cadenzaOn d\breve \cadenzaOff \showBarLine \bar "|" d1 es d2 f2. d4 c1 f2. 
+		d1 \cadenzaOn d\breve \cadenzaOff \showBarLine \bar "|" d1 es d2 f2. d4 c2 ~ c2 f2. 
 		f4 d f | \ficta es8 d4 c8 d1 r2 f2 g2. f4 f d4. c8 a4 bes c d2 \cadenzaOn d\breve \cadenzaOff 
 		\showBarLine \bar "|"
 	}
 	\addlyrics {
-		Do -- mi -- _ ne Je -- su __ _ Chri -- _ _ _ ste __ _
+% 		Do -- mi -- _ ne Je -- su __ _ Chri -- _ _ _ ste __ _
 		Rex __ _ glo -- _ ri -- _ æ,
 		li -- be -- ra a -- ni -- mas om -- ni -- um fi -- de -- li -- um de -- 
 		
@@ -860,10 +868,8 @@ bass = \new Voice {
 	\relative c {
 		\clef "bass"
 		\once \override Staff.TimeSignature.stencil = ##f
-		\override Stem.transparent = ##t \cadenzaOn
-		g'8 f g g s g8 f g s g8 a bes g g f s
-		\cadenzaOff \override Stem.transparent = ##f
-		\showBarLine \bar "|" \time 2/2
+		\cadenzaOn \skip 8*16 \cadenzaOff 
+		\set Score.currentBarNumber = #2
 		
 		\[d2 g f1\] bes,2. f'4 g d \ficta es c d2 g, |
 		r g' \[d g\] c, f2. f4 f2 bes2. bes4 es, \ficta es f g f2 g2.
@@ -876,12 +882,12 @@ bass = \new Voice {
 		bes f'2. f4 g bes a2 d, r4 g4 f2. f4 f2 bes2. f4 |
 		g2 c, d bes2. f'4 g f g2 d r4 d g f \[bes,2 c |
 		d1\] \cadenzaOn g,\breve \cadenzaOff \showBarLine \bar "|"
-		g'2. g4 \[es2 c\] d2. bes4 bes2 f'2. f4 \[bes,2 |
+		g'2. g4 \[es2 c\] d2. bes4 bes2 f'2 ~ f4 f4 \[bes,2 |
 		f'\] g4 f g \ficta es d1 r2 d c2. d4 f g d f \ficta \[es2 d\] \cadenzaOn g,\breve \cadenzaOff 
 		\showBarLine \bar "|"
 	}
 	\addlyrics {
-		Do -- mi -- _ ne Je -- su __ _ Chri -- _ _ _ ste __ _
+% 		Do -- mi -- _ ne Je -- su __ _ Chri -- _ _ _ ste __ _
 		Rex __ _ _ glo -- ri -- æ, rex glo -- _ ri -- æ
 		li -- be -- _ ra a -- ni -- mas om -- ni -- um fi -- de -- li -- um de -- 
 		
@@ -897,41 +903,41 @@ bass = \new Voice {
 	}
 }
 
-% \score {
-% 	\transpose f g {
-% 	  	<< 
-% 			\new Staff << \globalF \soprano >> 
-% 			\new Staff << \globalF \alto >>
-% 			\new Staff << \globalF \tenor >>
-% 			\new Staff << \globalF \bass >>
-% 		>> 
-% 	}
-% 	\header {
-% 		piece = \markup \larger \sans { Offertorium }
-% 	}
-% }
+\score {
+	\transpose f g {
+	  	<< 
+			\new Staff << \globalF \soprano >> 
+			\new Staff << \globalF \alto >>
+			\new Staff << \globalF \tenor >>
+			\new Staff << \globalF \bass >>
+		>> 
+	}
+	\header {
+		piece = \markup \larger \sans { Offertorium }
+	}
+}
 
-% \score {
-% 	\transpose f g {
-% 	\new Staff <<
-% 		\key f \major
-% 		\new Voice = "tenor" {
-% 			\relative c {
-% 				\clef "treble_8"
-% 				\once \omit Staff.TimeSignature
-% 				\cadenzaOn
-% 				\override Stem.transparent = ##t 
-% 				f4 g bes bes bes a s  g f s  g bes bes bes a s  f g bes s  bes g a g f f s  a g a bes s  a g f f g g-- s \showBarLine\bar "|"
-% 				\cadenzaOff
-% 			}
-% 		}
-% 		\addlyrics {
-% 			Ho -- sti -- _ as __ _ _ et __ _ pre -- _ ces __ _ _ ti -- bi __ _ 
-% 			Do -- mi -- _ _ _ ne lau -- _ dis __ _ of -- _ fe -- ri -- _ mus.
-% 		}
-% 	>>
-% 	}
-% }
+\score {
+	\transpose f g {
+	\new Staff <<
+		\key f \major
+		\new Voice = "tenor" {
+			\relative c {
+				\clef "treble_8"
+				\once \omit Staff.TimeSignature
+				\cadenzaOn
+				\override Stem.transparent = ##t 
+				f4 g bes bes bes a s  g f s  g bes bes bes a s  f g bes s  bes g a g f f s  a g a bes s  a g f f g g-- s \showBarLine\bar "|"
+				\cadenzaOff
+			}
+		}
+		\addlyrics {
+			Ho -- sti -- _ as __ _ _ et __ _ pre -- _ ces __ _ _ ti -- bi __ _ 
+			Do -- mi -- _ _ _ ne lau -- _ dis __ _ of -- _ fe -- ri -- _ mus.
+		}
+	>>
+	}
+}
 
 
 soprano = \new Voice {
@@ -939,11 +945,13 @@ soprano = \new Voice {
 		\set Score.rehearsalMarkFormatter = #format-mark-alphabet
 		\set Score.currentBarNumber = #67
 		\[g1 a2.\] bes4 |
-		c2 bes2. a4 g a4. g8 g2 f4 | \mark #9 g2 r4 g g f g bes2 a4 g f |
+		c2 bes2. a4 g a4. g8 g2 f4 | \mark #9 g2 r4 g g f g bes2 a4 g f | \break
 		g a bes g4. a8 bes4 c2 f,4 g4. f8 f2 e4 \mark #10 f a2 g4 a bes a2 r4 a4. 
-		f8 bes2 a4 | bes1 r4 bes bes bes bes2 a2. a4 a2 r g1
+		f8 bes2 a4 | bes1 \break
+		r4 bes bes bes bes2 a2. a4 a2 r g1
 
-		g2 f2. f4 g2 bes2. bes4 bes2 a4 a g2 \mark #11 g r g1
+		g2 f2. f4 \break
+		g2 bes2. bes4 bes2 a4 a g2 \mark #11 g r g1
 		g2 \[f d\] f2. f4 f2 bes2. a4 g a4. g8 g2 \ficta fis8 e \ficta fis2
 		r a c2. bes4 a g f a4. g8 g4. \ficta fis16 e \ficta fis4 g1 \showBarLine \bar "||" |
 	}
@@ -1012,7 +1020,7 @@ bass = \new Voice {
 		\clef "bass"
 		\set Score.rehearsalMarkFormatter = #format-mark-alphabet
 		g'1 f2. e8 d |
-		c2 g'4. a8 bes4 f g f c \ficta es d2 g,4 \mark #9 g' f \ficta e! d2 g,4 g' g f g bes2
+		c2 g'4. a8 bes4 f g f c \ficta es d2 \mark #9 g,4 g' f \ficta e! d2 g,4 g' g f g bes2
 		a4 g4. f8 | es4 d c2 bes4 g \[d'2 c\] \mark #10 r4 f2 e4 f g f2 a4. g8 |
 		f4 es f2 bes, bes' bes4 g g1 a2. d,4 f2 r g1
 		
@@ -1032,29 +1040,28 @@ bass = \new Voice {
 	}
 }
 
-% \score {
-% 	\transpose f g {
-% 	  	<< 
-% 			\new Staff << \globalF \soprano >> 
-% 			\new Staff << \globalF \alto >>
-% 			\new Staff << \globalF \tenor >>
-% 			\new Staff << \globalF \bass >>
-% 		>> 
-% 	}
-% }
+\score {
+	\transpose f g {
+	  	<< 
+			\new Staff << \globalF \soprano >> 
+			\new Staff << \globalF \alto >>
+			\new Staff << \globalF \tenor >>
+			\new Staff << \globalF \bass >>
+		>> 
+	}
+}
 
 % SANCTUS 
 
 soprano = \new Voice {
 	\relative c'' {
 		\once \override Staff.TimeSignature.stencil = ##f
-		\override Stem.transparent = ##t a4 a \override Stem.transparent = ##f
-		\showBarLine\bar "|"
-		\time 2/2
+		\cadenzaOn s2 \cadenzaOff \showBarLine \bar "|" \time 2/2
 		
 		\[a2 c2.\] b8 a b4 a2 g4 a1 r4 a2 a4 f f
 		bes2 a2. a4 a2 a a r4 a a d2 c8 b c2 \showBarLine \bar "|"
-		f,1 \[g2 a\] a2. a4 a a g2 e f2. f4 a2 g a1 \fermata
+		f,1 \[g2 a\] a2. a4 a a g2 \break
+		e f2. f4 a2 g a1 \fermata
 		a1 bes2 g f2. f4 e1 \cadenzaOn e\breve \cadenzaOff \showBarLine \bar "|"
 	}
 	\addlyrics {
@@ -1067,14 +1074,12 @@ soprano = \new Voice {
 }
 
 alto = \new Voice {
-	\relative c'' {
+	\relative c' {
 		\once \override Staff.TimeSignature.stencil = ##f
-		\override Stem.transparent = ##t a4 a \override Stem.transparent = ##f
-		\showBarLine \bar "|"
-		\time 2/2
+		\cadenzaOn s2 \cadenzaOff
 		
 		r2 e1 \[f2 e\] c4 e2 e4 e e f2 r4 f2 
-		e4 f2 e d4 f2 f4 e e f f2 e8 d e4 f e2
+		e4 f2 e d4 f4 ~ f4 f4 e e f f2 e8 d e4 f e2
 		\showBarLine \bar "|"
 		d1 \[d2 f\] f2. f4 f f e2 c d2. d4 e2 e f1 \fermata
 		f1 f2 e d2. d4 b1 \cadenzaOn c\breve \cadenzaOff 
@@ -1115,9 +1120,7 @@ bass = \new Voice {
 	\relative c' {
 		\clef "bass"
 		\once \override Staff.TimeSignature.stencil = ##f
-		\override Stem.transparent = ##t a4 a \override Stem.transparent = ##f
-		\showBarLine\bar "|"
-		\time 2/2
+		\cadenzaOn s2 \cadenzaOff
 		
 		r2 a1 \[d,2 e\] a, a'2. a4 f f \ficta bes2
 		g2 f4. g8 a4 a d,4. e8 f4 d a'2 d,1 a 
@@ -1134,35 +1137,32 @@ bass = \new Voice {
 	}
 }
 
-% \score {
-% 	\transpose f g {
-% 	  	<< 
-% 			\new Staff << \globalC \soprano >> 
-% 			\new Staff << \globalC \alto >>
-% 			\new Staff << \globalC \tenor >>
-% 			\new Staff << \globalC \bass >>
-% 		>> 
-% 	}
-% 	\header {
-% 		piece = \markup \larger \sans { Sanctus }
-% 	}
-% }
+\score {
+	\transpose f g {
+	  	<< 
+			\new Staff << \globalC \soprano >> 
+			\new Staff << \globalC \alto >>
+			\new Staff << \globalC \tenor >>
+			\new Staff << \globalC \bass >>
+		>> 
+	}
+	\header {
+		piece = \markup \larger \sans { Sanctus }
+	}
+}
 
 % BENEDICTUS
 
 soprano = \new Voice {
 	\relative c' {
 		\once \override Staff.TimeSignature.stencil = ##f
-		\cadenzaOn
-		\override Stem.transparent = ##t f8 g a a s a s a a s \override Stem.transparent = ##f 
-		\cadenzaOff \showBarLine \bar "|"
-		\time 2/2
-		
-		a2 a4 a a1 a2. g4 f1 \fermata g g2. g4
+		\skip 8*10 \showBarLine \bar "|" \time 2/2
+		a'2 a4 a a1 a2. g4 f1 \fermata \break
+		g g2. g4
 		f2 f e1 e\breve \showBarLine \bar "||"
 	}
 	\addlyrics {
-		Be -- ne -- di -- ctus qui ve -- nit.
+% 		Be -- ne -- di -- ctus qui ve -- nit.
 		In no -- mi -- ne Do -- mi -- ni, O -- san -- na
 		in ex -- cel -- sis. __
 	}
@@ -1171,16 +1171,14 @@ soprano = \new Voice {
 alto = \new Voice {
 	\relative c' {
 		\once \override Staff.TimeSignature.stencil = ##f
-		\cadenzaOn
-		\override Stem.transparent = ##t f8 g a a s a s a a s \override Stem.transparent = ##f 
-		\cadenzaOff \showBarLine \bar "|"
+		\skip 8*10
 		
-		d,2 f4 f e1 f2. d4 d1\fermata e2. d8 c d2 e
+		d2 f4 f e1 f2. d4 d1\fermata e2. d8 c d2 e
 		c d b1 c\breve
 		\showBarLine \bar "||"
 	}
 	\addlyrics {
-		Be -- ne -- di -- ctus qui ve -- nit.
+% 		Be -- ne -- di -- ctus qui ve -- nit.
 		In no -- mi -- ne Do -- mi -- ni, O -- _ _ san -- na
 		in ex -- cel -- sis. __
 	}
@@ -1209,31 +1207,29 @@ bass = \new Voice {
 	\relative c {
 		\clef "bass"
 		\once \override Staff.TimeSignature.stencil = ##f
-		\cadenzaOn
-		\override Stem.transparent = ##t f8 g a a s a s a a s \override Stem.transparent = ##f 
-		\cadenzaOff \showBarLine \bar "|"
+		\skip 8*10
 		
-		d,2 d4 d a'1 f2. g4 d1 \fermata c2 g'1 c,2
+		d2 d4 d a'1 f2. g4 d1 \fermata c2 g'1 c,2
 		f d e1 a,\breve
 		\showBarLine \bar "||"
 	}
 	\addlyrics {
-		Be -- ne -- di -- ctus qui ve -- nit.
+% 		Be -- ne -- di -- ctus qui ve -- nit.
 		In no -- mi -- ne Do -- mi -- ni, O -- san -- na
 		in ex -- cel -- sis. __
 	}
 }
 
-% \score {
-% 	\transpose f g {
-% 	  	<< 
-% 			\new Staff << \globalC \soprano >> 
-% 			\new Staff << \globalC \alto >>
-% 			\new Staff << \globalC \tenor >>
-% 			\new Staff << \globalC \bass >>
-% 		>> 
-% 	}
-% }
+\score {
+	\transpose f g {
+	  	<< 
+			\new Staff << \globalC \soprano >> 
+			\new Staff << \globalC \alto >>
+			\new Staff << \globalC \tenor >>
+			\new Staff << \globalC \bass >>
+		>> 
+	}
+}
 
 
 % AGNUS DEI
@@ -1241,21 +1237,21 @@ bass = \new Voice {
 soprano = \new Voice {
 	\relative c'' {
 		\once \override Staff.TimeSignature.stencil = ##f
-		\override Stem.transparent = ##t a4 a a a \override Stem.transparent = ##f \showBarLine\bar "|"
+		s1 \showBarLine\bar "|"
 		g2 g4 g a1 g4 f g2 g1\fermata g a2 a2. a4 g2. g4 \cadenzaOn g\longa \cadenzaOff \showBarLine \bar "|" \break
 
-		\override Stem.transparent = ##t a4 a a a \override Stem.transparent = ##f \showBarLine\bar "|"
+		s1 \showBarLine\bar "|"
 		a2 a4 a g1 g4 e f2 g1\fermata g a2 a2. a4 a1 g \cadenzaOn a\longa \cadenzaOff \showBarLine \bar "|" \break
 		
 		\override Stem.transparent = ##t a4 a a a \override Stem.transparent = ##f \showBarLine\bar "|"
 		a2 a4 a a1 g4 f a2 a1\fermata g a b g2 g2. g4 a2 a2. a4 g1 \cadenzaOn g\longa \cadenzaOff \showBarLine \bar "||"
 	}
 	\addlyrics {
-		A -- gnus De -- i
+% 		A -- gnus De -- i
 		Qui tol -- lis pec -- ca -- ta mun -- di, do -- na e -- is re -- qui -- em.
-		A -- gnus De -- i
+% 		A -- gnus De -- i
 		Qui tol -- lis pec -- ca -- ta mun -- di, do -- na e -- is re -- qui -- em.
-		A -- gnus De -- i
+% 		A -- gnus De -- i
 		Qui tol -- lis pec -- ca -- ta mun -- di, do -- na e -- is re -- qui -- em sem -- pi -- ter -- nam.
 	}
 }
@@ -1263,21 +1259,16 @@ soprano = \new Voice {
 alto = \new Voice {
 	\relative c'' {
 		\once \override Staff.TimeSignature.stencil = ##f
-		\override Stem.transparent = ##t a4 a a a \override Stem.transparent = ##f \showBarLine\bar "|"
-		e2 e4 e f1 d4 d e2 e1\fermata d f2 f2. f4 d2. e4 \cadenzaOn e\longa \cadenzaOff \showBarLine \bar "|" \break
-
-		\override Stem.transparent = ##t a4 a a a \override Stem.transparent = ##f \showBarLine\bar "|"
-		f2 f4 f e1 e4 c d2 e1\fermata e e2 f2. e8 d \[e2 f\] d2. d4 \cadenzaOn f\longa \cadenzaOff \showBarLine \bar "|" \break
-		
-		\override Stem.transparent = ##t a4 a a a \override Stem.transparent = ##f \showBarLine\bar "|"
-		e2 e4 e f1 d4 d f2 e1\fermata e e g e2 e2. e4 f2 f2. f4 d1 \cadenzaOn e\longa \cadenzaOff \showBarLine \bar "||"
+		s1 e2 e4 e f1 d4 d e2 e1\fermata d f2 f2. f4 d2. e4 \cadenzaOn e\longa \cadenzaOff \showBarLine \bar "|" \break
+		s1 f2 f4 f e1 e4 c d2 e1\fermata e e2 f2. e8 d \[e2 f\] d2. d4 \cadenzaOn f\longa \cadenzaOff \showBarLine \bar "|" \break
+		s1 e2 e4 e f1 d4 d f2 e1\fermata e e g e2 e2. e4 f2 f2. f4 d1 \cadenzaOn e\longa \cadenzaOff \showBarLine \bar "||"
 	}
 	\addlyrics {
-		A -- gnus De -- i
+% 		A -- gnus De -- i
 		Qui tol -- lis pec -- ca -- ta mun -- di, do -- na e -- is re -- qui -- em.
-		A -- gnus De -- i
+%		A -- gnus De -- i
 		Qui tol -- lis pec -- ca -- ta mun -- di, do -- na e is __ _ re -- _ _ qui -- em.
-		A -- gnus De -- i
+%		A -- gnus De -- i
 		Qui tol -- lis pec -- ca -- ta mun -- di, do -- na e -- is re -- qui -- em sem -- pi -- ter -- nam.
 	}
 }
@@ -1309,84 +1300,78 @@ bass = \new Voice {
 	\relative c' {
 		\clef "bass"
 		\once \override Staff.TimeSignature.stencil = ##f
-		\override Stem.transparent = ##t a4 a a a \override Stem.transparent = ##f \showBarLine\bar "|"
-		c,2 c4 c f1 g4 d c2 c1\fermata g' f2 d2. f4 g2. c,4 \cadenzaOn c\longa \cadenzaOff \showBarLine \bar "|" \break
-		
-		\override Stem.transparent = ##t a'4 a a a \override Stem.transparent = ##f \showBarLine\bar "|"
-		f2 f4 f c1 e4 a, d2 c1\fermata e a,2 d2. a4 \[a'2 f g2.\] g4 \cadenzaOn f\longa \cadenzaOff \showBarLine \bar "|" \break
-		
-		\override Stem.transparent = ##t a4 a a a \override Stem.transparent = ##f \showBarLine\bar "|"
-		a2 a4 a f1 g4 d d2 a1\fermata e' a g c,2 c2. c4 f2 f2. f4 g1 \cadenzaOn e\longa \cadenzaOff \showBarLine \bar "||"
+		s1 c,2 c4 c f1 g4 d c2 c1\fermata g' f2 d2. f4 g2. c,4 \cadenzaOn c\longa \cadenzaOff \showBarLine \bar "|" \break
+		s1 f2 f4 f c1 e4 a, d2 c1\fermata e a,2 d2. a4 \[a'2 f g2.\] g4 \cadenzaOn f\longa \cadenzaOff \showBarLine \bar "|" \break
+		s1 a2 a4 a f1 g4 d d2 a1\fermata e' a g c,2 c2. c4 f2 f2. f4 g1 \cadenzaOn e\longa \cadenzaOff \showBarLine \bar "||"
 	}
 	\addlyrics {
-		A -- gnus De -- i
+%		A -- gnus De -- i
 		Qui tol -- lis pec -- ca -- ta mun -- di, do -- na e -- is re -- qui -- em.
-		A -- gnus De -- i
+%		A -- gnus De -- i
 		Qui tol -- lis pec -- ca -- ta mun -- di, do -- na e -- is re __ _ _ qui -- em.
-		A -- gnus De -- i
+%		A -- gnus De -- i
 		Qui tol -- lis pec -- ca -- ta mun -- di, do -- na e -- is re -- qui -- em sem -- pi -- ter -- nam.
 	}
 }
 
 
-% \score {
-% 	\transpose f g {
-% 	  	<< 
-% 			\new Staff << \globalC \soprano >> 
-% 			\new Staff << \globalC \alto >>
-% 			\new Staff << \globalC \tenor >>
-% 			\new Staff << \globalC \bass >>
-% 		>> 
-% 	}
-% 	\header {
-% 		piece = \markup \larger \sans { Agnus Dei }
-% 	}
-% }
+\score {
+	\transpose f g {
+	  	<< 
+			\new Staff << \globalC \soprano >> 
+			\new Staff << \globalC \alto >>
+			\new Staff << \globalC \tenor >>
+			\new Staff << \globalC \bass >>
+		>> 
+	}
+	\header {
+		piece = \markup \larger \sans { Agnus Dei }
+	}
+}
 
 % COMMUNIO
 
 soprano = \new Voice {
 	\relative c' {
 		\once \override Staff.TimeSignature.stencil = ##f
-		\override Stem.transparent = ##t
-		\cadenzaOn a'8 s g f g a a g s \cadenzaOff
-		\override Stem.transparent = ##f
+		s1
 		\showBarLine\bar "|"
 		\time 2/2
+		\set Score.currentBarNumber = #2
 		
-		a1 a4 g2 a4 f a4. g8 g2 f4 g1 e4 f2
-		e8 d c4 a' | c2 b4 c a g4. f8 g4 a \mark #11 b2 a g4 a1 r4 a2
-		a4 g2 | g1 r4 e f g a g2 f4 g2 r8 e f4 g a2 g2
+		a'1 a4 g2 a4 f a4. g8 g2 f4 g2 ~ \break
+		g2 e4 f2
+		e8 d c4 a' | c2 b4 c a g4. f8 g4 a \mark #11 b2 a4 ~ a g4 a1 r4 a2
+		a4 g2 | g1 r4 e f g a g2 f4 \break
+		g2 r8 e f4 g a2 g
 		
-		\ficta fis4 g \mark #12 d | e f g2 f8 e f g a4 g2 \ficta fis4 \cadenzaOn g\longa \cadenzaOff | \showBarLine \bar "|" | 
+		\ficta fis4 g \mark #12 d | e f g2 f8 e f g a4 g2 \ficta fis4 
+		\cadenzaOn g\breve \cadenzaOff s2 | \showBarLine \bar "|" | \break
 
 		\once \override Staff.TimeSignature.stencil = ##f
-		\override Stem.transparent = ##t 
-		\cadenzaOn g8 a c s  c c c s  c c s  c c s  d c c \fermata s \cadenzaOff
-		\override Stem.transparent = ##f
-		\showBarLine\bar "|"
+		\cadenzaOn s8*18 \cadenzaOff \showBarLine \bar "|"
+		\set Score.currentBarNumber = #24
 		
 		c2 c4 c c2. c4 c2 c |
 		b4. a8 b4 c a g2 \ficta fis4 \cadenzaOn g\breve \cadenzaOff | \showBarLine \bar "|"
-		r2 a c b4 c a g4. f8 g4 | a b2 a g4 a1 r4 a2
+		\set Score.currentBarNumber = #30		
+		
+		r2 a c b4 c a g4. f8 g4 | a b2 a4 ~ \break a4 g4
+		a1 r4 a2
 		
 		a4 g2 g1 \mark #13 r4 e f g a g2 f4 g2 r8 e f4 g a2 g
 		\ficta fis4 g d e \ficta f! g2 f4 \ficta bes a g2 \ficta fis4 \cadenzaOn g\longa \cadenzaOff
 		\showBarLine\bar "|"
-		\cadenzaOn \override Stem.transparent = ##t
-		s8 g8 a a g s  a s  a g g-- s \showBarLine \bar "|"
-		s8 s4_"*" s g g-- a-- s8 \showBarLine \bar "|."
-		\cadenzaOff
 	}
 	\addlyrics {
-		Lux æ -- _ ter -- _ na __ _ 
+% 		Lux æ -- _ ter -- _ na __ _ 
 		Lu -- ce -- at e -- is Do -- _ _ mi -- ne, [Do -- _
 		mi -- _ ne] cum san -- ctis tu -- is in __ _ _ æ -- ter -- _ _ num, in
 		æ -- ter -- num,
 		qui -- a pi -- us __ _ _ es, qui -- a pi -- us __ _ _ es, 
 		qui -- a pi -- us __ _ _ _ _ _ _ _ es.
 
-		Re -- qui -- em æ -- ter -- nam do -- na e -- is Do -- mi -- ne 
+% 		Re -- qui -- em æ -- ter -- nam do -- na e -- is Do -- mi -- ne 
 		Et lux per -- pe -- tu -- a lu -- 
 		ce -- _ _ at e -- _ _ is.
 		Cum san -- ctis tu -- _ _ _ _ _ _ _ _ is, in
@@ -1401,11 +1386,7 @@ soprano = \new Voice {
 alto = \new Voice {
 	\relative c' {
 		\once \override Staff.TimeSignature.stencil = ##f
-		\override Stem.transparent = ##t
-		\cadenzaOn a'8 s g f g a a g s \cadenzaOff
-		\override Stem.transparent = ##f
-		\showBarLine\bar "|"
-		\time 2/2
+		s1
 		
 		e1 e2 e d4 e2 c4 d d b4. c8 d4 e a,2 |
 		r4 d f e2 f4 d e4. c8 d4 e2. \mark #11 f4. e8 c4 f e4. d8 c b a4 d f2 |
@@ -1413,31 +1394,23 @@ alto = \new Voice {
 		r4 \mark #12 b c d e2 d1. r4 b c d e2 d1 | \showBarLine \bar "|"
 		
 		\once \override Staff.TimeSignature.stencil = ##f
-		\override Stem.transparent = ##t 
-		\cadenzaOn g8 a c s  c c c s  c c s  c c s  d c c \fermata s \cadenzaOff
-		\override Stem.transparent = ##f
-		\showBarLine\bar "|"
+		\cadenzaOn s8*18 \cadenzaOff
 		
 		g2 g4 g f2. f4 g2 g2.
-		g4 g2 f4 d \cadenzaOn d2 ~ d\breve \cadenzaOff |
-		d2 f e4 f d e4. c8 d4 e2. f4. e8 c4 f e4. d8 c b a4 d f2 |
+		g4 g2 f4 d d2 ~ \cadenzaOn d\breve \cadenzaOff |
+		d2 f e4 f d e4. c8 d4 e2. f4. e8 c4 f e4 ~ e8 d8 c b a4 d f2 |
 
 		e4 f d e2 e4 d2 \mark #13 e \times 2/3 { c4 d e } a, e'2 d8 c b4 b c d e2 d1
-		r4 b | c d e2 d1. r4 b c d e2 \cadenzaOn d\breve \cadenzaOff | \showBarLine \bar "|"
-
-		\cadenzaOn \override Stem.transparent = ##t
-		s8 g8 a a g s  a s  a g g-- s \showBarLine \bar "|"
-		s8 s4_"*" s g g-- a-- s8 \showBarLine \bar "|."
-		\cadenzaOff
+		r4 b | c d e2 d1. r4 b c d e2 \cadenzaOn d\breve s2 \cadenzaOff | \showBarLine \bar "|"
 	}
 	\addlyrics {
-		Lux æ -- _ ter -- _ na __ _ 
+% 		Lux æ -- _ ter -- _ na __ _ 
 		Lu -- ce -- at e -- _ _ is Do -- _ _ _ mi -- ne
 		cum san -- ctis tu -- is in __ _ _ æ -- ter -- _ _ _ _ _ _ _ num, cum san -- 
 		ctis tu -- is in æ -- ter -- _ _ _ _ _ _ _ _ num,
 		qui -- a pi -- us es, qui -- a pi -- us es, qui -- a pi -- us es.
 		
-		Re -- qui -- em æ -- ter -- nam do -- na e -- is Do -- mi -- ne 
+% 		Re -- qui -- em æ -- ter -- nam do -- na e -- is Do -- mi -- ne 
 		
 		Et lux per -- pe -- tu -- a lu -- 
 		ce -- at e -- _ is.
@@ -1454,7 +1427,7 @@ tenor = \new Voice {
 		\clef "treble_8"
 		\once \override Staff.TimeSignature.stencil = ##f
 		\override Stem.transparent = ##t
-		\cadenzaOn a'8 s g f g a a g s \cadenzaOff
+		\cadenzaOn a'8 s g f g a a g \cadenzaOff
 		\override Stem.transparent = ##f
 		\showBarLine\bar "|"
 		\time 2/2
@@ -1463,7 +1436,7 @@ tenor = \new Voice {
 		g4 a2 r2 r4 a | c b c2 a4 \mark #11 d4. c8 a4 | b2 a r4 a d c2
 		d4 b c | g c2 b4 c4. b8 a4 g r b c4. d8 e4 d g,8 c4 b8 c4 e, f g |
 
-		a a g \mark #12 g2 a4 b c a r8 d, f4 g a2 \cadenzaOn g\longa \cadenzaOff
+		a a g \mark #12 g2 a4 b c a r8 d, f4 g a2 \cadenzaOn g\breve s2 \cadenzaOff
 		\showBarLine\bar "|"
 		
 		\once \override Staff.TimeSignature.stencil = ##f
@@ -1473,17 +1446,12 @@ tenor = \new Voice {
 		\showBarLine\bar "|"
 		
 		e2 e4 e a,2. a4 e'2 e2. 
-		d8 c d4 c2 b4 a2 \cadenzaOn g\breve \cadenzaOff |
+		d8 c d4 c ~ c b4 a2 \cadenzaOn g\breve \cadenzaOff |
 		r1 r2 r4 a c b c2 a4 d4. c8 a4 b2 a | r4 a d c2
 
 		d4 b c g c2 b4 \mark #13 c4. b8 a4 g r b c4. d8 e4 d g,8 c4 b8 c4 e, f g |
 		a a g g2 a4 b c a d, f g a2 \cadenzaOn g\longa \cadenzaOff
 		\showBarLine\bar "|"
-		
-		\cadenzaOn \override Stem.transparent = ##t
-		s8 g8 a a g s  a s  a g g-- s \showBarLine \bar "|"
-		s8 s4_"*" s g g-- a-- s8 \showBarLine \bar "|."
-		\cadenzaOff
 	}
 	\addlyrics {
 		Lux æ -- _ ter -- _ na __ _ 
@@ -1509,13 +1477,9 @@ bass = \new Voice {
 	\relative c {
 		\clef "bass"
 		\once \override Staff.TimeSignature.stencil = ##f
-		\override Stem.transparent = ##t
-		\cadenzaOn a'8 s g f g a a g s \cadenzaOff
-		\override Stem.transparent = ##f
-		\showBarLine\bar "|"
-		\time 2/2
+		s1
 		
-		a,1 a8 b c d e4 c d a e'2 d e4 g4. f8 e d c4 d |
+		a1 a8 b c d e4 c d a e'2 d e4 g4 ~ g8 f8 e d c4 d |
 		b2 a r1 r1 r4 \mark #11 d f2 d4 e c f2 d4. e8 f g |
 		a4 f g c, e4. f8 g2 c, r4 e | f g a2 g4. f8 e4 d c2 d4 g, |
 
@@ -1523,32 +1487,24 @@ bass = \new Voice {
 		\showBarLine \bar "|"
 		
 		\once \override Staff.TimeSignature.stencil = ##f
-		\override Stem.transparent = ##t 
-		\cadenzaOn g'8 a c s  c c c s  c c s  c c s  d c c \fermata s \cadenzaOff
-		\override Stem.transparent = ##f
-		\showBarLine\bar "|"
+		\cadenzaOn s8*18 \cadenzaOff
 		
-		c,2 c4 c f2. f4 c2 \[c 
+		c2 c4 c f2. f4 c2 \[c 
 		g'2.\] e4 f g d2 \cadenzaOn g,\breve \cadenzaOff |
 		\showBarLine \bar "|"
 		r1 r r r4 d' f2 d4 e c f2 d4. e8 f g |
 
 		a4 f g c, e4. f8 g2 \mark #13 c, r4 e f g a2 g4. f8 e4 d c c d g, |
-		d'2 r4 g e d g c, d2. g,4 d'2 r4 g, c b c2 \cadenzaOn g\breve \cadenzaOff
+		d'2 r4 g e d g c, d2. g,4 d'2 r4 g, c b c2 \cadenzaOn g\breve s2 \cadenzaOff
 		\showBarLine \bar "|"
-		
-		\cadenzaOn \override Stem.transparent = ##t
-		s8 g'8 a a g s  a s  a g g-- s \showBarLine \bar "|"
-		s8 s4_"*" s g g-- a-- s8 \showBarLine \bar "|."
-		\cadenzaOff
 	}
 	\addlyrics {
-		Lux æ -- _ ter -- _ na __ _ 
+% 		Lux æ -- _ ter -- _ na __ _ 
 		Lu -- ce -- _ _ _ _ _ at e -- is Do -- mi -- ne, __ _ _ _ _ _ _ _
 		cum san -- ctis __ _ _ tu -- _ _ _ _ _ is in æ -- ter -- _ _ num,
 		qui -- a pi -- us es, __ _ _ _ _ _ _ _ qui -- a pi -- us __ _ _ es, __ _ _ qui -- a pi -- us es.
 		
-		Re -- qui -- em æ -- ter -- nam do -- na e -- is Do -- mi -- ne 
+% 		Re -- qui -- em æ -- ter -- nam do -- na e -- is Do -- mi -- ne 
 
 		Et lux per -- pe -- tu -- a lu -- 
 		_ ce -- at e -- is. __ _ 
@@ -1559,16 +1515,42 @@ bass = \new Voice {
 	}
 }
 
-% \score {
-% 	\transpose f g {
-% 	  	<< 
-% 			\new Staff << \globalC \soprano >> 
-% 			\new Staff << \globalC \alto >>
-% 			\new Staff << \globalC \tenor >>
-% 			\new Staff << \globalC \bass >>
-% 		>> 
-% 	}
-% 	\header {
-% 		piece = \markup \larger \sans { Communio }
-% 	}
-% }
+\score {
+	\transpose f g {
+	  	<< 
+ 			\new Staff << \globalC \soprano >> 
+  			\new Staff << \globalC \alto >>
+ 			\new Staff << \globalC \tenor >>
+ 			\new Staff << \globalC \bass >>
+		>> 
+	}
+	\header {
+		piece = \markup \larger \sans { Communio }
+	}
+}
+
+\score {
+	\transpose f f {
+	\new Staff <<
+		\key c \major
+		\new Voice {
+			\relative c'' {
+				\cadenzaOn \override Stem.transparent = ##t
+				g8 a a g s  a s  a g g-- s \showBarLine \bar "|"
+				s8 g g-- a-- s8 \showBarLine \bar "|."
+				\cadenzaOff
+			}
+		}
+		\addlyrics {
+			Re -- qui -- és -- cant in pá -- _ ce. A -- men. _
+		}
+	>>
+	}
+	\layout {
+		ragged-right = ##t
+		\context { 
+			\Voice 
+			\remove "Ambitus_engraver"
+		}
+	}
+}
