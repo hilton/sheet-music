@@ -2,7 +2,7 @@
 % Copyright ©2024 Peter Hilton - https://github.com/hilton
 
 \version "2.24.2"
-revision = "15"
+revision = "16"
 
 \paper {
 	#(define fonts (set-global-fonts #:sans "Source Sans Pro"))
@@ -344,7 +344,7 @@ bass = \new Voice {
 		\clef "bass"
 		\set Score.rehearsalMarkFormatter = #format-mark-alphabet
 		g'1 f2. e8 d |
-		c2 g'4. a8 bes4 f g f c \ficta es d2 g,4 \mark #9 g' f \ficta e! d2 g,4 g' g f g bes2
+		c2 g'4. a8 bes4 f g f c \ficta es d2 \mark #9 g,4 g' f \ficta e! d2 g,4 g' g f g bes2
 		a4 g4. f8 | es4 d c2 bes4 g \[d'2 c\] \mark #10 r4 f2 e4 f g f2 a4. g8 |
 		f4 es f2 bes, bes' bes4 g g1 a2. d,4 f2 r g1
 		
