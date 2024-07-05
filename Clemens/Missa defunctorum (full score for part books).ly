@@ -2,7 +2,7 @@
 % Copyright ©2024 Peter Hilton - https://github.com/hilton
 
 \version "2.24.2"
-revision = "19"
+revision = "20"
 \pointAndClickOff
 
 #(set-global-staff-size 15)
@@ -303,7 +303,7 @@ bass = \new Voice {
 % KYRIE 1
 
 \score {
-	\transpose f f {
+	\transpose f g {
 	\new Staff <<
 		\key f \major
 		\new Voice = "tenor" {
@@ -394,7 +394,7 @@ bass = \new Voice {
 % CHRISTE
 
 \score {
-	\transpose f f {
+	\transpose f g {
 	\new Staff <<
 		\key f \major
 		\new Voice = "tenor" {
@@ -482,7 +482,7 @@ bass = \new Voice {
 % KYRIE 2
 
 \score {
-	\transpose f f {
+	\transpose f g {
 	\new Staff <<
 		\key f \major
 		\new Voice = "tenor" {
@@ -1522,7 +1522,7 @@ bass = \new Voice {
 }
 
 \score {
-	\transpose f f {
+	\transpose f g {
 	\new Staff <<
 		\key c \major
 		\new Voice {
