@@ -2,7 +2,7 @@
 % Copyright ©2024 Peter Hilton - https://github.com/hilton
 
 \version "2.24.2"
-revision = "18"
+revision = "19"
 \pointAndClickOff
 
 #(set-global-staff-size 15)
@@ -532,7 +532,7 @@ alto = \new Voice {
 tenor = \new Voice {
 	\relative c {
 		\clef "treble_8"
-		bes1 \[g2 d'\] c1 d2. d4 \ficta es d2 c4 d2. bes4 c bes2 a4 \mark #3 bes2 r4 a bes2 g
+		bes'1 \[g2 d'\] c1 d2. d4 \ficta es d2 c4 d2. bes4 c bes2 a4 \mark #3 bes2 r4 a bes2 g
 		bes bes4. c8 d2. bes4 c2. d4 bes2. g4 a bes2 a4 \[bes2 g\] f1
 		\showBarLine\bar "||"
 	}
@@ -1253,7 +1253,7 @@ soprano = \new Voice {
 alto = \new Voice {
 	\relative c'' {
 		\once \override Staff.TimeSignature.stencil = ##f
-		s1 e2 e4 e f1 d4 d e2 e1\fermata d f2 f2. f4 d2. e4 \cadenzaOn e\longa \cadenzaOff \showBarLine \bar "|" \break
+		s1 e,2 e4 e f1 d4 d e2 e1\fermata d f2 f2. f4 d2. e4 \cadenzaOn e\longa \cadenzaOff \showBarLine \bar "|" \break
 		s1 f2 f4 f e1 e4 c d2 e1\fermata e e2 f2. e8 d \[e2 f\] d2. d4 \cadenzaOn f\longa \cadenzaOff \showBarLine \bar "|" \break
 		s1 e2 e4 e f1 d4 d f2 e1\fermata e e g e2 e2. e4 f2 f2. f4 d1 \cadenzaOn e\longa \cadenzaOff \showBarLine \bar "||"
 	}
@@ -1355,7 +1355,7 @@ soprano = \new Voice {
 		
 		a4 g2 g1 \mark #13 r4 e f g a g2 f4 g2 r8 e f4 g a2 g
 		\ficta fis4 g d e \ficta f! g2 f4 \ficta bes a g2 \ficta fis4 \cadenzaOn g\longa \cadenzaOff
-		\showBarLine\bar "|"
+		\showBarLine\bar "||"
 	}
 	\addlyrics {
 % 		Lux æ -- _ ter -- _ na __ _ 
@@ -1395,7 +1395,7 @@ alto = \new Voice {
 		d2 f e4 f d e4. c8 d4 e2. f4. e8 c4 f e4 ~ e8 d8 c b a4 d f2 |
 
 		e4 f d e2 e4 d2 \mark #13 e \times 2/3 { c4 d e } a, e'2 d8 c b4 b c d e2 d1
-		r4 b | c d e2 d1. r4 b c d e2 \cadenzaOn d\breve s2 \cadenzaOff | \showBarLine \bar "|"
+		r4 b | c d e2 d1. r4 b c d e2 \cadenzaOn d\breve s2 \cadenzaOff |
 	}
 	\addlyrics {
 % 		Lux æ -- _ ter -- _ na __ _ 
@@ -1445,7 +1445,6 @@ tenor = \new Voice {
 
 		d4 b c g c2 b4 \mark #13 c4. b8 a4 g r b c4. d8 e4 d g,8 c4 b8 c4 e, f g |
 		a a g g2 a4 b c a d, f g a2 \cadenzaOn g\longa \cadenzaOff
-		\showBarLine\bar "|"
 	}
 	\addlyrics {
 		Lux æ -- _ ter -- _ na __ _ 
@@ -1490,7 +1489,6 @@ bass = \new Voice {
 
 		a4 f g c, e4. f8 g2 \mark #13 c, r4 e f g a2 g4. f8 e4 d c c d g, |
 		d'2 r4 g e d g c, d2. g,4 d'2 r4 g, c b c2 \cadenzaOn g\breve s2 \cadenzaOff
-		\showBarLine \bar "|"
 	}
 	\addlyrics {
 % 		Lux æ -- _ ter -- _ na __ _ 
