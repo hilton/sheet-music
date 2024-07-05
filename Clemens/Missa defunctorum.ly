@@ -702,9 +702,9 @@ soprano = \new Voice {
 	\relative c' {
 		\once \override Staff.TimeSignature.stencil = ##f
 		\cadenzaOn \skip 8*17 \cadenzaOff 
-
 		\set Score.currentBarNumber = #2
 		\showBarLine \bar "|" \time 2/2
+		
 		f2 g a1 bes2. a4 g a4. g8 g4. f16 e f4 g2 | \break
 		r2 g f g g a2. a4 a2 bes2. bes4 bes bes a g | \break a2 r4 g2
 

@@ -14,7 +14,7 @@ revision = "18"
 	two-sided = ##t
 	inner-margin = 15\mm
 	outer-margin = 10\mm
-	top-margin = 10\mm
+	top-margin = 8\mm
 	bottom-margin = 10\mm
 	markup-system-spacing = #'( (padding . 4) )
 	system-system-spacing = #'( (basic-distance . 15) (padding . 2) (stretchability . 100) )
@@ -109,9 +109,7 @@ soprano = \new Voice {
 		d4 c d e f a4. g8 f4 e8 d f2 e4 \mark \default f2 r4 f2
 		f4 e2 e4 f8 g a bes a4 ~ a4 g4 f g4. f8 f2 e8 d e2 \mark \default f4 c'4. bes8 a2 g8 f
 		
-		e4 c'4. bes8 a4 g f2 e4 f a a c 
-		\pageBreak
-		
+		e4 c'4. bes8 a4 g f2 e4 f a a c 		
 		bes a a g8 f g2. f4 a g f2.
 		g4. f8 f2 e4 \cadenzaOn f\breve \cadenzaOff s2 \showBarLine \bar "|"
 		
@@ -302,8 +300,6 @@ bass = \new Voice {
 	}
 }
 
-\pageBreak
-
 % KYRIE 1
 
 \score {
@@ -393,6 +389,7 @@ bass = \new Voice {
 	}
 }
 
+\pageBreak
 
 % CHRISTE
 
@@ -421,7 +418,7 @@ bass = \new Voice {
 soprano = \new Voice {
 	\relative c' {
 		\set Score.currentBarNumber = #11
-		bes1 \[a2 g\] \[a bes\] bes1 a2 g4 f
+		bes'1 \[a2 g\] \[a bes\] bes1 a2 g4 f
 		g2 f bes2. a4 g2 \cadenzaOn f\breve s1 \cadenzaOff
 		\showBarLine\bar "|"
 	}
@@ -481,7 +478,6 @@ bass = \new Voice {
 	}
 }
 
-\pageBreak
 
 % KYRIE 2
 
@@ -585,9 +581,7 @@ soprano = \new Voice {
 		\time 2/2
 		
 		r2 \[g2 c4.\] b8 a g a2 b4 c2 \[a d4.\] d8 |
-		g,4 g2 g4 \break
-		\pageBreak
-		
+		g,4 g2 g4 \break		
 		g g4. g8 e2 g4 f2. f4 g2 | \mark #4 g e4 a4. g8 g4. f8 f4.
 
 		e16 d e4 f2 |  \break
@@ -1065,7 +1059,7 @@ soprano = \new Voice {
 		a1 bes2 g f2. f4 e1 \cadenzaOn e\breve \cadenzaOff \showBarLine \bar "|"
 	}
 	\addlyrics {
-		San -- ctus
+% 		San -- ctus
 		San -- _ _ _ _ _ _ ctus San -- ctus Do -- mi -- 
 		nus De -- us Sa -- ba -- oth Sa -- ba -- oth __ _ _ _
 		Ple -- ni __ _ sunt coe -- li et ter -- ra glo -- ri -- a tu -- a
@@ -1086,7 +1080,7 @@ alto = \new Voice {
 		\showBarLine \bar "|"
 	}
 	\addlyrics {
-		San -- ctus
+% 		San -- ctus
 		San -- _ _ ctus Do -- mi -- nus De -- us Do -- _ _ _ _ _ mi -- nus De -- us Sa -- _ _ _ ba -- oth
 		Ple -- ni __ _ sunt coe -- li et ter -- ra glo -- ri -- a tu -- a
 		O -- san -- na in ex -- cel -- sis
@@ -1129,7 +1123,7 @@ bass = \new Voice {
 		\showBarLine \bar "|"
 	}
 	\addlyrics {
-		San -- ctus
+% 		San -- ctus
 		San -- _ _ ctus Do -- mi -- nus De -- us 
 		Do -- mi -- _ nus De -- us __ _ _ Sa -- _ ba -- oth
 		Ple -- ni __ _ sunt coe -- li et ter -- ra glo -- ri -- a tu -- a
