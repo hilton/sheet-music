@@ -1,8 +1,14 @@
 % Copyright ©2024 Peter Hilton - https://github.com/hilton
 % Based on CPDL #20129 by Nancho Alvarez
 
+% R → r
+% \showBarLine after each section
+% \break after 7-8 bars per system
+% Rhythmn / Make explicit
+% Remove ties and preserve underlay
+
 \version "2.24.2"
-revision = "1"
+revision = "2"
 \pointAndClickOff
 
 #(set-global-staff-size 15)
@@ -98,19 +104,22 @@ ss=\once \set suggestAccidentals = ##t
 mtempo={\tempo 4 = 100}
 mtempob={\tempo 4 = 50}
 
+
+% KYRIE
+
 cantus={
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 %5
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 	d'1 |
 	f'2 e'4 c' |
 	d' e' f'2 |
 %10
-	R1*4/4 |
+	r1*4/4 |
 	r2 r4 f' |
 	a'2 g'4 a'4. bes'8 c''2 \ss b'4 |
 	c''1 |
@@ -132,16 +141,16 @@ cantus={
 	e'4 d' bes'2 |
 	a'4 g' f'2. e'8 d' e'4. f'8 |
 	g'4 a' d'2 |
-	R1*4/4 |
+	r1*4/4 |
 %35
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 	r4 c' d' e' |
 	f' d' f'2 |
 	e' d' |
 %40
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 	r2 a' |
 	bes'4 bes' a' f'4. e'8 d'2 \ss cis'4 |
 %45
@@ -166,18 +175,18 @@ cantus={
 	g'1
 %65
 	a'2 r |
-	R1*4/4 |
+	r1*4/4 |
 	a'2 bes'4. a'8 |
 	g'4 f' e' d' |
 	e'2 d'1 r2 |
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 	r4 f' f' f' |
 	g' a'2 g'4 |
 %75
 	f' e'8 d' e'2 |
 	d' r |
-	R1*4/4 |
+	r1*4/4 |
 	d'2 f' ~ |
 	f'4 e' f' g' |
 %80
@@ -185,9 +194,9 @@ cantus={
 	r f' |
 	a'2. g'4 |
 	a' bes' c''2 |
-	R1*4/4 |
+	r1*4/4 |
 %85
-	R1*4/4 |
+	r1*4/4 |
 	r2 r4 e' |
 	 f'8[ e']  f'[ g' a' bes'] c''2 bes'8 a' g'4. a'8 |
 	bes'4 a'2 g'4 |
@@ -221,24 +230,24 @@ cantusdos={
 %25
 	a'\breve ~ |
 	a'\breve*1/2 |
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 %30
 	r4 d''2 d''4 |
 	c'' bes'2 a'8 g' |
 	a'1 |
 	bes'4 a'8 g' a'2 |
-	R1*4/4 |
+	r1*4/4 |
 %35
-	R1*4/4 |
+	r1*4/4 |
 	r4 g' a' bes' |
 	c'' a' bes'2 |
 	a'1 |
 	bes'4 a'8 g' f'4 g' |
 %40
 	d'2 r |
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 	r2 a'1 g'2 |
 %45
 	f'4.  g'8[ a' bes'] c''4. bes'8 a'2 g'4 |
@@ -264,25 +273,25 @@ cantusdos={
 	f'2 \ss ees'4 d' |
 	g'2. \ss fis'8 e' |
 	\ss fis'2 r |
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 %70
 	r4 f' f' f' |
 	g' a'2 g'4 |
 	f' e'8 d' e'2 |
 	d' r |
-	R1*4/4 |
+	r1*4/4 |
 %75
 	a'1 |
 	g'2 f'1 e'2 |
-	R1*4/4 |
+	r1*4/4 |
 	r2 d' |
 %80
 	f'2. e'4 |
 	f' g' a'2 |
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 %85
 	r2 r4 e' |
 	 f'8[ e']  f'[ g' a' bes'] c''4 |
@@ -346,7 +355,7 @@ altus={
 	d' d' bes2 |
 	r4 d'2 d'4 |
 	d' d' bes2 |
-	R1*4/4 |
+	r1*4/4 |
 	d'2. c'4 |
 %55
 	bes8 a bes4 a2 ~ |
@@ -367,9 +376,9 @@ altus={
 	r2 d' ~ |
 	d' c' |
 	bes4 a8 g a2 |
-	R1*4/4 |
+	r1*4/4 |
 %75
-	R1*4/4 |
+	r1*4/4 |
 	d'1 |
 	c' |
 	bes2 a4. g8 |
@@ -389,9 +398,9 @@ altus={
 }
 
 tenor={
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 	a1 |
 %5
 	c'2 bes4 g |
@@ -414,19 +423,19 @@ tenor={
 %25
 	a\breve ~ |
 	a\breve*1/2 |
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 %30
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 	r4 d'2 d'4 |
 %35
 	c' bes2 a8 g |
 	a bes c' bes a g g2 \ss fis4 g2 |
 	d1 |
-	R1*4/4 |
+	r1*4/4 |
 %40
 	r4 f g a |
 	bes a8 g f4 bes4. a8 g2 \ss fis4 |
@@ -446,8 +455,8 @@ tenor={
 %55
 	d r4 a4. g8 f e d4. e8 |
 	\ss fis\breve*1/2 |
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 %60
 	a2. a4 |
 	a2 bes |
@@ -464,7 +473,7 @@ tenor={
 	f4 d d'2 |
 	c' bes |
 	a1 |
-	R1*4/4 |
+	r1*4/4 |
 	r2 d'1 c'2 |
 	bes a4 f8 g |
 	a bes c'4. bes8 g a |
@@ -488,8 +497,8 @@ tenor={
 }
 
 bassus={
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 	r2 d1 f2 |
 %5
 	e4 c d e |
@@ -508,7 +517,7 @@ bassus={
 	f2 \ss ees4. d8 |
 %20
 	c2 d |
-	R1*4/4 |
+	r1*4/4 |
 	r4 d' d' d' |
 	c' bes a4. g8 |
 	f2 g |
@@ -516,11 +525,11 @@ bassus={
 	d4 a4. g8 f e |
 	d4 e f2 |
 	e\breve*1/2 |
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 %30
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 	r4 a2 a4 |
 	g f2 e8 d |
 	e4 d f2. g4 g2 |
@@ -545,8 +554,8 @@ bassus={
 	f g e2 |
 	d1 ~ |
 	d\breve*1/2 |
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 %60
 	f2. f4 |
 	f2 g |
@@ -555,8 +564,8 @@ bassus={
 %65
 	a f g bes2 a8 g a2 |
 	d'1 |
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 %70
 	r4 d d d |
 	e f g2 |
@@ -586,14 +595,14 @@ bassusdos={
 %5
 	c a, bes, c |
 	f,2 r |
-	R1*4/4 |
+	r1*4/4 |
 	r2 a, |
 	bes,4 c d2 |
 %10
 	g,4 bes, f,8 g, a, bes, |
 	c4. bes,8 g,4 bes, |
 	f,2 r |
-	R1*4/4 |
+	r1*4/4 |
 	r4 f e f4. g8 a4 g g, |
 	c2  f,8[ g,]  a,[ bes,] |
 	c4 g, d2. bes,4 \ss ees2 |
@@ -607,28 +616,28 @@ bassusdos={
 %25
 	d4. e8 f4 d2 c4 d2 |
 	a,\breve*1/2 |
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 %30
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 	r4 d2 d4 |
 	c bes,2 a,8 g, |
 %35
 	a,4 g, ees2 |
 	d4 c2 bes,4 |
 	a,2 g, |
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 %40
 	r2 r4 f, |
 	g, a, bes, g, |
 	bes,2 a, |
 	g, r |
-	R1*4/4 |
+	r1*4/4 |
 %45
-	R1*4/4 |
+	r1*4/4 |
 	r4 c d e |
 	f d f2 |
 	e d |
@@ -643,8 +652,8 @@ bassusdos={
 	bes, g, a,2 |
 	d1 ~ |
 	d\breve*1/2 |
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 %60
 	d2. d4 |
 	d2 g, |
@@ -656,7 +665,7 @@ bassusdos={
 	\ss ees2 d1 g4. f8 |
 	ees4 d c bes, |
 	c2 d1 r2 |
-	R1*4/4 |
+	r1*4/4 |
 	r2 a, |
 	d2. d4 |
 	e f g2 |
@@ -673,7 +682,7 @@ bassusdos={
 	d2. c4 |
 %85
 	d bes, a,2 |
-	R1*4/4 |
+	r1*4/4 |
 	r2 r4 a, |
 	a, bes, c g,2 d4 r g, |
 %90
@@ -961,6 +970,1201 @@ e -- le -- _ i -- son.
 %  \midi {\tempo 2 = 100 }
 }
 
+% SANCTUS
+
+cantus={
+	r1*4/4 |
+	r1*4/4 |
+	d'1 |
+	f'2 e'4 c'4 |
+%5
+	d'4 e'4 f'2 |
+	e'4 g'4. f'8 d'8 e'8 |
+	f'4 g'4 c'4 c''4 ~ |\break
+	c''8 bes'8 a'2 g'4 | 
+	a'2 r2 |
+%10
+	r1*4/4 |
+	f'2 f'2 |
+	g'2 f'2 |
+	r4 f'4 g'2 |
+	a'2 bes'2 ~ |\break
+%15
+	bes'4 a'8 g'8 a'4 f'8 g'8 |
+	a'8 bes'8 c''4. bes'8 a'2 g'4 a'1 r4 a'4 |
+	a'4 a'4 bes'4 a'8 g'8 |
+%20
+	f'4 bes'4. a'8 g'2 \ss fis'4 g'2 |\break
+	r1*4/4 |
+	r1*4/4 |
+	r4 f'4 g'4 a'4 | 
+%25
+	bes'4 g'4 bes'4 a'4. g'8 g'2 f'8 e'8 |
+	f'4 d'4. e'8 f'2 e'4. d'8 d'4 ~ |
+	d'4 \ss cis'4 d'1 r2 |
+	r2 a'2 |
+	bes'1 | 
+	a'\breve |
+%35
+	r1*4/4 |
+	r2 r4 f'4 |
+	g'4 a'4 bes'4 g'4 |
+	bes'4. bes'8 a'1 r4 f'4 |
+%40
+	g'4 a'4 bes'4 g'4 |
+	bes'4 a'4. g'8 g'4 |
+	a'\breve*1/2 |
+	\showBarLine \bar "|"
+	\break
+	s4*0^\markup{"[Cantus I]"}
+	a'2. a'4 |
+	g'4 e'4 f'4. g'8 |
+%45
+	a'4 bes'4 a'4 bes'4. a'8 a'2 g'4 |
+	bes'4 a'4. g'8 g'4 |
+	a'4 a'2 c''4 |
+	bes'4 g'4 a'2 |
+%50
+	d'4.  e'8 f'8 e'8 f'4 ~ | \break
+	f'4 d'4 e'2 |
+	r4 e'4 f'8 e'8 f'8 g'8 | 
+	a'8 bes'8 c''2 bes'8 a'8 |
+	%\break
+	g'4. a'8 bes'4 a'4 |
+%55
+	g'4 bes'4. a'8 a'2 g'4 a'1 r4 a'2 a'4 g'4 f'4 ~ | \break
+	f'4 e'8 d'8 e'2 |
+%60
+	d'4 g'4. f'8 f'4 |
+	g'2 r4 a'2 a'4 g'4 f'2 e'8 d'8 e'4 d'4 |
+	%\break
+	bes'2 a'4 g'4 ~ | \break
+%65
+	g'4 \ss fis'8 e'8 fis'2 |
+	r1*4/4 |
+	r4 a'2 a'4 |
+	g'4 f'2 e'4 |
+	f'4 g'4 e'2 |
+%70
+	d'\breve*2/1 |
+	\showBarLine \break
+	a'2 bes'4 a'2 f'4 g'4 a'4 |
+	f'4 c''2 bes'8 a'8 |
+	bes'4 a'4 g'4 f'4 |
+	a'2 r2 |
+	r2 a'2 |
+%80
+	bes'4 a'4 g'4 a'2 d'4 g'4 f'4 ~ | \break
+	f'4 e'4 d'2 |
+	r4 d'4 f'2 |
+	e'4 c'4 d'4 e'4 |
+%85
+	f'4 d'4. e'8 f'4 |
+	d'8 e'8 f'8 g'8 a'4 d'4 |
+	a'2 g'4 f'2 e'4 d'2 | \break
+	e'2 c'2 |
+%90
+	r1*4/4 |
+	r4 c''4 c''4 c''4 |
+	bes'4 g'4 bes'4 a'4. g'8 g'2 \ss fis'4 |
+	g'2 r2 |
+%95
+	r1*4/4 | \break
+	r2 r4 f'4 |
+	e'4 e'4 d'4 e'4 |
+	f'8 g'8 a'4. g'8 g'4 |
+	a'\breve*4/2
+}
+
+cantusdos={
+	r2 a'1 g'1 f'4 g'4 |
+	a'4 bes'4 g'4 a'4. bes'8 c''4 a'4 f'4 |
+	g'2. bes'4 |
+	a'4 g'4 a'2 ~ |
+	a'2 r2 |
+	r2 a'2 |
+%10
+	c''2 bes'4 g'4 |
+	a'4. bes'8 c''4 d''2 c''8 bes'8 a'4. g'8 |
+	f'4 d'4 e'4. d'8 |
+	c'4 c''4 bes'4 g'4 ~ |
+%15
+	g'4 f'8 e'8 f'8 g'8 a'8 bes'8 |
+	c''4 a'4. g'8 f'8 e'8 |
+	d'2 r4 c'4 |
+	d'4 e'4 f'4 d'4 |
+	f'2 e'2 |
+%20
+	d'4 g'4 f'4 g'4 |
+	a'2 r2 |
+	r2 r4 a'4 |
+	a'4 a'4 g'4 f'2 bes'4. a'8 f'4 |
+%25
+	g'2 r2 |
+	r2 r4 a'4 |
+	a'4 a'4 bes'4 a'8 g'8 |
+	f'4 g'4 d'2 |
+	r4 e'4 f'8 g'8 a'8 f'8 |
+%30
+	bes'4 a'4 g'8 f'8 g'4. f'8 d'4 e'4 f'4 |
+	g'1 |
+	r4 f'4 e'4 c'4 |
+	d'8 c'8 d'8 e'8 f'2 |
+%35
+	e'4 d'4 g'2 ~ |
+	g'4  f'8 e'8 f'8 d'8 f'2 e'4 f'4 e'4. d'8 d'2 \ss cis'4 |
+	d'\breve*2/1 |
+	s4*0^\markup{"[Cantus II]"}
+	r1*4/4 |
+	r1*4/4 |
+%45
+	r1*4/4 |
+	r1*4/4 |
+	d'1 |
+	f'2 e'4 c'4 |
+	d'4 e'4 f'4. g'8 |
+%50
+	a'4 bes'4. a'8 a'4 ~ |
+	a'4 g'4 a'2 |
+	g'4. a'8 bes'4 a'2 f'4 g'2 |
+	r4 g'4 g'4 f'4 |
+%55
+	g'2 d'2 |
+	r4 d'4 d'4 c'4 |
+	d'4 e'4 f'2 |
+	e'2 d'4 d''4 ~ |
+	d''4 d''4 c''4 bes'2 a'8 g'8 a'2 |
+	r4 g'2 f'8 e'8 |
+	f'8 g'8 a'8 f'8 bes'4 a'2 g'4 a'4 f'4 |
+	g'4 f'4. e'8 d'8 c'8 |
+%65
+	d'4 a'2 a'4 |
+	g'4 f'2 e'8 d'8 |
+	e'2 d'4 f'4 |
+	g'4 a'4 bes'4 g'4 |
+	bes'2 a'1 r4 f'4 |
+	g'4 a'4 bes'4 g'4 |
+	bes'4 a'4. g'8 g'2 \ss fis'8 e'8 \mtempob fis'\breve*1/4 |
+	\mtempo
+	r1*4/4 |
+%75
+	r1*4/4 |
+	r1*4/4 |
+	d'1 |
+	f'2 e'4 c'4 |
+	d'4 e'4 f'2 |
+%80
+	r1*4/4 |
+	r1*4/4 |
+	r2 a'2 |
+	bes'4 a'2 f'4 |
+	g'4 a'4 f'4 c''2 bes'8 a'8 bes'4 a'4 |
+	g'4 f'8 e'8 f'2 |
+	r2 r4 a'2 g'4 f'4 d'4 |
+	g'2 a'2 |
+%90
+	bes'4. a'8 f'4 bes'2 a'4 g'4 f'4 |
+	g'2 r2 |
+	r2 a'2 |
+	bes'2 a'4 bes'4 |
+%95
+	a'4 bes'4. a'8 a'4 ~ |
+	a'4 g'4 a'4. f'8 |
+	g'4 c'4 f'4 e'4 |
+	d'4 d''4 d''1 c''2 |
+%100
+	r4 c'4 d'4. e'8 |
+	f'4 e'4 d'2 |
+	e'\breve*1/2
+	\showBarLine \bar "||"
+}
+
+altus={
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+%5
+	r1*4/4 |
+	r2 d'1 f'2 |
+	e'4 c'4 d'4 e'4 |
+	f'1 |
+%10
+	r4 c'4 d'4 c'4. bes8 a8 g8 f4 f'4 |
+	d'4 e'4 f'4 c'4 |
+	d'2 g2 |
+	c'2 r4 bes4 ~ |
+%15
+	bes8 c'8 d'4. e'8 f'4. e'8 c'4 f'2 |
+	r4 d'4 f'4. f'8 |
+	f'4 e'4 d'4 f'4. e'8 d'2 \ss cis'4 |
+%20
+	d'2 r2 |
+	r4 c'4 d'4 e'4 |
+	f'4 e'8 d'8 c'4 f'4. e'8 d'2 c'4 |
+	d'2. c'4 |
+%25
+	bes4 c'4 d'2. c'8 bes8 a1 r2 |
+	r4 c'4 d'4 bes4 |
+	c'8 bes8 a8 g8 f4 f'4 |
+%30
+	bes4 f'4 d'4 e'4. d'8 d'2 c'4 |
+	d'1 ~ |
+	d'2 c'2 |
+	a2 a4. bes8 |
+%35
+	c'4 d'4 d'2 ~ |
+	d'2 r2 |
+	r4 c'4 d'4 e'4 |
+	f'4 g'4 e'4. e'8 |
+	d'2 r2 |
+%40
+	\set Staff.autoBeaming = ##f
+	r4 f4 g8 a8 bes4 |
+	\set Staff.autoBeaming = ##t
+	g4 a4 bes2 |
+	a\breve*1/2 |
+	s4*0^\markup{"[Altus]"}	
+	r1*4/4 |
+	r2 d'1 f'2 |
+	e'4 c'4 d'4 e'4 |
+	f'2 r4 d'2 d'4 c'4 a4 |
+	bes4 c'4 f4 f'4. e'8 d'4. c'8 bes8 a8 |
+	bes2 a2 |
+	r2 d'4. d'8 |
+	c'4 a4 c'4 d'2 \ss cis'4 d'2 |
+%55
+	e'4 d'4. c'8 a4 |
+	bes2 a4. g8 |
+	a8 bes8 c'4 a4 d'2 \ss cis'4 d'2 ~ |
+	d'2 r2 |
+%60
+	r4 d'2 d'4 |
+	c'4 bes2 a8 g8 |
+	a4 f4 g4 d4 |
+	bes2 a4 d'2 d'4 c'4 bes4 ~ |
+%65
+	bes4 a8 g8 a4 d'4 |
+	d'4 c'4 bes8 a8 d'2 \ss cis'4 d'2 |
+	e'4 d'8 c'8 d'4 e'4. d'8 d'2 \ss cis'4 |
+%70
+	d'4 f4 g4 a4 |
+	bes4 a4 g4 bes4.
+	g8 a4 bes2 |
+	a\breve*1/2 |
+	d'1 |
+%75
+	f'2 e'4 c'4 |
+	d'4 e'4 f'2 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+%80
+	d'1 |
+	f'2 e'4 c'4 |
+	d'4 e'4 f'2 |
+	r1*4/4 |
+	r1*4/4 |
+%85
+	r1*4/4 |
+	d'1 |
+	f'2 e'4 c'4 |
+	d'4 e'4 f'2 |
+	r1*4/4 |
+%90
+	d'1 |
+	f'2 e'4 c'4 |
+	d'4 e'4 f'2 |
+	r1*4/4 |
+	d'1 |
+%95
+	f'2 e'4 c'4 |
+	d'4 e'4 f'2 |
+	r1*4/4 |
+	d'1 |
+	f'2 e'4 c'4 |
+%100
+	d'4 e'4 f'4 f8 g8 |
+	a8 bes8 c'4 a4 d'2 \ss cis'8 \ss b8 \mtempob cis'\breve*1/4
+}
+
+tenor={
+	d'1 |
+	c'1 |
+	bes2 a4 bes4 |
+	c'4 d'4 c'2 |
+%5
+	a2 f2 |
+	r4  g8[ a8 bes8 c'8] d'4. c'8 bes4 a4 f4 |
+	a2 bes2 |
+	a2 d4 f4 |
+%10
+	e4 a4 g2 |
+	f4. g8 a4 bes2 c'4 f1 c'2. a4 d'2 ~ |
+%15
+	d'2 r4 a4 |
+	a4 a4 c'2 |
+	bes4 d'4. c'8 a4. bes8 c'4 f2 |
+	r4 f4 g4 a4 |
+%20
+	bes4 g4 bes2 |
+	a2 g2 |
+	f4 c'4. bes8 a8 g8 |
+	a2 r2 |
+	r2 r4 c'4 |
+%25
+	d'4 e'4 f'4 d'4 |
+	f'4 e'4 d'2 ~ |
+	d'1 |
+	d4 e4 f4 g4 |
+	e2 r4 f4 |
+%30
+	g4 a4 bes4 g4 |
+	bes2 a2 |
+	g2 r4 g4 |
+	f4 d4 e2 |
+	f2 d2 |
+%35
+	e4 f4 g2 |
+	r4 d'4 d'4 d'4 |
+	c'2 bes4 c'4 |
+	bes4 g4 a2 |
+	r4 a4 a4 a4 |
+%40
+	bes4 a4 g4. f8 |
+	d8 e8 f4 d4 g2 \ss fis8 e8 \mtempob fis\breve*1/4 |
+	\mtempo
+	s4*0^\markup{"[Tenor]"}
+	r1*4/4 |
+	r1*4/4 |
+%45
+	d'2. d'4 |
+	c'4 a4 bes4 c'4 |
+	d'4 d4 f4 g4 |
+	d8 e8 f8 g8 a2 |
+	r1*4/4 |
+%50
+	r2 d'2 ~ |
+	d'4 d'4 c'4 a4 |
+	bes4 c'4 d'4 d4 |
+	f2 e1 d2 |
+%55
+	r4 g4 g4 f4 |
+	g2 d4 f4. e8 c4 d8 e8 f8 g8 |
+	a2 bes2 ~ |
+	bes2 a4 g2 f8 e8 d2 |
+	\ss ees2 d1 r4 d'2 d'4 c'4 bes8 a8 |
+	g4 bes4 f4 g4 |
+%65
+	d1 |
+	g4 a4 bes2 |
+	a2 d2 |
+	r4 d'4 bes4 c'4 |
+	bes4 g4 a2 |
+%70
+	d2 r4 d4 |
+	g4 f4 g2. f4 g2 |
+	d\breve*1/2 |
+	d2 g4 f2 d4 e4 f2 e4 d2 |
+	r4 a4 bes4 a2 f4 g4 a4 |
+	g2 f2 |
+%80
+	r4 a4 bes4 a2 f4 g4 a4 |
+	f4 c'4 a4 d'4. e'8 f'4 f8 g8 a8 f8 |
+	c'4 f2 e4 |
+%85
+	a2 r4 a4 |
+	bes4 a4. f8 bes4 |
+	a4 f4 g4 a4. bes8 c'2 bes4 |
+	c'2 r4 c'4 |
+%90
+	bes4 g4 a4 bes4 |
+	c'2 c'2 |
+	r4 c'4 d'4 f'2 e'4 d'2. g4 a4 g4 |
+%95
+	d'2 c'4 a4 |
+	bes2 a2 |
+	c'2 d'4 c'4 |
+	bes4 a4 bes2 |
+	a\breve*4/2 
+}
+
+bassus={
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+%5
+	a1 |
+	c'2 bes4 g4 |
+	a4 bes4 c'2 ~ |
+	c'2 r4 g4 |
+	f4 d8 e8 f8 g8 a8 f8 |
+%10
+	g4 f4. e8 e4 |
+	f2 r2 |
+	r2 f2 |
+	d4 f4 e4 g4. \ss fis8 fis4 g2 |
+%15
+	r4 a4 a4 a4 |
+	f4. g8 a2 |
+	bes2 a\breve r2 |
+%20
+	r4 d'4 d'4 d'4 |
+	c'2 bes4 c'4 |
+	a4 g4 a2 |
+	r4 f4 g4 a4 |
+	bes2. a4 |
+%25
+	g8 f8 e4 d2 |
+	r1*4/4 |
+	r4 f4 g4 a4 |
+	bes4 g4 bes2 |
+	a1 |
+%30
+	g4 f4 g1 r4 c'4 |
+	bes4  g8[ a8 bes8 c'8] d'4 |
+	d8 e8 f8 g8 a1 r4 f4 |
+%35
+	g4 a4 bes4 g4 |
+	bes4. bes8 a2 |
+	r1*4/4 |
+	r2 e2 |
+	f1 |
+%40
+	d\breve*3/2 |
+	r1*4/4 |
+	r1*4/4 |
+%45
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+%50
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+%55
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+%60
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+%65
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+%70
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+%75
+	r2 r4 a4 |
+	bes4 a2 f4 |
+	g4 a4 d2 |
+	r4 a4 c'2 |
+	bes4 g4 a2 |
+%80
+	g4 f4 g4 f8 e8 |
+	d2 r4 a4 |
+	bes4 a2 f4 |
+	g4 f8 e8 d2 |
+	r4 a4 bes4 a2 f4 g4 a4 |
+	d4 d'4 d'2. c'4 c'2 |
+	r2 f2 |
+	e4 g4. \ss fis8 fis4 |
+%90
+	g4. f8 d4 g4 |
+	f8 g8 a8 bes8 c'4 a4 |
+	g4. f8 d4 d'4 |
+	c'4. bes8 a2 |
+	g2 f4 g4 |
+%95
+	d2 a2 |
+	r4 g4 f4 d4 |
+	e4 a4. g8 g2 f4 g2 |
+	f4 d4 e2 |
+%100
+	f4 e4 d4 f4 |
+	d4 e4 f2 |
+	e\breve*1/2
+}
+
+bassusdos={
+	d1 |
+	f2 e4 c4 |
+	g4. f8 d4 g4 |
+	f4 bes,4 c4 f4. e8 c4 d2 |
+	c4. bes,8 g,4 g4 |
+	d4 g4 f2 |
+	r2 g2 |
+	d4 f4. e8 d4 |
+%10
+	c4 a,4 bes,4 c4 |
+	f,2 r2 |
+	r4 c4 d4 f4 |
+	bes,4 d4 c4. bes,8 |
+	a,2 g,2 |
+%15
+	d1 |
+	r4 f4 f4 f4 |
+	g2 d4 f4 |
+	d4 c4 d1 r2 |
+%20
+	r1*4/4 |
+	r2 r4 c4 |
+	d4 e4 f4 d4 |
+	f2 e4 f4 |
+	bes,2 r2 |
+%25
+	r2 r4 d4 |
+	bes,4 c4 d1 g,4 d2 c4 bes,4 g,4 |
+	a,2 d2 |
+%30
+	r1*4/4 |
+	r1*4/4 |
+	g,1 |
+	d2 a,2 |
+	d2. d4 |
+%35
+	c4 bes,8 a,8 g,2 |
+	d1 |
+	r1*4/4 |
+	r2 a,2 |
+	d2. d4 |
+%40
+	g,4 d4 g,2. f,4 g,2 |
+	d\breve*1/2 |
+	r1*4/4 |
+	r1*4/4 |
+%45
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+%50
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+%55
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+%60
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+%65
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+%70
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r2 r4 d2 d4 c4 f,4 |
+	bes,4 c4 d2 |
+	g,4 f,4 g,4 d2 d4 c4 a,4 |
+	bes,4 c4 f,2 |
+%80
+	r2 r4 d2 d4 c4 f4 |
+	bes,4 c4 d2 |
+	r2 r4 d4 |
+	c4 f4 bes,4 c4 |
+%85
+	d2 g,4 f,4 |
+	g,4 d2 bes,8 c8 |
+	d8 e8 f4 c4 f4. e8 c4 d2 |
+	c4. bes,8 a,2 |
+%90
+	g,2 r2 |
+	r1*4/4 |
+	r4 c4 bes,8 c8 d8 e8 |
+	f4 c4 d2 |
+	g,2 r2 |
+%95
+	r1*4/4 |
+	g,2 d2 |
+	c4 a,4 bes,4 c4 |
+	d2 g,2 |
+	d2 a,2 |
+%100
+	d4 a,4 d2. c4 d2 |
+	a,\breve*1/2
+}
+
+textocantus=\lyricmode{
+San -- _ _ _ _ _ _ _ _ _ _ _ _ _ ctus,
+San -- _ _ _ _ ctus
+\italicas
+San -- ctus __ _ _
+\rectas
+San -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ ctus
+Do -- mi -- nus De -- _ _ us Sa -- _ ba -- _ oth
+\italicas
+Do -- mi -- nus De -- us Sa -- _ _ _ _ _ _ _ _ _ _ _ _ _ ba -- oth
+Sa -- ba -- oth
+Do -- mi -- nus De -- us Sa -- ba -- oth
+\rectas
+Do -- mi -- nus De -- us Sa -- ba -- _ _ oth.
+Ple -- ni sunt _ cæ -- _ li et __ _ ter -- _ _ _ _ _ _ _ ra,
+\italicas
+ple -- ni sunt cæ -- li et __ _ _ _ ter -- _ _ ra
+ple -- ni __ _ _ _ _ _ _ _ _ sunt
+cæ -- li et ter -- _ _ _ _ ra
+\rectas
+glo -- ri -- a tu -- _ _ _ _ _ _ _ _ a
+\italicas
+glo -- ri -- a tu -- _ _ _ _ _ _ _ _ _ _ a
+glo -- ri -- a
+\rectas
+tu -- _ _ _ _ a.
+Ho -- san -- na in ex -- _ cel -- _ _ _ _ _ _ _ sis
+\italicas
+ho -- san -- na in ex -- _ cel -- _ _ _ sis
+ho -- san -- na in ex -- cel -- sis,
+ho -- _ _ san -- _ _ _ _ na in ex -- cel -- _ _ _ sis
+ho -- san -- na in ex -- _ cel -- _ _ _ sis
+\rectas
+ho -- san -- na in ex -- cel -- _ _ _ _ sis. _ _ _ 
+}
+
+textocantusdos=\lyricmode{
+San -- _ _ _ _ _ _ ctus, __ _ _
+San -- _ _ _ _ _ ctus _
+San -- _ _ _ _ _ _ _ _ _ _ _ _ _ ctus, __ _ _ _ _ 
+San -- _ _ _ _ _ _ _ _ _ _ _ _ ctus
+Do -- mi -- nus De -- us Sa -- ba -- oth __ _ _ _ _ 
+\italicas
+Do -- mi -- nus De -- us Sa -- _ ba -- oth
+Do -- mi -- nus De -- us _ Sa -- ba -- oth
+Do -- mi -- _ _ _ _ nus De -- _ us __ _ Sa -- _ ba -- oth
+\rectas
+Do -- mi -- nus De -- _ _ _ _ _ us Sa -- _ _ _ _ _ _ _ _ _ _ _ ba -- oth. 
+Ple -- ni sunt cæ -- _ _ li __ _ et ter -- _ _ _ _ _ _ _ _ _ _ ra
+\italicas
+ple -- ni sunt cæ -- li
+ple -- ni sunt cæ -- li et ter -- ra 
+\rectas
+glo -- _ ri -- a tu -- _ _ a
+\italicas
+glo -- ri -- _ a __ _ _ _ _ tu -- _ _ _ _ _ _ _ _ a,
+glo -- ri -- a tu -- _ _ _ a,
+glo -- ri -- a tu -- _ _ a
+\rectas
+glo -- ri -- a tu -- _ _ _ _ _ _ _ a.
+Ho -- san -- na in ex -- cel -- sis
+\italicas
+ho -- san -- na in ex -- cel -- _ _ _ _ _ _ _ _ _ sis
+ho -- san -- _ na in ex -- cel -- _ _ _ _ _ _ sis
+ho -- san -- na in ex -- cel -- _ _ _ _ _ _ sis,
+ho -- san -- na in ex -- cel -- sis
+\rectas
+ho -- san -- na in ex -- cel -- sis.
+}
+
+textoaltus=\lyricmode{
+San -- _ _ _ _ _ _ ctus
+San -- _ _ _ _ _ _ _ _ _ _ _ _ ctus
+San -- _ _ _ _ _ _ _ ctus
+Do -- mi -- nus De -- us Sa -- ba -- _ _ _ oth
+\italicas
+Do -- mi -- nus __ _ _ _ _ De -- _ _ _ us Sa -- ba -- _ oth __ _ _ _ 
+Do -- mi -- nus De -- _ _ _ us,
+Do -- mi -- nus De -- _ _ _ _ _ _ _ us Sa -- _ _ ba -- oth _
+Do -- mi -- nus De -- us Sa -- ba -- oth
+\italicas
+Do -- mi -- nus De -- us Sa -- ba -- oth.
+\rectas
+Ple -- ni sunt cæ -- _ _ li
+\italicas
+ple -- ni sunt cæ -- _ li et ter -- _ _ _ _ _ _ ra
+ple -- ni sunt cæ -- li et __ _ ter -- _ _ _ _ _ _ _ _ _ _ _ _ _ ra _
+\rectas
+glo -- ri -- a tu -- _ _ _ _ _ _ _ a,
+\italicas
+glo -- ri -- a tu -- _ _ _ a,
+glo -- ri -- a __ _ _ tu -- _ _ _ _ _ _ _ _ _ _ a,
+glo -- ri -- a tu -- _ a,
+\rectas
+glo -- ri -- a tu -- a.
+Ho -- san -- na in ex -- cel -- sis
+\italicas
+ho -- san -- na in ex -- cel -- sis
+ho -- san -- na in ex -- cel -- sis
+ho -- san -- na in ex -- cel -- sis
+ho -- san -- na in ex -- cel -- sis
+\rectas
+ho -- san -- na in ex -- cel -- sis,
+\italicas
+in __ _ _ _ _ ex -- cel -- _ _ sis.
+}
+
+textotenor=\lyricmode{
+San -- _ _ _ _ _ _ _ _ ctus
+San -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ ctus,
+San -- _ ctus _
+Do -- mi -- nus De -- us Sa -- _ ba -- _ _ oth
+\italicas
+Do -- mi -- nus De -- us Sa -- ba -- oth __ _ _ _ _ _ _ 
+Do -- mi -- nus De -- us Sa -- ba -- oth, _ 
+Do -- mi -- nus De -- us
+Do -- mi -- nus De -- us Sa -- ba -- oth
+Do -- mi -- nus De -- us Sa -- _ ba -- oth
+Do -- mi -- nus De -- us Sa -- _ ba -- oth
+\rectas
+Do -- mi -- nus De -- us Sa -- _ _ _ _ _ ba -- _ _ oth.
+Ple -- ni sunt cæ -- li et ter -- _ _ _ ra __ _ _ _ _ 
+\italicas
+ple -- _ ni sunt cæ -- li __ _ _ et ter -- _ ra
+ple -- ni sunt cæ -- li et __ _ _ ter -- _ _ _ ra glo -- _ ri -- a __ _ _ _ tu -- a
+\rectas
+glo -- ri -- a __ _ _ _ tu -- _ _ a,
+\italicas
+glo -- ri -- a tu -- a
+glo -- ri -- a tu -- _ _ a
+\rectas
+glo -- ri -- a tu -- _ _ a.
+Ho -- san -- na in ex -- cel -- _ sis
+\italicas
+ho -- san -- na in ex -- _ cel -- sis
+ho -- san -- na in ex -- cel -- sis,
+ho -- san -- na __ _ _ in __ _ _ _ _ ex -- cel -- sis
+ho -- san -- na __ _ _ in ex -- cel -- _ _ _ _ sis
+\rectas
+ho -- san -- na in ex -- cel -- sis
+\italicas
+ho -- san -- na __ _ _ _ _ _ in ex -- _ cel -- sis,
+ho -- san -- na in ex -- cel -- sis.
+}
+
+textobassus=\lyricmode{
+San -- _ _ _ _ _ ctus _
+San -- _ _ _ _ _ _ _ _ _ _ _ ctus
+San -- _ _ _ _ _ _ ctus
+Do -- mi -- nus De -- us Sa -- ba -- oth
+\italicas
+Do -- mi -- nus De -- us Sa -- ba -- _ oth
+Do -- mi -- nus De -- us Sa -- _ ba -- oth
+Do -- mi -- nus De -- us Sa -- ba -- _ _ oth
+Do -- mi -- nus __ _ _ _ _ De -- _ _ _ us
+\rectas
+Do -- mi -- nus De -- us Sa -- ba -- oth
+\italicas
+Sa -- ba -- oth.
+\rectas
+Ho -- san -- na in ex -- cel -- sis
+\italicas
+ho -- san -- na in ex -- cel -- _ _ _ _ sis
+ho -- san -- na in ex -- cel -- _ sis
+ho -- san -- _ _ _ _ na in ex -- cel -- sis
+ho -- san -- na __ _ _ in __ _ _ ex -- cel -- _ _ _ _ _ sis, __ _ _ 
+ho -- san -- _ _ na in ex -- cel -- sis
+ho -- san -- na in ex -- _ cel -- _ _ _ _ sis,
+\rectas
+ho -- san -- na in ex -- cel -- _ sis.
+}
+
+textobassusdos=\lyricmode{
+San -- _ _ _ _ _ _ _ _ _ ctus,
+San -- _ _ _ _ _ _ _ _ _ ctus
+San -- _ _ _ _ _ _ _ _ ctus
+Do -- mi -- nus De -- _ us __ _ Sa -- ba -- oth
+\italicas
+Do -- mi -- nus De -- us Sa -- ba -- _ oth
+Do -- mi -- nus De -- us Sa -- ba -- _ oth
+Do -- mi -- nus De -- us Sa -- _ _ _ ba -- oth
+Do -- mi -- nus De -- us Sa -- _ _ ba -- oth
+\rectas
+Do -- mi -- nus De -- us Sa -- _ ba -- oth.
+Ho -- san -- na in ex -- _ _ cel -- _ sis,
+\italicas
+ho -- san -- na in ex -- cel -- sis
+ho -- san -- na in ex -- cel -- sis
+ho -- san -- na in ex -- cel -- _ _ sis,
+ho -- san -- _ _ _ _ na in __ _ _ ex -- cel -- _ _ sis
+ho -- san -- _ _ _ _ _ _ na
+ho -- san -- na in ex -- cel -- _ _ sis,
+\rectas
+ho -- san -- na in ex -- cel -- sis.
+}
+
+
+
+\score {
+  \header {
+    piece = \markup \larger \sans { Sanctus }
+  }
+  
+  \transpose f as {
+  <<
+
+    \new StaffGroup
+    <<
+      \new Staff
+      <<
+        \set Staff.instrumentName = "S1"
+        \context Staff <<
+          \context Voice = "sopranoA" {  \global \cantus }
+          \new Lyrics \lyricsto "sopranoA" { \textocantus }
+        >>
+      >>
+      
+      \new Staff
+      <<
+        \set Staff.instrumentName = "S2"
+        \context Staff <<
+          \context Voice = "sopranoB" {  \global \cantusdos }
+          \new Lyrics \lyricsto "sopranoB" { \textocantusdos }
+        >>
+      >>
+      
+      \new Staff
+      <<
+        \set Staff.instrumentName = "A"
+        \context Staff <<
+          \context Voice = "alto" { \global \altus }
+          \new Lyrics \lyricsto "alto" { \textoaltus }
+        >>
+      >>
+      
+      \new Staff
+      <<
+        \set Staff.instrumentName = "T"
+        \context Staff <<
+          \context Voice = "tenorA" { \global \clef "treble_8" \tenor }
+          \new Lyrics \lyricsto "tenorA" { \textotenor }
+        >>
+      >>
+      
+      \new Staff
+      <<
+        \set Staff.instrumentName = "B1"
+        \context Staff <<
+          \context Voice = "tenorB" { \global \clef "treble_8" \bassus }
+          \new Lyrics \lyricsto "tenorB" { \textobassus }
+        >>
+      >>
+      
+      \new Staff
+      <<
+        \set Staff.instrumentName = "B2"
+        \context Staff <<
+          \context Voice = "bass" { \global \clef "bass" \bassusdos }
+          \new Lyrics \lyricsto "bass" { \textobassusdos }
+        >>
+      >>
+
+    >>
+
+  >>
+  }
+  \layout {}
+%  \midi {\tempo 4 = 100 }
+}
+
+
+% BENEDICTUS
+
+cantus={
+	r1*4/4 |
+	r1*4/4 |
+	r4 a'4 a'4 a'4 |
+	g'4 f'4 bes'2 |
+%5
+	a'1 |
+	r4 f'4 g'2. f'8 e'8 f'8 g'8 a'8 f'8 | \break
+	bes'4 a'4 g'4 f'4. d'8 f'4 e'4 d'4 |
+%10
+	g'2. f'4 |
+	e'2 f'2 |
+	g'4 a'2 g'4 |
+	a'4 f'4 a'2. bes'4 a'4 g'4 ~ |
+%15
+	g'4 \ss fis'8 e'8 fis'2 |
+	r4 f'4 f'4 f'4 |
+	%\break
+	g'4 a'2 g'4 |
+	f'2. e'4 |
+	d'4 f'2 e'4. d'8 d'2 cis'4 |
+	d'2 r4 a'4 |
+	a'4 e'4 f'4 a'4. g'8 bes'4. a'8 a'4 |
+	g'4 a'2 g'4 |
+%25
+	f'4 d'4 g'2. f'8 e'8 f'1 r2 |
+	r4 a'4 a'4 e'4 |
+	f'4 g'4 a'2 |
+%30
+	d'2 r4 f'4 |
+	d'4 e'4 f'4 d'8 e'8 |
+	f'8 g'8 a'4 g'4 bes'2 a'4 g'2. \ss fis'8 e'8 \mtempob fis'\breve*1/4
+	\showBarLine \bar "||"
+	\override Score.RehearsalMark.self-alignment-X = #right
+	\mark \markup{"Hosanna ut supra"}
+}
+
+altus={
+	r1*4/4 |
+	d'1 |
+	f'1 |
+	e'4 c'4 d'4 e'4 |
+%5
+	f'2. d'4 |
+	e'4 d'4. c'8 c'4 |
+	d'1 ~ |
+	d'1 |
+	r4 a4 a4 bes4 |
+%10
+	g4. a8 bes8 a8 d'2 \ss cis'4 d'1 r2 |
+	r4 d'4 d'4 d'4 |
+	c'4 bes4 \ss ees'2 |
+%15
+	d'2 r4 d'4 |
+	d'4 a4 bes4 d'2 e'4 f'4 e'4. d'8 d'2 c'4 |
+	bes4 a8 g8 f4 g4 |
+%20
+	r4 a4 a4 e4 |
+	f4.  g8 a8 d8 d'4 ~ |
+	d'4 c'4 d'4 f'4. e'8 d'8 c'8 bes4 c'4 |
+	d'4 e'4 f'4 e'4. d'8 d'2 c'4 |
+	r4 d'4 d'4 a4 |
+	bes4 f'2 e'4 |
+	d'2 c'2 |
+	d'4 bes4 a2 |
+%30
+	r4 d'4 d'4 a4 |
+	bes4 c'4 d'4 f'4. e'8 c'4 r4 d'4 |
+	d'4 a4 bes8 g8 bes4 ~ |
+	bes4 a8 g8 a\breve*1/4
+}
+
+tenor={
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+%5
+	r1*4/4 |
+	r1*4/4 |
+	r4 a4 a4 a4 |
+	g4 f4 bes2 |
+	a2 r4 d'4 |
+%10
+	bes4 c'4 d'4 d4 |
+	a2 d2 |
+	r4 d'4 d'4 d'4 |
+	c'8 bes8 a8 g8 f4 f'4. e'8 d'4 c'2 |
+%15
+	bes4 a8 g8 a2 |
+	r4 d'4 d'4 a4 |
+	bes4 c'4 f4 g4 |
+	a1 |
+	r4 a4 a4 e4 |
+%20
+	f2 e4 a4. g8 f8 e8 f4 d4 |
+	a2 d2 |
+	r4 d'4 d'4 a4 |
+	bes4 c'4 f4 g4 |
+%25
+	a4 bes4 g2 |
+	a2 r4 d'4 |
+	d'4 a4 bes4 c'4 |
+	bes4 a8 g8 a2 |
+	r4 d'4 d'4 a4 |
+%30
+	bes2. c'4 |
+	bes4 g4 a4 d'4 |
+	d'4 a4 bes4 g4 |
+	d'1 |
+	d'\breve*1/2
+}
+
+bassus={
+	a2 a4 a4 |
+	g4 f4 bes2 |
+	a4 d8 e8 f8 g8 a8 bes8 |
+	c'4 a4 g2 |
+%5
+	r4 d4 d4 d4 |
+	c4 bes,4 \ss ees2 |
+	d1 |
+	r2 r4 d4 |
+	d4 d4 c4 bes,4 |
+%10
+	\ss ees2 d2 |
+	r4 a4 a4 a4 |
+	g4 f4 bes2 |
+	a4 d4 d4 d4 |
+	f4 g4 c2 |
+%15
+	d\breve |
+	r1*4/4 |
+	r4 d4 d4 a,4 |
+	bes,4 d2 c4 |
+%20
+	d2 a,2 |
+	d1 |
+	r1*4/4 |
+	r1*4/4 |
+	r4 a4 a4 e4 |
+%25
+	f4 g4 e2 |
+	d1 |
+	r4 d4 d4 a,4 |
+	bes,8 c8 d8 e8 f8 g8 a4 |
+	d4 g2 f4 |
+%30
+	g2. f4 |
+	g4 e4 d4. c8 |
+	bes,4 f4 g2. \ss fis4 g2 |
+	d\breve*1/2
+}
+
+textocantus=\lyricmode{
+Be -- ne -- di -- ctus qui ve -- nit
+\italicas
+be -- ne -- _ _ di -- _ _ _ _ _ ctus qui __ _ ve -- _ _ _ _ _ _ _ _ _ nit,
+\rectas
+be -- ne -- di -- ctus qui _ ve -- _ nit
+\italicas
+in no -- mi -- ne __ _ _ _ _ _ Do -- mi -- _ _ _ ni
+\rectas
+in no -- mi -- ne Do -- _ _ _ _ _ _ _ _ _ mi -- _ _ ni
+\italicas
+in no -- mi -- ne Do -- mi -- ni
+\rectas
+in no -- mi -- ne Do -- _ _ _ _ _ _ _ _ mi -- _ ni.
+}
+
+textoaltus=\lyricmode{
+Be -- ne -- di -- ctus qui __ _ ve -- _ _ _ _ _ nit _
+\italicas
+be -- ne -- di -- ctus __ _ qui _ ve -- _ nit
+be -- ne -- di -- ctus qui ve -- nit
+\rectas
+in no -- mi -- ne Do -- _ _ _ _ mi -- _ ni __ _ _ _ _ 
+\italicas
+in no -- mi -- ne __ _ _ _ Do -- _ mi -- ni,
+in _ _ _ _ no -- mi -- ne Do -- mi -- _ _ ni
+in no -- mi -- ne Do -- _ _ _ mi -- _ ni
+\rectas
+in no -- mi -- ne Do -- mi -- ni __ _ _
+\italicas
+in no -- mi -- ne _ Do -- _ mi -- _ ni.
+}
+
+textotenor=\lyricmode{
+Be -- ne -- di -- ctus qui ve -- nit
+\italicas
+be -- ne -- di -- ctus qui ve -- nit 
+be -- ne -- di -- ctus __ _ _ _ _ qui __ _ _ ve -- nit __ _ _ _ 
+\rectas
+in no -- mi -- ne __ _ Do -- mi -- ni
+\italicas
+in no -- mi -- ne __ _ Do -- _ _ _ _ _ mi -- ni
+in no -- mi -- ne __ _ Do -- mi -- ni __ _ _ _ 
+in no -- mi -- ne __ _ Do -- mi -- _ ni
+in no -- mi -- ne Do -- mi -- _ ni,
+\rectas
+in no -- mi -- ne Do -- mi -- ni.
+}
+
+textobassus=\lyricmode{
+Be -- ne -- di -- ctus qui ve -- _ _ _ _ _ _ _ _ _ nit
+\italicas
+be -- ne -- di -- ctus qui ve -- nit
+be -- ne -- di -- ctus qui ve -- nit
+be -- ne -- di -- ctus qui ve -- nit,
+be -- ne -- di -- ctus qui ve -- nit
+\rectas
+in no -- mi -- ne Do -- _ _ mi -- ni
+\italicas
+in no -- mi -- ne Do -- mi -- ni
+in no -- mi -- ne __ _ _ _ _ _ _ _ Do -- mi -- ni,
+\rectas
+in no -- mi -- ne __ _ _ Do -- _ _ mi -- ni.
+}
+
+
+
+\score {
+  \header {
+    piece = \markup \larger \sans { Benedictus }
+  }
+  
+  \transpose f as {
+  <<
+
+    \new StaffGroup
+    <<
+      \new Staff
+      <<
+        \set Staff.instrumentName = "S2"
+        \context Staff <<
+          \context Voice = "sopranoA" {  \global \cantus }
+          \new Lyrics \lyricsto "sopranoA" { \textocantus }
+        >>
+      >>
+      
+      \new Staff
+      <<
+        \set Staff.instrumentName = "A"
+        \context Staff <<
+          \context Voice = "alto" { \global \altus }
+          \new Lyrics \lyricsto "alto" { \textoaltus }
+        >>
+      >>
+      
+      \new Staff
+      <<
+        \set Staff.instrumentName = "T"
+        \context Staff <<
+          \context Voice = "tenorA" { \global \clef "treble_8" \tenor }
+          \new Lyrics \lyricsto "tenorA" { \textotenor }
+        >>
+      >>
+      
+      \new Staff
+      <<
+        \set Staff.instrumentName = "B1"
+        \context Staff <<
+          \context Voice = "tenorB" { \global \clef "treble_8" \bassus }
+          \new Lyrics \lyricsto "tenorB" { \textobassus }
+        >>
+      >>
+    >>
+  >>
+  }
+  \layout {}
+%  \midi {\tempo 4 = 100 }
+}
+
+
+% AGNUS DEI
+
 cantus={
 	r2 a'1 g'1 f'2 |
 	d'4 a'4. g'8 e' f' |
@@ -971,7 +2175,7 @@ cantus={
 	f'2 e'4 c' |
 	d' e' f' a'2 g'8 f' g'2 |
 	a'1 |
-	R1*4/4 |
+	r1*4/4 |
 	r2 d'1 f'2 | \break
 %15
 	e'4 c' d' e' |
@@ -987,8 +2191,8 @@ cantus={
 	g' f'2 e'8 d' |
 %25
 	e'4 f' d'2 |
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 	r4 g' a' bes' | \break
 	c'' a' bes'2 |
 %30
@@ -1003,59 +2207,59 @@ cantus={
 	r a'1 f'2 |
 	g'4 a' bes'2 |
 	a'\breve*1/2 | \showBarLine \bar "|" \break
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 %45
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 %50
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 | 
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 | 
+	r1*4/4 |
 %55
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 %60
-	R1*4/4 |
-	R1*4/4 | 
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 | 
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 %65
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 %70
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 %75
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 %80
-	R1*4/4 |
-	R1*4/4 | \showBarLine \bar "|" \break
+	r1*4/4 |
+	r1*4/4 | \showBarLine \bar "|" \break
 	d'2 c'4 f'4. e'8 c'4 d' e' |
 	f'2 e'4 a'4. g'8 e'4 f' g' |
 	c' c''4. bes'8 a'4 |
 	g' f'2 e'4 |
 	f'2 r |
-	R1*4/4 | \break
+	r1*4/4 | \break
 %90
 	r2 d'1 f'2 |
 	e'4 c' d' e' |
@@ -1064,7 +2268,7 @@ cantus={
 %95
 	g'4 f'2 e'4 |
 	d'2 r |
-	R1*4/4 |
+	r1*4/4 |
 	f'2 a' |
 	g'4 a'4. bes'8 c''4. \ss b'8 b'4 c''1 r2 |
 	f' f' |
@@ -1082,7 +2286,7 @@ cantus={
 	a' g' a' f' |
 	e'2 r |
 %115
-	R1*4/4 |
+	r1*4/4 |
 	r4 a' c''2. bes'4 c'' c'' |
 	a'2 r |
 	r r4 e' |
@@ -1106,15 +2310,15 @@ cantus={
 }
 
 cantusdos={
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 	r2 d''1 c''2 |
 %5
 	bes' a' |
 	g' e' |
 	f'4 a'4. g'8 g'4 |
 	a'1 |
-	R1*4/4 |
+	r1*4/4 |
 %10
 	r2 d'1 f'2 |
 	e'4 c' d' e' |
@@ -1132,14 +2336,14 @@ cantusdos={
 %25
 	a'2. d'4 |
 	e' f' d'2 |
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 	r4 c' d' e' |
 %30
 	f' d' f'2 |
 	e' d'4 g' |
 	f' g' a'2 |
-	R1*4/4 |
+	r1*4/4 |
 	d''1 |
 %35
 	c''2 bes' |
@@ -1150,58 +2354,58 @@ cantusdos={
 %40
 	f'4. g'8 a'4 d'4. e'8 f'4 d' g'2 \ss fis'8 e' \mtempob fis'\breve*1/4 |
 	\mtempo
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 %45
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 %50
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 %55
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 %60
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 %65
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 %70
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 %75
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 %80
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 	a'1 |
 	c''2 bes'4 g' |
 	a'4. bes'8 c''2 |
 %85
-	R1*4/4 |
+	r1*4/4 |
 	r4 a'2 f'4 |
 	g' a' bes'2 |
 	a' r4 a'4. g'8 e'4 f' g' |
@@ -1223,7 +2427,7 @@ cantusdos={
 	e' r4 d' ~ |
 	d' f'2 e'4 |
 	f' d' c'1 r2 |
-	R1*4/4 |
+	r1*4/4 |
 %115
 	r2 r4 g' |
 	a'2. g'4 |
@@ -1245,8 +2449,8 @@ cantusdos={
 }
 
 altus={
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 	d'1 |
 	f'2 e'4 c' |
 %5
@@ -1288,14 +2492,14 @@ altus={
 	d'\breve ~ |
 	d'\breve*1/2 |
 	s4*0^\markup{"[Altus]"}
-	R1*4/4 |
+	r1*4/4 |
 	d'1 |
 %45
 	f'2 e'4 c' |
 	d'4. e'8 f'2 |
 	e'4 d'2 c'4 |
 	d'1 |
-	R1*4/4 |
+	r1*4/4 |
 %50
 	r4 c' d' e' |
 	f' d' f'2 |
@@ -1326,8 +2530,8 @@ altus={
 %80
 	c' bes2 a8 g |
 	a\breve*1/2 |
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 	a1 |
 %85
 	c'2 bes4 g |
@@ -1354,7 +2558,7 @@ altus={
 	d4 e f d2 d'2 d'4 |
 	d'2 c'4 d' |
 	e' f'4. e'8 d'2 \ss cis'4 d'2 |
-	R1*4/4 |
+	r1*4/4 |
 	r2 r4 a2 c'2 \ss b4 |
 	c' g4. f8 d e |
 %115
@@ -1392,7 +2596,7 @@ tenor={
 	d'8 c' bes a bes2 |
 	a4 f a1 g2 |
 	f1 |
-	R1*4/4 |
+	r1*4/4 |
 %15
 	r2 a1 c'2 |
 	bes4 g a bes |
@@ -1417,8 +2621,8 @@ tenor={
 	g4 f e2 |
 	d1 |
 %35
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 	r4 g g g |
 	a1 |
 	bes4 a a4. g8 |
@@ -1470,11 +2674,11 @@ tenor={
 %80
 	e f g2 \ss fis8 e |
 	\ss fis\breve*1/2 |
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 %85
-	R1*4/4 |
+	r1*4/4 |
 	a1 |
 	c'2 bes4 g |
 	a4. bes8 c'1 r2 |
@@ -1523,14 +2727,14 @@ tenor={
 }
 
 bassus={
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 	a1 |
 %5
 	g2 f |
 	e1 |
-	R1*4/4 |
+	r1*4/4 |
 	a1 |
 	g2 f |
 %10
@@ -1556,8 +2760,8 @@ bassus={
 	f4 \ss ees2 d4 |
 	c2 r |
 %30
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 	r2 r4 f |
 	g a bes a8 g |
 	f4 bes4. a8 g2 \ss fis4 g4. f8 |
@@ -1567,55 +2771,55 @@ bassus={
 %40
 	d\breve ~ |
 	d\breve*1/2 |
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 %45
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 %50
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 %55
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 %60
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 %65
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 %70
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 %75
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 %80
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 	d2 c4 f4. e8 c4 d e |
 	f2. f4 |
 	e f g2 |
@@ -1636,18 +2840,18 @@ bassus={
 	f  e8[ d e f] g4 |
 	f4. g8 a4 d |
 	g c f2 |
-	R1*4/4 |
+	r1*4/4 |
 %105
 	r4 g2 f4 |
 	bes c' a2 |
 	g1 |
 	a2 r |
-	R1*4/4 |
+	r1*4/4 |
 %110
 	r4 a bes2 ~ |
 	bes4 a bes g |
 	f2 r |
-	R1*4/4 |
+	r1*4/4 |
 	g2 bes2. a4 bes g |
 	f4.  g8[ a bes] c'4 |
 	f g a2 |
@@ -1661,7 +2865,7 @@ bassus={
 	d r4 g |
 %125
 	a g g2 |
-	R1*4/4 |
+	r1*4/4 |
 	r2 r4 g2 \ss fis4 g2 |
 	d4 f d8 e f g |
 %130
@@ -1675,13 +2879,13 @@ bassusdos={
 	g g, bes,4. c8 |
 	d2 a, |
 %5
-	R1*4/4 |
+	r1*4/4 |
 	r2 a, |
 	d g, |
 	d c4 a, |
 	bes, c f,2 |
 %10
-	R1*4/4 |
+	r1*4/4 |
 	r4 d d d |
 	c a, bes, c |
 	d1 |
@@ -1690,14 +2894,14 @@ bassusdos={
 	c f4. e8 c4 |
 	d2 c4. bes,8 |
 	g,2 r |
-	R1*4/4 |
+	r1*4/4 |
 	r2 r4 d |
 %20
 	bes, c a,2 |
 	g,4. a,8 bes, c d e |
 	f4 g e2 |
 	d1 |
-	R1*4/4 |
+	r1*4/4 |
 %25
 	r4 d d d |
 	c bes,2 a,8 g, |
@@ -1706,8 +2910,8 @@ bassusdos={
 	a,2 g, |
 %30
 	d1 |
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 	r4 f, g, a, |
 	bes, g, bes,2 |
 %35
@@ -1721,7 +2925,7 @@ bassusdos={
 	g,4 f, g,2 |
 	d\breve*1/2 |
 	s4*0^\markup{"[Bassus II]"}	
-	R1*4/4 |
+	r1*4/4 |
 	r2 d2. d4 c4. bes,8 |
 	g, a, bes, c d4 bes, |
 	c d \ss ees2 |
@@ -1762,23 +2966,23 @@ bassusdos={
 %80
 	a, g, d2 ~ |
 	d\breve*1/2 |
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 %85
-	R1*4/4 |
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 	r4 d c f4. e8 c4 d e |
 %90
 	f4. e8 d c bes, a, |
 	g,2 d |
-	R1*4/4 |
+	r1*4/4 |
 	r4 d d g,2 g4 f2 |
 %95
 	c4 f4. e8 c4 |
 	d bes, f2 |
-	R1*4/4 |
+	r1*4/4 |
 	r2 f |
 	c4 f4. g8 a4 |
 %100
@@ -1791,10 +2995,10 @@ bassusdos={
 	g,4 c g, d2 c4 d2 |
 	g,1 |
 	d2 r |
-	R1*4/4 |
+	r1*4/4 |
 %110
-	R1*4/4 |
-	R1*4/4 |
+	r1*4/4 |
+	r1*4/4 |
 	d2 f2. e4 f d |
 	c4. bes,8 g, a, bes, c |
 %115
@@ -1807,7 +3011,7 @@ bassusdos={
 	r4 d2 c4 |
 	f g e2 |
 	d r |
-	R1*4/4 |
+	r1*4/4 |
 	r4 d2 c4 |
 %125
 	f g e2 |
