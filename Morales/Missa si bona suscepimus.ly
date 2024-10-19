@@ -1234,7 +1234,7 @@ altus={
 	r2 d'4. d'8 |
 	c'4 a4 c'4 d'2 \ss cis'4 d'2 |
 %55
-	e'4 d'4. c'8 a4 |
+	e'4 d'4. \ss c'!8 a4 |
 	bes2 a4. g8 |
 	a8 bes8 c'4 a4 d'2 \ss cis'4 d'2 ~ |
 	d'2 r2 |
@@ -1246,7 +1246,7 @@ altus={
 %65
 	bes4 a8 g8 a4 d'4 |
 	d'4 c'4 bes8 a8 d'2 \ss cis'4 d'2 |
-	e'4 d'8 c'8 d'4 e'4. d'8 d'2 \ss cis'4 |
+	e'4 d'8 \ss c'!8 d'4 e'4. d'8 d'2 \ss cis'4 |
 %70
 	d'4 f4 g4 a4 |
 	bes4 a4 g4 bes4.
@@ -1487,7 +1487,7 @@ bassus={
 	r2 f2 |
 	e4 g4. \ss fis8 fis4 |
 %90
-	g4. f8 d4 g4 |
+	g4. \ss f!8 d4 g4 |
 	f8 g8 a8 bes8 c'4 a4 |
 	g4. f8 d4 d'4 |
 	c'4. bes8 a2 |
@@ -1678,7 +1678,7 @@ glo -- ri -- a tu -- _ _ a
 glo -- ri -- a tu -- _ _ _ _ _ _ _ a.
 Ho -- san -- na in ex -- cel -- sis
 \italicas
-ho -- san -- na in ex -- cel -- _ _ _ _ _ _ _ _ _ sis
+ho -- san -- na in ex -- _ cel -- _ _ _ _ _ _ _ _ sis
 ho -- san -- _ na in ex -- cel -- _ _ _ _ _ _ sis
 ho -- san -- na in ex -- cel -- _ _ _ _ _ _ sis,
 ho -- san -- na in ex -- cel -- sis
@@ -1752,7 +1752,7 @@ Ho -- san -- na in ex -- cel -- _ sis
 \italicas
 ho -- san -- na in ex -- _ cel -- sis
 ho -- san -- na in ex -- cel -- sis,
-ho -- san -- na __ _ _ in __ _ _ _ _ ex -- cel -- sis
+ho -- san -- na __ _ _ in __ _ _ _ ex -- cel -- _ sis
 ho -- san -- na __ _ _ in ex -- cel -- _ _ _ _ sis
 \rectas
 ho -- san -- na in ex -- cel -- sis
@@ -1780,12 +1780,12 @@ Ho -- san -- na in ex -- cel -- sis
 \italicas
 ho -- san -- na in ex -- cel -- _ _ _ _ sis
 ho -- san -- na in ex -- cel -- _ sis
-ho -- san -- _ _ _ _ na in ex -- cel -- sis
+ho -- san -- _ _ _ na in ex -- cel -- _ sis
 ho -- san -- na __ _ _ in __ _ _ ex -- cel -- _ _ _ _ _ sis, __ _ _ 
 ho -- san -- _ _ na in ex -- cel -- sis
 ho -- san -- na in ex -- _ cel -- _ _ _ _ sis,
 \rectas
-ho -- san -- na in ex -- cel -- _ sis.
+ho -- san -- na in ex -- _ cel -- sis.
 }
 
 textobassusdos=\lyricmode{
@@ -1800,18 +1800,17 @@ Do -- mi -- nus De -- us Sa -- _ _ _ ba -- oth
 Do -- mi -- nus De -- us Sa -- _ _ ba -- oth
 \rectas
 Do -- mi -- nus De -- us Sa -- _ ba -- oth.
-Ho -- san -- na in ex -- _ _ cel -- _ sis,
+Ho -- san -- na in ex -- _ cel -- _ _ sis,
 \italicas
 ho -- san -- na in ex -- cel -- sis
 ho -- san -- na in ex -- cel -- sis
 ho -- san -- na in ex -- cel -- _ _ sis,
-ho -- san -- _ _ _ _ na in __ _ _ ex -- cel -- _ _ sis
+ho -- san -- _ _ _ _ na in __ _ ex -- cel -- _ _ _ sis
 ho -- san -- _ _ _ _ _ _ na
-ho -- san -- na in ex -- cel -- _ _ sis,
+ho -- san -- na in ex -- _ cel -- _ sis,
 \rectas
 ho -- san -- na in ex -- cel -- sis.
 }
-
 
 
 \score {
