@@ -1,6 +1,6 @@
 \version "2.24.2"
-revision = "1"
-\pointAndClickOff
+revision = "2"
+% \pointAndClickOff
 
 #(set-global-staff-size 15)
 
@@ -145,8 +145,7 @@ altus={
 %30
 	r4 d'4 d'4 a4 |
 	bes4 c'4 d'4 f'4. e'8 c'4 r4 d'4 |
-	d'4 a4 bes8 g8 bes4 ~ |
-	bes4 a8 g8 a\breve*1/4
+	d'4 a4 bes8 g8 bes2 a8 g8 a\breve*1/4
 }
 
 tenor={
@@ -261,7 +260,7 @@ in no -- mi -- ne Do -- _ _ _ mi -- _ ni
 \rectas
 in no -- mi -- ne Do -- mi -- ni __ _ _
 \italicas
-in no -- mi -- ne _ Do -- _ mi -- _ ni.
+in no -- mi -- ne _ Do -- mi -- _ ni.
 }
 
 textotenor=\lyricmode{

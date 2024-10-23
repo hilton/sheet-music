@@ -1,5 +1,5 @@
 \version "2.24.2"
-revision = "2"
+revision = "3"
 % \pointAndClickOff
 
 #(set-global-staff-size 15)
@@ -701,8 +701,8 @@ bassusdos={
 	c4 f4 bes,4 c4 |
 %85
 	d2 g,4 f,4 |
-	g,4 d2 bes,8 c8 |
-	d8 e8 f4 c4 f4. e8 c4 d2 |
+	g,4 d2 bes,8[ c8 |
+	d8 e8] f4 c4 f4. e8 c4 d2 |
 	c4. bes,8 a,2 |
 %90
 	g,2 r2 |

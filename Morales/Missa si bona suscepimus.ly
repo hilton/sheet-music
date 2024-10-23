@@ -1,15 +1,15 @@
 % Copyright ©2024 Peter Hilton - https://github.com/hilton
 % Based on CPDL #20129 by Nancho Alvarez
 
-% R → r
-% \showBarLine after each section
+% Replace R1 → r1
+% \showBarLine at the end of each section
 % \break after 7-8 bars per system
 % Rhythmn / Make explicit
 % Remove ties and preserve underlay
 
 \version "2.24.2"
-revision = "2"
-\pointAndClickOff
+revision = "3"
+% \pointAndClickOff
 
 #(set-global-staff-size 15)
 
@@ -1596,8 +1596,8 @@ bassusdos={
 	c4 f4 bes,4 c4 |
 %85
 	d2 g,4 f,4 |
-	g,4 d2 bes,8 c8 |
-	d8 e8 f4 c4 f4. e8 c4 d2 |
+	g,4 d2 bes,8[ c8 |
+	d8 e8] f4 c4 f4. e8 c4 d2 |
 	c4. bes,8 a,2 |
 %90
 	g,2 r2 |
@@ -1812,6 +1812,7 @@ ho -- san -- na in ex -- _ cel -- _ sis,
 ho -- san -- na in ex -- cel -- sis.
 }
 
+\pageBreak
 
 \score {
   \header {
@@ -1956,8 +1957,7 @@ altus={
 %30
 	r4 d'4 d'4 a4 |
 	bes4 c'4 d'4 f'4. e'8 c'4 r4 d'4 |
-	d'4 a4 bes8 g8 bes4 ~ |
-	bes4 a8 g8 a\breve*1/4
+	d'4 a4 bes8 g8 bes2 a8 g8 a\breve*1/4
 }
 
 tenor={
@@ -2072,7 +2072,7 @@ in no -- mi -- ne Do -- _ _ _ mi -- _ ni
 \rectas
 in no -- mi -- ne Do -- mi -- ni __ _ _
 \italicas
-in no -- mi -- ne _ Do -- _ mi -- _ ni.
+in no -- mi -- ne _ Do -- mi -- _ ni.
 }
 
 textotenor=\lyricmode{
