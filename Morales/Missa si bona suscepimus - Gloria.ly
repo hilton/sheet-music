@@ -81,6 +81,33 @@ mt=#(define-music-function (offset) (number?) ; move lyric text
 
 % GLORIA
 
+\score {
+  \header {
+    piece = \markup \larger \sans { Gloria }
+  }
+	\new Staff <<
+		\key f \major
+		\new Voice {
+			\relative c' {
+				\cadenzaOn
+				\override Stem #'transparent = ##t 
+				f8 bes a g a bes s a g s f g a s g-- f-- s \showBarLine\bar "|"
+				\cadenzaOff
+			}
+		}
+		\addlyrics {
+			Glo -- _ ri -- _ a __ _ in __ _ ex -- cel -- sis De -- o.
+		}
+	>>
+	\layout {
+		ragged-right = ##t
+		\context { 
+			\Voice 
+			\remove "Ambitus_engraver"
+		}
+	}
+}
+
 cantus={
 	r2 a'4. a'8 |
 	a'4 a'4 g'4 e'4 |
@@ -1175,11 +1202,7 @@ A -- _ _ _ _ _ _ men.
 }
 
 
-\score {
-  \header {
-    piece = \markup \larger \sans { Gloria }
-  }
-  
+\score {  
   \transpose f as {
   <<
 
