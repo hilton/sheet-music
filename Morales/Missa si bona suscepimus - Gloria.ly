@@ -1,5 +1,5 @@
 \version "2.24.2"
-revision = "1"
+revision = "2"
 % \pointAndClickOff
 
 #(set-global-staff-size 15)
@@ -90,7 +90,7 @@ mt=#(define-music-function (offset) (number?) ; move lyric text
 		\new Voice {
 			\relative c' {
 				\cadenzaOn
-				\override Stem #'transparent = ##t 
+				\override Stem.#'transparent = ##t
 				f8 bes a g a bes s a g s f g a s g-- f-- s \showBarLine\bar "|"
 				\cadenzaOff
 			}
@@ -853,8 +853,7 @@ bassusdos={
 	d2 r2 |
 %45
 	r1*4/4 |
-	r2 d2 ~ |
-	d4 d4 d2 |
+	r2 d2. d4 d2 |
 	g,2 d2 |
 	r1*4/4 |
 %50
@@ -1177,7 +1176,7 @@ Do -- mi -- ne De -- _ us,
 Rex __ _ _ cæ -- le -- _ _ stis
 Rex cæ -- le -- stis
 De -- us Pa -- ter o -- mni -- _ _ po -- tens. __ _ _ _ _ 
-Do -- _ mi -- ne Fi -- li 
+Do -- mi -- ne Fi -- li 
 u -- ni -- ge -- ni -- te, __ _
 Ie -- su Chri -- _ _ ste.
 Do -- mi -- ne De -- us,

@@ -1,4 +1,4 @@
-% Copyright ©2024 Peter Hilton - https://github.com/hilton
+% Copyright ©2025 Peter Hilton - https://github.com/hilton
 % Based on CPDL #20129 by Nancho Alvarez
 
 % Replace R1 → r1
@@ -98,8 +98,6 @@ showBarLine = {
 	\once \override Score.SpanBar.transparent = ##f 
 }
 
-italicas=\override LyricText.font-shape = #'italic
-rectas=\override LyricText.font-shape = #'upright
 ss=\once \set suggestAccidentals = ##t
 mtempo={\tempo 4 = 100}
 mtempob={\tempo 4 = 50}
@@ -584,7 +582,7 @@ bassus={
 	d bes, a,2 |
 	r r4 g2 f4 g d4. e8 f4 d e |
 	f1 |
-	e
+	e\breve*1/2 
 }
 
 bassusdos={
@@ -688,21 +686,21 @@ bassusdos={
 %90
 	d2. c4 |
 	d1 |
-	a,
+	a,\breve*1/2 
 }
 
 textocantus=\lyricmode{
 Ky -- ri -- e
-\italicas
+
 e -- le -- i -- son
 Ky -- ri -- e e -- _ le -- i -- son
 Ky -- ri -- e e -- le -- _ _ i -- _ son
 Ky -- ri -- e e -- lei -- _ _ _ _ son
 Ky -- _ ri -- _ e __ _ _ _ 
-\rectas
+
 e -- le -- i -- son.
 Chri -- ste __ _ _ _ _ _ _ _ _ _ 
-\italicas
+
 e -- _ _ le -- _ _ i -- son
 Chri -- ste __ _ _ e -- le -- i -- son
 Chri -- ste e -- le -- _ _ _ _ i -- son
@@ -710,10 +708,10 @@ Chri -- ste e -- _ le -- i -- son
 e -- le -- i -- son
 Chri -- ste e -- le -- i -- son
 Chri -- ste 
-\rectas
+
 e -- le -- i -- son.
 Ky -- ri -- e~e -- 
-\italicas
+
 lei -- son
 Ky -- ri -- e e -- _ _ le -- _ i -- son
 Ky -- ri -- _ e e -- le -- _ i -- son
@@ -721,33 +719,33 @@ Ky -- ri -- e e -- le -- _ _ _ _ i -- son
 Ky -- ri -- _ e~e -- le -- i -- son
 Ky -- ri -- e~e -- le -- i -- son
 Ky -- ri -- _ e __ _ _ _ _ _ _ _ _ 
-\rectas
+
 e -- le -- i -- son. _
 }
 
 textocantusdos=\lyricmode{
 Ky -- ri -- e 
-\italicas
+
 e -- le -- _ _ _ _ _ _ i -- son
 Ky -- ri -- e e -- _ _ le -- i -- son
 Ky -- ri -- e e -- le -- i -- son
 Ky -- ri -- e e -- _ le -- i -- son
 e -- le -- i -- son
 Ky -- ri -- e __ _ _ _ _ 
-\rectas
+
 e -- _ _ _ le -- _ _ i -- son. _ 
 Chri -- ste __ _ _ 
-\italicas
+
 e -- _ le -- _ i -- _ son
 Chri -- ste __ _ _ e -- _ le -- _ _ _ _ i -- son
 Chri -- _ ste __ _ _ _ _ e -- le -- i -- son
 e -- le -- i -- son
 e -- le -- i -- son
 Chri -- ste 
-\rectas
+
 e -- le -- _ _ i -- son. _
 Ky -- ri -- e
-\italicas
+
 e -- le -- _ _ i -- _ son _
 Ky -- ri -- e e -- _ le -- _ _ _ i -- _ son
 Ky -- ri -- e e -- le -- _ _ _ _ i -- son
@@ -755,23 +753,23 @@ Ky -- ri -- e __ _
 Ky -- ri -- e~e -- le -- i -- son
 Ky -- ri -- _ e __ _ _ _ _ _ e -- le -- _ _ _ i -- son
 Ky -- ri -- e 
-\rectas
+
 e -- le -- _ _ i -- son.
 }
 
 textoaltus=\lyricmode{
 Ky -- ri -- e
-\italicas
+
 e -- le -- _ _ _ _ _ i -- son
 Ky -- ri -- _ _ _ _ _ _ e e -- le -- _ _ _ _ _ _ _ _ _ i -- son,
 Ky -- ri -- e e -- _ _ le -- _ _ _ _ _ _ _ _ _ _ _ i -- son
 Ky -- ri -- e e -- le -- _ _ _ _ _ _ _ _ i -- son
 Ky -- ri -- e~e -- le -- i -- son,
 Ky -- ri -- _ _ e
-\rectas
+
 e -- _ _ _ _ _ le -- i -- _ son.
 Chri -- ste __ _ _ _ _ _ _ _ _ _ _ 
-\italicas
+
 e -- le -- _ _ _ _ _ _ _ _ _ _ _ _ _ i -- _ son
 Chri -- _ _ _ ste
 Chri -- ste __ _ _ _ _ _ _ _ _ e -- le -- _ _ _ _ _ _ i -- son,
@@ -779,10 +777,10 @@ Chri -- ste e -- le -- _ _ _ i -- son
 Chri -- _ _ ste __ _ _ _ e -- _ le -- i -- son
 e -- le -- i -- son
 Chri -- ste e -- lei -- son
-\rectas
+
 e -- le -- _ _ i -- son. _ _ 
 Ky -- ri -- e
-\italicas e -- _ _ _ _ _ _ _ le -- _ _ i -- son
+ e -- _ _ _ _ _ _ _ le -- _ _ i -- son
 Ky -- ri -- e __ _ _ e -- le -- _ _ _ _ _ i -- son
 Ky -- ri -- e e -- le -- _ _ i -- _ son
 Ky -- _ ri -- e __ _ _ _ 
@@ -790,31 +788,31 @@ Ky -- ri -- e e -- _ _ _ le -- _ _ _ i -- _ son
 Ky -- ri -- e e -- le -- _ i -- son
 Ky -- ri -- e e -- _ _ _ le -- _ _ _ _ _ _ i -- _ son
 Ky -- ri -- e __ _ _ 
-\rectas
+
 e -- _ le -- i -- _ son.
 }
 
 textotenor=\lyricmode{
 Ky -- ri -- e 
-\italicas
+
 e -- le -- _ _ _ _ _ _ _ i -- son
 Ky -- ri -- e e -- le -- _ _ i -- son
 Ky -- ri -- e e -- _ le -- _ _ _ _ _ _ _ _ _ _ _ _ _ i -- son
 Ky -- ri -- e
-\rectas
+
 e -- le -- _ _ _ i -- _ son. _ 
 Chri -- ste __ _ _ 
-\italicas
+
 e -- _ le -- _ _ _ _ _ _ _ i -- son
 Chri -- ste __ _ _ _ _ _ e -- _ le -- _ i -- son
 Chri -- ste __ _ _ e -- le -- i -- son
 e -- le -- i -- son
 Chri -- ste e -- le -- _ _ _ i -- son
 Chri -- ste e -- le -- _ i -- son
-\rectas
+
 e -- _ _ _ le -- i -- son.
 Ky -- ri -- e __ _ _ 
-\italicas
+
 e -- le -- i -- son,
 e -- _ le -- _ _ _ _ _ _ _ _ _ i -- son
 Ky -- ri -- e e -- _ _ _ _ le -- _ _ _ _ _ i -- son,
@@ -823,30 +821,30 @@ Ky -- ri -- e e -- le -- _ _ _ _ _ _ _ _ _ _ _ _ i -- son
 e -- le -- _ _ i -- son
 Ky -- ri -- _ e e -- _ le -- _ _ _ _ _ i -- son
 Ky -- ri -- e 
-\rectas
+
 e -- le -- i -- son. 
 }
 
 textobassus=\lyricmode{
 Ky -- ri -- e e -- le -- _ _ _ _ _ _ i -- son
-\italicas
+
 Ky -- ri -- e __ _ _ _ _ _ _ e -- le -- _ _ i -- son
 Ky -- ri -- e __ _ _ e -- le -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ i -- son
 Ky -- ri -- e e -- le -- _ i -- son,
 Ky -- ri -- e __ _ _ _ 
-\rectas
+
 e -- le -- i -- son.
 Chri -- ste __ _ _ _ _ _ _ _
-\italicas
+
 e -- le -- _ _ i -- son
 Chri -- ste __ _ _ e -- _ le -- _ _ _ i -- son
 Chri -- ste __ _ _ e -- le -- _ i -- son
 Chri -- ste __ _ _ e -- _ le -- _ i -- son
 Chri -- ste __ _ _ _ _ 
-\rectas
+
 e -- le -- i -- son. _
 Ky -- ri -- e __ _ _ 
-\italicas
+
 e -- le -- _ _ i -- _ son
 Ky -- ri -- e e -- le -- _ _ i -- son
 Ky -- ri -- e e -- le -- i -- son
@@ -855,13 +853,13 @@ Ky -- ri -- _ e
 Ky -- ri -- e e -- le -- i -- son
 Ky -- ri -- _ e e -- _ le -- _ _ _ _ _ _ i -- son
 Ky -- ri -- e 
-\rectas 
+ 
 e -- _ _ le -- _ i -- son.
 }
 
 textobassusdos=\lyricmode{
 Ky -- ri -- e 
-\italicas
+
 e -- le -- i -- son
 Ky -- ri -- e e -- le -- i -- son
 Ky -- _ ri -- e e -- _ le -- _ _ _ _ _ _ i -- son
@@ -869,10 +867,10 @@ Ky -- ri -- e __ _ _ _ e -- le -- _ _ i -- _ son,
 Ky -- ri -- e e -- le -- _ _ i -- son,
 Ky -- ri -- e e -- _ _ _ _ _ _ le -- i -- son
 Ky -- ri -- _ e 
-\rectas
+
 e -- le -- i -- son.
 Chri -- ste __ _ _ 
-\italicas
+
 e -- _ lei -- son,
 Chri -- ste e -- le -- i -- son
 Chri -- ste __ _ _ e -- le -- i -- son
@@ -880,10 +878,10 @@ Chri -- ste __ _ _ e -- le -- _ _ i -- son
 Chri -- ste e -- lei -- son,
 Chri -- ste e -- lei -- son,
 Chri -- ste 
-\rectas
+
 e -- lei -- son. _
 Ky -- ri -- e
-\italicas
+
 e -- _ _ lei -- _ _ son,
 Ky -- ri -- e e -- le -- _ i -- son,
 Ky -- ri -- e e -- le -- _ i -- son
@@ -892,7 +890,7 @@ Ky -- ri -- _ e e -- le -- _ _ _ _ _ _ _ _ _ _ i -- son,
 e -- le -- _ _ i -- son
 Ky -- ri -- e~e -- le -- i -- son
 Ky -- ri -- e~e -- le -- i -- son
-\rectas
+
 e -- le -- _ i -- son.
 }
 
@@ -982,7 +980,7 @@ e -- le -- _ i -- son.
 		\new Voice {
 			\relative c' {
 				\cadenzaOn
-				\override Stem #'transparent = ##t 
+				\override Stem.#'transparent = ##t 
 				f8 bes a g a bes s a g s f g a s g-- f-- s \showBarLine\bar "|"
 				\cadenzaOff
 			}
@@ -1745,8 +1743,7 @@ bassusdos={
 	d2 r2 |
 %45
 	r1*4/4 |
-	r2 d2 ~ |
-	d4 d4 d2 |
+	r2 d2. d4 d2 |
 	g,2 d2 |
 	r1*4/4 |
 %50
@@ -1846,9 +1843,9 @@ bassusdos={
 textocantus=\lyricmode{
 Et in ter -- ra pax ho -- mi -- _ _ ni -- _ _ bus
 bo -- næ vo -- lun -- ta -- _ tis
-\italicas
+
 bo -- næ vo -- lun -- _ ta -- _ tis.
-\rectas
+
 Lau -- da -- mus te.
 Ad -- o -- _ ra -- _ _ _ _ _ _ mus te.
 Glo -- ri -- fi -- ca -- _ _ _ _ _ _ _ _ _ mus te.
@@ -1860,25 +1857,25 @@ De -- us Pa -- ter o -- mni -- po -- _ _ tens.
 Do -- mi -- ne Fi -- li u -- ni -- ge -- _ _ _ _ ni -- _ te
 Ie -- su Chri -- ste. __ _ _ _ _ _ _ _
 Do -- mi -- ne De -- us A -- gnus De -- _ _ _ _ i,
-\italicas
+
 Do -- mi -- ne De -- us,
 A -- gnus De -- i,
-\rectas
+
 Fi -- li -- us __ _ Pa -- _ _ _ _ _ _ _ _ _ _ _ _ _ tris.
 Qui tol -- lis pec -- ca -- ta mun -- _ _ _ _ di
 mi -- se -- re -- _ _ re no -- bis.
 Qui tol -- lis pec -- ca -- ta __ _ _ mun -- _ _ di,
-\italicas
+
 qui tol -- lis _ pec -- ca -- ta mun -- di
-\rectas
+
 su -- _ sci -- _ _ pe
 de -- pre -- ca -- ti -- o -- _ _ _ _ _ _ _ nem no -- _ _ _ stram.
 mi -- se -- _ re -- _ _ _ _ re no -- _ _ _ _ bis
 mi -- se -- re -- re no -- bis.
 Tu so -- _ lus Do -- mi -- nus
-\italicas
+
 tu so -- lus Do -- mi -- nus.
-\rectas
+
 Ie -- su Chri -- _ ste. _
 Cum San -- cto Spi -- ri -- tu
 in glo -- _ _ _ _ _ _ _ _ ri -- _ a De -- _ _ i Pa -- _ _ tris.
@@ -1895,9 +1892,9 @@ Gra -- ti -- as a -- gi -- mus ti -- _ _ _ _ _ _ _ _ _ bi
 pro -- pter ma -- gnam __ _ _ glo -- ri -- am tu -- _ _ _ am.
 Do -- mi -- _ ne __ _ _ _ _ De -- us Rex __ _ cæ -- _ le -- _ stis
 De -- us Pa -- _ ter o -- mni -- _ po -- tens
-\italicas
+
 De -- us Pa -- ter o -- mni -- _ po -- _ _ tens.
-\rectas
+
 Do -- mi -- ne Fi -- _ _ _ _ _ li
 u -- ni -- ge -- ni -- _ _ _ _ te
 Ie -- su Chri -- _ _ _ _ _ _ ste
@@ -1905,15 +1902,15 @@ Do -- mi -- ne De -- _ us
 Do -- mi -- ne De -- us,
 A -- gnus De -- _ _ _ _ i
 Fi -- li -- us Pa -- tris,
-\italicas
+
 Fi -- li -- us Pa -- _ _ _ tris.
-\rectas
+
 Qui tol -- lis pec -- ca -- _ ta mun -- di
 mi -- se -- re -- re no -- bis.
 Qui tol -- lis pec -- ca -- ta mun -- _ _ di,
-\italicas
+
 pec -- ca -- ta __ _ _ mun -- di
-\rectas
+
 su -- sci -- pe
 de -- pre -- ca -- ti -- o -- nem no -- _ _ _ stram.
 mi -- se -- re -- re __ _ _ _ _ _ _ no -- _ bis.
@@ -1932,9 +1929,9 @@ Lau -- da -- mus __ _ te.
 Be -- ne -- _ _ _ di -- _ _ ci -- _ _ _ mus te.
 Ad -- o -- ra -- mus te.
 Glo -- ri -- fi -- ca -- mus te __ _ _ _ _ _ _
-\italicas
+
 glo -- ri -- _ _ _ fi -- _ ca -- _ mus __ _ _ _ _ _ te.
-\rectas
+
 Gra -- ti -- as a -- gi -- mus __ _ _ _ _ ti -- _ bi
 Do -- mi -- ne De -- _ _ _ us
 Rex cæ -- le -- _ _ _ stis
@@ -1947,16 +1944,16 @@ u -- ni -- ge -- _ ni -- te,
 Ie -- su Chri -- ste.
 Do -- mi -- ne De -- us,
 A -- _ _ _ _ _ gnus De -- _ _ _ i,
-\italicas
+
 Do -- mi -- ne De -- us,
 A -- gnus De -- i
-\rectas
+
 Do -- mi -- ne De -- us,
 A -- gnus __ _ _ De -- i,
 Fi -- li -- us Pa -- _ tris
-\italicas
+
 Fi -- li -- us __ _ Pa -- _ tris __ _ _
-\rectas
+
 Fi -- li -- us Pa -- tris.
 Qui tol -- lis pec -- ca -- _ ta mun -- di __ _ _ _ _ 
 mi -- se -- re -- re no -- _ _ _ _ _ _ _ _ _ _ bis.
@@ -1988,9 +1985,9 @@ Do -- mi -- _ ne __ _ _ _ _ De -- us,
 Rex cæ -- _ le -- _ _ _ _ stis
 Rex cæ -- _ _ _ _ _ le -- _ _ _ stis
 De -- us Pa -- ter o -- mni -- _ po -- tens
-\italicas
+
 De -- us Pa -- ter o -- mni -- po -- _ tens.
-\rectas
+
 Do -- mi -- ne Fi -- _ _ _ _ _ li u -- ni -- _ ge -- ni -- te, __ _ _ _ _ _ _ _ _ 
 Ie -- su Chri -- _ ste.
 Do -- mi -- ne De -- us
@@ -1999,9 +1996,9 @@ A -- gnus __ _ _ De -- i
 Fi -- li -- us Pa -- _ _ _ tris
 Fi -- li -- us Pa -- _ _ _ _ tris.
 Qui tol -- lis pec -- ca -- ta mun -- di,
-\rectas
+
 qui tol -- lis pec -- ca -- ta mun -- _ _ _ _ _ _ di
-\rectas
+
 mi -- se -- re -- re __ _ _ no -- _ _ _ bis.
 Qui tol -- lis pec -- ca -- ta mun -- _ _ _ di
 su -- sci -- pe
@@ -2009,9 +2006,9 @@ de -- pre -- ca -- ti -- o -- _ nem no -- _ stram.
 Qui se -- des ad dex -- te -- ram __ _ Pa -- _ tris _
 mi -- se -- re -- re __ _ _ _ no -- _ bis.
 Tu so -- lus Do -- mi -- nus
-\italicas
+
 tu so -- lus Do -- mi -- nus.
-\rectas
+
 Tu so -- lus Al -- tis -- si -- mus
 Ie -- su Chri -- _ ste.
 Cum San -- cto Spi -- ri -- tu
@@ -2031,30 +2028,30 @@ Rex cæ -- le -- stis
 De -- us Pa -- ter o -- mni -- po -- tens
 De -- us Pa -- ter o -- _ mni -- po -- tens.
 Do -- mi -- ne Fi -- li u -- _ ni -- _ _ _ ge -- ni -- _ te
-Ie -- su __ _ _ _ _ \mt #1 Chri -- _ _ ste.
+Ie -- su __ _ _ _ _ Chri -- _ _ ste.
 Do -- mi -- ne De -- us,
 A -- gnus De -- _ _ i
 Fi -- _ li -- us Pa -- _ tris.
 Qui tol -- lis pec -- ca -- ta mun -- di,
-\italicas
+
 qui tol -- lis pec -- _ ca -- ta mun -- di
-\rectas
+
 mi -- se -- re -- re __ _ _ _ no -- _ bis.
 Qui tol -- lis pec -- ca -- ta mun -- di
 su -- sci -- pe de -- pre -- ca -- ti -- o -- nem __ _ no -- _ _ _ stram.
 Qui se -- des ad dex -- te -- ram 
-\italicas
+
 Pa -- _ _ _ _ tris,
-\rectas
+
 mi -- se -- re -- re no -- _ _ _ bis.
-Quo -- ni -- \mt #-.5 am tu so -- lus _ san -- _ ctus.
+Quo -- ni -- am tu so -- lus _ san -- _ ctus.
 Tu so -- lus Do -- mi -- nus 
 tu so -- lus Do -- mi -- nus.
 Tu so -- lus Al -- tis -- _ _ _ _ _ si -- mus,
 Ie -- su Chri -- _ _ _ ste.
 Cum San -- cto Spi -- ri -- tu in glo -- ri -- a De -- i Pa -- tris.
 A -- _ _ men
-\italicas
+
 a -- _ _ _ _ _ men.
 }
 
@@ -2069,7 +2066,7 @@ Do -- mi -- ne De -- _ us,
 Rex __ _ _ cæ -- le -- _ _ stis
 Rex cæ -- le -- stis
 De -- us Pa -- ter o -- mni -- _ _ po -- tens. __ _ _ _ _ 
-Do -- _ mi -- ne Fi -- li 
+Do -- mi -- ne Fi -- li 
 u -- ni -- ge -- ni -- te, __ _
 Ie -- su Chri -- _ _ ste.
 Do -- mi -- ne De -- us,
@@ -2077,9 +2074,9 @@ A -- gnus _ _ De -- i
 Fi -- li -- us
 Fi -- li -- us Pa -- _ _ _ _ tris.
 Qui tol -- lis pec -- ca -- _ ta mun -- di, __ _
-\italicas
+
 qui tol -- lis pec -- ca -- ta __ _ _ _ _ mun -- _ _ di
-\rectas
+
 mi -- se -- re -- re no -- _ _ _ _ _ _ bis.
 su -- sci -- pe de -- pre -- ca -- ti -- o -- nem no -- _ _ _ stram.
 Qui se -- des ad dex -- te -- _ ram Pa -- tris
@@ -2814,36 +2811,36 @@ bassusdos={
 textocantus=\lyricmode{
 San -- _ _ _ _ _ _ _ _ _ _ _ _ _ ctus,
 San -- _ _ _ _ ctus
-\italicas
+
 San -- ctus __ _ _
-\rectas
+
 San -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ ctus
 Do -- mi -- nus De -- _ _ us Sa -- _ ba -- _ oth
-\italicas
+
 Do -- mi -- nus De -- us Sa -- _ _ _ _ _ _ _ _ _ _ _ _ _ ba -- oth
 Sa -- ba -- oth
 Do -- mi -- nus De -- us Sa -- ba -- oth
-\rectas
+
 Do -- mi -- nus De -- us Sa -- ba -- _ _ oth.
 Ple -- ni sunt _ cæ -- _ li et __ _ ter -- _ _ _ _ _ _ _ ra,
-\italicas
+
 ple -- ni sunt cæ -- li et __ _ _ _ ter -- _ _ ra
 ple -- ni __ _ _ _ _ _ _ _ _ sunt
 cæ -- li et ter -- _ _ _ _ ra
-\rectas
+
 glo -- ri -- a tu -- _ _ _ _ _ _ _ _ a
-\italicas
+
 glo -- ri -- a tu -- _ _ _ _ _ _ _ _ _ _ a
 glo -- ri -- a
-\rectas
+
 tu -- _ _ _ _ a.
 Ho -- san -- na in ex -- _ cel -- _ _ _ _ _ _ _ sis
-\italicas
+
 ho -- san -- na in ex -- _ cel -- _ _ _ sis
 ho -- san -- na in ex -- cel -- sis,
 ho -- _ _ san -- _ _ _ _ na in ex -- cel -- _ _ _ sis
 ho -- san -- na in ex -- _ cel -- _ _ _ sis
-\rectas
+
 ho -- san -- na in ex -- cel -- _ _ _ _ sis. _ _ _ 
 }
 
@@ -2853,68 +2850,68 @@ San -- _ _ _ _ _ ctus _
 San -- _ _ _ _ _ _ _ _ _ _ _ _ _ ctus, __ _ _ _ _ 
 San -- _ _ _ _ _ _ _ _ _ _ _ _ ctus
 Do -- mi -- nus De -- us Sa -- ba -- oth __ _ _ _ _ 
-\italicas
+
 Do -- mi -- nus De -- us Sa -- _ ba -- oth
 Do -- mi -- nus De -- us _ Sa -- ba -- oth
 Do -- mi -- _ _ _ _ nus De -- _ us __ _ Sa -- _ ba -- oth
-\rectas
+
 Do -- mi -- nus De -- _ _ _ _ _ us Sa -- _ _ _ _ _ _ _ _ _ _ _ ba -- oth. 
 Ple -- ni sunt cæ -- _ _ li __ _ et ter -- _ _ _ _ _ _ _ _ _ _ ra
-\italicas
+
 ple -- ni sunt cæ -- li
 ple -- ni sunt cæ -- li et ter -- ra 
-\rectas
+
 glo -- _ ri -- a tu -- _ _ a
-\italicas
+
 glo -- ri -- _ a __ _ _ _ _ tu -- _ _ _ _ _ _ _ _ a,
 glo -- ri -- a tu -- _ _ _ a,
 glo -- ri -- a tu -- _ _ a
-\rectas
+
 glo -- ri -- a tu -- _ _ _ _ _ _ _ a.
 Ho -- san -- na in ex -- cel -- sis
-\italicas
+
 ho -- san -- na in ex -- _ cel -- _ _ _ _ _ _ _ _ sis
 ho -- san -- _ na in ex -- cel -- _ _ _ _ _ _ sis
 ho -- san -- na in ex -- cel -- _ _ _ _ _ _ sis,
 ho -- san -- na in ex -- cel -- sis
-\rectas
+
 ho -- san -- na in ex -- cel -- sis.
 }
 
 textoaltus=\lyricmode{
-San -- _ _ _ _ _ _ ctus
-San -- _ _ _ _ _ _ _ _ _ _ _ _ ctus
+San -- _ _ _ _ _ ctus
+San -- _ _ _ _ _ _ _ _ _ _ _ _ _ ctus
 San -- _ _ _ _ _ _ _ ctus
 Do -- mi -- nus De -- us Sa -- ba -- _ _ _ oth
-\italicas
+
 Do -- mi -- nus __ _ _ _ _ De -- _ _ _ us Sa -- ba -- _ oth __ _ _ _ 
 Do -- mi -- nus De -- _ _ _ us,
 Do -- mi -- nus De -- _ _ _ _ _ _ _ us Sa -- _ _ ba -- oth _
 Do -- mi -- nus De -- us Sa -- ba -- oth
-\italicas
+
 Do -- mi -- nus De -- us Sa -- ba -- oth.
-\rectas
+
 Ple -- ni sunt cæ -- _ _ li
-\italicas
+
 ple -- ni sunt cæ -- _ li et ter -- _ _ _ _ _ _ ra
 ple -- ni sunt cæ -- li et __ _ ter -- _ _ _ _ _ _ _ _ _ _ _ _ _ ra _
-\rectas
+
 glo -- ri -- a tu -- _ _ _ _ _ _ _ a,
-\italicas
+
 glo -- ri -- a tu -- _ _ _ a,
 glo -- ri -- a __ _ _ tu -- _ _ _ _ _ _ _ _ _ _ a,
 glo -- ri -- a tu -- _ a,
-\rectas
+
 glo -- ri -- a tu -- a.
 Ho -- san -- na in ex -- cel -- sis
-\italicas
+
 ho -- san -- na in ex -- cel -- sis
 ho -- san -- na in ex -- cel -- sis
 ho -- san -- na in ex -- cel -- sis
 ho -- san -- na in ex -- cel -- sis
-\rectas
+
 ho -- san -- na in ex -- cel -- sis,
-\italicas
+
 in __ _ _ _ _ ex -- cel -- _ _ sis.
 }
 
@@ -2923,35 +2920,35 @@ San -- _ _ _ _ _ _ _ _ ctus
 San -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ ctus,
 San -- _ ctus _
 Do -- mi -- nus De -- us Sa -- _ ba -- _ _ oth
-\italicas
+
 Do -- mi -- nus De -- us Sa -- ba -- oth __ _ _ _ _ _ _ 
 Do -- mi -- nus De -- us Sa -- ba -- oth, _ 
 Do -- mi -- nus De -- us
 Do -- mi -- nus De -- us Sa -- ba -- oth
 Do -- mi -- nus De -- us Sa -- _ ba -- oth
 Do -- mi -- nus De -- us Sa -- _ ba -- oth
-\rectas
+
 Do -- mi -- nus De -- us Sa -- _ _ _ _ _ ba -- _ _ oth.
 Ple -- ni sunt cæ -- li et ter -- _ _ _ ra __ _ _ _ _ 
-\italicas
+
 ple -- _ ni sunt cæ -- li __ _ _ et ter -- _ ra
 ple -- ni sunt cæ -- li et __ _ _ ter -- _ _ _ ra glo -- _ ri -- a __ _ _ _ tu -- a
-\rectas
+
 glo -- ri -- a __ _ _ _ tu -- _ _ a,
-\italicas
+
 glo -- ri -- a tu -- a
 glo -- ri -- a tu -- _ _ a
-\rectas
+
 glo -- ri -- a tu -- _ _ a.
 Ho -- san -- na in ex -- cel -- _ sis
-\italicas
+
 ho -- san -- na in ex -- _ cel -- sis
 ho -- san -- na in ex -- cel -- sis,
 ho -- san -- na __ _ _ in __ _ _ _ ex -- cel -- _ sis
 ho -- san -- na __ _ _ in ex -- cel -- _ _ _ _ sis
-\rectas
+
 ho -- san -- na in ex -- cel -- sis
-\italicas
+
 ho -- san -- na __ _ _ _ _ _ in ex -- _ cel -- sis,
 ho -- san -- na in ex -- cel -- sis.
 }
@@ -2961,25 +2958,25 @@ San -- _ _ _ _ _ ctus _
 San -- _ _ _ _ _ _ _ _ _ _ _ ctus
 San -- _ _ _ _ _ _ ctus
 Do -- mi -- nus De -- us Sa -- ba -- oth
-\italicas
+
 Do -- mi -- nus De -- us Sa -- ba -- _ oth
 Do -- mi -- nus De -- us Sa -- _ ba -- oth
 Do -- mi -- nus De -- us Sa -- ba -- _ _ oth
 Do -- mi -- nus __ _ _ _ _ De -- _ _ _ us
-\rectas
+
 Do -- mi -- nus De -- us Sa -- ba -- oth
-\italicas
+
 Sa -- ba -- oth.
-\rectas
+
 Ho -- san -- na in ex -- cel -- sis
-\italicas
+
 ho -- san -- na in ex -- cel -- _ _ _ _ sis
 ho -- san -- na in ex -- cel -- _ sis
 ho -- san -- _ _ _ na in ex -- cel -- _ sis
 ho -- san -- na __ _ _ in __ _ _ ex -- cel -- _ _ _ _ _ sis, __ _ _ 
 ho -- san -- _ _ na in ex -- cel -- sis
 ho -- san -- na in ex -- _ cel -- _ _ _ _ sis,
-\rectas
+
 ho -- san -- na in ex -- _ cel -- sis.
 }
 
@@ -2988,22 +2985,22 @@ San -- _ _ _ _ _ _ _ _ _ ctus,
 San -- _ _ _ _ _ _ _ _ _ ctus
 San -- _ _ _ _ _ _ _ _ ctus
 Do -- mi -- nus De -- _ us __ _ Sa -- ba -- oth
-\italicas
+
 Do -- mi -- nus De -- us Sa -- ba -- _ oth
 Do -- mi -- nus De -- us Sa -- ba -- _ oth
 Do -- mi -- nus De -- us Sa -- _ _ _ ba -- oth
 Do -- mi -- nus De -- us Sa -- _ _ ba -- oth
-\rectas
+
 Do -- mi -- nus De -- us Sa -- _ ba -- oth.
 Ho -- san -- na in ex -- _ cel -- _ _ sis,
-\italicas
+
 ho -- san -- na in ex -- cel -- sis
 ho -- san -- na in ex -- cel -- sis
 ho -- san -- na in ex -- cel -- _ _ sis,
 ho -- san -- _ _ _ _ na in __ _ ex -- cel -- _ _ _ sis
 ho -- san -- _ _ _ _ _ _ na
 ho -- san -- na in ex -- _ cel -- _ sis,
-\rectas
+
 ho -- san -- na in ex -- cel -- sis.
 }
 
@@ -3239,66 +3236,66 @@ bassus={
 
 textocantus=\lyricmode{
 Be -- ne -- di -- ctus qui ve -- nit
-\italicas
+
 be -- ne -- _ _ di -- _ _ _ _ _ ctus qui __ _ ve -- _ _ _ _ _ _ _ _ _ nit,
-\rectas
+
 be -- ne -- di -- ctus qui _ ve -- _ nit
-\italicas
+
 in no -- mi -- ne __ _ _ _ _ _ Do -- mi -- _ _ _ ni
-\rectas
+
 in no -- mi -- ne Do -- _ _ _ _ _ _ _ _ _ mi -- _ _ ni
-\italicas
+
 in no -- mi -- ne Do -- mi -- ni
-\rectas
+
 in no -- mi -- ne Do -- _ _ _ _ _ _ _ _ mi -- _ ni.
 }
 
 textoaltus=\lyricmode{
 Be -- ne -- di -- ctus qui __ _ ve -- _ _ _ _ _ nit _
-\italicas
+
 be -- ne -- di -- ctus __ _ qui _ ve -- _ nit
 be -- ne -- di -- ctus qui ve -- nit
-\rectas
+
 in no -- mi -- ne Do -- _ _ _ _ mi -- _ ni __ _ _ _ _ 
-\italicas
+
 in no -- mi -- ne __ _ _ _ Do -- _ mi -- ni,
 in _ _ _ _ no -- mi -- ne Do -- mi -- _ _ ni
 in no -- mi -- ne Do -- _ _ _ mi -- _ ni
-\rectas
+
 in no -- mi -- ne Do -- mi -- ni __ _ _
-\italicas
+
 in no -- mi -- ne _ Do -- mi -- _ ni.
 }
 
 textotenor=\lyricmode{
 Be -- ne -- di -- ctus qui ve -- nit
-\italicas
+
 be -- ne -- di -- ctus qui ve -- nit 
 be -- ne -- di -- ctus __ _ _ _ _ qui __ _ _ ve -- nit __ _ _ _ 
-\rectas
+
 in no -- mi -- ne __ _ Do -- mi -- ni
-\italicas
+
 in no -- mi -- ne __ _ Do -- _ _ _ _ _ mi -- ni
 in no -- mi -- ne __ _ Do -- mi -- ni __ _ _ _ 
 in no -- mi -- ne __ _ Do -- mi -- _ ni
 in no -- mi -- ne Do -- mi -- _ ni,
-\rectas
+
 in no -- mi -- ne Do -- mi -- ni.
 }
 
 textobassus=\lyricmode{
 Be -- ne -- di -- ctus qui ve -- _ _ _ _ _ _ _ _ _ nit
-\italicas
+
 be -- ne -- di -- ctus qui ve -- nit
 be -- ne -- di -- ctus qui ve -- nit
 be -- ne -- di -- ctus qui ve -- nit,
 be -- ne -- di -- ctus qui ve -- nit
-\rectas
+
 in no -- mi -- ne Do -- _ _ mi -- ni
-\italicas
+
 in no -- mi -- ne Do -- mi -- ni
 in no -- mi -- ne __ _ _ _ _ _ _ _ Do -- mi -- ni,
-\rectas
+
 in no -- mi -- ne __ _ _ Do -- _ _ mi -- ni.
 }
 
@@ -4219,255 +4216,255 @@ bassusdos={
 textocantus=\lyricmode{
 A -- gnus De -- _ _ _ _ _ _ _ _ i
 qui tol -- lis pec -- ca -- ta __ _ mun -- _ _ _ di
-\italicas
+
 pec -- ca -- ta mun -- _ _ di
 qui tol -- lis pec -- ca -- ta mun -- _ _ di,
 pec -- ca -- ta __ _ _ _ _ _ _ _ mun -- di:
-\rectas
+
 mi -- se -- re -- re no -- _ _ _ _ bis
-\italicas
+
 mi -- se -- re -- re no -- _ bis,
 mi -- se -- _ _ _ re -- _ _ re no -- _ _ _ bis
-\rectas
+
 mi -- se -- re -- re no -- _ _ _ _ _ bis
-\italicas
+
 mi -- se -- re -- re no -- bis.
 A -- gnus De -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ i
 qui tol -- lis pec -- ca -- ta __ _ mun -- _ _ _ _ _ _ _ di
-\italicas
+
 pec -- ca -- ta mun -- _ _ _ _ di:
-\rectas
+
 do -- na no -- bis pa -- _ _ _ _ cem
-\italicas
+
 do -- na no -- bis __ _ _ pa -- _ _ _ cem,
 do -- na _ no -- bis pa -- cem
-\rectas
+
 do -- na no -- bis pa -- cem
-\italicas
+
 do -- na no -- bis pa -- cem
 do -- na __ _ _ _ _ _ _ _ _ _ _ _ no -- _ _ bis pa -- _ _ cem,
 do -- na no -- _ bis pa -- _ cem
-\rectas
+
 do -- _ _ _ _ na __ _ no -- bis pa -- _ _ _ _ cem.
 }
 
 textocantusdos=\lyricmode{
 A -- gnus De -- _ _ _ _ _ _ _ i
 qui tol -- lis pec -- ca -- ta mun -- di
-\italicas
+
 qui tol -- lis pec -- ca -- ta mun -- di,
 pec -- _ _ _ _ ca -- ta mun -- _ _ _ _ _ di
-\rectas
+
 qui tol -- lis pec -- ca -- _ ta mun -- _ _ _ _ _ _ _ _ _ _ _ _ _ di
 mi -- se -- re -- re no -- _ _ _ _ _ _ bis
-\italicas
+
 mi -- se -- re -- re __ _ _ _ no -- _ bis
-\rectas
+
 mi -- se -- re -- re __ _ _ no -- _ _ _ _ _ _ bis.
 A -- gnus De -- _ _ _ i
-\italicas
+
 a -- gnus De -- _ _ i
-\rectas
+
 qui __ _ _ tol -- lis pec -- ca -- ta __ _ _ mun -- _ _ _ _ _ _ di
-\italicas
+
 qui tol -- lis pec -- ca -- ta mun -- di:
 do -- na no -- bis pa -- _ _ _ _ cem
-\rectas
+
 do -- na no -- bis pa -- _ _ _ _ _ cem
-\italicas
+
 do -- na no -- bis __ _ _ pa -- cem
 do -- _ na no -- bis pa -- cem
-\rectas
+
 do -- na no -- bis pa -- cem
-\italicas
+
 do -- na __ _ _ _ _ _ _ no -- _ _ bis __ _ pa -- _ cem
 do -- na __ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-\rectas
+
 no -- _ bis __ _ pa -- _ _ _ cem. _ _ _ 
 }
 
 textoaltus=\lyricmode{
 A -- gnus __ _ De -- _ _ _ _ _ _ _ _ i 
 qui tol -- lis pec -- ca -- _ ta __ _ _ _ _ _ _ mun -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ di
-\italicas
+
 pec -- _ ca -- ta mun -- di
 mun -- _ _ _ _ di:
-\rectas
+
 mi -- se -- re -- re no -- _ _ bis
-\italicas
+
 mi -- se -- re -- _ _ _ _ re no -- _ _ _ _ _ _ _ bis
-\rectas
+
 mi -- se -- _ re -- re __ _ _ _ no -- _ _ _ _ _ _ _ _ _ _ bis
-\italicas
+
 mi -- se -- re -- re no -- _ bis
-\rectas
+
 mi -- se -- re -- re __ _ no -- _ _ _ _ bis. _ 
 A -- gnus __ _ De -- _ _ _ _ _ _ i
 qui tol -- lis pec -- ca -- ta mun -- _ _ _ _ _ _ _ _ _ _ _ di
 qui tol -- lis pec -- ca -- ta mun -- di,
-\italicas
+
 qui tol -- lis pec -- ca -- ta mun -- _ _ _ di
 qui tol -- lis pec -- ca -- ta mun -- di:
-\rectas
+
 mi -- se -- re -- re __ _ _ _ _ no -- _ _ _ _ _ _ _ bis
-\italicas
+
 mi -- se -- re -- re no -- _ bis
 mi -- se -- re -- re __ _ _ _ _ no -- _ _ _ bis,
 mi -- se -- re -- re __ _ _ no -- bis,
-\rectas
+
 mi -- se -- re -- re no -- _ bis.
 A -- gnus De -- _ _ _ i
-\italicas
+
 a -- gnus De -- _ _ _ _ _ _ i
-\rectas
+
 qui tol -- lis pec -- ca -- ta mun -- _ _ di,
-\italicas
+
 pec -- ca -- _ _ ta mun -- _ _ _ _ _ _ _ _ _ _ di:
-\rectas
+
 do -- na no -- bis pa -- _ cem,
-\italicas
+
 do -- na __ _ no -- _ bis pa -- _ _ cem, 
 do -- na no -- bis __ _ _ pa -- _ _ _ cem
-\rectas
+
 do -- na no -- bis pa -- _ _ _ cem
-\italicas
+
 do -- na no -- _ _ bis pa -- _ _ _ cem,
 do -- na no -- bis pa -- _ _ cem
 do -- na no -- bis __ _ _ pa -- _ _ _ cem
 do -- na no -- _ bis pa -- _ cem
-\rectas
+
 do -- na no -- bis pa -- cem
-\italicas
+
 do -- na no -- bis pa -- _ _ _ _ cem.
 }
 
 textotenor=\lyricmode{
 A -- gnus De -- i
-\italicas
+
 a -- gnus De -- _ _ _ _ i
 qui tol -- lis pec -- _ _ _ _ ca -- ta mun -- _ di
-\rectas
+
 qui tol -- lis pec -- ca -- ta mun -- di 
-\italicas
+
 pec -- ca -- ta mun -- _ di:
-\rectas
+
 mi -- se -- re -- re __ _ _ no -- _ _ _ bis
 mi -- se -- re -- re no -- _ _ _ _ _ _ _ _ _ _ _ bis
-\italicas
+
 mi -- se -- re -- re no -- _ _ _ _ _ bis
-\rectas
+
 mi -- se -- re -- re no -- _ _ _ _ _ _ _ _ _ _ bis.
 A -- gnus De -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ i
 qui tol -- lis pec -- ca -- ta mun -- di
-\italicas
+
 qui tol -- lis pec -- _ _ ca -- ta mun -- di
 qui tol -- lis pec -- ca -- ta mun -- _ _ di
 qui tol -- lis pec -- ca -- ta __ _ mun -- _ _ _ _ _ di
 qui tol -- lis pec -- ca -- ta mun -- _ _ _ di:
-\rectas
+
 mi -- se -- re -- re __ _ _ no -- bis
-\italicas
+
 mi -- se -- re -- re __ _ no -- bis
 mi -- se -- re -- re __ _ _ _ _ no -- _ _ bis
-\rectas
+
 mi -- se -- re -- re no -- _ _ _ _ _ _ bis.
 A -- gnus De -- _ _ _ i
 qui tol -- lis pec -- ca -- _ _ _ _ ta __ _ mun -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ di:
 do -- na no -- _ _ _ _ _ _ _ _ _ bis pa -- _ _ _ _ _ _ _ _ _ _ cem
-\italicas
+
 do -- na no -- bis pa -- cem
 do -- na no -- bis pa -- cem __ _ _ _ _ _ 
-\rectas
+
 do -- na no -- bis pa -- cem
-\italicas
+
 do -- na no -- bis pa -- cem __ _ _ _ _ 
 do -- na __ _ _ _ _ _ _ _ _ no -- bis
-\rectas
+
 do -- na no -- bis pa -- _ _ _ cem. _ 
 }
 
 textobassus=\lyricmode{
 A -- gnus De -- i 
-\italicas
+
 qui tol -- lis pec -- ca -- ta mun -- _ di
-\rectas
+
 qui tol -- lis pec -- ca -- ta __ _ _ _ _ _ _ mun -- _ _ _ di
-\italicas
+
 qui tol -- lis pec -- ca -- _ _ _ ta mun -- _ _ _ di:
-\rectas
+
 mi -- se -- re -- re,
 mi -- se -- re -- re __ _ no -- _ _ _ _ _ _ bis
-\italicas
+
 mi -- se -- re -- re __ _ _ _ no -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ bis,
-\rectas
+
 mi -- se -- re -- re no -- bis. _ 
 A -- gnus De -- _ _ _ _ i,
-\italicas
+
 a -- gnus __ _ De -- _ _ _ _ _ _ i
-\rectas
+
 qui tol -- lis pec -- ca -- ta mun -- di
-\italicas
+
 qui tol -- lis pec -- ca -- ta 
 qui tol -- lis pec -- ca -- ta mun -- di,
 qui tol -- lis __ _ _ _ _ pec -- _ _ ca -- ta mun -- di:
-\rectas
+
 do -- na no -- _ bis pa -- cem
-\italicas
+
 do -- na _ no -- bis pa -- cem
-\rectas
+
 do -- na no -- bis pa -- cem, __ _ _ _ _ _ _ _ 
-\italicas
+
 do -- na no -- bis pa -- _ _ _ _ _ _ _ _ cem
 do -- na no -- bis pa -- cem
 do -- na no -- bis
-\rectas
+
 do -- na no -- bis pa -- _ _ _ _ _ _ _ _ _ _ _ _ _ cem.
 }
 
 textobassusdos=\lyricmode{
 A -- gnus __ _ De -- _ _ _ _ _ i
 qui tol -- lis pec -- ca -- ta mun -- _ di
-\italicas
+
 qui tol -- lis pec -- ca -- ta __ _ mun -- _ _ _ _ _ _ _ _ _ _ _ _ _ di
 qui tol -- lis pec -- ca -- _ _ _ _ _ _ ta mun -- di:
-\rectas
+
 mi -- se -- re -- re no -- _ _ _ _ _ _ _ _ _ _ bis
-\italicas
+
 mi -- se -- re -- re __ _ no -- _ bis
-\rectas
+
 mi -- se -- re -- _ re no -- _ _ _ bis
-\italicas
+
 no -- _ _ _ _ _ _ bis.
-\rectas
+
 A -- gnus De -- _ _ _ _ _ _ _ _ _ _ i
-\italicas
+
 qui __ _ tol -- lis pec -- _ _ ca -- ta __ _ _ mun -- di
-\rectas
+
 qui tol -- lis pec -- ca -- ta __ _ mun -- _ _ _ _ di,
-\italicas
+
 qui __ _ _ tol -- lis pec -- ca -- _ _ _ _ _ _ _ _ _ ta __ _ _ mun -- _ di
 qui tol -- lis pec -- ca -- ta mun -- di,
 qui tol -- _ _ _ _ _ _ lis __ _ _ _ _ _ _ _ _ pec -- ca -- ta mun -- _ _ di:
-\rectas
+
 mi -- se -- re -- re __ _ _ _ _ no -- _ _ _ _ _ _ _ _ _ bis
 mi -- se -- re -- re no -- bis
-\italicas
+
 mi -- se -- re -- re no -- bis. _
-\rectas
+
 A -- gnus De -- _ _ _ _ _ _ _ _ _ _ _ i
 qui tol -- lis pec -- ca -- ta mun -- _ _ _ _ di
-\italicas
-qui tol -- lis pec -- ca -- ta,
-qui tol -- lis __ _ _ _ _ pec -- ca -- ta mun -- di
-\rectas
+
+qui __ _ tol -- lis pec -- ca -- ta,
+qui tol -- _ _ _ lis pec -- ca -- ta mun -- di
+
 qui tol -- lis pec -- ca -- ta mun -- _ di:
 do -- na __ _ no -- bis pa -- _ _ _ _ _ _ _ _ _ _ cem
-\italicas
+
 do -- na no -- bis pa -- cem
 do -- na no -- bis pa -- cem
 do -- na no -- bis pa -- cem
 do -- na no -- bis
-\rectas
+
 do -- na no -- bis pa -- cem.
 }
 

@@ -1176,8 +1176,8 @@ mi -- se -- re -- re no -- bis. _
 A -- gnus De -- _ _ _ _ _ _ _ _ _ _ _ i
 qui tol -- lis pec -- ca -- ta mun -- _ _ _ _ di
 \italicas
-qui tol -- lis pec -- ca -- ta,
-qui tol -- lis __ _ _ _ _ pec -- ca -- ta mun -- di
+qui __ _ tol -- lis pec -- ca -- ta,
+qui tol -- _ _ _ lis pec -- ca -- ta mun -- di
 \rectas
 qui tol -- lis pec -- ca -- ta mun -- _ di:
 do -- na __ _ no -- bis pa -- _ _ _ _ _ _ _ _ _ _ cem

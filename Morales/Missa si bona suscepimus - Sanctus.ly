@@ -1,5 +1,5 @@
 \version "2.24.2"
-revision = "3"
+revision = "4"
 % \pointAndClickOff
 
 #(set-global-staff-size 15)
@@ -792,8 +792,8 @@ ho -- san -- na in ex -- cel -- sis.
 }
 
 textoaltus=\lyricmode{
-San -- _ _ _ _ _ _ ctus
-San -- _ _ _ _ _ _ _ _ _ _ _ _ ctus
+San -- _ _ _ _ _ ctus
+San -- _ _ _ _ _ _ _ _ _ _ _ _ _ ctus
 San -- _ _ _ _ _ _ _ ctus
 Do -- mi -- nus De -- us Sa -- ba -- _ _ _ oth
 \italicas
