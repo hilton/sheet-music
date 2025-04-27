@@ -2,7 +2,7 @@
 % Copyright ©2016 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "27"
+revision = "28"
 % \pointAndClickOff
 
 #(set-global-staff-size 15)
