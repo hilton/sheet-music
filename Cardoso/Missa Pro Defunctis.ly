@@ -2,8 +2,8 @@
 % Copyright ©2016 Peter Hilton - https://github.com/hilton
 
 \version "2.18.2"
-revision = "26"
-\pointAndClickOff
+revision = "27"
+% \pointAndClickOff
 
 #(set-global-staff-size 15)
 
@@ -135,7 +135,7 @@ sopranoA = \new Voice {
 		g a bes a g f \break f g a g 
 		f a a g \break f a g a g f 
 		a g \break a c a g a bes a g \break
-		f g \time 6/2 a g\breve f\breve \fermata \time 4/2 \showBarLine \bar "|." 
+		f g \time 6/2 a g\breve*1/2 f\breve \fermata \time 4/2 \showBarLine \bar "|." 
 		\once \override Score.RehearsalMark.break-visibility = #end-of-line-visible
 		\once \override Score.RehearsalMark.self-alignment-X = #RIGHT
 		\break
@@ -155,7 +155,7 @@ sopranoB = \new Voice {
 		r4 c c a bes2 bes a4 d d a cis2 d d c1 c2
 		bes1 a2 f f1 r r\breve r1 r2 c'2. 
 		bes4 a g f2 f f4 g a bes c2 bes a4 g a bes c1.
-		a2 d1 c a\breve \fermata
+		a2 d1 c a\breve*1/2 \fermata
 	}
 	\addlyrics {
 		Do -- _ _ _ na e -- _ _ _ _ _ _ _ _ 
@@ -175,7 +175,7 @@ alto = \new Voice {
 		c c c2. c4 f,2 f' f4 e2 d2 c8 bes a4 f g g' g d4 ~ d
 		f2 d4 e2 d r1 r4 c c a bes2 d d1 c1. d2
 		d1 e2 f c f1 e2 f f2. e4 d1 c2. g4 bes2
-		f1 r2 c'1 c2 bes1 g2 c c\breve \fermata
+		f1 r2 c'1 c2 bes1 g2 c c\breve*1/2 \fermata
 	}
 	\addlyrics {
 		Do -- _ _ _ _ _ _ na e -- is Dó -- mi -- ne,
@@ -195,7 +195,7 @@ tenorA = \new Voice {
 		c r2 c1 f e2 f1 r2 r4 f f e e d d2 g,
 		a1 r2 f' f e f f d1 r2 a2. bes4 c d e f g2 ~ g 
 		fis2 g2 c, f2. e4 d2 c4 bes a2 c d1 r2 f e d
-		d4 e f d e f g2. f4 f1 e4 d e1 f\breve \fermata	}
+		d4 e f d e f g2. f4 f1 e4 d e1 f\breve*1/2 \fermata	}
 	\addlyrics {
 		Do -- na __ _ e -- is Dó -- _ 
 		mi -- ne, do -- _ _ _ _ na e -- _ _ _ _ 
@@ -213,7 +213,7 @@ tenorB = \new Voice {
 		c2 c'1 a2 c1 a g a2 f g1 r2 f2 ~ f4
 		g4 a2 g1 f g r2 d' d4 a c d a1 r
 		r2 r4 a a e f2 g2. g4 f1 r2 d2. e4 f2. g4 a bes c2 bes
-		a d c4 bes a g f1 g f f f g a2 d, g e f1 g g2 c, f\breve \fermata	}
+		a d c4 bes a g f1 g f f f g a2 d, g e f1 g g2 c, f\breve*1/2 \fermata	}
 	\addlyrics {
 		Do -- _ _ _ na e -- is Dó -- _ _ _ _ mi -- 
 		ne, do -- na e -- is __ _ Dó -- mi -- ne, Dó -- 
@@ -232,7 +232,7 @@ bass = \new Voice {
 		f1 c f, c' d r2 r4 d d a c d g,1
 		d' a2 d b c f, f g4 a bes! c d2. e4 f2 f c g
 		d'1 r2 f2. e4 d c b2 c f,1 bes!2. c4 d e f2 c g
-		d'1 c2. bes4 a2 f bes1 c f,\breve \fermata	}
+		d'1 c2. bes4 a2 f bes1 c f,\breve*1/2 \fermata	}
 	\addlyrics {
 		Do -- _ _ na e -- _ _ _ is Dó -- 
 		mi -- ne, do -- na e -- _ is, do -- _ _ _ _ _ _ na __ _ 
@@ -289,9 +289,9 @@ sopranoA = \new Voice {
 		\set Score.currentBarNumber = #25
 		f1 g a a
 		a a \break a a2 a a1 a a g \break \time 6/2 bes a1. 
-		g2 \time 4/2 a\longa \showBarLine \bar "||" r\breve \break r1 f g a
+		g2 \time 4/2 a\breve*3/2 \showBarLine \bar "||" r\breve \break r1 f g a
 		a2 a a a a a a1 a2 a a a
-		f g a1 g2 f1 e2 f\breve \fermata \showBarLine \bar "|."
+		f g a1 g2 f1 e2 f\breve*1/2 \fermata \showBarLine \bar "|."
 		\once \override Score.RehearsalMark.break-visibility = #end-of-line-visible
 		\once \override Score.RehearsalMark.self-alignment-X = #RIGHT
 	}
@@ -308,10 +308,10 @@ sopranoB = \new Voice {
 	\relative c'' {
 		a1 bes2 d2. cis8 b cis2 d1
 		r1 r2 d, a' c2. bes4 a g f d d'2 c c c1 c2 bes2 ~ bes4
-		a4 g2 f f bes bes a d1 cis4 b cis\breve
+		a4 g2 f f bes bes a d1 cis4 b cis\breve*1/2
 		f,1 g a a2 a bes bes c d2. a4 d2 cis d1
 		cis2 d d, e f e f1
-		e2 f c'2. bes4 a2 g c c\breve
+		e2 f c'2. bes4 a2 g c c\breve*1/2 \fermata
 	}
 	\addlyrics {
 		Et tí -- _ _ _ _ bi 
@@ -326,10 +326,10 @@ alto = \new Voice {
 	\relative c' {
 		d1 d2. e4
 		f2 e f f f f, a1 a r2 a d f e c1
-		f2 e g g d2. e4 f2 d1 f2 f e1 ~ e\breve
+		f2 e g g d2. e4 f2 d1 f2 f e\breve
 		d2 f1 e4 d e2 f2. e4 d c bes2 g r d' d d e f
 		e a, a f' e d e a,
-		r bes c f e c2. bes8 a g2 a\breve \fermata
+		r bes c f e c2. bes8 a g2 a\breve*1/2 \fermata
 	}
 	\addlyrics {
 		Et tí -- _ 
@@ -346,10 +346,10 @@ tenorA = \new Voice {
 		\clef "treble_8"
 		r\breve
 		r1 a d2 f e f f e4 d e2 f1 d2 e e
-		f c1 d2 bes1 r2 d bes d1 a2 a1 ~ a\breve
+		f c1 d2 bes1 r2 d bes d1 a2 a\breve
 		a1 d cis2 d d d d1 f1. f2 e d
 		e1 d2 a2 ~ a a2 a a
-		d, g c\breve c1 c\breve \fermata
+		d, g c\breve c1 c\breve*1/2 \fermata
 	}
 	\addlyrics {
 		Et tí -- _ bi red -- dé -- _ _ _ tur vo -- tum in 
@@ -365,9 +365,9 @@ tenorB = \new Voice {
 		\clef "treble_8"
 		d1 g2 bes
 		a a f d d a'2. g4 f e f g a bes c2 d a a1 a2
-		a f g4 a bes c d1 r2 d,1 g2 f d e1 ~ e\breve
+		a f g4 a bes c d1 r2 d,1 g2 f d e\breve
 		r1 d a' f2 a g bes a a f d a'\breve r2 d cis d1 cis2
-		d bes a f g a4 f g2. g4 f\breve \fermata
+		d bes a f g a4 f g2. g4 f\breve*1/2 \fermata
 	}
 	\addlyrics {
 		Et tí -- _ 
@@ -384,9 +384,9 @@ bass = \new Voice {
 		\clef bass
 		r\breve
 		a1 d2 f2. e4 d2 cis d d c!4 bes a2 d d1 a
-		f c'2 g2 ~ g4 a4 bes c d1 g, d' a ~ a\breve
+		f c'2 g2 ~ g4 a4 bes c d1 g, d' a\breve
 		d1 bes a2 d d d g, g' f4 e d c d1 a\breve 
-		d1 a a2 a bes g f1 c'2 f, c'2. c4 f,\breve \fermata
+		d1 a a2 a bes g f1 c'2 f, c'2. c4 f,\breve*1/2 \fermata
 		\noPageBreak
 	}
 	\addlyrics {
@@ -462,7 +462,7 @@ sopranoA = \new Voice {
 	\relative c'' {
 		r1 r as\breve bes1
 		c c bes1 ~ \break bes des1 c
-		as g bes as1. g2 as\breve \fermata \showBarLine\bar "||"
+		as g bes as1. g2 as\breve*1/2 \fermata \showBarLine\bar "||"
 	}
 	\addlyrics {
 		Ký -- _ ri -- e e -- _ _ _ _ _ lé -- i -- son.
@@ -473,7 +473,7 @@ sopranoB = \new Voice {
 	\relative c'' {
 		as1 bes c1. d!2 es es2.
 		des4 c2. bes4 as1 g2 f des'2. c8 bes as2. bes4 c1 
-		d!2 es bes2. c4 des es f2 es1 es2 es\breve \fermata
+		d!2 es bes2. c4 des es f2 es1 es2 es\breve*1/2 \fermata
 	}
 	\addlyrics {
 		Ký -- _ ri -- e e -- lé -- _ _ _ _ i -- son,
@@ -485,7 +485,7 @@ alto = \new Voice {
 	\relative c'' {
 		r2 as1 g2 as es f as1 g2
 		as2. g8 f es2 f1 bes,2 bes bes'2. as8 g f4 g as1.
-		as,2 es'1 f2 des1 c2 bes es c\breve \fermata
+		as,2 es'1 f2 des1 c2 bes es c\breve*1/2 \fermata
 	}
 	\addlyrics {
 			Ký -- ri -- e __ _ e -- lé -- i -- son, __ _ _ _
@@ -499,7 +499,7 @@ tenorA = \new Voice {
 		\clef "treble_8"
 		es1 es2. des4 c bes as1 as2 es'1
 		es as2. g4 f2 es des1. des2 as\breve
-		r2 es' des f2. des4 es2 es1 es\breve \fermata
+		r2 es' des f2. des4 es2 es1 es\breve*1/2 \fermata
 	}
 	\addlyrics {
 		Ký -- ri -- _ _ _ _ e e -- lé -- _ _ _ _ _ i -- son,
@@ -512,7 +512,7 @@ tenorB = \new Voice {
 		\clef "treble_8"
 		c1 bes2 es2. des4 c bes as2 f bes1
 		as as bes2. c4 des es f2 des f1 es4 des
-		es2 f bes,1. bes2 f as bes1 as\breve \fermata
+		es2 f bes,1. bes2 f as bes1 as\breve*1/2 \fermata
 	}
 	\addlyrics {
 		Ký -- ri -- e __ _ _ _ _ e -- lé -- i -- son,
@@ -525,7 +525,7 @@ bass = \new Voice {
 		\clef bass
 		as1 es as2. g4 f1 es
 		as,2 as'2. g4 f es d!2 es bes bes2. c4 des es f g as2.
-		g4 f2 es1 bes2. c4 des2 as es' es as,\breve \fermata
+		g4 f2 es1 bes2. c4 des2 as es' es as,\breve*1/2 \fermata
 	}
 	\addlyrics {
 		Ký -- ri -- e __ _ e -- _ _ lé -- _ _ _ _ i -- son,
@@ -581,7 +581,7 @@ sopranoA = \new Voice {
 		es1 c bes c2 des bes1 c2. c4 bes1
 		r \pageBreak r2 es es f d! es2. \ficta des!4 c bes c2 bes1 as g2
 		r as a! bes bes a! bes1 r2 c c des bes es es1
-		r es c bes2 c des1. c2 bes1 c\breve \fermata \showBarLine \bar "||"
+		r es c bes2 c des1. c2 bes1 c\breve*1/2 \fermata \showBarLine \bar "||"
 	}
 	\addlyrics {
 		Chrí -- ste e -- lé -- _ _ _ i -- son,
@@ -597,7 +597,7 @@ sopranoB = \new Voice {
 		r\breve r r2 es es f d! es1
 		d!2 es c1 bes4 as bes2 bes c1 es c bes 
 		c des c2. c4 des2 c4 bes c1 r\breve r2 c
-		c des bes c as es'1 es2 f1 es1. es2 es\breve \fermata
+		c des bes c as es'1 es2 f1 es1. es2 es\breve*1/2 \fermata
 	}
 	\addlyrics {
 		Chrí -- ste e -- lé -- _ i -- son,
@@ -613,7 +613,7 @@ alto = \new Voice {
 		r2 es es f d! es as, as'1 g2 as as1 g2
 		f bes ~ bes as2 g as1 g2 as1. g4 f g2 f r es
 		es f ~ f des2 es f bes, bes'1 as4 g as2 f g1 r2 as
-		a! bes g as2. g8 f es4 f g2 as1 bes2. as4 as1 g2 as\breve \fermata
+		a! bes g as2. g8 f es4 f g2 as1 bes2. as4 as1 g2 as\breve*1/2 \fermata
 	}
 	\addlyrics {
 		Chrí -- ste e -- lé -- i -- son,
@@ -631,7 +631,7 @@ tenorA = \new Voice {
 		r\breve r2 es es f d! es as, f bes1.
 		bes2 c2. des4 es2 des4 c bes2 es, as1 r2 es' es f d! es
 		as,1 r r2 f' f ges es f f bes, es4 des c bes as2. g4 
-		f2 bes es, as2. bes4 c des es2 as, des1 es1. es2 as,\breve \fermata
+		f2 bes es, as2. bes4 c des es2 as, des1 es1. es2 as,\breve*1/2 \fermata
 	}
 	\addlyrics {
 		Chrí -- ste e -- lé -- i -- son,
@@ -664,7 +664,7 @@ sopranoA = \new Voice {
 	\relative c'' {
 		\set Score.currentBarNumber = #26
 		r\breve r es1 c bes c
-		des c as bes bes as1. g2 as1 \fermata \showBarLine \bar "||"
+		des c as bes bes as1. g2 as\breve*1/2 \fermata \showBarLine \bar "||"
 	}
 	\addlyrics {
 		Chrí -- ste __ _ _ _ _ _ _ e -- lé -- i -- son.
@@ -674,7 +674,7 @@ sopranoA = \new Voice {
 sopranoB = \new Voice {
 	\relative c'' {
 		es1 c bes as as2 bes r1 r\breve
-		r2 bes c es1 d!2 es1 des1. c2 bes1 c1 \fermata
+		r2 bes c es1 d!2 es1 des1. c2 bes1 c\breve*1/2 \fermata
 	}
 	\addlyrics {
 		Chrí -- ste e -- lé -- i -- son,
@@ -685,7 +685,7 @@ sopranoB = \new Voice {
 alto = \new Voice {
 	\relative c' {
 		r\breve r r2 es f as1 g2 as2. g4
-		f2 des es1 r2 f bes,1 des2. es4 f2 f1 es2 c1 \fermata
+		f2 des es1 r2 f bes,1 des2. es4 f2 f1 es2 c\breve*1/2 \fermata
 	}
 	\addlyrics {
 		Chrí -- ste e -- _ _ _ lé -- i -- son,
@@ -697,7 +697,7 @@ tenorA = \new Voice {
 	\relative c' {
 		\clef "treble_8"
 		es1 f2 as1 g2 f es4 des es1 r2 f1 es2 es as ~
-		as g2 as es f as1 g2 f f1 c2 des bes es1 \fermata
+		as g2 as es f as1 g2 f f1 c2 des bes es\breve*1/2 \fermata
 	}
 	\addlyrics {
 		Chrí -- ste e -- lé -- i -- son, __ _ _
@@ -711,7 +711,7 @@ tenorB = \new Voice {
 	\relative c' {
 		\clef "treble_8"
 		r\breve es1 c1. bes2 as1 bes as
-		bes as\breve r2 bes1 des2. c8 bes as2 bes1 as1 \fermata
+		bes as\breve r2 bes1 des2. c8 bes as2 bes1 as\breve*1/2 \fermata
 	}
 	\addlyrics {
 		Chrí -- ste __ _ e -- _ lé -- i -- son,
@@ -723,7 +723,7 @@ bass = \new Voice {
 	\relative c {
 		\clef bass
 		r\breve r2 es f as1 g2 f2. es4 d!2 es as,1
-		r r2 as' f1 es bes2. c4 des es f2 des es as,1 \fermata
+		r r2 as' f1 es bes2. c4 des es f2 des es as,\breve*1/2 \fermata
 	}
 	\addlyrics {
 		Chrí -- ste e -- _ lé -- _ _ i -- son,
@@ -767,7 +767,7 @@ sopranoA = \new Voice {
 		\set Score.currentBarNumber = #34
 		es1. as,2 as1 es' ~ es\breve
 		f\breve es1 des c bes\breve
-		as1 bes c bes2 as1 g2 as\breve \fermata \showBarLine \bar "|."
+		as1 bes c bes2 as1 g2 as\breve*1/2 \fermata \showBarLine \bar "|."
 	}
 	\addlyrics {
 		Ký -- ri -- e e -- _ _ _ _ _ _ _ _ _ lé -- i -- son.
@@ -778,7 +778,7 @@ sopranoB = \new Voice {
 	\relative c'' {
 		r\breve r r 
 		as2. bes4 c2 des1 c2. bes4 bes2 ~ \break bes as1 g2
-		f f'1 f2 des1 es2 c des1 bes c\breve \fermata
+		f f'1 f2 des1 es2 c des1 bes c\breve*1/2 \fermata
 	}
 	\addlyrics {
 		Ký -- _ _ ri -- e __ _ e -- lé -- i -- son,
@@ -790,7 +790,7 @@ alto = \new Voice {
 	\relative c' {
 		r\breve r1 r2 es2. des4 c bes c des es2
 		es des c as'2. g8 f es2 f1 r2 f1 es2
-		des bes c f bes, bes'1 as2. g4 f2 es1 c\breve \fermata
+		des bes c f bes, bes'1 as2. g4 f2 es1 c\breve*1/2 \fermata
 	}
 	\addlyrics {
 		Ký -- _ _ _ _ _ _ ri -- e e -- lé -- _ _ i -- son,
@@ -804,7 +804,7 @@ tenorA = \new Voice {
 		\clef "treble_8"
 		r2 as2. g4 f es f g as1 g4 f es1 as,2 bes 
 		c as'1 f2 as1 r2 f2 ~ f4 g4 as2 f bes1
-		f2 f1 r2 des ges! f f1 bes,2 es es\breve \fermata
+		f2 f1 r2 des ges! f f1 bes,2 es es\breve*1/2 \fermata
 	}
 	\addlyrics {
 		Ký -- _ _ _ _ _ _ _ _ _ ri -- e e -- lé -- i -- son,
@@ -818,7 +818,7 @@ tenorB = \new Voice {
 		\clef "treble_8"
 		as2. bes4 c2 des1 c2 bes1 bes2 as es'2. es4
 		as,\breve r2 as1 bes2 c as bes bes2. 
-		c4 des2 c des2. c4 bes as ges2 as bes1. bes2 as\breve \fermata
+		c4 des2 c des2. c4 bes as ges2 as bes1. bes2 as\breve*1/2 \fermata
 	}
 	\addlyrics {
 		Ký -- _ _ ri -- e e -- lé -- _ _ i -- son,
@@ -832,7 +832,7 @@ bass = \new Voice {
 		\clef bass
 		r\breve r1 es2. f4 g2 as1 g2
 		f1. des2 as1 des2 bes f'2. es4 d2 es
-		bes1 f' ges2. f4 es2 f des1 es2. es4 as,\breve \fermata
+		bes1 f' ges2. f4 es2 f des1 es2. es4 as,\breve*1/2 \fermata
 	}
 	\addlyrics {
 		Ký -- _ _ ri -- e e -- lé -- i -- son,
@@ -899,7 +899,7 @@ sopranoA = \new Voice {
 		
 		as4 f c'2 ~ \break c4 bes4 bes1 a2 | bes\breve r1
 		r2 es2. d4 c2. bes4 as2 \break g g as2. bes4 | c1
-		c r2 d es c b c1 b2 c\breve \fermata \showBarLine \bar "|."
+		c r2 d es c b c1 b2 c\breve*1/2 \fermata \showBarLine \bar "|."
 	}
 	\addlyrics {
 		Dó -- na é -- is Dó -- mi -- ne,
@@ -930,7 +930,7 @@ sopranoB = \new Voice {
 		
 		c2. d4 es2 bes es1 r2 f2. es4 d2 c c
 		c1 c r r2 c2. bes4 as2 g es 
-		as4 bes c2. b8 \ficta a \ficta b2 c c d es d1 e\breve \fermata
+		as4 bes c2. b8 \ficta a \ficta b2 c c d es d1 e\breve*1/2 \fermata
 	}
 	\addlyrics {
 		Dó -- na __ _ é -- is Dó -- _ _ _ _ _ mi -- ne,
@@ -962,7 +962,7 @@ alto = \new Voice {
 
 		as bes c2 es1 d4 c d2 bes c\breve
 		es1 c es f es
-		f g es d2 c d1 c\breve \fermata
+		f g es d2 c d1 c\breve*1/2 \fermata
 	}
 	\addlyrics {
 		Dó -- _ _ _ _ _ _ _ _ _ _ _ _ _ na é -- _ is Dó -- mi -- ne, __ _
@@ -989,7 +989,7 @@ tenorA = \new Voice {
 		
 		r2 as g f es c f1 r2 bes1 as2
 		g2. f4 | g2 as es f g4 f es d c1 c\breve
-		r2 g'2. f4 es2 g g g1 g\breve \fermata
+		r2 g'2. f4 es2 g g g1 g\breve*1/2 \fermata
 	}
 	\addlyrics {
 		Dó -- na __ _ é -- _ _ is Dó -- mi -- ne,
@@ -1021,7 +1021,7 @@ tenorB = \new Voice {
 		
 		f1 r\breve r r2 f1
 		es4 d c2. bes4 as bes c as bes2 c1 f,2 g a
-		f f' es d c g'2. f4 es d8 c g'2 g, g\breve \fermata
+		f f' es d c g'2. f4 es d8 c g'2 g, g\breve*1/2 \fermata
 	}
 	\addlyrics {
 		Dó -- na __ _ _ _ é -- is Dó -- mi -- ne,
@@ -1053,7 +1053,7 @@ bass = \new Voice {
 		
 		f' f es d c1 | bes\breve f'1
 		r2 c'2. bes4 as2. g4 f2 es c f1 c2 c'2.
-		bes4 as2 | g1 c, g'\breve c,\breve \fermata
+		bes4 as2 | g1 c, g'\breve c,\breve*1/2 \fermata
 	}
 	\addlyrics {
 		Dó -- na é -- _ _ _ is Dó -- mi -- ne,
@@ -1095,13 +1095,13 @@ sopranoA = \new Voice {
 	\relative c'' {
 		\set Score.currentBarNumber = #34
 		r\breve g2. g4 b2 c2.
-		c4 c es2 d8 c d4 bes4 ~ | \break bes as8 g as2. g4 f f'2 es4 d4. d8
-		c2. bes4. a16 g a4 bes4. \ficta as!8 g f g4 f f'4 ~ | f \break es8 d c2 bes r c a4 b2
-		c4. f,8 c'2 b4 c1 r4 f \break d2 e f4. \ficta es!8 d c d4 c es2 d8 c
+		c4 c es2 d8 c d4 bes2 as8 g as2. g4 f f' ~ \break f es4 d4. d8
+		c2. bes4. a16 g a4 bes4. \ficta as!8 g f g4 f f'2 es8 d c2 bes r c a4 b2
+		c4. f,8 c'4 ~ \break c b4 c1 r4 f d2 e f4. \ficta es!8 d c d4 c es2 d8 c
 		
-		d2 c b4 c4. b16 \ficta a \ficta b4 c2 es2 ~ | es4 \break d4 c bes as g c bes
-		bes2 as4 des c2 r4 f4. es8 d4 c1 f,4. g8 | \break as bes c2 \ficta b4 c es4. d8 c4
-		bes1 r4 c2 bes4 a bes2 a4 bes f'4. es8 d4 | \break \time 3/2 c d4. c8 c2 b4 \time 4/2 c\breve \fermata \showBarLine \bar "|."
+		d2 c b4 c4. b16 \ficta a \ficta b4 c2 es2 ~ | es4 d4 c bes as g c bes
+		bes2 as4 des c2 r4 f4. es8 d4 c1 f,4. g8 | as bes c2 \ficta b4 c es4. d8 c4
+		bes1 r4 c2 bes4 a bes2 a4 bes f'4. es8 d4 | \time 3/2 c d4. c8 c2 b4 \time 4/2 c\breve*1/2 \fermata \showBarLine \bar "|."
 	}
 	\addlyrics {
 		In me -- mó -- _ ri -- a æ -- _ _ _ tér -- _ _ _ _ na,
@@ -1124,11 +1124,11 @@ sopranoB = \new Voice {
 		r\breve r |
 		r2 g2. g4 bes2 | c2. c4 c c b2 | c4 g bes4. as8
 		g f g4 f f'2 es4 d4. d8 c2 b | c4. d8 e4 f2 e8 d \ficta e2 | f r1
-		r4 f2 d4 e2 f4. \ficta es!8 d c c4 ~ | c b4 r c a c2 b4 | c2 c
+		r4 f ~ f d4 e2 f4. \ficta es!8 d c c4 ~ | c b4 r c a c2 b4 | c2 c
 		
 		bes4. as8 g f g2 g4 g1 g2 ~ g r1 r4 es'2
-		d4 c bes as g c bes | bes2 as4 g8 f g4 a bes f'4 ~ | f es4 d2 c4 c4. bes8 as2
-		g4 f g as2. g4 | f2 r4 f'4. es8 d4 c bes ~ bes as4 g1 ~ g\breve \fermata
+		d4 c bes as g c bes | bes2 as4 g8 f g4 a bes f'2 es4 d2 c4 c4. bes8 as4 ~ \break as
+		g4 f g as2. g4 | f2 r4 f'4. es8 d4 c bes2 as4 g\breve \fermata
 	}
 	\addlyrics {
 		In me -- mó -- _ ri -- a æ -- tér -- na, æ -- tér -- _ _ _ _ na,
@@ -1146,13 +1146,13 @@ sopranoB = \new Voice {
 alto = \new Voice {
 	\relative c' {
 		r\breve r |
-		c2. c4 es2 f2 ~ | f4 f4 f1 f2 | g2. f2
+		c2. c4 es2 f2. f4 f1 f2 | g2. f2
 		es4. d8 d c16 bes | c2 bes c f | g2. as4 g1 | f2 r1
 		as2 | f g as1 | g f2 g | es4 g f1
 		
 		es2. d8 c d2 c r | es2. es4 es es es2 |
 		f2. f4 es2. d8 c | bes2 c4. d8 es2 d | f g es c4. d8 |
-		es2 bes as4 as8 bes c d es2 d4 c2 d f2 ~ | f4 f4 es2 d c\breve \fermata
+		es2 bes as4 as8 bes c d es2 d4 c2 d f2. f4 es2 d c\breve*1/2 \fermata
 	}
 	\addlyrics {
 		In me -- mó -- _ ri -- a æ -- _ tér -- _ _ _ _ _ _ _ na,
@@ -1175,7 +1175,7 @@ tenorA = \new Voice {
 		
 		bes c | g1 r4 es'2 d4 | c bes as g c4. bes8 as4 es |
 		bes'2 r4 bes c4. bes8 a4 bes8 c | d es f2 es8 d c bes c4 bes2 | r1 c4. bes8 as2 |
-		es4 es'2 d4 c4. bes8 as4 es f1 bes2 f f g1 c\breve \fermata
+		es4 es'2 d4 c4. bes8 as4 es f1 bes2 f f g1 c\breve*1/2 \fermata
 	}
 	\addlyrics {
 		In me -- mó -- _ ri -- a æ -- tér -- _ _ _ _ _ _ _ _ _ na, __ _
@@ -1254,7 +1254,7 @@ sopranoA = \new Voice {
 		\time 5/2 bes1 bes2 as f \break \time 4/2
 		
 		as2 bes c2. c4 bes2. des2 des4 c2 bes c1 bes2 | as des
-		es c \break bes2. bes4 as2 f as4. bes8 c4 des c2 bes\breve \fermata \showBarLine \bar "|."
+		es c bes2. bes4 as2 f as4. bes8 c4 des c2 bes\breve \fermata \showBarLine \bar "|."
 	}
 	\addlyrics {
 		Lí -- be -- _ ra á -- _ ni -- mas óm -- _ ni -- um fi -- dé -- _ li -- um
@@ -1287,8 +1287,8 @@ sopranoB = \new Voice {
 		r f g as2 bes4 c2 bes as4 es'2 es4 as, as bes2 as4 c f2 es2 ~
 		es4 bes4 des8 c bes as bes c des4 c f4. es16 des c4 d2 r d es \ficta des! c4 f4. es8 des4 |
 		
-		c4 es es1 r4 f2 es4 des8 c bes as bes2 r1 r4 f'2 es4 es4. des8 | c4 des bes2
-		r4 es2 f4 ~ f8 es8 des c bes4 g c2. bes4 \time 5/2 c2 r4 f4. es16 \ficta d c4 d2 es \time 2/2 d1\fermata |
+		c4 es es1 r4 f2 es4 des8 c bes as bes2 r1 r4 f'2 es4 es4. des8 | \break c4 des bes2
+		r4 es2 f4. es8 des c bes4 g c2. bes4 \time 5/2 c2 r4 f4. es16 \ficta d c4 d2 es \time 2/2 d\breve*1/2\fermata |
 	}
 	\addlyrics {
 		Lí -- be -- ra á -- _ _ _ _ _ ni -- mas óm -- ni -- um fi -- dé -- _ li -- um
@@ -1323,7 +1323,7 @@ alto = \new Voice {
 		ges4 es f8 es des c bes2 c1 bes2 r f' es4 bes bes4. bes8 c4 as'4. g8 f4 |
 		
 		es4 as2 g4 as2 as4. g8 f4 bes, des4. es8 f2 es r4 bes'2 as4 g as2 g4 | as2 r4 bes
-		g as as4. g8 f4 bes, bes2 r4 as'2 bes4 as f f1 f2 r4 bes, bes1\fermata |
+		g as as4. g8 f4 bes, bes2 r4 as'2 bes4 as f f1 f2 r4 bes, bes\breve*1/2\fermata |
 	}
 	\addlyrics {
 		Lí -- be -- ra á -- _ _ _ ni -- mas óm -- _ ni -- um fi -- dé -- _ _ li -- um
@@ -1360,8 +1360,8 @@ tenorA = \new Voice {
 		r1 r4 f g as2 g4 as2 g f r4 f f2 as2. es4 ~
 		es4 ges4 f f des f f1 f2 r f ges f f2. as4 ~ |
 		
-		as es4 es es4. des8 c bes as4 as'2 g4 f2. bes2 as4 g f f2 r r4 es2 f4. es8 des4
-		c as r as' | bes4. as8 g4 g f2 r4 f | f4. g8 a4 bes2 a4 bes4. \ficta as!8 ges4 es f1\fermata |
+		as es4 es es4. des8 c bes as4 as'2 g4 f2. bes2 as4 g f f2 r r4 es ~ es f4. es8 des4
+		c as r as' | bes4. as8 g4 g f2 r4 f | f4. g8 a4 bes2 a4 bes4. \ficta as!8 ges4 es f\breve*1/2\fermata |
 	}
 	\addlyrics {
 		Lí -- be -- ra á -- ni -- mas, lí -- be -- ra á -- ni -- mas óm -- ni -- um fi -- dé -- _ _ _ li -- um
@@ -1385,7 +1385,7 @@ tenorB = \new Voice {
 		
 		des2 as des2. des4 c f, bes2 r4 bes des c bes es, bes'2 es, as |
 		r\breve r2 r4 f' es c es f bes,2 f4 c' c d es2 |
-		des4 bes c2 bes r2 r\breve r4 f'2 c4 des c bes es |
+		\ficta des!4 bes c2 bes r2 r\breve r4 f'2 c4 des c bes es |
 		
 		des4. c8 bes4 as2 bes4 r f bes2 g4 es as4. bes8 c des es2 as,4 des2 r4 c as des2 c4 bes es2
 		des8 c bes4 c | des es c2 bes r r1 r2 r4 f'4 f2 des bes es, |
@@ -1396,7 +1396,7 @@ tenorB = \new Voice {
 		es des f2. c2 f,4 f2 r bes bes4. c8 des es f4. es16 des c4 des as ~ | 
 		
 		as8 bes c4 bes2 as4 as2 as4 bes1 bes2 r4 es2 des4 c f, c'4. des8 es2 | as,4 des4. es8 f4		
-		es4 c c2 r4 des es4. des8 c4 as des2 c f, r4 f2 bes4. as8 ges4 f1\fermata |
+		es4 c c2 r4 des es4. des8 c4 as des2 c f, r4 f2 bes4. as8 ges4 f\breve*1/2\fermata |
 	}
 	\addlyrics {
 		Lí -- be -- ra á -- _ _ ni -- mas, á -- ni -- mas, lí -- be -- ra á -- ni -- mas
@@ -1434,7 +1434,7 @@ bass = \new Voice {
 		 es bes1 f' bes,2 r bes es bes f' des |
 		 
 		as2 es' as4. g8 f es f4 d es bes2 r4 bes c4. des8 es4 bes f'2 r1 | r2 bes
-		c4. bes8 as4 f bes2 es, f4. es8 des4 bes f'2. bes,4 f'4. f8 bes,2 es bes1\fermata |
+		c4. bes8 as4 f bes2 es, f4. es8 des4 bes f'2. bes,4 f'4. f8 bes,2 es bes\breve*1/2\fermata |
 	}
 	\addlyrics {
 		Lí -- be -- ra á -- _ _ ni -- mas óm -- _ _ ni -- um fi -- dé -- li -- um
@@ -1498,7 +1498,7 @@ alto = \new Voice {
 		f g as2 g4 f2 es f ges4. \ficta ges8 f4 f2 es8 des es4 es f2 r4 f f g
 		
 		as4. g8 f es f2 des4 es as2 g4 f2 | r4 es des8 es f g as4 as2 g4 f2 f1 
-		r2 r4 bes g a bes g \ficta as!2 | f4. g8 as2. g4 f2 f1\fermata
+		r2 r4 bes g a bes g \ficta as!2 | f4. g8 as2. g4 f2 f\breve*1/2\fermata
 	}
 	\addlyrics {
 		Hó -- _ sti -- as et pré -- ces __ _ _ _ tí -- bi
@@ -1520,7 +1520,7 @@ tenor = \new Voice {
 		es4 es es2 des c8 bes c4 c es2 | as,4 as as2 r r4 c | c c d es
 		
 		as,2. f4 bes8 c des bes c des16 es f4. es8 es2 d4 es2 r4 bes as8 bes c des es4 es c c2 bes8 as
-		bes2 r r r4 f' d es2 f4 ~ f des4 es f d8 c16 \ficta d es2 \ficta d8 c d1\fermata
+		bes2 r r r4 f' d es2 f4 ~ f des4 es f d8 c16 \ficta d es2 \ficta d8 c d\breve*1/2\fermata
 	}
 	\addlyrics {
 		Hó -- _ sti -- as et __ _ _ _ _ _ _ pré -- _ _ _ _ _ ces tí -- bi
@@ -1542,7 +1542,7 @@ bass = \new Voice {
 		as4 es'2 bes' ges f es4 es | des4. es8 f g as2 g4 f1 r2
 		
 		r4 c' c c des bes as f bes2 bes4 bes, es8 f g as bes4 bes, f' as es2 f1
-		r4 bes g a bes8 \ficta as! ges f es4 f bes, es as f bes2 as bes4 es, bes'2 bes,1\fermata
+		r4 bes g a bes8 \ficta as! ges f es4 f bes, es as f bes2 as bes4 es, bes'2 bes,\breve*1/2\fermata
 	}
 	\addlyrics {
 		Hó -- _ _ sti -- as et pré -- ces tí -- bi
@@ -1633,12 +1633,12 @@ sopranoB = \new Voice {
 		r2 c1 c2 d f1 f2 f1 e2 f2. \ficta es!4 des c bes2 as |
 		
 		g1 f r\breve r2 f'1 es2 d es es1 |
-		r\breve r2 es1 d2 d bes1 as4 g as2 f g1\fermata
+		r\breve r2 es1 d2 d bes1 as4 g as2 f g\breve*1/2\fermata
 	}
 	\addlyrics {
 		Sán -- _ ctus. __ _ Sán -- _ _ _ _ _ _ _ _ _ ctus Dó -- mi -- nus 
 		Dé -- _ _ _ _ _ _ _ _ _ _ _ us Sá -- _ _ _ _ ba -- oth.
-		Plé -- ni sunt caé -- li et tér -- _ _ _ _ _ _ _ ra gló -- ri -- a tú -- a.
+		Plé -- ni sunt caé -- li et __ _ tér -- _ _ _ _ _ _ ra gló -- ri -- a tú -- a.
 		O -- sán -- na in ex -- _ cél -- _ sis.
 	}
 }
@@ -1652,7 +1652,7 @@ alto = \new Voice {
 		r f2. es4 d c d2 c1 as2 f' c c des bes r1 |
 		
 		r2 c2. bes4 as g as bes c d es f g2 f f1 as2. g8 f g2 as1 ~ |
-		as r2 as1 g2 g f2. es4 d2 c1 c c\fermata |
+		as r2 as1 g2 g f2. es4 d2 c1 c c\breve*1/2\fermata |
 	}
 	\addlyrics {
 		Sán -- _ _ _ _ _ _ _ ctus. Sán -- ctus Dó -- mi -- nus Dé -- us Sá -- ba -- oth,
@@ -1672,7 +1672,7 @@ tenorA = \new Voice {
 		f c2 f f1 as1. as2 g f1 g2. f4 f2 ~ |
 		
 		f4 e8 d \ficta e2 f as as as g es r\breve r |
-		r2 as1 f2 es2. f4 g as bes2 f1. f2 f1 e1\fermata |
+		r2 as1 f2 es2. f4 g as bes2 f1. f2 f1 e\breve*1/2\fermata |
 	}
 	\addlyrics {
 		Sán -- _ _ ctus. Sán -- _ _ _ _ _ ctus Dó -- mi -- nus, Dó -- mi -- nus Dé -- us Sá -- ba -- oth.
@@ -1691,7 +1691,7 @@ tenorB = \new Voice {
 		c1. c2 bes1 as f2 c'1 as2 bes1. f2 |
 		
 		c'1 f,2 f'1 es2 es2. d4 c2 f, as1 r2 es'1 c2 |
-		c f1 c2 c1 r2 bes1 f c'2. bes4 as2 g1\fermata |
+		c f1 c2 c1 r2 bes1 f c'2. bes4 as2 g\breve*1/2\fermata |
 	}
 	\addlyrics {
 		Sán -- _ _ _ ctus. Sán -- _ ctus, Sán -- _ _ _ ctus, Sán -- ctus
@@ -1711,7 +1711,7 @@ bass = \new Voice {
 		f1. f2 bes,1 f'\breve c2 f bes,\breve |
 		
 		c1 r2 f2. g4 as2 es1 f2. es4 des2 c bes es as, as' ~ |
-		as f f1 c2. d4 es2 bes bes1 f'\breve c1\fermata |
+		as f f1 c2. d4 es2 bes bes1 f'\breve c\breve*1/2\fermata |
 	}
 	\addlyrics {
 		Sán -- ctus. __ _ Sán -- _ ctus Dó -- _ _ _ _ mi -- nus Dé -- _ _ _ us Sá -- ba -- oth.
@@ -1882,7 +1882,7 @@ sopranoA = \new Voice {
 	\relative c'' {
 	 c1 c c
 	 b c1. as2 bes1 c c b
-	 c d bes c\breve c1 b\breve \showBarLine \bar "||"
+	 c d bes c\breve c1 b\breve*1/2 \showBarLine \bar "||"
 	}
 	\addlyrics {
 		qui tól -- lis pec -- cá -- ta mún -- _ di,
@@ -1893,8 +1893,8 @@ sopranoA = \new Voice {
 sopranoB = \new Voice {
 	\relative c'' {
 		r\breve r1
-		r2 d2 es1 c2 c d e f1 \ficta e r1
-		r r2 d1 e2 f1 \ficta es!2 es1 es2 d\breve
+		r2 d2 es1 c2 c d e f1 \break \ficta e r1
+		r r2 d1 e2 f1 \ficta es!2 es1 es2 d\breve*1/2
 	}
 	\addlyrics {
 		qui tól -- lis pec -- cá -- ta mún -- di,
@@ -1906,7 +1906,7 @@ alto = \new Voice {
 	\relative c' {
 		e1 f e
 		r2 g g es f2. es4 d2 g c,\breve r1
-		r f g as g2 g1 g2 g\breve
+		r f g as g2 g1 g2 g\breve*1/2
 	}
 	\addlyrics {
 		qui tól -- lis pec -- cá -- ta mún -- _ _ _ di,
@@ -1919,7 +1919,7 @@ tenorA = \new Voice {
 		\clef "treble_8"
 		g1 as g2 g
 		g2. f4 es2 g as1 f2 bes2. as8 g as2 g1 g2. f4
-		es2 f2. es4 d c d2 bes r c2. d4 es2 c1 d\breve
+		es2 f2. es4 d c d2 bes r c2. d4 es2 c1 d\breve*1/2
 	}
 	\addlyrics {
 		qui tól -- lis pec -- cá -- _ _ ta mún -- di,
@@ -1931,8 +1931,7 @@ tenorB = \new Voice {
 	\relative c' {
 		\clef "treble_8"
 		c1 f, c'2 c
-		es d c\breve bes1 r r2 c d es ~
-		es4 d c2 bes1 bes as2. bes4 c1. g2 g\breve
+		es d c\breve bes1 r r2 c d es2. d4 c2 bes1 bes as2. bes4 c1. g2 g\breve*1/2
 	}
 	\addlyrics {
 		qui tól -- lis pec -- cá -- ta mún -- di,
@@ -1945,7 +1944,7 @@ bass = \new Voice {
 		\clef bass
 		r\breve r1
 		g c, f2 f bes g f1 c g'
-		as bes2. as4 g f g2 f1 c1. c2 g'\breve
+		as bes2. as4 g f g2 f1 c1. c2 g'\breve*1/2
 	}
 	\addlyrics {
 		qui tól -- lis pec -- cá -- ta mún -- di,
@@ -1997,7 +1996,7 @@ sopranoA = \new Voice {
 		\set Score.currentBarNumber = #10
 		c1 c\breve c1 b c1.
 		as2 bes1 \break c c b c d bes
-		c\breve c1 \time 6/2 b\breve \showBarLine \bar "||"
+		c\breve c1 \time 6/2 b\breve*1/2 \showBarLine \bar "||"
 	}
 	\addlyrics {
 		qui tól -- lis pec -- cá -- ta mún -- _ di,
@@ -2009,7 +2008,7 @@ sopranoB = \new Voice {
 	\relative c'' {
 		r1 r2 c2 es1. c2 d1 es
 		c d2 es2 ~ es4 d4 c bes as2 g r2 d'2 e f2. \ficta es!4 d2. c4 bes1
-		as2 g es'1 es2 d\breve
+		as2 g es'1 es2 d\breve*1/2
 	}
 	\addlyrics {
 		qui tól -- lis pec -- cá -- _ ta mún -- _ _ _ _ di,
@@ -2021,7 +2020,7 @@ alto = \new Voice {
 	\relative c'' {
 		g1 as g2 es g as g1 es2 c4 d
 		es c f1 es4 d c1 c r\breve f2. es4 d2 d
-		c2. d4 es2 c c c d\breve
+		c2. d4 es2 c c c d\breve*1/2
 	}
 	\addlyrics {
 		qui tól -- lis pec -- cá -- ta mún -- di, mún -- _ _ _ _ _ _ _ di,
@@ -2034,7 +2033,7 @@ tenorA = \new Voice {
 		\clef "treble_8"
 		r\breve r r1 g
 		as f2 g as es f g g g1 a2 bes f1 g
-		f2 g g1 g2 g\breve
+		f2 g g1 g2 g\breve*1/2
 	}
 	\addlyrics {
 		qui tól -- lis pec -- cá -- ta mún -- _ di,
@@ -2047,7 +2046,7 @@ tenorB = \new Voice {
 		\clef "treble_8"
 		c1 f es2 c es f d1 c\breve
 		r1 r2 c2. d4 es2 d1 c bes bes2. as4
-		g2 c c2. bes8 as g1 ~ g\breve
+		g2 c c2. bes8 as g\breve
 	}
 	\addlyrics {
 		qui tól -- lis pec -- cá -- ta mún -- di,
@@ -2060,7 +2059,7 @@ bass = \new Voice {
 		\clef bass
 		r\breve r g1 c
 		as2 f bes es, as2. g4 f2 c g' g c, f bes, bes'2. as4 g f
-		es2 f c1 c g'\breve
+		es2 f c1 c g'\breve*1/2
 	}
 	\addlyrics {
 		qui tól -- lis pec -- cá -- ta mún -- _ _ _ di,
@@ -2164,7 +2163,7 @@ tenorB = \new Voice {
 		\clef "treble_8"
 		c1 c2 f, c'1
 		d2 g,1 c2 c f,1 bes2 as f g c d1 e
-		f es2. d4 c2 f,1 g2 g1 g1. g2 g1 g\breve
+		f \ficta es!2. d4 c2 f,1 g2 g1 g1. g2 g1 g\breve
 	}
 	\addlyrics {
 		qui tól -- lis pec -- cá -- ta mún -- di, pec -- cá -- ta mún -- di,
@@ -2233,7 +2232,7 @@ sopranoA = \new Voice {
 		c1. ~ \break c2 bes1 a1 bes1
 		c1. es1 \break d es1.
 		c1 d es2 c bes \break c1
-		bes1 | g2 as bes4 c4. bes8 bes2 a8 g \ficta a4 \ficta a bes1 \fermata \showBarLine \bar "||"
+		bes1 | g2 as bes4 c4. bes8 bes2 a8 g \ficta a4 \ficta a bes\breve*1/2 \fermata \showBarLine \bar "||"
 	}
 	\addlyrics {
 		lú -- ce -- at é -- is Dó -- mi -- ne,
@@ -2248,7 +2247,7 @@ sopranoB = \new Voice {
 		bes4 as2 g r4 c es es es2. d4 c c | c f4. es8 d c
 		bes4 es4. d8 c4. bes8 as2 as4 g c bes g bes4. c8 d es f4 bes, c bes1 
 		f' f2 r4 bes, g c4. d8 es4 es2 r r4 es
-		f4 es2 d4 | c1 es2 f4 g f2. f4 d1\fermata |
+		f4 es2 d4 | c1 es2 f4 g f2. f4 d\breve*1/2\fermata |
 	}
 	\addlyrics {
 		lú -- ce -- at é -- _ _ _ _ _ _ is Dó -- mi -- ne, __ _
@@ -2264,7 +2263,7 @@ alto = \new Voice {
 		es8 f g4. f8 f2 e4 f2 | r4 g4. f8 es d16 c bes8 c d es f1 f2
 		g c, r4 f es c r g'4. as8 bes4 ~ bes8 as8 f4. g8 as4 g es g2. 
 		g4 f2 f d g4. f8 es4 c r c es2 es es
-		r1 | r2 r4 as g c,4. d8 es4 c1 bes1\fermata |
+		r1 | r2 r4 as g c,4. d8 es4 c1 bes\breve*1/2\fermata |
 	}
 	\addlyrics {
 		lú -- ce -- at é -- _ _ _ _ _ _ _ is Dó -- _ _ _ _ _ _ mi -- ne, Dó -- _ _ _ _ _ _ _ _ _ mi -- ne, __ _
@@ -2280,7 +2279,7 @@ tenorA = \new Voice {
 		r1 r2 r4 as | g es g2 g4 f2 es8 d | c4. c8 bes4 bes'4.
 		as8 g f es2 f c1 r2 r f2 es4 c es4. f8 |
 		g as bes2 a8 g a2 bes1 r4 g as as4. g16 f g4 | as2. as4
-		f4 g4. f8 f2 e4 f2 r4 as2 g4 | as8 g f es f4 f f1\fermata |
+		f4 g4. f8 f2 e4 f2 r4 as2 g4 | as8 g f es f4 f f\breve*1/2\fermata |
 	}
 	\addlyrics {
 		lú -- ce -- at é -- is Dó -- _ _ _ mi -- ne, Dó -- _ _ _ _ mi -- ne,
@@ -2297,7 +2296,7 @@ tenorB = \new Voice {
 		as4 g as4. bes8 c4. bes8 as4 f g2 r4 bes2 bes4 c c2 c4 d d
 		es2 r4 c as f as4. bes8 c d es4. d16 c bes4 bes2 r r\breve
 		r4 f'2 d g4. f8 es d es4 as, bes2 | as r4 c
-		d4 es4. d16 c bes4 | c4. c8 f,4 f' es2 c1 f,2 f1\fermata |
+		d4 es4. d16 c bes4 | c4. c8 f,4 f' es2 c1 f,2 f\breve*1/2\fermata |
 	}
 	\addlyrics {
 		lú -- ce -- at é -- _ _ _ _ _ _ _ _ _ _ is Dó -- _ _ _ _ mi -- ne,
@@ -2314,7 +2313,7 @@ bass = \new Voice {
 		r1 r2 f es4 c es4. f8 g as bes4 f2 | f bes4. as8
 		g4 es as2 f r4 f es c es4. f8 | g as bes4. as8 f4 g as es1
 		f bes,4 bes'2 g4 c4. bes8 as2 es | as,1
-		r1 | r2 r4 f' g as4. g16 f es4 f2. f4 bes,1\fermata |
+		r1 | r2 r4 f' g as4. g16 f es4 f2. f4 bes,\breve*1/2\fermata |
 	}
 	\addlyrics {
 		lú -- ce -- at é -- _ _ _ _ is Dó -- _ _ _ mi -- ne, __ _
@@ -2344,36 +2343,29 @@ bass = \new Voice {
 }
 
 
-% CPDL #36844
-% Copyright ©2015 Peter Hilton - https://github.com/hilton
-
-\version "2.18.2"
-revision = "8"
-\pointAndClickOff
-
-#(set-global-staff-size 15.0)
-
-\paper {
-	#(define fonts (make-pango-font-tree "Century Schoolbook L" "Source Sans Pro" "Luxi Mono" (/ 15 20)))
-	annotate-spacing = ##f
-	two-sided = ##t
-	top-margin = 5\mm
-	bottom-margin = 5\mm
-	inner-margin = 15\mm
-	outer-margin = 15\mm
-	top-markup-spacing = #'( (basic-distance . 8) )
-	markup-system-spacing = #'( (padding . 8) )
-	system-system-spacing = #'( (basic-distance . 10) (stretchability . 100) )
-	ragged-bottom = ##f	
-	ragged-last-bottom = ##t
-} 
-
-year = #(strftime "©%Y" (localtime (current-time)))
-
-\header {
-	tagline = ##f
-}
-
+% 
+% 
+% \paper {
+% 	#(define fonts (make-pango-font-tree "Century Schoolbook L" "Source Sans Pro" "Luxi Mono" (/ 15 20)))
+% 	annotate-spacing = ##f
+% 	two-sided = ##t
+% 	top-margin = 5\mm
+% 	bottom-margin = 5\mm
+% 	inner-margin = 15\mm
+% 	outer-margin = 15\mm
+% 	top-markup-spacing = #'( (basic-distance . 8) )
+% 	markup-system-spacing = #'( (padding . 8) )
+% 	system-system-spacing = #'( (basic-distance . 10) (stretchability . 100) )
+% 	ragged-bottom = ##f	
+% 	ragged-last-bottom = ##t
+% } 
+% 
+% year = #(strftime "©%Y" (localtime (current-time)))
+% 
+% \header {
+% 	tagline = ##f
+% }
+%{ 
 \layout {
 	indent = #0
   	ragged-right = ##f
@@ -2426,7 +2418,7 @@ globalC = {
 
 showBarLine = { \once \override Score.BarLine #'transparent = ##f }
 ficta = { \once \set suggestAccidentals = ##t \override AccidentalSuggestion #'parenthesized = ##f }
-fictaParenthesized = { \once \set suggestAccidentals = ##t \override AccidentalSuggestion #'parenthesized = ##t }
+fictaP%} arenthesized = { \once \set suggestAccidentals = ##t \override AccidentalSuggestion #'parenthesized = ##t }
 
 
 % COMMUNIO
@@ -2457,7 +2449,7 @@ sopranoA = \new Voice {
 		es2 es es es1 es2 es1 es d2 es \break |
 		c1 bes2 r r1 c es
 		d | \break es1. c1 d es2 c bes
-		c1 | \break bes g2 as bes4 c4. bes8 bes2 a8 g \ficta a4 \ficta a bes\breve | \showBarLine \bar "|."
+		c1 | \break bes g2 as bes4 c4. bes8 bes2 a8 g \ficta a4 \ficta a bes\breve*1/2 | \showBarLine \bar "|."
 	}
 	\addlyrics {
 		et lux per -- pé -- tu -- a lú -- ce -- at é -- is.
@@ -2471,7 +2463,7 @@ sopranoB = \new Voice {
 		c2 c bes c2. c4 bes2 c c4 bes bes2 c r1 |
 		r2 f d4 bes c2 c as4 f as1 g4 c bes g
 		bes4. c8 d es f4 | bes, c bes1 f' f2 r4 bes, g c4. d8 es4 es2
-		r2 r4 es | f es2 d4 c1 es2 f4 g f2. f4 d\breve |
+		r2 r4 es | f es2 d4 c1 es2 f4 g f2. f4 d\breve*1/2 |
 	}
 	\addlyrics {
 		et lux per -- pé -- tu -- a lú -- ce -- at é -- is.
@@ -2486,7 +2478,7 @@ alto = \new Voice {
 		es2 es es c4. d8 es4 es es2 c4. d8 es4. f8 g as bes2 a4 bes2 g |
 		f f1 r4 f es c2 des4 c1. r1
 		f2 | es4 c es4. f8 g as bes2 a8 g a2 bes1 r4 g as as4. g16 f g4
-		as2. as4 | f g4. f8 f2 e4 f2 r4 as2 g4 as8 g f es f4 f f\breve
+		as2. as4 | f g4. f8 f2 e4 f2 r4 as2 g4 as8 g f es f4 f f\breve*1/2
 	}
 	\addlyrics {
 		et lux per -- pé -- _ _ tu -- a lú -- _ _ _ _ _ _ ce -- at é -- _ is.
@@ -2501,7 +2493,7 @@ tenorA = \new Voice {
 		g2 g2. g4 as2. as4 g2 as g2. f4 es2 f es4 bes' ~ |
 		bes a8 g \ficta a4 \ficta a bes4 f4. g8 as4. g16 f es4 f2 r4 f es c r g'4. as8 bes4. 
 		as16 g f4. g8 as4 | g es g2. g4 f2 f d g4. f8 es4 c r c es2
-		es es | r1 r2 r4 as g c,4. d8 es4 c1 bes\breve |
+		es es | r1 r2 r4 as g c,4. d8 es4 c1 bes\breve*1/2 |
 	}
 	\addlyrics {
 		et lux per -- pé -- tu -- a lú -- _ ce -- at é -- is,  lú -- _ _ _ ce -- at é -- _ _ _ _ _ is.
@@ -2516,7 +2508,7 @@ tenorB = \new Voice {
 		c2 c4 g4. as8 bes4 as4. bes8 c4 as bes2 as4. bes8 c d es2 d4 c2 bes es, |
 		f1 bes2 r1 r4 bes as f as4. bes8 c d es4. d16 c bes4
 		bes2 r | r\breve r4 f'2 d g4. f8 es d es4 as, bes2
-		as r4 c | d es4. d16 c bes4 c4. c8 f,4 f' es2 c1 f,2 f\breve |
+		as r4 c | d es4. d16 c bes4 c4. c8 f,4 f' es2 c1 f,2 f\breve*1/2 |
 	}
 	\addlyrics {
 		et lux per -- _ _ pé -- _ _ tu -- a lú -- _ _ _ _ ce -- at é -- _ _ is.
@@ -2531,7 +2523,7 @@ bass = \new Voice {
 		c2 c es as, as' es r1 r\breve |
 		r1 r4 bes' as f as4. g8 f4 bes, f'2 r4 f es c es4. f8
 		g as bes4. as8 f4 | g as es1 f bes,4 bes'2 g4 c4. bes8 as2 es
-		as,1 | r r2 r4 f' g as4. g16 f es4 f2. f4 bes,\breve |
+		as,1 | r r2 r4 f' g as4. g16 f es4 f2. f4 bes,\breve*1/2 |
 	}
 	\addlyrics {
 		et lux per -- pé -- tu -- a
