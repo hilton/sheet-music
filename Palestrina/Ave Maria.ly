@@ -2,7 +2,7 @@
 % Copyright ©2014 Peter Hilton - https://github.com/hilton
 
 \version "2.18.0"
-revision = "3"
+revision = "4"
 \pointAndClickOff
 
 #(set-global-staff-size 15) 
@@ -97,7 +97,7 @@ cantus = \new Voice {
 			\ficta cis4
 		d2 bes a1 r c2 d4 c \bar "" \break d2 e r4 g g g g2 d r1 f4. e8 d4 c d e4. d8 d2 c4 d2 \bar "" \break r4 d d d
 		d2 c4 a bes c d c8 bes a2 g r1 r2 r4 a bes c d2
-		\bar "" \break d4 bes bes bes bes2 a4 c f4. e8 d4 e d1 d\breve \showBarLine \bar "|."
+		\bar "" \break d4 bes bes bes bes2 a4 c f4. e8 d4 e d1 d\breve*1/2 \showBarLine \bar "|."
 	}
 	\addlyrics {
 		Á -- ve Ma -- rí -- _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
@@ -132,7 +132,7 @@ quintus = \new Voice {
 		r2 r1 r r4 a a g a bes c c c c c2
 		bes4 bes2 f4 g a g2 r4 a2 a4 bes8 a a2 g4 a2 bes bes4 bes bes2
 		a1 r1 r2 r4 d d d d2 c4 a bes c bes a8 g a2
-		bes4 d d d f2 f4. e8 d4 c bes a2 g4. \set suggestAccidentals = ##t fis16 e fis4 g\breve
+		bes4 d d d f2 f4. e8 d4 c bes a2 g4. \set suggestAccidentals = ##t fis16 e fis4 g\breve*1/2
 		
 	}
 	\addlyrics {
@@ -169,7 +169,7 @@ altus = \new Voice {
 		fis fis g2 e f g4 f g2 a4 f f e f g c, g' g g g2.
 		g4 f8 e d c bes4 a bes g a d4. e8 f2 e4 f d e2 r4 g4 g g g2
 		f4 d e f g a4. g8 g2 f4 g bes bes bes a2 a4 c bes a4. g8 g2 f4
-		g f f f f1 f2. e4 fis g a2 b\breve
+		g f f f f1 f2. e4 fis g a2 b\breve*1/2
 		
 	}
 	\addlyrics {
@@ -206,7 +206,7 @@ tenor = \new Voice {
 		d2 g,2\( a\) r4 d d c d e f2 r2 r r4 e e e e2
 		d2. f4 e d2 c4 d2 f4. e8 d4 c d bes a2 g8 a bes c d2 r
 		r1 r r4 d d d g2 f4 d e f g f8 e d4 g, r d'
-		d d d1 c4 a bes c d c8 bes a4 bes a2 g\breve
+		d d d1 c4 a bes c d c8 bes a4 bes a2 g\breve*1/2
 	}
 	\addlyrics {
 		Á -- ve Ma -- rí -- a, Ma -- rí -- _ _ _ a, grá -- 
@@ -241,7 +241,7 @@ bassus = \new Voice {
 		d, r4 d' d cis d4. \ficta c!8 bes4 a bes c f,2 r2 r r4 c' c c c2
 		d2 bes4. a8 g4 fis g es d2 r1 r r4 g g g g8 a bes c
 		d2 a r4 a bes c d2 g,4 g g g d2 a' r4 f4 g es d2
-		g4 bes bes bes bes,8 c d e f2 bes,4 a bes c d1 g\breve
+		g4 bes bes bes bes,8 c d e f2 bes,4 a bes c d1 g\breve*1/2
 	}
 	\addlyrics {
 		Á -- ve Ma -- rí -- _ _ _ a, grá -- 
