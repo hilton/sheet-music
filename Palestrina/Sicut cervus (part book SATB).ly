@@ -3,7 +3,7 @@
 
 \version "2.24.4"
 revision = "8"
-\pointAndClickOff
+% \pointAndClickOff
 
 #(set-global-staff-size 16)
 
@@ -190,6 +190,7 @@ bassus = \new Voice {
 
 cantusB = \new Voice	{
 	\relative c' {
+		\set Score.currentBarNumber = #59
 		r2 f a c4 c4. c8 c4 bes2 a2. g4 a bes c2.
 		a4 g2 g r4 f8 g a bes c4 a f g2 f2. e4 f g | a f g2
 		a r2 r4 g4 a bes c a g2 f4 g4. f8 f2 e8 d e2 f r4 f2
@@ -218,6 +219,7 @@ cantusB = \new Voice	{
 
 altusB = \new Voice {
 	\relative c {
+		\set Score.currentBarNumber = #59
 		c'2 d f4 f4. f8 f4 e2 d2. c4 d e f d c8 bes a g
 		f4 f'2 e8 d e2 f4 d c a8 bes c a d4. c8 c4 d2 g, r c d 
 		f4 f4. f8 f4 e2 d r4 c d e f e8 d c4 bes c1 a4 bes2 c4
@@ -245,6 +247,7 @@ altusB = \new Voice {
 tenorB = \new Voice {
 	\relative c {
 		\clef "treble_8"
+		\set Score.currentBarNumber = #59
 		r1 r r r r2 f
 		a c4 c4. c8 c4 bes2 a1 r4 g a bes c2 bes a8 bes c a bes c d4. c8 c2 \ficta b4 c2 r4 g4 a4. a8 bes4 c a g a g8 f g1 f
 		r r4 f2 g4 a4. bes8 c4 a bes c a bes2 a8 g f4 bes a2 g4 c4.
@@ -272,6 +275,7 @@ tenorB = \new Voice {
 bassusB = \new Voice {
 	\relative c {
 		\clef bass
+		\set Score.currentBarNumber = #59
 		r1 r r r r
 		r c2 d f4 f4. f8 f4 e2 d c d4 e f a g2
 		f4. e8 d2 c r1 r4 c d e f d c1 f,4 bes2 a4 

@@ -205,6 +205,7 @@ bassus = \new Voice {
 
 cantus = \new Voice	{
 	\relative c' {
+		\set Score.currentBarNumber = #59
 		r2 f a c4 c4. c8 c4 bes2 a2. g4 a bes c2.
 		a4 g2 g r4 f8 g a bes c4 a f g2 f2. e4 f g | a f g2
 		a r2 r4 g4 a bes c a g2 f4 g4. f8 f2 e8 d e2 f r4 f2
