@@ -2,8 +2,7 @@
 % Copyright ©2014 Peter Hilton - https://github.com/hilton
 
 \version "2.18.0"
-revision = "4"
-\pointAndClickOff
+revision = "5"
 
 #(set-global-staff-size 15) 
 
@@ -107,7 +106,7 @@ cantus = \new Voice {
 		cum: be -- ne -- dí -- _ _ _ _ _ _ _ _ _ cta tu
 		in mu -- li -- é -- ri -- bus, in mu -- li -- é -- _ _ _ _ ri -- bus, in
 		mu -- li -- é -- ri -- bus, in mu -- li -- é -- ri -- bus, et be -- ne -- 
-		dí -- _ _ _ _ cta frú -- ctus vén -- tris tú -- i Jé -- _ _ sus. Sán -- cta Ma -- rí -- a
+		dí -- _ _ _ _ ctus frú -- ctus vén -- tris tú -- i Jé -- _ _ sus. Sán -- cta Ma -- rí -- a
 		re -- gí -- na coé -- _ _ _ _ _ _ li, __ _ _ _ _ dúl -- cis
 		et pí -- a, o má -- ter Dé -- i, ó -- ra pro
 		nó -- bis pec -- _ _ ca -- tó -- _ _ _ ri -- bus, ut cum e -- 
@@ -142,7 +141,7 @@ quintus = \new Voice {
 		mi -- nus té -- cum, Dó -- mi -- nus té -- cum, Dó -- mi -- nus té -- cum:
 		be -- ne -- dí -- _ _ _ _ _ _ _ _ _ cta tu, __ _ _ _ _ be -- ne -- dí -- 
 		cta tu in mu -- li -- é -- ri -- bus, in mu -- li -- é -- ri -- _ _ _ bus,
-		in mu -- li -- é -- _ _ ri -- bus, et be -- be -- dí -- _ _ _
+		in mu -- li -- é -- _ _ ri -- bus, et be -- ne -- dí -- _ _ _
 		ctus frú -- ctus vén -- tris tú -- i Jé -- _ _
 		sus. __ _ _ _ Sán -- cta Ma -- rí -- a, __
 		re -- gí -- na coé -- li, dúl -- cis et pí -- a
@@ -236,7 +235,7 @@ bassus = \new Voice {
 		f'2( bes,) r1 r r r r4 g'4 a2 ~
 		a4 g f e d1 ~ d r2 d' c4 a bes2 a r2
 		r1 r4 d2 c4 bes a g \ficta fis g2 d r1 g2. f4
-		es1 bes4 bes'2 a4 bes2 g a r r4 d4 d cis d4. c8 bes4 a
+		es1 bes4 bes'2 a4 bes2 g a r r4 d4 d cis d4. \ficta c!8 bes4 a
 		bes c f,2 r1 r4 a2 g4 a2 bes a bes g4 g a2
 		d, r4 d' d cis d4. \ficta c!8 bes4 a bes c f,2 r2 r r4 c' c c c2
 		d2 bes4. a8 g4 fis g es d2 r1 r r4 g g g g8 a bes c
