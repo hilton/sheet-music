@@ -1,9 +1,9 @@
-% Copyright ©2023 Peter Hilton - https://github.com/hilton
+% CPDL #79002, copyright ©2026 Peter Hilton - https://github.com/hilton
 % Based on CPDL #12928?
 
 \version "2.24.2"
-revision = "3"
-\pointAndClickOff
+revision = "4"
+#\pointAndClickOff
 
 #(set-global-staff-size 15)
 
@@ -213,7 +213,7 @@ sopranoB =  \relative e' {
   gis2 gis4 | % 25
   a4 gis2 | % 26
   \tempo \markup {
-    \rhythm { 2[s] } = \rhythm { 2[s] }
+    \rhythm { 2[s] } = \rhythm { 2.[s] }
   }
   \time 2/2  a1 | % 27
   fis1 | % 28
